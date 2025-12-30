@@ -150,7 +150,10 @@ confidence:
 
 ---
 
-## See Also
+## Dovetails With
 
-- `skills/play-learn-lift/` for methodology
-- `skills/summarize/` for compression
+- **[../play-learn-lift/](../play-learn-lift/)** — Research IS PLAY→LEARN stage
+- **[../summarize/](../summarize/)** — Compress research
+- **[../debugging/](../debugging/)** — Investigation companion
+- **[../adventure-protocol/](../adventure-protocol/)** — Evidence collection
+- **[../../PROTOCOLS.yml](../../PROTOCOLS.yml)** — PRESERVE-JOURNEY symbol

@@ -122,8 +122,10 @@ Run after crash:
 
 ---
 
-## See Also
+## Dovetails With
 
-- `PROTOCOLS.yml#NEVER-CRASH`
-- `PROTOCOLS.yml#REPAIR-DEMON`
-- `kernel/self-healing-protocol.md`
+- **[../session-log/](../session-log/)** — Log all repairs
+- **[../honest-forget/](../honest-forget/)** — Triggered for memory cleanup
+- **[../summarize/](../summarize/)** — Triggered for context overflow
+- **[../../kernel/self-healing-protocol.md](../../kernel/self-healing-protocol.md)** — Full spec
+- **[../../PROTOCOLS.yml](../../PROTOCOLS.yml)** — NEVER-CRASH, REPAIR-DEMON, ROBUST-FIRST symbols

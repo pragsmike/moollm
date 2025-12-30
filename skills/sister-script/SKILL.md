@@ -123,7 +123,9 @@ sister_script_properties:
 
 ---
 
-## See Also
+## Dovetails With
 
-- `PROTOCOLS.yml#SISTER-SCRIPT`
-- `designs/kilroy-ideas.md#the-sister-script-pattern`
+- **[../play-learn-lift/](../play-learn-lift/)** — Sister scripts are LIFT output
+- **[../plan-then-execute/](../plan-then-execute/)** — Scripts become frozen plans
+- **[../session-log/](../session-log/)** — Source patterns to automate
+- **[../../PROTOCOLS.yml](../../PROTOCOLS.yml)** — SISTER-SCRIPT, BUILD-COMMAND symbols

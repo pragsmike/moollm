@@ -211,8 +211,11 @@ Navigate to remember. Place things to store.
 
 ---
 
-## See Also
+## Dovetails With
 
-- [trading-card/](../trading-card/) — What lives in rooms
-- [memory-palace/](../memory-palace/) — Rooms as memory technique
-- [PROTOCOLS.yml#ROOM-AS-FUNCTION](../../PROTOCOLS.yml)
+- **[../trading-card/](../trading-card/)** — Cards activate in rooms
+- **[../memory-palace/](../memory-palace/)** — Memory Palace IS Room + mnemonic intent
+- **[../adventure-protocol/](../adventure-protocol/)** — Adventure IS Room + narrative
+- **[../soul-chat/](../soul-chat/)** — Rooms can speak
+- **[../../kernel/context-assembly-protocol.md](../../kernel/context-assembly-protocol.md)** — Room working_set mechanics
+- **[../../PROTOCOLS.yml](../../PROTOCOLS.yml)** — ROOM-AS-FUNCTION, HYPERCARD-HIERARCHY symbols

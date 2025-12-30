@@ -206,8 +206,10 @@ card:
 
 ---
 
-## See Also
+## Dovetails With
 
-- `PROTOCOLS.yml#TRADING-CARD`
-- `PROTOCOLS.yml#K-LINE`
-- `skills/soul-chat/` for characters
+- **[../room/](../room/)** — Cards activate in rooms
+- **[../soul-chat/](../soul-chat/)** — Cards can speak
+- **[../adventure-protocol/](../adventure-protocol/)** — Cards are quest companions
+- **[../delegation-object-protocol.md](../delegation-object-protocol.md)** — How cards inherit
+- **[../../PROTOCOLS.yml](../../PROTOCOLS.yml)** — TRADING-CARD, HERO-KLIK, P-HANDLE-K symbols

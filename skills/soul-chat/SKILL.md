@@ -368,8 +368,10 @@ This skill directory contains only:
 
 ---
 
-## See Also
+## Dovetails With
 
-- `kernel/NAMING.yml` — File naming protocol
-- `PROTOCOLS.yml#SOUL-CHAT`
-- `PROTOCOLS.yml#K-LINE`
+- **[../trading-card/](../trading-card/)** — Cards can speak
+- **[../room/](../room/)** — Rooms can welcome visitors
+- **[../memory-palace/](../memory-palace/)** — Palace rooms guide navigation
+- **[../../kernel/NAMING.yml](../../kernel/NAMING.yml)** — Big-endian naming
+- **[../../PROTOCOLS.yml](../../PROTOCOLS.yml)** — SOUL-CHAT, YAML-JAZZ, P-HANDLE-K symbols

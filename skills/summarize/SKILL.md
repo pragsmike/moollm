@@ -131,8 +131,11 @@ For lessons learned:
 
 ---
 
-## See Also
+## Dovetails With
 
-- `PROTOCOLS.yml#SUMMARIZE`
-- `PROTOCOLS.yml#HONEST-FORGET`
-- `kernel/memory-management-protocol.md`
+- **[../honest-forget/](../honest-forget/)** — Summarize before forgetting
+- **[../play-learn-lift/](../play-learn-lift/)** — Summarize PLAY for LEARN
+- **[../session-log/](../session-log/)** — Source material
+- **[../memory-palace/](../memory-palace/)** — Place summaries in palace
+- **[../../kernel/memory-management-protocol.md](../../kernel/memory-management-protocol.md)** — Hot/cold mechanics
+- **[../../PROTOCOLS.yml](../../PROTOCOLS.yml)** — SUMMARIZE symbol

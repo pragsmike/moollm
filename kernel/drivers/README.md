@@ -120,8 +120,9 @@ When a feature isn't available, drivers specify fallbacks:
 
 ---
 
-## See Also
+## Dovetails With
 
-- [constitution-core.md](../constitution-core.md) — Universal principles
-- [constitution-template.md](../constitution-template.md) — Full template
-- [PROTOCOLS.yml](../../PROTOCOLS.yml) — Protocol symbols
+- **[../constitution-core.md](../constitution-core.md)** — Universal principles
+- **[../constitution-template.md](../constitution-template.md)** — Full template
+- **[../tool-calling-protocol.md](../tool-calling-protocol.md)** — Tool definitions
+- **[../../PROTOCOLS.yml](../../PROTOCOLS.yml)** — Protocol symbols

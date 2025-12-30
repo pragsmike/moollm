@@ -133,8 +133,10 @@ append_only_rules:
 
 ---
 
-## See Also
+## Dovetails With
 
-- `PROTOCOLS.yml#SESSION-LOG`
-- `PROTOCOLS.yml#AUDIT-TRAIL`
-- `kernel/event-logging-protocol.md`
+- **[../play-learn-lift/](../play-learn-lift/)** — Session-log is PLAY capture
+- **[../summarize/](../summarize/)** — Compress long logs
+- **[../self-repair/](../self-repair/)** — Logs all repairs
+- **[../../kernel/event-logging-protocol.md](../../kernel/event-logging-protocol.md)** — Full spec
+- **[../../PROTOCOLS.yml](../../PROTOCOLS.yml)** — SESSION-LOG, APPEND-ONLY symbols

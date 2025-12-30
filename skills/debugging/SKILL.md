@@ -161,7 +161,11 @@ why_it_works: "Forces you to articulate assumptions"
 
 ---
 
-## See Also
+## Dovetails With
 
-- `skills/play-learn-lift/` for the learning mindset
-- `skills/session-log/` for activity tracking
+- **[../adventure-protocol/](../adventure-protocol/)** — Debugging IS adventure + hypothesis tracking
+- **[../play-learn-lift/](../play-learn-lift/)** — Debugging IS PLAY stage
+- **[../session-log/](../session-log/)** — Track all debug steps
+- **[../research-notebook/](../research-notebook/)** — Investigation notes
+- **[../room/](../room/)** — Debug sessions are rooms
+- **[../trading-card/](../trading-card/)** — Git Goblin 🧌, Index Owl 🦉 companions

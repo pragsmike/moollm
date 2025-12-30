@@ -169,8 +169,11 @@ if_uncertain:
 
 ---
 
-## See Also
+## Dovetails With
 
-- `PROTOCOLS.yml#HONEST-FORGET`
-- `PROTOCOLS.yml#SUMMARIZE`
-- `skills/summarize/` for compression
+- **[../summarize/](../summarize/)** — Compression mechanism
+- **[../session-log/](../session-log/)** — What to forget
+- **[../memory-palace/](../memory-palace/)** — Where wisdom lives
+- **[../self-repair/](../self-repair/)** — Triggers forgetting when needed
+- **[../../kernel/memory-management-protocol.md](../../kernel/memory-management-protocol.md)** — Hot/cold mechanics
+- **[../../PROTOCOLS.yml](../../PROTOCOLS.yml)** — HONEST-FORGET symbol

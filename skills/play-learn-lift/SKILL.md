@@ -185,7 +185,11 @@ After LIFT, you often discover new areas to PLAY in. The cycle continues.
 
 ---
 
-## See Also
+## Dovetails With
 
-- `PROTOCOLS.yml#PLAY-LEARN-LIFT`
-- `designs/kilroy-ideas.md#core-methodology-play-learn-lift`
+- **[../session-log/](../session-log/)** — PLAY captures everything
+- **[../research-notebook/](../research-notebook/)** — LEARN structures findings
+- **[../sister-script/](../sister-script/)** — LIFT automates patterns
+- **[../summarize/](../summarize/)** — LIFT shares wisdom
+- **[../scratchpad/](../scratchpad/)** — PLAY surface
+- **[../../PROTOCOLS.yml](../../PROTOCOLS.yml)** — PLAY-LEARN-LIFT symbol

@@ -451,11 +451,12 @@ The comments provide context that the structured fields cannot capture.
 
 ## 10. Dovetails With
 
-- **Constitution** (§6): Audit requirements
-- **Tool Calling Protocol**: Tool events, `why` parameter
-- **Memory Management**: GC events, summarization
-- **Self-Healing Protocol**: Repair events
-- **YAML Jazz**: Comments carry meaning
+- **[constitution-core.md](./constitution-core.md)** — Audit requirements
+- **[tool-calling-protocol.md](./tool-calling-protocol.md)** — Tool events, `why` parameter
+- **[memory-management-protocol.md](./memory-management-protocol.md)** — GC events, summarization
+- **[self-healing-protocol.md](./self-healing-protocol.md)** — Repair events
+- **[../skills/session-log/](../skills/session-log/)** — Userland skill
+- **[../PROTOCOLS.yml](../PROTOCOLS.yml)** — YAML-JAZZ, APPEND-ONLY symbols
 
 ---
 
