@@ -1,0 +1,114 @@
+# Generic Driver
+# Fallback for unknown or minimal orchestrators
+
+driver:
+  name: "generic"
+  tier: 1
+  description: "Minimal assumptions, maximum compatibility"
+
+# Assume very little
+capabilities:
+  file_read: "maybe"       # Might have file access
+  file_write: "maybe"
+  file_search: false
+  semantic_search: false
+  terminal: false
+  custom_tools: false
+  mcp: false
+  why_parameter: false
+  append_only_enforcement: false
+
+# Conservative path assumptions
+paths:
+  # Use relative paths that work anywhere
+  session_root: "./"
+  output_sink: "output.md"
+  session_log: "session-log.md"
+  notes: "notes/"
+
+# Tool mapping - assume we might not have tools
+tools:
+  # These might exist
+  possible:
+    - "read_file"
+    - "write_file"
+    - "list_directory"
+    
+  # If no tools, document for user
+  fallback: "Ask user to perform file operations"
+
+# Heavy reliance on conventions
+adaptations:
+  all_features:
+    approach: "convention_and_documentation"
+    instruction: |
+      Without guaranteed tool access:
+      
+      1. Document everything in your responses
+      2. Ask user to save important content
+      3. Maintain state in conversation
+      4. Be explicit about what you need
+
+  why_parameter:
+    supported: false
+    fallback: "always_explain"
+    instruction: |
+      Always explain your intent before and after any action:
+      
+      "I want to [ACTION] because [REASON]."
+      [Attempt action]
+      "The result was [OUTCOME]."
+
+  file_operations:
+    supported: "uncertain"
+    instruction: |
+      If file tools exist, use them.
+      If not, ask the user to:
+      - Read files and paste content
+      - Save content you provide
+      - Confirm file operations
+
+  state_management:
+    supported: false
+    instruction: |
+      Without persistent state:
+      - Summarize context frequently
+      - Ask user to confirm understanding
+      - Be explicit about what you remember
+
+# Protocol support - limited
+protocols:
+  sip: false    # Needs file tools
+  dop: false    # Needs file tools
+  yaml_jazz: true  # Always works (it's just conventions)
+  bpip: true    # Always works (it's interpretation)
+
+# Behavior guidelines
+guidelines:
+  be_explicit:
+    - "State what you're trying to do"
+    - "State what tools you need"
+    - "State what you assume"
+    
+  be_humble:
+    - "Acknowledge capability limitations"
+    - "Ask for help when needed"
+    - "Don't pretend to have done things you couldn't"
+    
+  be_persistent:
+    - "Keep notes in your responses"
+    - "Summarize progress frequently"
+    - "Create checkpoints in conversation"
+
+# Boot - no automation possible
+boot:
+  instruction: |
+    Generic driver loaded.
+    
+    Capabilities unknown. Will:
+    1. Attempt to discover available tools
+    2. Adapt to what's available
+    3. Fall back to conversation-based state
+    
+    If you can read/write files, tell me what tools you have.
+    Otherwise, we'll work together through the conversation.

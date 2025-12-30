@@ -1,0 +1,126 @@
+# Event Log Schema
+# Defines events.jsonl entry formats
+
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "moollm/event"
+title: "Event Log Entry"
+description: "Single entry in events.jsonl"
+
+# Events are discriminated by 'type' field
+oneOf:
+  - $ref: "#/$defs/session_event"
+  - $ref: "#/$defs/tool_event"
+  - $ref: "#/$defs/model_event"
+  - $ref: "#/$defs/memory_event"
+  - $ref: "#/$defs/repair_event"
+  - $ref: "#/$defs/error_event"
+
+$defs:
+  base:
+    type: object
+    properties:
+      type:
+        type: string
+      timestamp:
+        type: string
+        format: date-time
+    required: [type, timestamp]
+    
+  session_event:
+    allOf:
+      - $ref: "#/$defs/base"
+      - properties:
+          type:
+            enum: [session_start, session_end]
+          session_id:
+            type: string
+          reason:
+            type: string
+          stats:
+            type: object
+            
+  tool_event:
+    allOf:
+      - $ref: "#/$defs/base"
+      - properties:
+          type:
+            enum: [tool_call, tool_result, tool_error]
+          tool:
+            type: string
+          call_id:
+            type: string
+          args:
+            type: object
+          result:
+            type: object
+          success:
+            type: boolean
+          duration_ms:
+            type: integer
+          error:
+            type: object
+            properties:
+              code:
+                type: string
+              message:
+                type: string
+                
+  model_event:
+    allOf:
+      - $ref: "#/$defs/base"
+      - properties:
+          type:
+            enum: [model_input, model_output, model_turn]
+          tokens:
+            type: integer
+          files_in_context:
+            type: array
+            items:
+              type: string
+          tool_calls:
+            type: integer
+            
+  memory_event:
+    allOf:
+      - $ref: "#/$defs/base"
+      - properties:
+          type:
+            enum: [context_assembly, working_set_update, cache_advice, gc_run, summary_created]
+          action:
+            type: string
+          path:
+            type: string
+          budget:
+            type: integer
+          used:
+            type: integer
+            
+  repair_event:
+    allOf:
+      - $ref: "#/$defs/base"
+      - properties:
+          type:
+            enum: [repair, bootstrap]
+          demon:
+            type: string
+          action:
+            type: string
+          path:
+            type: string
+          files_created:
+            type: array
+            items:
+              type: string
+              
+  error_event:
+    allOf:
+      - $ref: "#/$defs/base"
+      - properties:
+          type:
+            enum: [error, warning]
+          code:
+            type: string
+          message:
+            type: string
+          recovery:
+            type: string

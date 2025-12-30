@@ -1,0 +1,82 @@
+# Meta Sidecar Schema
+# Defines the .meta.yml file format
+
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "moollm/meta-sidecar"
+title: "Meta Sidecar"
+description: "Sticky-note metadata for any file"
+
+type: object
+
+properties:
+  title:
+    type: string
+    description: "Human-readable title"
+    
+  summary:
+    type: string
+    description: "One-line description of the file"
+    
+  tags:
+    type: array
+    items:
+      type: string
+    description: "Categorization tags"
+    
+  hotness:
+    type: number
+    minimum: 0
+    maximum: 1
+    description: "0.0-1.0 importance score"
+    
+  pin:
+    type: boolean
+    description: "If true, never auto-evict"
+    
+  provenance:
+    type: object
+    properties:
+      created_by:
+        type: string
+        description: "What created this (tool:name, model, user)"
+      created_at:
+        type: string
+        format: date-time
+      updated_at:
+        type: string
+        format: date-time
+      session:
+        type: string
+        description: "Session that created this"
+        
+  links:
+    type: array
+    items:
+      type: string
+    description: "Related file paths"
+    
+  summarized_in:
+    type: string
+    description: "If summarized, path to summary file"
+    
+  superseded_by:
+    type: string
+    description: "If replaced, path to replacement"
+    
+  custom:
+    type: object
+    description: "Extension point for custom metadata"
+
+required: []  # All fields optional
+
+examples:
+  - title: "Configuration file"
+    summary: "Main app configuration"
+    tags: ["config", "important"]
+    hotness: 0.9
+    pin: true
+    provenance:
+      created_by: "user"
+      created_at: "2025-12-30T12:00:00Z"
+    links:
+      - "docs/configuration.md"

@@ -1,0 +1,118 @@
+# MOOLLM Skill Registry
+
+skills:
+  # ═══════════════════════════════════════════════════════════════════
+  # TIER 1: FILE-ONLY (No execution required)
+  # ═══════════════════════════════════════════════════════════════════
+  
+  - name: "scratchpad"
+    path: "skills/scratchpad"
+    description: "Working memory for thinking out loud"
+    tier: 1
+    entry: "SKILL.md"
+    tags: ["memory", "thinking", "essential"]
+    use_when: "You need to think through a problem"
+    
+  - name: "planning"
+    path: "skills/planning"
+    description: "Structured task decomposition and progress tracking"
+    tier: 1
+    entry: "SKILL.md"
+    tags: ["planning", "tasks", "essential"]
+    use_when: "You have a multi-step task to complete"
+    
+  - name: "memory-palace"
+    path: "skills/memory-palace"
+    description: "Spatial organization of knowledge in navigable directories"
+    tier: 1
+    entry: "SKILL.md"
+    tags: ["memory", "navigation", "organization"]
+    use_when: "Building a knowledge base or organizing research"
+    
+  - name: "adventure-protocol"
+    path: "skills/adventure-protocol"
+    description: "Room-based exploration with narrative evidence collection"
+    tier: 1
+    entry: "SKILL.md"
+    tags: ["exploration", "narrative", "investigation"]
+    use_when: "Exploring an unfamiliar codebase or investigating a bug"
+    
+  # ═══════════════════════════════════════════════════════════════════
+  # TIER 2: READ + EXECUTE
+  # ═══════════════════════════════════════════════════════════════════
+  
+  - name: "code-review"
+    path: "skills/code-review"
+    description: "Systematic code analysis with evidence collection"
+    tier: 2
+    entry: "SKILL.md"
+    requires: ["file-read", "terminal-execute"]
+    tags: ["development", "quality", "review"]
+    use_when: "Reviewing PRs, auditing code quality, or security review"
+    
+  # ═══════════════════════════════════════════════════════════════════
+  # TEMPLATES (For learning and bootstrapping)
+  # ═══════════════════════════════════════════════════════════════════
+  
+  - name: "basic-skill"
+    path: "skills/templates/basic-skill"
+    description: "Minimal skill template for learning and bootstrapping"
+    tier: 1
+    entry: "SKILL.md"
+    tags: ["template", "learning"]
+    use_when: "Creating a new skill from scratch"
+
+# ═══════════════════════════════════════════════════════════════════
+# PLANNED SKILLS (TODO)
+# ═══════════════════════════════════════════════════════════════════
+
+planned:
+  - name: "research-notebook"
+    description: "Structured research with sources, findings, decisions"
+    tier: 2
+    status: "planned"
+    
+  - name: "debugging"
+    description: "Systematic bug investigation with hypothesis tracking"
+    tier: 2
+    status: "planned"
+    
+  - name: "refactoring"
+    description: "Safe code transformation with verification"
+    tier: 3
+    status: "planned"
+    
+  - name: "git-workflow"
+    description: "Branch management, commits, PR preparation"
+    tier: 3
+    status: "planned"
+    
+  - name: "soul-chat"
+    description: "YAML Jazz conversations between characters"
+    tier: 1
+    status: "planned"
+    notes: "LLOOOOMM-specific, needs character system"
+
+# ═══════════════════════════════════════════════════════════════════
+# GUIDELINES
+# ═══════════════════════════════════════════════════════════════════
+
+guidelines:
+  structure:
+    - "Every skill needs SKILL.md (description) and PROTOTYPE.yml (definition)"
+    - "Use template/ subdirectory for files to copy on instantiation"
+    - "Templates use .tmpl extension for files with variable substitution"
+    
+  tiers:
+    tier_1: "File-only: read, write, navigate — no execution"
+    tier_2: "Read + Execute: can run commands, tests, linters"
+    tier_3: "Full access: network, git write, external APIs"
+    
+  naming:
+    - "Skill directories: lowercase-with-dashes"
+    - "Core files: UPPERCASE.ext (SKILL.md, PROTOTYPE.yml)"
+    - "Templates: filename.ext.tmpl"
+    
+  registration:
+    - "Register here when skill is ready for use"
+    - "Use 'planned' section for skills in development"

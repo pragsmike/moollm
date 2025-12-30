@@ -1,0 +1,168 @@
+# Cursor Driver
+# Adapts MOOLLM constitution to Cursor IDE
+
+driver:
+  name: "cursor"
+  tier: 4
+  description: "Cursor IDE with Agent mode"
+
+# What Cursor can do
+capabilities:
+  file_read: true
+  file_write: true
+  file_search: true
+  semantic_search: true
+  terminal: true
+  sandboxed_terminal: true
+  custom_tools: false      # Can't add our own tools
+  mcp: true               # Cursor supports MCP
+  why_parameter: false     # Can't modify built-in tool schemas
+  append_only_enforcement: false
+  background_indexing: true
+
+# Path conventions (relative to workspace)
+paths:
+  # Cursor works in workspace root, so we use a subdirectory
+  session_root: ".moollm/"
+  output_sink: ".moollm/output.md"
+  session_log: ".moollm/session-log.md"
+  working_set: ".moollm/working-set.yml"
+  hot_cache: ".moollm/hot.yml"
+  cold_cache: ".moollm/cold.yml"
+  summaries: ".moollm/summaries/"
+  artifacts: ".moollm/artifacts/"
+
+# Map abstract operations to Cursor tools
+tools:
+  # File operations
+  read_file:
+    tool: "read_file"
+    notes: "Cursor's built-in file reader"
+    
+  write_file:
+    tool: "write"
+    notes: "Overwrites entire file"
+    prefer: "search_replace for edits"
+    
+  edit_file:
+    tool: "search_replace"
+    notes: "Preferred for modifications"
+    
+  list_dir:
+    tool: "list_dir"
+    
+  delete_file:
+    tool: "delete_file"
+    notes: "Use sparingly"
+
+  # Search operations
+  semantic_search:
+    tool: "codebase_search"
+    notes: "Semantic search by meaning"
+    
+  text_search:
+    tool: "grep"
+    notes: "Exact text/regex search"
+    
+  file_search:
+    tool: "glob_file_search"
+    notes: "Find files by pattern"
+
+  # Execution
+  terminal:
+    tool: "run_terminal_cmd"
+    notes: "Sandboxed by default"
+    permissions: ["network", "git_write", "all"]
+
+  # No direct equivalents - use workarounds
+  append_file:
+    tool: null
+    workaround: "read_file + write with appended content"
+    
+  vector_search:
+    tool: "codebase_search"
+    notes: "Cursor's semantic search serves this purpose"
+
+# Adaptations for unsupported features
+adaptations:
+  why_parameter:
+    supported: false
+    fallback: "inline"
+    instruction: |
+      Since Cursor tools don't support a 'why' parameter, document intent
+      in your response BEFORE making tool calls:
+      
+      "I'm reading package.json to check dependencies because..."
+      [tool call]
+      
+  append_only:
+    supported: false
+    fallback: "convention"
+    instruction: |
+      Cursor can't enforce append-only at the tool level.
+      TREAT output.md and session-log.md AS append-only by convention:
+      - Always read first
+      - Append to existing content
+      - Never overwrite
+      
+  event_logging:
+    supported: false
+    fallback: "session_log_markdown"
+    instruction: |
+      Instead of events.jsonl, use session-log.md in markdown format:
+      
+      ## [timestamp] Action
+      - Tool: tool_name
+      - Intent: why you did it
+      - Result: brief outcome
+
+  working_set:
+    supported: "manual"
+    instruction: |
+      Cursor doesn't read working_set.yml automatically.
+      Maintain it as a reference for yourself:
+      - Update when focus changes
+      - Consult when context is unclear
+      - Helps with memory across turns
+
+# Cursor-specific features to leverage
+cursor_features:
+  # Use Cursor's strengths
+  leverage:
+    - "codebase_search for semantic queries"
+    - "Background indexing for fast search"
+    - "Multi-file editing with search_replace"
+    - "Terminal with permission system"
+    - "MCP for external integrations"
+    
+  # Cursor limitations to work around
+  limitations:
+    - "No custom tool schemas"
+    - "No enforced append-only"
+    - "No structured event logging"
+    - "Context window managed by Cursor"
+
+# Boot instructions for Cursor
+boot:
+  check_exists:
+    - ".moollm/"
+  create_if_missing:
+    - ".moollm/output.md"
+    - ".moollm/session-log.md"
+    - ".moollm/working-set.yml"
+  initial_log: |
+    # MOOLLM Session Log
+    Driver: cursor
+    Started: [timestamp]
+    
+    ---
+
+# Example session-log.md entry format
+log_format: |
+  ## [2025-12-30T12:30:00Z] Read Configuration
+  - **Intent**: Check current settings before making changes
+  - **Tool**: read_file
+  - **Target**: package.json
+  - **Outcome**: Found dependencies list
+  
+  ---

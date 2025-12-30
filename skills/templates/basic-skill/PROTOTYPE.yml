@@ -1,0 +1,24 @@
+# Basic Skill Prototype
+name: "basic-skill"
+description: "Minimal skill template for learning and bootstrapping"
+
+tier: 1  # File tools only
+
+tools_required:
+  - fs.ls
+  - fs.read
+  - fs.write
+  - fs.append
+
+dependencies: []  # No dependencies
+
+tags:
+  - "template"
+  - "minimal"
+  - "learning"
+
+template_dir: "template/"
+  
+outputs:
+  result: "RESULT.md"
+  return: "RETURN.md"

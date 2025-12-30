@@ -1,0 +1,182 @@
+# Custom Driver
+# Full MOOLLM kernel with custom orchestrator
+
+driver:
+  name: "custom"
+  tier: 6
+  description: "Custom orchestrator with full kernel control"
+
+# Full capabilities when you control the orchestrator
+capabilities:
+  file_read: true
+  file_write: true
+  file_search: true
+  semantic_search: true
+  terminal: true
+  sandboxed_terminal: true
+  custom_tools: true
+  mcp: true
+  why_parameter: true        # FULL SUPPORT
+  append_only_enforcement: true  # FULL SUPPORT
+  event_logging: true
+  working_set_integration: true
+  hot_cold_management: true
+
+# Standard MOOLLM paths
+paths:
+  session_root: ".agent/sessions/{session_id}/"
+  output_sink: "output.md"
+  event_log: "events.jsonl"
+  working_set: "working_set.yml"
+  hot_cache: "hot.yml"
+  cold_cache: "cold.yml"
+  summaries: "summaries/"
+  artifacts: "artifacts/"
+  tool_outputs: "tool/"
+  plans: "plans/"
+
+# Full tool set with 'why' parameter
+tools:
+  # File operations (all require 'why')
+  fs.ls:
+    schema:
+      path: string
+      why: string  # REQUIRED
+    enforced: true
+    
+  fs.read:
+    schema:
+      path: string
+      range: {start: int, end: int}?
+      why: string  # REQUIRED
+    enforced: true
+    
+  fs.append:
+    schema:
+      path: string
+      text: string
+      why: string
+    enforced: true
+    mode: "append_only"
+    
+  fs.write:
+    schema:
+      path: string
+      content: string
+      why: string
+    enforced: true
+    
+  fs.patch:
+    schema:
+      path: string
+      diff: string
+      why: string
+    enforced: true
+
+  # Search operations
+  search.lexical:
+    schema:
+      query: string
+      scope: string?
+      glob: string?
+      why: string
+    enforced: true
+    
+  search.vector:
+    schema:
+      query: string
+      scope: string?
+      k: int?
+      why: string
+    enforced: true
+
+  # Execution
+  terminal.run:
+    schema:
+      cmd: array
+      cwd: string?
+      timeout_ms: int?
+      why: string
+    enforced: true
+    sandbox: true
+    
+  python.exec:
+    schema:
+      code: string
+      files: object?
+      why: string
+    enforced: true
+    sandbox: true
+    
+  js.exec:
+    schema:
+      code: string
+      input_json: object?
+      why: string
+    enforced: true
+    sandbox: true
+
+  # Memory management
+  memory.advise:
+    schema:
+      hot: array?
+      cold: array?
+      trigger_gc: bool?
+      why: string
+    enforced: true
+    
+  memory.summarize:
+    schema:
+      target_paths: array
+      into_path: string
+      style: string?
+      why: string
+    enforced: true
+
+# Full enforcement
+enforcement:
+  why_parameter:
+    required: true
+    reject_without: true
+    log_intent: true
+    
+  append_only:
+    files: ["output.md", "events.jsonl"]
+    enforced: true
+    reject_overwrites: true
+    
+  sandbox:
+    enabled: true
+    filesystem_boundary: true
+    network_permission_required: true
+    timeout_enforcement: true
+    
+  event_logging:
+    automatic: true
+    all_tool_calls: true
+    all_results: true
+    include_why: true
+
+# Full protocol support
+protocols:
+  sip: true   # Skill Instantiation
+  dop: true   # Delegation Object
+  all_kernel: true
+
+# Boot sequence
+boot:
+  create_session_dir: true
+  create_canonical_files: true
+  log_session_start: true
+  load_constitution: true
+  inject_boot_header: true
+  
+  boot_header: |
+    Root: .agent/sessions/{session_id}/
+    Constitution: .agent/constitution.md (v{version})
+    Driver: custom (Tier 6 - Full Control)
+    
+    Tools: All require 'why' parameter
+    Append-only: output.md, events.jsonl (enforced)
+    
+    Ready.

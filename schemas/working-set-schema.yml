@@ -1,0 +1,91 @@
+# Working Set Schema
+# Defines the working_set.yml format
+
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "moollm/working-set"
+title: "Working Set Manifest"
+description: "Defines what files are in the LLM's context"
+
+type: object
+
+properties:
+  protocol:
+    type: string
+    const: "CONTEXT-ASSEMBLY/0.1"
+    
+  budget:
+    type: object
+    properties:
+      max_tokens:
+        type: integer
+        description: "Maximum context tokens"
+      reserved_for_response:
+        type: integer
+        description: "Tokens reserved for output"
+      effective:
+        type: integer
+        description: "Actual usable tokens (max - reserved)"
+    required: [max_tokens]
+    
+  files:
+    type: array
+    items:
+      type: object
+      properties:
+        path:
+          type: string
+          description: "File path relative to session"
+        priority:
+          type: number
+          minimum: 0
+          maximum: 1
+          description: "0.0-1.0, higher = more important"
+        role:
+          type: string
+          enum: [system, developer, user, context]
+          description: "How to inject into prompt"
+        truncate_strategy:
+          type: string
+          enum: [never, start, middle, end]
+          description: "How to cut if over budget"
+        max_lines:
+          type: integer
+          description: "Hard limit on lines"
+      required: [path, priority]
+      
+  metadata:
+    type: object
+    properties:
+      last_updated:
+        type: string
+        format: date-time
+      assembled_by:
+        type: string
+        enum: [model, orchestrator, user]
+      skill:
+        type: string
+        description: "If part of a skill instance"
+      notes:
+        type: string
+
+required:
+  - files
+
+examples:
+  - protocol: "CONTEXT-ASSEMBLY/0.1"
+    budget:
+      max_tokens: 28000
+      reserved_for_response: 4000
+      effective: 24000
+    files:
+      - path: "constitution.md"
+        priority: 1.0
+        role: "system"
+        truncate_strategy: "never"
+      - path: "task.md"
+        priority: 0.9
+        role: "developer"
+        truncate_strategy: "end"
+    metadata:
+      last_updated: "2025-12-30T12:30:00Z"
+      assembled_by: "model"

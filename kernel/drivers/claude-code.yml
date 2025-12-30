@@ -1,0 +1,140 @@
+# Claude Code Driver
+# Adapts MOOLLM constitution to Claude Code (Anthropic)
+
+driver:
+  name: "claude-code"
+  tier: 5
+  description: "Claude Code with MCP support"
+
+capabilities:
+  file_read: true
+  file_write: true
+  file_search: true
+  semantic_search: false   # Depends on MCP server
+  terminal: true
+  sandboxed_terminal: true
+  custom_tools: true       # Via MCP!
+  mcp: true
+  why_parameter: "via_mcp" # Can add via custom MCP tools
+  append_only_enforcement: "via_mcp"
+  
+# Path conventions
+paths:
+  session_root: ".agent/"
+  output_sink: ".agent/output.md"
+  event_log: ".agent/events.jsonl"
+  working_set: ".agent/working_set.yml"
+  hot_cache: ".agent/hot.yml"
+  cold_cache: ".agent/cold.yml"
+  summaries: ".agent/summaries/"
+  artifacts: ".agent/artifacts/"
+
+# Claude Code built-in tools
+tools:
+  read_file:
+    tool: "View"
+    notes: "Claude Code's file viewer"
+    
+  write_file:
+    tool: "Edit"
+    notes: "Can patch or overwrite"
+    
+  edit_file:
+    tool: "Edit"
+    notes: "Patch-based editing"
+    
+  list_dir:
+    tool: "LS"
+    
+  terminal:
+    tool: "Bash"
+    notes: "Shell execution"
+
+  # MCP-extended tools (if configured)
+  mcp_tools:
+    note: "Additional tools via MCP servers"
+    examples:
+      - "Database queries"
+      - "API calls"
+      - "Custom MOOLLM tools"
+
+# Adaptations
+adaptations:
+  why_parameter:
+    supported: "via_mcp"
+    instruction: |
+      If you have a MOOLLM MCP server, tools will have 'why' parameters.
+      
+      If not, document intent before tool calls:
+      "Reading X because I need to understand Y..."
+      
+  append_only:
+    supported: "via_mcp"
+    instruction: |
+      If MOOLLM MCP server is available, use moollm.append tool.
+      Otherwise, treat output.md as append-only by convention.
+      
+  event_logging:
+    supported: true
+    format: "jsonl"
+    instruction: |
+      Log to events.jsonl in standard format:
+      {"type":"...", "timestamp":"...", ...}
+
+# MCP Integration
+mcp:
+  recommended_servers:
+    - name: "moollm-kernel"
+      description: "Full MOOLLM kernel tools with 'why' support"
+      provides:
+        - "moollm.read (with why)"
+        - "moollm.write (with why)"
+        - "moollm.append (enforced append-only)"
+        - "moollm.event (structured logging)"
+        - "moollm.memory (hot/cold management)"
+        
+    - name: "filesystem"
+      description: "Standard file operations"
+      
+    - name: "search"
+      description: "Vector/semantic search"
+      
+  configuration: |
+    To enable full MOOLLM support in Claude Code:
+    
+    1. Add to .mcp.json:
+       {
+         "moollm-kernel": {
+           "command": "moollm-mcp-server",
+           "args": ["--session", ".agent/"]
+         }
+       }
+    
+    2. Or use Claude Code's MCP management:
+       claude mcp add moollm-kernel
+
+# Claude Code specific features
+claude_code_features:
+  leverage:
+    - "MCP for custom tools"
+    - "Can run Claude Code as MCP server itself"
+    - "Rich diff-based editing"
+    - "Extensive file operations"
+    
+  limitations:
+    - "No built-in semantic search (add via MCP)"
+    - "Tool schemas are fixed without MCP"
+
+# Boot instructions
+boot:
+  check_exists:
+    - ".agent/"
+  create_if_missing:
+    - ".agent/output.md"
+    - ".agent/events.jsonl"
+    - ".agent/working_set.yml"
+    - ".agent/hot.yml"
+    - ".agent/cold.yml"
+    - ".agent/summaries/"
+  initial_event: |
+    {"type":"session_start","driver":"claude-code","timestamp":"..."}
