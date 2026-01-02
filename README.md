@@ -56,7 +56,9 @@ A sister script runs Micropolis headless: advance N ticks, inject edits, render 
 
 **Bill Atkinson — HyperCard** — Stacks, cards, buttons, message passing. Non-programmers building interactive systems in 1987. The dream of end-user programming that MOOLLM inherits.
 
-**Arthur van Hoff & Don — [HyperLook](https://medium.com/@donhopkins/simcity-cellular-automata-and-happy-tool-for-hyperlook-nee-hypernews-nee-goodnews-4b7cadf8f514)** — HyperCard for NeWS (Sun's PostScript window system), using PostScript for graphics, scripting, AND data. Property sheets were HyperLook stacks — the system edited itself. SimCity ran on HyperLook, and you could edit its UI *while it was running*. Copy a live city view, paste it into a cellular automata machine, melt it, paste the result into a clock face. Everything plugged into everything. MOOLLM inherits this: YAML files are both data and configuration, skills edit themselves, everything is inspectable and composable.
+**Arthur van Hoff & Don — [HyperLook](https://medium.com/@donhopkins/simcity-cellular-automata-and-happy-tool-for-hyperlook-nee-hypernews-nee-goodnews-4b7cadf8f514)** — HyperCard for NeWS (Sun's PostScript window system), using PostScript for graphics, scripting, AND data. Property sheets were HyperLook stacks — the system edited itself. SimCity ran on HyperLook, and you could edit its UI *while it was running*. Snapshot a live city view, melt it in a cellular automata machine, use the result as a clock face. Everything plugged into everything. MOOLLM inherits this: YAML files are both data and configuration, skills edit themselves, everything is inspectable and composable.
+
+**Semantic Snapshot Streams** — Not a clipboard. A *stream* of semantic snapshots you can edit, mint into your own cards (data AND actions), carry in your inventory, play in rooms, pass as parameters. Snapshot a conversation → mint it into a "design-decision" card → carry it to another room → play it to invoke that context. The stream is your trail of breadcrumbs AND your bag of tools.
 
 **Dave Ungar — Self** — Prototypes over classes. Clone and modify beats rigid inheritance. "It's About Time" — compile when understanding crystallizes, not when code gets hot.
 
@@ -152,13 +154,16 @@ This is what LambdaMOO was. This is what HyperLook was. This is what Kilroy will
 
 YAML files with schemas aren't just for LLMs to read — they're for **Python to transform**.
 
-```
-┌─────────────┐    ┌──────────────┐    ┌─────────────┐
-│   LLM       │───▶│   Python     │───▶│   LLM       │
-│ (reasoning) │    │ (transform)  │    │ (synthesis) │
-└─────────────┘    └──────────────┘    └─────────────┘
-     ↓                   ↓                   ↓
- decisions.yml    sorted_ranked.yml    summary.md
+```mermaid
+flowchart TD
+    LLM1[LLM<br/>reasoning] --> |decisions.yml| PY[Python<br/>transform]
+    PY --> |sorted_ranked.yml| LLM2[LLM<br/>synthesis]
+    LLM2 --> |summary.md| OUT[Output]
+    
+    style LLM1 fill:#1a1a2e,stroke:#e94560,color:#fff
+    style PY fill:#1a1a2e,stroke:#0f3460,color:#fff
+    style LLM2 fill:#1a1a2e,stroke:#e94560,color:#fff
+    style OUT fill:#16213e,stroke:#0f3460,color:#fff
 ```
 
 **Let each do what it's good at:**
