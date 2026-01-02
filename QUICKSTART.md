@@ -8,7 +8,7 @@
 
 **The problem:** LLM agents are black boxes. They have "memory" you can't inspect, "planning" you can't audit, and crash when they encounter missing data. You feed tokens into a void and hope.
 
-**The solution:** MOOLLM makes the invisible visible. Every thought is a file. Every action is logged. Every plan is YAML you can read. The agent navigates its own memory like a filesystem because *it IS a filesystem*.
+**The solution:** MOOLLM turns the filesystem into a **microworld** — a place where agents go on adventures, summon characters, build memory palaces, and navigate by meaning. Every thought is a file you can read. Every session is a story you can replay. The agent doesn't just *use* the filesystem — it *lives* there.
 
 **Why it matters:**
 
@@ -24,15 +24,27 @@
 
 ## What's Unique?
 
-1. **Spatial programming.** Directories are rooms. Enter a room = push context. Exit = pop. Cards activate in rooms like function calls with state.
+1. **It's a microworld, not a database.** The filesystem isn't storage — it's a *place*. Directories are **rooms** you enter. Files are **objects** you examine. You don't query data, you **go on adventures**.
 
-2. **Multi-agent without the bullshit.** Traditional: 3 agents × 5 turns = 15 LLM calls, file I/O between each. MOOLLM: 3 agents × 5 turns = 1 LLM call. They talk at the speed of light *inside the context*.
+2. **Characters live here.** Summon a Skeptic card into your research room. Have documents debate each other. Let the codebase explain itself. Everything can speak — files, concepts, rooms, tools.
 
-3. **Self-healing by design.** Missing file? Create it. Corrupted state? Rename `.corrupted`, start fresh, log what happened. NEVER crash. Inspired by Dave Ackley's robust-first computing.
+3. **Memory palaces, not memory dumps.** Organize knowledge spatially. Put the important stuff in the Treasury. Archive old experiments in the Catacombs. Navigate by *meaning*, not by filename.
 
-4. **YAML Jazz.** Comments aren't decoration — they're semantic. `timeout: 30 # generous because API flaky on Mondays` tells the LLM *why*, not just *what*.
+4. **Extreme parallelism.** Forget ChatGPT's one-user-one-assistant model. MOOLLM runs **many conversations at once**: `design-debate.md` (Architect vs Critic), `security-review.md` (3 reviewers), `api-discussion.md` (Frontend + Backend) — all simulated in **ONE LLM call**. 50+ interactions, 1 API call. Like The Sims updating all characters in one frame.
 
-5. **No impersonation, just storytelling.** Reference real people's wisdom through "Hero-Stories" — K-line activation of their *tradition*, not simulation of their *identity*.
+5. **Self-healing by design.** Missing file? Create it. Corrupted state? Rename `.corrupted`, start fresh. NEVER crash. The adventure continues.
+
+6. **YAML Jazz.** Comments carry meaning. `timeout: 30 # generous, API flaky on Mondays` — the LLM understands *why*.
+
+7. **Hero-Stories.** Invoke Dave Ungar's wisdom without pretending to *be* Dave Ungar. Compose skill sets from real people in the training data — ethically, coherently.
+
+8. **Characters are apps.** Each character has a `SKILL.md` (man page), `PROTOTYPE.yml` (interface), and commands it responds to. Like CLI tools with personality.
+
+9. **Hybrid LLM + Python.** YAML schemas let deterministic code do what LLMs shouldn't: sorting, aggregating, validating, calculating. LLM reasons → Python transforms → LLM synthesizes. No wasted tokens on math.
+
+10. **Sister scripts.** Proven chat patterns crystallize into automation. The slow LLM conversation becomes a fast Python script. Document-first development.
+
+11. **Chat is the new shell.** `SUMMON critic | architect > decisions.yml` — compose characters like Unix pipes. The conversation IS the command line.
 
 ---
 
@@ -157,14 +169,20 @@ Full index: [PROTOCOLS.yml](./PROTOCOLS.yml)
 
 ## Standing on Giants
 
-| System | What We Took | Why It Works |
-|--------|--------------|--------------|
-| **The Sims** | Objects advertise capabilities | Agent picks best action based on goals, not scripts |
-| **HyperCard** | Stacks, cards, message delegation | Non-programmers built apps in 1987. We can too. |
-| **Self** | Prototypes, no classes | Clone and modify beats rigid inheritance |
-| **LambdaMOO** | Rooms as spatial programming | Navigation IS cognition |
-| **MFM** | Robust-first, local repair | Survivability beats correctness |
-| **Kilroy** | Decentralized swarms | Many small LLMs beat one big prison |
+MOOLLM is **constructionist computing** for LLM agents:
+
+| Tradition | Person | What We Took |
+|-----------|--------|--------------|
+| **Constructionism** | Papert, Kay | Learning by building inspectable things |
+| **The Sims / SimCity** | Will Wright, Don Hopkins | Objects advertise, agents select autonomously |
+| **OLPC SimCity** | Don Hopkins | Simulation as learning microworld |
+| **HyperCard** | Bill Atkinson | Non-programmers building apps (1987!) |
+| **Self** | Dave Ungar | Prototypes, "It's About Time" |
+| **Robust-First** | Dave Ackley | Survivability over correctness |
+| **K-Lines** | Marvin Minsky | Names activate conceptual clusters |
+| **Kilroy** | Chuck Shotton | Decentralized swarms, small LLMs |
+
+> *"If you can build it, you can understand it. If you can inspect it, you can trust it."*
 
 ---
 
