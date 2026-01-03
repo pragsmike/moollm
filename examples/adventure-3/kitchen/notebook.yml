@@ -5,6 +5,7 @@ object:
   name: Adventurer's Notebook
   type: container
   portable: true
+  location: kitchen/table  # On the kitchen table, ready to be taken!
   
   description: |
     A leather-bound notebook with crisp, empty pages. The cover is

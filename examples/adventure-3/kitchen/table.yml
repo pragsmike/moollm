@@ -39,12 +39,25 @@ object:
     - name: Mother's Note
       description: "Instructions from Petunia Fantastipants. Somehow she knew."
       can_take: true
+      file: mothers-note.yml
       
     - name: TomTomagotchi
       description: "A small egg-shaped device with a blinking eye. It chirps hopefully."
       can_take: true
       file: tomtomagotchi.yml
       hint: "Navigation companion — part GPS, part pet, part oracle, part friend!"
+      
+    - name: Adventurer's Notebook
+      description: "A leather-bound notebook with empty pages. 'Fill these pages with your story.'"
+      can_take: true
+      file: notebook.yml
+      hint: "Auto-sorts letters, cards, photos, songs, personas, costumes, dreams."
+      
+    - name: Adventurer's Lunchbox
+      description: "A sturdy metal lunchbox with a handle. Perfect for carrying food."
+      can_take: true
+      file: lunchbox.yml
+      hint: "Raid the fridge, fill the lunchbox, map the maze!"
   
   advertisements:
     - action: READ-NOTE

@@ -1,11 +1,11 @@
 # 🍱 THE ADVENTURER'S LUNCHBOX
-# For carrying food through the maze (found in kitchen!)
+# For carrying food through the maze
 
 object:
   name: Adventurer's Lunchbox
   type: container
   portable: true
-  location: kitchen/  # Pick it up from the kitchen table!
+  location: kitchen/table  # On the kitchen table, ready to be taken!
   
   description: |
     A sturdy metal lunchbox with a handle. The previous owner left

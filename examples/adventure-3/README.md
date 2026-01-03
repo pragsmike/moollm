@@ -61,7 +61,7 @@ From Mother's note on the kitchen table:
     │                    ║  Chamber  ║                    │
     │                    ╚═════╤═════╝                    │
     │                          │                          │
-    │    COATROOM ←── east ────┼──── west ──→ KITCHEN    │
+    │    COATROOM ←── east ────┼──── west ──→ KITCHEN     │
     │    (Maurice)             │              (Fridge)    │
     │                          │ north                    │
     │                          ↓                          │
@@ -141,15 +141,18 @@ goals:
 
 ## 🎭 Tips for New Adventurers
 
-1. **GET LAMP** — Seriously. Don't enter the maze without it.
-2. **GET TOM** — The TomTomagotchi on the kitchen table. Your navigation friend!
-3. **Visit the Kitchen** — Mother's note has important instructions.
+1. **GET LAMP** — In the start room. Don't enter the maze without it.
+2. **Visit the Kitchen** — Everything you need is on the table:
+   - 📜 **Mother's Note** — Important instructions and promises
+   - 🧭 **TomTomagotchi** — Your navigation pet (GPS + friend!)
+   - 📓 **Notebook** — For collecting memories (auto-sorts!)
+   - 🍱 **Lunchbox** — For carrying food
+3. **Raid the Fridge** — 20 food items for maze mapping.
 4. **Visit the Coatroom** — Maurice can help you discover who you want to be.
-5. **Raid the Fridge** — 20 food items for maze mapping.
-6. **The Grue Has Respawned** — It's hungry. It's waiting. It's in room-f.
-7. **The Vending Machine** — Room J sells Premium Glow Juice (3 gold).
-8. **The Skeleton Points West** — Follow its guidance.
-9. **There's 100 Gold** — In the grue's lair. If you dare.
+5. **The Grue Has Respawned** — It's hungry. It's waiting. It's in room-f.
+6. **The Vending Machine** — Room J sells Premium Glow Juice (3 gold).
+7. **The Skeleton Points West** — Follow its guidance.
+8. **There's 100 Gold** — In the grue's lair. If you dare.
 
 ---
 
