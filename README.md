@@ -351,6 +351,14 @@ A room full of activations is a running program. The cards are the code. The act
 
 **Pets ARE subcommands** — with personality, built-in help, tutorials, and context. They remember your last interaction. They warn you about gotchas. They're CLI tools you can *talk to*.
 
+**Summoning a pet is literally "opening a dialog."** Not metaphorically — *literally*. In GUI terms, you're opening a dialog box that:
+- Has its own state and controls
+- Responds to your input
+- Can be dismissed or kept open
+- Returns a result when you're done
+
+The chat interface IS the dialog. The pet IS the dialog's personality. We've come full circle from GUIs back to conversation — but now the dialog box talks back.
+
 Sister scripts emerge: chat patterns that work get automated. The slow LLM exploration becomes fast shell execution. PLAY → LEARN → LIFT.
 
 **The Patron Saints of PLAY-LEARN-LIFT:**
