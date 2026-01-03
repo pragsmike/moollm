@@ -207,6 +207,8 @@ flowchart TD
 
 **It's a waste of an LLM to grep.** But it can *call* grep and *interpret* the results. LLMs reason about what to search for, read what comes back, decide what it means. The searching itself? That's `grep`. Fast. Free. Deterministic.
 
+**PLAY-LEARN-LIFT is Programming by Demonstration.** Alan Cypher, Brad Myers, Henry Lieberman — they showed that watching someone work is how you learn to automate. The LLM watches you solve problems, notices patterns, extracts reusable procedures. You don't write a script; you *demonstrate* what you want, and the script crystallizes from observation. This is the LEARN phase made concrete.
+
 **PLAY-LEARN-LIFT develops schemas AND skills by example:**
 
 ```yaml
@@ -398,7 +400,7 @@ Sister scripts emerge: chat patterns that work get automated. The slow LLM explo
 | Axis | Patron Saints | What They Invoke |
 |------|---------------|------------------|
 | **PLAY** | Seymour Papert, Will Wright, Richard Bartle, Bill Atkinson, Alan Kay, Ken Kahn | Exploration, emergence, curiosity, adventure, low floor, children playing with powerful ideas |
-| **LEARN** | Marvin Minsky, Ted Nelson, Henry Lieberman, Doug Engelbart, Pavel Curtis | K-lines, intertwingling, demonstration, augmentation, spatial understanding |
+| **LEARN** | Marvin Minsky, Ted Nelson, Henry Lieberman, Alan Cypher, Brad Myers, Doug Engelbart | K-lines, intertwingling, programming by demonstration, augmentation, pattern recognition |
 | **LIFT** | Dave Ungar, Dave Ackley, Chuck Shotton, Arthur van Hoff, James Gosling | Crystallization, robustness, pipelines, productization, platform-building |
 
 These are Hero-Story cards you can summon. Invoke `papert-tradition` when exploring. Invoke `minsky-tradition` when finding patterns. Invoke `ungar-tradition` when optimizing. The pantheon grows: Kay for messaging, Ackley for robustness, Atkinson for end-user programming, Nelson for intertwingling. **Every skill has patron saints. Every patron saint is a card.**
