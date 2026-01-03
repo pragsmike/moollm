@@ -360,11 +360,11 @@ This skill directory contains only:
 
 ## Integration
 
-- **← P-HANDLE-K**: Characters are K-line wrappers
-- **→ TRADING-CARD**: Characters can become cards
-- **→ MEMORY-PALACE**: Chats can populate rooms
-- **← YAML-JAZZ**: The foundation of meaningful structure
-- **← NAMING**: Big-endian naming for clustering
+- **← [P-HANDLE-K](../../PROTOCOLS.yml)**: Characters are K-line wrappers
+- **→ [CARD](../card/)**: Characters can become cards
+- **→ [MEMORY-PALACE](../memory-palace/)**: Chats can populate rooms
+- **← [YAML-JAZZ](../yaml-jazz/)**: The foundation of meaningful structure
+- **← [NAMING](../../kernel/NAMING.yml)**: Big-endian naming for clustering
 
 ---
 

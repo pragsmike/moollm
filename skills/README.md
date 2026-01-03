@@ -5,7 +5,7 @@
 Userland protocols over files.
 
 > [!TIP]
-> **New here?** Start with [constructionism/](./constructionism/) — the philosophy. Then explore [room/](./room/) — it has everything! Then [coherence-engine/](./coherence-engine/) and [play-learn-lift/](./play-learn-lift/).
+> **New here?** Start with [constructionism/](./constructionism/) — the philosophy. Then [skill/](./skill/) — the meta-skill explaining how skills work. Then explore [room/](./room/) — it has everything!
 
 ---
 
@@ -55,6 +55,8 @@ No hidden state, no magic.
 
 | Skill | Purpose | Tier |
 |-------|---------|------|
+| [skill/](./skill/) | **The meta-skill.** How skills work, evolve, and compose. Central + local skills. | 1 |
+| [protocol/](./protocol/) | **The naming convention.** UPPER-CASE-HYPHENATED symbols. Greppable K-lines. | 1 |
 | [play-learn-lift/](./play-learn-lift/) | Explore → Learn → Share wisdom | 1 |
 | [sister-script/](./sister-script/) | Document-first automation | 2 |
 | [plan-then-execute/](./plan-then-execute/) | Frozen plans with approval gates | 2 |

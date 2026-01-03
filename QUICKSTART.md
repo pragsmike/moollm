@@ -194,6 +194,7 @@ MOOLLM is **constructionist computing** for LLM agents:
 - [ ] Try a room: [skills/room/](./skills/room/)
 - [ ] Play a card: [skills/card/](./skills/card/)
 - [ ] Learn the methodology: [skills/play-learn-lift/](./skills/play-learn-lift/)
+- [ ] Understand skills: [skills/skill/](./skills/skill/)
 
 ---
 

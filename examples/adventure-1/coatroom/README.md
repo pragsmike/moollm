@@ -5,6 +5,10 @@
 
 A vast circular chamber of infinite costume possibilities. Transform yourself completely!
 
+**Inspired by The Sims' Create-a-Sim screen** — and appropriately located right near the entrance! Just like starting a new Sims game, you can customize your character before the adventure begins. Change your appearance, add accessories, mix and match personas. The adventure awaits, but first: *who do you want to be?*
+
+**Also an NPC factory!** Generate new characters, dress them up, accessorize them, and dispatch them into the world. Need a rival adventurer? A helpful guide? A suspicious merchant? Create them here, costume them, give them inventory, and send them off to populate your adventure.
+
 ---
 
 ## How It Works
@@ -104,7 +108,21 @@ You now have: Rubber Chicken (squeaks when squeezed)
 - **Roleplay differently** through the adventure
 - **Get into character** for puzzles and challenges
 - **Add inventory items** that match your persona
+- **Learn skills!** Using the costume racks teaches `costume-combining`
 - **Have fun!** The maze is scary. Costumes are fun.
+
+## Skills You Can Learn Here
+
+Interacting with objects in the coatroom can teach persistent skills:
+
+| Interaction | Skill Learned | Carries To |
+|-------------|---------------|------------|
+| `COMBINE` costumes | `costume-combining` | Any room with costumes |
+| `WEAR RANDOM` repeatedly | `style-improvisation` | Social encounters |
+| Help the mannequin | `fashion-consulting` | NPC interactions |
+| `ADD TO INVENTORY` | `accessorizing` | Equipment management |
+
+These skills persist in your `player.yml` and travel with you!
 
 ---
 

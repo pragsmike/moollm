@@ -482,6 +482,8 @@ This repository IS a memory palace. Each directory is a room, and should have a 
 | 🚪 [room/](./skills/room/) | Directories as cognitive spaces |
 | 🎴 [card/](./skills/card/) | Capabilities as instantiable cards |
 | 🎮 [play-learn-lift/](./skills/play-learn-lift/) | The methodology: explore → understand → extract |
+| 🧩 [skill/](./skills/skill/) | The meta-skill: how skills work, evolve, compose |
+| 🏷️ [protocol/](./skills/protocol/) | Protocol names ARE K-lines — greppable symbolic activators |
 | 💬 [soul-chat/](./skills/soul-chat/) | Everything speaks — objects, rooms, concepts |
 | 🤝 [postel/](./skills/postel/) | Be liberal in what you accept |
 | 🎷 [yaml-jazz/](./skills/yaml-jazz/) | Comments carry meaning, data is interpreted |
@@ -667,6 +669,7 @@ flowchart TD
 [logo]: https://en.wikipedia.org/wiki/Logo_(programming_language)
 [kilroy]: ./designs/kilroy-ideas.md
 [getlamp]: http://www.getlamp.com/
+[pbd]: https://mitpress.mit.edu/9780262527965/watch-what-i-do/
 
 </details>
 
@@ -736,12 +739,15 @@ The end state: an LLM that navigates its own memory, follows explicit protocols,
 | **[skills/hero-story/](./skills/hero-story/)** | 🦸 Safely invoke real people's traditions and skills. K-lines, not cosplay. Familiars as fictional embodiments. |
 | **[skills/data-flow/](./skills/data-flow/)** | 🔀 Rooms as pipeline nodes. THROW objects through exits. Kilroy-style data flow in the filesystem. |
 | **[skills/play-learn-lift/](./skills/play-learn-lift/)** | 🎮 The three-stage methodology. Play → Learn → Lift. Patron saints. How skills evolve. |
+| **[skills/skill/](./skills/skill/)** | 🧩 The meta-skill. How skills work, evolve, compose. Central + local skills. Anthropic Skills parallels. |
 
 ### 🧠 Core Concepts
 
 | README | What You'll Find |
 |--------|------------------|
 | **[skills/constructionism/](./skills/constructionism/)** | 🏗️ **The philosophy.** Learn by building inspectable things. Papert, Kay, Logo, Micropolis. Low floor, high ceiling, wide walls. If you can build it, you can understand it. |
+| **[skills/skill/](./skills/skill/)** | 🧩 **The meta-skill.** How skills work, evolve, compose. Central vs. local. Programming by Demonstration. Parallels Anthropic Skills. |
+| **[skills/protocol/](./skills/protocol/)** | 🏷️ **Protocol names ARE K-lines.** Minsky's symbolic activators made greppable. Type the name → activate the tradition. |
 | **[skills/coherence-engine/](./skills/coherence-engine/)** | 🔮 The LLM as consistency maintainer. Cross-checks, orchestrates, transcribes. Speed-of-light simulation. |
 | **[skills/speed-of-light/](./skills/speed-of-light/)** | ⚡ Many turns in one LLM call. Instant communication. No round-trip noise. |
 | **[skills/yaml-jazz/](./skills/yaml-jazz/)** | 🎷 Semantic YAML where comments matter. The LLM as jazz musician interpreting sheet music. |
@@ -765,7 +771,7 @@ The end state: an LLM that navigates its own memory, follows explicit protocols,
 | **[skills/adventure/](./skills/adventure/)** | 🗺️ Structured exploration. Goals, discoveries, choices. |
 | **[examples/](./examples/)** | 🎮 Live playable examples with full source and creation chat logs. |
 
-> **TL;DR:** Read [skills/room/](./skills/room/) first, then **play** [examples/adventure-1/](./examples/adventure-1/)!
+> **TL;DR:** Read [skills/constructionism/](./skills/constructionism/) for philosophy, [skills/skill/](./skills/skill/) for how it works, [skills/room/](./skills/room/) for the fun stuff, then **play** [examples/adventure-1/](./examples/adventure-1/)!
 
 ---
 
@@ -793,6 +799,8 @@ The end state: an LLM that navigates its own memory, follows explicit protocols,
 | **Alan Kay** | Smalltalk, messaging, children |
 | **Ken Kahn** | ToonTalk, AI blocks for Snap!, LLMs in education |
 | **Henry Lieberman** | Programming by demonstration |
+| **Alan Cypher** | [Watch What I Do][pbd] — programming by demonstration |
+| **Brad Myers** | Programming by demonstration, natural programming |
 | **Ted Nelson** | Xanadu, intertwingled everything |
 
 </details>

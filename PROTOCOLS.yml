@@ -1408,6 +1408,39 @@ CONSTRUCTIONISM:
     
   connection: "PLAY-LEARN-LIFT is constructionism in action"
 
+PROTOCOL:
+  meaning: "Protocol names ARE K-lines — symbolic activators for traditions."
+  location: skills/protocol/
+  invoke_when: "Naming new concepts, finding protocol definitions, activating traditions"
+  philosophy: "Type the name → activate the tradition → invoke the behavior."
+  identity: "Protocol names = Minsky K-lines = greppable symbolic activators"
+  convention:
+    case: "UPPER-CASE"
+    separator: "hyphen"
+    why:
+      - "Grep-friendly — unambiguous text search"
+      - "Vector-friendly — distinct embeddings"
+      - "Human-scannable — pops out in prose"
+  layers:
+    kernel: "Fundamental — FILES-AS-STATE, APPEND-ONLY"
+    skill: "Behavioral — PLAY-LEARN-LIFT, POSTEL"
+    ad_hoc: "Emergent — mentioned inline, naming makes them real"
+
+SKILL:
+  meaning: "A documented capability that can be instantiated, composed, and automated."
+  location: skills/skill/
+  invoke_when: "Understanding how skills work, creating new skills, composing skills"
+  philosophy: "A skill is documentation that learned to do things."
+  invokes:
+    - programming-by-demonstration  # Alan Cypher, Brad Myers, Henry Lieberman
+    - constructionism               # Papert — learn by building
+    - anthropic-skills              # Documentation-first tool definition
+  where_skills_live:
+    central: "skills/ directory — shared, reusable, general-purpose"
+    local: "In rooms and characters — context-specific, emergent"
+    inheritance: "Local skills inherit from central, add local knowledge"
+  lifecycle: "Documentation → Procedure → Script → Tool (via PLAY-LEARN-LIFT)"
+
 PLAY-LEARN-LIFT:
   meaning: "The three-stage journey: explore freely, find patterns, share wisdom."
   location: skills/play-learn-lift/
@@ -1465,10 +1498,10 @@ BUILD-COMMAND:
   location: temp/lloooomm/01-Projects/lloooomm/vm/lloooomm.md#build-command
   invoke_when: "Repetitive LLM work should become fast shell execution"
   phases:
-    - "Discovery: Analyze document for repetitive patterns"
+    - "Discovery: Analyze documents and chat history for repetitive patterns"
     - "Negotiation: Agree on scope (what to automate vs keep manual)"
     - "Architecture: Design the sister app structure"
-    - "Implementation: Build in phases, MVP first"
+    - "Implementation: Build in phases, MVP first, then tools, linters, simulators, event plumbing, attention management, etc."
 
 # ═══════════════════════════════════════════════════════════════════
 # COMPILATION & OPTIMIZATION (Dave Ungar / Self lineage)
@@ -1494,12 +1527,13 @@ JUST-ABOUT-TIME:
     # Like emacs screen updates — compute minimal diff, then execute
   contrast:
     reactive: "Fix problems when they happen"
-    predictive: "Prevent problems by simulating first"
+    predictive: "Prevent problems by simulating first, backtracking, maintaining constraints, negotiating protocols, resolving conflicts, all before emitting"
 
 PRESERVE-JOURNEY:
   meaning: "The path to the solution IS the value. Don't discard experiments."
   location: temp/lloooomm/03-Resources/protocols/flowmap-protocol.md
   invoke_when: "Tempted to delete messy first attempts"
+  uplift_chat_history: "Chat is ephemeral, so uplift the journey into the filesystem."
   wisdom: |
     # preservation_over_performance:
     #   - Keep the messy first attempts
@@ -1544,7 +1578,7 @@ SPEED-OF-LIGHT:
     soul_chat: "Symposium of many voices, no latency"
 
 CARRIER-PIGEON:
-  meaning: "ANTI-PATTERN: One LLM call per agent, file-based communication."
+  meaning: "ANTI-PATTERN: One LLM call per agent, file-based communication, tokenization overhead, loss of precision, latency, etc."
   invoke_when: "Recognizing inefficient multi-agent designs"
   also_called: "toilet-paper-and-crayon"
   
@@ -1563,6 +1597,7 @@ CARRIER-PIGEON:
 
 _shortcuts:
   # Common abbreviations
+  # IMPORTANT: Define abbreviations with full names the first time they are used in any context!
   CM: COMMENTS-MATTER
   AO: APPEND-ONLY
   WS: WORKING-SET
@@ -1584,12 +1619,12 @@ _shortcuts:
 _categories:
   principles: [YAML-JAZZ, FILES-AS-STATE, WHY-REQUIRED, APPEND-ONLY, COMMENTS-MATTER, MINIMAL-DIFF, NO-VERSIONS]
   naming: [BIG-ENDIAN, ABOUT-NOT-INSIDE, PREFIX-OWNERSHIP, README-EVERYWHERE]
-  methodology: [CONSTRUCTIONISM, PLAY-LEARN-LIFT, SISTER-SCRIPT, BUILD-COMMAND]
+  methodology: [SKILL, PROTOCOL, CONSTRUCTIONISM, PLAY-LEARN-LIFT, SISTER-SCRIPT, BUILD-COMMAND]
   interpretation: [POSTEL, CHARITY]
   safety: [P-HANDLE-K, NO-IMPERSONATE, K-LINE, FICTIONAL-WRAPPER, HONEST-FORGET]
   memory: [HOT-COLD, WORKING-SET, SUMMARIZE, NEVER-DELETE]
   robustness: [NEVER-CRASH, REPAIR-DEMON, BEST-EFFORT, ROBUST-FIRST]
-  skills: [SIP, DOP, PLAN-EXECUTE]
+  skills: [SKILL, SIP, DOP, PLAN-EXECUTE]
   logging: [SESSION-LOG, AUDIT-TRAIL]
   lifecycle: [YAML-COLTRANE, IMPROVISE, CRYSTALLIZE]
   optimization: [ITS-ABOUT-TIME, JUST-ABOUT-TIME, PRESERVE-JOURNEY, WISDOM-SPOT, SPEED-OF-LIGHT]
@@ -1673,12 +1708,12 @@ _shortcuts:
 _categories:
   principles: [YAML-JAZZ, FILES-AS-STATE, WHY-REQUIRED, APPEND-ONLY, COMMENTS-MATTER, MINIMAL-DIFF, NO-VERSIONS]
   naming: [BIG-ENDIAN, ABOUT-NOT-INSIDE, PREFIX-OWNERSHIP, README-EVERYWHERE]
-  methodology: [CONSTRUCTIONISM, PLAY-LEARN-LIFT, SISTER-SCRIPT, BUILD-COMMAND]
+  methodology: [SKILL, PROTOCOL, CONSTRUCTIONISM, PLAY-LEARN-LIFT, SISTER-SCRIPT, BUILD-COMMAND]
   interpretation: [POSTEL, CHARITY]
   safety: [P-HANDLE-K, NO-IMPERSONATE, K-LINE, FICTIONAL-WRAPPER, HONEST-FORGET]
   memory: [HOT-COLD, WORKING-SET, SUMMARIZE, NEVER-DELETE]
   robustness: [NEVER-CRASH, REPAIR-DEMON, BEST-EFFORT, ROBUST-FIRST]
-  skills: [SIP, DOP, PLAN-EXECUTE]
+  skills: [SKILL, SIP, DOP, PLAN-EXECUTE]
   logging: [SESSION-LOG, AUDIT-TRAIL]
   lifecycle: [YAML-COLTRANE, IMPROVISE, CRYSTALLIZE]
   optimization: [ITS-ABOUT-TIME, JUST-ABOUT-TIME, PRESERVE-JOURNEY, WISDOM-SPOT, SPEED-OF-LIGHT]
