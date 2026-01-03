@@ -64,7 +64,11 @@ A sister script runs Micropolis headless: advance N ticks, inject edits, render 
 
 **Dave Ackley — Robust-First Computing** — Survivability over correctness. Local repair. The [Movable Feast Machine](https://www.cs.unm.edu/~ackley/mfm/). MOOLLM's self-healing comes directly from this.
 
-**Rocky's Boots & Robot Odyssey** — The Learning Company's 1982-1984 games where you navigate rooms, ride around inside machines, wire up logic circuits, and program robots. Go INTO sub-rooms. Navigate room graphs. Edit while exploring. MOOLLM's room navigation, turtle riding, and nested spaces draw directly from these.
+**Warren Robinette** — A giant of interactive design:
+- **Atari Adventure (1979)** — The first graphical adventure game. Rooms, objects, inventory, dragons, the Holy Grail. And the first Easter egg: find the hidden room with his signature. *Ready Player One* made it legendary.
+- **Rocky's Boots (1982)** & **Robot Odyssey (1984)** — The Learning Company games where you navigate rooms, ride around inside machines, wire up logic circuits, and program robots. Go INTO sub-rooms. Navigate room graphs. Edit while exploring. Alan Kay loves these games.
+
+MOOLLM inherits directly: room navigation, turtle riding, nested spaces, and hidden depths that reward the curious explorer.
 
 **Classic Text Adventures** — The original interactive fiction:
 - **Colossal Cave Adventure (1976)** — Will Crowther & Don Woods. The first text adventure. "YOU ARE IN A MAZE OF TWISTY LITTLE PASSAGES, ALL ALIKE."
@@ -653,6 +657,7 @@ flowchart TD
 [self]: https://selflanguage.org/
 [mud]: https://en.wikipedia.org/wiki/MUD1
 [moo]: https://en.wikipedia.org/wiki/LambdaMOO
+[adventure]: https://en.wikipedia.org/wiki/Adventure_(1980_video_game)
 [mfm]: https://www.cs.unm.edu/~ackley/mfm/
 [logo]: https://en.wikipedia.org/wiki/Logo_(programming_language)
 [kilroy]: ./designs/kilroy-ideas.md
@@ -772,6 +777,7 @@ The end state: an LLM that navigates its own memory, follows explicit protocols,
 | **Dave Ackley** | Robust-first computing, [MFM][mfm] |
 | **Richard Bartle & Roy Trubshaw** | [MUD][mud] — the original multi-user dungeon (1978) |
 | **Pavel Curtis** | [LambdaMOO][moo] — spatial programming, users building the world (1990) |
+| **Warren Robinette** | [Atari Adventure][adventure], Rocky's Boots, Robot Odyssey — rooms, circuits, Easter eggs |
 | **Will Crowther & Don Woods** | Colossal Cave Adventure — the first text adventure |
 | **Scott Adams** | Scott Adams Adventures — adventures on home computers |
 | **Infocom** | Zork (Anderson, Blank, Daniels, Lebling) — parser gold standard |
