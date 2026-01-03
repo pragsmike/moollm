@@ -572,7 +572,7 @@ Wikipedia-style keywords that activate conceptual clusters. Type as commands or 
 | `WHY-REQUIRED` | Every tool call needs a `why` parameter. | [tool-calling](./kernel/tool-calling-protocol.md) |
 | `APPEND-ONLY` | Never modify logs. Audit trail is sacred. | [session-log/](./skills/session-log/) |
 | `NEVER-CRASH` | Missing state triggers repair, not failure. | [self-repair/](./skills/self-repair/) |
-| `POSTEL` | Be liberal in what you accept. Interpret charitably. | [skills/postel/](./skills/postel/) |
+| `POSTEL` | Be liberal in what you accept. Interpret charitably. | [postel/](./skills/postel/) |
 | `PLAY-LEARN-LIFT` | Explore → find patterns → share wisdom. | [play-learn-lift/](./skills/play-learn-lift/) |
 | `ROOM-AS-FUNCTION` | Enter room = call function. Exit = return. | [room/](./skills/room/) |
 | `SPEED-OF-LIGHT` | Many agents in one LLM call. No carrier pigeons. | [room/](./skills/room/) |
