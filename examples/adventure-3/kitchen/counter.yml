@@ -1,0 +1,261 @@
+# 🔧 THE KITCHEN COUNTER
+# A crafting surface for creating, combining, and transforming objects
+# Like a Minecraft crafting table, but with YAML Jazz
+
+object:
+  name: Kitchen Counter
+  type: crafting_surface
+  portable: false
+  
+  description: |
+    A long granite counter runs along one wall, scarred by years of
+    Fantastipants family experiments. Burn marks, knife scratches,
+    mysterious stains — each one tells a story.
+    
+    A small plaque is bolted to the edge:
+    
+    "THE FANTASTIPANTS WORKBENCH
+     Where Ideas Become Things™
+     (And Sometimes Things Become Other Things)"
+    
+    The surface shimmers slightly. It's not just a counter.
+    It's a CRAFTING TABLE.
+    
+  examine: |
+    You run your hand across the counter. It tingles.
+    
+    This surface can:
+    - COMBINE items to create new things
+    - TRANSFORM items into different forms
+    - DUPLICATE items (with limitations)
+    - EDIT item properties
+    - PROGRAM item behaviors
+    
+    Place items on the counter. Describe what you want.
+    The DM interprets your intent and creates the result.
+    
+    Current items on counter: [see workspace below]
+    
+  # ─────────────────────────────────────────────────────────────────
+  # WORKSPACE (items currently on the counter)
+  # ─────────────────────────────────────────────────────────────────
+  
+  workspace: []
+  
+  # ─────────────────────────────────────────────────────────────────
+  # CORE ACTIONS
+  # ─────────────────────────────────────────────────────────────────
+  
+  actions:
+    PLACE:
+      description: "Put an item on the counter"
+      usage: "PLACE [item] ON COUNTER"
+      effect: "Item moves from inventory to workspace"
+      
+    TAKE:
+      description: "Take an item from the counter"
+      usage: "TAKE [item] FROM COUNTER"
+      effect: "Item moves from workspace to inventory"
+      
+    COMBINE:
+      description: "Merge multiple items into one"
+      usage: "COMBINE [item1] WITH [item2] (WITH [item3]...)"
+      requires: "2+ items on counter"
+      effect: |
+        DM interprets the combination:
+        - What would these items become together?
+        - What properties does the result have?
+        - Is the combination reversible?
+        
+        Creates new .yml file for the result.
+        
+      examples:
+        - input: "cheese + bread"
+          output: "cheese_sandwich.yml"
+          
+        - input: "lamp + blue cheese"
+          output: "stink_lamp.yml (repels grues at distance)"
+          
+        - input: "notebook + Tom"
+          output: "smart_notebook.yml (Tom can write in it)"
+          
+    TRANSFORM:
+      description: "Change an item into something else"
+      usage: "TRANSFORM [item] INTO [description]"
+      requires: "1 item on counter"
+      effect: |
+        DM interprets the transformation:
+        - Is this plausible given the source material?
+        - What properties transfer? What's lost?
+        - How dramatic is the change?
+        
+        Updates or replaces the item's .yml file.
+        
+      examples:
+        - input: "TRANSFORM apple INTO apple pie"
+          output: "apple_pie.yml (needs oven to complete)"
+          
+        - input: "TRANSFORM lamp INTO lantern"
+          output: "lantern.yml (different light pattern)"
+          
+        - input: "TRANSFORM notebook INTO spellbook"
+          output: "spellbook.yml (if you have magic...)"
+          
+    DUPLICATE:
+      description: "Create a copy of an item"
+      usage: "DUPLICATE [item]"
+      requires: "1 item on counter"
+      cost: "May require materials or have limits"
+      effect: |
+        Creates a copy. But copies have quirks:
+        - Slightly different (DM adds variation)
+        - May degrade over time
+        - Original and copy may be linked
+        
+        Creates new .yml file: [item]_copy.yml
+        
+      limitations: |
+        Cannot duplicate:
+        - Unique items (treasure, quest objects)
+        - Sentient items (they refuse)
+        - Tom (there can be only one)
+        
+    EDIT:
+      description: "Modify an item's properties"
+      usage: "EDIT [item]: [changes]"
+      requires: "1 item on counter"
+      effect: |
+        Freeform editing of item properties:
+        - Change name, description, appearance
+        - Add or remove abilities
+        - Adjust stats, values, behaviors
+        
+        DM updates the .yml file accordingly.
+        
+      examples:
+        - input: "EDIT lamp: make it pink"
+          changes: "glow.color: pink"
+          
+        - input: "EDIT cheese: add prophecy ability"
+          changes: "abilities: [prophecy] (why not?)"
+          
+        - input: "EDIT lunchbox: expand capacity to 100"
+          changes: "capacity: 100 (TARDIS upgrade)"
+          
+    PROGRAM:
+      description: "Add behaviors and triggers to an item"
+      usage: "PROGRAM [item]: [behavior description]"
+      requires: "1 item on counter"
+      effect: |
+        Add conditional behaviors:
+        - When X happens, do Y
+        - If condition, then action
+        - On trigger, activate effect
+        
+        DM adds behaviors to item's .yml file.
+        
+      examples:
+        - input: "PROGRAM lamp: glow red when grue is near"
+          adds: |
+            behaviors:
+              grue_warning:
+                trigger: "grue within 2 rooms"
+                effect: "glow.color: red, emit warning"
+                
+        - input: "PROGRAM cheese: insult anyone who tries to eat me"
+          adds: |
+            behaviors:
+              self_defense:
+                trigger: "EAT attempted"
+                effect: "speak insult, -1 affection"
+                
+        - input: "PROGRAM notebook: summarize each day at midnight"
+          adds: |
+            behaviors:
+              daily_summary:
+                trigger: "time: midnight"
+                effect: "generate summary, append to contents"
+                
+    ANALYZE:
+      description: "Examine an item's properties in detail"
+      usage: "ANALYZE [item]"
+      requires: "1 item on counter"
+      effect: |
+        DM reads the item's .yml file and explains:
+        - All properties and values
+        - All behaviors and triggers
+        - Possible combinations
+        - Hidden features (if any)
+        
+    CLEAR:
+      description: "Remove all items from counter"
+      usage: "CLEAR COUNTER"
+      effect: "All items return to inventory"
+      
+  # ─────────────────────────────────────────────────────────────────
+  # RECIPES (known combinations — DM can add more!)
+  # ─────────────────────────────────────────────────────────────────
+  
+  known_recipes:
+    # These are EXAMPLES — DM improvises new ones at runtime!
+    
+    - inputs: ["bread", "cheese"]
+      output: "cheese_sandwich"
+      description: "A simple but satisfying meal"
+      
+    - inputs: ["lamp", "premium_glow_juice"]
+      output: "premium_lamp"
+      description: "Upgraded lamp with blue glow"
+      
+    - inputs: ["food_item", "food_item"]
+      output: "combined_food"
+      description: "Merged food with combined properties"
+      
+    - inputs: ["card", "card"]
+      output: "deck"
+      description: "A collection of cards"
+      
+    - inputs: ["any", "magic"]
+      output: "enchanted_any"
+      description: "Item gains magical properties"
+      
+  # ─────────────────────────────────────────────────────────────────
+  # DM GUIDELINES
+  # ─────────────────────────────────────────────────────────────────
+  
+  dm_guidelines: |
+    The counter is a CREATIVE TOOL. Be generous with interpretations!
+    
+    COMBINE: What would these items naturally become together?
+    TRANSFORM: Is this plausible? Make it work if possible.
+    DUPLICATE: Add quirks to copies — never perfect clones.
+    EDIT: Honor the player's intent, add interesting side effects.
+    PROGRAM: Behaviors should be fun, not game-breaking.
+    
+    The counter enables:
+    - Experimentation without permanent loss
+    - Player creativity becoming game mechanics
+    - Emergent item behaviors
+    - PLAY-LEARN-LIFT for object design
+    
+    Always create/update .yml files for results!
+    Persistence makes crafting REAL.
+    
+  # ─────────────────────────────────────────────────────────────────
+  # TOM'S OPINION
+  # ─────────────────────────────────────────────────────────────────
+  
+  tom_opinion: |
+    "Tom LOVES the counter!"
+    "Tom watches you craft with great interest!"
+    "Tom suggests: COMBINE Tom WITH notebook? No? Okay."
+    "Tom remembers all recipes you discover!"
+    
+  # ─────────────────────────────────────────────────────────────────
+  # MOTHER'S WARNING
+  # ─────────────────────────────────────────────────────────────────
+  
+  mothers_warning: |
+    "Bumblewick! The counter is for FOOD PREPARATION, not
+    mad science experiments! ...although I suppose if you
+    DO invent something useful, I'd like to see it."

@@ -21,10 +21,10 @@ room:
     of dishes that weren't there a moment ago. A TABLE holds a note,
     a notebook, a lunchbox, and something that chirps.
     
-    In the corner, a TRASH CAN lurks. It's deeper than it looks.
+    A long granite COUNTER runs along one wall, shimmering slightly.
+    It's a CRAFTING TABLE — for combining, transforming, and creating things.
     
-    Mother would be impressed. Actually, no, Mother would find something
-    to criticize. She always does.
+    In the corner, a TRASH CAN lurks. It's deeper than it looks.
     
     The exit EAST leads back to the Chamber of Commencement, from which
     you can go NORTH to the maze, or EAST to the costume emporium.
@@ -36,6 +36,7 @@ room:
     - stove.yml
     - sink.yml
     - table.yml
+    - counter.yml
     - trashcan.yml
   
   exits:
