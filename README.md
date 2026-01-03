@@ -68,10 +68,12 @@ A sister script runs Micropolis headless: advance N ticks, inject edits, render 
 
 **Classic Text Adventures** — The original interactive fiction:
 - **Colossal Cave Adventure (1976)** — Will Crowther & Don Woods. The first text adventure. "YOU ARE IN A MAZE OF TWISTY LITTLE PASSAGES, ALL ALIKE."
+- **MUD (1978)** — Richard Bartle & Roy Trubshaw. The first multi-user dungeon. Players sharing a world, talking, fighting, building together. The ancestor of every MMO.
 - **Scott Adams Adventures (1978+)** — Scott Adams. Brought adventures to home computers. Compact, clever, everywhere.
 - **Zork (1977-1979)** — Tim Anderson, Marc Blank, Bruce Daniels, Dave Lebling (Infocom). "WEST OF HOUSE." The gold standard for parser-based interaction.
+- **LambdaMOO (1990)** — Pavel Curtis. Rooms, objects, verbs, spatial programming. Users creating the world while inhabiting it.
 
-MOOLLM's room navigation, object examination, and inventory management descend directly from these. When you type `LOOK` or `GO NORTH` or `TAKE SWORD`, you're speaking the language Crowther invented.
+MOOLLM's room navigation, object examination, and inventory management descend directly from these. When you type `LOOK` or `GO NORTH` or `GET SWORD`, you're speaking the language Crowther invented. When multiple users share a MOOLLM world, they're playing in Bartle's tradition.
 
 **Marvin Minsky — [Society of Mind](https://en.wikipedia.org/wiki/Society_of_Mind)** — Intelligence emerges from societies of simple agents. K-lines: names that activate conceptual clusters (type "POSTEL" and invoke an entire tradition). Frames: structured expectations with defaults and slots. Agents, agencies, and the "bugs" that Papert's children debugged. The mind as a bureaucracy of mindless clerks. MOOLLM's protocol symbols ARE K-lines; rooms ARE frames; characters ARE agents in a society.
 
@@ -768,8 +770,8 @@ The end state: an LLM that navigates its own memory, follows explicit protocols,
 | **Chuck Shotton** | [Kilroy][kilroy], WebSTAR, decentralized AI swarms |
 | **Dave Ungar** | [Self language][self], prototype inheritance |
 | **Dave Ackley** | Robust-first computing, [MFM][mfm] |
-| **Richard Bartle** | [MUD][mud] — the original multi-user dungeon |
-| **Pavel Curtis** | [LambdaMOO][moo] spatial programming |
+| **Richard Bartle & Roy Trubshaw** | [MUD][mud] — the original multi-user dungeon (1978) |
+| **Pavel Curtis** | [LambdaMOO][moo] — spatial programming, users building the world (1990) |
 | **Will Crowther & Don Woods** | Colossal Cave Adventure — the first text adventure |
 | **Scott Adams** | Scott Adams Adventures — adventures on home computers |
 | **Infocom** | Zork (Anderson, Blank, Daniels, Lebling) — parser gold standard |
