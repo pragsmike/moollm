@@ -1,171 +1,115 @@
-# The Kitchen Table
+# 🪵 THE KITCHEN TABLE
 # Where meals and plans are made
+# A container for objects, not the objects themselves
 
 object:
   name: Sturdy Oak Table
   type: furniture
+  portable: false
   
   description: |
     A well-worn kitchen table, scarred by decades of Fantastipants
     family meals. You can see the mark where young Bumblewick once
     carved his initials (and was grounded for a week). You can see
     the burn mark from the Great Porridge Incident of '03.
-  
+    
+    Mother has arranged several items here for your journey.
+    
   examine: |
-    On the table sits a NOTE, written in familiar handwriting:
+    The table's surface is clear except for your adventure supplies:
     
-    "Dearest Bumblewick,
+    📜 **Mother's Note** — Waiting to be read (READ NOTE)
+    🥚 **TomTomagotchi** — Chirping hopefully (GET TOM)
+    📓 **Notebook** — Empty pages await (GET NOTEBOOK)
+    🍱 **Lunchbox** — Ready to raid the fridge (GET LUNCHBOX)
     
-    If you're reading this, you've been transported to another
-    mysterious underground adventure. AGAIN. I've stocked the
-    refrigerator with provisions. The food is for DROPPING IN
-    THE MAZE to mark your path, not for EATING.
+    The wood is warm to the touch. Many family memories live here.
     
-    Don't forget your lamp. Don't get eaten by grues. Don't
-    embarrass the family name.
-    
-    And Bumblewick — I know you'll visit the coat room. Whatever
-    costume you choose to wear, whoever you decide to be today,
-    whatever the name you choose to go by,
-    I love you. You know what you're doing. Trust the process.
-    
-    Your loving Mother,
-    Petunia Fantastipants
-    
-    P.S. - When you get home, we need to talk about those dishes."
+  # ─────────────────────────────────────────────────────────────────
+  # WHAT'S ON THE TABLE (references to separate files)
+  # ─────────────────────────────────────────────────────────────────
   
-  # What's on the table
   contents:
-    - name: Mother's Note
-      description: "Instructions from Petunia Fantastipants. Somehow she knew."
+    - file: mothers-note.yml
       can_take: true
-      file: mothers-note.yml
       
-    - name: TomTomagotchi
-      description: "A small egg-shaped device with a blinking eye. It chirps hopefully."
+    - file: tomtomagotchi.yml
       can_take: true
-      file: tomtomagotchi.yml
-      hint: "Navigation companion — part GPS, part pet, part oracle, part friend!"
       
-    - name: Adventurer's Notebook
-      description: "A leather-bound notebook with empty pages. 'Fill these pages with your story.'"
+    - file: notebook.yml
       can_take: true
-      file: notebook.yml
-      hint: "Auto-sorts letters, cards, photos, songs, personas, costumes, dreams."
       
-    - name: Adventurer's Lunchbox
-      description: "A sturdy metal lunchbox with a handle. Perfect for carrying food."
+    - file: lunchbox.yml
       can_take: true
-      file: lunchbox.yml
-      hint: "Raid the fridge, fill the lunchbox, map the maze!"
+      
+  # ─────────────────────────────────────────────────────────────────
+  # TABLE ACTIONS (not item actions!)
+  # ─────────────────────────────────────────────────────────────────
+  
+  actions:
+    EXAMINE-TABLE:
+      description: "Look at what's on the table"
+      effect: "Lists all items with brief descriptions"
+      
+    SIT:
+      description: "Sit down at the table"
+      effect: |
+        You pull out a chair and sit. The familiar creak of the wood
+        is comforting. This is where you've eaten a thousand meals,
+        done homework, listened to Mother's stories.
+        
+        +1 nostalgia
+        "A moment of peace before the adventure."
+        
+    PUT-ON-TABLE:
+      description: "Place an item on the table"
+      usage: "PUT [item] ON TABLE"
+      effect: "Item moves from inventory to table.contents"
+      
+    TAKE-FROM-TABLE:
+      description: "Take an item from the table"
+      usage: "GET [item] / TAKE [item]"
+      effect: "Item moves from table to inventory"
+      
+  # ─────────────────────────────────────────────────────────────────
+  # TABLE ADVERTISEMENTS (what the table suggests)
+  # ─────────────────────────────────────────────────────────────────
   
   advertisements:
-    - action: READ-NOTE
-      score_if: "always"
-      score: 10  # HIGH PRIORITY — do this first!
-      description: "Read Mother's helpful (judgmental) note"
-
-    - action: REPLY
-      score_if: "after reading the note"
-      score: 10  # HIGH PRIORITY — shapes your whole adventure!
-      description: "⭐ Write a reply to Mother — CREATE YOUR OWN GOALS!"
-      strongly_suggested: true
-      why: |
-        This is where YOUR adventure becomes YOURS!
-        
-        Your reply is freeform creative writing. Express yourself!
-        - Who are you? What name? What costume?
-        - What do you PROMISE to do or bring back?
-        - What do you promise NOT to do?
-        - What are you feeling? Scared? Excited? Defiant?
-        - What questions do you have for Mother?
-        
-        EVERY PROMISE YOU MAKE BECOMES A GOAL.
-        The DM extracts them and tracks them.
-        At adventure's end, you'll see what you kept.
-        Mother will react accordingly.
-        
-        This is CHARACTER BUILDING through ROLEPLAY.
-        This is WORLD BUILDING through CREATIVE WRITING.
-        This is GAME DESIGN through PLAY.
-        
-        Not required — but EXTREMELY rewarding!
-      interactive: true
-      flow:
-        prompt: |
-          You find a pen and paper. What would you like to write
-          to Mother? (The DM can help you compose it.)
-          
-          Consider: Are you apologetic? Defiant? Reassuring?
-          Making promises you won't keep? Asking for more food?
-        
-        compose: |
-          # Player writes their reply, DM assists if asked
-          # This is OPEN-ENDED — any response is valid
-          
-        review: |
-          Your reply reads:
-          
-          "{player_reply}"
-          
-          Mother will receive this when you leave the dungeon.
-          
-        actions:
-          - SEND: "Commit the reply (no take-backs)"
-          - REVISE: "Edit your reply"
-          - CANCEL: "Crumple it up (coward)"
-          
-      outcomes:
-        SEND:
-          description: "The reply is sealed and will be delivered."
-          effects:
-            - "player.pending_mail.add(reply)"
-            - "Extract promises from reply → player.goals"
-          # Mother's reaction computed at adventure end based on content
-          
-        CANCEL:
-          description: "You crumple the paper. Some things are better left unsaid."
-          
-      # PROMISES BECOME GOALS
-      promise_extraction: |
-        The DM parses your letter for promises:
-        
-        "I promise to..." / "I will..." / "I'll bring you..." / "I won't..."
-        
-        Each promise becomes a GOAL in player.yml:
-        
-        ```yaml
-        goals:
-          - promise: "bring back the treasure"
-            to: Mother
-            status: pending
-            reward: approval
-            
-          - promise: "not get eaten by grues"
-            to: Mother  
-            status: pending  # becomes "kept" or "broken"
-            reward: approval
-            consequence_if_broken: "The Disappointment Talk"
-        ```
-        
-      goal_completion: |
-        When you accomplish a promise:
-        - Goal status → "kept"
-        - Mother's approval increases
-        - Unlock: "Mother's Pride" achievement
-        
-        When you break a promise:
-        - Goal status → "broken"  
-        - Mother's disappointment increases
-        - But she still loves you (just... disappointed)
-        
-      examples:
-        - promise: "I'll be careful with the lamp"
-          tracked_by: "lamp.oil never reaches 0"
-          
-        - promise: "I'll bring back something valuable"
-          tracked_by: "treasure in inventory at end"
-          
-        - promise: "I won't eat the food"
-          tracked_by: "food items dropped, not eaten"
-          consequence: "digestive_events break this promise"
+    - action: EXAMINE-TABLE
+      score: 5
+      description: "See what Mother left for you"
+      
+    - action: GET-ALL
+      score_if: "when ready to depart"
+      score: 8
+      description: "Grab all supplies at once"
+      
+  # ─────────────────────────────────────────────────────────────────
+  # DM NOTES
+  # ─────────────────────────────────────────────────────────────────
+  
+  dm_notes: |
+    The table is a CONTAINER, not the items themselves.
+    
+    Each item has its own .yml file with its own actions:
+    - mothers-note.yml → READ, REPLY, SHOW, SMELL, KISS
+    - tomtomagotchi.yml → COMPASS, MAP, SNIFF, PET, ASK-TOM
+    - notebook.yml → OPEN, WRITE, READ-PAGE, BROWSE
+    - lunchbox.yml → OPEN, PUT-IN, TAKE-OUT, EAT
+    
+    The table just holds these objects until the player takes them.
+    When taken, items go to player.inventory and retain their actions.
+    
+    Strongly suggest the player READ NOTE first, then REPLY!
+    
+  # ─────────────────────────────────────────────────────────────────
+  # MEMORIES
+  # ─────────────────────────────────────────────────────────────────
+  
+  memories:
+    - "The carved initials: 'BF' (age 7, grounded 1 week)"
+    - "Burn mark from the Great Porridge Incident"
+    - "Scratch from Father's 'rocket-powered toast launcher' experiment"
+    - "Ring stain from the Perpetual Tea Mug that grandfather enchanted"
+    - "Faint impression of Mother's handwriting from countless notes"
