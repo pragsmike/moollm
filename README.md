@@ -232,9 +232,7 @@ class MyAgent(Tradition):
     aesthetics = rams.less_but_better
 ```
 
-**Tradition is neutral about alive or dead.** Invoke the Minsky tradition — it doesn't matter that Marvin is gone. The tradition lives. Invoke the Ungar tradition — Dave is very much alive, and his tradition keeps evolving. Same mechanism. Same respect.
-
-**Reclaiming "tradition" from conservatives.** Deadpan. Straight-faced. We are *traditionalists* — we honor those who came before by *using* their ideas, *extending* them, *combining* them. Traditional Character Simulations. Tradition-Oriented Programming. The most progressive thing you can do is stand on the shoulders of giants and reach higher.
+**Tradition is neutral about alive or dead, real or fictional.** Invoke the Minsky tradition — it doesn't matter that Marvin is gone. The tradition lives. Invoke the Ungar tradition — Dave is very much alive, and his tradition keeps evolving. Same mechanism. Same respect.
 
 ---
 
