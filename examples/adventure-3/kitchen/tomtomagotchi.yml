@@ -72,7 +72,7 @@ object:
         
     WHERE:
       description: "Announce current location"
-      usage: "WHERE" or "WHERE AM I"
+      usage: "WHERE / WHERE AM I"
       response: |
         "YOU ARE IN: [room name]"
         "EXITS: [list with destinations if known]"
