@@ -75,6 +75,7 @@ MOOLLM inherits directly: room navigation, turtle riding, nested spaces, and hid
 - **MUD (1978)** — Richard Bartle & Roy Trubshaw. The first multi-user dungeon. Players sharing a world, talking, fighting, building together. The ancestor of every MMO.
 - **Scott Adams Adventures (1978+)** — Scott Adams. Brought adventures to home computers. Compact, clever, everywhere.
 - **Zork (1977-1979)** — Tim Anderson, Marc Blank, Bruce Daniels, Dave Lebling (Infocom). "WEST OF HOUSE." The gold standard for parser-based interaction.
+- **TinyMUD (1989)** — Jim Aspnes. Social MUD focused on building and conversation over combat. Users could create rooms, objects, exits. Direct ancestor of LambdaMOO.
 - **LambdaMOO (1990)** — Pavel Curtis. Rooms, objects, verbs, spatial programming. Users creating the world while inhabiting it.
 
 MOOLLM's room navigation, object examination, and inventory management descend directly from these. When you type `LOOK` or `GO NORTH` or `GET SWORD`, you're speaking the language Crowther invented. When multiple users share a MOOLLM world, they're playing in Bartle's tradition.
@@ -776,6 +777,7 @@ The end state: an LLM that navigates its own memory, follows explicit protocols,
 | **Dave Ungar** | [Self language][self], prototype inheritance |
 | **Dave Ackley** | Robust-first computing, [MFM][mfm] |
 | **Richard Bartle & Roy Trubshaw** | [MUD][mud] — the original multi-user dungeon (1978) |
+| **Jim Aspnes** | TinyMUD — social building, users creating worlds (1989) |
 | **Pavel Curtis** | [LambdaMOO][moo] — spatial programming, users building the world (1990) |
 | **Warren Robinette** | [Atari Adventure][adventure], Rocky's Boots, Robot Odyssey — rooms, circuits, Easter eggs |
 | **Will Crowther & Don Woods** | Colossal Cave Adventure — the first text adventure |
