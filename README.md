@@ -481,7 +481,7 @@ This repository IS a memory palace. Each directory is a room, and should have a 
 | 💬 [soul-chat/](./skills/soul-chat/) | Everything speaks — objects, rooms, concepts |
 | 🤝 [postel/](./skills/postel/) | Be liberal in what you accept |
 | 🎷 [yaml-jazz/](./skills/yaml-jazz/) | Comments carry meaning, data is interpreted |
-| 🧠 [coherence-engine/](./skills/coherence-engine/) | LLM as referee, orchestrator, simulator |
+| 🧠 [coherence-engine/](./skills/coherence-engine/) | LLM as referee, orchestrator, simulator, DM |
 | ⚡ [speed-of-light/](./skills/speed-of-light/) | Many agents, one LLM call |
 | 👥 [multi-presence/](./skills/multi-presence/) | Same card active in many rooms |
 | 🦸 [hero-story/](./skills/hero-story/) | Safe K-lines to real people's wisdom |
