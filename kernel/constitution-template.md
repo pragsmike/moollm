@@ -366,7 +366,7 @@ These MUST always be true:
 ## 11. Protocol Compatibility
 
 This constitution is compatible with:
-- MOOLLM Protocol Hierarchy (P-0.x through P-4.x)
+- MOOLLM Protocol Hierarchy
 - Skill Instantiation Protocol (SIP)
 - Delegation Object Protocol (DOP)
 - YAML Jazz conventions

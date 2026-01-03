@@ -383,8 +383,8 @@ done
 
 - **Skill Instantiation Protocol (SIP)**: Skills use DOP
 - **Constitution**: DOP objects follow constitution
-- **Character Architecture (P-0.4)**: Characters as objects
-- **Parenting Protocol (P-3.1)**: Mutual inheritance
+- **Character Architecture**: Characters as objects
+- **Parenting Protocol**: Mutual inheritance
 - **SELF Language**: Original inspiration
 
 ---

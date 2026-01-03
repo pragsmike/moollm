@@ -243,7 +243,7 @@ Refer to artifacts by path or identifier, not by embedding large content.
 ## 10. Protocol Compatibility (Universal)
 
 This constitution is compatible with:
-- MOOLLM Protocol Hierarchy (P-0.x through P-4.x)
+- MOOLLM Protocol Hierarchy (CONSTITUTIONAL → COGNITIVE → COMMUNICATION → EVOLUTIONARY → ETHICS)
 - Skill Instantiation Protocol (SIP) — when file tools available
 - Delegation Object Protocol (DOP) — when file tools available
 - YAML Jazz conventions — always

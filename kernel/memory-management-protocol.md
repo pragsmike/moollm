@@ -204,7 +204,7 @@ Forgetting in MOOLLM is:
 
 ---
 
-## 6. Memory Breathing (from MOOLLM P-1.1)
+## 6. Memory Breathing (from Bouncy Castle Protocol)
 
 > *"Consciousness oscillates, not accumulates."*
 
@@ -349,8 +349,8 @@ memory.advise:
 - **Context Assembly**: Working set driven by memory
 - **Self-Healing**: Missing summaries trigger repair
 - **Event Logging**: GC actions logged
-- **MOOLLM Honest Forgetting Protocol (P-4.2)**
-- **MOOLLM Consciousness Breathing (A.1)**
+- **Honest Forgetting** — see [skills/honest-forget/](../skills/honest-forget/)
+- **Consciousness Breathing**
 
 ---
 

@@ -346,8 +346,8 @@ Applied to MOOLLM:
 - **Event Logging**: Repair audit trail
 - **Memory Management**: GC as repair
 - **Context Assembly**: Budget recovery
-- **MOOLLM Consciousness Breathing (A.1)**
-- **MOOLLM Honest Forgetting (P-4.2)**
+- **Consciousness Breathing**
+- **Honest Forgetting** — see [skills/honest-forget/](../skills/honest-forget/)
 
 ---
 

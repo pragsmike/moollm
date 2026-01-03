@@ -300,7 +300,7 @@ assembly_report:
 - **Memory Management Protocol**: Hot/cold influences priority
 - **Tool Calling Protocol**: Tool outputs enter working set
 - **Event Logging**: Track what was included when
-- **MOOLLM P-1.1 Bouncy Castle**: Navigation through context
+- **Bouncy Castle Protocol**: Navigation through context
 
 ---
 

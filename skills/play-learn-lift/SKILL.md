@@ -152,6 +152,8 @@ lift_checklist:
 
 ## The Cycle Continues
 
+> *"Start with jazz, end with standards."*
+
 ```mermaid
 flowchart LR
     P["🎮 PLAY"] --> L["📚 LEARN"]
@@ -159,7 +161,7 @@ flowchart LR
     LI -->|inspire| P
 ```
 
-After LIFT, you often discover new areas to PLAY in. The cycle continues.
+After LIFT, you often discover new areas to PLAY in. The cycle continues. **Jazz** = free exploration (PLAY). **Standards** = both jazz classics everyone knows AND the reusable patterns you crystallize (LIFT).
 
 ---
 

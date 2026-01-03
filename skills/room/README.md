@@ -489,7 +489,13 @@ Path syntax:
 - `container/sub/item` — absolute within scope
 - `./toolbox/wrench` — relative to current
 - `../sibling/item` — parent's sibling
-- `/room/absolute/path` — from room root
+- `/repo-name/path/to/room` — multi-repo addressing (for orchestrators with multiple mounted workspaces)
+- `north/chest/key` — through exits by name
+- `kitchen/fridge/cheese` — through sub-directories by name
+
+**Multi-repo mounting:** When Cursor or an orchestrator has multiple directories/repos open, each becomes a root subdirectory addressable by name. `/moollm/skills/room` and `/other-project/src/module` can coexist. This enables cross-repo adventures, shared character pools, and federated microworlds!
+
+Paths can link through exits and sub-directories by name. Use common sense and context to resolve!
 
 ### Tags for Search and Reference
 

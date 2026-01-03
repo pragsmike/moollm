@@ -99,11 +99,15 @@ You can't break MOOLLM. Files are inspectable. State is recoverable. Experiments
 
 ## The Cycle Continues
 
+> *"Start with jazz, end with standards."*
+
 After LIFT, you discover new areas to PLAY in:
 
 ```
 PLAY → LEARN → LIFT → (inspire) → PLAY → ...
 ```
+
+The pun is deliberate: **jazz** is free exploration (PLAY), and **standards** are both jazz classics everyone knows AND the reusable patterns you crystallize (LIFT). The learning happens in between!
 
 - Teaching reveals gaps in your own understanding
 - Helping others sparks new questions

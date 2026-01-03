@@ -73,6 +73,8 @@ user:
 
 ## The Jazz Metaphor
 
+> *"Start with jazz, end with standards."*
+
 | Jazz | YAML Jazz |
 |------|-----------|
 | Sheet music | Schema / template |
@@ -83,6 +85,8 @@ user:
 | Standards | Protocol conventions |
 
 Like John Coltrane playing "My Favorite Things" — the structure is there, but every performance is unique, responsive, alive.
+
+The pun is deliberate: **jazz standards** are the classic songs every musician knows — and **software standards** are what you crystallize once patterns stabilize. Start improvising, end with reusable structures!
 
 ---
 

@@ -468,7 +468,7 @@ Tools MUST:
 - **Context Assembly Protocol**: Tool results affect working set
 - **Event Logging Protocol**: All calls logged
 - **Memory Management**: memory.* tools
-- **MOOLLM P-1.2 FlowMap**: Tool operations tracked
+- **FlowMap Protocol**: Tool operations tracked
 
 ---
 
