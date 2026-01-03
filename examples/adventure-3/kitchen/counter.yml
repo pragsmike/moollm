@@ -43,6 +43,202 @@ object:
   workspace: []
   
   # ─────────────────────────────────────────────────────────────────
+  # 📋 RECIPE CARD HOLDER
+  # ─────────────────────────────────────────────────────────────────
+  
+  recipe_holder:
+    description: |
+      A small wooden rack holds a collection of recipe cards,
+      yellowed with age but still legible. Some are in Mother's
+      handwriting. Others are... mysterious.
+      
+    cards:
+      - name: "Basic Sandwich"
+        ingredients: ["bread", "any filling"]
+        result: "sandwich"
+        notes: "Bread + anything edible = portable meal"
+        
+      - name: "Trail Mix"
+        ingredients: ["3+ small food items"]
+        result: "trail_mix"
+        notes: "Combine snacks for efficient carrying"
+        properties: "Restores energy, compact, shareable"
+        
+      - name: "Soup Stock"
+        ingredients: ["pot", "water", "any vegetables"]
+        result: "soup"
+        notes: "Needs stove to complete. Add anything!"
+        properties: "Warm, restorative, customizable"
+        
+      - name: "Cheese Board"
+        ingredients: ["cheese", "bread", "fruit"]
+        result: "cheese_board"
+        notes: "An elegant presentation"
+        properties: "+charm when offering to others"
+        
+      - name: "Preserved Rations"
+        ingredients: ["jar", "any food", "salt OR vinegar"]
+        result: "preserved_food"
+        notes: "Lasts forever, slightly worse taste"
+        properties: "Never spoils, reduced freshness bonus"
+        
+      - name: "Mystery Casserole"
+        ingredients: ["5+ random ingredients"]
+        result: "mystery_casserole"
+        notes: "Results vary. Mother's specialty."
+        properties: "Unpredictable effects, always fills you up"
+        
+      - name: "Grue Repellent Paste"
+        ingredients: ["blue cheese", "garlic OR onion", "lamp oil"]
+        result: "grue_repellent"
+        notes: "Smear on self. Grues hesitate. You smell TERRIBLE."
+        properties: "Grues won't attack for 3 turns. -5 social."
+        
+      - name: "Oracle Essence"
+        ingredients: ["apple", "cheese wheel", "mysterious ingredient"]
+        result: "oracle_essence"
+        notes: "Grants brief foresight when consumed"
+        properties: "One-time use. See 2 moves ahead."
+        
+      - name: "??? (Illegible)"
+        ingredients: ["???", "???", "something blue"]
+        result: "unknown"
+        notes: "Card is too stained to read. Experiment!"
+        
+  # ─────────────────────────────────────────────────────────────────
+  # 🗄️ COUNTER DRAWERS (MacGyver supplies!)
+  # ─────────────────────────────────────────────────────────────────
+  
+  drawers:
+    description: |
+      Three drawers under the counter, each stuffed with supplies
+      accumulated over generations of Fantastipants adventures.
+      
+    left_drawer:
+      name: "Container Drawer"
+      contents:
+        - item: "Empty Jar (x5)"
+          type: container
+          capacity: 3
+          auto_collects: ["liquids", "small_items", "preserved_food"]
+          description: "Glass jar with screw-top lid. Good for collecting."
+          
+        - item: "Small Pouch (x3)"
+          type: container
+          capacity: 5
+          auto_collects: ["coins", "gems", "small_treasures"]
+          description: "Leather pouch with drawstring. Jingles pleasantly."
+          
+        - item: "Canvas Sack"
+          type: container
+          capacity: 10
+          auto_collects: ["bulky_items", "clothing", "soft_goods"]
+          description: "Sturdy sack. For the big stuff."
+          
+        - item: "Specimen Box"
+          type: container
+          capacity: 6
+          auto_collects: ["curiosities", "samples", "scientific_finds"]
+          description: "Compartmentalized box with glass lid. For collectors."
+          
+        - item: "Belt Clip Holder"
+          type: container
+          capacity: 2
+          auto_collects: ["tools", "small_weapons"]
+          description: "Clips to belt. Quick access to essentials."
+          
+    middle_drawer:
+      name: "Tool Drawer"
+      contents:
+        - item: "Pocket Knife"
+          type: tool
+          uses: ["cut", "pry", "scrape", "whittle"]
+          description: "Every adventurer's best friend."
+          
+        - item: "Ball of Twine"
+          type: material
+          uses: ["tie", "measure", "trail", "trap"]
+          description: "About 50 feet. Unravels as needed."
+          
+        - item: "Duct Tape"
+          type: material
+          uses: ["repair", "bind", "seal", "silence"]
+          description: "The universal fixer. Gray and sticky."
+          
+        - item: "Magnifying Glass"
+          type: tool
+          uses: ["examine", "focus_light", "read_small_text", "start_fire"]
+          description: "For when you need to look closer."
+          
+        - item: "Chalk (assorted colors)"
+          type: material
+          uses: ["mark", "write", "draw", "signal"]
+          description: "White, red, blue, yellow. Marks most surfaces."
+          
+        - item: "Small Mirror"
+          type: tool
+          uses: ["see_around_corners", "signal", "check_appearance", "reflect_light"]
+          description: "Pocket-sized. Slightly scratched."
+          
+        - item: "Rubber Bands (bunch)"
+          type: material
+          uses: ["bind", "launch", "grip", "organize"]
+          description: "Assorted sizes. Surprisingly useful."
+          
+    right_drawer:
+      name: "Parts Drawer"
+      contents:
+        - item: "Assorted Nails & Screws"
+          type: fastener
+          uses: ["attach", "hang", "poke", "trade"]
+          description: "Various sizes. Some rusty, some shiny."
+          
+        - item: "Wire (thin)"
+          type: material
+          uses: ["bind", "conduct", "pick_locks", "snare"]
+          description: "Copper wire, about 10 feet coiled."
+          
+        - item: "Candle Stubs (x4)"
+          type: light_source
+          uses: ["light", "seal", "drip_wax", "emergency_illumination"]
+          description: "Backup lighting. Burns about 1 hour each."
+          
+        - item: "Matches (box)"
+          type: ignition
+          uses: ["light", "start_fire", "signal"]
+          description: "Waterproof matches. About 20 left."
+          
+        - item: "Cloth Scraps"
+          type: material
+          uses: ["bandage", "filter", "muffle", "clean"]
+          description: "Assorted fabric pieces. Clean-ish."
+          
+        - item: "Small Bell"
+          type: signal
+          uses: ["alert", "trip_wire", "distract", "summon"]
+          description: "Tinkles when moved. Good for traps."
+          
+        - item: "Compass (broken)"
+          type: tool
+          uses: ["??? (needs repair)", "trade", "parts"]
+          description: "Needle spins randomly. Maybe fixable?"
+          note: "COMBINE with Tom for interesting results..."
+          
+  drawer_actions:
+    OPEN-DRAWER:
+      usage: "OPEN [left/middle/right] DRAWER"
+      effect: "Lists contents of that drawer"
+      
+    TAKE-FROM-DRAWER:
+      usage: "TAKE [item] FROM DRAWER"
+      effect: "Item moves to inventory"
+      
+    SEARCH-DRAWERS:
+      usage: "SEARCH DRAWERS FOR [type/use]"
+      effect: "Lists all items matching the search"
+      example: "SEARCH DRAWERS FOR containers → lists all containers"
+  
+  # ─────────────────────────────────────────────────────────────────
   # CORE ACTIONS
   # ─────────────────────────────────────────────────────────────────
   
