@@ -106,7 +106,7 @@ Effects vary by **costume**, **room**, **objects present**, and **history**:
 | 🔦 In dark maze room | "The SOUNDS are concerning" |
 | 🦴 Skeleton nearby | Existential commentary from skeleton |
 | 🐟 Already have herring aura | All subsequent food smells |
-| 👻 Ghost costume | Food phases through floor to room below |
+| 👻 Ghost costume | Food phases through floor or exists to room below or nearby |
 | 🤡 Clown costume | Everything becomes confetti |
 
 ### State is PERSISTENT!
