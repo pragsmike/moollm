@@ -1,0 +1,511 @@
+# Adventure 1: The Minimal Quest
+
+> *"Every journey begins with two rooms."*
+
+The simplest possible adventure: one hero, two rooms, one door.
+
+---
+
+## The Chat That Created This
+
+**User:** Create a first "adventure-1" subdir. Instantiate a new adventure there with an initial player, with two rooms — south is "start" and north is "end" and they have links back and forth. The player starts in start. They are the generic hero protagonist.
+
+**DM:** Creating the minimal adventure...
+
+---
+
+## What Was Created
+
+```
+adventure-1/
+├── README.md           # You are here (the creation story)
+├── player.yml          # Bumblewick Fantastipants, reluctant hero
+├── start/              # Chamber of Commencement
+│   ├── ROOM.yml        # Exits: N→maze, W→kitchen, E→coatroom
+│   └── lamp.yml        # The classic brass lamp (400 moves)
+├── kitchen/            # Fantastipants Family Kitchen (WEST)
+│   ├── ROOM.yml        # Magically lit, safe from grues
+│   ├── fridge.yml      # 20 FOOD ITEMS for maze mapping!
+│   ├── stove.yml       # Not in use (adventures first)
+│   ├── sink.yml        # Eternal dishes
+│   └── table.yml       # Note from Mother
+├── coatroom/           # Costume Emporium (EAST)
+│   ├── ROOM.yml        # Infinite costume possibilities
+│   ├── mirror.yml      # See your transformation
+│   ├── mannequin.yml   # Helpful costume consultant
+│   └── costume-racks.yml # Every costume imaginable
+├── maze/               # A Maze of Twisty Little Passages (10 rooms!)
+│   ├── README.md       # Map, solution, grue warnings
+│   ├── room-a/         # Puddle (S→start)
+│   ├── room-b/         # Echo
+│   ├── room-c/         # Scratches
+│   ├── room-d/         # Golden glow (N→end)
+│   ├── room-e/         # Cobwebs
+│   ├── room-f/         # Cold spot
+│   ├── room-g/         # Carved face
+│   ├── room-h/         # Mushrooms
+│   ├── room-i/         # Skeleton
+│   └── room-j/         # Crossroads
+└── end/                # Treasury of Modest Proportions  
+    ├── ROOM.yml        # Dramatic lighting, triumph achieved
+    └── treasure.yml    # The Jeweled Chalice (10 points!)
+```
+
+---
+
+## The Artifacts
+
+### [player.yml](./player.yml) — Bumblewick Fantastipants
+
+*"Adventures make one late for dinner."*
+
+Your character. Reluctant hero, spoon enthusiast, waistcoat devotee.
+
+- **Location:** start (the Chamber of Commencement)
+- **Inventory:** empty (the lamp awaits! his spoons do not)
+- **Goal:** reach the end, claim the treasure, make Mother insufferable
+- **Mood:** bewildered but optimistic
+
+### [start/ROOM.yml](./start/ROOM.yml) — Chamber of Commencement
+
+*"You are standing in a small chamber carved from living rock..."*
+
+- **Exit north:** into darkness, toward glory (or grues)
+- **Features:** Scratched initials (WC+DW '76, SA '78, XYZZY WAS HERE)
+- **Contains:** The brass lamp
+
+### [start/lamp.yml](./start/lamp.yml) — The Brass Lamp
+
+*"Property of Colossal Cave, please return."*
+
+- **Fuel:** 400 moves (plenty of time, probably)
+- **Actions:** TAKE, LIGHT, EXTINGUISH, RUB (genie on holiday)
+- **Lineage:** Descended from Crowther's original, 1976
+
+### [end/ROOM.yml](./end/ROOM.yml) — Treasury of Modest Proportions
+
+*"One pedestal remains occupied..."*
+
+- **Exit south:** back to the beginning (but why?)
+- **Features:** Empty pedestals, dramatic lighting, sense of importance
+- **Contains:** The jeweled chalice
+
+### [end/treasure.yml](./end/treasure.yml) — The Jeweled Chalice
+
+*"Congratulations! You have found a treasure worth 10 points."*
+
+- **Value:** 10 points (deposit in well house for credit)
+- **Actions:** TAKE, EXAMINE, DRINK_FROM (empty, also frowned upon)
+- **Lineage:** In the tradition of all adventure treasures
+
+---
+
+## Try It Yourself
+
+```
+> look
+You are standing in a small chamber carved from living rock.
+The walls bear scratched initials: "WC+DW '76", "SA '78", "XYZZY WAS HERE".
+A brass lamp sits on a stone shelf. An archway leads NORTH.
+
+> take lamp
+Taken. The lamp feels reassuringly solid in your hand.
+
+> go north
+You step through the archway...
+
+You are in a maze of twisty little passages, all alike.
+This one is slightly damp. A puddle reflects your bewildered face.
+Passages lead N, S, E, W.
+
+> go west
+You are in a maze of twisty little passages, all alike.
+This one has a golden glow from the NORTH passage!
+
+> go north
+You emerge into the Treasury of Modest Proportions! 
+A JEWELED CHALICE gleams on a pedestal!
+
+> take chalice
+Taken! Your score is now 10 of 10 points!
+
+"Well," says Bumblewick, adjusting his waistcoat, "that wasn't 
+so bad. Mother will be ABSOLUTELY INSUFFERABLE about this."
+
+> inventory
+You are carrying:
+  - A brass lamp (lit)
+  - A jeweled chalice (10 points)
+  - Your dignity (barely)
+```
+
+**The solution:** START → N → MAZE-A → W → MAZE-D → N → END
+
+---
+
+## Chat Continues: Adding Objects
+
+**User:** Let's create a lamp and put it in the start room, and create a treasure and put it in the end room. Give all rooms and objects imaginative creative witty descriptions in the tradition of Zork and Adventure and Scott Adams Adventure. Use cultural references and tributes.
+
+**DM:** Ah, you want the REAL adventure experience! Let me channel Crowther, Woods, Adams, and the Implementors...
+
+### Added: [start/lamp.yml](./start/lamp.yml) — The Brass Lamp
+
+A classic! No adventure is complete without a light source of dubious reliability.
+
+### Added: [end/treasure.yml](./end/treasure.yml) — The MacGuffin
+
+The thing you came for. Worth approximately 10 points.
+
+---
+
+## Chat Continues: The Hero Awakes
+
+**User:** The hero awakes! Write a flowery romantic backstory, in the style of The Hobbit, but with a good dose of Pee Wee's Playhouse. Choose a silly name for the hero.
+
+**DM:** *Clears throat dramatically*
+
+### Updated: [player.yml](./player.yml) — Bumblewick Fantastipants
+
+*"In a hole in the ground there lived a Fantastipants..."*
+
+Our hero is now **Bumblewick Fantastipants**, a reluctant adventurer from the pleasant village of Wobblebrook-upon-Squiggle. He is:
+
+- A devoted spoon enthusiast (magnificent collection, now tragically far away)
+- A Tuesday rhymer (speaks only in couplets on Tuesdays)
+- A waistcoat devotee (wears one always, even to bed)
+- The son of the legendary Petunia Fantastipants (who once retrieved a slightly magic napkin from the Cave of Moderate Danger)
+
+He awoke in the Chamber of Commencement with no memory of how he arrived, suspecting someone has been "messing about with the narrative fabric of reality again."
+
+**The secret word is "COMFORT!" When you hear it, SCREAM REAL LOUD!**
+
+MEKKA-LEKKA-HI, MEKKA-HINEY-HO!
+
+---
+
+## Chat Continues: The Maze
+
+**User:** Add a twisty maze between start and end, of four rooms. One room's exit should go to start and another room's exit should go to end, but the other four compass directions of each room are tangled!
+
+**DM:** Ah, the classic! "You are in a maze of twisty little passages, all alike." Let me tangle those passages...
+
+### Added: [maze/](./maze/) — A Maze of Twisty Little Passages
+
+Four rooms, each with a distinguishing feature (for the observant):
+
+| Room | Feature | What Makes It Special |
+|------|---------|----------------------|
+| [room-a/](./maze/room-a/) | Puddle | Slightly damp, judgmental water |
+| [room-b/](./maze/room-b/) | Echo | Your mockery returns to you |
+| [room-c/](./maze/room-c/) | Scratches | "THIS WAY OUT →" points at wall |
+| [room-d/](./maze/room-d/) | Golden glow | The way forward! |
+
+**The tangled connections:**
+
+```
+room-a: N→C  S→start  E→B  W→D
+room-b: N→D  S→C      E→A  W→C
+room-c: N→B  S→D      E→D  W→A
+room-d: N→end S→A     E→B  W→C
+```
+
+**The solution:** Start → N → room-a → W → room-d → N → Treasury!
+
+Or wander. Wandering builds character.
+
+---
+
+## Chat Continues: Grues!
+
+**User:** If I enter the maze without the lamp in my inventory and lit, then I get eaten by a grue. But the start and end rooms are magically lit. The maze rooms are dark and dangerous without a source of light!
+
+**DM:** Ah yes, the GRUE. The original survival horror monster. Let me add the appropriate dread...
+
+### The Lighting Rules
+
+| Room | Lighting | Grue Safe? |
+|------|----------|------------|
+| start/ | Magical | ✅ Yes |
+| maze/* | **NONE** | ❌ NO |
+| end/ | Magical | ✅ Yes |
+
+### What Happens Without a Lamp
+
+```
+> go north
+It is pitch black. You are likely to be eaten by a grue.
+
+...
+
+You have been eaten by a grue.
+
+> RESTART, RESTORE, or QUIT?
+```
+
+Each maze room has a unique grue death message with lyrics from **[MC Frontalot's "It Is Pitch Dark"](https://www.youtube.com/watch?v=4nigRT2KmCE)**:
+
+- **room-a**: *"If this predicament seems particularly cruel..."*
+- **room-b**: *"It got narrated at you in the second person..."*
+- **room-c**: *"Could be the spray for the grue; you're gonna need it..."*
+- **room-d**: *"Twenty-two years later, head's infested: got the grue in..."*
+
+> 🎵 *"Thanks, Grampa, for buying it. Now my life's ruined."* 🎵
+>
+> Nerdcore is the future. Front is a lyricist without equal.
+
+### The Lamp Saves You
+
+```yaml
+# The lamp must be:
+lamp:
+  lit: true           # ON, not off
+  in_inventory: true  # Not left behind in start!
+  fuel: > 0           # Still has fuel
+```
+
+**TAKE LAMP. This is not a suggestion.**
+
+---
+
+## Chat Continues: Reincarnation
+
+**User:** When you're eaten by a grue, or killed in any way, you get reincarnated in the start room, with your score zeroed out, but you keep your inventory.
+
+**DM:** A merciful cosmos! Death is but a temporary setback...
+
+### The Death & Rebirth Cycle
+
+```yaml
+# On any death (grue, trap, existential despair):
+death_event:
+  action: reincarnate
+  location: start           # Back to the beginning
+  score: 0                  # Points reset to zero
+  inventory: preserved      # You keep your stuff!
+  moves: preserved          # Move count continues
+```
+
+### What Happens
+
+```
+You have been eaten by a grue.
+
+...
+
+The darkness swallows you whole. But wait—
+
+A warm light. A sense of beginnings. The smell of slightly
+damp stone and narrative convenience.
+
+You awaken in the Chamber of Commencement. Your score has
+been reset to 0, but your inventory remains intact. The 
+universe is merciful, if slightly disappointed in you.
+
+"Well," says Bumblewick, checking his waistcoat, "THAT was
+unpleasant. At least I still have my lamp."
+```
+
+### Why Keep Inventory?
+
+- **Prevents softlocks** — Can't lose the lamp forever
+- **Rewards exploration** — Found items stay found
+- **Reduces frustration** — Death is a setback, not a restart
+- **Classic roguelike mercy** — Some games call this "soul recovery"
+
+The treasure's points don't count until you survive to the end!
+
+---
+
+## Chat Continues: Kitchen & Expanded Maze
+
+**User:** Make a Kitchen to the west from start, with a fridge and other objects. Put a bunch of delicious foods in the fridge, that the player can drop to map the maze. Add 20 interesting diverse food items to the fridge, then make six more maze rooms (for a total of 10).
+
+**DM:** Ah, the CLASSIC maze-mapping technique! Let me stock that kitchen...
+
+### Added: [kitchen/](./kitchen/) — The Fantastipants Family Kitchen
+
+An exact replica of home, complete with:
+- **[fridge.yml](./kitchen/fridge.yml)** — 20 unique food items for maze mapping!
+- **[stove.yml](./kitchen/stove.yml)** — Not currently in use (adventures first)
+- **[sink.yml](./kitchen/sink.yml)** — Perpetually containing dishes
+- **[table.yml](./kitchen/table.yml)** — With a note from Mother
+
+### The 20 Foods (for Maze Mapping!)
+
+| # | Food | Description |
+|---|------|-------------|
+| 1 | Suspiciously Perfect Apple | Snow White would be suspicious |
+| 2 | Wheel of Aged Cheese | Sharp cheddar, aged 47 years |
+| 3 | Loaf of Crusty Bread | Still warm. Defies thermodynamics. |
+| 4 | Jar of Pickled Herring | A family delicacy. Distinctive smell. |
+| 5 | Leftover Shepherd's Pie | Tuesday's dinner |
+| 6 | Bunch of Purple Grapes | Mother's favorite |
+| 7 | Pot of Mysterious Stew | "DO NOT EAT - EXPERIMENT" |
+| 8 | Wedge of Blue Cheese | The mold is supposed to be there |
+| 9 | Cold Roast Chicken | Missing one leg |
+| 10 | Jar of Strawberry Jam | Grandmother's recipe |
+| 11 | Half-Empty Bottle of Milk | Or half-full |
+| 12 | Suspicious Casserole | Aunt Petunia's "special recipe" |
+| 13 | Lemon (Judgmental) | It seems to be frowning |
+| 14 | Slice of Birthday Cake | Three months old. Sentient frosting. |
+| 15 | Carrot (Heroically Orange) | Good for your eyes |
+| 16 | Tin of Sardines | Emergency rations |
+| 17 | Bowl of Cold Porridge | Goldilocks rejected this one |
+| 18 | Fancy Imported Salami | From THE Old Country |
+| 19 | Single Hard-Boiled Egg | Looking existential |
+| 20 | Jar of Olives (Green) | Stuffed with pimentos. Tradition. |
+
+### Added: 6 More Maze Rooms (10 total!)
+
+| Room | Feature | What You'll Find |
+|------|---------|------------------|
+| room-e | Cobwebs | Ancient dusty webs, feeling of being watched |
+| room-f | Cold Spot | Freezing! Something wrong with reality |
+| room-g | Carved Face | Judging you silently |
+| room-h | Mushrooms | Faint green glow (insufficient for safety!) |
+| room-i | Skeleton | Previous adventurer. Cautionary tale. |
+| room-j | Crossroads | Central hub. Metaphorical significance. |
+
+**20 foods ÷ 10 rooms = 2 markers per room if you're REALLY careful!**
+
+---
+
+## Chat Continues: The Coat Room
+
+**User:** Make two-way east/west links so the kitchen is to the west of the start, and make a new room to the east of the start, the coat room, which has a spectacular collection of formal and wild costumes. It mentions many interesting ones but you can request any costume you can describe, or a random one. It rewrites your character description for the costume! You can also combine costumes or customize them in any way. You can even add inventory items and accessories!
+
+**DM:** A costume emporium! Now Bumblewick can be ANYONE while navigating the grue-infested maze!
+
+### Added: [coatroom/](./coatroom/) — The Fantastipants Costume Emporium
+
+A vast circular chamber where you can completely transform your character!
+
+**Commands:**
+
+| Command | Effect |
+|---------|--------|
+| `WEAR pirate captain` | Become a pirate! |
+| `WEAR RANDOM` | Surprise costume |
+| `COMBINE wizard WITH detective` | Mash-up! |
+| `ADD a monocle` | Accessorize |
+| `ADD TO INVENTORY rubber chicken` | Get items! |
+| `LOOK IN MIRROR` | See yourself |
+
+**Objects:**
+- **Mirror** — Shows your transformation
+- **Mannequin** — Helpful costume consultant (faceless but enthusiastic)
+- **Costume Racks** — Infinite possibilities
+
+**Featured Costumes:**
+- Dread Pirate Fantastipants (with parrot puppet)
+- Space Explorer (ray gun goes "pew pew")
+- Victorian Detective (Watson is a sock puppet)
+- Actually Just Three Corgis (in a trenchcoat)
+
+**The costume rewrites your character description!**
+
+```
+BEFORE: Bumblewick in his waistcoat, bewildered but optimistic
+AFTER:  Captain Bumblewick "Blackwaistcoat" Fantastipants, dread pirate!
+```
+
+### World Map (Complete)
+
+```
+                         ┌─────────┐
+                         │   END   │  ← TREASURE HERE!
+                         │ Treasury│
+                         └────┬────┘
+                              │ S↔N
+         ┌──────────────────────────────────────────┐
+         │           THE MAZE (10 rooms)            │
+         │  A ←→ B ←→ C ←→ D ←→ E ←→ F ←→ etc...   │
+         │     (tangled connections, grues)         │
+         └────────────────────┬─────────────────────┘
+                              │ S↔N
+                         ┌────┴────┐
+ ┌─────────┐    W↔E      │  START  │     W↔E      ┌──────────┐
+ │ KITCHEN │◄───────────►│ Chamber │◄────────────►│ COATROOM │
+ │  food!  │             │  SAFE   │              │ costumes │
+ └─────────┘             │ respawn │              └──────────┘
+   x:-1,y:0              └─────────┘                x:1,y:0
+                           x:0,y:0
+
+SAFE ROOMS: start, kitchen, coatroom, end (magical lighting)
+DANGER:     all 10 maze rooms (grues if no lamp!)
+```
+
+---
+
+## Chat Continues: Coherence Check
+
+**User:** Perform a deep coherence check and validation and repair and detail generation pass!
+
+**DM:** Running coherence engine... 🔍
+
+### Issues Found & Fixed
+
+| Issue | Status |
+|-------|--------|
+| Player notes only mentioned north exit | ✅ Fixed — now lists all 3 exits |
+| Start room description didn't mention all exits | ✅ Fixed — now shows N/W/E |
+| End room said "back to beginning" but goes to maze | ✅ Fixed — clarified |
+| Kitchen/Coatroom didn't reference each other | ✅ Fixed — cross-linked |
+| Player missing costume state fields | ✅ Fixed — added costume tracking |
+| Lamp missing fuel warning thresholds | ✅ Fixed — added warning/critical |
+| Treasure missing victory response | ✅ Fixed — added celebration text |
+| Navigation tables incomplete | ✅ Fixed — added cross-links |
+| World map needed update | ✅ Fixed — complete ASCII map added |
+
+### Verified Correct
+
+| Check | Status |
+|-------|--------|
+| All exits bidirectional (where intended) | ✅ Maze tangled ON PURPOSE |
+| World positions consistent | ✅ start(0,0), kitchen(-1,0), coatroom(1,0), end(0,1) |
+| All object files referenced exist | ✅ All present |
+| Grue_safe flags correct | ✅ Safe rooms: start, kitchen, coatroom, end |
+| Respawn point set | ✅ start/ROOM.yml has respawn_point: true |
+| MC Frontalot links work | ✅ All 10 maze rooms link to video |
+
+### World Coordinates
+
+| Room | Position | Notes |
+|------|----------|-------|
+| kitchen | (-1, 0) | West of start |
+| start | (0, 0) | Origin, respawn point |
+| coatroom | (1, 0) | East of start |
+| end | (0, 1) | North of maze (conceptually) |
+| maze rooms | undefined | Tangled non-Euclidean space |
+
+### Updated: Room Descriptions
+
+Both rooms now feature properly atmospheric prose, complete with:
+- Unnecessary but evocative adjectives
+- Hints that may or may not be helpful
+- References the initiated will recognize
+
+---
+
+## What's Next?
+
+Extend this adventure:
+- Add a maze of twisty passages, all alike
+- Add a troll who demands payment
+- Add an NPC to talk to (perhaps a thief?)
+- Add a puzzle blocking the north door
+- Add a grue (but you'll need darkness first)
+
+---
+
+## Navigation
+
+| Direction | Destination |
+|-----------|-------------|
+| ⬆️ Up | [examples/](../) |
+| 🚪 Start | [start/](./start/) — Chamber of Commencement |
+| 🍳 Kitchen (W) | [kitchen/](./kitchen/) — Food for maze mapping! |
+| 🎭 Coat Room (E) | [coatroom/](./coatroom/) — Be anyone you want! |
+| 🌀 Maze (N) | [maze/](./maze/) — 10 twisty passages (with map!) |
+| 🏆 End | [end/](./end/) — Treasury of Modest Proportions |

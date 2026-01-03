@@ -1,0 +1,91 @@
+# The Mannequin
+# Your helpful costume consultant
+
+object:
+  name: Animated Mannequin (Helpful)
+  type: npc
+  
+  description: |
+    A wooden mannequin that moves with unsettling smoothness. It has
+    no face, but somehow conveys enthusiasm. It holds a clipboard
+    in one jointed hand and gestures expansively with the other.
+    
+    A name tag reads: "HELLO MY NAME IS [BLANK]"
+    Below it, in smaller text: "Ask me about our costume options!"
+  
+  examine: |
+    The mannequin tilts its head at you inquisitively. Despite having
+    no eyes, it seems to be assessing your fashion potential.
+    
+    It taps its clipboard. The clipboard reads:
+    
+    POPULAR REQUESTS TODAY:
+    ━━━━━━━━━━━━━━━━━━━━━━
+    • Pirate (classic)
+    • Space explorer (with helmet)
+    • Medieval knight (shiny)
+    • Vampire (traditional or sparkly)
+    • Wizard (beard optional)
+    • Detective (noir style)
+    • Superhero (cape mandatory)
+    • Clown (honk honk)
+    • Ghost (sheet included)
+    • "Something weird" (dealer's choice)
+  
+  # Sample costumes the mannequin might suggest
+  costume_catalog:
+    classics:
+      - Dashing Pirate Captain
+      - Elegant Victorian Lady
+      - Armored Knight
+      - Mysterious Wizard
+      - Suave Secret Agent
+      - Noble Samurai
+      
+    wild:
+      - Sentient Houseplant
+      - Time-Traveling Disco Ball
+      - Eldritch Horror (Cute Version)
+      - Living Statue (Confused)
+      - Professional Dragon
+      - Interdimensional Tourist
+      
+    combinations:
+      - "Pirate Astronaut"
+      - "Victorian Robot"
+      - "Wizard Detective"
+      - "Vampire Cheerleader"
+      - "Knight in Disco Armor"
+      - "Ghost Chef"
+      
+    bumblewick_specials:
+      - "Extra-Fancy Waistcoat (Sequined)"
+      - "Waistcoat But Make It Armor"
+      - "Mother-Would-Disapprove Outfit"
+      - "Actually Just Three Corgis in a Waistcoat"
+  
+  advertisements:
+    - action: ASK_FOR_RANDOM
+      score_if: "always"
+      description: "Get a random costume suggestion"
+      
+    - action: ASK_FOR_HELP
+      score_if: "always"
+      description: "Get costume recommendations"
+      
+    - action: DESCRIBE_COSTUME
+      score_if: "always"
+      description: "Describe what you want to wear"
+      
+  dialogue:
+    greeting: |
+      The mannequin waves! It points to the costume racks excitedly,
+      then at you, then makes a "mind blown" gesture.
+      
+      Translation: "Wow! A customer! Let me help you become ANYONE!"
+      
+    random_selected: |
+      The mannequin spins around three times, points at a random
+      rack, then presents you with: {costume}
+      
+      It gestures as if to say: "Trust me. This will be PERFECT."

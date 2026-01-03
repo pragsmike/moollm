@@ -1,0 +1,41 @@
+# The Kitchen Table
+# Where meals and plans are made
+
+object:
+  name: Sturdy Oak Table
+  type: furniture
+  
+  description: |
+    A well-worn kitchen table, scarred by decades of Fantastipants
+    family meals. You can see the mark where young Bumblewick once
+    carved his initials (and was grounded for a week). You can see
+    the burn mark from the Great Porridge Incident of '03.
+  
+  examine: |
+    On the table sits a NOTE, written in familiar handwriting:
+    
+    "Dearest Bumblewick,
+    
+    If you're reading this, you've been transported to another
+    mysterious underground adventure. AGAIN. I've stocked the
+    refrigerator with provisions. The food is for DROPPING IN
+    THE MAZE to mark your path, not for EATING.
+    
+    Don't forget your lamp. Don't get eaten by grues. Don't
+    embarrass the family name.
+    
+    Your loving Mother,
+    Petunia Fantastipants
+    
+    P.S. - When you get home, we need to talk about those dishes."
+  
+  # The table has a note on it
+  contents:
+    - name: Mother's Note
+      description: "Instructions from Petunia Fantastipants. Somehow she knew."
+      can_take: true
+  
+  advertisements:
+    - action: READ_NOTE
+      score_if: "always"
+      description: "Read Mother's helpful (judgmental) note"

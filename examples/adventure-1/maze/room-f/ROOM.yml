@@ -1,0 +1,57 @@
+# Maze Room F
+# A twisty little passage
+
+room:
+  name: Twisty Passage (Cold Spot)
+  type: maze_room
+  
+  # DANGER! This room is dark!
+  lighting: none
+  grue_safe: false
+  requires_light: true
+  
+  grue_event: |
+    It is pitch black. You are likely to be eaten by a grue.
+    
+    You shiver. It's SO cold. The grue, being cold-blooded (probably),
+    doesn't mind at all.
+    
+    🎵 "You read a pamphlet from a mailbox that urges low cunning,
+        offers cursor and prompt: type >run and you're running." 🎵
+    
+    — MC Frontalot, "It Is Pitch Dark"
+       https://www.youtube.com/watch?v=4nigRT2KmCE
+    
+    You have been eaten by a grue.
+    
+    [REINCARNATING... inventory preserved, score reset to 0]
+  
+  description: |
+    You are in a maze of twisty little passages, all alike.
+    
+    This one is FREEZING. Your breath fogs in the lamp light.
+    Your waistcoat provides little comfort. This is the kind
+    of cold that has nothing to do with temperature and
+    everything to do with something deeply wrong with reality.
+    
+    "MOST irregular," you mutter through chattering teeth.
+  
+  feature: cold_spot
+  
+  exits:
+    north:
+      destination: ../room-h/
+      description: "It gets warmer this way. Probably."
+    south:
+      destination: ../room-e/
+      description: "Back toward the cobwebs."
+    east:
+      destination: ../room-a/
+      description: "Is that dampness you sense?"
+    west:
+      destination: ../room-i/
+      description: "A passage of uncertain destination."
+  
+  ambience: |
+    Your waistcoat's buttons are FREEZING against your chest.
+    You pull it tighter anyway. It's the principle of the thing.

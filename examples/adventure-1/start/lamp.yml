@@ -1,0 +1,60 @@
+# The Brass Lamp
+# A classic adventuring essential since 1976
+
+object:
+  name: Brass Lamp
+  type: light_source
+  
+  description: |
+    A battered brass lamp of the sort that genies traditionally inhabit,
+    though this one appears to be genie-free (you checked). The brass is
+    tarnished to a dignified patina that whispers of adventures past.
+    A small plaque reads: "Property of Colossal Cave, please return."
+  
+  examine: |
+    The lamp is reassuringly solid in your hand. Its flame burns with
+    a warm yellow glow that pushes back the darkness — and, one hopes,
+    any grues that might be lurking. The wick looks like it has maybe
+    another 400 moves in it. Plenty of time. Probably.
+  
+  # State
+  lit: true
+  fuel: 400                # Moves remaining (decrements each move while lit)
+  fuel_warning: 50         # Warn player when fuel drops below this
+  fuel_critical: 10        # "Your lamp is about to go out!"
+  
+  # Interactions
+  advertisements:
+    - action: TAKE
+      score_if: "not in_inventory"
+      description: "Pick up the lamp"
+      
+    - action: LIGHT
+      score_if: "not lit and fuel > 0"
+      description: "Light the lamp"
+      response: |
+        You strike a match (from where? don't ask) and light the lamp.
+        A warm glow pushes back the darkness. Grues retreat to the shadows.
+      
+    - action: EXTINGUISH
+      score_if: "lit"
+      description: "Put out the lamp (to save fuel, you clever adventurer)"
+      response: |
+        You extinguish the lamp. The darkness presses in immediately.
+        If you're in the maze right now, this was a VERY BAD IDEA.
+        
+    - action: CHECK_FUEL
+      score_if: "always"
+      description: "Check how much fuel remains"
+      response: "The lamp has {fuel} moves of fuel remaining."
+      
+    - action: RUB
+      score_if: "always"
+      description: "Rub the lamp hopefully"
+      response: "Nothing happens. The genie must be on holiday."
+  
+  # Tribute
+  lineage: |
+    The brass lamp descends from the original in Colossal Cave Adventure,
+    where Will Crowther placed it to help spelunkers navigate the darkness.
+    It has appeared in every proper adventure since.
