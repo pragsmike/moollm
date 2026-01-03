@@ -176,7 +176,7 @@ Traditional response:
 Robust-first response:
   "Warning: ROOM.yml has syntax error"
   "Attempting recovery..."
-  "- Loaded last known good state from .archive"
+  "- Loaded last known good state from git"
   "- Merged recent changes from session-log.md"
   "- Flagged line 42 for manual review"
   [System continues with recovered state]
