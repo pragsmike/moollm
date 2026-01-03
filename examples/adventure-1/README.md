@@ -687,6 +687,67 @@ creature:
 
 ---
 
+## Chat Continues: Focusing the DM
+
+**User:** Trim down some of the more whimsical examples in the fridge food description, just list a few exemplary ones, the time for specific creativity is at runtime.
+
+**DM:** Compressing... 645 lines → 260 lines
+
+**User:** Update the readme with this focusing cleanup task description that reigns in the overenthusiastic creativity of the DM at authoring time and defers it to runtime. This is a kind of linting, validation, style guide, optimization, compression, context window management.
+
+### The Principle: Author Patterns, Not Scripts
+
+| Authoring Time | Runtime |
+|----------------|---------|
+| Define **patterns** | Generate **instances** |
+| Show **exemplary** cases | Improvise **specific** cases |
+| Describe **categories** | Combine **creatively** |
+| Keep files **lean** | Let context **breathe** |
+
+### Why This Matters
+
+**Context window management.** Every token in a YAML file competes for attention with player state, room descriptions, and conversation history. Verbose authoring-time creativity steals tokens from runtime creativity.
+
+**DM freedom.** Pre-scripted responses feel canned. Patterns + improvisation = unique every time. The DM should be creative *when it matters* — at the moment of play.
+
+**Compression as curation.** Trimming 20 detailed examples to 4 exemplary ones isn't loss — it's focus. The 4 examples teach the *pattern*. The DM generates the other 16 fresh.
+
+### What Was Trimmed
+
+| Before | After |
+|--------|-------|
+| 20 item-specific transformations | 4 exemplary patterns |
+| Full contextual effect matrices | Category summaries + 6 examples |
+| Detailed persistence YAML | 3-line rule summary |
+| Verbose DM notes | "Be creative at runtime!" |
+
+### File History: `kitchen/fridge.yml`
+
+| Version | Lines | Changes |
+|---------|-------|---------|
+| v6 | 645 | Full item-specific transformations, detailed contexts |
+| v7 | 260 | **Focused**: patterns over scripts, defer to runtime |
+
+### The Meta-Lesson
+
+This cleanup is itself a **MOOLLM pattern**:
+
+```
+FOCUS-RUNTIME:
+  meaning: "Author patterns, not scripts. Defer creativity to runtime."
+  applies_to: [object_definitions, character_backstories, room_descriptions]
+  benefit: "Lean files, fresh responses, better context management"
+```
+
+When authoring MOOLLM content:
+- ✅ Define the *shape* of possible responses
+- ✅ Show a few *exemplary* instances  
+- ✅ Let the coherence engine improvise the rest
+- ❌ Don't pre-generate every possibility
+- ❌ Don't fill files with enthusiasm that steals runtime tokens
+
+---
+
 ## 🎮 Special Mechanics
 
 ### The Eating Strategy
