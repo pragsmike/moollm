@@ -289,7 +289,7 @@ This is async/await for LLM agents — non-blocking, parallel, resumable.
 
 ## Dovetails With
 
-- [Trading Card](../trading-card/) — What gets multi-instantiated
+- [Trading Card](../card/) — What gets multi-instantiated
 - [Room](../room/) — Where activations live
 - [Data Flow](../data-flow/) — THROW between instances
 - [Coherence Engine](../coherence-engine/) — Orchestrates all instances

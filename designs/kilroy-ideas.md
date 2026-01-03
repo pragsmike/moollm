@@ -56,7 +56,7 @@ Agent A ──→ Swarm (named) ←── Agent B
 | **Router** | URL/command routing | Room navigation |
 
 **Concrete links:**
-- AI Agent → [skills/trading-card/PROTOTYPE.yml](../skills/trading-card/PROTOTYPE.yml)
+- AI Agent → [skills/card/PROTOTYPE.yml](../skills/card/PROTOTYPE.yml)
 - Tools → [PROTOCOLS.yml#FAMILIAR](../PROTOCOLS.yml)
 - Router → [skills/room/SKILL.md](../skills/room/SKILL.md)
 

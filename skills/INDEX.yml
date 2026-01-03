@@ -49,7 +49,7 @@ skills:
     entry: "SKILL.md"
     tags: ["spatial", "activation", "context", "cards"]
     use_when: "Managing task contexts, activating cards, navigating cognitive spaces"
-    related: ["trading-card", "memory-palace", "adventure"]
+    related: ["card", "memory-palace", "adventure"]
     
   - name: "summarize"
     path: "skills/summarize"
@@ -101,8 +101,8 @@ skills:
     tags: ["characters", "dialogue", "yaml-jazz", "lloooomm"]
     use_when: "Multi-perspective exploration, character dialogues"
     
-  - name: "trading-card"
-    path: "skills/trading-card"
+  - name: "card"
+    path: "skills/card"
     description: "Capabilities as portable, collectible cards"
     tier: 1
     entry: "SKILL.md"

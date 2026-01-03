@@ -168,4 +168,4 @@ why_it_works: "Forces you to articulate assumptions"
 - **[../session-log/](../session-log/)** — Track all debug steps
 - **[../research-notebook/](../research-notebook/)** — Investigation notes
 - **[../room/](../room/)** — Debug sessions are rooms
-- **[../trading-card/](../trading-card/)** — Git Goblin 🧌, Index Owl 🦉 companions
+- **[../card/](../card/)** — Git Goblin 🧌, Index Owl 🦉 companions

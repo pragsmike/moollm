@@ -178,7 +178,7 @@ Rooms ARE the memory palace:
       
     west-wing/          # Skills
       soul-chat/
-      trading-card/
+      card/
       
     tower/              # Characters
       gardener/
@@ -203,7 +203,7 @@ Navigate to remember. Place things to store.
 
 ## Integration
 
-- **→ trading-card/**: Cards live in rooms
+- **→ card/**: Cards live in rooms
 - **→ memory-palace/**: Rooms as memory locations
 - **→ soul-chat/**: Rooms can speak (type: room)
 - **→ adventure/**: Narrative room exploration
@@ -213,7 +213,7 @@ Navigate to remember. Place things to store.
 
 ## Dovetails With
 
-- **[../trading-card/](../trading-card/)** — Cards activate in rooms
+- **[../card/](../card/)** — Cards activate in rooms
 - **[../memory-palace/](../memory-palace/)** — Memory Palace IS Room + mnemonic intent
 - **[../adventure/](../adventure/)** — Adventure IS Room + narrative
 - **[../soul-chat/](../soul-chat/)** — Rooms can speak

@@ -151,7 +151,7 @@ graph TD
     subgraph "Userland (skills/)"
         PLL[play-learn-lift]
         R[room]
-        TC[trading-card]
+        TC[card]
         SC[soul-chat]
     end
     

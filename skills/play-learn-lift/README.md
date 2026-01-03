@@ -177,7 +177,7 @@ graph TD
     
     AP[⚔️ adventure] -->|IS| PLAY
     DB[🔧 debugging] -->|IS| PLAY
-    TC[🎴 trading-card] -->|created via| LIFT
+    TC[🎴 card] -->|created via| LIFT
 ```
 
 ---

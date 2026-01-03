@@ -536,7 +536,7 @@ commands:
 # ═══════════════════════════════════════════════════════════════════
 
 integrates_with:
-  - skill: "trading-card"
+  - skill: "card"
     how: "Cards live in rooms as active instances"
     
   - skill: "memory-palace"
@@ -552,6 +552,6 @@ integrates_with:
     how: "Rooms define their context files"
 
 see_also:
-  - "../trading-card/"
+  - "../card/"
   - "../memory-palace/"
   - "../../PROTOCOLS.yml#ROOM-AS-FUNCTION"

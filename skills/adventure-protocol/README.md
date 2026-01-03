@@ -108,7 +108,7 @@ I stepped into `src/auth/` — a maze of middleware.
 
 ## Integration with Cards
 
-[Trading cards](../trading-card/) can be your adventure companions:
+[Trading cards](../card/) can be your adventure companions:
 
 ```yaml
 # Activate helpers for this quest
@@ -245,7 +245,7 @@ Adventure is Room with **narrative quest framing**.
 ```mermaid
 graph LR
     AP[⚔️ adventure] -->|IS-A| R[🚪 room]
-    AP -->|companions| TC[🎴 trading-card]
+    AP -->|companions| TC[🎴 card]
     AP -->|logs to| SL[📜 session-log]
     AP -->|similar to| DB[🔧 debugging]
     
@@ -262,7 +262,7 @@ graph LR
 |-------|--------------|
 | [room/](../room/) | Adventure IS Room + narrative quest framing |
 | [memory-palace/](../memory-palace/) | Memory Palace IS Room + mnemonic framing |
-| [trading-card/](../trading-card/) | Cards are your **companions** on the quest |
+| [card/](../card/) | Cards are your **companions** on the quest |
 | [debugging/](../debugging/) | Debugging IS investigation quest |
 | [research-notebook/](../research-notebook/) | Evidence collection |
 | [session-log/](../session-log/) | Adventure LOG.md is session-log variant |

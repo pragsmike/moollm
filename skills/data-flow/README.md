@@ -192,7 +192,7 @@ on_batch_complete: |
 ## Dovetails With
 
 - [Room](../room/) — Rooms as processing nodes
-- [Trading Card](../trading-card/) — Cards as reusable processors
+- [Trading Card](../card/) — Cards as reusable processors
 - [Sister Script](../sister-script/) — Scripts for deterministic stages
 - [Coherence Engine](../coherence-engine/) — LLM as orchestrator
 - [Kilroy Ideas](../../designs/kilroy-ideas.md) — External integration

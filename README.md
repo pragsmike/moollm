@@ -66,6 +66,13 @@ A sister script runs Micropolis headless: advance N ticks, inject edits, render 
 
 **Rocky's Boots & Robot Odyssey** — The Learning Company's 1982-1984 games where you navigate rooms, ride around inside machines, wire up logic circuits, and program robots. Go INTO sub-rooms. Navigate room graphs. Edit while exploring. MOOLLM's room navigation, turtle riding, and nested spaces draw directly from these.
 
+**Classic Text Adventures** — The original interactive fiction:
+- **Colossal Cave Adventure (1976)** — Will Crowther & Don Woods. The first text adventure. "YOU ARE IN A MAZE OF TWISTY LITTLE PASSAGES, ALL ALIKE."
+- **Scott Adams Adventures (1978+)** — Scott Adams. Brought adventures to home computers. Compact, clever, everywhere.
+- **Zork (1977-1979)** — Tim Anderson, Marc Blank, Bruce Daniels, Dave Lebling (Infocom). "WEST OF HOUSE." The gold standard for parser-based interaction.
+
+MOOLLM's room navigation, object examination, and inventory management descend directly from these. When you type `LOOK` or `GO NORTH` or `TAKE SWORD`, you're speaking the language Crowther invented.
+
 **Marvin Minsky — [Society of Mind](https://en.wikipedia.org/wiki/Society_of_Mind)** — Intelligence emerges from societies of simple agents. K-lines: names that activate conceptual clusters (type "BPIP" and invoke an entire tradition). Frames: structured expectations with defaults and slots. Agents, agencies, and the "bugs" that Papert's children debugged. The mind as a bureaucracy of mindless clerks. MOOLLM's protocol symbols ARE K-lines; rooms ARE frames; characters ARE agents in a society.
 
 > *"If you can build it, you can understand it. If you can inspect it, you can trust it."*
@@ -457,7 +464,7 @@ This repository IS a memory palace. Each directory is a room, and should have a 
 
 | Skill | Purpose | Go |
 |-------|---------|-----|
-| 🎴 **trading-card/** | Capabilities as instantiable cards | [→](./skills/trading-card/) |
+| 🎴 **card/** | Capabilities as instantiable cards | [→](./skills/card/) |
 | 🚪 **room/** | Directories as activation contexts | [→](./skills/room/) |
 | 💬 **soul-chat/** | Everything speaks | [→](./skills/soul-chat/) |
 | 🎮 **play-learn-lift/** | The methodology | [→](./skills/play-learn-lift/) |
@@ -537,7 +544,7 @@ Wikipedia-style keywords that activate conceptual clusters. Type as commands or 
 | `PLAY-LEARN-LIFT` | Explore → find patterns → share wisdom. | [play-learn-lift/](./skills/play-learn-lift/) |
 | `ROOM-AS-FUNCTION` | Enter room = call function. Exit = return. | [room/](./skills/room/) |
 | `SPEED-OF-LIGHT` | Many agents in one LLM call. No carrier pigeons. | [room/](./skills/room/) |
-| `P-HANDLE-K` | Safe human referencing via K-line activation. | [trading-card/](./skills/trading-card/) |
+| `P-HANDLE-K` | Safe human referencing via K-line activation. | [card/](./skills/card/) |
 
 Full index: **[PROTOCOLS.yml](./PROTOCOLS.yml)**
 
@@ -679,7 +686,7 @@ The end state: an LLM that navigates its own memory, follows explicit protocols,
 | README | What You'll Find |
 |--------|------------------|
 | **[skills/room/](./skills/room/)** | 🏠 **The star of the show.** Rooms, objects, vehicles, Logo turtle, throwing objects through exits, pie menus, snap cursor, data flow pipelines, nested containers, object paths, tags, inventories. This is where MOOLLM comes alive. |
-| **[skills/trading-card/](./skills/trading-card/)** | 🃏 Characters, tools, and functions as instantiable cards. Activation records. Multi-presence. |
+| **[skills/card/](./skills/card/)** | 🃏 Characters, tools, and functions as instantiable cards. Activation records. Multi-presence. |
 | **[skills/hero-story/](./skills/hero-story/)** | 🦸 Safely invoke real people's traditions and skills. K-lines, not cosplay. Familiars as fictional embodiments. |
 | **[skills/data-flow/](./skills/data-flow/)** | 🔀 Rooms as pipeline nodes. THROW objects through exits. Kilroy-style data flow in the filesystem. |
 | **[skills/play-learn-lift/](./skills/play-learn-lift/)** | 🎮 The three-stage methodology. Play → Learn → Lift. Patron saints. How skills evolve. |
@@ -728,6 +735,9 @@ The end state: an LLM that navigates its own memory, follows explicit protocols,
 | **Dave Ackley** | Robust-first computing, [MFM][mfm] |
 | **Richard Bartle** | [MUD][mud] — the original multi-user dungeon |
 | **Pavel Curtis** | [LambdaMOO][moo] spatial programming |
+| **Will Crowther & Don Woods** | Colossal Cave Adventure — the first text adventure |
+| **Scott Adams** | Scott Adams Adventures — adventures on home computers |
+| **Infocom** | Zork (Anderson, Blank, Daniels, Lebling) — parser gold standard |
 | **Marvin Minsky** | K-lines, Society of Mind |
 | **Seymour Papert** | [Logo][logo] microworlds, constructionism |
 | **Alan Kay** | Smalltalk, messaging, children |

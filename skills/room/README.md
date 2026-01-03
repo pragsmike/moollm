@@ -2,10 +2,10 @@
 
 > **Rooms are intertwingled navigable activation context maps. Entering = calling. Exiting = returning.**
 
-Directories as cognitive spaces where [cards](../trading-card/) come to life.
+Directories as cognitive spaces where [cards](../card/) come to life.
 
 > [!TIP]
-> Rooms, [trading-cards](../trading-card/), and [soul-chat](../soul-chat/) form a triad. Master one, master all.
+> Rooms, [cards](../card/), and [soul-chat](../soul-chat/) form a triad. Master one, master all.
 
 ---
 
@@ -827,7 +827,7 @@ When you "exit":
 
 ```mermaid
 graph LR
-    R[🚪 room] <-->|cards live in| TC[🎴 trading-card]
+    R[🚪 room] <-->|cards live in| TC[🎴 card]
     R -->|narrative frame| AP[⚔️ adventure]
     R -->|mnemonic frame| MP[🏛️ memory-palace]
     R -->|entities speak| SC[💬 soul-chat]
@@ -842,7 +842,7 @@ graph LR
 ### Sister Skills
 | Skill | Relationship |
 |-------|--------------|
-| [trading-card/](../trading-card/) | Cards **live** in rooms. Activation creates instances. |
+| [card/](../card/) | Cards **live** in rooms. Activation creates instances. |
 | [memory-palace/](../memory-palace/) | Memory Palace IS Room + mnemonic intent |
 | [adventure/](../adventure/) | Adventure IS Room + narrative framing |
 | [soul-chat/](../soul-chat/) | Rooms can **speak** and welcome visitors |
@@ -886,5 +886,5 @@ graph LR
 |-----------|-------------|
 | ⬆️ Up | [skills/](../) |
 | ⬆️⬆️ Root | [Project Root](../../) |
-| 🎴 Sister | [trading-card/](../trading-card/) |
+| 🎴 Sister | [card/](../card/) |
 | 🏛️ Sister | [memory-palace/](../memory-palace/) |

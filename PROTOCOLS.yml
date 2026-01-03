@@ -153,7 +153,7 @@ POSTEL:
 
 P-HANDLE-K:
   meaning: "Safe pointers to real and fictional people via K-line activation."
-  location: kernel/constitution-core.md §8, skills/trading-card/
+  location: kernel/constitution-core.md §8, skills/card/
   invoke_when: "Referencing real people or their ideas"
   
   key_insight: |
@@ -351,11 +351,25 @@ SOUL-CHAT:
     - concept     # Abstract ideas
     - bot         # Automated processes
 
-TRADING-CARD:
-  meaning: "Objects as playable, collectible cards."
-  location: designs/MOOLLM-MANIFESTO.md §15-16
-  status: experimental
-  invoke_when: "Creating portable capability tokens"
+CARD:
+  meaning: "Portable tokens of capability, identity, and access."
+  location: skills/card/
+  invoke_when: "Creating portable, playable, collectible tokens"
+  
+  # Cards can be many things:
+  examples:
+    - trading_cards: "Hero-Story cards for real people's traditions"
+    - playing_cards: "Actions, abilities, spells to play"
+    - key_cards: "Access tokens for rooms and resources"
+    - receipts: "Proof of transaction, claim tickets"
+    - tickets: "Entry passes, reservations, permissions"
+    - business_cards: "Contact info, credentials"
+    - pleasure_cards: "Memberships, VIP access, perks"
+    - tarot: "Archetypal symbols for reflection"
+    - coupons: "Redeemable capabilities"
+    - hollerith: "Punch cards — data as physical holes!"
+    - qr_codes: "Scannable data, links, actions"
+    - wallet_cards: "Apple/Google Pay — phone as card carrier"
 
 BOUNCY-CASTLE:
   meaning: "Recursive navigable thought-spaces with their own internal geometry."
@@ -378,7 +392,7 @@ ROOM-AS-FUNCTION:
 
 CARD-IN-PLAY:
   meaning: "A trading card instantiated in a room as an active actor."
-  location: skills/room/, skills/trading-card/
+  location: skills/room/, skills/card/
   invoke_when: "Activating a capability with state and goals"
   
   lineage: |
@@ -451,7 +465,7 @@ NESTED-ROOMS:
 
 INVENTORY:
   meaning: "Things a character carries. Portable objects, cards, tools."
-  location: skills/trading-card/
+  location: skills/card/
   invoke_when: "Managing what a character or agent has on hand"
   
   structure: |
@@ -1174,7 +1188,7 @@ RETURN-STACK:
 
 FAMILIAR:
   meaning: "A trading card embodying tool capability as a helper spirit animal."
-  location: skills/trading-card/
+  location: skills/card/
   invoke_when: "Creating safe K-line wrapper for a tool"
   examples:
     - "🧌 Git Goblin — version control"
@@ -1185,7 +1199,7 @@ FAMILIAR:
 
 HERO-STORY:
   meaning: "A trading card that tells a real person's story — their contributions, tradition, wisdom."
-  location: skills/trading-card/
+  location: skills/card/
   invoke_when: "Invoking a real person's tradition without impersonation"
   
   key_insight: |
@@ -1210,7 +1224,7 @@ HERO-STORY:
 
 ACTOR:
   meaning: "Independent entity with state, receiving messages, situated in microworld."
-  location: skills/trading-card/, skills/room/
+  location: skills/card/, skills/room/
   invoke_when: "Understanding what a card-in-play really is"
   lineage:
     hewitt: "Original Actor model — independent agents"
@@ -1264,7 +1278,7 @@ MULTI-PRESENCE:
 ADVERTISEMENT:
   meaning: "Objects (files) advertise what they can do, with scores."
   origin: "The Sims (Will Wright / Don Hopkins)"
-  location: skills/trading-card/, skills/room/
+  location: skills/card/, skills/room/
   invoke_when: "Deciding what action to take next"
   see_also: [SNAP-CURSOR, AUTONOMOUS-SELECTION, PIE-MENU]
   

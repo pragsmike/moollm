@@ -54,7 +54,7 @@ Session-log is the PLAY stage of [play-learn-lift](../play-learn-lift/) — capt
 graph LR
     SL[📜 session-log] -->|PLAY stage of| PLL[🎮 play-learn-lift]
     SL -->|tracks| R[🚪 room]
-    SL -->|tracks| TC[🎴 trading-card]
+    SL -->|tracks| TC[🎴 card]
     SL -->|monitored by| SR[🔧 self-repair]
     
     AP[⚔️ adventure] -->|LOG.md is| SL

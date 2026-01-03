@@ -192,7 +192,7 @@ MOOLLM is **constructionist computing** for LLM agents:
 - [ ] Read the kernel: [kernel/README.md](./kernel/README.md)
 - [ ] Explore skills: [skills/README.md](./skills/README.md)
 - [ ] Try a room: [skills/room/](./skills/room/)
-- [ ] Play a card: [skills/trading-card/](./skills/trading-card/)
+- [ ] Play a card: [skills/card/](./skills/card/)
 - [ ] Learn the methodology: [skills/play-learn-lift/](./skills/play-learn-lift/)
 
 ---

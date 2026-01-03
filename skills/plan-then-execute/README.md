@@ -48,7 +48,7 @@ Plan-then-execute is [planning](../planning/) with security guarantees.
 graph LR
     PTE[📋 plan-then-execute] -->|frozen variant of| PL[🗂️ planning]
     PTE -->|logs to| SL[📜 session-log]
-    PTE -->|can use| TC[🎴 trading-card]
+    PTE -->|can use| TC[🎴 card]
     
     SS[👯 sister-script] -->|produces| PTE
 ```

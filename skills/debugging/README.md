@@ -53,7 +53,7 @@ graph LR
     DB[🔧 debugging] -->|variant of| AP[⚔️ adventure]
     DB -->|logs to| SL[📜 session-log]
     DB -->|notes in| RN[📓 research-notebook]
-    DB -->|companions| TC[🎴 trading-card]
+    DB -->|companions| TC[🎴 card]
     
     AP -->|+ hypotheses| DB
 ```
@@ -69,7 +69,7 @@ graph LR
 | [research-notebook/](../research-notebook/) | Investigation notes |
 | [session-log/](../session-log/) | Track all debug steps |
 | [room/](../room/) | Debug sessions are rooms |
-| [trading-card/](../trading-card/) | Git Goblin 🧌, Index Owl 🦉 companions |
+| [card/](../card/) | Git Goblin 🧌, Index Owl 🦉 companions |
 
 ### Protocol Symbols
 | Symbol | Link |

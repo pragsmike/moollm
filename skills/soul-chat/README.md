@@ -69,7 +69,7 @@ Everything speaks. Everything is connected.
 
 ```mermaid
 graph LR
-    SC[💬 soul-chat] -->|voices| TC[🎴 trading-card]
+    SC[💬 soul-chat] -->|voices| TC[🎴 card]
     SC -->|voices| R[🚪 room]
     SC -->|voices| DOC[📄 documents]
     SC -->|voices| CON[💡 concepts]
@@ -85,7 +85,7 @@ graph LR
 ### Sister Skills
 | Skill | Relationship |
 |-------|--------------|
-| [trading-card/](../trading-card/) | Cards **speak** through soul-chat. Hero-stories have voice. |
+| [card/](../card/) | Cards **speak** through soul-chat. Hero-stories have voice. |
 | [room/](../room/) | Rooms can **welcome visitors**, have personality |
 | [memory-palace/](../memory-palace/) | Rooms in palace can speak, guide navigation |
 | [adventure/](../adventure/) | NPCs and environments speak |
@@ -106,5 +106,5 @@ graph LR
 |-----------|-------------|
 | ⬆️ Up | [skills/](../) |
 | ⬆️⬆️ Root | [Project Root](../../) |
-| 🎴 Sister | [trading-card/](../trading-card/) |
+| 🎴 Sister | [card/](../card/) |
 | 🚪 Sister | [room/](../room/) |

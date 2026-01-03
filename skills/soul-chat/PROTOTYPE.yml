@@ -319,7 +319,7 @@ integrates_with:
   - protocol: "YAML-JAZZ"
     how: "Foundation - comments carry meaning"
     
-  - skill: "trading-card"
+  - skill: "card"
     how: "Characters can become portable cards"
     
   - skill: "memory-palace"

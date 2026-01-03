@@ -370,7 +370,7 @@ This skill directory contains only:
 
 ## Dovetails With
 
-- **[../trading-card/](../trading-card/)** — Cards can speak
+- **[../card/](../card/)** — Cards can speak
 - **[../room/](../room/)** — Rooms can welcome visitors
 - **[../memory-palace/](../memory-palace/)** — Palace rooms guide navigation
 - **[../../kernel/NAMING.yml](../../kernel/NAMING.yml)** — Big-endian naming

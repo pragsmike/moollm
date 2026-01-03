@@ -74,7 +74,7 @@ No hidden state, no magic.
 | Skill | Purpose | Tier |
 |-------|---------|------|
 | [room/](./room/) | Directories as activation contexts, objects, vehicles, turtle | 1 |
-| [trading-card/](./trading-card/) | Capabilities as instantiable cards | 1 |
+| [card/](./card/) | Capabilities as instantiable cards | 1 |
 | [data-flow/](./data-flow/) | Rooms as pipeline nodes, THROW/INBOX/OUTBOX | 1 |
 | [adventure/](./adventure/) | Narrative room exploration | 1 |
 | [hero-story/](./hero-story/) | Safe K-line references to real people | 1 |
@@ -225,7 +225,7 @@ graph TD
     PLL -->|LEARN stage| RN[research-notebook]
     PLL -->|PLAY stage| SL[session-log]
     
-    R[room] <-->|cards live in| TC[trading-card]
+    R[room] <-->|cards live in| TC[card]
     R -->|narrative framing| AP[adventure]
     R -->|mnemonic framing| MP[memory-palace]
     

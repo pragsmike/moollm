@@ -118,7 +118,7 @@ Memory Palace is Room with **mnemonic intent**.
 graph LR
     MP[🏛️ memory-palace] -->|IS-A| R[🚪 room]
     MP -->|narrative variant| AP[⚔️ adventure]
-    MP -->|objects are| TC[🎴 trading-card]
+    MP -->|objects are| TC[🎴 card]
     MP -->|rooms speak| SC[💬 soul-chat]
     
     R -->|+ mnemonic intent| MP
@@ -134,7 +134,7 @@ graph LR
 |-------|--------------|
 | [room/](../room/) | Memory Palace IS Room + spatial mnemonic intent |
 | [adventure/](../adventure/) | Adventure IS Room + narrative quest framing |
-| [trading-card/](../trading-card/) | Objects placed in rooms can be cards |
+| [card/](../card/) | Objects placed in rooms can be cards |
 | [soul-chat/](../soul-chat/) | Palace rooms can speak, guide visitors |
 | [summarize/](../summarize/) | Compress palace knowledge for context |
 

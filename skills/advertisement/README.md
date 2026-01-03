@@ -255,7 +255,7 @@ The room intercepts CRAFT before it reaches the object, adding room-specific log
 - [PIE-MENU](../room/) — How advertisements surface to users
 - [SNAP-CURSOR](../room/) — Context-aware object interaction
 - [Coherence Engine](../coherence-engine/) — Evaluates and selects actions
-- [Trading Card](../trading-card/) — Cards can advertise too
+- [Trading Card](../card/) — Cards can advertise too
 
 ---
 
