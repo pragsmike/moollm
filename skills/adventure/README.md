@@ -64,7 +64,6 @@ This is [Memory Palace](../memory-palace/) with **narrative framing** and a **pl
 - Surprises you (random encounters, hidden passages, NPC dialogue)
 - Adjudicates ambiguity ("try to pick the lock" → skill check)
 - Keeps the adventure log updated
-
 ### Multi-User, Multi-Agent (Engelbart NLS tradition)
 
 Naturally supports **multiple simultaneous participants**:
