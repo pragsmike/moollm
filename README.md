@@ -730,12 +730,17 @@ The end state: an LLM that navigates its own memory, follows explicit protocols,
 | <nobr>**[adventure‑3/](./examples/adventure-3/)**</nobr> | 🎮 **READY TO PLAY** | ⭐ **Your turn.** Fresh hero, restocked fridge, respawned grue. World enriched by previous adventurers. New mechanics: pub, curses, parties, dynamic world generation. **Start here!** |
 
 **The Lineage:**
-```
-adventure‑1: Template → Created world, defined mechanics, bootstrap documentation
-     ↓ (forked)
-adventure‑2: Played → Full transcript, emergent mechanics, legendary moments  
-     ↓ (forked + reset)
-adventure‑3: Ready → Fresh start, world improvements preserved, new systems added
+
+```mermaid
+graph TD
+    A1["<b>adventure‑1</b><br/>Template"] --> A2["<b>adventure‑2</b><br/>Fully Played"]
+    A2 --> A3["<b>adventure‑3</b><br/>🎮 READY"]
+    
+    A1 -.- N1["Created world<br/>Defined mechanics"]
+    A2 -.- N2["Captain Ashford<br/>Grue slain with cheese"]
+    A3 -.- N3["Fresh hero<br/>New systems"]
+    
+    style A3 fill:#2d5,stroke:#1a3,color:#fff
 ```
 
 > **Play it:** Open [adventure‑3/](./examples/adventure-3/), read the README, then `GET LAMP` and begin your story!
