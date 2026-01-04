@@ -4,6 +4,12 @@
 
 All player characters and NPCs live here. Each `.yml` file is a character.
 
+**Architectural principle:** Characters are NOT embedded in rooms!
+- Characters have a `location:` field that REFERENCES a room
+- Characters can move between rooms by changing the reference
+- Multiple characters can be in the same room
+- Rooms contain OBJECTS, not characters
+
 ---
 
 ## Active Players
@@ -189,10 +195,47 @@ hunger: 1   # STARVING. Will eat anything. Even that.
 
 ---
 
+## Architecture: What Lives Where
+
+```
+adventure-3/
+│
+├── characters/          # WHO — Characters (have location reference)
+│   ├── don-hopkins.yml     location: start/
+│   └── player.yml          location: start/
+│
+├── personas/            # MASKS — Wearable overlays (NO location!)
+│   └── captain-ashford.yml   # Anyone can wear
+│
+├── start/               # WHERE — Room containing objects
+│   ├── ROOM.yml
+│   └── lamp.yml            # Object IN the room
+│
+└── kitchen/             # Another room
+    ├── ROOM.yml
+    └── fridge.yml          # Object IN the room
+```
+
+| Thing | Has Location? | Embedded in Room? |
+|-------|---------------|-------------------|
+| **Character** | Yes (references room) | NO — lives in `characters/` |
+| **Persona** | No | NO — lives in `personas/` |
+| **Object** | Yes (implicit) | YES — lives in room dir |
+| **Room** | Yes (via exits) | — |
+
+**Why this matters:**
+- Characters MOVE by changing their `location:` reference
+- Multiple characters can be in the same room
+- Multiple characters can wear the same persona
+- Objects belong to rooms; characters belong to themselves
+
+---
+
 ## Dovetails With
 
 - [../ADVENTURE.yml](../ADVENTURE.yml) — Per-adventure state (active players, chat target)
-- [../coatroom/](../coatroom/) — Where characters are created and modified
+- [../personas/](../personas/) — Wearable personality overlays
+- [../coatroom/](../coatroom/) — Where characters try on personas
 - [../../../skills/mind-mirror/](../../../skills/mind-mirror/) — Personality system
 - [../../../skills/adventure/](../../../skills/adventure/) — Adventure framework
 - [../start/](../start/) — Where the adventure begins

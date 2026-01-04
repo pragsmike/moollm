@@ -13,9 +13,10 @@ character:
   type: player_character
   
   # PERSONA STATE — Who am I playing right now?
-  current_persona: coatroom/personas/captain-ashford.yml
+  current_persona: personas/captain-ashford.yml   # Adventure-level, not room-level!
   persona_name: "Captain Kira Ashford"
   # When null, I'm just myself. When set, modifiers apply!
+  # Personas live at adventure level because multiple characters can wear the same one.
   
   description: |
     A forty-seven-year-old Hobbit-adjacent gentleman from the pleasant 

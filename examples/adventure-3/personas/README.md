@@ -4,6 +4,12 @@
 
 A **persona** is a wearable costume + personality overlay. It's NOT a character — it's a **mask** that modifies whoever wears it.
 
+**Why personas live here (not in rooms):**
+- Multiple characters can wear the same persona
+- Personas have no physical location
+- Characters reference personas, personas don't reference characters
+- Shared across the entire adventure
+
 ---
 
 ## Character vs. Persona
@@ -138,6 +144,6 @@ This is how actors work. The role shapes you, but you also shape the role.
 
 ## Dovetails With
 
-- [../](../) — The Coatroom (where you try on personas)
-- [../../characters/](../../characters/) — Character files that wear personas
-- [../../../../skills/mind-mirror/](../../../../skills/mind-mirror/) — The trait system
+- [../coatroom/](../coatroom/) — The Coatroom (where you try on personas)
+- [../characters/](../characters/) — Character files that wear personas
+- [../../../skills/mind-mirror/](../../../skills/mind-mirror/) — The trait system

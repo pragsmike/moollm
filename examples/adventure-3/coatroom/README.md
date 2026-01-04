@@ -181,7 +181,7 @@ Your soul has a new shape. Arr.
 
 ## Personas — Wearable Personality Overlays
 
-See [personas/](./personas/) for **wearable personas** that modify your character!
+See [../personas/](../personas/) for **wearable personas** that modify your character!
 
 A persona is NOT a character — it's a **mask** that changes whoever wears it:
 
@@ -190,10 +190,11 @@ A persona is NOT a character — it's a **mask** that changes whoever wears it:
 | **What** | Who you ARE | Who you're PLAYING |
 | **Contains** | Full traits | Trait MODIFIERS (+/-) |
 | **Permanent** | Yes | No — put on, take off |
+| **Location** | Has a room | No location (shared!) |
 
 ```yaml
 # In your character file:
-current_persona: coatroom/personas/captain-ashford.yml
+current_persona: personas/captain-ashford.yml
 
 # Or in the coatroom:
 > WEAR PERSONA captain-ashford
@@ -205,7 +206,12 @@ current_persona: coatroom/personas/captain-ashford.yml
 
 | Persona | Style |
 |---------|-------|
-| [captain-ashford.yml](./personas/captain-ashford.yml) | Belter space pirate |
+| [captain-ashford.yml](../personas/captain-ashford.yml) | Belter space pirate |
+
+**Why personas live at adventure level (not in rooms):**
+- Multiple characters can wear the same persona simultaneously
+- Personas have no physical location
+- Characters reference personas by path
 
 ---
 
