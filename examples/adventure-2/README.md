@@ -6426,18 +6426,59 @@ The Thing That Watches becomes a permanent marker in Room H — and it *knows* y
 
 You sit among the mushrooms. You eat. You *see*.
 
+# 🍄 THE PSYCHEDELIC VISIONS
+
 Eight visions unfold in your mind's eye:
 
-| # | Vision | What You Saw |
-|---|--------|--------------|
-| 1 | **The Maze Breathes** | The entire maze as a single, living organism |
-| 2 | **Mother as Mycelium** | She IS the network. She IS everything. |
-| 3 | **The Grue Speaks** | "We were always playing. You won this round." |
-| 4 | **The Skeleton Dances** | Finally free. Finally at peace. |
-| 5 | **Captain Ashford Multiplied** | Infinite selves, all valid, all you |
-| 6 | **The Food Chain Spiral** | Transformation as communion |
-| 7 | **The Lamp Eternal** | A covenant of light |
-| 8 | **Home** | Where love waits. Where the adventure ends. |
+## Vision 1: ["The Maze Breathes"](./maze/room-h/psychedelic-vision-01-the-maze-breathes-prompt.md)
+**Style:** Organic, fractal, living geometry
+- The entire maze as a single, living organism
+- Walls pulse with bioluminescent heartbeat
+- You see where you've been, glowing like neural pathways
+
+## Vision 2: ["Mother as Mycelium"](./maze/room-h/psychedelic-vision-02-mother-as-mycelium-prompt.md)
+**Style:** Cosmic, maternal, interconnected
+- She IS the network. She IS everything.
+- Every fungal thread carries her love
+- You realize: she was with you the whole time
+
+## Vision 3: ["The Grue Speaks"](./maze/room-h/psychedelic-vision-03-the-grue-speaks-prompt.md)
+**Style:** Reconciliatory, gentle, game-like
+- "We were always playing. You won this round."
+- The grue smiles (do grues smile?)
+- Death and life are partners in a game
+
+## Vision 4: ["The Skeleton Dances"](./maze/room-h/psychedelic-vision-04-the-skeleton-dances-prompt.md)
+**Style:** Joyful, released, celebratory
+- Finally free. Finally at peace.
+- Bones clicking a rhythm of gratitude
+- The vow fulfilled, the spirit ascends
+
+## Vision 5: ["Captain Ashford Multiplied"](./maze/room-h/psychedelic-vision-05-captain-ashford-multiplied-prompt.md)
+**Style:** Kaleidoscopic, identity-fracturing, affirming
+- Infinite selves, all valid, all you
+- Bumblewick, Captain, and everyone between
+- Identity is a costume. You are real.
+
+## Vision 6: ["The Food Chain Spiral"](./maze/room-h/psychedelic-vision-06-the-food-chain-spiral-prompt.md)
+**Style:** Transformative, spiraling, sacramental
+- Transformation as communion
+- Everything you ate became something more
+- Consumption IS creation
+
+## Vision 7: ["The Lamp Eternal"](./maze/room-h/psychedelic-vision-07-the-lamp-eternal-prompt.md)
+**Style:** Luminous, covenantal, blue-flame sacred
+- A covenant of light
+- The lamp burns eternal in your heart
+- You will never be truly dark again
+
+## Vision 8: ["Home"](./maze/room-h/psychedelic-vision-08-home-prompt.md)
+**Style:** Warm, soft, beckoning, tearful
+- Where love waits. Where the adventure ends.
+- Mother at the table, cape ready
+- The door is always open
+
+---
 
 *"She smiles. Every fungal thread in the universe smiles with her."*
 
@@ -6610,16 +6651,55 @@ She smiles. The proudest smile you've ever seen.
 
 You spend the afternoon together. Mother examines every artifact:
 
-| Photo | Moment |
-|-------|--------|
-| 1 | **The Embrace** — First hug. Matching capes. Tears on both sides. |
-| 2 | **The Treasure Reveal** — Chalice glowing in her hands |
-| 3 | **The Golden Cascade** — 108 coins spilling across the table |
-| 4 | **The Glaive Explanation** — "Wait, you weaponized my CHEESE?" |
-| 5 | **Reading the Paper** — Mother frowning at the deconstruction |
-| 6 | **The Lamp Retirement** — Blue flame dimmed to rest |
-| 7 | **The Cape Twirl** — Both of you, synchronized, magnificent |
-| 8 | **The Family Portrait** — For the wall. Forever. |
+# 📸 THE HOMECOMING PHOTO SERIES
+
+## Photo 1: ["The Embrace"](./home/homecoming-01-the-embrace-prompt.md)
+**Style:** Warm, intimate, emotional
+- First hug after the adventure
+- Matching Nomi capes intertwining
+- Tears on both sides
+
+## Photo 2: ["The Treasure Reveal"](./home/homecoming-02-the-treasure-reveal-prompt.md)
+**Style:** Glowing, wonder-filled, magical
+- Chalice glowing in Mother's hands
+- Her eyes wide with amazement
+- Sunlight catching the jewels
+
+## Photo 3: ["The Golden Cascade"](./home/homecoming-03-the-golden-cascade-prompt.md)
+**Style:** Abundant, celebratory, gleaming
+- 108 gold coins spilling across the table
+- Mother's delighted laughter
+- Promise fulfilled, wealth delivered
+
+## Photo 4: ["The Glaive Explanation"](./home/homecoming-04-the-glaive-explanation-prompt.md)
+**Style:** Comic disbelief, warm absurdity
+- Mother holding the Gorgonzola Glaive
+- "Wait, you weaponized my CHEESE?"
+- Captain Ashford's sheepish grin
+
+## Photo 5: ["Reading the Paper"](./home/homecoming-05-reading-the-paper-prompt.md)
+**Style:** Academic confusion, loving exasperation
+- Mother frowning at the postmodern deconstruction
+- "The cheese deconstructs itself?"
+- Glasses pushed down nose
+
+## Photo 6: ["The Lamp Retirement"](./home/homecoming-06-the-lamp-retirement-prompt.md)
+**Style:** Ceremonial, peaceful, blue-tinted
+- Blue flame dimmed to rest at last
+- 969 oil remaining — well-tended
+- Covenant of light fulfilled
+
+## Photo 7: ["The Cape Twirl"](./home/homecoming-07-the-cape-twirl-prompt.md)
+**Style:** Dynamic, synchronized, joyful
+- Both of you, spinning together
+- Purple and black capes billowing
+- Matching lightning trim catching light
+
+## Photo 8: ["The Family Portrait"](./home/homecoming-08-the-family-portrait-prompt.md)
+**Style:** Triumphant, formal, eternal
+- For the wall. Forever.
+- All treasures displayed
+- Two adventurers in matching capes
 
 📦 **Artifacts:** 8 homecoming photo prompts in [home/](./home/)
 
