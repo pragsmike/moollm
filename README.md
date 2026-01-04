@@ -670,7 +670,7 @@ flowchart TD
 [logo]: https://en.wikipedia.org/wiki/Logo_(programming_language)
 [kilroy]: ./designs/kilroy-ideas.md
 [getlamp]: http://www.getlamp.com/
-[pbd]: https://mitpress.mit.edu/9780262527965/watch-what-i-do/
+[pbd]: https://acypher.com/wwid/
 
 ### Format Hierarchy
 
