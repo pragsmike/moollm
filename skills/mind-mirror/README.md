@@ -235,26 +235,117 @@ Mind Mirror becomes dynamic infrastructure for characters and entities.
 
 ### Character DNA
 
-Every MOOLLM entity can have a Mind Mirror profile defining its personality:
+Every MOOLLM entity can have a Mind Mirror profile defining its personality.
+
+**But here's the magic:** The comments aren't just documentation — MOOLLM *reads* them. The LLM interprets YAML Jazz comments as semantic modulation of the data. Comments explain, qualify, contextualize, and *drive behavior*.
 
 ```yaml
+# ═══════════════════════════════════════════════════════════════════════════
+# CAPTAIN ASHFORD — Mind Mirror Profile
+# 
+# This is YAML JAZZ. Every comment here is DATA that the LLM reads and uses.
+# Numbers set the dial. Comments explain what it MEANS for THIS character.
+# The same "confident: 6" means different things for different people.
+# Comments make personality SPECIFIC, VIVID, ALIVE.
+# ═══════════════════════════════════════════════════════════════════════════
+
 character:
   name: "Captain Ashford"
+  
+  # ─────────────────────────────────────────────────────────────────────────
+  # MIND MIRROR PROFILE
+  # Leary's four planes, rated 0-7, with YAML Jazz commentary
+  # The numbers are the skeleton. The comments are the flesh.
+  # ─────────────────────────────────────────────────────────────────────────
+  
   mind_mirror:
+  
     bio_energy:
-      energetic: 6
-      cheerful: 5
-      restless: 4
+      # Life force, vitality, temperament — how alive do they feel?
+      
+      energetic: 6       # Bounces when walking. Talks with hands.
+                         # Can't sit still in a chair — always drumming fingers.
+                         # First one up, last one to admit being tired.
+                         
+      cheerful: 5        # Default mood is "amused by existence."
+                         # Smiles at danger. Laughs at own jokes.
+                         # BUT: cheerfulness masks deeper anxieties.
+                         
+      restless: 4        # Always scanning the room. Planning next move.
+                         # Comfortable silence? What's that?
+                         # Will volunteer for any mission just to MOVE.
+                         
     emotional_insight:
-      confident: 6
-      friendly: 5
+      # Interpersonal style — how do they approach others?
+      
+      confident: 6       # Walks into rooms like they own them.
+                         # Never apologizes for existing.
+                         # Will bluff with a terrible hand and WIN.
+                         # (Secretly terrified of failure. Tells no one.)
+                         
+      friendly: 5        # Genuine warmth, not performance.
+                         # Remembers names. Asks follow-up questions.
+                         # BUT: keeps emotional distance. Burned before.
+                         
     mental_abilities:
-      creative: 6
-      innovative: 5
+      # Knowledge, creativity — how do they process information?
+      
+      creative: 6        # Solutions from left field. "What if we..."
+                         # Sees connections others miss.
+                         # Will try the ridiculous approach FIRST.
+                         # Makes lateral leaps that leave others dizzy.
+                         
+      innovative: 5      # Improves everything they touch.
+                         # "The old way works, but have you considered..."
+                         # Restless mind that can't leave well enough alone.
+                         
     social_interaction:
-      uninhibited: 5
-      worldly: 4
+      # Class, sophistication — how do they fit in society?
+      
+      uninhibited: 5     # Says what they think. Mostly.
+                         # Social conventions are "suggestions."
+                         # Will tell the emperor about the clothes situation.
+                         # Sometimes regrets this. Usually doesn't.
+                         
+      worldly: 4         # Traveled. Seen things. Has OPINIONS about wine.
+                         # Not a snob, but has standards.
+                         # Can navigate fancy dinner AND tavern brawl.
+
+# ═══════════════════════════════════════════════════════════════════════════
+# HOW MOOLLM USES THIS:
+#
+# 1. DIALOGUE GENERATION
+#    "confident: 6 + 'walks into rooms like they own them'"
+#    → Character enters scene with authority, not hesitation
+#    → Never says "Um, excuse me, sorry to bother you..."
+#    → Says "Right. Here's what we're going to do."
+#
+# 2. DECISION MAKING  
+#    "creative: 6 + 'will try the ridiculous approach FIRST'"
+#    → When stuck, character proposes wild solutions
+#    → Doesn't exhaust sensible options before getting weird
+#    → "What if we disguise ourselves as furniture?"
+#
+# 3. INTERNAL MONOLOGUE
+#    "confident: 6 + 'secretly terrified of failure. Tells no one.'"
+#    → Public: "I've got this handled."
+#    → Private: "Please don't let me screw this up."
+#    → The gap between these IS the character.
+#
+# 4. NPC REACTIONS
+#    "uninhibited: 5 + 'will tell the emperor about the clothes'"
+#    → NPCs react to directness — some respect it, some resent it
+#    → Pompous characters get deflated
+#    → Honest characters become allies
+#
+# 5. NARRATIVE VOICE
+#    All comments combine into a distinctive presence.
+#    You FEEL Captain Ashford in every line.
+#    The YAML Jazz IS the character.
+# ═══════════════════════════════════════════════════════════════════════════
 ```
+
+**The Key Insight:** Numbers alone are dead data. Numbers + YAML Jazz comments = living character.
 
 ### Soul-Chat Voice Calibration
 
@@ -263,12 +354,102 @@ Mind Mirror dimensions influence how characters speak:
 - High **creativity** → metaphors and tangents
 - High **cheerful** → upbeat tone
 
+### Dynamic Simulation with YAML Jazz
+
+Mind Mirror isn't static — it's **living YAML Jazz** that drives narrative:
+
+```yaml
+character:
+  name: "Captain Ashford"
+  
+  # PERSONALITY (stable traits)
+  mind_mirror:
+    confident: 6      # Doesn't hesitate
+    creative: 6       # Unusual solutions
+    restless: 5       # Can't sit still
+    proud: 4          # Won't ask for help easily
+    
+  # NEEDS (Sims-style, fluctuate constantly)
+  needs:
+    hunger: 3         # Getting peckish... food ads score higher
+    energy: 4         # Tired but pushing through
+    fun: 2            # BORED. Will seek entertainment.
+    social: 6         # Just had a good chat with bartender
+    hygiene: 5        # Acceptable. For an adventurer.
+    bladder: 7        # Fine for now
+    comfort: 3        # These dungeon floors are hard
+    room: 4           # Treasure chamber is nice but dusty
+    # Low needs drive autonomous behavior via advertisements
+    
+  # SHORT-TERM GOALS (immediate desires)
+  wants:
+    - "Find something to eat"           # hunger is 3
+    - "Do something fun"                # fun is 2!
+    - "Rest somewhere comfortable"      # energy 4, comfort 3
+    # These become active searches and dialogue topics
+    
+  # LONG-TERM ASPIRATIONS (persistent drives)
+  aspirations:
+    - goal: "Return treasure to Mother"
+      progress: 80%   # Almost there!
+      # Drives major decisions and narrative arc
+      
+    - goal: "Map the entire maze"
+      progress: 60%
+      # Influences exploration choices
+      
+    - goal: "Avenge the skeleton"
+      progress: 100%  # DONE! Satisfaction boost
+      completed: true
+      
+  # MEMORIES (affect mood and decisions)
+  recent_memories:
+    - event: "Slayed the grue with blue cheese"
+      mood_effect: +2 proud, +1 confident
+      narrative: "Still can't believe that worked"
+      
+    - event: "Found skeleton's memorial coin"
+      mood_effect: +1 serious, -1 cheerful
+      narrative: "Someone died here. Could have been me."
+      
+  # RELATIONSHIPS (affect social interactions)
+  relationships:
+    mother:
+      closeness: 9
+      # High closeness = guilt about broken promises
+      
+    bartender:
+      closeness: 4
+      trust: 6
+      # Will share secrets, buy drinks
+      
+    grue:
+      closeness: 0
+      status: "defeated"
+      # Source of pride narratives
+```
+
+**How YAML Jazz Comments Drive Narrative:**
+
+The comments aren't just documentation — the LLM reads them!
+
+```yaml
+hunger: 3         # Getting peckish... food ads score higher
+```
+
+This comment tells the LLM:
+- Character should mention being hungry in dialogue
+- Food-related advertisements get scoring bonus
+- Kitchen becomes more attractive destination
+- Eating actions become more likely
+
 ### Dynamic Self-Assessment
 
 Entities can Mind-Scope themselves:
 - Compare current state to ideal
 - Track growth over time
 - Identify rigid patterns
+- Watch needs fluctuate and understand why
 
 ### Vocabulary Toggle
 
@@ -276,47 +457,32 @@ Switch between `PLAIN-TALK` and `SHRINK-RAP` modes for descriptions and dialogue
 
 ### Image Generation Rule
 
-**When generating images, ALWAYS include full context as metadata.**
-
-This includes characters, rooms, objects — everything in the scene:
+**When generating images of characters, ALWAYS include Mind Mirror as metadata.**
 
 ```yaml
 image_prompt:
-  type: scene
+  subject: "Captain Ashford"
+  action: "triumphantly holding the Golden Chalice"
   
-  subject:
-    name: "Captain Ashford"
+  character_state:
     mind_mirror:
-      confident: 6, cheerful: 5, proud: 5, creative: 6
+      confident: 6
+      cheerful: 5
+      proud: 5
+      creative: 6
     costume: "Space pirate with holographic eyepatch"
     mood: "victorious, exhausted, relieved"
-    holding: "Golden Chalice (glowing softly)"
+    location: "Treasure Chamber, warm golden light"
     
-  room:
-    name: "Treasure Chamber"
-    lighting: "warm golden glow from treasure piles"
-    atmosphere: "ancient, dusty, awe-inspiring"
-    notable_objects:
-      - "Mountains of gold coins"
-      - "Ancient tapestries on walls"
-      - "Pedestal where chalice was"
-      
-  camera:
-    angle: "low angle, heroic"
-    focus: "character face and chalice"
-    
-  style: "dramatic portrait, chiaroscuro lighting"
+  style: "dramatic portrait, heroic lighting"
 ```
 
 **Why this matters:**
-- **Character coherence** — personality affects posture, expression, energy
-- **Room coherence** — lighting, atmosphere, spatial relationships
-- **Object coherence** — states, conditions, relationships
-- **Regeneration** — can recreate with same context
-- **Series consistency** — multiple shots stay coherent
-- **Metadata travels** — context preserved with image
-
-See also: `IMAGE-METADATA` protocol in [PROTOCOLS.yml](../../PROTOCOLS.yml)
+- Ensures character coherence across multiple images
+- Enables regeneration with same personality
+- Connects visual to psychological
+- Personality affects posture, expression, energy
+- Metadata travels with image for context
 
 ---
 

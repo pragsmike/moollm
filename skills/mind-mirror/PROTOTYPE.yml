@@ -468,6 +468,139 @@ significance:
     - "Comparative analysis → personality matching algorithms"
     - "Interactive scenarios → serious games"
 
+# DYNAMIC SIMULATION (Sims-style needs + goals)
+
+simulation_parameters:
+  
+  # NEEDS (fluctuate constantly, 0-10 scale)
+  # Low values drive autonomous behavior via advertisements
+  needs:
+    hunger:
+      description: "Physical need for food"
+      decay_rate: "slow"
+      satisfiers: ["eating", "snacking"]
+      low_effect: "Seeks food, distracted, irritable"
+      
+    energy:
+      description: "Physical and mental tiredness"
+      decay_rate: "medium"
+      satisfiers: ["sleeping", "resting", "coffee"]
+      low_effect: "Slow reactions, poor decisions, yawning"
+      
+    fun:
+      description: "Need for stimulation and entertainment"
+      decay_rate: "medium"
+      satisfiers: ["games", "jokes", "exploration", "creativity"]
+      low_effect: "BORED. Seeks novelty. May do stupid things."
+      
+    social:
+      description: "Need for interaction with others"
+      decay_rate: "slow"
+      satisfiers: ["conversation", "companionship", "letters"]
+      low_effect: "Lonely, talkative, seeks company"
+      
+    hygiene:
+      description: "Cleanliness and self-care"
+      decay_rate: "very slow"
+      satisfiers: ["washing", "grooming"]
+      low_effect: "NPCs react negatively, self-conscious"
+      
+    bladder:
+      description: "Physical urgency"
+      decay_rate: "medium"
+      satisfiers: ["bathroom", "finding a bush"]
+      low_effect: "Urgent! Will interrupt other actions."
+      
+    comfort:
+      description: "Physical comfort of environment"
+      decay_rate: "context-dependent"
+      satisfiers: ["good furniture", "warmth", "soft surfaces"]
+      low_effect: "Complains, seeks better spot"
+      
+    room:
+      description: "Aesthetic quality of current location"
+      decay_rate: "instant (context)"
+      satisfiers: ["nice decor", "cleanliness", "beauty"]
+      low_effect: "Wants to leave ugly/dirty places"
+      
+  # WANTS (short-term, emerge from low needs)
+  wants:
+    generation: |
+      Wants emerge automatically from needs:
+      - hunger < 4 → "Find something to eat"
+      - fun < 3 → "Do something entertaining"
+      - social < 3 → "Talk to someone"
+      
+    effect: |
+      Wants influence:
+      - Dialogue topics ("I'm starving...")
+      - Advertisement scoring (food +20 if hungry)
+      - Autonomous action selection
+      
+  # ASPIRATIONS (long-term, persist across sessions)
+  aspirations:
+    types:
+      - "Achievement goals (get treasure, defeat boss)"
+      - "Relationship goals (befriend NPC, reconcile)"
+      - "Skill goals (learn cooking, master maze)"
+      - "Collection goals (find all items, map all rooms)"
+      - "Story goals (solve mystery, fulfill promise)"
+      
+    tracking: |
+      progress: 0-100%
+      status: [active, completed, failed, abandoned]
+      satisfaction_on_complete: "Mood boost, narrative closure"
+      
+  # MEMORIES (affect mood and narrative)
+  memories:
+    types:
+      positive: "Boost mood, source of pride, conversation topics"
+      negative: "Trauma, fears, things to overcome"
+      neutral: "Facts, knowledge, context"
+      
+    decay: "Old memories fade unless reinforced"
+    
+    narrative_effect: |
+      Memories appear in:
+      - Internal monologue
+      - Dialogue ("Remember when...")
+      - Decision-making ("Last time I tried that...")
+      - Dreams
+      
+  # RELATIONSHIPS (affect social interactions)
+  relationships:
+    dimensions:
+      closeness: "How well you know them (0-10)"
+      trust: "How much you trust them (0-10)"
+      romance: "Romantic interest (-10 to +10)"
+      respect: "Professional/ability respect (0-10)"
+      
+    effects: |
+      High closeness: Share secrets, do favors
+      High trust: Believe what they say, follow advice
+      Low trust: Suspicious, verify claims
+      Negative romance: Avoid, awkward interactions
+
+# YAML JAZZ FOR SIMULATION
+
+yaml_jazz_simulation: |
+  Comments in Mind Mirror configs DRIVE the simulation:
+  
+  ```yaml
+  hunger: 3         # Getting peckish... food ads score higher
+  energy: 4         # Tired but pushing through — may make mistakes
+  fun: 2            # BORED. Will seek entertainment. Even risky entertainment.
+  proud: 6          # Won't ask for help even when should
+  ```
+  
+  The LLM reads these comments and:
+  1. Incorporates them into dialogue
+  2. Adjusts advertisement scoring
+  3. Influences autonomous decisions
+  4. Shapes narrative tone
+  
+  This is YAML Jazz applied to character simulation.
+
 # PROTOCOLS
 
 protocols:
@@ -482,6 +615,11 @@ protocols:
   - ROLE-PLAY-ODYSSEY
   - PLAIN-TALK
   - SHRINK-RAP
+  - NEEDS
+  - WANTS
+  - ASPIRATIONS
+  - MEMORIES
+  - RELATIONSHIPS
 
 # DOVETAILS
 
