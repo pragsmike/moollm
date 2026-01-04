@@ -12,6 +12,10 @@ cd moollm
 cursor .
 ```
 
+Or just open Cursor and ask:
+
+> "Clone https://github.com/SimHacker/moollm.git and open it"
+
 **That's it.** Open a chat. Start talking. The repo IS the game.
 
 ---

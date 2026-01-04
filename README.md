@@ -12,7 +12,7 @@
 - **Clone the repo** — `git clone` or ask Cursor to do it for you
 - **Open in Cursor** — start chatting and playing in Cursor
 - **Explore a playable adventure** — navigate rooms, examine objects, talk to Cursor
-- **Copy & customize a world** — duplicate adventure-3 to a new directory, configure it, make it yours
+- **Copy & customize a world** — duplicate adventure-3 to a new directory, configure it, make it yours, and play with it
 - **Fork & branch** — ask Cursor to fork and create your own branch you control
 - **Add, commit, push** — save your narrative to GitHub as a beautifully formatted web page
 - **Make PRs** — share your adventures, skills, and mechanics back with the community
