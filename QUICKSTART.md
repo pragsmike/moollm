@@ -81,9 +81,13 @@ The LLM creates the files, connects the exits, writes the descriptions. Looking 
 - **adventure‑3** reset with improvements (template)
 
 **To preserve adventure‑3 as a template:**
+
+Just tell Cursor:
+> "Clone adventure-3 to adventure-4, rename my character to 'Captain Starlight', and start me in the kitchen making breakfast."
+
+Or manually:
 ```bash
 cp -r examples/adventure-3 examples/adventure-4
-# Now play in adventure-4, keep adventure-3 pristine
 ```
 
 ---
