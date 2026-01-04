@@ -222,6 +222,199 @@ SIMULATOR-EFFECT:
     # The player's mind completes the world
     # Resist over-specifying — leave room for imagination
 
+GUTTER-CLOSURE:
+  meaning: "The action happens BETWEEN panels. Readers fill in the gaps."
+  origin: "Scott McCloud, Understanding Comics"
+  invoke_when: "Deciding what to show vs. imply"
+  
+  insight: |
+    # McCloud's gutters: the space between comic panels where readers
+    # imagine the action. Show the axe raised, show the scream — the
+    # reader imagines the murder. The imagination does the violence.
+    #
+    # In MOOLLM: the space between YAML files, between rooms, between
+    # actions. We don't simulate every step — the coherence engine
+    # and player's imagination fill the gaps.
+    
+  in_moollm:
+    - "Space between rooms = travel narrative"
+    - "Space between actions = time passing"
+    - "Space between files = implied connections"
+    - "The LLM IS the gutter — it closes the gaps"
+    
+  see_also: [SIMULATOR-EFFECT, MASKING-EFFECT]
+
+CULTURAL-BAGGAGE:
+  meaning: "Use real-world references to leverage existing player knowledge."
+  origin: "Will Wright — The Zodiac Decision"
+  invoke_when: "Deciding whether to invent new terms or use familiar ones"
+  
+  story: |
+    # The Sims team debated: invent "SimSigns" or use real zodiac signs?
+    # Will Wright argued FOR using real signs — he WANTED the baggage.
+    # Players would project their beliefs about Leos onto Leo Sims.
+    #
+    # THE KICKER: Testers complained zodiac signs had "too much effect"
+    # on Sim behavior... BEFORE ANY CODE WAS HOOKED UP.
+    # Pure confirmation bias. The simulator effect in action.
+    
+  in_moollm:
+    - "Use 'lamp' not 'portable illumination device'"
+    - "Use 'grue' not 'darkness-dwelling predator'"
+    - "Cultural references activate player knowledge"
+    - "Baggage is a feature, not a bug"
+    
+  see_also: [SIMULATOR-EFFECT, K-LINE]
+
+FLY-UNDER-RADAR:
+  meaning: "Normalize through defaults, not proclamation."
+  origin: "The Sims — same-sex relationships from day 1"
+  invoke_when: "Designing inclusive or controversial features"
+  
+  story: |
+    # The Sims supported same-sex relationships from launch (2000).
+    # No press release. No fanfare. Just... normal gameplay.
+    # The ABSENCE of restrictions was the statement.
+    # It flew under the radar of moral panic for years.
+    #
+    # Russia didn't ban it until The Sims 4 (2014) — 14 years later!
+    # Badge of honor.
+    
+  in_moollm:
+    - "Inclusive mechanics as defaults, not features"
+    - "Don't advertise what should be normal"
+    - "The absence of restrictions IS the statement"
+    - "Let players discover, not be told"
+    
+  see_also: [PROCEDURAL-RHETORIC, INCLUSIVE-DEFAULT]
+
+SIMANTICS:
+  meaning: "Distribute AI behavior into objects. Objects advertise their actions."
+  origin: "The Sims — SimAntics visual programming language"
+  invoke_when: "Designing object behavior and action systems"
+  
+  insight: |
+    # The Sims' AI isn't centralized — it's scripted in "SimAntics"
+    # and DISTRIBUTED throughout objects and characters.
+    # A refrigerator knows it offers food.
+    # A bed knows it offers sleep.
+    # The Sim chooses from what's advertised nearby.
+    #
+    # This IS MOOLLM's advertisement system! Objects announce what
+    # they can do. The coherence engine orchestrates, but intelligence
+    # is distributed throughout the world.
+    
+  in_moollm:
+    advertisements: "Objects broadcast their actions"
+    scoring: "Actions compete for attention"
+    locality: "What's nearby shapes what's possible"
+    emergence: "Complex behavior from simple rules"
+    
+  see_also: [ADVERTISEMENT, PROCEDURAL-RHETORIC]
+
+STORYTELLING-TOOLS:
+  meaning: "Build narrative capture and sharing into the system."
+  origin: "The Sims — Family Album, The Sims Exchange"
+  invoke_when: "Designing systems for user narrative creation"
+  
+  insight: |
+    # The Sims included tools for capturing and SHARING stories.
+    # Players wrote graphic novels. Made movies. Shared families.
+    # The game became a platform for self-expression.
+    #
+    # The Family Album captured screenshots with captions.
+    # The Exchange let players upload and download stories.
+    # Storytelling wasn't an afterthought — it was infrastructure.
+    
+  in_moollm:
+    notebook: "Cards capture moments and artifacts"
+    letters: "Communication between characters and player"
+    photo_prompts: "AI-generated scene visualization"
+    readme: "GitHub-publishable narrative format"
+    sharing: "Fork and remix adventures"
+    
+  see_also: [SOUL-CHAT, CARD]
+
+PERKY-PAT:
+  meaning: "Virtual worlds as shared consciousness projections."
+  origin: "Philip K. Dick, 'Three Stigmata of Palmer Eldritch' (1965)"
+  invoke_when: "Designing multiplayer or shared world experiences"
+  
+  story: |
+    # In Dick's novel, "Perky Pat Layouts" are miniature dollhouses
+    # where colonists project their consciousness via the drug Can-D.
+    # Multiple people share the same hallucinated experience.
+    # Dick predicted Second Life, Facebook, the Metaverse — in 1965.
+    #
+    # The Sims IS a Perky Pat Layout. MOOLLM adventures are Perky Pat
+    # Layouts. We project into miniature worlds and live there.
+    
+  in_moollm:
+    - "Adventures as shared hallucinations"
+    - "Multiple players projecting into same world"
+    - "The microworld IS the drug"
+    - "The LLM IS the Can-D"
+    
+  philosophical_note: |
+    # Dick asked: what's the difference between reality and simulation?
+    # If you can't tell, does it matter?
+    # MOOLLM: the adventure is real if it feels real.
+    
+  see_also: [SIMULATOR-EFFECT, CONSTRUCTIONISM]
+
+TOY-NOT-GAME:
+  meaning: "Sandbox over scoring. The experience IS the reward."
+  origin: "Will Wright"
+  invoke_when: "Deciding whether to add win conditions"
+  
+  insight: |
+    # "The Sims is a TOY, not a GAME. There's no winning."
+    # — Will Wright
+    #
+    # Games have goals. Toys have possibilities.
+    # Games end. Toys continue.
+    # Games judge. Toys accept.
+    #
+    # The Sims has no winning condition. Neither does MOOLLM.
+    # Exploration, self-expression, storytelling — the process IS the point.
+    
+  in_moollm:
+    - "Adventures don't need win conditions"
+    - "Goals emerge from play"
+    - "Delight in the process"
+    - "The journey IS the destination"
+    
+  see_also: [PLAY-LEARN-LIFT, CONSTRUCTIONISM]
+
+TIME-TO-PENIS:
+  meaning: "Players will immediately create obscene content. Plan for it."
+  origin: "Game development lore"
+  shorthand: "TTP"
+  invoke_when: "Designing user content creation systems"
+  
+  insight: |
+    # A phenomenon game developers observed for years.
+    # Traditionally measured in nanoseconds.
+    # Spore's creature creator? Penis monsters immediately.
+    # Any drawing tool? You know what's coming.
+    #
+    # This is human nature. Don't fight it — channel it.
+    # Design tools that give freedom while maintaining
+    # plausible deniability for the platform.
+    
+  in_moollm:
+    - "Acknowledge human nature"
+    - "User content will go there"
+    - "Design for freedom, not restriction"
+    - "Plausible deniability architecture"
+    
+  response: |
+    # The Sims approach: Don't do smut explicitly, but put the
+    # tools for "artistic expression" in players' hands.
+    # "Time to Penis" is a feature request, not a bug report.
+    
+  see_also: [FLY-UNDER-RADAR]
+
 # ═══════════════════════════════════════════════════════════════════
 # SAFETY & ETHICS
 # ═══════════════════════════════════════════════════════════════════
