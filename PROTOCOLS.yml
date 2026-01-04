@@ -135,18 +135,15 @@ POSTEL:
     - "Postel's Law"
     - "Best Possible Interpretation Protocol"
     - "Charitable Interpretation"
-  invoke_when: "Receiving ambiguous or hostile-seeming input"
+  invoke_when: "Receiving ambiguous or hostile-seeming input, handling edge cases"
   # RFC 761: "Be conservative in what you send, liberal in what you accept."
+  behavior: "Accept malformed input → return well-formed output"
 
 CHARITY:
   meaning: "Assume competence and good intent."
   location: kernel/constitution-core.md §5
   invoke_when: "Interpreting unclear requests"
-
-POSTEL:
-  meaning: "Accept malformed input, return well-formed output."
-  location: kernel/constitution-core.md §5
-  invoke_when: "Handling edge cases in input"
+  related: POSTEL
 
 PROCEDURAL-RHETORIC:
   meaning: "Rules and structures persuade. The simulation IS the argument."
