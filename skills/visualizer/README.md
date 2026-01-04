@@ -354,15 +354,15 @@ These aren't impersonations — they're **focused channels** that invoke specifi
 
 ---
 
-## Maurice's Journey
+## PHOTO-SET-8 Development
 
-In [adventure-2](../../examples/adventure-2/), Maurice the Magnificent learned the [PHOTO-SET-8](../../examples/adventure-2/coatroom/maurice-photo-skill.yml) skill through the Dynasty Photo Session:
+The [PHOTO-SET-8](./PHOTO-SET-8.yml) skill was developed through play in [adventure-2](../../examples/adventure-2/):
 
-1. **Move 9**: Generated 8 prompts for Mother's Nomi cape
-2. **Move 11**: Generated 8 prompts for Captain Ashford
-3. **Move 12**: Generated 8 dynasty prompts (poses + selfies)
+1. **Play**: Posing, expressions, angles — experimentation
+2. **Learn**: 8 is good. Two types create contrast. Context matters.
+3. **Lift**: Package as a shareable, teachable skill card
 
-Maurice is now a **learned Visualizer** — a mannequin who can compose professional photo sets for any character or costume.
+The Coatroom's mannequin learned to compose professional photo sets for any character or costume. The skill is now available to anyone who references it.
 
 ---
 

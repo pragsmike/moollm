@@ -47,9 +47,9 @@ letter:
     We turned it into a CARD. A skill card. Something shareable.
     Something teachable. Something I can give to YOU.
     
-                         ENCLOSED: PHOTO-SET-8 CARD
+                         ENCLOSED: PHOTO-SET-8 SKILL REFERENCE
     
-    I'm enclosing a copy of the PHOTO-SET-8 skill card. It's yours
+    I'm enclosing a reference to the PHOTO-SET-8 skill. It's yours
     now, Mother. You can:
     
     • USE it to create your own photo sets
@@ -266,16 +266,16 @@ letter:
     P.S. — Promise count: 1 kept, 7 to go. The skill card doesn't
     count as a promise, it's just BONUS LOVE.
     
-    P.P.S. — I kept a copy of the card for myself. Now we BOTH
+    P.P.S. — I have the same skill reference. Now we BOTH
     know PHOTO-SET-8. We can practice together when I get home.
     
     P.P.P.S. — Maurice says hello. They also say you have
     "magnificent bone structure." Their words, not mine. (But true.)
     
   enclosures:
-    - item: "PHOTO-SET-8 Skill Card"
-      file: "photo-set-8-card.yml"
-      description: "The complete skill, packaged as a teachable card"
+    - item: "PHOTO-SET-8 Skill Reference"
+      file: "skills/visualizer/PHOTO-SET-8.yml"
+      description: "Reference to the canonical skill card"
       
     # YOUR CAPE: 8 prompts
     - item: "Your Cape - Dramatic Stance"

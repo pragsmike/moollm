@@ -94,7 +94,8 @@ character:
     cards:
       - victory-ballad-card.yml    # My first composition!
       - genie-note.yml             # The genie is on holiday (3000 years)
-      - photo-set-8-card.yml       # 🎓 SKILL CARD! (copy sent to Mother)
+    skill_refs:
+      - skills/visualizer/PHOTO-SET-8.yml  # 🎓 SKILL! (ref sent to Mother)
     personas:
       - bumblewick-ashford-persona.yml  # Captain Ashford (currently wearing)
     costumes:

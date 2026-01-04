@@ -29,10 +29,10 @@ package:
         a complete gallery guide to all 24 photo prompts with
         descriptions, comparisons, and emotional context.
         
-    - item: "PHOTO-SET-8 Skill Card"
-      file: photo-set-8-card.yml
+    - item: "PHOTO-SET-8 Skill Reference"
+      file: skills/visualizer/PHOTO-SET-8.yml
       description: |
-        The complete skill, packaged as a teachable card.
+        Reference to the canonical skill definition.
         Mother can now create her own photo sets!
         
     - item: "Maurice's Transformation"
@@ -119,13 +119,13 @@ package:
      
      "We deliver skills anywhere the heart goes." — DP motto (expanded)
      
-  copies_created:
+  skill_references:
     for_mother:
-      file: "photo-set-8-card.yml (in package)"
-      status: "En route to Wobblebrook-upon-Squiggle"
+      file: "skills/visualizer/PHOTO-SET-8.yml"
+      status: "Reference sent to Wobblebrook-upon-Squiggle"
     for_ashford:
-      file: "photo-set-8-card.yml (in inventory)"
-      status: "Carried by Captain Ashford"
+      file: "skills/visualizer/PHOTO-SET-8.yml"
+      status: "Reference in inventory"
       
   lineage: |
     This is the first SKILL CARD sent via Dungeon Post.

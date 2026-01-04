@@ -1279,7 +1279,7 @@ But before it's fully Maurice again, they whisper:
 
 ### 🎓 SKILL LEARNED: Maurice Becomes a Visualizer
 
-Through these photo sessions, Maurice has formally acquired the **[PHOTO-SET-8](./coatroom/maurice-photo-skill.yml)** skill — the first instantiation of the [Visualizer](../../skills/visualizer/) prototype.
+Through these photo sessions, the **[PHOTO-SET-8](../../skills/visualizer/PHOTO-SET-8.yml)** skill was crystallized — the first instantiation of the [Visualizer](../../skills/visualizer/) prototype.
 
 ```yaml
 # Maurice's new capability
@@ -1367,7 +1367,7 @@ You pull out a blank skill card. Maurice leans close.
 Together, you and Maurice reconstruct the pattern:
 
 ```yaml
-# photo-set-8-card.yml — the skill crystallized
+# skills/visualizer/PHOTO-SET-8.yml — the skill crystallized
 card:
   name: "PHOTO-SET-8"
   type: skill_card
@@ -1396,8 +1396,7 @@ Maurice watches you write. Then they pull out their own blank card and **copy it
 
 *"Now we BOTH know,"* you realize.
 
-📦 **Artifact:** [photo-set-8-card.yml](./coatroom/photo-set-8-card.yml) — the complete skill as a card  
-📦 **Artifact:** [maurice-photo-skill.yml](./coatroom/maurice-photo-skill.yml) — Maurice's copy
+📦 **Artifact:** [skills/visualizer/PHOTO-SET-8.yml](../../skills/visualizer/PHOTO-SET-8.yml) — the canonical skill definition
 
 ---
 
@@ -1472,9 +1471,9 @@ shared_knowledge:
   skill: PHOTO-SET-8
   holders:
     - name: "Captain Ashford"
-      has: "photo-set-8-card.yml (inventory)"
+      has: "skills/visualizer/PHOTO-SET-8.yml (referenced)"
     - name: "Petunia Fantastipants"
-      has: "photo-set-8-card.yml (via Dungeon Post)"
+      has: "skills/visualizer/PHOTO-SET-8.yml (via Dungeon Post)"
       
   implication: |
     When you reunite, you can create photo sets TOGETHER.
@@ -1498,8 +1497,7 @@ shared_knowledge:
 ---
 
 📦 **Artifacts Created (Move 13):**
-- [photo-set-8-card.yml](./coatroom/photo-set-8-card.yml) — The skill as a card (COPIED TO INVENTORY)
-- [maurice-photo-skill.yml](./coatroom/maurice-photo-skill.yml) — Maurice's copy of the skill
+- [skills/visualizer/PHOTO-SET-8.yml](../../skills/visualizer/PHOTO-SET-8.yml) — The canonical skill definition (referenced by inventory)
 - [letter-to-mother-photo-skill.yml](./coatroom/letter-to-mother-photo-skill.yml) — The PLAY-LEARN-LIFT letter
 - [skill-package-for-mother.yml](./coatroom/skill-package-for-mother.yml) — **SENT** 📬
 
@@ -2915,7 +2913,7 @@ This is how skills GROW in MOOLLM:
 
 | File | What Changed |
 |------|--------------|
-| [coatroom/photo-set-8-card.yml](./coatroom/photo-set-8-card.yml) | New "Detail Coherence Interlinking" section |
+| [skills/visualizer/PHOTO-SET-8.yml](../../skills/visualizer/PHOTO-SET-8.yml) | Contains "Detail Coherence Interlinking" technique |
 | [skills/visualizer/README.md](../../skills/visualizer/README.md) | Technique documented for all Visualizers |
 | 4 portrait prompts | Now reference all 4 close-up prompts |
 

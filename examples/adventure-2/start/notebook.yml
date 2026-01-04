@@ -78,9 +78,9 @@ object:
           description: "The Fantastipants Victory Ballad"
         - file: "./genie-note.yml"
           description: "Genie absence notification"
-        - file: "../coatroom/photo-set-8-card.yml"
-          description: "PHOTO-SET-8 skill (copy - original sent to Mother)"
-          status: my_copy
+        - file: "skills/visualizer/PHOTO-SET-8.yml"
+          description: "PHOTO-SET-8 skill reference"
+          note: "Canonical skill definition — same reference sent to Mother"
         - file: "../maze/room-a/prophecy-shanty-card.yml"
           description: "The Prophecy Shanty — Belter work song"
           origin: "maze/room-a/ — post-apple vision, Move 21"
