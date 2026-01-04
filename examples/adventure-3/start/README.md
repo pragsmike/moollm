@@ -36,6 +36,7 @@ Fresh carvings tell of those who came before:
 | Direction | Destination | What Awaits |
 |-----------|-------------|-------------|
 | **North** | [maze/room-a/](../maze/room-a/) | ⚠️ DARK! THE GRUE HAS RESPAWNED! |
+| **South** | [pub/](../pub/) | 🍺 The Rusty Lantern — socialize, play games, hear rumors! |
 | **West** | [kitchen/](../kitchen/) | 📜 Mother's note, 🧭 Tom, 🍱 supplies |
 | **East** | [coatroom/](../coatroom/) | 🎭 Maurice — become ANYONE! |
 | **Up** | [home/](../home/) | 🏠 Home (adventure end point) |
@@ -95,6 +96,7 @@ collector's stamps honoring the founders of interactive fiction!
 |-----------|-------------|
 | ⬆️ Up | [adventure-3/](../) |
 | 🌀 North | [maze/room-a/](../maze/room-a/) |
+| 🍺 South | [pub/](../pub/) |
 | 🍳 West | [kitchen/](../kitchen/) |
 | 🎭 East | [coatroom/](../coatroom/) |
 | 🏠 Up | [home/](../home/) |

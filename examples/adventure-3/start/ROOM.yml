@@ -48,10 +48,13 @@ room:
     improbably wooden, with a brass flag that's currently UP. You have mail.
     (This is a Zorkian tradition. CHECK MAIL!)
     
-    Four exits beckon:
+    Five exits beckon:
     
     NORTH: A rough archway leading into ABSOLUTE darkness. The kind where
     you are likely to be eaten by a grue. The grue has respawned.
+    
+    SOUTH: A warm glow and the murmur of conversation. A wooden sign 
+    creaks: "THE RUSTY LANTERN — Est. ???" A proper pub for proper heroes.
     
     WEST: A cheerful doorway smelling of home cooking. The Fantastipants
     Family Kitchen, where Mother's note waits.
@@ -105,6 +108,19 @@ room:
         A stairway carved into the rock, leading up towards warm light.
         The smell of home cooking wafts down. This exit was always here,
         but previous adventurers revealed it.
+        
+    south:
+      destination: ../pub/
+      description: |
+        A heavy wooden door with a brass handle, warm light leaking from
+        beneath. The sign creaks in a nonexistent breeze: "THE RUSTY LANTERN"
+        
+        From within, you hear the clink of glasses, low conversation, and 
+        the unmistakable sound of someone losing badly at darts. This is
+        where adventurers gather to share tales, drown sorrows, and find
+        their next quest.
+        
+        The pub has always been here. Or so the bartender claims.
   
   # Position in world space
   world_position:

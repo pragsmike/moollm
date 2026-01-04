@@ -1330,6 +1330,7 @@ object:
                 - Open markets
                 - Battlefields
                 - Natural spaces (forests, beaches)
+                - Outdoors in general
                 
               mechanics:
                 - Line of sight across sections

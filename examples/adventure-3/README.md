@@ -15,6 +15,7 @@ This adventure inherits the **enriched world** from adventure-2, where Bumblewic
 |---------|-------------|----------|
 | 🏛️ **Initials on the Wall** | WC+DW '76, SA '78, CA '26, BF — the lineage | `start/ROOM.yml` |
 | ⬆️ **Stairway to Home** | Exit UP leads to the surface | `start/` → `home/` |
+| 🍺 **The Rusty Lantern** | THEMEABLE pub for socializing, games, rumors! | `pub/` |
 | 🎭 **Maurice's Skills** | Learned PHOTO-SET-8 in adventure-2 | `coatroom/mannequin.yml` |
 | 🏪 **Vending Machine** | Sells Premium Glow Juice | `maze/room-j/lamp-vendor.yml` |
 | 💀 **The Skeleton** | Still points west, still waiting | `maze/room-i/ROOM.yml` |
