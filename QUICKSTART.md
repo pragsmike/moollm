@@ -175,7 +175,7 @@ examples/adventure-3/
 1. **Open adventure‑3 in Cursor**
 2. **Chat:** "I wake up. LOOK. GO WEST. READ NOTE."
 3. **Compose your reply to Mother** — your promises become your goals, kickstarting world generation!
-4. **Explore:** GO NORTH, LOOK, EXAMINE things
+4. **Explore:** GO NORTH, LOOK, EXAMINE, TAKE things
 5. **Write back to Mother** — your promises become your goals!
 
 The LLM tracks state in the YAML files. Look at `player.yml` to see your inventory, gold, and location update.
