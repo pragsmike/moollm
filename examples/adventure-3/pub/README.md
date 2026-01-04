@@ -115,6 +115,7 @@ Possibilities:
 | 👻 [pacman-cabinet.yml](./pacman-cabinet.yml) | Wakka wakka wakka |
 | 🏓 [pong-cabinet.yml](./pong-cabinet.yml) | The game that started it all |
 | 🍒 [fruit-machine.yml](./fruit-machine.yml) | One-armed bandit |
+| 🎱 [pinball-machine.yml](./pinball-machine.yml) | "BAR KARMA" — Face your fate |
 
 ---
 

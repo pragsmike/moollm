@@ -183,6 +183,7 @@ room:
     - pacman-cabinet.yml
     - pong-cabinet.yml
     - fruit-machine.yml
+    - pinball-machine.yml
     
   # 🎲 ACTIVITIES
   
