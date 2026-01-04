@@ -18,6 +18,8 @@ This room has **no lighting**. Enter without a lit lamp and you will be eaten by
 
 ## 💀 The Skeleton's Story
 
+See [skeleton.yml](./skeleton.yml) for full details.
+
 This adventurer had over **100 gold!** They were using coins as maze markers (terrible strategy — they all look alike).
 
 When their lamp died in the cold room ([room-f/](../room-f/)), they dropped everything and ran. They almost made it to the vendor in [room-j/](../room-j/). Almost.
@@ -59,6 +61,7 @@ Maybe about knowing the way out. The jerk.
 ## 📂 Contents
 
 - [ROOM.yml](./ROOM.yml) — Room definition
+- [skeleton.yml](./skeleton.yml) — 💀 The fallen adventurer
 
 ---
 
