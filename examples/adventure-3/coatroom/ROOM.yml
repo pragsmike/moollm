@@ -25,6 +25,11 @@ room:
       "COMBINE COSTUMES! MIX AND MATCH!"
       "ADD ACCESSORIES! THE ONLY LIMIT IS YOUR IMAGINATION!"
       "YOUR WAISTCOAT WILL WAIT FOR YOU HERE."
+      
+    And in smaller, more mysterious letters:
+    
+      "THE MIRROR SEES MORE THAN YOUR CLOTHES.
+       IT SEES YOUR SOUL. AND SOULS CAN BE TAILORED TOO."
     
     The exit WEST leads back to the Chamber of Commencement, from which
     you can go NORTH to the maze, or WEST to the kitchen (for food!).
@@ -81,4 +86,53 @@ room:
         effect: "Return to default Bumblewick appearance"
         
       - command: "LOOK IN MIRROR"
-        effect: "See your current appearance in detail"
+        effect: "See your current appearance AND personality in detail"
+
+  # MIND MIRROR SYSTEM (integrated with costume system)
+  # Based on Timothy Leary's 1985 software
+  mind_mirror_system:
+    description: |
+      The mirror doesn't just show your clothes — it shows your SOUL.
+      Mind Mirror lets you view, edit, and try on personalities as
+      easily as costumes. Natural language interface. No sliders.
+      Just TALK to the mirror.
+      
+    commands:
+      - command: "MIND-MIRROR"
+        effect: "See your full psychological profile"
+        
+      - command: "EDIT-MIND [natural language request]"
+        effect: "Adjust personality dimensions"
+        examples:
+          - "Make me more confident"
+          - "I want to be calmer under pressure"
+          - "Boost creativity, reduce caution"
+          
+      - command: "GENERATE-MIND FOR [description]"
+        effect: "LLM generates a complete profile"
+        examples:
+          - "GENERATE-MIND FOR a confident space pirate"
+          - "GENERATE-MIND FOR someone like Sherlock Holmes"
+          - "GENERATE-MIND FOR my ideal self"
+          
+      - command: "WEAR-MIND"
+        effect: "Adopt the generated/edited personality"
+        
+      - command: "RANDOM-MIND"
+        effect: "Generate a completely random personality"
+        
+      - command: "COMPARE-MINDS [a] WITH [b]"
+        effect: "Side-by-side personality comparison"
+        
+      - command: "SAVE-MIND"
+        effect: "Save current personality as a card"
+        
+      - command: "RESTORE-MIND"
+        effect: "Return to original personality"
+        
+    vocabulary_modes:
+      PLAIN-TALK: "Everyday words (Peppy, Sweet, Happy)"
+      SHRINK-RAP: "Clinical terms (Hyper-Manic, Congenial, Euphoric)"
+      toggle: "Say VOCABULARY-MODE to switch"
+      
+    inspiration: "Timothy Leary's Mind Mirror (1985) + The Sims Create-a-Sim"

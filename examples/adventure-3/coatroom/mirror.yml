@@ -1,9 +1,11 @@
-# The Mirror
-# Shows your current transformation
+# The Mind Mirror
+# A psychological dressing room in an ornate frame
+# See your soul. Change your soul. Try on souls for size.
 
 object:
-  name: Full-Length Mirror of Truth (and Fashion)
+  name: Full-Length Mind Mirror of Truth (and Fashion)
   type: fixture
+  portable: false
   
   description: |
     An ornate full-length mirror in a gilded frame carved with masks
@@ -12,35 +14,300 @@ object:
     
     A small plaque reads: "Mirror, mirror, on the stand / show the
     hero, costume planned."
-  
-  examine: |
-    You peer into the mirror...
     
-    [The mirror shows your current character description, updated
-    to reflect whatever costume you're wearing. If you're still
-    in your default waistcoat, it shows Bumblewick in all his
-    reluctant-hero glory.]
+    Below it, in smaller letters: "Look deeper. See yourself.
+    Change yourself. Or try on someone else."
+    
+    This is both a costume mirror AND a Mind Mirror — it reflects
+    your appearance AND your personality profile.
   
-  # The mirror reflects the current costume state
+  # COSTUME REFLECTION (original functionality)
   reflects: player.costume_description
   
-  advertisements:
-    - action: LOOK
-      score_if: "always"
-      description: "See your current appearance"
+  # MIND MIRROR PROFILE
+  mind_mirror_profile: player.mind_mirror
+  
+  inspiration:
+    timothy_leary: |
+      "Remember the title — it's a mirror. Now a best friend is your
+      mirror because your mirror doesn't say 'well you bad boy get a
+      haircut' or the mirror doesn't say 'hey turkey fix your tie' —
+      you have to decide that."
       
+    the_sims: |
+      The Create-a-Sim personality editor. Slide bars to adjust traits.
+      But here, you just TALK to the mirror.
+      
+    what_leary_wanted: |
+      "It's basically a technique you take your own stereotypes of self
+      and see it on the screen and then you can massage that thought,
+      you can change it. How would I like to be? How was I when I was
+      a child? How would I be if I was a woman?"
+
+  advertisements:
+  
+    # COSTUME ACTIONS (preserved)
+    - action: LOOK
+      score: 80
+      description: "See your current appearance and personality"
+      result: |
+        You gaze into the mirror...
+        
+        [Shows: Current costume description + Mind Mirror profile summary.
+        The costume is your outer self. The profile is your inner self.
+        Both can be changed.]
+        
     - action: POSE
+      score: 60
       score_if: "wearing_costume"
-      description: "Strike a dramatic pose in your new outfit"
-      todo: "Call image generation tool to capture the costume and pose"
-      response: |
+      description: "Strike a dramatic pose"
+      result: |
         You pose heroically. The mirror captures it perfectly.
         Somewhere, a camera flash goes off. There is no camera.
         
     - action: MAKE-FACE
-      score_if: "always"
-      description: "Make a face at your reflection, express your emotions"
-      todo: "Call image generation tool to capture the face"
-      response: |
+      score: 50
+      description: "Make a face at your reflection"
+      result: |
         You make a face. Your reflection makes the same face.
         For a moment, you're not sure who started it.
+
+    # MIND MIRROR ACTIONS (new!)
+    - action: MIND-MIRROR
+      score: 90
+      description: "See your psychological profile in detail"
+      result: |
+        The mirror's surface ripples like water, then clears to reveal
+        not your costume but your MIND — four circular diagrams appear,
+        floating in the glass:
+        
+        **BIO-ENERGY** (Life force, vitality, temperament)
+        [Shows player's bio_energy dimensions with ratings]
+        
+        **EMOTIONAL INSIGHT** (Interpersonal style)
+        [Shows player's emotional dimensions with ratings]
+        
+        **MENTAL ABILITIES** (Knowledge, creativity)
+        [Shows player's mental dimensions with ratings]
+        
+        **SOCIAL INTERACTION** (Class, sophistication)
+        [Shows player's social dimensions with ratings]
+        
+        A voice whispers: "This is how you ARE. Say what you want to BE."
+        
+    - action: EDIT-MIND
+      score: 85
+      description: "Adjust your personality with natural language"
+      examples:
+        - "Make me more confident"
+        - "I want to be calmer under pressure"
+        - "Boost my creativity, reduce my caution"
+        - "Make me friendlier but keep my pride"
+        - "I want the personality of a pirate captain"
+      result: |
+        The mirror listens to your words...
+        
+        [LLM interprets the request and adjusts Mind Mirror dimensions.
+        Shows before/after comparison. Changes are reflected in how
+        you interact with the world and how NPCs perceive you.]
+        
+        "So it shall be. Look again."
+        
+    - action: GENERATE-MIND
+      score: 80
+      description: "Generate a personality profile from description"
+      syntax: "GENERATE-MIND FOR [name or description]"
+      examples:
+        - "GENERATE-MIND FOR a confident space pirate"
+        - "GENERATE-MIND FOR a shy librarian with hidden depths"
+        - "GENERATE-MIND FOR someone like Sherlock Holmes"
+        - "GENERATE-MIND FOR my ideal self"
+        - "GENERATE-MIND FOR who I was as a child"
+      result: |
+        The mirror swirls with possibility...
+        
+        [LLM generates a complete Mind Mirror profile based on:
+        - Its knowledge of real people (K-lines, traditions)
+        - Fictional character archetypes
+        - Your description
+        - Pure creative generation]
+        
+        The profile appears. "Try it on? WEAR-MIND to become this."
+        
+    - action: WEAR-MIND
+      score: 75
+      description: "Adopt a generated or modified personality"
+      result: |
+        You step INTO the mirror — or does it step into you?
+        
+        [The Mind Mirror profile becomes your active profile.
+        Your old profile is stored in the notebook for safekeeping.
+        Like a costume, but for your soul.]
+        
+        You feel... different. The same, but different.
+        
+    - action: RANDOM-MIND
+      score: 70
+      description: "Generate a completely random personality"
+      result: |
+        The mirror spins, dimensions tumbling like dice...
+        
+        [Generates random ratings 0-7 for all 32 dimensions.
+        Some combinations are surprisingly coherent.
+        Some are beautifully contradictory.
+        All are playable.]
+        
+        "The universe has rolled your soul. Interesting."
+        
+    - action: COMPARE-MINDS
+      score: 65
+      description: "Compare two personality profiles side by side"
+      syntax: "COMPARE-MINDS [profile1] WITH [profile2]"
+      examples:
+        - "COMPARE-MINDS my current self WITH my ideal self"
+        - "COMPARE-MINDS me WITH the bartender"
+        - "COMPARE-MINDS my costume personality WITH my real personality"
+      result: |
+        Two profiles appear side by side in the mirror...
+        
+        [Shows dimensional differences, highlights largest gaps,
+        identifies complementary and conflicting traits.]
+        
+        "One could become the other. Or meet in the middle."
+        
+    - action: VOCABULARY-MODE
+      score: 50
+      description: "Toggle between Plain Talk and Shrink-Rap"
+      modes:
+        PLAIN-TALK: "Peppy, Laid-Back, Happy, Sad, Sweet, Grumpy..."
+        SHRINK-RAP: "Hyper-Manic, Low-Energy, Euphoric, Melancholic, Congenial, Hostile..."
+      result: |
+        The words on the mirror shift...
+        
+        [Toggles vocabulary mode. Some prefer accessible language.
+        Some prefer clinical precision. Leary gave us both.]
+        
+    - action: SELF-PORTRAIT
+      score: 60
+      description: "Compare your current self with your ideal self"
+      result: |
+        The mirror splits in two — left shows WHO YOU ARE,
+        right shows WHO YOU WANT TO BE.
+        
+        [Classic Mind Mirror exercise. Large gaps indicate
+        areas of growth. Or acceptance. Your choice.]
+        
+        "The distance between these is your journey."
+        
+    - action: ROLE-PLAY-ODYSSEY
+      score: 55
+      description: "Test a personality in a life scenario"
+      result: |
+        The mirror shows a scene from life — 3,200 scenarios
+        await, from birth to transcendence.
+        
+        [Leary's original software had life simulations.
+        How would THIS personality handle THIS situation?
+        Test empathy. Test compatibility. Test limits.]
+        
+    - action: SAVE-MIND
+      score: 45
+      description: "Save current personality as a card in notebook"
+      result: |
+        The mirror shimmers, and a card emerges from its surface...
+        
+        [Creates a personality card with the current Mind Mirror
+        profile. Can be stored in notebook, traded, given to NPCs,
+        or worn again later. Costumes for the soul.]
+        
+    - action: RESTORE-MIND
+      score: 40
+      description: "Restore original personality"
+      result: |
+        The mirror clears, showing your TRUE self — the one you
+        started with, before all the costumes and modifications.
+        
+        [Restores original Mind Mirror profile. The costumes
+        were fun, but sometimes you need to come home.]
+        
+        "Welcome back."
+
+  # HOW THE LLM GENERATES PROFILES
+  generation_guide: |
+    When generating Mind Mirror profiles, the LLM:
+    
+    1. FOR REAL PEOPLE (via K-lines):
+       - Draws on documented personality traits
+       - Uses published interviews, biographies
+       - Activates TRADITION, not persona
+       - Example: "Einstein" → high innovative, well-informed, 
+         impractical, unconventional
+         
+    2. FOR FICTIONAL CHARACTERS:
+       - Analyzes their canonical behavior
+       - Maps actions to dimensions
+       - Example: "Sherlock Holmes" → high well-informed, 
+         innovative, proud, irritable, uninhibited
+         
+    3. FOR DESCRIPTIONS:
+       - Interprets adjectives into dimensions
+       - "Confident" → high confident (duh)
+       - "Shy but secretly ambitious" → high timid + high restless
+       
+    4. FOR RANDOM:
+       - Truly random 0-7 for each dimension
+       - Often produces interesting emergent personalities
+       
+    5. FOR "MY IDEAL SELF":
+       - Starts from current profile
+       - Asks what you'd change
+       - Iteratively refines
+       
+    The goal: SIMPLE NATURAL LANGUAGE → STRUCTURED PROFILE
+    
+    "Make me braver" → confident +2, timid -2, cautious -1
+    
+    No sliders. No forms. Just talk to the mirror.
+
+  # EFFECTS ON GAMEPLAY
+  gameplay_effects: |
+    Mind Mirror profiles affect:
+    
+    1. DIALOGUE STYLE
+       - High confident → never apologizes unnecessarily
+       - High creative → unusual metaphors
+       - High irritable → snappy responses
+       
+    2. NPC REACTIONS
+       - NPCs respond to your interpersonal style
+       - Dominating player → submissive NPC responses
+       - Friendly player → friendly NPC responses
+       
+    3. DECISION TENDENCIES
+       - High cautious → asks for more information
+       - High impulsive → acts first
+       - High practical → seeks efficient solutions
+       
+    4. STRESS RESPONSES
+       - Under threat, personality shows its edges
+       - Calm stays calm. Restless gets more restless.
+       
+    5. ADVERTISEMENTS SCORING
+       - Actions that match personality score higher
+       - High creative → exploration actions score up
+       - High sensible → safe actions score up
+
+  lineage:
+    - "Timothy Leary's Mind Mirror (1985)"
+    - "The Sims Create-a-Sim personality sliders"
+    - "Snow White's magic mirror"
+    - "The Mirror of Erised (what you desire)"
+    - "Black Mirror (what you fear)"
+    - "Dorian Gray's portrait (what you become)"
+    
+  leary_wisdom: |
+    "How would I like to be? How was I when I was a child?
+    How would I be if I was a woman? You get the picture —
+    suddenly you're freed from this heavy concept of self."
+    
+    The mirror doesn't judge. YOU decide what to change.

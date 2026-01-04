@@ -598,12 +598,33 @@ MIND-MIRROR:
     SHRINK-RAP: "Professional terms (Hyper-Manic, Low-Energy)"
     toggle: "SPACE BAR flips between vocabularies"
     
-  leary_quote: |
-    "It's basically a technique you take your own stereotypes of self 
-    and see it on the screen and then you can massage that thought, 
-    you can change it. How would I like to be? How was I when I was 
-    a child? You get the picture - suddenly you're freed from this 
-    heavy concept of self."
+  leary_quotes:
+    on_digitalizing: |
+      "Hello, I'm Timothy Leary... It allows you to digitalize your thoughts."
+    on_mirror_metaphor: |
+      "Remember the title — it's a mirror. Now a best friend is your mirror 
+      because your mirror doesn't say 'well you bad boy get a haircut' — you 
+      have to decide that. It's your own mind."
+    on_intimacy: |
+      "The ultimate intimacy is where you show them your personal database — 
+      you show your Mind Mirror."
+    on_generation: |
+      "You're the first generation in human history to know how to control 
+      your own nervous system, change your own reality. Blow your own mind, 
+      make up your own mind."
+    on_massage: |
+      "It's basically a technique you take your own stereotypes of self 
+      and see it on the screen and then you can massage that thought, 
+      you can change it. How would I like to be? How was I when I was 
+      a child? You get the picture - suddenly you're freed from this 
+      heavy concept of self."
+      
+  pc_is_lsd: |
+    "I turned on that Apple computer, and it was like taking psychedelics 
+    all over again. The screen lit up, I could control what appeared, 
+    I could create realities. I realized this was the tool we'd been 
+    looking for — a consciousness-expanding technology that was legal, 
+    accessible, and infinitely programmable."
     
   integration:
     - "Character DNA for NPCs"
@@ -612,7 +633,13 @@ MIND-MIRROR:
     - "Self-reflection exercises"
     - "Coatroom costume effects"
     
-  ethics: "See skills/mind-mirror/ETHICS.md"
+  theme_song: |
+    You can be anyone this time around
+    You can be anything this time around
+    It encourages me to change, to improve, to grow
+    You can be anything this time around
+    
+  ethics: "See skills/representation-ethics/ — activate traditions, don't impersonate"
 
 THOUGHT-PLANE:
   meaning: "One of the four circular personality dimension systems."
@@ -646,6 +673,39 @@ SHRINK-RAP:
   location: skills/mind-mirror/
   invoke_when: "Describing personality technically"
   examples: ["Hyper-Manic", "Low-Energy", "Hostile", "Congenial", "Disorganized", "Small-Townish"]
+
+INTERPERSONAL-CIRCUMPLEX:
+  meaning: "Leary's geometric model mapping personality on Power/Affiliation axes."
+  location: skills/mind-mirror/
+  invoke_when: "Understanding the theoretical foundation of Mind Mirror"
+  axes:
+    vertical: "POWER — Dominance ↔ Submission"
+    horizontal: "AFFILIATION — Love ↔ Hostility"
+  insight: |
+    Every interpersonal behavior has a location on this circle.
+    Behaviors evoke complementary responses (dominant → submissive).
+
+PC-IS-LSD:
+  meaning: "Personal computers as consciousness-expanding tools."
+  location: skills/mind-mirror/
+  invoke_when: "Discussing the transformative potential of interactive computing"
+  leary_quote: |
+    "I turned on that Apple computer, and it was like taking psychedelics 
+    all over again. The screen lit up, I could control what appeared, 
+    I could create realities, store them, share them."
+  evolution:
+    1960s: "Turn on, tune in, drop out (chemistry)"
+    1980s: "Turn on, boot up, jack in (computers)"
+    now: "MOOLLM (LLM microworlds)"
+
+LEARY-ESCAPE-PROTOCOL:
+  meaning: "Understanding systems to transcend their constraints."
+  location: skills/mind-mirror/
+  invoke_when: "Gaming a system by understanding how it measures you"
+  story: |
+    Leary escaped prison by answering his own personality test strategically.
+    Appeared low-risk. Got minimum security. Climbed over the fence.
+  lesson: "The only prison is the one you cannot see."
 
 HONEST-FORGET:
   meaning: "Summarize before forgetting. Never fabricate."
