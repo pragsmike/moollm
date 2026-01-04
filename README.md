@@ -725,20 +725,20 @@ The end state: an LLM that navigates its own memory, follows explicit protocols,
 
 | Adventure | Status | What You'll Find |
 |-----------|--------|------------------|
-| **[adventure-1/](./examples/adventure-1/)** | ✅ Template Created | 🏗️ **The bootstrap.** World created through chat. 10 maze rooms, kitchen, coatroom, treasury. The README documents the chat that built it — watch a world emerge from prompts. |
-| **[adventure-2/](./examples/adventure-2/)** | ✅ Fully Played | 🏆 **The legend.** Bumblewick became Captain Ashford. Slew a grue with blue cheese. Made 8 promises, kept them all. PhD-level postmodern deconstruction paper. 100+ photos. Letters to Mother. The README IS the complete transcript. |
-| **[adventure-3/](./examples/adventure-3/)** | 🎮 **READY TO PLAY** | ⭐ **Your turn.** Fresh hero, restocked fridge, respawned grue. World enriched by previous adventurers. New mechanics: pub, curses, parties, dynamic world generation. **Start here!** |
+| <nobr>**[adventure‑1/](./examples/adventure-1/)**</nobr> | ✅ Template Created | 🏗️ **The bootstrap.** World created through chat. 10 maze rooms, kitchen, coatroom, treasury. The README documents the chat that built it — watch a world emerge from prompts. |
+| <nobr>**[adventure‑2/](./examples/adventure-2/)**</nobr> | ✅ Fully Played | 🏆 **The legend.** Bumblewick became Captain Ashford. Slew a grue with blue cheese. Made 8 promises, kept them all. PhD-level postmodern deconstruction paper. 100+ photos. Letters to Mother. The README IS the complete transcript. |
+| <nobr>**[adventure‑3/](./examples/adventure-3/)**</nobr> | 🎮 **READY TO PLAY** | ⭐ **Your turn.** Fresh hero, restocked fridge, respawned grue. World enriched by previous adventurers. New mechanics: pub, curses, parties, dynamic world generation. **Start here!** |
 
 **The Lineage:**
 ```
-adventure-1: Template → Created world, defined mechanics, bootstrap documentation
+adventure‑1: Template → Created world, defined mechanics, bootstrap documentation
      ↓ (forked)
-adventure-2: Played → Full transcript, emergent mechanics, legendary moments  
+adventure‑2: Played → Full transcript, emergent mechanics, legendary moments  
      ↓ (forked + reset)
-adventure-3: Ready → Fresh start, world improvements preserved, new systems added
+adventure‑3: Ready → Fresh start, world improvements preserved, new systems added
 ```
 
-> **Play it:** Open [adventure-3/](./examples/adventure-3/), read the README, then `GET LAMP` and begin your story!
+> **Play it:** Open [adventure‑3/](./examples/adventure-3/), read the README, then `GET LAMP` and begin your story!
 
 ### ⭐ The Good Stuff
 
@@ -781,7 +781,7 @@ adventure-3: Ready → Fresh start, world improvements preserved, new systems ad
 | **[skills/adventure/](./skills/adventure/)** | 🗺️ Structured exploration. Goals, discoveries, choices. |
 | **[examples/](./examples/)** | 🎮 Three adventures: template (1), legendary playthrough (2), ready to play (3). |
 
-> **TL;DR:** Read [skills/constructionism/](./skills/constructionism/) for philosophy, [skills/room/](./skills/room/) for the fun stuff, then **play** [examples/adventure-3/](./examples/adventure-3/) — or read [adventure-2/](./examples/adventure-2/) to see a complete legendary playthrough!
+> **TL;DR:** Read [skills/constructionism/](./skills/constructionism/) for philosophy, [skills/room/](./skills/room/) for the fun stuff, then **play** [adventure‑3/](./examples/adventure-3/) — or read [adventure‑2/](./examples/adventure-2/) to see a complete legendary playthrough!
 
 ---
 
