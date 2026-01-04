@@ -11,6 +11,7 @@ The **Chamber of Commencement** — where YOUR legend begins.
 | Object | File | Status |
 |--------|------|--------|
 | **Brass Lamp** | [lamp.yml](./lamp.yml) | 🔥 Ready to light! (100 oil) |
+| **Grand Mailbox** | [mailbox.yml](./mailbox.yml) | 📬 FLAG UP — You have mail! |
 
 ---
 
@@ -44,9 +45,37 @@ Fresh carvings tell of those who came before:
 ## First Steps
 
 1. **GET LAMP** — It's right here. Don't forget it.
-2. **Go WEST** to the kitchen — Mother left supplies for you!
-3. **READ NOTE** — This shapes your whole adventure
-4. **REPLY** — Your promises become YOUR GOALS
+2. **CHECK MAIL** — Zorkian tradition! See what's waiting.
+3. **Go WEST** to the kitchen — Mother left supplies for you!
+4. **READ NOTE** — This shapes your whole adventure
+5. **REPLY** — Your promises become YOUR GOALS
+
+## 📬 The Mailbox
+
+A proper Zorkian mailbox! Just like "West of House" but underground.
+
+**What arrives here:**
+- 💌 Replies from Mother
+- 📦 ACME package deliveries
+- 📜 NPC correspondence
+- 💀 Chain letters (REAL! With consequences!)
+- 🎫 Prize packages from mail-in offers
+- 📰 Advertisements, bills, plot hooks
+
+**The "One Lousy Point" Stamp Collection:**
+
+Mail matchbooks (found in kitchen drawer) to receive legendary
+collector's stamps honoring the founders of interactive fiction!
+
+| Stamp | Founder | How to Get |
+|-------|---------|------------|
+| Donald Woods | Adventure co-creator | Mail Spelunker Today matchbook |
+| Will Crowther | Adventure creator | Mail Lamp Oil Premium card |
+| Scott Adams | Home computer pioneer | Mail Adventurer's Guild matchbook |
+| Dave Lebling | Inventor of the grue | Mail Grue Insurance form |
+| Marc Blank | Zork co-creator | Mail Mystery Matchbook |
+
+*Each stamp is worth ONE LOUSY POINT. But the history is priceless.*
 
 ---
 

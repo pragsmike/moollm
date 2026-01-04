@@ -44,6 +44,10 @@ room:
     A brass lamp sits on a natural stone shelf, freshly refilled and waiting.
     You should probably GET that before going anywhere. Just a friendly suggestion.
     
+    Near the entrance, a GRAND MAILBOX stands — improbably permanent, 
+    improbably wooden, with a brass flag that's currently UP. You have mail.
+    (This is a Zorkian tradition. CHECK MAIL!)
+    
     Four exits beckon:
     
     NORTH: A rough archway leading into ABSOLUTE darkness. The kind where
@@ -66,6 +70,7 @@ room:
   
   objects:
     - lamp.yml      # GET LAMP!
+    - mailbox.yml   # CHECK MAIL! (Zorkian tradition)
   
   # Ways out
   exits:

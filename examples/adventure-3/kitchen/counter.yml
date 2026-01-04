@@ -167,6 +167,22 @@ object:
           uses: ["bind", "launch", "grip", "slingshot"]
           description: "Assorted sizes. Surprisingly useful."
           
+        - item: "Matchbook Collection"
+          type: mail_in_offers
+          file: matchbooks.yml
+          description: |
+            A stack of matchbooks with mail-in offers! MAIL THEM
+            to receive stamps, brochures, and prizes — including
+            the legendary "One Lousy Point" collector's stamps
+            honoring the founders of interactive fiction!
+          hint: "MAIL these to the START ROOM MAILBOX for rewards!"
+          includes:
+            - "Spelunker Today (Donald Woods stamp)"
+            - "Adventurer's Guild (Scott Adams stamp)"
+            - "Lamp Oil Premium (Will Crowther stamp)"
+            - "Grue Insurance (Dave Lebling stamp)"
+            - "Mystery Matchbook (Marc Blank stamp)"
+          
     # ─────────────────────────────────────────────────────────────────
     # ⚙️ RIGHT DRAWER: PARTS
     # ─────────────────────────────────────────────────────────────────
