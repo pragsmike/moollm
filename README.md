@@ -483,31 +483,31 @@ This repository IS a memory palace. Each directory is a room, and should have a 
 | 🗺️ [adventure/](./skills/adventure/) | Text adventures as CLI architecture |
 | 🚪 [room/](./skills/room/) | Directories as cognitive spaces |
 | 🎴 [card/](./skills/card/) | Capabilities as instantiable cards |
-| 🎮 [play-learn-lift/](./skills/play-learn-lift/) | The methodology: explore → understand → extract |
-| 🧩 [skill/](./skills/skill/) | The meta-skill: how skills work, evolve, compose |
-| 🏷️ [protocol/](./skills/protocol/) | Protocol names ARE K-lines — greppable symbolic activators |
-| 💬 [soul-chat/](./skills/soul-chat/) | Everything speaks — objects, rooms, concepts |
+| 🎮 <nobr>[play‑learn‑lift/](./skills/play-learn-lift/)</nobr> | The methodology: explore → understand → extract |
+| 🧩 [skill/](./skills/skill/) | The meta‑skill: how skills work, evolve, compose |
+| 🏷️ [protocol/](./skills/protocol/) | Protocol names ARE K‑lines — greppable symbolic activators |
+| 💬 <nobr>[soul‑chat/](./skills/soul-chat/)</nobr> | Everything speaks — objects, rooms, concepts |
 | 🤝 [postel/](./skills/postel/) | Be liberal in what you accept |
-| 🎷 [yaml-jazz/](./skills/yaml-jazz/) | Comments carry meaning, data is interpreted |
-| 🧠 [coherence-engine/](./skills/coherence-engine/) | LLM as referee, orchestrator, simulator, DM |
-| ⚡ [speed-of-light/](./skills/speed-of-light/) | Many agents, one LLM call |
-| 👥 [multi-presence/](./skills/multi-presence/) | Same card active in many rooms |
-| 🦸 [hero-story/](./skills/hero-story/) | Safe K-lines to real people's wisdom |
-| 📢 [advertisement/](./skills/advertisement/) | Objects advertise affordances (Sims-style) |
-| 📋 [action-queue/](./skills/action-queue/) | Agent task queues with priorities |
-| ↩️ [return-stack/](./skills/return-stack/) | Navigation as continuation passing |
-| 🔄 [self-repair/](./skills/self-repair/) | Never crash, always repair |
-| 💪 [robust-first/](./skills/robust-first/) | Survivability over fragile correctness |
-| 📊 [data-flow/](./skills/data-flow/) | Rooms as pipeline nodes, thrown objects as messages |
-| 👯 [sister-script/](./skills/sister-script/) | Documents birth automation scripts |
-| 🏰 [memory-palace/](./skills/memory-palace/) | Filesystem as mnemonic architecture |
-| 📋 [plan-then-execute/](./skills/plan-then-execute/) | Frozen plans with human approval |
-| 🔬 [research-notebook/](./skills/research-notebook/) | Structured exploration and discovery |
+| 🎷 <nobr>[yaml‑jazz/](./skills/yaml-jazz/)</nobr> | Comments carry meaning, data is interpreted |
+| 🧠 <nobr>[coherence‑engine/](./skills/coherence-engine/)</nobr> | LLM as referee, orchestrator, simulator, DM |
+| ⚡ <nobr>[speed‑of‑light/](./skills/speed-of-light/)</nobr> | Many agents, one LLM call |
+| 👥 <nobr>[multi‑presence/](./skills/multi-presence/)</nobr> | Same card active in many rooms |
+| 🦸 <nobr>[hero‑story/](./skills/hero-story/)</nobr> | Safe K‑lines to real people's wisdom |
+| 📢 [advertisement/](./skills/advertisement/) | Objects advertise affordances (Sims‑style) |
+| 📋 <nobr>[action‑queue/](./skills/action-queue/)</nobr> | Agent task queues with priorities |
+| ↩️ <nobr>[return‑stack/](./skills/return-stack/)</nobr> | Navigation as continuation passing |
+| 🔄 <nobr>[self‑repair/](./skills/self-repair/)</nobr> | Never crash, always repair |
+| 💪 <nobr>[robust‑first/](./skills/robust-first/)</nobr> | Survivability over fragile correctness |
+| 📊 <nobr>[data‑flow/](./skills/data-flow/)</nobr> | Rooms as pipeline nodes, thrown objects as messages |
+| 👯 <nobr>[sister‑script/](./skills/sister-script/)</nobr> | Documents birth automation scripts |
+| 🏰 <nobr>[memory‑palace/](./skills/memory-palace/)</nobr> | Filesystem as mnemonic architecture |
+| 📋 <nobr>[plan‑then‑execute/](./skills/plan-then-execute/)</nobr> | Frozen plans with human approval |
+| 🔬 <nobr>[research‑notebook/](./skills/research-notebook/)</nobr> | Structured exploration and discovery |
 | 🐛 [debugging/](./skills/debugging/) | Systematic problem diagnosis |
-| 📝 [session-log/](./skills/session-log/) | Append-only audit trail |
+| 📝 <nobr>[session‑log/](./skills/session-log/)</nobr> | Append‑only audit trail |
 | 🧹 [summarize/](./skills/summarize/) | Compress context, preserve meaning |
-| 🤫 [honest-forget/](./skills/honest-forget/) | Intentional information pruning |
-| 👀 [code-review/](./skills/code-review/) | Structured code analysis and feedback |
+| 🤫 <nobr>[honest‑forget/](./skills/honest-forget/)</nobr> | Intentional information pruning |
+| 👀 <nobr>[code‑review/](./skills/code-review/)</nobr> | Structured code analysis and feedback |
 | 📝 [planning/](./skills/planning/) | Goal decomposition and task sequencing |
 | 📓 [scratchpad/](./skills/scratchpad/) | Temporary working memory for complex tasks |
 
@@ -751,9 +751,9 @@ graph TD
 |--------|------------------|
 | **[skills/room/](./skills/room/)** | 🏠 **The star of the show.** Rooms, objects, vehicles, Logo turtle, throwing objects through exits, pie menus, snap cursor, data flow pipelines, nested containers, object paths, tags, inventories. This is where MOOLLM comes alive. |
 | **[skills/card/](./skills/card/)** | 🃏 Characters, tools, and functions as instantiable cards. Activation records. Multi-presence. |
-| **[skills/hero-story/](./skills/hero-story/)** | 🦸 Safely invoke real people's traditions and skills. K-lines, not cosplay. Familiars as fictional embodiments. |
-| **[skills/data-flow/](./skills/data-flow/)** | 🔀 Rooms as pipeline nodes. THROW objects through exits. Kilroy-style data flow in the filesystem. |
-| **[skills/play-learn-lift/](./skills/play-learn-lift/)** | 🎮 The three-stage methodology. Play → Learn → Lift. Patron saints. How skills evolve. |
+| <nobr>**[skills/hero‑story/](./skills/hero-story/)**</nobr> | 🦸 Safely invoke real people's traditions and skills. K‑lines, not cosplay. Familiars as fictional embodiments. |
+| <nobr>**[skills/data‑flow/](./skills/data-flow/)**</nobr> | 🔀 Rooms as pipeline nodes. THROW objects through exits. Kilroy‑style data flow in the filesystem. |
+| <nobr>**[skills/play‑learn‑lift/](./skills/play-learn-lift/)**</nobr> | 🎮 The three‑stage methodology. Play → Learn → Lift. Patron saints. How skills evolve. |
 | **[skills/skill/](./skills/skill/)** | 🧩 The meta-skill. How skills work, evolve, compose. Central + local skills. Anthropic Skills parallels. |
 
 ### 🧠 Core Concepts
@@ -763,11 +763,11 @@ graph TD
 | **[skills/constructionism/](./skills/constructionism/)** | 🏗️ **The philosophy.** Learn by building inspectable things. Papert, Kay, Logo, Micropolis. Low floor, high ceiling, wide walls. If you can build it, you can understand it. |
 | **[skills/skill/](./skills/skill/)** | 🧩 **The meta-skill.** How skills work, evolve, compose. Central vs. local. Programming by Demonstration. Parallels Anthropic Skills. |
 | **[skills/protocol/](./skills/protocol/)** | 🏷️ **Protocol names ARE K-lines.** Minsky's symbolic activators made greppable. Type the name → activate the tradition. |
-| **[skills/coherence-engine/](./skills/coherence-engine/)** | 🔮 The LLM as consistency maintainer. Cross-checks, orchestrates, transcribes. Speed-of-light simulation. |
-| **[skills/speed-of-light/](./skills/speed-of-light/)** | ⚡ Many turns in one LLM call. Instant communication. No round-trip noise. |
-| **[skills/yaml-jazz/](./skills/yaml-jazz/)** | 🎷 Semantic YAML where comments matter. The LLM as jazz musician interpreting sheet music. |
+| <nobr>**[skills/coherence‑engine/](./skills/coherence-engine/)**</nobr> | 🔮 The LLM as consistency maintainer. Cross‑checks, orchestrates, transcribes. Speed‑of‑light simulation. |
+| <nobr>**[skills/speed‑of‑light/](./skills/speed-of-light/)**</nobr> | ⚡ Many turns in one LLM call. Instant communication. No round‑trip noise. |
+| <nobr>**[skills/yaml‑jazz/](./skills/yaml-jazz/)**</nobr> | 🎷 Semantic YAML where comments matter. The LLM as jazz musician interpreting sheet music. |
 | **[skills/postel/](./skills/postel/)** | 🤝 The Robustness Principle. Be liberal in what you accept. Interpret charitably. |
-| **[skills/soul-chat/](./skills/soul-chat/)** | 💬 Characters talk to each other. Objects narrate themselves. Dialogues as Markdown. |
+| <nobr>**[skills/soul‑chat/](./skills/soul-chat/)**</nobr> | 💬 Characters talk to each other. Objects narrate themselves. Dialogues as Markdown. |
 
 ### 🔧 The Foundations
 
@@ -781,8 +781,8 @@ graph TD
 
 | README | What You'll Find |
 |--------|------------------|
-| **[skills/memory-palace/](./skills/memory-palace/)** | 🏛️ Spatial knowledge organization. Rooms as cognitive spaces. |
-| **[skills/sister-script/](./skills/sister-script/)** | 📝 Documents that grow into scripts. BUILD command. Automation. |
+| <nobr>**[skills/memory‑palace/](./skills/memory-palace/)**</nobr> | 🏛️ Spatial knowledge organization. Rooms as cognitive spaces. |
+| <nobr>**[skills/sister‑script/](./skills/sister-script/)**</nobr> | 📝 Documents that grow into scripts. BUILD command. Automation. |
 | **[skills/adventure/](./skills/adventure/)** | 🗺️ Structured exploration. Goals, discoveries, choices. |
 | **[examples/](./examples/)** | 🎮 Three adventures: template (1), legendary playthrough (2), ready to play (3). |
 
