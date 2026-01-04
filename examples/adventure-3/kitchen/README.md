@@ -98,9 +98,9 @@ See [counter.yml](./counter.yml) for full crafting system.
 
 ## 💰 Hidden Gold!
 
-**In the parts drawer:** 5 loose gold coins! (Father's "emergency fund")
+**In the parts drawer:** 25 loose gold coins! (Father's "emergency fund" — quite a fund!)
 
-Combined with your starting 10 gold = **15 gold total**
+Combined with your starting 10 gold = **35 gold total**
 
 | Enough For... | Cost |
 |---------------|------|

@@ -24,7 +24,7 @@ Open [examples/adventure‑3/](./examples/adventure-3/) — it's ready to go!
 
 ```
 > GET LAMP
-> GO NORTH
+> GO WEST
 > LOOK
 ```
 
@@ -42,11 +42,7 @@ See how an adventure unfolds. Learn the mechanics. Steal ideas.
 
 ### 3. Build Your Own World
 
-Clone adventure‑3 as a template:
-
-```bash
-cp -r examples/adventure-3 examples/my-adventure
-```
+or```
 
 Edit the YAML. Add rooms. Create objects. The schema is flexible — the LLM figures it out.
 

@@ -239,15 +239,15 @@ object:
           
         - item: "Loose Gold Coins"
           type: currency
-          quantity: 5
+          quantity: 25
           description: |
-            Five gold coins at the back of the drawer, dusty and 
+            Twenty-five gold coins at the back of the drawer, dusty and 
             forgotten. Father used to empty his pockets here after
-            adventures. "Emergency fund," he called it.
+            adventures. "Emergency fund," he called it. Quite a fund!
           note: |
-            Combined with starting 10 gold = 15 gold total.
-            Enough for: 5 lamp refills, OR some ACME items, OR 
-            strategic vending machine purchases.
+            Combined with starting 10 gold = 35 gold total.
+            Enough for: lamp refills, ACME catalog shopping, vending
+            machine purchases, pub drinks, and bribes!
             
         - item: "Old Ticket Stub"
           type: memento

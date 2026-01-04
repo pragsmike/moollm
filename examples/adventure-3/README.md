@@ -31,7 +31,7 @@ This adventure inherits the **enriched world** from adventure-2, where Bumblewic
 | 🧊 **Fridge** | Fully restocked | 20 food items |
 | 📓 **Notebook** | Empty | Your story awaits |
 | 🍱 **Lunchbox** | Empty | In the kitchen |
-| 💰 **Starting Gold** | 10 (+5 in drawer = 15) | Enough for lamp refills & ACME |
+| 💰 **Starting Gold** | 10 (+25 in drawer = 35) | Enough for lamp refills & ACME shopping! |
 | 🐉 **The Grue** | RESPAWNED | Grues always respawn |
 | 🗺️ **Maze Markers** | Cleared | Map it yourself! |
 
