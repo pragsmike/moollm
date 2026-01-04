@@ -155,7 +155,7 @@ POSTEL:
 PROCEDURAL-RHETORIC:
   meaning: "Rules and structures persuade. The simulation IS the argument."
   origin: "Ian Bogost — 'an unholy blend of Will Wright and Aristotle'"
-  location: skills/constructionism/
+  location: skills/procedural-rhetoric/
   invoke_when: "Designing schemas, rules, or constraints that embody values"
   
   key_insight: |
