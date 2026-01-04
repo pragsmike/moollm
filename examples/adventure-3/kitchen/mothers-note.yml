@@ -15,10 +15,8 @@ object:
     A folded piece of cream-colored stationery, sealed with a wax
     stamp bearing the Fantastipants family crest (a confused-looking
     badger holding a waffle iron). Smells of perfume and home cooking.
-    
-  # ═══════════════════════════════════════════════════════════════════════
+
   # THE LETTER
-  # ═══════════════════════════════════════════════════════════════════════
   
   contents: |
     Dearest Bumblewick,
@@ -59,10 +57,8 @@ object:
     you could write to them? The dungeon post delivers everywhere.
     
     P.P.S. - The dishes. I haven't forgotten. Neither should you.
-    
-  # ═══════════════════════════════════════════════════════════════════════
-  # THEMES — Seeds for the DM
-  # ═══════════════════════════════════════════════════════════════════════
+
+  # THEMES
   
   themes:
     identity: "Whatever name feels right in your heart"
@@ -71,181 +67,90 @@ object:
     connection: "Write back when you can"
     legacy: "A skeleton who never made it home"
     responsibility: "The dishes. I haven't forgotten."
-    
-  # ═══════════════════════════════════════════════════════════════════════
+
   # ACTIONS
-  # ═══════════════════════════════════════════════════════════════════════
   
   actions:
     READ:
       description: "Read (or re-read) Mother's note"
       effect: "Display letter contents. Feel feelings."
-      priority: HIGH
       
     REPLY:
       description: "⭐ Write a reply — CREATE YOUR STORY!"
-      priority: HIGH
       strongly_suggested: true
       
-      # ─────────────────────────────────────────────────────────────────
-      # Creative prompts — seeds, not requirements
-      # ─────────────────────────────────────────────────────────────────
-      
       prompts:
-        identity:
-          - "Who are you today? What name? What pronouns?"
-          - "What does the mirror show you?"
-          
-        promises:
-          - "What do you promise to bring back?"
-          - "What do you promise NOT to do?"
-          - "What scared promise will you make anyway?"
-          
-        questions:
-          - "What stories hasn't she told you?"
-          - "Who was grandmother, really?"
-          - "Do you have any siblings?"
-          
-        feelings:
-          - "Are you scared? Excited? Both?"
-          - "What do you wish Mother understood?"
-          
-        drama_seeds:
-          - "Confess something"
-          - "Make a promise that scares you"
-          - "Ask for something you're afraid to need"
-          - "Apologize for something small but important"
-          
-      # ─────────────────────────────────────────────────────────────────
-      # Example fragments — inspiration, not prescription
-      # ─────────────────────────────────────────────────────────────────
-      
+        identity: ["Who are you today?", "What does the mirror show?"]
+        promises: ["What do you promise?", "What scared promise anyway?"]
+        questions: ["What stories hasn't she told?", "Do you have siblings?"]
+        drama_seeds: ["Confess something", "Make a scary promise", "Apologize"]
+        
       examples:
-        openings:
-          - "Dear Mother, Today I am not Bumblewick. Today I am..."
-          - "MOM. YOU DIDN'T TELL ME ABOUT THE GRUE."
-          
-        promises:
-          - "I promise to find the treasure and bring it home."
-          - "I will NOT eat the food. (I'm lying.)"
-          - "I promise to do the dishes when I get back. FINE."
-          
-        closings:
-          - "With love, courage, and suspicious cheese, [NAME]"
-          - "PS: I found something. I'll tell you when I see you."
-          
-  # ═══════════════════════════════════════════════════════════════════════
-  # PROMISE EXTRACTION — How letters become goals
-  # ═══════════════════════════════════════════════════════════════════════
+        openings: ["Dear Mother, Today I am...", "MOM. THE GRUE."]
+        promises: ["I promise treasure.", "I won't eat food. (lying)"]
+        closings: ["With love and suspicious cheese, [NAME]"]
+
+  # PROMISE SYSTEM
   
   promise_system:
     extraction: |
-      DM reads letter and extracts promises:
-      - Explicit: "I promise to..." / "I will..." / "I swear..."
+      DM extracts promises from letter:
+      - Explicit: "I promise..." / "I will..."
       - Implicit: "I'm going to..." / "I want to..."
       - Negative: "I won't..." / "I refuse to..."
-      
-      Each becomes a tracked GOAL in Tom's quest log.
+      Each becomes a tracked GOAL.
       
     outcomes:
-      KEPT: "Mother's pride, score bonuses, emotional reward"
-      BROKEN: "CURSE-OF-BROKEN-WORD risk, Mother's disappointment"
+      KEPT: "Pride, bonuses, emotional reward"
+      BROKEN: "CURSE-OF-BROKEN-WORD, disappointment"
       EXCEEDED: "Extra rewards, epic stories"
-      FORGOTTEN: "Mother remembers. Mother always remembers."
-      
-    # For scoring mechanics: see ../MECHANICS.yml → scoring
-    
-  # ═══════════════════════════════════════════════════════════════════════
-  # SHAPING MOTHER — Your letter defines HER
-  # ═══════════════════════════════════════════════════════════════════════
+      FORGOTTEN: "Mother remembers. Always."
+
+  # SHAPING MOTHER
   
   shaping_mother:
     principle: |
       Your letter shapes MOTHER, not just your adventure.
       Things you write ABOUT her become TRUE.
       Questions you ask REVEAL her history.
-      Assumptions you make DEFINE her character.
-      
-      This is COLLABORATIVE WORLDBUILDING through correspondence!
+      COLLABORATIVE WORLDBUILDING through correspondence!
       
     backstory_seeds:
-      - "What happened in your first adventure?" → She HAD one
-      - "Did you know grandmother was a hero?" → She has FEELINGS
-      - "Were you and father adventurers together?" → A romance
-      - "Why didn't you tell me about the grue?" → She had REASONS
+      - "Your first adventure?" → She HAD one
+      - "Grandmother was a hero?" → She has FEELINGS
+      - "Why not tell me about grue?" → She had REASONS
       
     personality_seeds:
-      formal_letters: "Mother is dignified, traditional"
-      silly_letters: "Mother has a sense of humor"
-      vulnerable_letters: "Mother is warm, nurturing"
-      philosophical_letters: "Mother has unexpected depth"
+      formal: "dignified, traditional"
+      silly: "sense of humor"
+      vulnerable: "warm, nurturing"
+      philosophical: "unexpected depth"
       
     family_discovery: |
       Asking about family CREATES family:
-      
-      "Do I have siblings?" → Yes! Options:
-        - Lost in maze (rescue), Estranged (reconciliation)
-        - The skeleton (!), The grue (!!), Working at vendor
-        
-      "What happened to my pet?" → There WAS one. Options:
-        - Waiting loyally, Running postal service, Befriended grue
-        
-      "Tell me about grandmother" → Quest giver, skill source, plot twist
-      
-      # For party mechanics: see ../MECHANICS.yml → party
-      
-  # ═══════════════════════════════════════════════════════════════════════
-  # DUNGEON POSTAL SERVICE
-  # ═══════════════════════════════════════════════════════════════════════
+      "Do I have siblings?" → Yes! (lost, estranged, skeleton, grue)
+      "My pet?" → There WAS one. (waiting, postal service, befriended grue)
+
+  # POSTAL SERVICE
   
   postal_service:
-    how_it_works: |
-      Drop letters in any mailbox. Dungeon post delivers EVERYWHERE.
-      Grandmother negotiated eternal free postage.
-      
-    attachments:
-      - photos, cards, recipes
-      - skills (as documentation)
-      - gold, items
-      - "anything you can describe"
-      
+    how: "Drop in any mailbox. Grandmother negotiated free postage."
+    attachments: [photos, cards, recipes, skills, gold, items]
     special_deliveries:
-      care_package: "If low on supplies and wrote home"
+      care_package: "If low on supplies"
       urgent_reply: "If confessed something vulnerable"
       family_heirloom: "If asked about grandmother"
-      
-    # For full mailbox spec: see ../start/mailbox.yml
-    
-  # ═══════════════════════════════════════════════════════════════════════
-  # HOME VISITS — What happens when you go back
-  # ═══════════════════════════════════════════════════════════════════════
+
+  # HOME VISITS
   
   home_visits:
-    before_starting:
-      mother_says: "You're back already? Did you forget something?"
-      mechanics: "Can pick up forgotten items, get extra advice"
-      
-    mid_adventure:
-      mother_says: "You're doing so well! But why are you here?"
-      mechanics: "Rest, resupply, share progress, feel guilty"
-      
-    with_treasure:
-      mother_says: "Oh, my darling! You DID it! Come, let me see!"
-      mechanics: "Victory sequence, emotional payoff, pie"
-      
-    after_dying:
-      mother_says: "I felt something... Are you alright? What happened?"
-      mechanics: "Comfort, encouragement, don't tell her details"
-      
-  # ═══════════════════════════════════════════════════════════════════════
-  # LINEAGE & REFERENCES
-  # ═══════════════════════════════════════════════════════════════════════
+    before_starting: "You're back already? Did you forget something?"
+    mid_adventure: "You're doing so well! But why are you here?"
+    with_treasure: "Oh, my darling! You DID it! Come, let me see!"
+    after_dying: "I felt something... Are you alright?"
+
+  # REFERENCES
   
-  lineage: |
-    Mother's note is the emotional anchor of the adventure.
-    A tradition from countless RPGs and adventure games
-    where home, family, and love ground the hero's journey.
-    
   see_also:
     game_mechanics: "../MECHANICS.yml"
     mailbox: "../start/mailbox.yml"
