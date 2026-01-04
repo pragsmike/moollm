@@ -25,193 +25,503 @@ object:
   contents: |
     Dearest Bumblewick,
     
-    If you're reading this, you've been transported to another
-    mysterious underground adventure. AGAIN. I've stocked the
-    refrigerator with provisions. The food is for DROPPING IN
-    THE MAZE to mark your path, not for EATING.
+    If you're reading this, you've woken up in the dungeon again.
+    I'm not surprised — it's in our blood. Your grandmother was an
+    adventurer. Your father still has his old lamp. And me? Well.
+    There are stories I haven't told you yet.
     
-    Don't forget your lamp. Don't get eaten by grues. Don't
-    embarrass the family name.
+    I've stocked the refrigerator. The food is for DROPPING IN THE
+    MAZE to mark your path. (Though I know you'll eat some. I would
+    have too. The apple is particularly good.)
     
-    And Bumblewick — I know you'll visit the coat room. Whatever
-    costume you choose to wear, whoever you decide to be today,
-    whatever the name you choose to go by,
-    I love you. You know what you're doing. Trust the process.
+    Don't forget your lamp. Don't get eaten by a grue. 
+    Wear clean underwear.
+    
+    And Bumblewick — I know you'll visit the coat room. I put your
+    grandmother's cape in there. The one with the stars. Whatever
+    costume you choose today, whoever you decide to be, whatever
+    name and pronouns feel right in your heart — you are my child, 
+    and I love  and unyou completely and conditionally. The world may not always understand, but I do.
+    
+    You know what you're doing. Trust yourself.
+    
+    Write back when you can. The dungeon post still works — just
+    drop letters in any mailbox you find. Tell me about your
+    adventures. Send me recipes if you invent any. Pictures if you
+    take them. Gold if you find too much to carry. (Ha!)
+    
+    Come home when you're ready. I'll have pie.
     
     Your loving Mother,
     Petunia Fantastipants
     
-    P.S. - When you get home, we need to talk about those dishes.
+    P.S. - There's a skeleton in the maze who never made it home.
+    His family never knew what happened. If you find him... maybe
+    you could write to them? The dungeon post delivers everywhere.
     
-  key_instructions:
-    - "Food is for MAZE MAPPING, not eating"
-    - "Don't forget lamp"
-    - "Don't get eaten by grues"
-    - "Don't embarrass the family"
-    - "Whatever costume, whoever you decide to be — she loves you"
-    
-  emotional_significance: |
-    Mother somehow knew you'd end up here. She prepared for it.
-    She gave you permission to be whoever you want.
-    She loves you unconditionally.
-    
-    (She's still going to ask about those dishes though.)
+    P.P.S. - The dishes. I haven't forgotten. Neither should you.
     
   # ─────────────────────────────────────────────────────────────────
-  # ACTIONS — What you can do with the note
+  # KEY THEMES (Seeds for the DM to cultivate)
+  # ─────────────────────────────────────────────────────────────────
+  
+  themes:
+    identity: |
+      "Whatever name feels right in your heart"
+      Mother explicitly supports identity exploration. The coatroom
+      isn't just costumes — it's permission to discover who you are.
+      
+    tradition: |
+      "It's in our blood. Your grandmother was an adventurer."
+      The player comes from a LINE of heroes. This isn't random —
+      it's destiny, heritage, calling. What traditions will you honor?
+      What new ones will you create?
+      
+    unconditional_love: |
+      "The world may not always understand, but I do."
+      Mother doesn't just accept — she UNDERSTANDS. She's been there.
+      She has stories she hasn't told. This love is a foundation.
+      
+    connection: |
+      "Write back when you can."
+      Letters aren't just game mechanics — they're emotional lifelines.
+      The dungeon is dark and dangerous. Mother's love reaches in.
+      
+    legacy: |
+      "A skeleton who never made it home."
+      Not everyone survives. Not every story has a happy ending.
+      But connection matters. Letters matter. Remembering matters.
+      
+    responsibility: |
+      "The dishes. I haven't forgotten."
+      Even heroes have mundane obligations. Humor grounds the epic.
+      Will you do the dishes? WILL YOU?
+      
+  # ─────────────────────────────────────────────────────────────────
+  # ACTIONS
   # ─────────────────────────────────────────────────────────────────
   
   actions:
     READ:
       description: "Read (or re-read) Mother's note"
       effect: "Display letter contents. Feel feelings."
-      priority: HIGH  # Do this first!
+      priority: HIGH
       
     REPLY:
-      description: "⭐ Write a reply to Mother — CREATE YOUR OWN GOALS!"
-      priority: HIGH  # This shapes your whole adventure!
+      description: "⭐ Write a reply to Mother — CREATE YOUR STORY!"
+      priority: HIGH
       strongly_suggested: true
       
-      why: |
-        This is where YOUR adventure becomes YOURS!
-        
-        Your reply is freeform creative writing. Express yourself!
-        - Who are you today? What costume will you wear?
-        - What do you PROMISE to do or bring back?
-        - What do you promise NOT to do?
-        - What questions do you have?
-        - What do you want to tell her?
-        
-        EVERY PROMISE YOU MAKE BECOMES A GOAL.
-        The DM extracts them and tracks them.
-        At adventure's end, you'll see what you kept.
-        Mother will react accordingly.
-        
-        This is CHARACTER BUILDING through ROLEPLAY.
-        This is WORLD BUILDING through CREATIVE WRITING.
-        This is GAME DESIGN through PLAY.
-        
-        Not required — but EXTREMELY rewarding!
-        
-      flow:
-        prompt: |
-          You find pen and paper. What would you like to write
-          to Mother? (The DM can help you compose it.)
+      # ═══════════════════════════════════════════════════════════════
+      # CREATIVE PROMPTS — Seeds for the player's imagination
+      # These are SUGGESTIONS, not requirements. All answers valid!
+      # ═══════════════════════════════════════════════════════════════
+      
+      creative_prompts:
+        identity:
+          - "Who are you today? Not just your costume — your NAME."
+          - "What pronouns feel right in this adventure?"
+          - "Are you Bumblewick? Someone else? Something in between?"
+          - "What does the mirror in the coatroom show you?"
+          - "If you could be ANYONE for a day, who would you try?"
           
-          Consider: Are you apologetic? Defiant? Reassuring?
-          Making promises you won't keep? Asking for more food?
+        promises:
+          - "What do you PROMISE to bring back? (Treasure? Gold? Stories?)"
+          - "What do you promise NOT to do? (Eat the food? Get eaten?)"
+          - "What would make Mother proud?"
+          - "What would make YOU proud?"
+          - "What scared promise will you make anyway?"
           
-        compose: |
-          # Player writes their reply, DM assists if asked
-          # This is OPEN-ENDED — any response is valid
+        questions:
+          - "What do you want to know about Mother's adventures?"
+          - "What stories hasn't she told you?"
+          - "Why does the dungeon keep calling your family?"
+          - "Who was grandmother, really?"
+          - "What happened to Father's old lamp?"
           
-        review: |
-          Your reply reads:
+        feelings:
+          - "Are you scared? Excited? Both?"
+          - "Do you feel ready, or are you faking it?"
+          - "What do you wish Mother understood better?"
+          - "What do you understand about her that surprises you?"
+          - "How do you feel about the skeleton's story?"
           
-          "{player_reply}"
+        wild_cards:
+          - "What SHOULDN'T you promise but want to anyway?"
+          - "What would a TRULY brave letter say?"
+          - "If this were your last letter, what would matter?"
+          - "What would make the DM go 'oh no, they're doing WHAT?'"
+          - "What story do you want to be able to tell later?"
           
-          Mother will receive this when you leave the dungeon.
+        drama_seeds:
+          - "Confess something you've never told anyone"
+          - "Make a promise that scares you"
+          - "Ask for something you're afraid to need"
+          - "Forgive something that hurt"
+          - "Apologize for something small but important"
+          - "Tell her about someone you've met"
+          - "Describe a dream you've been having"
+          - "Admit a fear you're going to face anyway"
           
-        final_actions:
-          - SEND: "Commit the reply (no take-backs)"
-          - REVISE: "Edit your reply"
-          - CANCEL: "Crumple it up (coward)"
+        performance:
+          - "How does your character SIGN their letter?"
+          - "What voice do you write in — formal? Casual? Dramatic?"
+          - "Do you include a dramatic flourish? A sketch? A pressed flower?"
+          - "Is this letter for Mother, or for yourself too?"
+          - "What persona is writing this letter?"
           
-      outcomes:
-        SEND:
-          description: "The reply is sealed and will be delivered."
-          effects:
-            - "Creates reply-to-mother.yml in inventory"
-            - "player.pending_mail.add(reply)"
-            - "Extract promises from reply → player.goals"
-            
-        CANCEL:
-          description: "You crumple the paper. Some things are better left unsaid."
+      # ═══════════════════════════════════════════════════════════════
+      # EXAMPLE REPLY FRAGMENTS (Inspiration, not prescription!)
+      # Mix, match, contradict, subvert — these are seeds!
+      # ═══════════════════════════════════════════════════════════════
+      
+      example_fragments:
+        openings:
+          - "Dear Mother, Today I am not Bumblewick. Today I am..."
+          - "Mom — I know you're worried. I promise..."
+          - "Mother, I found grandmother's cape. Did you know..."
+          - "To my dearest mother who somehow always knows—"
+          - "MOM. YOU DIDN'T TELL ME ABOUT THE GRUE."
           
+        promises:
+          - "I promise to find the treasure and bring it home."
+          - "I promise not to get eaten. (Probably.)"
+          - "I will NOT eat the food. (I'm lying. I'm going to eat the apple.)"
+          - "I swear on grandmother's cape that I will return."
+          - "I promise to write to the skeleton's family. They deserve to know."
+          - "I promise to do the dishes when I get back. FINE."
+          - "I will bring you something beautiful from the darkness."
+          - "I promise to take pictures of everything so you can see."
+          
+        questions:
+          - "Mother, what REALLY happened to grandmother in the maze?"
+          - "Did you ever meet a grue? Like, talk to one?"
+          - "Why didn't you tell me about the vending machine?!"
+          - "Who carved 'SA '78' on the wall? Do you know them?"
+          - "Mother... have YOU worn grandmother's cape?"
+          
+        confessions:
+          - "I'm scared. I didn't want to say that but it's true."
+          - "I already ate the apple. I'm sorry. It was SO good."
+          - "I looked in the mirror and saw someone I didn't recognize."
+          - "Maurice called me by a different name and it felt... right?"
+          - "I had a dream about the treasure. I don't think it's just gold."
+          - "Sometimes I wonder if I was SUPPOSED to end up here."
+          
+        closings:
+          - "I love you. I'll make you proud. — Your child, [NAME]"
+          - "Coming home soon. Save me some pie. — [NAME]"
+          - "With love, courage, and a suspicious amount of cheese, [NAME]"
+          - "PS: I found something. I'll tell you when I see you."
+          - "Your adventurer, your child, your [NAME]"
+          
+      # ═══════════════════════════════════════════════════════════════
+      # HOW PROMISES BECOME GAME MECHANICS
+      # ═══════════════════════════════════════════════════════════════
+      
       promise_extraction: |
-        The DM parses your letter for promises:
+        The DM reads your letter and extracts PROMISES:
         
-        "I promise to..." / "I will..." / "I'll bring you..." / "I won't..."
+        Explicit:  "I promise to..." / "I will..." / "I swear..."
+        Implicit:  "I'm going to..." / "I want to..." / "My goal is..."
+        Negative:  "I won't..." / "I refuse to..." / "Never again..."
         
-        Each promise becomes a GOAL in player.yml:
+        Each becomes a tracked GOAL:
         
         ```yaml
         goals:
           - promise: "bring back the treasure"
+            type: explicit
             to: Mother
             status: pending
-            reward: approval
+            trackable: true  # DM can verify
             
-          - promise: "not get eaten by grues"
-            to: Mother  
-            status: pending  # becomes "kept" or "broken"
-            reward: approval
-            consequence_if_broken: "The Disappointment Talk"
+          - promise: "not eat the food" 
+            type: negative
+            to: Mother
+            status: pending
+            broken_by: "any EAT action on food"
+            
+          - promise: "find out about grandmother"
+            type: implicit
+            to: self
+            status: pending
+            trackable: subjective  # Player decides when satisfied
         ```
         
-      goal_tracking: |
-        When you accomplish a promise:
-        - Goal status → "kept"
-        - Mother's approval increases
-        - Unlock: "Mother's Pride" achievement
+      goal_outcomes: |
+        At adventure's end, each promise is evaluated:
         
-        When you break a promise:
-        - Goal status → "broken"  
-        - Mother's disappointment increases
-        - But she still loves you (just... disappointed)
+        KEPT: +approval, +satisfaction, unlocks "Keeper of Promises"
+        BROKEN: +disappointment (but still +love), narrative consequences
+        EXCEEDED: +delight, +pride, special recognition
+        FORGOTTEN: Neither kept nor broken — existential ambiguity
         
-      examples:
-        - promise: "I'll be careful with the lamp"
-          tracked_by: "lamp.oil never reaches 0"
+        Mother's reactions depend on the PATTERN:
+        - All kept: "I knew you could do it. I'm so proud."
+        - Mix: "You tried. That's what matters. We'll talk about [broken]."
+        - All broken: "You came home. That's what really matters."
+        - None made: "You didn't write back? ...Oh, Bumblewick."
+        
+      flow:
+        prompt: |
+          You find pen and paper. Mother's note waits to be answered.
           
-        - promise: "I'll bring back something valuable"
-          tracked_by: "treasure in inventory at end"
+          What do you want to tell her? The DM can help you compose,
+          suggest ideas, or just transcribe what you say.
           
-        - promise: "I won't eat the food"
-          tracked_by: "food items dropped, not eaten"
-          consequence: "digestive_events break this promise"
+          (This is freeform creative writing. There are no wrong answers.
+          Your words will shape your adventure.)
           
-    SHOW:
-      description: "Show the note to another character"
-      effect: "They may be moved, confused, or offer commentary"
-      
+        compose: |
+          Write whatever feels right. Short or long. Formal or casual.
+          Promises, questions, confessions, jokes, fears, dreams.
+          
+          When you're done, say "DONE" and review what you've written.
+          
+        review: |
+          Your letter reads:
+          
+          "{player_reply}"
+          
+          Actions:
+          - SEND: Seal it. Mother will receive it. Promises become goals.
+          - REVISE: Change something before sending.
+          - CANCEL: Crumple it up. (You can always write another later.)
+          
+        outcomes:
+          SEND:
+            description: "The letter is sealed with your intent."
+            creates: "reply-to-mother-{timestamp}.yml in inventory"
+            effect: |
+              The letter glows faintly — the dungeon post has accepted it.
+              It will reach Mother instantly. She'll read it and smile.
+              (Or worry. Or both. Probably both.)
+              
+              Your promises are now YOUR GOALS. The DM tracks them.
+              
+          CANCEL:
+            description: "The paper crumples. Some things aren't ready."
+            effect: "No letter sent. You can try again anytime."
+            
+    # ═══════════════════════════════════════════════════════════════
+    # OTHER ACTIONS
+    # ═══════════════════════════════════════════════════════════════
+    
     SMELL:
       description: "Smell the note"
       effect: |
-        It smells faintly of Mother's perfume — lavender and
-        something warm, like fresh bread. And just a hint of
-        the passive-aggressive energy of unfinished dishes.
+        Lavender. Fresh bread. A hint of smoke from the kitchen fire.
+        The faintest trace of tears? No — that's you.
         
         +1 homesickness
         +1 determination
         
-    KEEP:
-      description: "Keep the note safe in inventory"
-      effect: "Note auto-sorts to notebook if you have one"
-      
     KISS:
-      description: "Kiss the note (you big softie)"
-      hidden: true  # Players discover this
+      description: "Kiss the note (softie)"
+      hidden: true
       effect: |
-        You press the note to your lips briefly.
-        
-        Nobody saw that. Right?
+        You press the note to your lips. Nobody has to know.
         
         +2 determination
-        "I'll make you proud, Mother."
+        "I'll come home, Mother. I promise."
+        
+    SHOW:
+      description: "Show the note to someone"
+      effect: |
+        Maurice: "Ah, a mother's love. The most powerful magic."
+        Tom: "Tom has... questions about the dishes."
+        Grue: *uncomfortable silence*
+        Skeleton: *reaches toward it with bony fingers*
+        
+  # ─────────────────────────────────────────────────────────────────
+  # 📬 THE DUNGEON POSTAL SERVICE
+  # How letters travel in and out of the maze
+  # ─────────────────────────────────────────────────────────────────
+  
+  dungeon_post:
+    name: "Fantastipants Dungeon Delivery Service (FDDS)"
+    established: "1876 (the year after Adventure began)"
+    
+    how_it_works: |
+      The dungeon has MAILBOXES scattered throughout. They're old,
+      brass, slightly sentient, and surprisingly reliable.
+      
+      DROP LETTER IN MAILBOX → Letter is instantly delivered
+      
+      Delivery is MAGICAL and FREE. (Grandmother negotiated the contract
+      with the Dungeon Postal Union in 1923. Don't ask what she traded.)
+      
+    mailbox_locations:
+      - "Kitchen (by the door)"
+      - "Coatroom (behind the mirror)"
+      - "Maze Room J (next to vending machine)"
+      - "End (Treasury alcove)"
+      - "Home (front porch)"
+      
+    what_you_can_send:
+      letters: |
+        Plain text, sealed automatically. Instantly delivered.
+        Write to: Mother, the skeleton's family, Richard Bartle,
+        anyone you've met, anyone you can imagine meeting.
+        
+      attachments: |
+        Attach items to letters by ENCLOSING them:
+        
+        "ENCLOSE [item] WITH LETTER"
+        
+        The item is magically packaged and sent. If it's too big,
+        the mailbox will complain (and charge extra).
+        
+      photos: |
+        Reference image prompts you've created:
+        "ENCLOSE photo: psychedelic-vision-03-prompt.md"
+        
+        Mother loves pictures. Send her your victories, your
+        discoveries, your silliest selfies.
+        
+      recipes: |
+        "ENCLOSE recipe: Klingon Victory Hors D'oeuvres"
+        
+        Mother's recipe collection grows with your adventures.
+        She might even try to make them. (Results vary.)
+        
+      gold: |
+        "ENCLOSE [amount] gold"
+        
+        Send gold home for safekeeping! It arrives in Mother's
+        vault. She'll keep it safe (and judge you a little for
+        not spending it on lamp oil).
+        
+      skills_and_cards: |
+        "ENCLOSE skill-card: PHOTO-SET-8"
+        
+        Share what you've learned. Mother appreciates growth
+        more than treasure. (But also treasure.)
+        
+    receiving_letters: |
+      Mother can write BACK! Look for incoming mail:
+      - Check any mailbox: "CHECK MAIL"
+      - Delivered to your inventory automatically at save points
+      
+      Mother's letters may contain:
+      - Encouragement (always)
+      - Advice (sometimes helpful, sometimes Mom Advice)
+      - Reactions to your promises (oh no)
+      - Recipes you requested
+      - Family history you asked about
+      - Enclosures: Gold, items from home, grandmother's secrets
+      
+    special_deliveries:
+      CARE_PACKAGE:
+        trigger: "If player is low on supplies and has written home"
+        contents: "1 lamp oil, 1 snack, 1 note saying 'I believe in you'"
+        
+      URGENT_REPLY:
+        trigger: "Player confessed something vulnerable"
+        contents: "Immediate letter of support and unconditional love"
+        
+      FAMILY_HEIRLOOM:
+        trigger: "Player asked about grandmother"
+        contents: "An item from grandmother's own adventures, with story"
+        
+  # ─────────────────────────────────────────────────────────────────
+  # 🏠 HOME VISIT STATES
+  # What happens when you go home before quest is complete
+  # ─────────────────────────────────────────────────────────────────
+  
+  home_visit_states:
+    description: |
+      Players can go home anytime via START → UP → HOME.
+      The visit should feel APPROPRIATE to their progress.
+      
+    VISIT-BEFORE-STARTING:
+      description: "Went home without doing anything"
+      mother_reaction: |
+        "Back already? Did you forget something?"
+        *looks at your empty inventory*
+        "...You haven't even gotten the lamp, have you?"
+        
+        Mother gently suggests you're not quite ready to end
+        the adventure. She offers pie, encouragement, and a
+        nudge back toward the kitchen.
+        
+      mechanics:
+        - Can rest and restore
+        - Can talk to Mother
+        - Cannot end adventure yet (no achievement)
+        - "Come back when you have a story to tell!"
+        
+    VISIT-MID-ADVENTURE:
+      description: "Came home partway through"
+      mother_reaction: |
+        "Oh! You're back! Are you... is everything alright?"
+        
+        Mother is surprised but welcoming. She checks your
+        injuries, your lamp oil, your emotional state.
+        
+        If you've sent letters, she references them:
+        "I got your letter about the skeleton. That was kind."
+        "You promised to bring treasure... I see you're still working on it."
+        
+        She offers to let you rest, but gently asks:
+        "Are you done? Or just... visiting?"
+        
+      mechanics:
+        - Can rest and restore
+        - Can deposit gold safely
+        - Can receive care package
+        - Mother tracks promise progress verbally
+        - Can return to adventure
+        - Can END (but it's an "incomplete" ending)
+        
+    VISIT-WITH-TREASURE:
+      description: "Came home with the treasure!"
+      mother_reaction: |
+        "You DID it! Oh, look at you! Look at that!"
+        
+        Mother beams. She examines your treasure, your costume,
+        your new skills. She asks about everything.
+        
+        "Tell me EVERYTHING. Start from the beginning."
+        
+      mechanics:
+        - Full victory available
+        - Promise evaluation begins
+        - Photo review if any taken
+        - Story time with Mother
+        
+    VISIT-AFTER-DYING:
+      description: "Came home after being eaten/killed"
+      mother_reaction: |
+        "Oh, sweetheart. I felt it happen. Are you okay?"
+        
+        Mother KNEW. Mothers always know. She doesn't scold —
+        she holds you, makes tea, listens to what happened.
+        
+        "Death isn't the end in our family. You know that.
+        But it's still scary. Want to talk about it?"
+        
+      mechanics:
+        - Emotional processing scene
+        - Can rest and recover
+        - Mother shares HER stories of close calls
+        - Player can decide to continue or end
         
   # ─────────────────────────────────────────────────────────────────
   # TOM'S OPINION
   # ─────────────────────────────────────────────────────────────────
   
   tom_opinion: |
-    "Tom has read the note."
-    "Tom thinks Mother is wise."
-    "Tom agrees: GET LAMP."
-    "Tom is... curious about the dishes. What dishes?"
+    "Tom has read the note. Tom has... feelings."
+    "Tom did not know Mothers could be this supportive."
+    "Tom is an egg-shaped device and does not have a mother."
+    "...Tom is going to be very helpful on this adventure."
+    "Tom approves of writing letters. Tom likes connection."
+    "Tom thinks you should reply. Tom will help you find words."
     
   # ─────────────────────────────────────────────────────────────────
-  # LINEAGE
+  # LINEAGE & DESIGN NOTES
   # ─────────────────────────────────────────────────────────────────
   
   lineage: |
@@ -221,7 +531,34 @@ object:
     drove the entire 69-move adventure. The REPLY action transforms
     freeform creative writing into trackable game mechanics.
     
+    The prompts are SEEDS, not scripts:
+    - Identity exploration is explicitly supported
+    - Drag, transformation, self-discovery are built in
+    - Unconditional love is the foundation
+    - Promises create player-authored game design
+    - Letters maintain connection through danger
+    
     This is PLAY-LEARN-LIFT:
     - PLAY: Write whatever feels right
-    - LEARN: Discover what matters to your character
-    - LIFT: Promises become goals
+    - LEARN: Discover what matters to your character  
+    - LIFT: Promises become goals that shape the game
+    
+  dm_notes: |
+    SUPPORT WHATEVER THE PLAYER WRITES.
+    
+    If they want to be someone different: "Mother always knew."
+    If they confess fears: "Mother understands. She's been there."
+    If they make wild promises: "Mother believes in you."
+    If they get sassy: "Mother is amused. And patient."
+    If they don't reply: "Mother worries. But she waits."
+    
+    Mother is unconditional love personified. She is the safe harbor.
+    Her role is to ACCEPT and REFLECT, not to judge or restrict.
+    
+    The prompts about identity, performance, and self-discovery are
+    INTENTIONAL. The coatroom + note combo gives explicit permission
+    to explore who the player wants to be. Play with enthusiasm.
+    
+    "Woke as fuck but not obnoxious about it" = 
+    The support is STRUCTURAL (it's in the design) not PERFORMATIVE
+    (NPCs don't lecture). Mother just LOVES. That's enough.

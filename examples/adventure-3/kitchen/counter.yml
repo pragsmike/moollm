@@ -221,6 +221,27 @@ object:
           hint: "COMBINE with Tom for interesting results..."
           tom_interest: HIGH
           
+        - item: "Loose Gold Coins"
+          type: currency
+          quantity: 5
+          description: |
+            Five gold coins at the back of the drawer, dusty and 
+            forgotten. Father used to empty his pockets here after
+            adventures. "Emergency fund," he called it.
+          note: |
+            Combined with starting 10 gold = 15 gold total.
+            Enough for: 5 lamp refills, OR some ACME items, OR 
+            strategic vending machine purchases.
+            
+        - item: "Old Ticket Stub"
+          type: memento
+          description: |
+            A ticket to "MADAME ZARA'S AMAZING PREDICTIONS" dated 1987.
+            Mother kept this. On the back, in Father's handwriting:
+            "She was right about everything. Especially us."
+          sentimental_value: HIGH
+          effect_if_shown_to_mother: "A story about how your parents met"
+          
     # Drawer actions
     actions:
       OPEN-DRAWER:

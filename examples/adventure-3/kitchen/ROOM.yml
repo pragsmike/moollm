@@ -24,6 +24,10 @@ room:
     A long granite COUNTER runs along one wall, shimmering slightly.
     It's a CRAFTING TABLE — for combining, transforming, and creating things.
     
+    By the door, a brass MAILBOX is mounted on the wall. The Fantastipants
+    Dungeon Delivery Service has been running since 1876. Write to anyone,
+    anywhere — Mother, the skeleton's family, even historical adventurers.
+    
     In the corner, a TRASH CAN lurks. It's deeper than it looks.
     
     The exit EAST leads back to the Chamber of Commencement, from which
@@ -37,6 +41,7 @@ room:
     - sink.yml
     - table.yml
     - counter.yml
+    - mailbox.yml
     - trashcan.yml
   
   exits:

@@ -1,124 +1,182 @@
 # The Kitchen
 
-> *"The food is for DROPPING IN THE MAZE, not for EATING."*
+> *"Write back when you can. The dungeon post still works."*
 > — Petunia Fantastipants
 
-An exact replica of the Fantastipants family kitchen from Wobblebrook-upon-Squiggle, mysteriously recreated underground. How thoughtful! And slightly creepy!
+An exact replica of the Fantastipants family kitchen from Wobblebrook-upon-Squiggle, mysteriously recreated underground. Your emotional anchor. Your supply depot. Your connection to home.
 
 ---
 
-## Why a Kitchen?
+## 🌟 START HERE
 
-**The classic maze-mapping technique:**
+**Your first move should be:**
 
-1. Take food from the fridge
-2. Enter the maze
-3. DROP a unique item in each room
-4. When you return to a room: "I see a Wheel of Cheese here!"
-5. You know you've been here before!
+1. **GET LAMP** (from start room)
+2. **Come to the kitchen**
+3. **READ NOTE** on the table
+4. **⭐ WRITE A REPLY TO MOTHER ⭐**
 
-**20 foods ÷ 10 maze rooms = 2 markers per room (if needed)**
-
----
-
-## The Fridge (20 Items!)
-
-| # | Item | Drop in Room... |
-|---|------|-----------------|
-| 1 | Suspiciously Perfect Apple | A (puddle) |
-| 2 | Wheel of Aged Cheese | B (echo) |
-| 3 | Loaf of Crusty Bread | C (scratches) |
-| 4 | Jar of Pickled Herring | D (golden glow) |
-| 5 | Leftover Shepherd's Pie | E (cobwebs) |
-| 6 | Bunch of Purple Grapes | F (cold spot) |
-| 7 | Pot of Mysterious Stew | G (carved face) |
-| 8 | Wedge of Blue Cheese | H (mushrooms) |
-| 9 | Cold Roast Chicken | I (skeleton) |
-| 10 | Jar of Strawberry Jam | J (crossroads) |
-| 11-20 | (Extras for backup!) | As needed |
+The reply is where your adventure becomes YOURS. Your promises become your goals. Your questions seed the story. Your voice shapes the world.
 
 ---
 
-## Other Objects
+## 📜 Mother's Note
 
-| Object | Purpose |
-|--------|---------|
-| **Stove** | Decorative. Adventures come first. |
-| **Sink** | Contains eternal dishes. Don't wash them. |
-| **Table** | Has a note from Mother with instructions. |
+Not just instructions — an emotional foundation.
 
----
+| Key Themes | What They Mean |
+|------------|----------------|
+| **Identity** | "Whatever costume you choose, whoever you decide to be..." |
+| **Tradition** | "Your grandmother was an adventurer..." |
+| **Love** | "The world may not always understand, but I do." |
+| **Connection** | "Write back when you can." |
+| **Legacy** | "A skeleton who never made it home..." |
 
-## Mother's Note
+**⭐ REPLY to Mother!** This is freeform creative writing that creates game mechanics:
+- Who are you today? What's your name?
+- What do you PROMISE to do or bring back?
+- What questions do you want answered?
+- What do you want her to know?
 
-> "Dearest Bumblewick,
->
-> If you're reading this, you've been transported to another
-> mysterious underground adventure. AGAIN.
->
-> The food is for DROPPING IN THE MAZE to mark your path,
-> **NOT FOR EATING.**
->
-> You know what happens when you eat. Your "constitution."
-> I'm not cleaning it up this time.
->
-> Don't forget your lamp. Don't get eaten by grues.
->
-> Your loving Mother"
+See [mothers-note.yml](./mothers-note.yml) for creative prompts and the full REPLY system.
 
 ---
 
-## ⚠️ EATING THE FOOD — A Creative Strategy!
+## 📬 The Dungeon Mailbox
 
-**Mother warned you. But consider this:**
+The **Fantastipants Dungeon Delivery Service (FDDS)** has been running since 1876.
 
-If you EAT any food item, something *hilarious* happens. The food traverses your legendary Fantastipants digestive system and emerges... **transformed**. 
+| Feature | How It Works |
+|---------|--------------|
+| **Send Letters** | DROP in mailbox → instant delivery anywhere |
+| **Send Attachments** | ENCLOSE gold, photos, recipes, items, skills |
+| **Receive Mail** | CHECK MAIL for replies, care packages, heirlooms |
+| **Recipients** | Mother, skeleton's family, historical adventurers, anyone! |
 
-Actually, this is a GREAT maze-marking technique! Each food:
-- 🎭 Has a unique journey (the DM describes it dramatically)
-- ✨ Transforms into something memorable
-- 🧠 Can add properties to Bumblewick
-- 📍 Becomes an even BETTER maze marker (no two are alike!)
+**This is your emotional lifeline!** Stay connected through the darkness.
 
-### Examples of What Happens:
+See [mailbox.yml](./mailbox.yml) for full postal system details.
 
-| Food | Transforms Into | Adds to Player |
-|------|-----------------|----------------|
-| Apple | Puddle of Applesauce | `fairytale_immunity: 5` |
-| Herring | VERY Pickled Herring | `herring_aura: true`, `smell_radius: 3` |
-| Mysterious Stew | Sentient Stew (alive!) | `stew_creator: true`, `mysterious_glow` |
-| Birthday Cake | Singing Cake Slice | `birthday: "today"`, `cake_whispers` |
-| Salami | Mystical Salami | `old_country_dreams`, `accent: foreign` |
-| Olives | Hollow Olives | `pimento_quota: 20` (they're inside you now) |
+---
 
-By the end of the maze, Bumblewick might have: herring aura, sardine followers, mysterious internal glow, and dreams of The Old Country. 
+## 🍎 The Fridge (20 Items!)
 
-**This is character development!**
+**For maze-mapping:** Take food → DROP in rooms → "I see a Wheel of Cheese here!"
 
-### Context Matters!
+**OR:** EAT food → dramatic digestive journey → transformed marker + player properties!
 
-Effects vary by **costume**, **room**, **objects present**, and **history**:
+| # | Item | Eat It For... |
+|---|------|---------------|
+| 1 | Suspiciously Perfect Apple | Oracle visions |
+| 2 | Wheel of Aged Cheese | Philosophical contemplation |
+| 3 | Loaf of Crusty Bread | Eternal warmth |
+| 8 | Wedge of Blue Cheese | **WEAPONIZABLE** (Gorgonzola Glaive!) |
+| 12 | Suspicious Casserole | Sentient mycelial companion |
+| 19 | Single Hard-Boiled Egg | Sulfurous navigation beacon |
 
-| Context | Example Effect |
-|---------|----------------|
-| 🧛 Vampire costume | Apple becomes Blood Apple |
-| 🏴‍☠️ Pirate costume | All liquids become rum |
-| 🔦 In dark maze room | "The SOUNDS are concerning" |
-| 🦴 Skeleton nearby | Existential commentary from skeleton |
-| 🐟 Already have herring aura | All subsequent food smells |
-| 👻 Ghost costume | Food phases through floor or exists to room below or nearby |
-| 🤡 Clown costume | Everything becomes confetti |
+See [fridge.yml](./fridge.yml) for all 20 items and transformation rules.
 
-### State is PERSISTENT!
+---
 
-When you eat, the DM updates YAML files:
-- `player.yml` — gains new properties
-- `ROOM.yml` — gains transformed food
-- New files created — sentient stew needs a file!
+## 🔧 The Crafting Counter
 
-The world **evolves** as you eat!
+A Minecraft-style crafting table with DECOMPOSITION powers.
 
-See [fridge.yml](./fridge.yml) for all transformations, contextual modifiers, and persistence rules.
+| Action | What It Does |
+|--------|--------------|
+| **COMBINE** | ingredients → new item |
+| **TRANSFORM** | item → different form |
+| **DECOMPOSE** | item → components (to philosophical levels!) |
+| **EDIT** | modify item properties |
+| **PROGRAM** | add behaviors to items |
+
+**Recipe cards** are auto-generated when you successfully craft anything!
+
+See [counter.yml](./counter.yml) for full crafting system.
+
+---
+
+## 💰 Hidden Gold!
+
+**In the parts drawer:** 5 loose gold coins! (Father's "emergency fund")
+
+Combined with your starting 10 gold = **15 gold total**
+
+| Enough For... | Cost |
+|---------------|------|
+| 5 lamp refills (vendor) | 5 gold |
+| 2 deluxe refills | 4 gold |
+| Premium Glow Juice | 3 gold |
+| Some ACME items | varies |
+
+---
+
+## 📦 The ACME Catalog
+
+Mail-order items from ACME Corporation.
+
+| Feature | Warning |
+|---------|---------|
+| Order anything | Malfunction rate: ~32% |
+| Delivered in 2-4 turns | Results may be ironic |
+| Cartoon physics apply | Mother has opinions |
+
+**Mother can order for you!** Deposit gold at home, she places orders.
+
+See [acme-catalog.yml](./acme-catalog.yml) for 67 products and their hilarious failure modes.
+
+---
+
+## 📋 Recipe Holder
+
+Family recipes including the **legendary Klingon Victory Hors D'oeuvres**.
+
+| Recipe Type | Difficulty | Example |
+|-------------|------------|---------|
+| Basic | Easy | Sandwich, Trail Mix |
+| Intermediate | Medium | Soup, Preserved Rations |
+| Advanced | Hard | Grue Repellent Paste |
+| Legendary | Quest | Klingon Victory Hors D'oeuvres (requires grue combat) |
+
+See [recipe-holder.yml](./recipe-holder.yml) for all recipes.
+
+---
+
+## 🗑️ The Trash Can
+
+**Don't climb in unless you're prepared.**
+
+> *"I have a bad feeling about this."*
+
+If you do... your hair will be fabulous when you return.
+
+See [trashcan.yml](./trashcan.yml) for the full garbage dimension experience.
+
+---
+
+## 📍 What's On The Table
+
+| Item | File | Action |
+|------|------|--------|
+| 📜 Mother's Note | [mothers-note.yml](./mothers-note.yml) | READ, REPLY |
+| 🧭 TomTomagotchi | [tomtomagotchi.yml](./tomtomagotchi.yml) | GET, PET, ASK |
+| 📓 Notebook | [notebook.yml](./notebook.yml) | GET (auto-sorts items!) |
+| 🍱 Lunchbox | [lunchbox.yml](./lunchbox.yml) | GET (carries food!) |
+
+**Take all four!** They're essential adventure companions.
+
+---
+
+## 🧭 TomTomagotchi
+
+Your navigation pet! Part GPS, part friend, part oracle.
+
+- COMPASS — Point toward any target
+- MAP — Show explored rooms
+- SNIFF — Analyze smell gradients
+- WHERE — Announce current location
+
+**Tom grows with your adventure.** Explore rooms, drop markers, make discoveries — Tom learns and becomes more helpful (and opinionated).
 
 ---
 
@@ -126,7 +184,32 @@ See [fridge.yml](./fridge.yml) for all transformations, contextual modifiers, an
 
 | Direction | Destination |
 |-----------|-------------|
-| 🚪 East | [start/](../start/) — Back to Chamber of Commencement |
-| 🎭 (via start) | [coatroom/](../coatroom/) — Costumes! |
-| 🌀 (via start) | [maze/](../maze/) — The grue-infested maze |
-| ⬆️ Up | [adventure-1/](../) |
+| 🚪 East | [start/](../start/) — Chamber of Commencement |
+| 🎭 (via start) | [coatroom/](../coatroom/) — Be anyone! |
+| 🌀 (via start) | [maze/](../maze/) — The dark maze |
+| 🏠 (via start UP) | [home/](../home/) — Mother waits |
+| ⬆️ Up | [adventure-3/](../) |
+
+---
+
+## Objects Index
+
+| Object | File | Key Actions |
+|--------|------|-------------|
+| Fridge | [fridge.yml](./fridge.yml) | GET food, EAT food |
+| Table | [table.yml](./table.yml) | EXAMINE, SIT, GET items |
+| Counter | [counter.yml](./counter.yml) | COMBINE, TRANSFORM, DECOMPOSE |
+| Mailbox | [mailbox.yml](./mailbox.yml) | SEND, ENCLOSE, CHECK MAIL |
+| Recipe Holder | [recipe-holder.yml](./recipe-holder.yml) | BROWSE, FOLLOW, ADD |
+| ACME Catalog | [acme-catalog.yml](./acme-catalog.yml) | BROWSE, ORDER |
+| Stove | [stove.yml](./stove.yml) | COOK (with recipes) |
+| Sink | [sink.yml](./sink.yml) | The eternal dishes |
+| Trash Can | [trashcan.yml](./trashcan.yml) | THROW, CLIMB-IN (!!!) |
+| TomTomagotchi | [tomtomagotchi.yml](./tomtomagotchi.yml) | GET, COMPASS, MAP, PET |
+| Notebook | [notebook.yml](./notebook.yml) | GET, READ, ADD |
+| Lunchbox | [lunchbox.yml](./lunchbox.yml) | GET, PUT-IN, EAT |
+| Mother's Note | [mothers-note.yml](./mothers-note.yml) | READ, REPLY (!!) |
+
+---
+
+*The kitchen exists so you have food to drop in the maze. But it's also where you connect with Mother, write your story, and gather your courage. Linger here. Write that letter. Then go be a hero.*

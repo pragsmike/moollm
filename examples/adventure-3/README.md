@@ -30,7 +30,7 @@ This adventure inherits the **enriched world** from adventure-2, where Bumblewic
 | 🧊 **Fridge** | Fully restocked | 20 food items |
 | 📓 **Notebook** | Empty | Your story awaits |
 | 🍱 **Lunchbox** | Empty | In the kitchen |
-| 💰 **Starting Gold** | 10 | Enough for lamp refills |
+| 💰 **Starting Gold** | 10 (+5 in drawer = 15) | Enough for lamp refills & ACME |
 | 🐉 **The Grue** | RESPAWNED | Grues always respawn |
 | 🗺️ **Maze Markers** | Cleared | Map it yourself! |
 
@@ -144,10 +144,11 @@ goals:
 1. **GET LAMP** — In the start room. Don't enter the maze without it.
 
 2. **Visit the Kitchen** — Everything you need is on the table:
-   - 📜 **Mother's Note** — Important instructions and love
+   - 📜 **Mother's Note** — MOST IMPORTANT! Read it. Write back.
    - 🧭 **TomTomagotchi** — Your navigation pet (GPS + friend!)
    - 📓 **Notebook** — For collecting memories (auto-sorts!)
    - 🍱 **Lunchbox** — For carrying food
+   - 📬 **Mailbox** — Write to ANYONE, attach ANYTHING!
 
 3. **⭐ READ THE NOTE. WRITE A REPLY. MAKE PROMISES!** ⭐
    
