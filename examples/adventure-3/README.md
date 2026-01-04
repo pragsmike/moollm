@@ -233,6 +233,8 @@ The counter can break things down. Not just "disassemble" — *decompose*.
 - Subatomic-level? The room vibrates. Reality wobbles.
 - Philosophical-level? **Do not decompose meaning. You need it.**
 
+*See also: [How to Deconstruct Almost Anything](http://www.fudco.com/chip/deconstr.html) — Chip Morningstar's legendary essay on the collision of engineering and postmodern literary criticism. If you're going to decompose reality, you might as well understand the theory.*
+
 Components can be recombined. Hydrogen + oxygen = water (and a small boom). What else might you synthesize?
 
 ---
