@@ -15,7 +15,7 @@ This adventure inherits the **enriched world** from adventure-2, where Bumblewic
 |---------|-------------|----------|
 | 🏛️ **Initials on the Wall** | WC+DW '76, SA '78, CA '26, BF — the lineage | `start/ROOM.yml` |
 | ⬆️ **Stairway to Home** | Exit UP leads to the surface | `start/` → `home/` |
-| 🍺 **The Rusty Lantern** | THEMEABLE pub for socializing, games, rumors! | `pub/` |
+| 🍺 **The Rusty Lantern** | Themeable pub south of start — games, rumors, secrets | `pub/` |
 | 🎭 **Maurice's Skills** | Learned PHOTO-SET-8 in adventure-2 | `coatroom/mannequin.yml` |
 | 🏪 **Vending Machine** | Sells Premium Glow Juice | `maze/room-j/lamp-vendor.yml` |
 | 💀 **The Skeleton** | Still points west, still waiting | `maze/room-i/ROOM.yml` |
@@ -64,19 +64,20 @@ From Mother's note on the kitchen table:
     │                          │                          │
     │    COATROOM ←── east ────┼──── west ──→ KITCHEN     │
     │    (Maurice)             │              (Fridge)    │
-    │                          │ north                    │
-    │                          ↓                          │
-    │                    ╔═══════════╗                    │
-    │                    ║   MAZE    ║                    │
-    │                    ║ 10 rooms  ║                    │
-    │                    ║  (DARK!)  ║                    │
-    │                    ╚═════╤═════╝                    │
     │                          │                          │
-    │                          ↓                          │
-    │                    ╔═══════════╗                    │
-    │                    ║  TREASURY ║                    │
-    │                    ║ (treasure)║                    │
-    │                    ╚═══════════╝                    │
+    │                    south ↓ north                    │
+    │                          │                          │
+    │    ╔═══════════╗         │         ╔═══════════╗    │
+    │    ║    PUB    ║←────────┘         ║   MAZE    ║    │
+    │    ║  Rusty    ║                   ║ 10 rooms  ║    │
+    │    ║ Lantern   ║                   ║  (DARK!)  ║    │
+    │    ╚═══════════╝                   ╚═════╤═════╝    │
+    │                                          │          │
+    │                                          ↓          │
+    │                                    ╔═══════════╗    │
+    │                                    ║  TREASURY ║    │
+    │                                    ║ (treasure)║    │
+    │                                    ╚═══════════╝    │
     │                                                     │
     └─────────────────────────────────────────────────────┘
 ```
@@ -144,14 +145,17 @@ goals:
 
 1. **GET LAMP** — In the start room. Don't enter the maze without it.
 
-2. **Visit the Kitchen** — Everything you need is on the table:
+2. **Check Your Mail** — The Grand Mailbox is right here in the start room!
+   - 📬 The flag is UP. You have mail waiting.
+   - 📜 Welcome leaflet, matchbooks, and... something from Mother?
+   
+3. **Visit the Kitchen** — Everything you need is on the table:
    - 📜 **Mother's Note** — MOST IMPORTANT! Read it. Write back.
    - 🧭 **TomTomagotchi** — Your navigation pet (GPS + friend!)
    - 📓 **Notebook** — For collecting memories (auto-sorts!)
    - 🍱 **Lunchbox** — For carrying food
-   - 📬 **Mailbox** — Write to ANYONE, attach ANYTHING!
 
-3. **⭐ READ THE NOTE. WRITE A REPLY. MAKE PROMISES!** ⭐
+4. **⭐ READ THE NOTE. WRITE A REPLY. MAKE PROMISES!** ⭐
    
    > *This is the most important step for a rich adventure!*
    
@@ -168,12 +172,33 @@ goals:
    
    *This is freeform creative writing that creates game mechanics!*
 
-4. **Raid the Fridge** — 20 food items for maze mapping.
-5. **Visit the Coatroom** — Maurice can help you discover who you want to be.
-6. **The Grue Has Respawned** — It's hungry. It's waiting. It's in room-f.
-7. **The Vending Machine** — Room J sells Premium Glow Juice (3 gold).
-8. **The Skeleton Points West** — Follow its guidance.
-9. **There's 100 Gold** — In the grue's lair. If you dare.
+5. **Raid the Fridge** — 20 food items for maze mapping.
+6. **Visit the Coatroom** — Maurice can help you discover who you want to be.
+7. **Stop by the Pub** — South of start. Meet NPCs. Play games. Hear rumors.
+8. **The Grue Has Respawned** — It's hungry. It's waiting. It's in room-f.
+9. **The Vending Machine** — Room J sells Premium Glow Juice (3 gold).
+10. **The Skeleton Points West** — Follow its guidance.
+11. **There's 100 Gold** — In the grue's lair. If you dare.
+
+---
+
+## 🔮 Hidden Depths
+
+*The dungeon has... evolved.*
+
+There are systems at work here that previous adventurers never discovered. Mechanisms that respond to how you play, not just what you do. Things that grow. Things that curse. Things that follow you home.
+
+**Scoring** isn't what you think. Points aren't fixed — they're *calculated* based on style, difficulty, and creativity. The same goal achieved elegantly is worth more than brute force.
+
+**Skills** emerge from play. Do something creative? It might become a technique you can use again. Teach it to an NPC? Even better.
+
+**Curses** are earned. Break a promise? There are... consequences. But lifting a curse teaches something. The scar becomes a story.
+
+**The world grows.** Ask the right questions and new places materialize. Wonder where the grue came from? There might be an answer — and a way to find it.
+
+**Companions** are possible. Ask Mother about family. Recruit NPCs. Build a party. They have opinions. They have goals. They talk to each other when you're not looking.
+
+*For the full systems, see [MECHANICS.yml](./MECHANICS.yml). But discovering how they work is half the fun.*
 
 ---
 
@@ -243,6 +268,25 @@ The counter can break things down. Not just "disassemble" — *decompose*.
 
 Components can be recombined. Hydrogen + oxygen = water (and a small boom). What else might you synthesize?
 
+### 📬 The Grand Mailbox
+
+Grandmother negotiated eternal free postage in 1923. The mailbox in the start room connects to everywhere — the dungeon, the surface, other dimensions.
+
+**Send anything.** Letters. Photos. Recipes. Skills. Gold. Items.
+**Receive anything.** Replies from Mother. ACME deliveries. Chain letters. Plot.
+
+There are matchbooks in the kitchen drawer. Mail them away for stamps featuring famous adventurers. One lousy point each.
+
+### 🍺 The Pub
+
+Someone built a tavern south of the Chamber. Or it was always there. The bartender isn't sure.
+
+**The Rusty Lantern** changes based on your... expectations. Visit thinking of a space cantina and you might find Z-4RT polishing glasses under neon. Visit thinking of a western saloon and Miss Kitty has opinions about your hat.
+
+There's a back room. The bartender doesn't talk about it. Yet.
+
+*Rumors. Quests. Games. Companions. Mother's old booth. The pub has secrets.*
+
 ---
 
 ## 🧪 Emergent Mechanics (from adventure-2)
@@ -265,11 +309,16 @@ Components can be recombined. Hydrogen + oxygen = water (and a small boom). What
 
 ## 📚 References
 
-- [adventure-2/README.md](../adventure-2/README.md) — The legend of Captain Ashford
-- [coatroom/mannequin.yml](./coatroom/mannequin.yml) — Maurice and PHOTO-SET-8
-- [kitchen/fridge.yml](./kitchen/fridge.yml) — The EAT mechanic
-- [maze/room-f/](./maze/room-f/) — The grue's lair
-- [maze/room-j/lamp-vendor.yml](./maze/room-j/lamp-vendor.yml) — Premium upgrades
+| File | What It Is |
+|------|------------|
+| [MECHANICS.yml](./MECHANICS.yml) | **Game systems**: scoring, skills, curses, party, world generation |
+| [kitchen/mothers-note.yml](./kitchen/mothers-note.yml) | **The heart of the game**: promises, goals, shaping Mother |
+| [kitchen/tomtomagotchi.yml](./kitchen/tomtomagotchi.yml) | **Navigation companion**: GPS, missions, growth |
+| [start/mailbox.yml](./start/mailbox.yml) | **Postal system**: mail, stamps, chain letters |
+| [pub/ROOM.yml](./pub/ROOM.yml) | **Social hub**: themes, bartender, back room |
+| [kitchen/counter.yml](./kitchen/counter.yml) | **Crafting**: combine, transform, decompose |
+| [kitchen/acme-catalog.yml](./kitchen/acme-catalog.yml) | **Mail order**: cartoon physics, malfunctions |
+| [adventure-2/README.md](../adventure-2/README.md) | **The legend**: Captain Ashford's complete journey |
 
 ---
 
