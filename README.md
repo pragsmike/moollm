@@ -8,7 +8,8 @@
 
 **New to MOOLLM?** The Quickstart gets you up and running in Cursor in 5 minutes:
 
-- **Open the repo** in Cursor and start chatting
+- **Browse on GitHub first** — every directory has a README explaining what's inside with links to artifacts. Explore microworlds, skills, and kernel protocols without installing anything. It's literate programming: markup and data as literature!
+- **Open in Cursor** to start chatting and playing
 - **Explore a playable adventure** — navigate rooms, examine objects, talk to Cursor
 - **Clone and build your own world** — just tell Cursor what you want
 - **Fork & branch** — ask Cursor to fork the repo and create your own branch you control
