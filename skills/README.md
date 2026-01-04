@@ -80,6 +80,7 @@ No hidden state, no magic.
 | [data-flow/](./data-flow/) | Rooms as pipeline nodes, THROW/INBOX/OUTBOX | 1 |
 | [adventure/](./adventure/) | Narrative room exploration | 1 |
 | [hero-story/](./hero-story/) | Safe K-line references to real people | 1 |
+| [representation-ethics/](./representation-ethics/) | Nuanced ethics of simulating people | 1 |
 
 ### Entity & Dialogue
 

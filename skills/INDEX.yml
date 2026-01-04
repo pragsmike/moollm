@@ -241,6 +241,13 @@ planned:
     status: "planned"
     protocol: "PETS"
     notes: "LLOOOOMM experimental - safe K-line wrappers"
+    
+  - name: "representation-ethics"
+    description: "Nuanced ethics of simulating real and fictional people"
+    tier: 1
+    status: "active"
+    protocol: "REPRESENTATION-ETHICS"
+    notes: "Consent hierarchy, game frames, Sims precedent, self-sovereignty"
 
 # GUIDELINES
 

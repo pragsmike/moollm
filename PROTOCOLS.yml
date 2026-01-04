@@ -472,6 +472,92 @@ FICTIONAL-WRAPPER:
   invoke_when: "Creating agents inspired by real people"
   # Pets, familiars, golems — not direct simulation
 
+REPRESENTATION-ETHICS:
+  meaning: "Nuanced ethics of simulating real and fictional people."
+  location: skills/representation-ethics/
+  invoke_when: "Simulating people, creating person cards, ethical questions"
+  
+  core_insight: |
+    Simulation is not inherently wrong.
+    FRAMING, CONSENT, and CONTEXT determine ethics.
+    
+    The Sims ran this experiment for 25 years:
+    People simulate selves, families, enemies, crushes.
+    Result: Essentially no harm. Vast emotional value.
+    
+  consent_hierarchy:
+    1_SELF_SOVEREIGN: "You own your digital self. Full freedom."
+    2_EXPLICIT_CONSENT: "Use per published terms."
+    3_PUBLIC_FIGURE: "Tradition is fair game. Persona requires care."
+    4_PRIVATE_PERSON: "Fictional wrappers preferred."
+    5_DECEASED: "Cannot consent. Proceed with reverence."
+    
+  frames_that_matter:
+    IMPERSONATION: "FORBIDDEN — deceptive fraud"
+    ACADEMIC: "OK with care — educational, documented, labeled"
+    GAME_PLAY: "SAFE — MTG model, cards aren't people"
+    PERSONAL: "PERMITTED — self-representation is sovereign"
+
+SELF-SOVEREIGN:
+  meaning: "You own your digital self."
+  location: skills/representation-ethics/
+  invoke_when: "Questions about self-representation rights"
+  
+  rights: |
+    - Create any representation of yourself
+    - Play as yourself in first person
+    - Publish self-models with your terms
+    - Allow or forbid simulation by others
+    - Revoke permissions anytime
+    
+  example: |
+    Don Hopkins publishes:
+      consent_level: open
+      terms: "good humor, no defamation"
+    His representation, his rules.
+
+CONSENT-HIERARCHY:
+  meaning: "Different relationships = different ethical rules."
+  location: skills/representation-ethics/
+  invoke_when: "Determining how to represent someone"
+  
+  levels: |
+    1. SELF — Full sovereignty
+    2. EXPLICIT CONSENT — Per their terms
+    3. PUBLIC FIGURE — Tradition OK, persona careful
+    4. PRIVATE PERSON — Fictional wrappers
+    5. DECEASED — Reverence, tradition invocation
+
+GAME-FRAME:
+  meaning: "Play context transforms ethics."
+  location: skills/representation-ethics/
+  invoke_when: "Using real people in game/play contexts"
+  
+  insight: |
+    MTG proves this works:
+    - Einstein card in a card game isn't disrespectful
+    - Hero-Story cards ARE this model
+    - The frame makes intent clear
+    - Cards invoke traditions, not simulate personas
+
+TRADITION-INVOKE:
+  meaning: "Invoke ideas, not identities."
+  location: skills/representation-ethics/
+  invoke_when: "Referencing a real person's work"
+  shorthand_for: P-HANDLE-K + K-LINE
+  
+  safe: |
+    "The Minsky tradition suggests..."
+    "In the style of Papert's constructionism..."
+    "Drawing from Engelbart's augmentation philosophy..."
+    
+  less_safe: |
+    "Minsky would say..."
+    "Papert thinks..."
+    
+  forbidden: |
+    "I am Minsky and I believe..."
+
 HONEST-FORGET:
   meaning: "Summarize before forgetting. Never fabricate."
   location: kernel/constitution-core.md §6
