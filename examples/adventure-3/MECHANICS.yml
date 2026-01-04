@@ -105,12 +105,27 @@ world_generation:
   object_generation: "Quest items, clues, tools, rewards materialize"
   npc_generation: "Quest requires person, room empty, letter mentions someone"
   
+  # SUB-DIRECTORIES AS BEHAVIOR CONTAINERS
+  # New room clusters go in sub-directories to:
+  # 1. Attach shared mechanics (like maze/ → dark rooms, grue danger)
+  # 2. Keep rooms organized and scoped
+  # 3. Enable directory-level README with local rules
+  # 4. Allow inheritance: room inherits from directory defaults
+  
+  directory_patterns:
+    maze/: "Dark rooms, grue mechanics, twisty passages"
+    basement/: "Damp, underground, connects to maze depths"
+    tower/: "Height, wind, views, vertical navigation"
+    dungeon/: "Cells, guards, escape puzzles"
+    garden/: "Outdoor, weather, growing things"
+    library/: "Books, knowledge, quiet, no food allowed"
+    
   areas:
-    DEEPER_MAZE: "DOWN → ancient, colder"
-    THE_SURFACE: "UP → outside world"
-    MOTHER_S_DUNGEON: "Flashback → younger Mother"
-    POSTAL_DIMENSION: "Following mail"
-    GRUE_HOMELAND: "Following grue"
+    DEEPER_MAZE: "DOWN → maze/depths/ (ancient, colder)"
+    THE_SURFACE: "UP → surface/ (outside world)"
+    MOTHER_S_DUNGEON: "Flashback → flashback/mothers-dungeon/"
+    POSTAL_DIMENSION: "Following mail → postal/"
+    GRUE_HOMELAND: "Following grue → grue-homeland/"
     
   linking: "All TWO-WAY. Tom updates. VISIBLE/HIDDEN/CONDITIONAL/TIMED/ONE-WAY"
 

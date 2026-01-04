@@ -223,7 +223,42 @@ maze/
 └── ...
 ```
 
-*See [kitchen/mothers-note.yml](../kitchen/mothers-note.yml) → "DYNAMIC WORLD GENERATION"*
+*See [MECHANICS.yml](../MECHANICS.yml) → `world_generation`*
+
+---
+
+## 📂 Directory = Behavior Container
+
+The `maze/` directory itself defines shared mechanics for ALL rooms inside it:
+
+| Inherited Property | Value | Effect |
+|--------------------|-------|--------|
+| `lighting` | `none` | All maze rooms are DARK |
+| `grue_safe` | `false` | Grues can attack anywhere |
+| `requires_light` | `true` | Must have lit lamp |
+| `topology` | `twisty` | Confusing, looping passages |
+
+**This pattern extends to new areas:**
+
+```
+basement/         # Damp, underground mechanics
+├── README.md     # Describes basement-wide rules
+├── cellar/
+├── crypt/
+└── well/
+
+tower/            # Height, wind, view mechanics  
+├── README.md     # Describes tower-wide rules
+├── first-floor/
+├── observatory/
+└── roof/
+```
+
+**Benefits:**
+- Rooms inherit directory defaults (less repetition)
+- README at directory level documents local rules
+- Easy to add new rooms that "just work"
+- Mechanics are scoped and organized
 
 ---
 
