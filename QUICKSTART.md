@@ -63,7 +63,7 @@ You can edit the YAML directly in Cursor's text editor — or just tell Cursor w
 
 The LLM creates the files, connects the exits, writes the descriptions. Looking at the files helps you understand how it works — but you don't *have* to touch them.
 
-**K-Lines:** The [PROTOCOLS.yml](./PROTOCOLS.yml) file defines symbolic names (Marvin Minsky's "K-Lines" from *Society of Mind*) that activate conceptual clusters. Type `YAML-JAZZ` and the LLM interprets comments semantically. Type `SPEED-OF-LIGHT` and it simulates multiple agents in one call. Type `POSTEL` and it interprets your input charitably. These are greppable cognitive triggers — name-activated behaviors.
+**K-Lines:** The [PROTOCOLS.yml](./PROTOCOLS.yml) file defines symbolic names — like Wikipedia's policy shortcuts (`WP:NPOV`, `WP:RS`) but for LLM behavior. These are Marvin Minsky's "K-Lines" from *Society of Mind*: names that activate conceptual clusters. Type `YAML-JAZZ` and the LLM interprets comments semantically. Type `SPEED-OF-LIGHT` and it simulates multiple agents in one call. Type `POSTEL` and it interprets your input charitably. UPPER-CASE-DASHED names, greppable cognitive triggers — name-activated behaviors.
 
 ---
 
@@ -73,7 +73,7 @@ The LLM creates the files, connects the exits, writes the descriptions. Looking 
 |-----------|---------|--------|
 | [adventure‑1/](./examples/adventure-1/) | **World Building** — Watch a world emerge from chat prompts. README documents creation. | ✅ Template |
 | [adventure‑2/](./examples/adventure-2/) | **Legendary Playthrough** — Full transcript, playing and evolving a world, emergent mechanics, epic moments. | ✅ Completed |
-| [adventure‑3/](./examples/adventure-3/) | **Fresh Start** — Rich advanced mechanics, crafting, clean slate, ready to play. Clone this one! | 🎮 **PLAY ME** |
+| [adventure‑3/](./examples/adventure-3/) | **Fresh Start** — Rich advanced mechanics, crafting, npcs, clean slate, ready to play. Clone this one! | 🎮 **PLAY ME** |
 
 **The Progression:**
 - **adventure‑1** created the world (documented)
