@@ -138,7 +138,40 @@ persona:
     the_inners: "They have gravity. We have grit."
 
 # ═══════════════════════════════════════════════════════════════════════════════
-# SKILLS GRANTED — What can the wearer do while in this persona?
+# STARTER KIT — Items ADDED to character inventory when persona is activated
+# These become YOUR items — you own them, can drop them, use them up.
+# If you remove the persona, you KEEP the items (they're real now).
+# ═══════════════════════════════════════════════════════════════════════════════
+
+  starter_kit:
+    - item: silver-flask
+      type: container
+      quantity: 1
+      description: "Dented silver flask, engraved with something illegible"
+      contents: "Belter whiskey (3 drinks)"
+      note: "The one comfort in the void"
+      
+    - item: burgundy-scarf
+      type: accessory
+      quantity: 1
+      description: "Silk scarf, burgundy, surprisingly warm"
+      note: "Everyone needs one beautiful thing"
+      wearable: true
+      
+    - item: belter-phrase-card
+      type: card
+      quantity: 1
+      description: "Quick reference for Belter patois"
+      contents: "sa-sa ke, kopeng, beratna, inyalowda..."
+      
+  # NOTE: Appearance costume_pieces are VISUAL ONLY — not inventory items!
+  # The "eye patch" in appearance is how you LOOK.
+  # The "burgundy-scarf" in starter_kit is an ITEM you can give away.
+  # You might wear BOTH the visual scarf AND carry a spare one!
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# SKILLS GRANTED — Abilities while wearing this persona
+# These are TEMPORARY — remove persona, lose skills (unless learned separately)
 # ═══════════════════════════════════════════════════════════════════════════════
 
   skills_granted:

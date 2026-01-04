@@ -57,7 +57,7 @@ Or in the coatroom:
 
 ---
 
-## What a Persona Modifies
+## What a Persona Contains
 
 ### Trait Modifiers
 ```yaml
@@ -71,13 +71,42 @@ mind_mirror_modifiers:
     confident: +2   # Project confidence
 ```
 
-### Appearance
+### Appearance (Visual Only — NOT inventory!)
 ```yaml
 appearance:
   description: "Weathered Belter captain in leather long coat..."
-  costume_pieces: [...]
+  costume_pieces:
+    - "Eye patch on forehead"     # Visual only
+    - "Burgundy silk scarf"       # How you LOOK
   body_language: [...]
 ```
+
+### Starter Kit (Items ADDED to your inventory)
+```yaml
+starter_kit:
+  - item: silver-flask
+    quantity: 1
+    description: "Dented, engraved with something illegible"
+    contents: "Belter whiskey (3 drinks)"
+    
+  - item: arrows
+    quantity: 20
+    note: "Standard iron-tipped"
+    
+  - item: gold
+    quantity: 5
+```
+
+**Starter kit items become YOURS:**
+- Added to inventory when you wear the persona
+- You own them — can drop, use, give away
+- Consumables run out (arrows, drinks, reagents)
+- If you remove the persona, you KEEP the items
+
+**Appearance is NOT inventory:**
+- `costume_pieces` change how you LOOK
+- They're not items you can drop
+- Visual layer, not physical objects
 
 ### Speech Patterns
 ```yaml
@@ -87,12 +116,14 @@ speech:
   catchphrases: ["Sa-sa ke, kopeng?", ...]
 ```
 
-### Skills Granted
+### Skills Granted (Temporary!)
 ```yaml
 skills_granted:
   - name: "BELTER-PATOIS"
   - name: "CAPTAIN-PRESENCE"
 ```
+
+Skills are temporary — remove the persona, lose the skills (unless you learned them separately through play).
 
 ---
 
