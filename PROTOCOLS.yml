@@ -1681,14 +1681,70 @@ SKILL:
   invoke_when: "Understanding how skills work, creating new skills, composing skills"
   philosophy: "A skill is documentation that learned to do things."
   invokes:
-    - programming-by-demonstration  # Alan Cypher, Brad Myers, Henry Lieberman
-    - constructionism               # Papert — learn by building
+    - PROGRAMMING-BY-DEMONSTRATION  # Alan Cypher, Brad Myers, Henry Lieberman
+    - CONSTRUCTIONISM               # Papert — learn by building
     - anthropic-skills              # Documentation-first tool definition
   where_skills_live:
     central: "skills/ directory — shared, reusable, general-purpose"
     local: "In rooms and characters — context-specific, emergent"
     inheritance: "Local skills inherit from central, add local knowledge"
   lifecycle: "Documentation → Procedure → Script → Tool (via PLAY-LEARN-LIFT)"
+
+PROGRAMMING-BY-DEMONSTRATION:
+  meaning: "Show, don't tell. The system learns by watching you do it."
+  shorthand: PBD
+  location: skills/play-learn-lift/
+  invoke_when: "Teaching the system new behaviors, developing skills, automating workflows"
+  
+  # The FOUNDATION of PLAY-LEARN-LIFT
+  # Do it manually first. The system watches. Patterns emerge. Automation follows.
+  
+  origin:
+    pioneers:
+      - "Alan Cypher — 'Watch What I Do' (1993), foundational PBD anthology"
+      - "Brad Myers — Peridot, Garnet, DEMONSTR8, end-user programming"
+      - "Henry Lieberman — Tinker, Your Wish Is My Command, programming agents"
+    insight: |
+      # Instead of writing code, you DEMONSTRATE the desired behavior.
+      # The system infers the program from your examples.
+      # Much more accessible than traditional programming.
+      
+  how_it_works: |
+    # 1. DEMONSTRATE: You perform the task manually
+    #    (The LLM watches, the system logs)
+    #
+    # 2. GENERALIZE: System identifies patterns
+    #    "You always do X before Y when Z is true..."
+    #
+    # 3. VALIDATE: System shows its understanding
+    #    "Did I get this right? Should I do X when..."
+    #
+    # 4. AUTOMATE: Generate script/skill/tool
+    #    The demonstration becomes executable
+    
+  in_moollm: |
+    # MOOLLM IS inherently PBD:
+    # - Play with YAML Jazz, LLM watches and helps
+    # - Manual actions become logged patterns
+    # - LLM generates sister scripts from demonstrated procedures
+    # - Schemas crystallize from worked examples
+    #
+    # "Start with jazz, end with standards."
+    # The jazz IS the demonstration.
+    
+  examples:
+    - "Chat to navigate rooms → generate navigation script"
+    - "Manually edit YAML files → generate transformation tool"
+    - "Solve maze by playing → generate pathfinding skill"
+    - "Write letters to Mother → generate correspondence protocol"
+    
+  see_also: [PLAY-LEARN-LIFT, SISTER-SCRIPT, YAML-JAZZ, CONSTRUCTIONISM]
+  
+  wisdom: |
+    # "The best programs are written by people who use them."
+    # PBD bridges the gap between users and programmers.
+    # In MOOLLM, there is no gap. You ARE the programmer.
+    # Your play IS your program.
 
 PLAY-LEARN-LIFT:
   meaning: "The three-stage journey: explore freely, find patterns, share wisdom."
