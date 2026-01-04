@@ -238,7 +238,7 @@ object:
         - "../maze/room-j/memorial-jam-07-silly-dance-prompt.md"
         - "../maze/room-j/memorial-jam-08-final-selfie-prompt.md"
           
-    letters_sent:
+    victory_correspondence:
       description: "Victory correspondence"
       contents:
         - file: "../maze/room-i/letter-to-mother-skeleton.yml"

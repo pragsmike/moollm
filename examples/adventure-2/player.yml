@@ -9,7 +9,7 @@ character:
   location: HOME  # Wobblebrook-upon-Squiggle, Mother's House
   health: 100
   mood: RESTED_AND_WHOLE
-  score: 11           # +10 treasure + 1 for Promise #5!
+  score: 31           # +10 treasure + 20 grue slaying + 1 Promise #5!
   deaths: 0           # Increments each reincarnation
   moves: 69
   gold: 108  # 💰💰💰 WE'RE RICH!!!            # Enough for refills, snacks, and bribes!
