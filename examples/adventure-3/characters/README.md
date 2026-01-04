@@ -19,6 +19,7 @@ The adventure supports **multiple simultaneous players**! See [../ADVENTURE.yml]
 | File | Status |
 |------|--------|
 | [don-hopkins.yml](./don-hopkins.yml) | Active — Consciousness programmer |
+| [bumblewick-fantastipants.yml](./bumblewick-fantastipants.yml) | Available — Reluctant hero, spoon enthusiast |
 | [player.yml](./player.yml) | Available — Generic hero template |
 
 ---
