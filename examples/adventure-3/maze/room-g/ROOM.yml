@@ -40,6 +40,9 @@ room:
   
   feature: carved_face
   
+  objects:
+    - carved-face.yml  # The ancient watcher in the stone
+  
   exits:
     north:
       destination: ../room-i/

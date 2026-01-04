@@ -18,9 +18,11 @@ This room is **protected**. Something in the mushrooms — or watching FROM the 
 
 ## 👁️ The Thing That Watches
 
+See [the-thing-that-watches.yml](./the-thing-that-watches.yml) for full details.
+
 In the center of the room, merging with the mushrooms, pulses **THE THING THAT WATCHES** — a transformed object from a previous adventure (the Suspicious Casserole) that has become a sentient fungal entity.
 
-Its single EYE follows your every movement.
+Its single EYE follows your every movement. **Grues won't enter this room because of The Eye.**
 
 Mother would say not to touch them. Mother would be right.
 
@@ -46,6 +48,7 @@ The mushrooms pulse in a rhythm that almost sounds like breathing. Spores intera
 ## 📂 Contents
 
 - [ROOM.yml](./ROOM.yml) — Room definition
+- [the-thing-that-watches.yml](./the-thing-that-watches.yml) — 👁️ The sentient casserole-fungus
 
 ---
 

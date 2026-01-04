@@ -31,7 +31,13 @@ This room has **no lighting**. Enter without a lit lamp and you will be eaten by
 
 ## 🎭 Feature: The Carved Face
 
+See [carved-face.yml](./carved-face.yml) for full details.
+
 The face judges you silently. You adjust your waistcoat self-consciously. Somewhere, you think you hear stone grinding against stone. But that's impossible. Probably.
+
+**The face reacts to exits:**
+- Frowns at north (toward skeleton)
+- Approves of east (toward vendor)
 
 ---
 
@@ -44,6 +50,7 @@ The face seems to sniff. Which is impossible. Probably.
 ## 📂 Contents
 
 - [ROOM.yml](./ROOM.yml) — Room definition
+- [carved-face.yml](./carved-face.yml) — 🗿 The ancient watcher
 
 ---
 
