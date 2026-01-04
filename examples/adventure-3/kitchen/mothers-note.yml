@@ -608,6 +608,294 @@ object:
           "Why didn't you tell me about the grue?"
           → Mother had REASONS. Protective? Traumatic? Forgetful?
           
+          "Do I have any siblings?"
+          → Now you DO. Lost? Estranged? Adventuring elsewhere?
+          
+          "What happened to my childhood pet?"
+          → There WAS a pet. Where are they now? Quest seed planted!
+          
+          "Who else is in our family?"
+          → Relatives emerge: cousins, aunts, grandparents, black sheep
+          
+        # ═══════════════════════════════════════════════════════════════
+        # 👨‍👩‍👧‍👦 FAMILY REUNION QUESTS — Lost relatives & companions!
+        # ═══════════════════════════════════════════════════════════════
+        
+        family_discovery: |
+          When you ASK about family, family APPEARS!
+          
+          Each question seeds a potential REUNION QUEST:
+          
+          SIBLING DISCOVERY:
+          "Do I have a brother/sister?"
+          → YES! You do! But where are they?
+          
+          Options (DM chooses or player suggests):
+          - Lost in the maze years ago (rescue quest!)
+          - Adventuring in a different dungeon (crossover!)
+          - Estranged after a family argument (reconciliation!)
+          - Actually the skeleton in room-i (tragedy!)
+          - Working at the vending machine (comedy!)
+          - The grue (TWIST!)
+          
+          PET DISCOVERY:
+          "What happened to Fluffy/Spot/Mr. Whiskers?"
+          → They were REAL! And they might still be findable!
+          
+          Options:
+          - Waiting loyally in a maze room (tearful reunion!)
+          - Transformed by dungeon magic (rescue quest!)
+          - Now guards the treasure (awkward!)
+          - Befriended the grue (complicated!)
+          - Living with the skeleton (sad but sweet!)
+          - Running the dungeon postal service (explains a lot!)
+          
+          EXTENDED FAMILY:
+          "Tell me about grandmother/grandfather/uncle/aunt"
+          → Family tree grows! Each relative is a potential:
+          - Quest giver (find their lost artifact!)
+          - Companion (recruit them to party!)
+          - Source of skills (learn family traditions!)
+          - Plot twist (they're not who you thought!)
+          
+        reunion_mechanics: |
+          When a lost family member/pet is discovered:
+          
+          1. LOCATE: Clues appear in mail, NPC dialogue, room descriptions
+          2. JOURNEY: Navigate to their location (may require puzzles)
+          3. ENCOUNTER: Meeting scene (emotional, dramatic, or comedic)
+          4. REUNITE: Bring them home or recruit to party
+          
+          REUNION REWARDS:
+          - Massive approval from Mother
+          - New party member (if applicable)
+          - Family skill unlocked
+          - Backstory revealed
+          - Emotional devastation (in a good way)
+          
+        # ═══════════════════════════════════════════════════════════════
+        # 🎭 PARTY GENERATION — Companions for multi-character campaigns!
+        # Inspired by Wizardry, Populous, Dungeon Keeper
+        # ═══════════════════════════════════════════════════════════════
+        
+        party_system:
+          description: |
+            Adventures can be SOLO or with a PARTY!
+            
+            Companions can be:
+            - RECRUITED from NPCs you meet
+            - GENERATED from family questions
+            - SUMMONED using skills
+            - HIRED with gold
+            - INHERITED from previous adventures
+            
+          party_roles: |
+            Like Wizardry, different companions fill different roles:
+            
+            FRONTLINE:
+            - Fighter: High durability, protects others
+            - Guardian: Shields party from grue attacks
+            - Tank: Absorbs damage, draws attention
+            
+            SUPPORT:
+            - Navigator: Bonus to mapping, reduces getting lost
+            - Light-Bearer: Carries extra lamp, shares oil
+            - Pack Mule: Extra inventory capacity
+            
+            SPECIALIST:
+            - Photographer: Takes photos automatically
+            - Chef: Transforms food more effectively
+            - Merchant: Better prices at vending machine
+            
+            MYSTIC:
+            - Oracle: Hints about upcoming dangers
+            - Medium: Communicates with skeleton
+            - Postal Savant: Letters arrive faster
+            
+            WILDCARD:
+            - Pet: Loyal, unpredictable, adorable
+            - Sibling: Competitive, helpful, complicated
+            - Reformed Grue: Don't ask how this happened
+            
+          companion_generation: |
+            RECRUITING NPCs:
+            
+            Any NPC can potentially join your party:
+            - Maurice the Mannequin (artistic support)
+            - Tom (navigation, already in inventory!)
+            - The Skeleton (if you solve their unfinished business)
+            - Vending Machine (somehow) (comedic option)
+            
+            ASK [NPC] TO JOIN / RECRUIT [NPC]
+            
+            NPCs consider:
+            - Your reputation
+            - Your promises kept
+            - What you've done for them
+            - Whether it sounds fun
+            
+            GENERATING FROM QUESTIONS:
+            
+            Ask Mother about family → family member emerges
+            Ask about pets → pet emerges
+            Ask about old friends → friend emerges
+            
+            Each generated companion has:
+            - Backstory (connected to your question)
+            - Skills (based on their history)
+            - Personality (from your assumptions)
+            - Goals (that may conflict with yours!)
+            
+          companion_templates: |
+            SIBLING TEMPLATES:
+            
+            ```yaml
+            lost_sibling:
+              name: "[Generated or player-suggested]"
+              relation: sibling
+              status: lost_in_dungeon
+              
+              personality_seeds:
+                - "Older/younger than you?"
+                - "Was always better/worse at adventuring?"
+                - "Left on bad terms or just got lost?"
+                
+              skills:
+                - Family trait (shared with player)
+                - Unique skill (developed while lost)
+                - Survival skill (learned the hard way)
+                
+              location_options:
+                - "Deep in maze (rescue needed)"
+                - "Working in dungeon economy (doing fine, actually)"
+                - "Transformed into something (cure needed)"
+                - "Running their own adventure (crossover!)"
+                
+              reunion_dialogue_seeds:
+                - "I knew you'd come eventually."
+                - "Mom sent you, didn't she?"
+                - "You look... different. Good different?"
+                - "Is that LAMP still going? I lost mine ages ago."
+            ```
+            
+            PET TEMPLATES:
+            
+            ```yaml
+            childhood_pet:
+              name: "[From player's memory/invention]"
+              species: "[Any species, dungeon magic permits all]"
+              status: mysteriously_absent
+              
+              backstory_seeds:
+                - "Ran away? Taken? Wandered into dungeon?"
+                - "Always had unusual abilities?"
+                - "Mother's 'real' reason for pet's absence?"
+                
+              abilities:
+                - Loyal: Always knows where you are
+                - Keen Senses: Detects grues before you do
+                - Adorable: NPCs react positively
+                - Mysterious: Has learned dungeon secrets
+                
+              location_options:
+                - "Living with skeleton (they needed company)"
+                - "Running wild in mushroom room"
+                - "Domesticated a small section of maze"
+                - "Working for postal service (explains efficiency)"
+                
+              reunion_scene:
+                - "Recognition after years apart"
+                - "They remember your scent"
+                - "They've been waiting. All this time."
+                - "Tom is JEALOUS (briefly)"
+            ```
+            
+          party_management: |
+            PARTY COMMANDS (Like Populous/Dungeon Keeper):
+            
+            FORMATION:
+            - PARTY FORMATION [type]: Line, circle, defensive, scattered
+            - ASSIGN [companion] TO [position]: Front, back, scout
+            
+            ORDERS:
+            - PARTY HOLD: Everyone stays put
+            - PARTY FOLLOW: Everyone follows you
+            - PARTY SCATTER: Everyone explores independently
+            - PARTY REGROUP: Everyone returns to you
+            
+            INDIVIDUAL:
+            - [COMPANION] GUARD: Protect a location
+            - [COMPANION] SCOUT: Explore ahead
+            - [COMPANION] WAIT: Stay here
+            - [COMPANION] FETCH [item]: Retrieve something
+            
+            SPECIAL:
+            - SWARM: All companions act at once (Populous-style)
+            - POSSESS [companion]: See through their eyes
+            - SUMMON [companion]: Call them to you instantly
+            
+          party_dynamics: |
+            Companions have RELATIONSHIPS:
+            
+            WITH YOU:
+            - Loyalty: Based on how you treat them
+            - Trust: Based on promises kept
+            - Affection: Based on interactions
+            
+            WITH EACH OTHER:
+            - Tom + Pet: Rivalry? Friendship? Romance?!
+            - Sibling + You: Competitive? Supportive? Both?
+            - Multiple companions: Group dynamics emerge
+            
+            DRAMA SEEDS:
+            - Companions can disagree with your choices
+            - Companions can have their own goals
+            - Companions can leave if mistreated
+            - Companions can sacrifice for you (emotional devastation)
+            
+            PARTY CONVERSATIONS:
+            - Companions talk to each other
+            - You can eavesdrop or join
+            - Relationships evolve through dialogue
+            - "What are Tom and the Pet whispering about?"
+            
+          companion_progression: |
+            Companions GROW with the adventure:
+            
+            EXPERIENCE:
+            - Companions gain skills from participation
+            - Teach them skills you've developed
+            - They develop their own emergent skills
+            
+            EQUIPMENT:
+            - Companions can carry items
+            - Companions can use items
+            - Special items for specific companions
+            
+            STORY:
+            - Companions have personal quests
+            - Help them achieve their goals
+            - Their story interweaves with yours
+            
+            LEGACY:
+            - Companions can be inherited by future adventures
+            - Companions remember previous adventurers
+            - "Your grandmother once asked me to join her too..."
+            
+          recruitment_costs: |
+            Some companions require payment:
+            
+            GOLD: Hire mercenaries, pay debts, bribe guards
+            FAVORS: Complete tasks, make promises
+            ITEMS: Give them something they want
+            SKILLS: Teach them something valuable
+            REPUTATION: Prove yourself worthy
+            
+            Mother's companions: FREE (family discount)
+            Tom: FREE (already loyal)
+            NPCs: VARIES (based on relationship)
+            Summoned: SKILL COST (use skill points)
+            
         personality_seeds: |
           Your tone toward her shapes how she IS:
           
