@@ -82,18 +82,65 @@ character:
   # ═══════════════════════════════════════════════════════════════
   # NEEDS (fluctuate constantly, Sims-style)
   # Rate 0-10: Low values drive autonomous behavior
-  # YAML Jazz comments describe current state for narrative!
+  # 
+  # ⚡ CRITICAL: Comments are DYNAMIC NARRATIVE!
+  # When you change a value, UPDATE THE COMMENT to match!
+  # The comment IS the character's inner voice about that need.
+  # This enables rich reflection, conversation, and thought streams!
   # ═══════════════════════════════════════════════════════════════
   
   needs:
     hunger: 7         # Satisfied. No food thoughts.
+                      # Inner voice: "That was a good meal."
+                      
     energy: 7         # Well-rested and alert.
+                      # Inner voice: "Ready for anything!"
+                      
     fun: 7            # Entertained. Content.
+                      # Inner voice: "Life is good."
+                      
     social: 7         # Socially fulfilled.
+                      # Inner voice: "Nice to have friends."
+                      
     hygiene: 7        # Clean and fresh.
-    bladder: 10       # No urgency.
+                      # Inner voice: "Feeling presentable."
+                      
+    bladder: 10       # No urgency whatsoever.
+                      # Inner voice: "..." (not thinking about it)
+                      
     comfort: 7        # Comfortable enough.
+                      # Inner voice: "This spot is fine."
+                      
     room: 7           # Nice environment.
+                      # Inner voice: "Pleasant place."
+  
+  # ═══════════════════════════════════════════════════════════════
+  # HOW COMMENTS CHANGE WITH VALUES (examples)
+  # ═══════════════════════════════════════════════════════════════
+  #
+  # hunger: 10  # Stuffed. Couldn't eat another bite.
+  #             # Inner voice: "Ugh, too much pie."
+  #
+  # hunger: 7   # Satisfied. No food thoughts.
+  #             # Inner voice: "That was a good meal."
+  #
+  # hunger: 5   # Could eat. Not urgent.
+  #             # Inner voice: "Wonder what's in the fridge..."
+  #
+  # hunger: 3   # Getting peckish. Food ads score higher!
+  #             # Inner voice: "Is that pie I smell? Is that ANYTHING I smell?"
+  #
+  # hunger: 1   # STARVING. Will eat anything. Even that.
+  #             # Inner voice: "FOOD. FOOD. FOOD. FOOD. FOOD."
+  #
+  # ═══════════════════════════════════════════════════════════════
+  # The LLM reads these comments and uses them for:
+  # - Internal monologue generation
+  # - Dialogue about feelings ("I'm starving...")
+  # - Decision priorities (low hunger → seek food)
+  # - Advertisement scoring (food +20 when hungry)
+  # - Realistic character simulation
+  # ═══════════════════════════════════════════════════════════════
     
   # ═══════════════════════════════════════════════════════════════
   # WANTS (short-term desires, emerge from low needs)

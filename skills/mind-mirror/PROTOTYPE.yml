@@ -702,16 +702,30 @@ yaml_jazz_simulation: |
   
   ```yaml
   hunger: 3         # Getting peckish... food ads score higher
+                    # Inner voice: "Is that pie I smell?"
   energy: 4         # Tired but pushing through — may make mistakes
+                    # Inner voice: "Just a little further..."
   fun: 2            # BORED. Will seek entertainment. Even risky entertainment.
+                    # Inner voice: "There HAS to be something to do here."
   proud: 6          # Won't ask for help even when should
+                    # Inner voice: "I can figure this out myself."
   ```
   
+  ⚡ CRITICAL: Comments are DYNAMIC!
+  When a value changes, UPDATE THE COMMENT to match!
+  The comment IS the character's inner voice.
+  
   The LLM reads these comments and:
-  1. Incorporates them into dialogue
-  2. Adjusts advertisement scoring
-  3. Influences autonomous decisions
-  4. Shapes narrative tone
+  1. Generates inner monologue with the comment's texture
+  2. Creates dialogue that reflects actual state
+  3. Enables symbolic self-reflection and conversation
+  4. Adjusts advertisement scoring
+  5. Shapes narrative tone
+  
+  Imagine the conversations:
+  - "You look tired." / "I AM tired. Pushing through though."
+  - "Are you hungry?" / "STARVING. Is that pie?"
+  - Inner thought: "Why am I so irritable? Oh. Fun is at 2."
   
   This is YAML Jazz applied to character simulation.
 

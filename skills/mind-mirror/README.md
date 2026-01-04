@@ -531,17 +531,38 @@ character:
 
 **How YAML Jazz Comments Drive Narrative:**
 
-The comments aren't just documentation — the LLM reads them!
+The comments aren't just documentation — the LLM reads them! **And they change dynamically with the values!**
 
 ```yaml
-hunger: 3         # Getting peckish... food ads score higher
+# The comment IS the character's inner voice about that need.
+# When values change, UPDATE THE COMMENTS!
+
+hunger: 10  # Stuffed. Couldn't eat another bite.
+            # Inner voice: "Ugh, too much pie."
+
+hunger: 7   # Satisfied. No food thoughts.
+            # Inner voice: "That was a good meal."
+
+hunger: 3   # Getting peckish. Food ads score higher!
+            # Inner voice: "Is that pie I smell? Is that ANYTHING I smell?"
+
+hunger: 1   # STARVING. Will eat anything. Even that.
+            # Inner voice: "FOOD. FOOD. FOOD. FOOD. FOOD."
 ```
 
-This comment tells the LLM:
+**This enables:**
+- **Rich inner monologues** that match actual state
+- **Authentic dialogue** ("I'm starving..." when hunger=2)
+- **Symbolic self-reflection** (character can discuss their own needs)
+- **Conversations about feelings** (NPCs notice each other's states)
+- **Thought streams** that feel alive and consistent
+
+The comment tells the LLM:
 - Character should mention being hungry in dialogue
 - Food-related advertisements get scoring bonus
 - Kitchen becomes more attractive destination
 - Eating actions become more likely
+- Internal monologue has specific texture
 
 ### Dynamic Self-Assessment
 
