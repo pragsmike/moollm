@@ -180,6 +180,8 @@ room:
     - card-deck.yml
     - fireplace.yml
     - notice-board.yml
+    - pacman-cabinet.yml
+    - pong-cabinet.yml
     
   # 🎲 ACTIVITIES
   

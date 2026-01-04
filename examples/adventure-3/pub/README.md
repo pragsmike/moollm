@@ -112,6 +112,8 @@ Possibilities:
 | 🃏 [card-deck.yml](./card-deck.yml) | Games of chance |
 | 🔥 [fireplace.yml](./fireplace.yml) | Warmth, hearthstone secret |
 | 📋 [notice-board.yml](./notice-board.yml) | Jobs, quests, warnings |
+| 👻 [pacman-cabinet.yml](./pacman-cabinet.yml) | Wakka wakka wakka |
+| 🏓 [pong-cabinet.yml](./pong-cabinet.yml) | The game that started it all |
 
 ---
 
