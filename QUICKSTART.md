@@ -161,13 +161,13 @@ The LLM tracks state in the YAML files. Look at `player.yml` to see your invento
 
 | Concept | What It Means |
 |---------|---------------|
-| **FILES-AS-STATE** | No hidden memory. Everything in files you can read. |
-| **YAML-JAZZ** | Comments carry meaning. `timeout: 30 # API flaky Mondays` |
-| **ROOMS** | Directories are places. Enter = navigate. Objects inside. |
-| **CARDS** | Characters/tools as templates. Play them in rooms. |
-| **SPEED-OF-LIGHT** | Many agents simulate in ONE LLM call. No round trips. |
-| **POSTEL** | Be liberal in input. Interpret charitably. Never crash. |
-| **PLAY-LEARN-LIFT** | Explore → find patterns → crystallize into skills. |
+| [**FILES-AS-STATE**](./PROTOCOLS.yml) | No hidden memory. Everything in files you can read. |
+| [**YAML-JAZZ**](./skills/yaml-jazz/) | Comments carry meaning. `timeout: 30 # API flaky Mondays` |
+| [**ROOMS**](./skills/room/) | Directories are places. Enter = navigate. Objects inside. |
+| [**CARDS**](./skills/card/) | Characters/tools as templates. Play them in rooms. |
+| [**SPEED-OF-LIGHT**](./skills/speed-of-light/) | Many agents simulate in ONE LLM call. No round trips. |
+| [**POSTEL**](./skills/postel/) | Be liberal in input. Interpret charitably. Never crash. |
+| [**PLAY-LEARN-LIFT**](./skills/play-learn-lift/) | Explore → find patterns → crystallize into skills. |
 
 ---
 
