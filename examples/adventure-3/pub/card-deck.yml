@@ -89,11 +89,6 @@ object:
           theme: "Classic fantasy adventuring"
           special: "Monster cards, loot, the Grue Keeper"
           
-        - name: "Stoner Fluxx"
-          theme: "Munchies, brownies, and forgetting the rules"
-          special: "Everyone plays slower. Giggles increase."
-          effect: "Snacks appear. Time dilates. Nobody remembers whose turn it is."
-          
         - name: "MOOLLM Fluxx"
           theme: "Microworlds, K-lines, YAML Jazz, coherence engines"
           special: "Cards are rooms. Goals are protocols. Keepers are skills."
@@ -121,6 +116,11 @@ object:
           theme: "Lovecraftian horror"
           special: "Doom cards, Ungoals, madness"
           warning: "Sanity not guaranteed"
+          
+        - name: "Stoner Fluxx"
+          theme: "Munchies, brownies, and forgetting the rules"
+          special: "Everyone plays slower. Giggles increase."
+          effect: "Snacks appear. Time dilates. Nobody remembers whose turn it is."
           
         - name: "Monty Python Fluxx"
           theme: "Ni! Shrubberies! Holy Hand Grenades!"
