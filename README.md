@@ -60,7 +60,7 @@ This isn't invented from nothing. MOOLLM stands on decades of work in **construc
 
 **[Micropolis](https://medium.com/@donhopkins/micropolis-constructionist-educational-open-source-simcity-58566f20f063) (OLPC)** — Don's open source adaptation and multi-user interface design of SimCity for Linux and the One Laptop Per Child project, built with Alan Kay and Seymour Papert's constructionist education principles. The city as microworld. Kids can open it up, see how it works, script robots in Python, write newspaper articles about city events, vote on proposals. Alan Kay's criticism of SimCity was that "you can't see inside of it" — Micropolis fixes that. MOOLLM applies the same philosophy to LLM agents: the filesystem as microworld, everything totally inspectable and editable by people, scripts, and LLMs.
 
-**Micropolis + MOOLLM = The Dream Realized.** Embed a Micropolis game in a MOOLLM room:
+**Micropolis + MOOLLM = The Dream Realized.** The plan is to embed a Micropolis game in a MOOLLM room:
 
 ```
 cities/downtown/
@@ -73,7 +73,7 @@ cities/downtown/
 └── session-log.md     # Who did what, human and LLM alike
 ```
 
-A sister script runs Micropolis headless: advance N ticks, inject edits, render views to files. The LLM reads `state.yml`, examines `views/`, and *plays the game* — or mediates multiple humans playing together. Web interface publishes live views alongside chat. Humans and LLMs draw on the same map with the same tools, interleaved. Advisor characters analyze the city and give feedback. The virtual newspaper writes stories about citizens, traffic jams, tax revolts, monster attacks. **Constructionist education, fully realized.**
+A sister script will run Micropolis headless: advance N ticks, inject edits, render views to files. The LLM reads `state.yml`, examines `views/`, and *plays the game* — or mediates multiple humans playing together. Web interface publishes live views alongside chat. Humans and LLMs draw on the same map with the same tools, interleaved. Advisor characters analyze the city and give feedback. The virtual newspaper writes stories about citizens, traffic jams, tax revolts, monster attacks. **Constructionist education, fully realized.**
 
 **Bill Atkinson — HyperCard** — Stacks, cards, buttons, message passing. Non-programmers building interactive systems in 1987. The dream of end-user programming that MOOLLM inherits.
 
