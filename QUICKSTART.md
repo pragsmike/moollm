@@ -51,6 +51,10 @@ Or manually:
 cp -r examples/adventure-3 examples/my-adventure
 ```
 
+**What happens:** You'll see detailed results in chat (sometimes raw YAML), but Cursor also weaves your narrative into the adventure's `README.md` — complete with YAML Jazz commentary, links to artifacts, rooms, items, skill definitions, and image prompts.
+
+**Push to GitHub:** When you `git add`, `commit`, and `push`, your adventure's README becomes a beautifully formatted web page on GitHub! Hypertext links let you browse rooms, examine objects, and trace your journey. Your playthrough becomes a shareable, navigable story.
+
 You can edit the YAML directly in Cursor's text editor — or just tell Cursor what you want:
 
 > "Add a garden room west of the kitchen with a mysterious talking flower."
