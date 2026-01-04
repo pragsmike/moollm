@@ -1,8 +1,63 @@
 # Visualizer
 
 > *"I see what you describe. Let me show it to others."*
+>
+> *"Every image is a semantic snapshot. The metadata IS the meaning."*
 
 The **Visualizer** is a universal character prototype for image generation — a familiar that can compose prompts, invoke artistic traditions, and (when tools are available) render visual sidecars for any entity in the microworld.
+
+---
+
+## The Semantic Clipboard
+
+**Every image prompt includes full context as metadata.**
+
+Think of image metadata as a **semantic clipboard** — when you "copy" a scene for visualization, you're copying:
+
+- **Who** is there (Mind Mirror profiles, costumes, moods)
+- **Where** they are (room, lighting, atmosphere)
+- **What's** happening (action, context, narrative moment)
+- **How** to see it (camera angle, style, focus)
+
+This "clipboard" can be:
+- **Pasted** to generate the image
+- **Modified** to create variations
+- **Stored** as a card for later use
+- **Shared** between processes
+- **Compared** across different moments
+
+```yaml
+image_prompt:
+  type: scene
+  
+  subject:
+    name: "Captain Ashford"
+    mind_mirror:
+      confident: 6       # Walks into rooms like they own them
+      cheerful: 5        # Default mood: amused by existence
+      proud: 5           # Won't ask for help even when should
+    costume: "Space pirate with holographic eyepatch"
+    mood: "victorious, exhausted, relieved"
+    action: "holding the Golden Chalice aloft"
+    
+  room:
+    name: "Treasure Chamber"
+    lighting: "warm golden glow from treasure piles"
+    atmosphere: "ancient, dusty, awe-inspiring"
+    
+  camera:
+    angle: "low angle, heroic"
+    focus: "character face and chalice"
+    
+  style:
+    aesthetic: "dramatic portrait, chiaroscuro"
+    traditions: ["Avedon", "Caravaggio"]
+```
+
+**Why metadata matters:**
+- `confident: 6` → stands tall, commanding presence
+- `timid: 6` → hunched, makes self smaller  
+- YAML Jazz comments drive the visual interpretation
 
 ---
 
@@ -111,6 +166,41 @@ context_sources:
 ```
 
 This assembled context feeds into prompt generation, ensuring images are **grounded in the microworld state**.
+
+### What to Include in Metadata
+
+**For Characters:**
+```yaml
+subject:
+  name: "Captain Ashford"
+  mind_mirror:
+    confident: 6       # Walks into rooms like they own them
+    cheerful: 5        # Default mood: amused by existence
+  costume: "Space pirate with holographic eyepatch"
+  mood: "victorious, exhausted, relieved"
+  body_language: "chest out, shoulders back"
+  action: "holding the Golden Chalice aloft"
+```
+
+**For Rooms:**
+```yaml
+room:
+  name: "Treasure Chamber"
+  lighting: "warm golden glow from treasure piles"
+  atmosphere: "ancient, dusty, awe-inspiring"
+  notable_objects:
+    - "Mountains of gold coins"
+    - "Ancient tapestries on walls"
+```
+
+**For Objects:**
+```yaml
+object:
+  name: "Golden Chalice"
+  material: "gold with silver inlay"
+  magical_effects: "soft golden glow, warmth to touch"
+  inscriptions: "ancient runes spiraling around rim"
+```
 
 ---
 

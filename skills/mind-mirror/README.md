@@ -457,7 +457,7 @@ Switch between `PLAIN-TALK` and `SHRINK-RAP` modes for descriptions and dialogue
 
 ### Image Generation
 
-Mind Mirror profiles feed directly into image generation via the [imaging](../imaging/) skill.
+Mind Mirror profiles feed directly into image generation via the [visualizer](../visualizer/) skill.
 
 ```yaml
 # Mind Mirror personality...
@@ -468,7 +468,7 @@ body_language: "stands tall, commanding presence"
 expression: "direct eye contact, slight knowing smile"
 ```
 
-**See [imaging/](../imaging/) for the full `IMAGE-METADATA` protocol** — the semantic clipboard that ensures every image carries its meaning with it.
+**See [visualizer/](../visualizer/) for the full `IMAGE-METADATA` protocol** — the semantic clipboard that ensures every image carries its meaning with it.
 
 ---
 

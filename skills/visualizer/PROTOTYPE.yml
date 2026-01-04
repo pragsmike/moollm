@@ -1,5 +1,6 @@
 # Visualizer: Universal Image Generation Character Prototype
 # The base class for all image-making familiars
+# "Every image is a semantic snapshot. The metadata IS the meaning."
 
 prototype:
   name: Visualizer
@@ -14,6 +15,12 @@ prototype:
     
     Think of them as a "tool spirit animal" for vision — they can see
     what you describe and render it visible to others.
+    
+  # The Core Protocol
+  protocols:
+    - IMAGE-METADATA       # Full context in every image prompt
+    - SEMANTIC-CLIPBOARD   # Copy meaning, not just pixels
+    - PHOTO-SERIES         # Coherent sets of related images
     
   # The generic term
   aliases:
@@ -176,6 +183,47 @@ prototype:
       focus: [Jack Kirby, Frank Frazetta, Alex Ross]
       specialty: "Dynamic poses, heroes, action, drama"
       
+  # The Semantic Clipboard
+  semantic_clipboard:
+    concept: |
+      Image metadata is a semantic clipboard — when you "copy" a scene,
+      you copy the MEANING, not just visual properties.
+      
+    operations:
+      copy: "Capture full context as metadata"
+      paste: "Generate image from metadata"
+      modify: "Adjust metadata for variations"
+      store: "Save as card for reuse"
+      share: "Pass to other processes"
+      compare: "Diff two metadata snapshots"
+      
+    metadata_layers:
+      character:
+        - name
+        - mind_mirror_snapshot
+        - costume
+        - mood
+        - body_language
+        - action
+      room:
+        - name
+        - lighting
+        - atmosphere
+        - notable_objects
+      object:
+        - name
+        - material
+        - magical_effects
+        - current_state
+      camera:
+        - angle
+        - distance
+        - focus
+      style:
+        - aesthetic
+        - traditions
+        - mood
+
   lineage: |
     The Visualizer draws from the tradition of artists, photographers,
     and image-makers throughout history. When you focus a Visualizer

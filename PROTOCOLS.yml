@@ -735,7 +735,7 @@ LEARY-ESCAPE-PROTOCOL:
 
 IMAGE-METADATA:
   meaning: "Image prompts include full scene context as metadata."
-  location: skills/mind-mirror/
+  location: skills/visualizer/
   invoke_when: "Generating any image"
   
   rule: |
