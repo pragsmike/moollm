@@ -1,0 +1,64 @@
+# MIND-MIRROR Profile Template
+# Based on Timothy Leary's 1985 software
+# Rate each dimension 0-7: 0=Never, 2=Rarely, 5=Often, 7=Always
+
+mind_mirror:
+  subject: "{{ name }}"
+  
+  # BIO-ENERGY: Life force, mood, vitality, temperament
+  bio_energy:
+    energetic: 4      # 7=Wired, 0=Lethargic
+    enthusiastic: 4   # 7=Vivacious, 0=Worried
+    cheerful: 4       # 7=Silly, 0=Gloomy
+    easy_going: 4     # 7=Lazy, 0=Driven
+    calm: 4           # 7=Lethargic, 0=Wired
+    cautious: 4       # 7=Worried, 0=Vivacious
+    serious: 4        # 7=Gloomy, 0=Silly
+    restless: 4       # 7=Driven, 0=Lazy
+    
+  # EMOTIONAL INSIGHT: Interpersonal style, approach to others  
+  emotional:
+    forceful: 4       # 7=Dominating, 0=Submissive
+    confident: 4      # 7=Charismatic, 0=Resentful
+    friendly: 4       # 7=Over-Friendly, 0=Angry
+    docile: 4         # 7=Dependent, 0=Arrogant
+    timid: 4          # 7=Submissive, 0=Dominating
+    touchy: 4         # 7=Resentful, 0=Charismatic
+    irritable: 4      # 7=Angry, 0=Over-Friendly
+    proud: 4          # 7=Arrogant, 0=Dependent
+    
+  # MENTAL ABILITIES: Knowledge, creativity, imagination
+  mental:
+    well_informed: 4  # 7=Know-It-All, 0=Illiterate
+    innovative: 4     # 7=Visionary, 0=Imitative
+    creative: 4       # 7=Dreamy, 0=Unimaginative
+    impractical: 4    # 7=Unrealistic, 0=Pedantic
+    uneducated: 4     # 7=Illiterate, 0=Know-It-All
+    sensible: 4       # 7=Imitative, 0=Visionary
+    conventional: 4   # 7=Unimaginative, 0=Dreamy
+    practical: 4      # 7=Pedantic, 0=Unrealistic
+    
+  # SOCIAL INTERACTION: Class, tolerance, sophistication
+  social:
+    influential: 4    # 7=Snobbish, 0=Unknown
+    worldly: 4        # 7=Ultra-Sophisticated, 0=Naive
+    uninhibited: 4    # 7=Non-Conformist, 0=Puritanical
+    uncultured: 4     # 7=Wild, 0=Upright
+    lower_class: 4    # 7=Unknown, 0=Snobbish
+    unsophisticated: 4 # 7=Naive, 0=Ultra-Sophisticated
+    moralistic: 4     # 7=Puritanical, 0=Non-Conformist
+    respectable: 4    # 7=Upright, 0=Wild
+    
+  # Abbreviated profile (notable traits only)
+  abbreviated:
+    bio_energy: []    # e.g. [calm, serious]
+    emotional: []     # e.g. [confident, proud]
+    mental: []        # e.g. [well_informed, creative]
+    social: []        # e.g. [worldly, uninhibited]
+    
+  # Behavioral effects (how this profile affects character behavior)
+  effects:
+    speech_pattern: ""   # e.g. "speaks slowly, pauses often"
+    decision_style: ""   # e.g. "considers all options carefully"
+    social_approach: ""  # e.g. "friendly but keeps distance"
+    stress_response: ""  # e.g. "withdraws to think"

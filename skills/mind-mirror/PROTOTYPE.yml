@@ -6,402 +6,467 @@ skill:
   name: Mind Mirror
   type: personality_modeling
   priority: COGNITIVE
+
+origin:
+  name: "Timothy Leary's Mind Mirror"
+  year: 1985
+  publisher: "Electronic Arts"
+  copyright: "(c) 1985, 1986, Futique, Inc."
+  platforms: ["Apple ][", "Commodore 64", "IBM PC"]
   
-  origin:
-    creator: "Timothy Leary"
-    programmers: ["Peter Van den Beemt", "Bob Dietz"]
-    publisher: "Electronic Arts (Futique, Inc.)"
-    year: 1985
-    platforms: ["Apple ][", "Commodore 64", "IBM PC"]
+  creators:
+    design_and_script: "Timothy Leary"
+    programming:
+      - "Peter Van den Beemt"
+      - "Bob Dietz"
+      
+  technical_specs:
+    storage: "5.25 inch floppy disk"
+    interface: "Text-based with function key navigation"
+    memory_requirements: "48K RAM"
+    copy_protection: "Futique disk serialization"
+
+academic_foundation:
+  dissertation:
+    title: "The Social Dimensions of Personality: Group Process and Structure"
+    institution: "UC Berkeley"
+    year: 1950
+    significance: |
+      Pioneered objective measurement of interpersonal behavior.
+      Developed the Interpersonal Circumplex model.
+      
+  interpersonal_circumplex:
+    vertical_axis:
+      name: "POWER"
+      positive: "Dominance (taking charge, leading, controlling)"
+      negative: "Submission (following, deferring, yielding)"
+    horizontal_axis:
+      name: "AFFILIATION"
+      positive: "Love (supporting, accepting, nurturing)"
+      negative: "Hostility (opposing, rejecting, attacking)"
+    insight: |
+      By arranging these as perpendicular axes, Leary created a circular
+      space where every interpersonal behavior has a location.
+
+# LEARY'S DIRECT QUOTES
+
+leary_quotes:
+  
+  introduction: |
+    "Hello, I'm Timothy Leary, welcome to Mind Mirror. For about two years
+    I've been working on this software program. It's called Mind Mirror.
+    It allows you to digitalize your thoughts."
     
-  foundation: |
-    Based on Leary's PhD dissertation "The Social Dimensions of Personality"
-    and the Interpersonal Behavior Circle (Leary Circumplex).
+  on_academic_foundation: |
+    "This is based upon my PhD thesis when I was a psychologist at
+    the University of California in 1950. In those days I learned
+    how to digitalize thoughts about yourself and how you'd like
+    to be and your mother and your father."
     
-    Leary designed personality assessments before LSD.
-    He escaped prison using his own test — answered to appear low-risk.
-    Your self-knowledge is your most powerful tool.
+  on_the_technique: |
+    "It's basically a technique you take your own stereotypes of self
+    or whatever it can be and see it on the screen and then you can
+    massage that thought, you can change it. How would I like to be?
+    How was I when I was a child? How would I be if I was a woman?
+    You get the picture - suddenly you're freed from this heavy
+    concept of self."
     
-  purpose: |
-    Structured framework for modeling personalities:
-    - Self-reflection (current vs ideal self)
-    - Character creation (rich, dimensional NPCs)
-    - Empathy exploration (role-play through perspectives)
-    - Comparison (any two personalities)
+  on_appliance_concept: |
+    "I like the word Appliance because an appliance is something that
+    you use at home and it's for your own personal comfort or your
+    personal entertainment or your personal education."
+    
+  on_thought_laundering: |
+    "With the wonders of the personal computer, yeah, you can pop
+    your thoughts in your tired old concept, wash them and dry them
+    and pull them around, and you can see my thoughts. I think make
+    us smarter and happier and hopefully funnier."
+    
+  on_mirror_philosophy: |
+    "Remember the title - it's a mirror. Now a best friend is your
+    mirror because your mirror doesn't say 'well you bad boy get a
+    haircut' or the mirror doesn't say 'hey turkey fix your tie' -
+    you have to decide that. It's your own mind and we all have
+    these thoughts in our mind made up of these complicated little,
+    you know, Erector Set structures."
+    
+  on_intimacy: |
+    "The ultimate intimacy is... you can love them, you can sleep
+    with them, safe sex of course, and then you can even get married.
+    But the real intimacy is where you show them your personal
+    database - you show your Mind Mirror."
+    
+  on_his_product: |
+    "I love my product. You know what my product is? The human
+    mind and human hope and human enthusiasm."
+    
+  on_generational_power: |
+    "You're the first generation in human history to know how to
+    control your own nervous system, change your own reality.
+    Tune in and take over! Blow your own mind, make up your own mind."
+    
+  on_life_simulations: |
+    "There are 3,200 micro events from anyone's life. You're in
+    the womb, your first day of school, you're playing all these
+    roles. It allows you turning thoughts around so you can do
+    all these things."
+    
+  on_resistance: |
+    "Maybe people don't want to know how they're thinking. Maybe
+    they want a mind mirror - you want to really see what's on
+    your mind? Get out of here! Or you want to show me what's
+    on your mind? Your boot up Mind Mirror and let's get some
+    of your thought."
+
+# BOB DIETZ'S RECOLLECTIONS
+
+dietz_quotes:
+  
+  on_development: |
+    "It's been nearly 25 years since my dear friend Timothy Leary
+    and I sat down with a couple of programmers and started outlining
+    what was to become one of the very first software computer games
+    called Mind Mirror. He called it a mental application because it
+    is used to help people reflect upon their world more intelligently."
+    
+  on_learys_vision: |
+    "His vision was way out there in the future so a lot of what we
+    had to do was kind of pull it back a little bit and say well,
+    this machine can't do all that. He always had these kind of big
+    vision things of wanting to do three-dimensionally and you know
+    have the computer react to everything you said and with artificial
+    intelligence."
+    
+  on_psychometrics: |
+    "The psychological work he did he referred to as psychometrics
+    which was quantizing psychological characteristics."
+    
+  on_social_networking: |
+    "In this game Mind Mirror, it wasn't just one person playing
+    against another or one person playing against the game - he
+    saw it as very much a social networking tool."
+    
+  on_internet_vision: |
+    "Timothy was a very early advocate of the internet before it
+    was even called the internet. He recognized that this was
+    going to have a great impact on society."
+    
+  on_empowerment: |
+    "He was all about self-empowerment, giving the users the
+    keys to the kingdom."
+    
+  on_learys_internet_dream: |
+    "I cannot begin to tell you how much Timothy Leary would
+    have embraced and loved the notion of seeing Mind Mirror
+    applied on the internet."
+    
+  on_people_power: |
+    "What's happening now is that the power is coming into the
+    hands of the people, which was totally his thing."
 
 # THE FOUR THOUGHT PLANES
-# Each plane is a circle of 8 dimensions
-# Each dimension has inner (moderate) and outer (extreme) words
 
 thought_planes:
 
   BIO_ENERGY:
     name: "Bio-Energy"
-    description: "Life force, mood, vitality, temperament"
+    description: "Life force, mood, vitality and temperament"
     
-    dimensions:
-      - name: energetic
-        inner: "Energetic"
-        outer: "Wired"
-        opposite: calm
-        
-      - name: enthusiastic
-        inner: "Enthusiastic"
-        outer: "Vivacious"
-        opposite: cautious
-        
-      - name: cheerful
-        inner: "Cheerful"
-        outer: "Silly"
-        opposite: serious
-        
-      - name: easy_going
-        inner: "Easy-Going"
-        outer: "Lazy"
-        opposite: restless
-        
-      - name: calm
-        inner: "Calm"
-        outer: "Lethargic"
-        opposite: energetic
-        
-      - name: cautious
-        inner: "Cautious"
-        outer: "Worried"
-        opposite: enthusiastic
-        
-      - name: serious
-        inner: "Serious"
-        outer: "Gloomy"
-        opposite: cheerful
-        
-      - name: restless
-        inner: "Restless"
-        outer: "Driven"
-        opposite: easy_going
+    inner_circle:
+      - { name: Energetic, outer: Wired, opposite: Calm }
+      - { name: Enthusiastic, outer: Vivacious, opposite: Cautious }
+      - { name: Cheerful, outer: Silly, opposite: Serious }
+      - { name: Easy-Going, outer: Lazy, opposite: Restless }
+      - { name: Calm, outer: Lethargic, opposite: Energetic }
+      - { name: Cautious, outer: Worried, opposite: Enthusiastic }
+      - { name: Serious, outer: Gloomy, opposite: Cheerful }
+      - { name: Restless, outer: Driven, opposite: Easy-Going }
 
   EMOTIONAL_INSIGHT:
     name: "Emotional Insight"
-    description: "Interpersonal style, angle of approach to others"
+    description: "Interpersonal style and angle of approach to others"
     
-    dimensions:
-      - name: forceful
-        inner: "Forceful"
-        outer: "Dominating"
-        opposite: timid
-        
-      - name: confident
-        inner: "Confident"
-        outer: "Charismatic"
-        opposite: touchy
-        
-      - name: friendly
-        inner: "Friendly"
-        outer: "Over-Friendly"
-        opposite: irritable
-        
-      - name: docile
-        inner: "Docile"
-        outer: "Dependent"
-        opposite: proud
-        
-      - name: timid
-        inner: "Timid"
-        outer: "Submissive"
-        opposite: forceful
-        
-      - name: touchy
-        inner: "Touchy"
-        outer: "Resentful"
-        opposite: confident
-        
-      - name: irritable
-        inner: "Irritable"
-        outer: "Angry"
-        opposite: friendly
-        
-      - name: proud
-        inner: "Proud"
-        outer: "Arrogant"
-        opposite: docile
+    inner_circle:
+      - { name: Forceful, outer: Dominating, opposite: Timid }
+      - { name: Confident, outer: Charismatic, opposite: Touchy }
+      - { name: Friendly, outer: Over-Friendly, opposite: Irritable }
+      - { name: Docile, outer: Dependent, opposite: Proud }
+      - { name: Timid, outer: Submissive, opposite: Forceful }
+      - { name: Touchy, outer: Resentful, opposite: Confident }
+      - { name: Irritable, outer: Angry, opposite: Friendly }
+      - { name: Proud, outer: Arrogant, opposite: Docile }
 
   MENTAL_ABILITIES:
     name: "Mental Abilities"
-    description: "Knowledge, creativity, information grasp, imagination"
+    description: "Knowledge, creativity, information grasp, and imagination"
     
-    dimensions:
-      - name: well_informed
-        inner: "Well-Informed"
-        outer: "Know-It-All"
-        opposite: uneducated
-        
-      - name: innovative
-        inner: "Innovative"
-        outer: "Visionary"
-        opposite: sensible
-        
-      - name: creative
-        inner: "Creative"
-        outer: "Dreamy"
-        opposite: conventional
-        
-      - name: impractical
-        inner: "Impractical"
-        outer: "Unrealistic"
-        opposite: practical
-        
-      - name: uneducated
-        inner: "Uneducated"
-        outer: "Illiterate"
-        opposite: well_informed
-        
-      - name: sensible
-        inner: "Sensible"
-        outer: "Imitative"
-        opposite: innovative
-        
-      - name: conventional
-        inner: "Conventional"
-        outer: "Unimaginative"
-        opposite: creative
-        
-      - name: practical
-        inner: "Practical"
-        outer: "Pedantic"
-        opposite: impractical
+    inner_circle:
+      - { name: Well-Informed, outer: Know-It-All, opposite: Uneducated }
+      - { name: Innovative, outer: Visionary, opposite: Sensible }
+      - { name: Creative, outer: Dreamy, opposite: Conventional }
+      - { name: Impractical, outer: Unrealistic, opposite: Practical }
+      - { name: Uneducated, outer: Illiterate, opposite: Well-Informed }
+      - { name: Sensible, outer: Imitative, opposite: Innovative }
+      - { name: Conventional, outer: Unimaginative, opposite: Creative }
+      - { name: Practical, outer: Pedantic, opposite: Impractical }
 
   SOCIAL_INTERACTION:
     name: "Social Interaction"
-    description: "Class, tolerance, sophistication, moral conventionality"
+    description: "Class, tolerance, sophistication and moral conventionality"
     
-    dimensions:
-      - name: influential
-        inner: "Influential"
-        outer: "Snobbish"
-        opposite: lower_class
-        
-      - name: worldly
-        inner: "Worldly"
-        outer: "Ultra-Sophisticated"
-        opposite: unsophisticated
-        
-      - name: uninhibited
-        inner: "Uninhibited"
-        outer: "Non-Conformist"
-        opposite: moralistic
-        
-      - name: uncultured
-        inner: "Uncultured"
-        outer: "Wild"
-        opposite: respectable
-        
-      - name: lower_class
-        inner: "Lower-Class"
-        outer: "Unknown"
-        opposite: influential
-        
-      - name: unsophisticated
-        inner: "Unsophisticated"
-        outer: "Naive"
-        opposite: worldly
-        
-      - name: moralistic
-        inner: "Moralistic"
-        outer: "Puritanical"
-        opposite: uninhibited
-        
-      - name: respectable
-        inner: "Respectable"
-        outer: "Upright"
-        opposite: uncultured
+    inner_circle:
+      - { name: Influential, outer: Snobbish, opposite: Lower-Class }
+      - { name: Worldly, outer: Ultra-Sophisticated, opposite: Unsophisticated }
+      - { name: Uninhibited, outer: Non-Conformist, opposite: Moralistic }
+      - { name: Uncultured, outer: Wild, opposite: Respectable }
+      - { name: Lower-Class, outer: Unknown, opposite: Influential }
+      - { name: Unsophisticated, outer: Naive, opposite: Worldly }
+      - { name: Moralistic, outer: Puritanical, opposite: Uninhibited }
+      - { name: Respectable, outer: Upright, opposite: Uncultured }
 
-# PLAIN TALK / SHRINK-RAP VOCABULARY
-# Two modes of describing the same traits
+# THE 16 PERSONALITY SCALES
 
-vocabulary:
-  plain_talk:
-    # Bio-Energy
-    peppy: { shrink_rap: "Hyper-Manic", polarity: "+", plane: "bio_energy" }
-    laid_back: { shrink_rap: "Low-Energy", polarity: "-", plane: "bio_energy" }
-    intense: { shrink_rap: "Agitated", polarity: "+", plane: "bio_energy" }
-    low_key: { shrink_rap: "Tranquil", polarity: "-", plane: "bio_energy" }
-    sad: { shrink_rap: "Melancholic", polarity: "-", plane: "bio_energy" }
-    happy: { shrink_rap: "Euphoric", polarity: "+", plane: "bio_energy" }
-    hesitant: { shrink_rap: "Listless", polarity: "+", plane: "bio_energy" }
-    gung_ho: { shrink_rap: "Wholehearted", polarity: "-", plane: "bio_energy" }
-    
-    # Emotional Insight
-    bossy: { shrink_rap: "Dictatorial", polarity: "-", plane: "emotional_insight" }
-    shy: { shrink_rap: "Passive", polarity: "+", plane: "emotional_insight" }
-    cocky: { shrink_rap: "Haughty", polarity: "-", plane: "emotional_insight" }
-    cute: { shrink_rap: "Eager-to-Please", polarity: "+", plane: "emotional_insight" }
-    grumpy: { shrink_rap: "Hostile", polarity: "-", plane: "emotional_insight" }
-    sweet: { shrink_rap: "Congenial", polarity: "+", plane: "emotional_insight" }
-    whining: { shrink_rap: "Complaining", polarity: "-", plane: "emotional_insight" }
-    encouraging: { shrink_rap: "Nurturant", polarity: "+", plane: "emotional_insight" }
-    
-    # Mental Abilities
-    knowledgeable: { shrink_rap: "Intelligent", polarity: "-", plane: "mental_abilities" }
-    dumb: { shrink_rap: "Ignorant", polarity: "+", plane: "mental_abilities" }
-    organized: { shrink_rap: "Efficient", polarity: "+", plane: "mental_abilities" }
-    flaky: { shrink_rap: "Disorganized", polarity: "-", plane: "mental_abilities" }
-    closed_minded: { shrink_rap: "Literal-Minded", polarity: "+", plane: "mental_abilities" }
-    imaginative: { shrink_rap: "Original", polarity: "-", plane: "mental_abilities" }
-    by_the_book: { shrink_rap: "Narrow-Minded", polarity: "-", plane: "mental_abilities" }
-    ingenious: { shrink_rap: "Inventive", polarity: "+", plane: "mental_abilities" }
-    
-    # Social Interaction
-    vip: { shrink_rap: "Aristocratic", polarity: "-", plane: "social_interaction" }
-    social_nobody: { shrink_rap: "Insignificant", polarity: "+", plane: "social_interaction" }
-    proper: { shrink_rap: "Pillar-of-the-Community", polarity: "+", plane: "social_interaction" }
-    rowdy: { shrink_rap: "Rebellious", polarity: "-", plane: "social_interaction" }
-    straight_arrow: { shrink_rap: "Inhibited", polarity: "+", plane: "social_interaction" }
-    free_living: { shrink_rap: "Social-Maverick", polarity: "-", plane: "social_interaction" }
-    square: { shrink_rap: "Small-Townish", polarity: "-", plane: "social_interaction" }
-    sophisticated: { shrink_rap: "Cosmopolitan", polarity: "+", plane: "social_interaction" }
-
-# SCALE SYSTEM
-
-scale:
-  range: [0, 7]
-  labels:
-    0: "Never"
-    2: "Rarely"
-    5: "Often"
-    7: "Always"
-    
-  interpretation:
-    0_2: "inner (moderate)"
-    3_4: "balanced"
-    5_7: "outer (extreme)"
-
-# EXERCISES
-
-exercises:
+personality_scales:
   
-  SELF_PORTRAIT:
-    name: "Self Portrait"
-    description: "Compare your self with your ideal"
-    subjects:
-      - "YOUR SELF: As you are right now"
-      - "YOUR IDEAL SELF: Who you want to become"
-    quote: |
-      "In a magic mirror we see reflected not only our lives,
-      but the lives of all men that have been."
-      — Oliver Wendell Holmes
-      
-  SELF_RANGE:
-    name: "Self Range"
-    description: "Compare your best and worst selves"
-    subjects:
-      - "YOUR BEST SELF: You at your peak"
-      - "YOUR WORST SELF: You at your lowest"
-    insight: |
-      Large gaps between best and worst indicate
-      significant swings in that dimension.
-      
-  ROLE_PLAY_ODYSSEY:
-    name: "Role-Play Odyssey"
-    description: "Life Simulation through different personalities"
-    mode: "MIND PLAY — Sophisticated Head Games"
-    how: |
-      Test your empathy by navigating situations
-      through another personality's lens.
+  - id: energy
+    name: Energy
+    description: "Vitality and activity level"
+    plain_talk: { positive: Peppy, negative: Laid-Back }
+    shrink_rap: { positive: Hyper-Manic, negative: Low-Energy }
+    
+  - id: intensity
+    name: Intensity
+    description: "Emotional force and reaction strength"
+    plain_talk: { positive: Intense, negative: Low-Key }
+    shrink_rap: { positive: Agitated, negative: Tranquil }
+    
+  - id: mood
+    name: Mood
+    description: "Overall emotional state"
+    plain_talk: { positive: Happy, negative: Sad }
+    shrink_rap: { positive: Euphoric, negative: Melancholic }
+    
+  - id: commitment
+    name: Commitment
+    description: "Engagement and dedication level"
+    plain_talk: { positive: Hesitant, negative: Gung-Ho }
+    shrink_rap: { positive: Listless, negative: Wholehearted }
+    
+  - id: assertiveness
+    name: Assertiveness
+    description: "Dominance in interactions"
+    plain_talk: { positive: Shy, negative: Bossy }
+    shrink_rap: { positive: Passive, negative: Dictatorial }
+    
+  - id: confidence
+    name: Confidence
+    description: "Self-assurance levels"
+    plain_talk: { positive: Cute, negative: Cocky }
+    shrink_rap: { positive: Eager-to-Please, negative: Haughty }
+    
+  - id: temperament
+    name: Temperament
+    description: "General disposition"
+    plain_talk: { positive: Sweet, negative: Grumpy }
+    shrink_rap: { positive: Congenial, negative: Hostile }
+    
+  - id: supportiveness
+    name: Supportiveness
+    description: "Tendency to support or criticize"
+    plain_talk: { positive: Encouraging, negative: Whining }
+    shrink_rap: { positive: Nurturant, negative: Complaining }
+    
+  - id: intelligence
+    name: Intelligence
+    description: "Perceived knowledge and mental ability"
+    plain_talk: { positive: Dumb, negative: Knowledgeable }
+    shrink_rap: { positive: Ignorant, negative: Intelligent }
+    
+  - id: organization
+    name: Organization
+    description: "Systematic approach to life"
+    plain_talk: { positive: Organized, negative: Flaky }
+    shrink_rap: { positive: Efficient, negative: Disorganized }
+    
+  - id: creativity
+    name: Creativity
+    description: "Innovation and imagination"
+    plain_talk: { positive: Closed-Minded, negative: Imaginative }
+    shrink_rap: { positive: Literal-Minded, negative: Original }
+    
+  - id: adaptability
+    name: Adaptability
+    description: "Flexibility in thinking"
+    plain_talk: { positive: Ingenious, negative: By-the-Book }
+    shrink_rap: { positive: Inventive, negative: Narrow-Minded }
+    
+  - id: social_status
+    name: Social Status
+    description: "Perceived position in society"
+    plain_talk: { positive: Social-Nobody, negative: V.I.P. }
+    shrink_rap: { positive: Insignificant, negative: Aristocratic }
+    
+  - id: conformity
+    name: Conformity
+    description: "Adherence to social norms"
+    plain_talk: { positive: Proper, negative: Rowdy }
+    shrink_rap: { positive: Pillar-of-the-Community, negative: Rebellious }
+    
+  - id: lifestyle
+    name: Lifestyle
+    description: "Approach to living"
+    plain_talk: { positive: Straight-Arrow, negative: Free-Living }
+    shrink_rap: { positive: Inhibited, negative: Social-Maverick }
+    
+  - id: worldliness
+    name: Worldliness
+    description: "Sophistication and experience"
+    plain_talk: { positive: Sophisticated, negative: Square }
+    shrink_rap: { positive: Cosmopolitan, negative: Small-Townish }
 
-# MODES
+# RATING SYSTEM
+
+rating_system:
+  scale: [0, 7]
+  labels:
+    0: Never
+    2: Rarely
+    5: Often
+    7: Always
+  visualization:
+    extreme_traits: "plotted far from center"
+    moderate_traits: "plotted near center"
+
+# MODES AND EXERCISES
 
 modes:
   
-  MIND_TOOLS:
-    description: "Enhance Insight, Mental Fitness, Learning Skills and Performance"
-    exercises:
-      - psychological_insight
-      - career_productivity
-      - education
+  mind_tools:
+    tagline: "Enhance Insight, Mental Fitness, Learning Skills and Performance"
+    areas:
+      psychological_insight: "Mind-Scope your life performances past, present, future"
+      career_productivity: "Review career choices, job decisions, office relationships"
+      education: "Use Mind Mirror in a variety of learning situations"
       
-  MIND_PLAY:
-    description: "Significant Pursuits, Sophisticated Head Games"
-    exercises:
-      - role_play_odyssey
-      - comparison
-      - simulation
+  mind_play:
+    tagline: "Significant Pursuits. Sophisticated Head Games."
+    areas:
+      entertainment: "Celebrity and cultural comparisons"
+      games: "Thought experiments and mental play"
+      exploration: "Consciousness adventures"
 
-# LEVELS
+exercises:
+  
+  self_portrait:
+    name: "Self Portrait"
+    instruction: "Compare your self with your ideal"
+    subjects:
+      - "YOUR SELF: Scope your self as you are right now"
+      - "YOUR IDEAL SELF: Scope the person you want to become"
+      
+  self_range:
+    name: "Self-Range"
+    instruction: "Compare your best and worst selves"
+    subjects:
+      - "YOUR BEST SELF: You at your peak"
+      - "YOUR WORST SELF: You at your lowest"
 
 levels:
-  - name: "Beginner"
+  - name: Beginner
     description: "Exercises to learn thought modification and use of Mind-Maps"
-    
-  - name: "Intermediate"
+  - name: Intermediate
     description: "Suggested topics for Mind-Scoping; includes some coaching"
-    
-  - name: "Master"
-    description: "You're on your own. No coaching. Choose Auto-Play or Inter-Play."
-    
-  - name: "Professional Consulting"
+  - name: Master
+    description: "You're on your own. No coaching. Choose Auto-Play or Inter-Play"
+  - name: Professional Consulting
     description: "For the Psychologist, Personnel Manager, and Teacher/Student"
 
-# INTERACTION MODES
-
 interaction_modes:
-  AUTO_PLAY: "System guides you through"
-  INTER_PLAY: "Mirror your own thoughts, compare with others"
+  auto_play: "System guides you through"
+  inter_play: "Mirror your own thoughts. Compare them with others."
 
-# K-LINE INTEGRATION
+# PRISON ESCAPE STORY
 
-k_line_mapping: |
-  Each Mind Mirror dimension IS a K-line:
+prison_escape:
+  date: "September 12, 1970"
+  location: "California Men's Colony-West, San Luis Obispo"
   
-  Type "CONFIDENT" → activates:
-    - Charismatic (extreme form)
-    - Part of EMOTIONAL_INSIGHT plane
-    - Opposite of Timid
-    - Associated speech patterns and behaviors
+  background: |
+    Sentenced to 20 years for marijuana possession, Leary was given
+    psychological tests upon intake — including the Leary Interpersonal
+    Behavior Inventory, a test he himself had designed.
     
-  Mind Mirror profiles are structured K-line bundles.
+  strategy: |
+    Understanding exactly what the test measured, Leary answered to
+    create the profile of a mild-mannered, conforming individual with
+    interest in forestry, no leadership tendencies, and respect for
+    authority.
+    
+  result: |
+    Classified as minimum security risk. Assigned to outdoor work
+    detail with minimal supervision. Escaped by climbing a tree near
+    the perimeter fence and shimmying along a telephone cable over
+    the razor wire.
+    
+  lesson: |
+    Understanding how you're measured gives you power.
+    Consciousness of systems enables transcendence.
 
-# MOOLLM INTEGRATION
+# DISCLAIMERS
 
-integration:
+disclaimer: |
+  "In this program you will find references and statements attributed
+  to several hundred public figures and historical personages. All
+  such statements attributed to living persons are fictional; they
+  are intended as gentle satire and provocative humor. In no case
+  is there any implication that the statements reflect the true
+  sentiments of the 'alleged' speaker."
+
+# THEME SONG
+
+theme_song:
+  lyrics: |
+    You can be anyone this time around
+    You can be anything this time around
+    It encourages me to change, to improve, to grow
+    You can be anything this time around
+
+# THE PC IS THE LSD OF THE 1990s
+
+digital_consciousness:
   
-  character_profiles: |
-    Every character can have a Mind Mirror profile.
-    Abbreviated: just list the extreme traits.
-    Full: all 32 dimensions rated 0-7.
+  leary_insight: |
+    "I turned on that Apple computer, and it was like taking
+    psychedelics all over again. The screen lit up, I could
+    control what appeared, I could create realities, store
+    them, share them. I realized this was the tool we'd been
+    looking for — a consciousness-expanding technology that
+    was legal, accessible, and infinitely programmable."
     
-  soul_chat_influence: |
-    Mind Mirror dimensions affect how characters speak:
-    - calm → speaks slowly, pauses
-    - confident → never apologizes unnecessarily
-    - creative → uses unusual metaphors
-    - uninhibited → occasionally vulgar
+  evolution:
+    1960s: "Turn on, tune in, drop out (consciousness via chemistry)"
+    1980s: "Turn on, boot up, jack in (consciousness via computers)"
     
-  adventure_npcs: |
-    NPC Mind Mirror profiles affect:
-    - How they respond to player
-    - What advertisements they generate
-    - Decision-making in simulations
-    
-  coatroom_modification: |
-    Costumes can modify Mind Mirror dimensions.
-    Wearing a cape might boost "confident" by 2.
+  parallels:
+    - "Both showed reality was programmable"
+    - "Both challenged authority and centralized control"
+    - "Both empowered individual consciousness exploration"
 
-# REPRESENTATION ETHICS
+# HISTORICAL SIGNIFICANCE
 
-ethics: |
-  Mind Mirror profiles are MODELS, not CLAIMS.
-  
-  Creating a profile for a real person:
-  - Base on documented traits only
-  - Cite sources
-  - Mark as "profile" not "person"
-  - This is tradition invocation, not impersonation
-  
-  Original disclaimer (1985):
-  "All statements attributed to living persons are fictional;
-  they are intended as gentle satire and provocative humor.
-  In no case is there any implication that the statements
-  reflect the true sentiments of the 'alleged' speaker."
+significance:
+  firsts:
+    - "First major software to bridge academic psychology with personal computing"
+    - "Preceded Myers-Briggs computerization by years"
+    - "Pioneered gamification of psychology"
+    - "Demonstrated viability of psychological software"
+    - "Proved consciousness could be made interactive"
+    
+  influence:
+    - "Visual personality mapping → modern data visualization"
+    - "Gamified self-assessment → app-based psychology"
+    - "Comparative analysis → personality matching algorithms"
+    - "Interactive scenarios → serious games"
 
 # PROTOCOLS
 
@@ -421,30 +486,50 @@ protocols:
 # DOVETAILS
 
 dovetails_with:
-  - representation-ethics/: "Ethical personality modeling"
-  - hero-story/: "Cards can include Mind Mirror profiles"
-  - card/: "Character cards embed Mind Mirror data"
-  - soul-chat/: "Mind Mirror influences character voice"
-  - adventure/: "NPCs have Mind Mirror profiles"
-  - coatroom/: "Costumes modify dimensions"
+  - skill: representation-ethics
+    relationship: "Mind Mirror profiles are ethical personality models"
+  - skill: hero-story
+    relationship: "Cards can include Mind Mirror profiles"
+  - skill: card
+    relationship: "Character cards embed Mind Mirror data"
+  - skill: soul-chat
+    relationship: "Mind Mirror dimensions influence character voice"
+  - skill: adventure
+    relationship: "NPCs have Mind Mirror profiles"
 
 # SOURCES
 
 sources:
-  - name: "Mind Mirror Apple ][ Disk"
+  
+  - name: "Mind Mirror Apple ][ Disk Text Extraction"
     url: "https://donhopkins.com/home/mind-mirror.txt"
-    content: "Full text extraction"
+    credit: "Don Hopkins"
     
   - name: "Mind Mirror Scales JSON"
     url: "https://donhopkins.com/home/mind-mirror.json"
-    content: "Structured scale data"
+    credit: "Don Hopkins"
     
   - name: "USC Mind Mirror Archive"
     url: "https://scalar.usc.edu/works/timothy-leary-software/index"
     
   - name: "Leary PhD Dissertation"
     url: "https://archive.org/details/leary/leary.300dpi/mode/2up"
-    title: "The Social Dimensions of Personality"
+    title: "The Social Dimensions of Personality: Group Process and Structure"
     
   - name: "Interpersonal Circumplex"
     url: "https://en.wikipedia.org/wiki/Interpersonal_circumplex"
+    
+  - name: "Mind Mirror on Steam"
+    url: "https://store.steampowered.com/app/1603300/Timothy_Learys_Mind_Mirror/"
+
+# PHILOSOPHICAL QUOTES
+
+quotes:
+  
+  jean_cocteau: |
+    "Mirrors should reflect a little before throwing back images."
+    
+  oliver_wendell_holmes: |
+    "In a magic mirror we see reflected not only our lives, but the
+    lives of all men that have been. When I think on this majestic
+    theme, my eyes dazzle."

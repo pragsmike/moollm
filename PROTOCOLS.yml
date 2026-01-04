@@ -565,9 +565,22 @@ MIND-MIRROR:
   location: skills/mind-mirror/
   invoke_when: "Modeling characters, self-reflection, personality comparison"
   
-  origin: |
-    Timothy Leary's 1985 software, based on his PhD dissertation
-    "The Social Dimensions of Personality" and the Interpersonal Circumplex.
+  origin:
+    creator: "Timothy Leary"
+    programmers: ["Peter Van den Beemt", "Bob Dietz"]
+    publisher: "Electronic Arts (Futique, Inc.)"
+    year: 1985
+    platforms: ["Apple ][", "Commodore 64", "IBM PC"]
+    foundation: |
+      Based on Leary's 1950 PhD dissertation at UC Berkeley:
+      "The Social Dimensions of Personality: Group Process and Structure"
+      which pioneered the Interpersonal Circumplex model.
+      
+  prison_escape_validation: |
+    In 1970, Leary was administered his own personality test during prison intake.
+    Knowing exactly what it measured, he answered strategically to appear low-risk.
+    Assigned minimum security. Escaped over the fence.
+    "Understanding the test lets you pass the test."
     
   four_planes:
     BIO-ENERGY: "Life force, mood, vitality, temperament"
@@ -580,11 +593,26 @@ MIND-MIRROR:
     Each dimension has inner (moderate) and outer (extreme) words
     Rate 0-7: Never → Rarely → Often → Always
     
-  integration: |
-    - Character DNA for NPCs
-    - Soul-Chat voice calibration
-    - Adventure decision-making
-    - Self-reflection exercises
+  dual_vocabulary:
+    PLAIN-TALK: "Accessible words (Peppy, Laid-Back)"
+    SHRINK-RAP: "Professional terms (Hyper-Manic, Low-Energy)"
+    toggle: "SPACE BAR flips between vocabularies"
+    
+  leary_quote: |
+    "It's basically a technique you take your own stereotypes of self 
+    and see it on the screen and then you can massage that thought, 
+    you can change it. How would I like to be? How was I when I was 
+    a child? You get the picture - suddenly you're freed from this 
+    heavy concept of self."
+    
+  integration:
+    - "Character DNA for NPCs"
+    - "Soul-Chat voice calibration"
+    - "Adventure decision-making"
+    - "Self-reflection exercises"
+    - "Coatroom costume effects"
+    
+  ethics: "See skills/mind-mirror/ETHICS.md"
 
 THOUGHT-PLANE:
   meaning: "One of the four circular personality dimension systems."

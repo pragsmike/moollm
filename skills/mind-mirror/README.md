@@ -1,484 +1,329 @@
 # Mind Mirror
 
 > *"Mirrors should reflect a little before throwing back images."*
-> — Jean Cocteau
+> — Jean Cocteau (quoted in Mind Mirror)
 
 ---
 
-## What Is It?
+## What Is Mind Mirror?
 
-**Mind Mirror** is MOOLLM's personality modeling system, inspired by Timothy Leary's groundbreaking 1985 software of the same name. It provides a structured framework for:
+**Mind Mirror** is a personality modeling system based on Timothy Leary's 1985 software published by Electronic Arts. It transforms Leary's rigorous academic work (his 1950 PhD dissertation at UC Berkeley) into an interactive tool for self-discovery and character modeling.
 
-- **Self-reflection** — Map your current self vs. your ideal self
-- **Character modeling** — Create rich, dimensional NPCs and personas
-- **Empathy exploration** — Role-play through others' perspectives
-- **Comparison** — Compare any two personalities on multiple dimensions
-
-Mind Mirror uses **four Thought Planes**, each with **eight dimensions** arranged in a circle — like a psychological pie menu.
+In MOOLLM, Mind Mirror provides:
+- **32 personality dimensions** across four "Thought Planes"
+- **Dual vocabulary** (Plain Talk and Shrink-Rap)
+- **0-7 rating scale** for each dimension
+- **Character DNA** for NPCs and player avatars
+- **Self-reflection exercises** for personal development
 
 ---
 
-## The Lineage
+## The Academic Foundation
 
-| Source | Contribution |
-|--------|--------------|
-| **Timothy Leary** | Mind Mirror (1985), Interpersonal Circumplex, PhD dissertation on personality |
-| **Electronic Arts** | Original publisher (when EA made weird, beautiful things) |
-| **Peter Van den Beemt & Bob Dietz** | Original programmers |
-| **Leary's PhD** | "The Social Dimensions of Personality" — the foundation |
+Before LSD, before Harvard, before counterculture, Timothy Leary was a legitimate psychologist. His 1950 PhD dissertation pioneered the **Interpersonal Circumplex** — a model that maps personality on a circle with two axes:
 
-### The Jail Break Story
+- **Vertical:** Dominance ↔ Submission
+- **Horizontal:** Affiliation (Love) ↔ Hostility (Hate)
 
-Before LSD, Leary designed the **Interpersonal Behavior Circle** personality assessment. In the 1970s, when imprisoned, he was given a psychological assessment to gauge escape risk — *a test he had designed*. Understanding the criteria, he answered to appear low-risk, was assigned minimum security, and escaped.
+The *Annual Review of Psychology* called his 1957 book *The Interpersonal Diagnosis of Personality* "the most important book on psychotherapy of the year."
 
-**Your own self-knowledge is your most powerful tool.**
+This wasn't mysticism — it was measurable, testable psychology.
+
+---
+
+## The Prison Escape: Theory Validated
+
+On September 12, 1970, Leary provided the most dramatic validation of his own work.
+
+Imprisoned with a 20-year sentence, he was administered psychological tests during intake — including his own **Leary Interpersonal Behavior Inventory**.
+
+Knowing exactly what it measured, he answered strategically:
+- Low dominance (won't challenge authority)
+- High cooperation (will follow rules)
+- Conventional interests (forestry, gardening)
+- No leadership tendencies
+
+**Result:** Assigned minimum security. Outdoor work detail.
+
+Then he climbed a telephone wire over the prison fence.
+
+> *"Understanding the test lets you pass the test. Consciousness of the game changes the game. The only prison is the one you cannot see."*
+
+---
+
+## Mind Mirror Software (1985)
+
+Published by Electronic Arts when they still made "weird, beautiful things":
+
+| | |
+|---|---|
+| **Design & Script** | Timothy Leary |
+| **Programming** | Peter Van den Beemt, Bob Dietz |
+| **Publisher** | Futique, Inc. / Electronic Arts |
+| **Platforms** | Apple ][, Commodore 64, IBM PC |
+
+### Leary's Introduction
+
+> *"Hello, I'm Timothy Leary, welcome to Mind Mirror. For about two years I've been working on this software program. It allows you to digitalize your thoughts."*
+
+> *"This is based upon my PhD thesis when I was a psychologist at the University of California in 1950. In those days I learned how to digitalize thoughts about yourself and how you'd like to be and your mother and your father."*
 
 ---
 
 ## The Four Thought Planes
 
-Mind Mirror organizes personality into four planes, each a circle of eight dimensions:
+Mind Mirror organizes personality into four circular maps, each with 8 dimensions arranged around a center.
 
-### 1. BIO-ENERGY (Life Force)
-
-Mood, vitality, temperament, energy level.
-
-```
-                    Energetic
-                        │
-          Restless ─────┼───── Enthusiastic
-              │         │         │
-        Serious ────────┼──────── Cheerful
-              │         │         │
-          Cautious ─────┼───── Easy-Going
-                        │
-                      Calm
-```
+### 1. BIO-ENERGY
+*Life force, mood, vitality, temperament*
 
 | Inner (Moderate) | Outer (Extreme) |
 |------------------|-----------------|
-| Energetic | Wired |
-| Enthusiastic | Vivacious |
-| Cheerful | Silly |
-| Easy-Going | Lazy |
-| Calm | Lethargic |
-| Cautious | Worried |
-| Serious | Gloomy |
-| Restless | Driven |
+| Energetic        | Wired           |
+| Enthusiastic     | Vivacious       |
+| Cheerful         | Silly           |
+| Easy-Going       | Lazy            |
+| Calm             | Lethargic       |
+| Cautious         | Worried         |
+| Serious          | Gloomy          |
+| Restless         | Driven          |
 
-### 2. EMOTIONAL INSIGHT (Interpersonal Style)
-
-How you approach others, emotional expression, relational angle.
-
-```
-                    Forceful
-                        │
-            Proud ──────┼───── Confident
-              │         │         │
-        Irritable ──────┼──────── Friendly
-              │         │         │
-           Touchy ──────┼───── Docile
-                        │
-                      Timid
-```
+### 2. EMOTIONAL INSIGHT
+*Interpersonal style, approach to others*
 
 | Inner (Moderate) | Outer (Extreme) |
 |------------------|-----------------|
-| Forceful | Dominating |
-| Confident | Charismatic |
-| Friendly | Over-Friendly |
-| Docile | Dependent |
-| Timid | Submissive |
-| Touchy | Resentful |
-| Irritable | Angry |
-| Proud | Arrogant |
+| Forceful         | Dominating      |
+| Confident        | Charismatic     |
+| Friendly         | Over-Friendly   |
+| Docile           | Dependent       |
+| Timid            | Submissive      |
+| Touchy           | Resentful       |
+| Irritable        | Angry           |
+| Proud            | Arrogant        |
 
-### 3. MENTAL ABILITIES (Cognitive Style)
-
-Knowledge, creativity, information grasp, imagination.
-
-```
-                  Well-Informed
-                        │
-         Practical ─────┼───── Innovative
-              │         │         │
-      Conventional ─────┼──────── Creative
-              │         │         │
-         Sensible ──────┼───── Impractical
-                        │
-                   Uneducated
-```
+### 3. MENTAL ABILITIES
+*Knowledge, creativity, imagination*
 
 | Inner (Moderate) | Outer (Extreme) |
 |------------------|-----------------|
-| Well-Informed | Know-It-All |
-| Innovative | Visionary |
-| Creative | Dreamy |
-| Impractical | Unrealistic |
-| Uneducated | Illiterate |
-| Sensible | Imitative |
-| Conventional | Unimaginative |
-| Practical | Pedantic |
+| Well-Informed    | Know-It-All     |
+| Innovative       | Visionary       |
+| Creative         | Dreamy          |
+| Impractical      | Unrealistic     |
+| Uneducated       | Illiterate      |
+| Sensible         | Imitative       |
+| Conventional     | Unimaginative   |
+| Practical        | Pedantic        |
 
-### 4. SOCIAL INTERACTION (Class & Convention)
-
-Status, tolerance, sophistication, moral conventionality.
-
-```
-                   Influential
-                        │
-        Respectable ────┼───── Worldly
-              │         │         │
-        Moralistic ─────┼──────── Uninhibited
-              │         │         │
-     Unsophisticated ───┼───── Uncultured
-                        │
-                   Lower-Class
-```
+### 4. SOCIAL INTERACTION
+*Class, tolerance, sophistication*
 
 | Inner (Moderate) | Outer (Extreme) |
 |------------------|-----------------|
-| Influential | Snobbish |
-| Worldly | Ultra-Sophisticated |
-| Uninhibited | Non-Conformist |
-| Uncultured | Wild |
-| Lower-Class | Unknown |
-| Unsophisticated | Naive |
-| Moralistic | Puritanical |
-| Respectable | Upright |
+| Influential      | Snobbish        |
+| Worldly          | Ultra-Sophisticated |
+| Uninhibited      | Non-Conformist  |
+| Uncultured       | Wild            |
+| Lower-Class      | Unknown         |
+| Unsophisticated  | Naive           |
+| Moralistic       | Puritanical     |
+| Respectable      | Upright         |
 
 ---
 
-## How It Works in MOOLLM
+## The 16 Personality Scales
 
-### Creating a Mind Mirror Profile
+Mind Mirror features **dual vocabulary** — accessible Plain Talk and professional Shrink-Rap:
 
-```yaml
-# characters/captain-ashford.mirror.yml
-mind_mirror:
-  subject: "Captain Ashford"
-  context: "After slaying the grue"
-  
-  bio_energy:
-    energetic: 6      # 0-7 scale
-    enthusiastic: 7
-    cheerful: 5
-    easy_going: 3
-    calm: 2
-    cautious: 4
-    serious: 5
-    restless: 6
-    
-  emotional_insight:
-    forceful: 6
-    confident: 7
-    friendly: 5
-    docile: 1
-    timid: 0
-    touchy: 2
-    irritable: 3
-    proud: 6
-    
-  mental_abilities:
-    well_informed: 5
-    innovative: 6
-    creative: 7
-    impractical: 4
-    uneducated: 1
-    sensible: 4
-    conventional: 2
-    practical: 5
-    
-  social_interaction:
-    influential: 5
-    worldly: 6
-    uninhibited: 7
-    uncultured: 3
-    lower_class: 2
-    unsophisticated: 1
-    moralistic: 2
-    respectable: 4
-```
+| Dimension | Plain Talk (+/-) | Shrink-Rap (+/-) |
+|-----------|------------------|------------------|
+| Energy | Peppy / Laid-Back | Hyper-Manic / Low-Energy |
+| Intensity | Intense / Low-Key | Agitated / Tranquil |
+| Mood | Happy / Sad | Euphoric / Melancholic |
+| Commitment | Hesitant / Gung-Ho | Listless / Wholehearted |
+| Assertiveness | Shy / Bossy | Passive / Dictatorial |
+| Confidence | Cute / Cocky | Eager-to-Please / Haughty |
+| Temperament | Sweet / Grumpy | Congenial / Hostile |
+| Supportiveness | Encouraging / Whining | Nurturant / Complaining |
+| Intelligence | Dumb / Knowledgeable | Ignorant / Intelligent |
+| Organization | Organized / Flaky | Efficient / Disorganized |
+| Creativity | Closed-Minded / Imaginative | Literal-Minded / Original |
+| Adaptability | Ingenious / By-the-Book | Inventive / Narrow-Minded |
+| Social Status | Social-Nobody / V.I.P. | Insignificant / Aristocratic |
+| Conformity | Proper / Rowdy | Pillar-of-the-Community / Rebellious |
+| Lifestyle | Straight-Arrow / Free-Living | Inhibited / Social-Maverick |
+| Worldliness | Sophisticated / Square | Cosmopolitan / Small-Townish |
 
-### Comparing Two Profiles
+### Rating Scale
 
-```
-> MIND-MIRROR COMPARE captain-ashford WITH mother
-
-BIO-ENERGY:
-  Captain more Energetic (6 vs 4)
-  Mother more Calm (6 vs 2)
-  Captain more Restless (6 vs 2)
-  
-EMOTIONAL INSIGHT:
-  Captain more Forceful (6 vs 3)
-  Mother more Friendly (7 vs 5)
-  Captain more Proud (6 vs 2)
-  
-...
-```
-
-### Self-Reflection Mode
-
-```
-> MIND-MIRROR SELF
-
-Let's scope your current self.
-Rate yourself on each dimension (0-7):
-
-BIO-ENERGY:
-  How PEPPY are you right now? (0=Never, 7=Always) _
-  How LAID-BACK are you? _
-  ...
-```
+| Value | Meaning |
+|-------|---------|
+| 0 | Never |
+| 2 | Rarely |
+| 5 | Often |
+| 7 | Always |
 
 ---
 
-## Integration with MOOLLM
+## Exercises from the Original Software
 
-### As Character DNA
+### Self Portrait
+Compare your self with your ideal self.
 
-Every character in MOOLLM can have a Mind Mirror profile:
+> *"Every time you boot up MIND MIRROR you may want to update your rapidly changing self-image!"*
 
-```yaml
-# In any character file
-character:
-  name: "The Bartender"
-  
-  mind_mirror:
-    # Abbreviated form — just the extremes
-    bio_energy: "calm, serious"
-    emotional: "confident, proud"
-    mental: "well-informed, sensible"
-    social: "worldly, uninhibited"
-```
-
-### In Soul-Chat
-
-Mind Mirror profiles influence how characters speak:
-
-```yaml
-# SOUL-CHAT uses Mind Mirror to calibrate voice
-character_voice:
-  bartender:
-    mind_mirror_influence:
-      - calm → speaks slowly, pauses
-      - confident → never apologizes unnecessarily
-      - well-informed → drops historical references
-      - uninhibited → occasionally vulgar
-```
-
-### In Adventures
-
-NPCs can have Mind Mirror profiles that affect:
-- How they respond to the player
-- What advertisements they generate
-- Their decision-making in simulations
-
----
-
-## The Plain Talk / Shrink-Rap Toggle
-
-Leary provided two vocabulary modes:
-
-| Plain Talk | Shrink-Rap (Psychological) |
-|------------|---------------------------|
-| Peppy | Hyper-Manic |
-| Laid-Back | Low-Energy |
-| Intense | Agitated |
-| Low-Key | Tranquil |
-| Sad | Melancholic |
-| Happy | Euphoric |
-| Hesitant | Listless |
-| Gung-Ho | Wholehearted |
-| Bossy | Dictatorial |
-| Shy | Passive |
-| Cocky | Haughty |
-| Cute | Eager-to-Please |
-| Grumpy | Hostile |
-| Sweet | Congenial |
-| Whining | Complaining |
-| Encouraging | Nurturant |
-| Knowledgeable | Intelligent |
-| Dumb | Ignorant |
-| Organized | Efficient |
-| Flaky | Disorganized |
-| Closed-Minded | Literal-Minded |
-| Imaginative | Original |
-| By-the-Book | Narrow-Minded |
-| Ingenious | Inventive |
-| V.I.P. | Aristocratic |
-| Social-Nobody | Insignificant |
-| Proper | Pillar-of-the-Community |
-| Rowdy | Rebellious |
-| Straight-Arrow | Inhibited |
-| Free-Living | Social-Maverick |
-| Square | Small-Townish |
-| Sophisticated | Cosmopolitan |
-
----
-
-## Exercises from the Original
-
-### Exercise 1: SELF PORTRAIT
-
-Compare your self as you are right now with your ideal self.
-
-```
-> MIND-MIRROR EXERCISE self-portrait
-
-First, scope YOUR SELF as you are today.
-Then, scope YOUR IDEAL SELF — who you want to become.
-
-[After completion]
-
-Your Self is more Restless than your Ideal.
-Your Ideal is more Calm than your Self.
-Consider: What would help you move toward your Ideal?
-```
-
-### Exercise 2: SELF-RANGE
-
+### Self-Range
 Compare your best and worst selves.
 
-```
-> MIND-MIRROR EXERCISE self-range
+Large gaps indicate volatility in that dimension.
 
-Scope YOUR BEST SELF — you at your peak.
-Then, scope YOUR WORST SELF — you at your lowest.
-
-[After completion]
-
-The gap between your Best and Worst on EMOTIONAL INSIGHT
-is larger than average. You experience significant swings
-in confidence and friendliness.
-```
-
-### Exercise 3: ROLE-PLAY ODYSSEY (Life Simulation)
-
-Mind Mirror's "Life Simulation" mode let you role-play through situations as different personalities. This maps directly to MOOLLM adventures!
-
-```
-> MIND-MIRROR SIMULATE "job interview" AS captain-ashford
-
-You are Captain Ashford, approaching a job interview.
-Your Mind Mirror profile suggests you'll be:
-- Forceful and Confident (might come across as arrogant)
-- Creative and Innovative (good for brainstorming questions)
-- Uninhibited (might say something unexpected)
-
-The interviewer asks: "What's your greatest weakness?"
-
-How do you respond?
-```
+### Role-Play Odyssey
+Test empathy through 3,200 life simulation scenarios — from birth to transcendence.
 
 ---
 
-## Connection to K-Lines
+## The Mirror Philosophy
 
-Mind Mirror dimensions ARE K-lines:
+Leary was clear about what Mind Mirror is NOT:
 
-```
-Type "CONFIDENT" → activates the cluster:
-  - Charismatic at extreme
-  - Opposite of Timid
-  - Part of EMOTIONAL INSIGHT plane
-  - Associated behaviors and speech patterns
-```
+> *"Remember the title — it's a mirror. Now a best friend is your mirror because your mirror doesn't say 'well you bad boy get a haircut' or the mirror doesn't say 'hey turkey fix your tie' — you have to decide that."*
 
-When you invoke a Mind Mirror dimension, you're invoking a tradition of personality psychology going back to Leary's PhD work in the 1950s.
+The mirror reflects. **You** decide what to do with the information.
 
 ---
 
-## Connection to Representation Ethics
+## Using Mind Mirror in MOOLLM
 
-Mind Mirror provides a **structured, non-impersonating** way to model real people:
+### Character Profiles
+
+Every character can have a Mind Mirror profile:
 
 ```yaml
-# Instead of "pretending to be Einstein"
-# we create a Mind Mirror profile based on documented traits
-
-einstein_profile:
-  bio_energy: "restless, serious, driven"
-  emotional: "confident, proud, irritable" 
-  mental: "innovative, visionary, impractical"
-  social: "influential, non-conformist, unsophisticated"
-  
-  sources:
-    - "Documented personality traits from biographies"
-    - "Public statements and behavior patterns"
-    - "Colleague descriptions"
+# Abbreviated: just list notable traits
+bartender:
+  mind_mirror:
+    bio_energy: [calm, serious]
+    emotional: [confident, proud]
+    mental: [well_informed, sensible]
+    social: [worldly, uninhibited]
 ```
 
-This is **tradition invocation**, not impersonation. The profile activates documented traits without claiming to *be* the person.
+### Soul-Chat Influence
+
+Mind Mirror dimensions affect how characters speak:
+
+| Dimension | Voice Effect |
+|-----------|--------------|
+| calm | speaks slowly, pauses |
+| confident | never apologizes unnecessarily |
+| creative | uses unusual metaphors |
+| uninhibited | occasionally vulgar |
+| proud | never admits being wrong |
+
+### Adventure NPCs
+
+Mind Mirror profiles determine:
+- How NPCs respond to player actions
+- What advertisements they generate
+- Decision-making in simulations
+
+### Coatroom Modification
+
+Costumes can modify Mind Mirror dimensions:
+
+```yaml
+# Wearing a cape
+costume_effect:
+  confident: +2
+  influential: +1
+  timid: -2
+```
+
+---
+
+## The Ethics of Mind Mirror
+
+See [ETHICS.md](./ETHICS.md) for a full discussion of:
+- Using Leary's academic models respectfully
+- The distinction between modeling and impersonation
+- What Leary explicitly wanted (democratized self-discovery tools)
+- How MOOLLM honors his legacy
+
+**Short version:** We use his published academic framework and software design, not a simulation of him as a person.
+
+---
+
+## Bob Dietz on Leary's Vision
+
+Bob Dietz, Leary's collaborator:
+
+> *"His vision was way out there in the future... He always had these big vision things of wanting to do three-dimensionally and have the computer react to everything you said and with artificial intelligence."*
+
+> *"He was all about self-empowerment, giving the users the keys to the kingdom."*
+
+> *"I cannot begin to tell you how much Timothy Leary would have embraced and loved the notion of seeing Mind Mirror applied on the internet."*
 
 ---
 
 ## Protocol Symbols
 
-```
-MIND-MIRROR       — The whole personality modeling system
-THOUGHT-PLANE     — One of the four circular dimensions
-BIO-ENERGY        — Life force, mood, vitality plane
-EMOTIONAL-INSIGHT — Interpersonal style plane
-MENTAL-ABILITIES  — Cognitive style plane
-SOCIAL-INTERACTION — Class and convention plane
-SELF-PORTRAIT     — Compare self with ideal self
-SELF-RANGE        — Compare best and worst selves
-ROLE-PLAY-ODYSSEY — Life simulation through different profiles
-PLAIN-TALK        — Everyday vocabulary mode
-SHRINK-RAP        — Psychological vocabulary mode
-```
+| Symbol | Meaning |
+|--------|---------|
+| `MIND-MIRROR` | The personality modeling system |
+| `THOUGHT-PLANE` | One of four circular dimensions |
+| `SELF-PORTRAIT` | Compare self with ideal self |
+| `SELF-RANGE` | Compare best and worst selves |
+| `ROLE-PLAY-ODYSSEY` | Life simulation scenario |
+| `PLAIN-TALK` | Accessible vocabulary mode |
+| `SHRINK-RAP` | Professional vocabulary mode |
+
+---
+
+## Theme Song
+
+From the original software:
+
+> *"You can be anyone this time around*
+> *You can be anything this time around*
+> *It encourages me to change, to improve, to grow*
+> *You can be anything this time around"*
+
+This is the core message: **personality is not fixed**.
+
+---
+
+## Sources
+
+| Source | Link |
+|--------|------|
+| Mind Mirror Text (Apple ][ extraction) | [donhopkins.com](https://donhopkins.com/home/mind-mirror.txt) |
+| Mind Mirror Scales JSON | [donhopkins.com](https://donhopkins.com/home/mind-mirror.json) |
+| USC Mind Mirror Archive | [scalar.usc.edu](https://scalar.usc.edu/works/timothy-leary-software/index) |
+| Leary PhD Dissertation | [archive.org](https://archive.org/details/leary/leary.300dpi/mode/2up) |
+| Interpersonal Circumplex | [Wikipedia](https://en.wikipedia.org/wiki/Interpersonal_circumplex) |
+| Mind Mirror on Steam (2021) | [Steam](https://store.steampowered.com/app/1603300/Timothy_Learys_Mind_Mirror/) |
+
+---
+
+## Leary's Message
+
+> *"I love my product. You know what my product is? The human mind and human hope and human enthusiasm."*
+
+> *"You're the first generation in human history to know how to control your own nervous system, change your own reality. Tune in and take over! Blow your own mind, make up your own mind."*
 
 ---
 
 ## Dovetails With
 
-| Skill | Relationship |
-|-------|--------------|
-| [representation-ethics/](../representation-ethics/) | Mind Mirror is an ethical way to model personalities |
-| [hero-story/](../hero-story/) | Hero-Story cards can include Mind Mirror profiles |
-| [card/](../card/) | Character cards can embed Mind Mirror data |
-| [soul-chat/](../soul-chat/) | Mind Mirror influences character voice |
-| [adventure/](../adventure/) | NPCs have Mind Mirror profiles |
-| [coatroom/](../../examples/adventure-3/coatroom/) | Costumes can modify Mind Mirror dimensions |
+- [representation-ethics/](../representation-ethics/) — Ethical personality modeling
+- [hero-story/](../hero-story/) — Cards can include Mind Mirror profiles
+- [card/](../card/) — Character cards embed Mind Mirror data
+- [soul-chat/](../soul-chat/) — Mind Mirror influences character voice
+- [adventure/](../adventure/) — NPCs have Mind Mirror profiles
+- [coatroom/](../../examples/adventure-3/coatroom/) — Costumes modify dimensions
 
 ---
 
-## The Deeper Philosophy
-
-Leary's Mind Mirror was part of his larger project: **using technology for consciousness exploration**. The original software said:
-
-> "MIND TOOLS: Enhance Insight, Mental Fitness, Learning Skills and Performance."
-> "MIND PLAY: Sophisticated Head Games."
-
-This maps perfectly to MOOLLM's PLAY-LEARN-LIFT:
-
-- **PLAY** with personality dimensions, try on different profiles
-- **LEARN** patterns about yourself and others
-- **LIFT** insights into structured understanding
-
-Mind Mirror is **constructionist psychology** — you construct your understanding of self through active exploration.
-
----
-
-## The Disclaimer (from the original)
-
-> "In this program you will find references and statements attributed to several hundred public figures and historical personages. All such statements attributed to living persons are fictional; they are intended as gentle satire and provocative humor. In no case is there any implication that the statements reflect the true sentiments of the 'alleged' speaker."
-
-This disclaimer from 1985 anticipated the exact concerns we address in [representation-ethics/](../representation-ethics/). Mind Mirror profiles are **models**, not **claims**.
-
----
-
-## Further Reading
-
-- [Timothy Leary's Mind Mirror — USC Archive](https://scalar.usc.edu/works/timothy-leary-software/index)
-- [Interpersonal Circumplex — Wikipedia](https://en.wikipedia.org/wiki/Interpersonal_circumplex)
-- [Leary's PhD Dissertation](https://archive.org/details/leary/leary.300dpi/mode/2up)
-- [Don Hopkins' Mind Mirror Text Extraction](https://donhopkins.com/home/mind-mirror.txt)
-- [Mind Mirror Scales as JSON](https://donhopkins.com/home/mind-mirror.json)
-
----
-
-*"In a magic mirror we see reflected not only our lives, but the lives of all men that have been. When I think on this majestic theme, my eyes dazzle."*
-— Oliver Wendell Holmes
+*"The ultimate intimacy is where you show them your personal database — you show your Mind Mirror."*
+— Timothy Leary
