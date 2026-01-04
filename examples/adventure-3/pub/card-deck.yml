@@ -88,6 +88,11 @@ object:
           theme: "Classic fantasy adventuring"
           special: "Monster cards, loot, the Grue Keeper"
           
+        - name: "Stoner Fluxx"
+          theme: "Munchies, brownies, and forgetting the rules"
+          special: "Everyone plays slower. Giggles increase."
+          effect: "Snacks appear. Time dilates. Nobody remembers whose turn it is."
+          
         - name: "Grue Fluxx"
           theme: "It is pitch dark. You are likely to be eaten."
           special: "Lamp cards crucial. Grue wins ties."
