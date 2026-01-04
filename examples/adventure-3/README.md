@@ -175,6 +175,68 @@ goals:
 
 ---
 
+## ✨ What's New in Adventure 3
+
+*The Fantastipants Kitchen has been... upgraded.*
+
+### 🔧 The Workbench
+
+That old granite counter? It's more than meets the eye. Mother always said it "tingled" — turns out she wasn't exaggerating.
+
+**What can you do there?**
+- **COMBINE** things to make new things
+- **TRANSFORM** things into different things  
+- **EDIT** things to change their properties
+- **PROGRAM** things to do things when other things happen
+- And something else... something that goes *deeper*...
+
+Every experiment you succeed at? The counter remembers. It *learns*.
+
+### 📦 Mail-Order... Something
+
+There's a catalog on the counter. Dog-eared. The coyote on the cover looks optimistic.
+
+> *"ORDER ANYTHING! DELIVERED IN 2-4 TURNS!"*
+> *"Satisfaction Guaranteed!*"*
+
+The asterisk leads to very small print.
+
+Items ordered from this catalog *work*. Technically. Usually. The malfunction rate is only... well, Tom has calculated it. Tom has concerns.
+
+### 🗄️ The Drawers
+
+Three drawers under the counter. Father's motto: *"You never know what you'll need."* Mother's motto: *"Why do we have SEVEN broken compasses?"*
+
+One of those compasses might be interesting. Tom keeps looking at it.
+
+### 🗑️ The Trash Can
+
+Don't ask where it leads. Don't climb in unless you're prepared.
+
+If you do... well. Your hair will be *fabulous* when you return.
+
+### 📋 Family Recipes
+
+Some recipes are for sandwiches. Some are for soup.
+
+One requires you to slay a monster with dairy products.
+
+Another is too stained to read. *Experiment.*
+
+### 🧪 Going Deeper
+
+The counter can break things down. Not just "disassemble" — *decompose*.
+
+- Kitchen-level? Easy. Sandwich → bread + cheese.
+- Chemical-level? Sure. Water → hydrogen + oxygen. (Store in jars.)
+- Atomic-level? The counter starts humming.
+- Subatomic-level? The room vibrates. Reality wobbles.
+- Philosophical-level? **Do not decompose meaning. You need it.**
+
+Components can be recombined. Hydrogen + oxygen = water (and a small boom). What else might you synthesize?
+
+---
+
 ## 🧪 Emergent Mechanics (from adventure-2)
 
 *Patterns discovered through play. Use as inspiration!*
