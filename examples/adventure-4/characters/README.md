@@ -27,7 +27,8 @@ Characters **can**: move, carry, die, remember, be hurt.
 - Characters have a `location:` field that REFERENCES a room
 - Characters can move between rooms by changing the reference
 - Multiple characters can be in the same room
-- Rooms contain OBJECTS, not characters, but can also contain NPCs, 
+- Rooms contain OBJECTS, not characters, but can also contain NPCs
+- NPCs can move around to different rooms by changing their location, but their physical file bodies stay in their home room, and they can be reset to bring them back there
 
 ---
 
@@ -76,7 +77,7 @@ Think: **Engelbart's NLS** with multiple cursors.
 
 ---
 
-## File = Identity
+## File = Identity, Location = Home
 
 In MOOLLM, the filesystem IS the world. Your file name IS your identity.
 
