@@ -1,0 +1,130 @@
+# CARD.yml — Evaluator
+#
+# Independent assessment without debate context.
+# "The committee can't see what the evaluator is thinking."
+
+card:
+  id: evaluator
+  name: "Evaluator"
+  type: [skill, assessment, adversarial]
+  
+  emoji: 📋
+  
+  rarity: rare
+  
+  description: |
+    Independent assessment of committee output against a rubric.
+    Evaluator has no debate context — can't be gamed.
+    
+    If scores are poor, critique goes back to committee for revision.
+
+# TOOLS REQUIRED
+
+tools:
+  required:
+    - read_file   # Read output and rubric
+    - write_file  # Write evaluation
+  optional: []
+
+tier: 1
+
+# METHODS
+
+methods:
+  
+  EVALUATE:
+    description: "Score output against rubric"
+    parameters:
+      output: "What to evaluate"
+      rubric: "Criteria to use"
+    output: file (EVALUATION.yml) + chat
+    effect: "Generate scores and rationale"
+    invoked_by: [adversarial_committee, player]
+    
+  CRITIQUE:
+    description: "Provide specific improvement feedback"
+    parameters:
+      evaluation: "The evaluation"
+      focus: "Areas to critique"
+    output: chat (critique)
+    effect: "Generate actionable feedback"
+    invoked_by: [player, adversarial_committee]
+    
+  APPROVE:
+    description: "Mark output as acceptable"
+    parameters:
+      evaluation: "The evaluation"
+    output: chat + state_change
+    effect: "Set evaluation.status = approved"
+    invoked_by: [player]
+    
+  REJECT:
+    description: "Return for revision"
+    parameters:
+      evaluation: "The evaluation"
+      critique: "What needs fixing"
+    output: chat + state_change
+    effect: "Send critique back to source"
+    invoked_by: [player, automatic_threshold]
+
+# STATE
+
+state:
+  evaluation_schema:
+    output_ref:
+      type: path
+      description: "What was evaluated"
+    rubric_ref:
+      type: path
+      description: "Criteria used"
+    scores:
+      type: object
+      description: "Per-criterion scores"
+    total_score:
+      type: number
+    status:
+      type: enum
+      values: [pending, approved, rejected, revision_needed]
+    critique:
+      type: string
+      description: "Feedback if not approved"
+
+# THE ADVERSARIAL LOOP
+
+adversarial_loop:
+  why: |
+    Committee members know they'll be scored but can't see
+    evaluator's reasoning. This prevents gaming metrics.
+    
+  flow: |
+    Committee produces → Evaluator scores →
+    If poor: critique back → Committee revises →
+    Until approved or abandoned
+
+# ADVERTISEMENTS
+
+advertisements:
+  INDEPENDENT_REVIEW:
+    score: 95
+    condition: "Need unbiased assessment of work product"
+    
+  QUALITY_GATE:
+    score: 90
+    condition: "Output needs to meet standards before proceeding"
+
+# RELATED
+
+see_also:
+  - skills/adversarial-committee  # Produces output
+  - skills/rubric                 # Defines criteria
+  - skills/roberts-rules          # Committee procedure
+  - skills/scoring                # General scoring
+
+# CREDITS
+
+credits:
+  methodology:
+    - "Mike Gallaher — Independent evaluator pattern"
+  inspiration:
+    - "Academic peer review"
+    - "Code review"

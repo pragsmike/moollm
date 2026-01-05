@@ -1,0 +1,122 @@
+# CARD.yml — Honest Forget
+#
+# Graceful memory compression — summarize before forgetting.
+# "Forget with integrity. Leave a tombstone."
+
+card:
+  id: honest-forget
+  name: "Honest Forget"
+  type: [skill, memory, integrity]
+  
+  emoji: 🪦
+  
+  rarity: uncommon
+  
+  description: |
+    When context overflows, forget gracefully. Summarize what's
+    being forgotten. Leave a pointer to where the full version lives.
+    
+    Never pretend you remember what you don't.
+
+# TOOLS REQUIRED
+
+tools:
+  required:
+    - read_file
+    - write_file
+  optional: []
+
+tier: 1
+
+# METHODS
+
+methods:
+  
+  COMPRESS:
+    description: "Summarize and mark for forgetting"
+    parameters:
+      content: "What to compress"
+      keep: "Essential points to preserve"
+    output: file (FORGET.yml) + chat
+    effect: "Create summary, mark original as archived"
+    invoked_by: [player, coherence_engine]
+    
+  ARCHIVE:
+    description: "Move content to long-term storage"
+    parameters:
+      content: "What to archive"
+      location: "Where to store it"
+    output: state_change
+    effect: "Move file, leave pointer"
+    invoked_by: [player]
+    
+  RECALL:
+    description: "Retrieve archived content"
+    parameters:
+      pointer: "The FORGET.yml reference"
+    output: chat (content)
+    effect: "Read original from archive"
+    invoked_by: [player]
+    
+  ADMIT:
+    description: "Acknowledge forgotten content"
+    parameters:
+      topic: "What you can't remember"
+    output: chat
+    effect: "Honest acknowledgment with pointer to where it might be"
+    invoked_by: [player, automatic]
+
+# STATE
+
+state:
+  forget_schema:
+    original_path:
+      type: path
+      description: "Where the full content is"
+    summary:
+      type: string
+      description: "What was important"
+    forgotten_at:
+      type: timestamp
+    reason:
+      type: string
+      description: "Why it was compressed"
+
+# THE PRINCIPLE
+
+principle: |
+  LLMs will forget. Context windows overflow.
+  
+  The honest response is NOT:
+    "I remember everything about our conversation"
+    
+  The honest response IS:
+    "I've forgotten the details of that discussion.
+     Here's a summary. The full log is at ./archive/session-42.md"
+     
+  Leave tombstones. Point to graves. Never pretend to remember.
+
+# ADVERTISEMENTS
+
+advertisements:
+  CONTEXT_OVERFLOW:
+    score: 95
+    condition: "Context is getting too large"
+    
+  ARCHIVE_SESSION:
+    score: 85
+    condition: "Session ending, need to preserve learnings"
+
+# RELATED
+
+see_also:
+  - skills/summarize     # Compression technique
+  - skills/session-log   # Where to archive
+  - skills/memory-palace # Organization
+
+# CREDITS
+
+credits:
+  principle:
+    - "LLM epistemic humility"
+    - "Archival science"

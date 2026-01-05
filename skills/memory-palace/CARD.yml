@@ -1,0 +1,172 @@
+# CARD.yml — Memory Palace
+#
+# Spatial organization of knowledge in navigable directories.
+# "Put knowledge where you can find it by walking there."
+
+card:
+  id: memory-palace
+  name: "Memory Palace"
+  type: [skill, memory, organization]
+  
+  emoji: 🏛️
+  
+  rarity: uncommon
+  
+  description: |
+    Organize knowledge spatially in directories you navigate.
+    Each room holds related information. Walking through the
+    palace triggers associations.
+    
+    The ancient mnemonic technique, applied to filesystems.
+
+# TOOLS REQUIRED
+
+tools:
+  required:
+    - read_file   # Read room contents
+    - write_file  # Add knowledge
+    - list_dir    # Navigate palace
+  optional: []
+
+tier: 1  # File read/write
+
+# METHODS
+
+methods:
+  
+  CREATE_PALACE:
+    description: "Initialize a new memory palace"
+    parameters:
+      name: "Palace name"
+      structure: "Initial room structure"
+    output: directory structure + chat
+    effect: "Create palace directory with rooms"
+    invoked_by: [player]
+    
+  ADD_ROOM:
+    description: "Create a new room in the palace"
+    parameters:
+      name: "Room name"
+      location: "Where in the palace"
+      purpose: "What this room stores"
+    output: directory + file (ROOM.yml)
+    effect: "Add navigable room"
+    invoked_by: [player]
+    
+  PLACE:
+    description: "Store knowledge in a room"
+    parameters:
+      knowledge: "What to remember"
+      room: "Which room"
+      anchor: "Memorable association"
+    output: file + chat
+    effect: "Create entry with mnemonic anchor"
+    invoked_by: [player]
+    
+  WALK:
+    description: "Navigate through the palace"
+    parameters:
+      from: "Starting room"
+      to: "Destination or 'wander'"
+    output: chat (narration of journey)
+    effect: "Trigger associations along path"
+    invoked_by: [player]
+    
+  RECALL:
+    description: "Retrieve knowledge by location"
+    parameters:
+      room: "Where to look"
+      topic: "What to recall"
+    output: chat (retrieved knowledge)
+    effect: "Find and present stored knowledge"
+    invoked_by: [player]
+    
+  MAP:
+    description: "Show palace layout"
+    parameters: {}
+    output: chat (mermaid diagram)
+    effect: "Visualize room connections"
+    invoked_by: [player]
+
+# STATE
+
+state:
+  palace:
+    name:
+      type: string
+    rooms:
+      type: array
+      description: "List of room paths"
+      
+  room:
+    name:
+      type: string
+    purpose:
+      type: string
+    entries:
+      type: array
+      description: "Knowledge stored here"
+    exits:
+      type: object
+      description: "Connections to other rooms"
+      
+  entry:
+    content:
+      type: string
+      description: "The knowledge"
+    anchor:
+      type: string
+      description: "Mnemonic association"
+    placed:
+      type: datetime
+
+# THE ANCIENT TECHNIQUE
+
+technique:
+  origin: |
+    Ancient Greek/Roman orators memorized speeches by
+    imagining walking through a familiar building,
+    placing key points in each room.
+    
+  why_it_works: |
+    Spatial memory is powerful. We easily remember
+    where things are in physical space. The palace
+    technique hijacks this for abstract knowledge.
+    
+  moollm_application: |
+    Directories ARE rooms.
+    Files ARE objects in rooms.
+    Navigation IS remembering.
+    The filesystem is already a memory palace.
+
+# ADVERTISEMENTS
+
+advertisements:
+  ORGANIZE_KNOWLEDGE:
+    score: 90
+    condition: "Need to structure and remember information"
+    
+  SPATIAL_THINKING:
+    score: 85
+    condition: "Want to think spatially about abstract topics"
+    
+  BUILD_KNOWLEDGE_BASE:
+    score: 80
+    condition: "Creating a reusable knowledge repository"
+
+# RELATED
+
+see_also:
+  - skills/room        # Rooms as contexts
+  - skills/adventure   # Narrative navigation
+  - skills/summarize   # What to put in rooms
+  - skills/scratchpad  # Working memory complement
+
+# CREDITS
+
+credits:
+  technique:
+    - "Simonides of Ceos — Method of loci (~500 BCE)"
+    - "Frances Yates — The Art of Memory"
+  application:
+    - "Don Hopkins — Filesystem as memory palace"

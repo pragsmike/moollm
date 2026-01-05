@@ -1,0 +1,113 @@
+# CARD.yml — Economy
+#
+# Currency, trade, and economic flow.
+# "Gold is just a number until someone wants it."
+
+card:
+  id: economy
+  name: "Economy"
+  type: [skill, game, trade]
+  
+  emoji: 💰
+  
+  rarity: common
+  
+  description: |
+    Currency management, buying, selling, and trade.
+    Track gold, transactions, and economic relationships.
+
+# TOOLS REQUIRED
+
+tools:
+  required:
+    - read_file
+    - write_file
+  optional: []
+
+tier: 1
+
+# METHODS
+
+methods:
+  
+  BUY:
+    description: "Purchase an item"
+    parameters:
+      item: "What to buy"
+      from: "Seller"
+      price: "Cost (defaults to item.price)"
+    output: chat + state_change
+    effect: "Transfer gold, transfer item"
+    invoked_by: [player, npc]
+    
+  SELL:
+    description: "Sell an item"
+    parameters:
+      item: "What to sell"
+      to: "Buyer"
+      price: "Amount (defaults to item.value)"
+    output: chat + state_change
+    effect: "Receive gold, transfer item"
+    invoked_by: [player, npc]
+    
+  TRADE:
+    description: "Barter items without gold"
+    parameters:
+      give: "What you offer"
+      receive: "What you want"
+      with: "Trade partner"
+    output: chat + state_change
+    effect: "Exchange items if both agree"
+    invoked_by: [player, npc]
+    
+  BALANCE:
+    description: "Check gold balance"
+    parameters:
+      character: "Whose balance (defaults to player)"
+    output: chat
+    effect: "Display current gold"
+    invoked_by: [player]
+    
+  PRICE:
+    description: "Check an item's price/value"
+    parameters:
+      item: "What to appraise"
+    output: chat
+    effect: "Display buy and sell prices"
+    invoked_by: [player]
+
+# STATE
+
+state:
+  economy_schema:
+    gold:
+      type: integer
+      description: "Currency amount"
+    transactions:
+      type: array
+      description: "History of purchases/sales"
+
+# ADVERTISEMENTS
+
+advertisements:
+  MAKE_PURCHASE:
+    score: 85
+    condition: "Want to buy something"
+    
+  SELL_ITEM:
+    score: 80
+    condition: "Have something to sell"
+
+# RELATED
+
+see_also:
+  - skills/character   # Gold lives on characters
+  - skills/adventure   # Economic gameplay
+  - skills/scoring     # Value assessment
+
+# CREDITS
+
+credits:
+  inspiration:
+    - "RPG economies"
+    - "The Sims — Simoleons"

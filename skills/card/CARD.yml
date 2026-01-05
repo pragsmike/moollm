@@ -54,7 +54,7 @@ methods:
     parameters:
       card: "Card to play"
       room: "Where to play it (defaults to current)"
-      method: "Which method to invoke"
+      method: "Which method property to invoke"
     output: chat + state_change
     effect: "Create activation record, execute method"
     invoked_by: [player, npc, room]

@@ -1,0 +1,154 @@
+# CARD.yml — Mind Mirror
+#
+# Personality modeling via four Thought Planes.
+# "The mirror shows who you are inside."
+
+card:
+  id: mind-mirror
+  name: "Mind Mirror"
+  type: [skill, personality, identity]
+  
+  emoji: 🪞
+  
+  rarity: rare
+  
+  description: |
+    Deep personality modeling using Timothy Leary's
+    Interpersonal Circumplex and four Thought Planes.
+    
+    Play this card to understand or model complex
+    personality traits beyond simple Sims stats.
+
+# TOOLS REQUIRED
+
+tools:
+  required:
+    - read_file   # Read personality files
+    - write_file  # Update profiles
+  optional: []
+
+tier: 1  # File read/write
+
+# METHODS
+
+methods:
+  
+  REFLECT:
+    description: "Show a character's Mind Mirror profile"
+    parameters:
+      character: "Whose mirror to look in"
+    output: chat (profile visualization)
+    effect: "Display all four Thought Planes"
+    invoked_by: [player, mirror_object]
+    
+  ANALYZE:
+    description: "Analyze personality from behavior"
+    parameters:
+      character: "Who to analyze"
+      observations: "Behavioral evidence"
+    output: chat (analysis) + state_change
+    effect: "Infer Mind Mirror settings from behavior"
+    invoked_by: [player]
+    
+  MODIFY:
+    description: "Adjust personality traits"
+    parameters:
+      character: "Whose traits to modify"
+      changes: "What to change"
+    output: state_change
+    effect: "Update Mind Mirror profile"
+    invoked_by: [dm, persona_effect]
+    
+  COMPARE:
+    description: "Compare two characters' profiles"
+    parameters:
+      a: "First character"
+      b: "Second character"
+    output: chat (comparison)
+    effect: "Show similarities and differences"
+    invoked_by: [player]
+    
+  PREDICT:
+    description: "Predict behavior from profile"
+    parameters:
+      character: "Whose behavior to predict"
+      situation: "The scenario"
+    output: chat (prediction)
+    effect: "Use Mind Mirror to forecast response"
+    invoked_by: [dm, coherence_engine]
+
+# STATE
+
+state:
+  mind_mirror_profile:
+    thought_planes:
+      emotional:
+        type: object
+        description: "Feeling/Not Feeling axis"
+      intellectual:
+        type: object
+        description: "Thinking/Not Thinking axis"
+      physical:
+        type: object
+        description: "Doing/Not Doing axis"
+      social:
+        type: object
+        description: "Connecting/Withdrawing axis"
+    circumplex:
+      dominance:
+        type: number
+        range: [-1, 1]
+      affiliation:
+        type: number
+        range: [-1, 1]
+
+# THE MODEL
+
+model:
+  timothy_leary: |
+    Timothy Leary (1985) developed the Interpersonal
+    Circumplex: a 2D model of personality based on
+    dominance (vertical) and affiliation (horizontal).
+    
+  four_planes: |
+    - EMOTIONAL: How do I feel? (passionate ↔ detached)
+    - INTELLECTUAL: How do I think? (curious ↔ certain)
+    - PHYSICAL: How do I act? (active ↔ passive)
+    - SOCIAL: How do I relate? (open ↔ guarded)
+    
+  complement_to_sims: |
+    Sims traits (nice, outgoing, active, playful, neat)
+    capture behavior. Mind Mirror captures motivation.
+    Together: complete personality picture.
+
+# ADVERTISEMENTS
+
+advertisements:
+  UNDERSTAND_PERSONALITY:
+    score: 90
+    condition: "Need deep insight into character's psyche"
+    
+  PREDICT_BEHAVIOR:
+    score: 85
+    condition: "Want to anticipate how character will react"
+    
+  DESIGN_CHARACTER:
+    score: 80
+    condition: "Creating complex, realistic personality"
+
+# RELATED
+
+see_also:
+  - skills/character   # Where Mind Mirror lives
+  - skills/persona     # Personas can modify Mind Mirror
+  - skills/cat         # Cats have simplified Mind Mirror
+  - skills/coatroom    # Mirror object uses this skill
+
+# CREDITS
+
+credits:
+  model:
+    - "Timothy Leary — Interpersonal Circumplex (1957)"
+    - "Jerry Wiggins — Circumplex development"
+  application:
+    - "MOOLLM — Four Thought Planes extension"
