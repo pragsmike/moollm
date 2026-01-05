@@ -41,9 +41,28 @@ player:
 characters/
   don-hopkins/           # Directory name = character ID
     CHARACTER.yml        # The character file
+    CARD.yml             # Optional: makes character a playable card
     cookie-1.yml         # Dispensed items
     notes.yml            # Personal stuff
 ```
+
+### Sidecar Cards
+
+Any character directory can have a `CARD.yml` sidecar to make the character card-playable:
+
+```yaml
+# characters/don-hopkins/CARD.yml
+card:
+  for: ./CHARACTER.yml
+  type: hero-story
+  tradition: "Pie menus, SimCity, constructionism"
+  
+  advertisements:
+    SUMMON:
+      description: "Activate Don's design traditions"
+```
+
+See [card skill](../card/SKILL.md#sidecar-cardyml-pattern) for full pattern.
 
 ### Embedded NPCs (Room is Home)
 

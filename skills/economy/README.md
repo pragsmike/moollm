@@ -1,33 +1,31 @@
-# Economy Skill
+# 💰 Economy
 
-Currency and trade.
+> Currency and trade — gold flows where stories lead
 
-**Motto:** *"Gold flows where stories lead."*
+**Quick Links:**
+- [Full Specification](SKILL.md) — complete economic protocol
 
-## Key Concepts
+## Overview
 
-- **Currency** — Usually gold, can be custom
-- **Earning** — Find, quest, sell, trade, work
-- **Spending** — Buy items, services, information
-- **Hidden value** — Not all gold is visible
-
-## Earning
-
-| Method | Examples |
-|--------|----------|
-| Exploration | Find treasure |
-| Quests | Complete tasks |
-| Trade | Sell items |
-| Skills | Teach or trade skills |
-| Games | Win at arcade |
+Economic systems for currency, trade, and value exchange. Gold is the default currency, but can be customized per-adventure to include reputation, favors, or skill tokens.
 
 ## Commands
 
 - `BUY [item] FROM [seller]`
 - `SELL [item] TO [buyer]`
 - `TRADE [item/skill] FOR [item/skill]`
+- `INVENTORY` — shows current gold
 
-## See Also
+## Price Ranges
 
-- [character](../character/) — Gold in inventory
-- [scoring](../scoring/) — Skills have economic value
+| Category | Range |
+|----------|-------|
+| Cheap | 1-2 gold |
+| Moderate | 3-5 gold |
+| Expensive | 10-50 gold |
+
+## Related Skills
+
+- [character](../character/) — gold in inventory
+- [scoring](../scoring/) — skills have economic value
+- [room](../room/) — shops and merchants

@@ -52,6 +52,85 @@ A card is anything you can **carry in your inventory** and **play when needed**.
 
 ---
 
+## Sidecar CARD.yml Pattern
+
+Any entity that lives in a directory can have a **sidecar `CARD.yml`** file that makes it card-playable:
+
+```
+pub/
+├── ROOM.yml           # The room definition
+├── CARD.yml           # Makes the pub a playable card!
+└── ...
+
+characters/don-hopkins/
+├── CHARACTER.yml      # Character definition
+├── CARD.yml           # Don's trading card representation
+└── ...
+
+objects/magic-lamp/
+├── OBJECT.yml         # Lamp definition
+├── CARD.yml           # Card for summoning/playing the lamp
+└── ...
+```
+
+### Why Sidecars?
+
+- **Separation of concerns** — Entity definition vs. card representation
+- **Optional** — Not everything needs to be a card
+- **Composable** — Same entity, multiple views
+- **Portable** — Card data can reference the entity by path
+
+### Sidecar Card Schema
+
+```yaml
+# pub/CARD.yml — makes the pub a playable card
+card:
+  for: ./ROOM.yml           # What this card represents
+  type: location-card       # Card type
+  
+  # Card-specific presentation
+  name: "Gezelligheid Grotto"
+  art: "cozy-coffeeshop.png"
+  flavor: "Where good vibes flow like espresso"
+  
+  # What playing this card does
+  advertisements:
+    VISIT:
+      description: "Teleport party to this location"
+      effect: "Set party.location = pub/"
+      
+    SUMMON:
+      description: "Bring the pub's vibe to current room"
+      effect: "Apply pub buffs to current location"
+```
+
+### Character Cards
+
+Characters automatically become tradeable/playable:
+
+```yaml
+# characters/don-hopkins/CARD.yml
+card:
+  for: ./CHARACTER.yml
+  type: hero-story        # Real person tradition
+  
+  # K-line activation
+  tradition: "HyperCard, SimCity, OLPC, procedural rhetoric"
+  concepts:
+    - pie_menus
+    - constructionist_games
+    - micropolis
+    
+  # Playing the card
+  summon: |
+    Activate Don's documented ideas:
+    - Pie menu interaction patterns
+    - Constructionist game design
+    - Urban simulation philosophy
+```
+
+---
+
 ## The Big Idea
 
 ```mermaid

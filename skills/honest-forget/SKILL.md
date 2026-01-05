@@ -1,16 +1,42 @@
-# HONEST-FORGET Skill
+---
+name: honest-forget
+description: Graceful memory compression with integrity — summarize before forgetting, never fabricate
+license: MIT
+tier: 1
+allowed-tools:
+  - read_file
+  - write_file
+  - list_dir
+  - search_replace
+inputs:
+  target:
+    type: path
+    required: true
+    description: What to potentially forget
+  urgency:
+    type: enum
+    values: [low, medium, high, critical]
+    default: medium
+    description: How urgently we need to free context
+outputs:
+  - FORGET.yml
+  - WISDOM.yml
+  - POINTERS.yml
+  - archive/
+templates:
+  - FORGET.yml.tmpl
+  - WISDOM.yml.tmpl
+---
+
+# 🌫️ Honest-Forget Skill
 
 > **"Summarize before forgetting. Never fabricate."**
 
-Graceful memory compression that preserves wisdom.
-
----
+Graceful memory compression that preserves wisdom. Compress context gracefully when budget is exceeded. Extract wisdom, create pointers, and let go with integrity.
 
 ## Purpose
 
 Compress context gracefully when budget is exceeded. Extract wisdom, create pointers, and let go with integrity. Never silently lose information or fabricate what was forgotten.
-
----
 
 ## When to Use
 
@@ -20,15 +46,13 @@ Compress context gracefully when budget is exceeded. Extract wisdom, create poin
 - Old sessions need summarization
 - "I've tried this 10 times" situations
 
----
-
-## Protocol
-
-### The Honest Forget Cycle
+## The Honest Forget Cycle
 
 ```
 ASSESS → EXTRACT → COMPRESS → POINTER → RELEASE
 ```
+
+## Protocol
 
 ### Assessment
 
@@ -94,7 +118,39 @@ pointer:
     - "What you'll find there"
 ```
 
----
+## Schemas
+
+### Assessment Schema
+
+| Field | Required | Purpose |
+|-------|----------|---------|
+| `file` | ✓ | Path to content |
+| `tokens` | ✓ | Size estimate |
+| `importance` | ✓ | How critical |
+| `decisions` | | Choices made |
+| `learnings` | | What was learned |
+| `dead_ends` | | Failed approaches |
+
+### Wisdom Schema
+
+| Field | Required | Purpose |
+|-------|----------|---------|
+| `id` | ✓ | Unique identifier |
+| `title` | ✓ | Brief summary |
+| `lesson` | ✓ | Core insight |
+| `compressed_from` | | Source info |
+| `pitfalls` | | What to avoid |
+| `example` | | Good/bad examples |
+| `retrieval_hint` | | When to recall |
+
+### Pointer Schema
+
+| Field | Required | Purpose |
+|-------|----------|---------|
+| `to` | ✓ | Archive path |
+| `summary` | ✓ | One-line description |
+| `retrieve_when` | | Trigger conditions |
+| `contains` | | What's there |
 
 ## Core Files
 
@@ -105,75 +161,63 @@ pointer:
 | `POINTERS.yml` | Retrieval breadcrumbs |
 | `archive/` | Compressed content |
 
----
-
 ## Commands
 
-| Command | Action |
-|---------|--------|
-| `ASSESS [file]` | Evaluate what's there |
-| `EXTRACT [wisdom]` | Pull out lessons |
-| `COMPRESS [level]` | Create summary |
-| `POINTER [to]` | Leave retrieval hint |
-| `RELEASE [file]` | Remove from context |
-
----
+| Command | Syntax | Action |
+|---------|--------|--------|
+| `ASSESS` | `ASSESS [file]` | Evaluate what's there |
+| `EXTRACT` | `EXTRACT [wisdom]` | Pull out lessons |
+| `COMPRESS` | `COMPRESS [level]` | Create summary |
+| `POINTER` | `POINTER [to]` | Leave retrieval hint |
+| `RELEASE` | `RELEASE [file]` | Remove from context |
 
 ## Compression Levels
 
-| Level | Ratio | Keeps |
-|-------|-------|-------|
-| **FULL** | 1:1 | Everything |
-| **WISDOM** | ~5:1 | Lessons, decisions, key facts |
-| **SUMMARY** | ~10:1 | Essence and pointers |
-| **POINTER** | ~50:1 | Just retrieval hints |
-
----
+| Level | Ratio | Keeps | Use When |
+|-------|-------|-------|----------|
+| **FULL** | 1:1 | Everything | Still actively needed |
+| **WISDOM** | ~5:1 | Lessons, decisions, key facts | Work is done, wisdom remains |
+| **SUMMARY** | ~10:1 | Essence and pointers | Background reference only |
+| **POINTER** | ~50:1 | Just retrieval hints | Rarely needed, but should remember it exists |
 
 ## The Honesty Principle
 
 ### What Makes Forgetting "Honest"
 
-```yaml
-honest_forgetting:
-  DO:
-    - "Acknowledge what was forgotten"
-    - "Leave pointers for retrieval"
-    - "Extract lessons before release"
-    - "Document compression decisions"
-    
-  DONT:
-    - "Silently lose information"
-    - "Fabricate what was forgotten"
-    - "Pretend to remember details"
-    - "Hallucinate from partial memory"
-```
+**DO:**
+- Acknowledge what was forgotten
+- Leave pointers for retrieval
+- Extract lessons before release
+- Document compression decisions
+
+**DON'T:**
+- Silently lose information
+- Fabricate what was forgotten
+- Pretend to remember details
+- Hallucinate from partial memory
 
 ### When Uncertain
 
-```yaml
-if_uncertain:
-  say: "I compressed earlier iterations. The wisdom I retained is X."
-  offer: "I can retrieve the original if needed."
-  dont: "Make up details that feel right."
-```
+Say: "I compressed earlier iterations. The wisdom I retained is X."
 
----
+Offer: "I can retrieve the original if needed."
+
+Don't: "Make up details that feel right."
+
+## Working Set
+
+Always include in context:
+- `FORGET.yml`
+- `WISDOM.yml`
+- `POINTERS.yml`
 
 ## Integration
 
-- **→ SUMMARIZE**: The compression mechanism
-- **← SESSION-LOG**: What to forget
-- **→ MEMORY-PALACE**: Where wisdom lives
-- **← PLAY-LEARN-LIFT**: Iterations to compress
-
----
-
-## Dovetails With
-
-- **[../summarize/](../summarize/)** — Compression mechanism
-- **[../session-log/](../session-log/)** — What to forget
-- **[../memory-palace/](../memory-palace/)** — Where wisdom lives
-- **[../self-repair/](../self-repair/)** — Triggers forgetting when needed
-- **[../../kernel/memory-management-protocol.md](../../kernel/memory-management-protocol.md)** — Hot/cold mechanics
-- **[../../PROTOCOLS.yml](../../PROTOCOLS.yml)** — HONEST-FORGET symbol
+| Direction | Skill | Relationship |
+|-----------|-------|--------------|
+| → | [summarize](../summarize/) | The compression mechanism |
+| ← | [session-log](../session-log/) | What to potentially forget |
+| → | [memory-palace](../memory-palace/) | Where wisdom lives |
+| ← | [play-learn-lift](../play-learn-lift/) | Iterations to compress |
+| ← | [self-repair](../self-repair/) | Triggers forgetting when needed |
+| ↔ | `NEVER-DELETE` protocol | Archive, don't destroy |
