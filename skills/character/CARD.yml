@@ -1,0 +1,195 @@
+# CARD.yml — Character
+#
+# Core patterns for all characters — home, location, relationships.
+# "Characters are BODIES. They have location, inventory, mortality."
+
+card:
+  id: character
+  name: "Character"
+  type: [skill, entity, game]
+  
+  emoji: 🧑
+  
+  rarity: common  # Every game needs characters
+  
+  description: |
+    The foundational pattern for any entity that has a location,
+    inventory, and relationships. Players, NPCs, creatures, bots —
+    all are characters.
+    
+    Characters are BODIES (actors). Personas are COSTUMES (roles).
+    The character is who you ARE. The persona is who you PLAY.
+
+# TOOLS REQUIRED
+
+tools:
+  required:
+    - read_file   # Read character state
+    - write_file  # Update location, inventory
+    - list_dir    # Find characters in rooms
+  optional: []
+
+tier: 1  # File read/write
+
+# METHODS
+# Actions this card advertises
+
+methods:
+  
+  CREATE:
+    description: "Create a new character"
+    parameters:
+      name: "Character name"
+      archetype: "Basic type (player, npc, companion, bot)"
+      home: "Where their file lives"
+    output: file (CHARACTER.yml) + chat
+    effect: "Generate character in home directory"
+    invoked_by: [player, dm]
+    
+  MOVE:
+    description: "Change character's location"
+    parameters:
+      character: "Who to move"
+      destination: "Where to go"
+    output: chat + state_change
+    effect: "Update character.location field"
+    invoked_by: [player, character, coherence_engine]
+    
+  TAKE:
+    description: "Pick up an object"
+    parameters:
+      item: "Object to take"
+    output: chat + state_change
+    effect: "Add to inventory, update object.location"
+    invoked_by: [player, character]
+    
+  DROP:
+    description: "Put down an object"
+    parameters:
+      item: "Object to drop"
+      where: "Optional specific location"
+    output: chat + state_change
+    effect: "Remove from inventory, place in room/location"
+    invoked_by: [player, character]
+    
+  WEAR:
+    description: "Put on a persona"
+    parameters:
+      persona: "Persona to wear"
+    output: chat + state_change
+    effect: "Set character.current_persona"
+    invoked_by: [player, character]
+    
+  REMOVE_PERSONA:
+    description: "Take off current persona"
+    parameters: {}
+    output: chat + state_change
+    effect: "Set current_persona to null"
+    invoked_by: [player, character]
+    
+  STATUS:
+    description: "Show character's current state"
+    parameters:
+      character: "Who to inspect"
+    output: chat
+    effect: "Display location, inventory, buffs, persona"
+    invoked_by: [player]
+    
+  RELATE:
+    description: "Set or update relationship with another entity"
+    parameters:
+      other: "Other entity ID"
+      feeling: "Natural language relationship description"
+    output: state_change
+    effect: "Update relationships map"
+    invoked_by: [character, dm]
+
+# STATE
+# Character structure
+
+state:
+  character_schema:
+    id:
+      type: string
+      description: "Unique identifier"
+    name:
+      type: string
+    home:
+      type: path
+      description: "Directory where file lives (never moves)"
+    location:
+      type: path
+      description: "Current room (changes during play)"
+    inventory:
+      type: array
+      default: []
+    gold:
+      type: integer
+      default: 0
+    current_persona:
+      type: path | null
+      description: "Reference to active persona"
+    sims_traits:
+      type: object
+      description: "Base personality (nice, outgoing, active, playful, neat)"
+    mind_mirror:
+      type: object
+      description: "Thought Planes configuration"
+    buffs:
+      type: array
+      description: "Active temporary effects"
+    relationships:
+      type: object
+      description: "Map of other_id → relationship object"
+
+# HOME VS LOCATION DISTINCTION
+
+location_protocol:
+  home: "Where the CHARACTER.yml file lives. Never moves."
+  location: "Where the character currently IS. Changes during play."
+  movement: "Update location field, don't move files."
+  example: |
+    # File at: characters/bumblewick/CHARACTER.yml
+    home: characters/bumblewick/
+    location: pub/  # Currently at the pub
+
+# CHARACTER TYPES
+
+character_types:
+  player: "Controlled by human via chat"
+  npc: "Controlled by DM, responds when addressed"
+  companion: "Follows player, has own personality"
+  bot: "Autonomous via action queue"
+  agent: "LLM with own goals and initiative"
+
+# ADVERTISEMENTS
+
+advertisements:
+  CREATE_CHARACTER:
+    score: 90
+    condition: "Need a new entity that moves and acts"
+    
+  MANAGE_INVENTORY:
+    score: 85
+    condition: "Need to pick up, drop, or use items"
+    
+  CHANGE_PERSONA:
+    score: 80
+    condition: "Want to wear or remove an identity layer"
+
+# RELATED
+
+see_also:
+  - skills/persona      # Identity layers characters wear
+  - skills/buff         # Temporary effects on characters
+  - skills/needs        # Character motivations
+  - skills/mind-mirror  # Personality modeling
+  - skills/room         # Where characters exist
+
+# CREDITS
+
+credits:
+  inspiration:
+    - "The Sims — Character needs and traits"
+    - "D&D — Character sheets"
+    - "MUD — Player characters in rooms"

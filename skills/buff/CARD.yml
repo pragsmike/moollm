@@ -1,0 +1,164 @@
+# CARD.yml — Buff
+#
+# Temporary effects system — curses are just shitty buffs.
+# "All effects are buffs. Some are just shitty."
+
+card:
+  id: buff
+  name: "Buff"
+  type: [skill, effects, game]
+  
+  emoji: ✨
+  
+  rarity: common  # Ubiquitous in games
+  
+  description: |
+    Temporary stat modifiers, semantic effects, or behavior changes.
+    Can be numeric (+2 energy) or semantic ("feeling lucky").
+    Curses are just negative buffs — no separate system needed.
+
+# TOOLS REQUIRED
+
+tools:
+  required:
+    - read_file   # Read character buffs
+    - write_file  # Apply/remove buffs
+  optional: []
+
+tier: 1  # File read/write
+
+# METHODS
+# Actions this card advertises
+
+methods:
+  
+  APPLY:
+    description: "Add a buff to a character"
+    parameters:
+      target: "Character to buff"
+      buff: "Buff definition or reference"
+    output: chat + state_change
+    effect: "Add buff to target.buffs array"
+    invoked_by: [object, character, room, cat]
+    
+  REMOVE:
+    description: "Remove a specific buff"
+    parameters:
+      target: "Character"
+      buff_name: "Which buff to remove"
+    output: chat + state_change
+    effect: "Remove from target.buffs"
+    invoked_by: [healer, item, time_decay]
+    
+  TICK:
+    description: "Advance all buff durations by one turn"
+    parameters:
+      target: "Character or 'all'"
+    output: state_change
+    effect: "Decrement durations, remove expired buffs"
+    invoked_by: [time, simulation, coherence_engine]
+    
+  LIST:
+    description: "Show active buffs on a character"
+    parameters:
+      target: "Character to inspect"
+    output: chat
+    effect: "Display buffs with remaining duration"
+    invoked_by: [player, npc]
+    
+  CLEANSE:
+    description: "Remove all negative buffs (curses)"
+    parameters:
+      target: "Character"
+    output: chat + state_change
+    effect: "Filter out buffs where polarity = negative"
+    invoked_by: [healer, shrine, item]
+
+# STATE
+# Buff structure (lives on characters, not here)
+
+state:
+  buff_schema:
+    name:
+      type: string
+      description: "Display name"
+    source:
+      type: string
+      description: "What granted this buff"
+    effect:
+      type: object | string
+      description: "Stat mods {energy: +2} OR semantic prompt"
+    duration:
+      type: integer | string
+      description: "Turns, or 'forever', or '50% per turn'"
+    stacks:
+      type: boolean
+      default: false
+    max_stacks:
+      type: integer
+      description: "If stacking, limit"
+    polarity:
+      type: enum
+      values: [positive, negative, neutral]
+      description: "Is this a buff, curse, or neutral?"
+
+# BUFF TYPES
+
+buff_types:
+  numeric:
+    description: "Traditional stat modifiers"
+    example: "{ energy: +2, focus: +1 }"
+    
+  semantic:
+    description: "Arbitrary vibes interpreted by LLM"
+    examples:
+      - "feeling lucky"
+      - "cats seem to like you today"
+      - "slightly cursed"
+      - "radiating calm energy"
+      
+  conditional:
+    description: "Effects that trigger on conditions"
+    example: "Next roll is critical success"
+
+# DURATION TYPES
+
+duration_types:
+  turns: "Integer number of simulation turns"
+  forever: "Never expires (permanent buff)"
+  percentage: "'50% per turn' — random decay"
+  condition: "'until you eat' — event-based"
+  natural_language: "'about 5 minutes' — LLM judges"
+
+# ADVERTISEMENTS
+
+advertisements:
+  MODIFY_STATS:
+    score: 90
+    condition: "Need to temporarily change character capabilities"
+    
+  APPLY_CURSE:
+    score: 85
+    condition: "Something bad should happen to a character"
+    hint: "Curses are just negative buffs"
+    
+  GRANT_ABILITY:
+    score: 80
+    condition: "Character needs temporary new capability"
+
+# RELATED
+
+see_also:
+  - skills/character  # Where buffs live
+  - skills/time       # When buffs tick
+  - skills/needs      # Buffs can modify needs
+  - skills/persona    # Personas can grant buffs
+  - skills/cat        # Cats grant buff effects
+
+# CREDITS
+
+credits:
+  inspiration:
+    - "D&D — Buff/debuff spells"
+    - "World of Warcraft — Buff stacking"
+    - "The Sims — Moodlets"

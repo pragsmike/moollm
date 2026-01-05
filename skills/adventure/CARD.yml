@@ -1,0 +1,228 @@
+# CARD.yml — Adventure
+#
+# Room-based exploration with narrative evidence collection.
+# "Every directory is a room. Every file is a clue."
+
+card:
+  id: adventure
+  name: "Adventure"
+  type: [skill, game, simulation, narrative]
+  
+  emoji: 🗺️
+  
+  rarity: epic  # Central to MOOLLM
+  
+  description: |
+    The text adventure pattern: directories as rooms, files as clues,
+    chat as commands, LLM as dungeon master.
+    
+    Play this card to turn any filesystem into a navigable world,
+    or to run an actual text adventure game.
+    
+  lineage: "Colossal Cave, Zork, MUD, LambdaMOO"
+  inherits: [simulation]
+
+# TOOLS REQUIRED
+
+tools:
+  required:
+    - read_file   # Read room descriptions, character state
+    - write_file  # Update player location, inventory
+    - list_dir    # Discover room contents
+  optional:
+    - grep        # Search for items/clues
+
+tier: 1  # File read/write
+
+# METHODS
+# Actions this card advertises
+
+methods:
+  
+  LOOK:
+    description: "Describe current room"
+    parameters:
+      at: "Optional specific thing to examine"
+    output: chat (narrative)
+    effect: "Read ROOM.yml, narrate atmospherically"
+    invoked_by: [player]
+    
+  GO:
+    description: "Move to adjacent room"
+    parameters:
+      direction: "north, south, east, west, up, down, in, out, or room name"
+    output: chat (narrative) + state_change
+    effect: "Update player.location, describe new room"
+    invoked_by: [player, npc]
+    
+  TAKE:
+    description: "Pick up an object"
+    parameters:
+      item: "Object to take"
+    output: chat + state_change
+    effect: "Add to inventory, update object.location"
+    invoked_by: [player, npc]
+    
+  DROP:
+    description: "Put down an object"
+    parameters:
+      item: "Object to drop"
+    output: chat + state_change
+    effect: "Remove from inventory, place in room"
+    invoked_by: [player, npc]
+    
+  USE:
+    description: "Use an item or interact with object"
+    parameters:
+      item: "What to use"
+      on: "Optional target"
+    output: chat (narrative) + state_change
+    effect: "Trigger item's effect, update state"
+    invoked_by: [player, npc]
+    
+  INVENTORY:
+    description: "List what you're carrying"
+    parameters: {}
+    output: chat
+    effect: "Show player.inventory"
+    invoked_by: [player]
+    
+  TALK:
+    description: "Speak to a character"
+    parameters:
+      to: "Character to address"
+      about: "Optional topic"
+    output: chat (dialogue)
+    effect: "NPC responds in character"
+    invoked_by: [player]
+    
+  SAVE:
+    description: "Save game state"
+    parameters:
+      name: "Save name"
+    output: file + chat
+    effect: "Write current state to save file"
+    invoked_by: [player]
+    
+  RESTORE:
+    description: "Load saved game"
+    parameters:
+      name: "Save name"
+    output: chat + state_change
+    effect: "Load state from save file"
+    invoked_by: [player]
+
+# STATE
+# What an adventure instance tracks
+
+state:
+  # Inherited from simulation
+  turn:
+    type: integer
+    default: 0
+  paused:
+    type: boolean
+    default: false
+    
+  # Adventure-specific
+  player:
+    location:
+      type: path
+      description: "Current room directory"
+    inventory:
+      type: array
+      default: []
+    gold:
+      type: integer
+      default: 0
+    health:
+      type: integer
+      default: 100
+      
+  flags:
+    type: object
+    description: "Game state flags (puzzles solved, events triggered)"
+    default: {}
+    
+  discovered:
+    type: array
+    description: "Rooms the player has visited"
+    default: []
+    
+  output:
+    log_path:
+      type: path
+      description: "Summary table (LOG.md)"
+    transcript_path:
+      type: path
+      description: "Narrative log (TRANSCRIPT.md)"
+
+# ADVERTISEMENTS
+# What this card offers to the room
+
+advertisements:
+  START_ADVENTURE:
+    score: 95
+    condition: "Want to explore a directory as a game world"
+    
+  DUNGEON_MASTER:
+    score: 90
+    condition: "Need narrative framing for exploration"
+    
+  CODEBASE_ARCHAEOLOGY:
+    score: 85
+    condition: "Investigating unfamiliar codebase"
+    hint: "The auth bug is a quest!"
+
+# TEMPLATES
+
+templates:
+  - ADVENTURE.yml.tmpl  # Complete adventure state
+  - LOG.md.tmpl         # Summary table
+  - TRANSCRIPT.md.tmpl  # Pure narration
+
+# ROOM INTEGRATION
+# How adventure relates to rooms
+
+room_pattern:
+  directory_is: "room"
+  contents_are: "objects, characters, clues"
+  readme_is: "room description"
+  room_yml_is: "room properties and exits"
+
+# MULTI-USER
+# Adventure supports multiple simultaneous participants
+
+participants:
+  player_character:
+    controlled_by: "human via chat"
+    example: "Alice exploring the dungeon"
+  npc:
+    controlled_by: "DM (LLM)"
+    example: "Merchant sells items when addressed"
+  bot:
+    controlled_by: "action queue (autonomous)"
+    example: "Guard patrols on schedule"
+  agent:
+    controlled_by: "LLM with own goals"
+    example: "Oracle pursues prophecies"
+
+# RELATED
+
+see_also:
+  - skills/simulation  # Parent skill
+  - skills/room        # Directories as rooms
+  - skills/character   # Player and NPCs
+  - skills/party       # Group dynamics
+  - skills/memory-palace  # Same spatial metaphor
+  - skills/session-log # Audit trail
+
+# CREDITS
+
+credits:
+  inspiration:
+    - "Will Crowther & Don Woods — Colossal Cave (1976)"
+    - "Infocom — Zork series"
+    - "Richard Bartle & Roy Trubshaw — MUD (1978)"
+    - "Pavel Curtis — LambdaMOO"
+    - "Douglas Engelbart — NLS/oN-Line System"

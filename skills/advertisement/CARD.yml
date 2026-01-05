@@ -1,0 +1,163 @@
+# CARD.yml — Advertisement
+#
+# Objects announce what they can do — The Sims style.
+# "Objects don't wait to be used — they announce what's possible."
+
+card:
+  id: advertisement
+  name: "Advertisement"
+  type: [skill, interaction, game]
+  
+  emoji: 📣
+  
+  rarity: common  # Fundamental to Sims-style interaction
+  
+  description: |
+    The Sims-style object interaction system. Every object broadcasts
+    its available actions, scored by relevance to context.
+    
+    Play this card when objects need to announce what they can do,
+    or when building plug-in architectures where new objects
+    self-describe their behaviors.
+    
+  lineage: "The Sims (Maxis/EA), Snap-together objects"
+
+# TOOLS REQUIRED
+
+tools:
+  required:
+    - read_file   # Read object advertisements
+    - write_file  # Update ad scores/state
+    - list_dir    # Find objects in room
+  optional: []
+
+tier: 1  # File read/write
+
+# METHODS
+# Actions this card advertises (meta!)
+
+methods:
+  
+  SCAN:
+    description: "Collect all advertisements from current room"
+    parameters:
+      room: "Path to room (defaults to current)"
+    output: chat (sorted list)
+    effect: "Read all *.yml files, extract advertisements, score and sort"
+    invoked_by: [player, coherence_engine]
+    
+  SHOW:
+    description: "Display what an object advertises"
+    parameters:
+      object: "Object to inspect"
+    output: chat
+    effect: "Show object's full advertisement list with scores"
+    invoked_by: [player]
+    
+  SELECT:
+    description: "Choose an advertised action"
+    parameters:
+      object: "Object offering the action"
+      action: "Action to take"
+    output: chat + state_change
+    effect: "Execute the action, which may queue more actions"
+    invoked_by: [player, autonomous_agent]
+    
+  EVALUATE:
+    description: "Score advertisements against character needs"
+    parameters:
+      character: "Character to score for"
+    output: chat (re-scored list)
+    effect: "Adjust scores based on needs, goals, context"
+    invoked_by: [coherence_engine, action_queue]
+
+# STATE
+# Advertisements are declared in object files, not here
+
+state:
+  # This card has no persistent state
+  # Advertisements live in the objects themselves
+  
+  # Object advertisement structure:
+  advertisement_schema:
+    action:
+      type: string
+      description: "Action name (CRAFT, EXAMINE, USE, etc.)"
+    description:
+      type: string
+      description: "What the action does"
+    preconditions:
+      type: array
+      description: "What must be true for action to be available"
+    score:
+      type: integer
+      description: "Base score (0-100)"
+    score_if:
+      type: string
+      description: "Condition that modifies score"
+    satisfies:
+      type: array
+      description: "What needs/goals this action satisfies"
+
+# ADVERTISEMENTS
+# What this card offers (yes, it advertises its own advertisements)
+
+advertisements:
+  DISCOVER_ACTIONS:
+    score: 90
+    condition: "In a new room or unsure what to do"
+    
+  BUILD_OBJECT:
+    score: 85
+    condition: "Creating new object that needs interactions"
+    
+  UNDERSTAND_SIMS:
+    score: 75
+    condition: "Learning how The Sims-style interaction works"
+
+# THE SIMS SECRET SAUCE
+# Why this pattern enabled massive expansion
+
+sims_insight:
+  why_it_worked:
+    - "User-created objects — anyone could make new furniture/items"
+    - "Expansion packs — drop in new objects with advertisements"
+    - "No code changes — objects self-describe behaviors"
+    - "Infinite variety — community created millions of objects"
+    
+  moollm_parallel:
+    - "YAML files self-describe capabilities"
+    - "New skills/objects plug in without changing core"
+    - "LLM reads descriptions, figures out interactions"
+    - "Community can share object definitions"
+
+# PIE MENU INTEGRATION
+
+pie_menu:
+  description: "Advertisements naturally map to pie menus"
+  behavior: |
+    When player clicks an object, advertisements become
+    pie menu slices, sorted by score, highest at top.
+    
+    Just like Don Hopkins' original pie menus: fast access
+    to contextually-relevant actions.
+
+# RELATED
+
+see_also:
+  - skills/action-queue    # Actions get queued from ads
+  - skills/room            # Where objects live
+  - skills/needs           # Scores adjusted by needs
+  - skills/card            # Cards have advertisements too
+  - skills/coherence-engine # Orchestrates ad evaluation
+  - skills/rubric          # Structured scoring criteria
+
+# CREDITS
+
+credits:
+  inspiration:
+    - "Will Wright — The Sims advertisement system"
+    - "Don Hopkins — Pie Menus"
+  lineage:
+    - "The Sims (2000) — original implementation"
+    - "HyperCard — objects handle their own events"

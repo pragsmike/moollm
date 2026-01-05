@@ -1,0 +1,196 @@
+# CARD.yml — Cat
+#
+# Feline interactions, buffs, and relationship building.
+# "Cats are the original NPCs. They have their own agenda."
+
+card:
+  id: cat
+  name: "Cat"
+  type: [skill, companion, game]
+  
+  emoji: 🐱
+  
+  rarity: uncommon  # Everyone wants a cat
+  
+  description: |
+    The feline interaction skill. Cats are not decoration —
+    they're gameplay. Pet them for buffs, ignore them for
+    consequences, earn their trust over time.
+    
+    Each cat instance overlays personality for unique effects.
+    
+  lineage: "Tamagotchi, Harvest Moon, Stardew Valley, real cats"
+
+# TOOLS REQUIRED
+
+tools:
+  required:
+    - read_file   # Read cat personality
+    - write_file  # Update relationship state
+  optional: []
+
+tier: 1  # File read/write
+
+# METHODS
+# Cat interaction actions
+
+methods:
+  
+  PAT:
+    description: "Brief friendly touch"
+    parameters:
+      cat: "Which cat"
+    output: chat (reaction) + possible buff
+    effect: "Quick mood boost, low risk"
+    invoked_by: [player, npc]
+    success_factors: ["cat.nice", "cat.outgoing"]
+    
+  SCRITCH:
+    description: "Find the sweet spot"
+    parameters:
+      cat: "Which cat"
+      where: "chin, ears, back, belly (risky!)"
+    output: chat (reaction) + buff if successful
+    effect: "Stronger effect, requires trust"
+    invoked_by: [player]
+    success_factors: ["trust_level", "location_risk"]
+    
+  HOLD:
+    description: "Pick up and cuddle"
+    parameters:
+      cat: "Which cat"
+    output: chat (reaction) + buff/debuff
+    effect: "Intimate interaction, high risk/reward"
+    invoked_by: [player]
+    success_factors: ["trust_level", "cat.playful", "time_held"]
+    
+  PLAY:
+    description: "Interactive toy time"
+    parameters:
+      cat: "Which cat"
+      toy: "Optional specific toy"
+    output: chat (play session) + buff
+    effect: "Builds relationship, satisfies cat's play need"
+    invoked_by: [player, npc]
+    success_factors: ["toy_interest", "cat.playful", "cat.active"]
+    
+  FEED:
+    description: "Offer food or treat"
+    parameters:
+      cat: "Which cat"
+      food: "What to feed"
+    output: chat + state_change
+    effect: "Immediate goodwill, may cause dependency"
+    invoked_by: [player, npc]
+    success_factors: ["food_quality", "hunger_level"]
+    
+  OBSERVE:
+    description: "Watch without interacting"
+    parameters:
+      cat: "Which cat"
+    output: chat (behavior description)
+    effect: "Learn personality, no relationship change"
+    invoked_by: [player]
+    success_factors: []
+    
+  CALL:
+    description: "Try to summon the cat"
+    parameters:
+      cat: "Which cat"
+    output: chat (response)
+    effect: "Cat may or may not come"
+    invoked_by: [player, npc]
+    success_factors: ["trust_level", "cat.independence"]
+
+# STATE
+# Cat instance structure
+
+state:
+  cat_schema:
+    name:
+      type: string
+    personality:
+      nice: { type: integer, range: [0, 10] }
+      outgoing: { type: integer, range: [0, 10] }
+      active: { type: integer, range: [0, 10] }
+      playful: { type: integer, range: [0, 10] }
+      neat: { type: integer, range: [0, 10] }
+    trust_level:
+      type: integer
+      range: [0, 100]
+      description: "Built over time through positive interactions"
+    mood:
+      type: enum
+      values: [content, playful, sleepy, hungry, annoyed, affectionate]
+    location:
+      type: path
+      description: "Where the cat currently is"
+    favorite_spots:
+      type: array
+      description: "Preferred locations"
+    scritch_spots:
+      type: object
+      description: "Sensitivity per body area"
+
+# BUFF EFFECTS
+# What petting cats can grant
+
+buff_effects:
+  PAT_success: "+1 Cheerful (5 turns)"
+  SCRITCH_success: "+2 Calm (10 turns), possible Lucky"
+  HOLD_success: "+3 Comforted (15 turns)"
+  PLAY_success: "+2 Energized (10 turns)"
+  
+  failure_effects:
+    scratch: "-1 to next cat interaction"
+    bite: "-2 Confidence (5 turns)"
+    flee: "Cat unavailable for 3 turns"
+
+# SPECIAL CATS
+# Themed cats with unique effects
+
+special_cats:
+  terpie:
+    theme: "Cannabis terpenes"
+    buffs_grant: ["Myrcene Mellow", "Limonene Lift"]
+    
+  stroopwafel:
+    theme: "Dutch coziness"
+    buffs_grant: ["Gezellig Glow", "Warm Feeling"]
+    
+  kittens:
+    note: "Named after terpenes (Myrcene, Limonene, Linalool...)"
+    buffs_grant: "Terpene-specific effects"
+
+# ADVERTISEMENTS
+
+advertisements:
+  PET_A_CAT:
+    score: 85
+    condition: "Cat is present and approachable"
+    
+  BUILD_TRUST:
+    score: 75
+    condition: "Want to improve relationship with cat"
+    
+  GET_BUFF:
+    score: 80
+    condition: "Need a mood boost or luck"
+
+# RELATED
+
+see_also:
+  - skills/character  # Cats are characters
+  - skills/buff       # Cat interactions grant buffs
+  - skills/mind-mirror # Cat personality traits
+  - skills/room       # Cats live in rooms
+  - skills/needs      # Cats have needs too
+
+# CREDITS
+
+credits:
+  inspiration:
+    - "Tamagotchi — Virtual pet care"
+    - "Harvest Moon/Stardew Valley — Animal relationships"
+    - "The Sims — Pet expansion packs"
+    - "Real cats — The ultimate NPC"

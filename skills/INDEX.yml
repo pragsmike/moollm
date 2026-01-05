@@ -54,6 +54,17 @@ skills:
     tags: ["meta", "learning", "philosophy"]
     use_when: "Designing learning experiences or microworlds"
     
+  - name: "prototype"
+    path: "skills/prototype"
+    description: "Self language philosophy — objects clone, not instantiate"
+    tier: 0
+    entry: "SKILL.md"
+    protocol: "PROTOTYPE"
+    tags: ["meta", "inheritance", "philosophy", "self"]
+    use_when: "Understanding or designing prototype-based inheritance"
+    related: ["skill", "character", "card"]
+    credits: "David Ungar, Randall Smith (Self, 1987)"
+    
   - name: "speed-of-light"
     path: "skills/speed-of-light"
     description: "Simulate many turns inside one LLM call"

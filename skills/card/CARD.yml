@@ -1,0 +1,198 @@
+# CARD.yml — Card (The Meta-Card!)
+#
+# Portable tokens of capability, identity, and access.
+# This is the card that describes what cards are.
+
+card:
+  id: card
+  name: "The Card Card"
+  type: [skill, meta, capability]
+  
+  emoji: 🎴
+  
+  rarity: mythic  # The meta-card itself
+  
+  description: |
+    The meta-skill for understanding and creating cards.
+    Cards are portable tokens you carry, play, and activate.
+    
+    Trading cards, playing cards, Magic cards, Tarot cards,
+    business cards, key cards, receipts, tickets — all cards.
+    
+    Play this card to create new cards, understand the card
+    system, or build card-based game mechanics.
+
+# TOOLS REQUIRED
+
+tools:
+  required:
+    - read_file   # Read card definitions
+    - write_file  # Create/modify cards
+    - list_dir    # Find cards in collections
+  optional:
+    - grep        # Search for cards
+
+tier: 1  # File read/write
+
+# METHODS
+# Actions this card advertises
+
+methods:
+  
+  CREATE:
+    description: "Design a new card"
+    parameters:
+      name: "Card name"
+      type: "Card type(s)"
+      capabilities: "What the card can do"
+    output: file (CARD.yml) + chat
+    effect: "Generate card definition from parameters"
+    invoked_by: [player, designer]
+    
+  PLAY:
+    description: "Activate a card in a room"
+    parameters:
+      card: "Card to play"
+      room: "Where to play it (defaults to current)"
+      method: "Which method to invoke"
+    output: chat + state_change
+    effect: "Create activation record, execute method"
+    invoked_by: [player, npc, room]
+    
+  COLLECT:
+    description: "Add card to inventory/collection"
+    parameters:
+      card: "Card to collect"
+      collection: "Where to store it"
+    output: chat + state_change
+    effect: "Add card reference to collection"
+    invoked_by: [player]
+    
+  TRADE:
+    description: "Exchange cards between characters"
+    parameters:
+      give: "Card(s) to give"
+      receive: "Card(s) to receive"
+      with: "Other party"
+    output: chat + state_change
+    effect: "Update both inventories"
+    invoked_by: [player, npc]
+    
+  EXAMINE:
+    description: "Read a card's full definition"
+    parameters:
+      card: "Card to examine"
+    output: chat
+    effect: "Display card properties, methods, state"
+    invoked_by: [player]
+    
+  ACTIVATE:
+    description: "Create activation record for a played card"
+    parameters:
+      card: "Card being played"
+      method: "Method being invoked"
+      parameters: "Method parameters"
+    output: file (*.activation) + chat
+    effect: "Instantiate card method with state"
+    invoked_by: [coherence_engine]
+
+# STATE
+# Card structure (template)
+
+state:
+  card_schema:
+    id:
+      type: string
+      description: "Unique identifier"
+    name:
+      type: string
+      description: "Display name"
+    type:
+      type: array
+      description: "Card types (skill, character, item, etc.)"
+    emoji:
+      type: string
+    rarity:
+      type: enum
+      values: [common, uncommon, rare, epic, mythic]
+    description:
+      type: string
+    tools:
+      type: object
+      description: "Required and optional tools"
+    methods:
+      type: object
+      description: "Actions this card can perform"
+    state:
+      type: object
+      description: "Mutable state when activated"
+    advertisements:
+      type: object
+      description: "What this card offers to the room"
+
+# CARD TYPES
+
+card_types:
+  trading_card: "Hero-Story cards for real people's traditions"
+  playing_card: "Actions, abilities, spells to play"
+  flux_card: "Rule-changing cards (Fluxx style)"
+  tarot_card: "Archetypal symbols, prompts for reflection"
+  key_card: "Access tokens for rooms and resources"
+  skill_card: "Capabilities you can invoke"
+  character_card: "Summonable personas or NPCs"
+  item_card: "Objects with special effects"
+
+# ACTIVATION RECORDS
+# When a card is played, it creates an activation
+
+activation_record:
+  card: "Reference to source card"
+  method: "Which method is active"
+  state: "Instance-specific state"
+  location: "Where it's activated"
+  advertisements: "Active ads in the room"
+  lifecycle: [created, active, paused, completed, cancelled]
+
+# SIDECAR PATTERN
+
+sidecar_pattern:
+  description: "Any directory entity can have a CARD.yml sidecar"
+  examples:
+    - "pub/CARD.yml — makes the pub playable"
+    - "characters/don/CARD.yml — trading card representation"
+    - "objects/lamp/CARD.yml — summon/play the lamp"
+
+# ADVERTISEMENTS
+
+advertisements:
+  CREATE_CARD:
+    score: 95
+    condition: "Need to make a new capability portable"
+    
+  UNDERSTAND_CARDS:
+    score: 85
+    condition: "Learning how the card system works"
+    
+  DESIGN_GAME:
+    score: 80
+    condition: "Building card-based game mechanics"
+
+# RELATED
+
+see_also:
+  - skills/room           # Where cards are played
+  - skills/adventure      # Cards in narrative context
+  - skills/hero-story     # Safe references to real people
+  - skills/advertisement  # Cards advertise their methods
+  - skills/data-flow      # Cards can form pipelines
+  - skills/debate         # Debate card example
+
+# CREDITS
+
+credits:
+  inspiration:
+    - "Magic: The Gathering — Complex card interactions"
+    - "Fluxx — Rule-changing cards"
+    - "Tarot — Archetypal card prompts"
+    - "Trading cards — Collectible representations"
+    - "Self language — Cards as prototype objects"
