@@ -60,6 +60,8 @@ philosophy:
     2: "Heal"
     3: "Function"
     4: "Optimize"
+    5: "Adapt"
+    6: "Reproduce"
     
   application: |
     When something goes wrong:
