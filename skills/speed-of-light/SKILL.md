@@ -6,7 +6,7 @@ tier: 1
 allowed-tools:
   - read_file
   - write_file
-related: [coherence-engine, multi-presence, simulation]
+related: [coherence-engine, multi-presence, simulation, adversarial-committee, soul-chat]
 ---
 
 # Speed of Light
@@ -166,6 +166,28 @@ At epoch end:
 | **Coherence** | LLM sees everything |
 | **Naturalness** | Conversations flow |
 
+## The Killer App: Adversarial Committees
+
+The most powerful use of speed-of-light: **committee deliberation**.
+
+Traditional chat gives you the **statistical center** of all possible viewpoints. Speed-of-light enables **ensemble inference** — multiple perspectives debating within one call:
+
+```yaml
+committee:
+  maya:      # Paranoid realist — surfaces traps
+  frankie:   # Idealist — surfaces opportunities  
+  vic:       # Evidence prosecutor — demands proof
+  tammy:     # Systems thinker — traces consequences
+
+# All debate at light speed
+# Cross-examination in one epoch
+# No round-trip noise
+```
+
+**Result:** Stories that survive adversarial debate are more robust than any single answer.
+
+See: [adversarial-committee](../adversarial-committee/), [roberts-rules](../roberts-rules/)
+
 ---
 
 ## The Sims Parallel
@@ -233,6 +255,9 @@ Debugger: "Found it. The old key is cached. Solution: restart the auth service o
 - [Soul Chat](../soul-chat/) — Multi-voice dialogue format
 - [Multi-Presence](../multi-presence/) — Many instances, one epoch
 - [Room](../room/) — Where simulation happens
+- [Adversarial Committee](../adversarial-committee/) — **The killer app**: debates at light speed
+- [Roberts Rules](../roberts-rules/) — Structured deliberation within one call
+- [Evaluator](../evaluator/) — Independent assessment without round-trips
 
 ---
 

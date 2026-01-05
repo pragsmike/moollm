@@ -6,7 +6,7 @@ tier: 1
 allowed-tools:
   - read_file
   - write_file
-related: [play-learn-lift, debugging, session-log, memory-palace]
+related: [play-learn-lift, debugging, session-log, memory-palace, adversarial-committee, rubric]
 ---
 
 # Research Notebook
@@ -85,6 +85,8 @@ graph LR
 | [sister-script/](../sister-script/) | Research feeds automation |
 | [debugging/](../debugging/) | Research supports hypothesis tracking |
 | [adventure/](../adventure/) | Evidence collection |
+| [adversarial-committee/](../adversarial-committee/) | **Multiple perspectives** on research questions |
+| [rubric/](../rubric/) | Criteria for evaluating sources and findings |
 
 ### Protocol Symbols
 | Symbol | Link |

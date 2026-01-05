@@ -8,7 +8,7 @@ allowed-tools:
 tier: 1
 protocol: ADVERTISEMENT
 tags: [game, interaction, sims, behavior]
-related: [room, action-queue, coherence-engine]
+related: [room, action-queue, coherence-engine, rubric, scoring]
 ---
 
 # Advertisement
@@ -268,6 +268,8 @@ The room intercepts CRAFT before it reaches the object, adding room-specific log
 - [SNAP-CURSOR](../room/) — Context-aware object interaction
 - [Coherence Engine](../coherence-engine/) — Evaluates and selects actions
 - [Trading Card](../card/) — Cards can advertise too
+- [Rubric](../rubric/) — **Scoring criteria** for advertisement evaluation
+- [Scoring](../scoring/) — How scores are calculated and valued
 
 ---
 

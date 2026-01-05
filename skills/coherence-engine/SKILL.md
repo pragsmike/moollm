@@ -5,7 +5,7 @@ allowed-tools: []
 tier: 0
 protocol: COHERENCE-ENGINE
 tags: [meta, orchestration, consistency, simulation]
-related: [yaml-jazz, postel, room, soul-chat, session-log, self-repair, speed-of-light]
+related: [yaml-jazz, postel, room, soul-chat, session-log, self-repair, speed-of-light, adversarial-committee, evaluator]
 ---
 
 # Coherence Engine
@@ -163,6 +163,9 @@ Non-blocking, parallel, resumable.
 - [speed-of-light/](../speed-of-light/) — Multi-turn simulation in one call
 - [yaml-jazz/](../yaml-jazz/) — Semantic data interpretation
 - [self-repair/](../self-repair/) — Consistency healing
+- [adversarial-committee/](../adversarial-committee/) — Coherence engine **orchestrates** committee debates
+- [evaluator/](../evaluator/) — Independent assessment without debate context
+- [roberts-rules/](../roberts-rules/) — Structured procedure the engine enforces
 
 ### Kernel
 - [kernel/README.md](../../kernel/README.md) — "The LLM is the Coherence Engine"

@@ -7,7 +7,7 @@ allowed-tools:
 tier: 2
 protocol: CODE-REVIEW
 tags: [development, quality, review, security]
-related: [adventure, debugging, research-notebook, session-log]
+related: [adventure, debugging, research-notebook, session-log, rubric, evaluator]
 templates:
   - file: REVIEW.yml.tmpl
     purpose: Structured review tracking
@@ -162,3 +162,9 @@ linters:
 | `approve` | Good to merge |
 | `request_changes` | Has blocking/important issues |
 | `comment` | Minor feedback only |
+
+## See Also
+
+- [rubric](../rubric/) — **Explicit scoring criteria** for code quality
+- [evaluator](../evaluator/) — Independent assessment pattern
+- [adversarial-committee](../adversarial-committee/) — Multiple reviewers debating findings

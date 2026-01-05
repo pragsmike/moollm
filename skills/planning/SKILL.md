@@ -6,7 +6,7 @@ tier: 1
 allowed-tools:
   - read_file
   - write_file
-related: [plan-then-execute, action-queue, session-log]
+related: [plan-then-execute, action-queue, session-log, roberts-rules, adversarial-committee]
 ---
 
 # Planning
@@ -108,6 +108,8 @@ graph LR
 | [play-learn-lift/](../play-learn-lift/) | Planning IS LEARN stage |
 | [scratchpad/](../scratchpad/) | For freeform thinking |
 | [session-log/](../session-log/) | Track planning progress |
+| [roberts-rules/](../roberts-rules/) | **Structured deliberation** for planning decisions |
+| [adversarial-committee/](../adversarial-committee/) | Multiple perspectives on plan viability |
 
 ### Protocol Symbols
 | Symbol | Link |

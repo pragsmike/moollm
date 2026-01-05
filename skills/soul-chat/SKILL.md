@@ -6,7 +6,7 @@ tier: 1
 allowed-tools:
   - read_file
   - write_file
-related: [character, room, yaml-jazz, adventure]
+related: [character, room, yaml-jazz, adventure, adversarial-committee, speed-of-light]
 ---
 
 # Soul Chat
@@ -101,6 +101,8 @@ graph LR
 | [room/](../room/) | Rooms can **welcome visitors**, have personality |
 | [memory-palace/](../memory-palace/) | Rooms in palace can speak, guide navigation |
 | [adventure/](../adventure/) | NPCs and environments speak |
+| [adversarial-committee/](../adversarial-committee/) | **Committee debates** are soul-chats with opposing personas |
+| [speed-of-light/](../speed-of-light/) | Many voices **in one call** — soul-chat's power |
 
 ### Protocol Symbols
 | Symbol | Link |

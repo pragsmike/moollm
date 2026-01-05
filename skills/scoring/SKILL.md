@@ -6,7 +6,7 @@ tier: 1
 allowed-tools:
   - read_file
   - write_file
-related: [reward, economy, probability, character]
+related: [reward, economy, probability, character, rubric, evaluator]
 ---
 
 # Scoring Skill
@@ -51,3 +51,5 @@ Achievement valuation.
 
 - [reward](../reward/) — Scores determine reward quality
 - [economy](../economy/) — Skills have economic value
+- [rubric](../rubric/) — **Explicit criteria** for scoring decisions
+- [evaluator](../evaluator/) — Independent scoring without context bias

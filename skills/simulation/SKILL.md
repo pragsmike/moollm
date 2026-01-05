@@ -6,7 +6,7 @@ tier: 1
 allowed-tools:
   - read_file
   - write_file
-related: [time, party, character, buff, world-generation, adventure]
+related: [time, party, character, buff, world-generation, adventure, adversarial-committee, speed-of-light]
 ---
 
 # Simulation Skill
@@ -158,3 +158,5 @@ Turn 49: Pet Terpie (+Serenity buff)
 - [party](../party/) — Party and selection
 - [buff](../buff/) — Active effects
 - [character](../character/) — Player state
+- [adversarial-committee](../adversarial-committee/) — **Decision-making** within simulation
+- [speed-of-light](../speed-of-light/) — Multi-agent simulation in one call
