@@ -726,7 +726,7 @@ related: [roberts-rules, rubric, evaluator, soul-chat]
 [Full documentation in Markdown...]
 ```
 
-The **YAML frontmatter** is machine-readable. The **Markdown body** is human-readable. The **protocol field** declares the K-line that invokes this skill.
+The **YAML frontmatter** is machine-readable. The **Markdown body** is llm-and-human-readable. The **protocol field** declares the K-line that invokes this skill.
 
 ### Skill Tiers
 
@@ -737,6 +737,64 @@ The **YAML frontmatter** is machine-readable. The **Markdown body** is human-rea
 | 2 | + Terminal | debugging, code-review |
 
 **Principle:** Use the lowest tier possible. Knowledge skills need no tools.
+
+### Scripts in Skills
+
+When skills include Python scripts, structure them for both human and LLM consumption:
+
+```python
+#!/usr/bin/env python3
+"""skill-name: Brief description of what the script does.
+
+This docstring becomes --help output AND is immediately visible to the LLM.
+"""
+
+# === IMPORTS (LLM sees dependencies at a glance) ===
+import click  # or argparse, typer
+from pathlib import Path
+import yaml
+
+# === CONSTANTS (LLM understands configuration) ===
+DEFAULT_ROOM = "start"
+VALID_DIRECTIONS = ["north", "south", "east", "west"]
+
+# === CLI STRUCTURE (LLM reads command tree directly) ===
+@click.group()
+def cli():
+    """Main entry point. Run with --help for subcommands."""
+    pass
+
+@cli.command()
+@click.argument('direction', type=click.Choice(VALID_DIRECTIONS))
+def move(direction):
+    """Move the player in a direction."""
+    ...
+
+@cli.command()  
+@click.option('--verbose', '-v', is_flag=True)
+def status(verbose):
+    """Show current game state."""
+    ...
+
+# === IMPLEMENTATION (LLM can read deeper if needed) ===
+def _internal_helper():
+    ...
+```
+
+**Why this works:**
+
+| Consumer | How They Learn the Tool |
+|----------|-------------------------|
+| Human user | `./tool.py --help` or `./tool.py move --help` |
+| LLM | Reads `tool.py` directly — sees structure in 30 lines |
+
+**DRY principle:** Command structure is written **once** as Python code using standard CLI libraries. The LLM reads the source; users run `--help`. No duplicate documentation.
+
+**For the LLM:** Reading the script file directly is faster and more complete than running `--help` in a terminal. You see:
+- All subcommands at once
+- Type hints and choices
+- Constants and defaults
+- The actual implementation logic
 
 ### K-Lines Are Skill Invocations
 
