@@ -218,3 +218,126 @@ room:
 #   - "What would your confident self say?"
 #   - Role-playing to practice difficult conversations
 #   - Trying on identities to find what fits
+
+# CODE-SWITCHING
+#
+# The phenomenon where people shift language, dialect, behavior,
+# or presentation based on social context. Not deception — ADAPTATION.
+#
+# Linguistic code-switching:
+#   - Bilingual speakers switching languages mid-sentence
+#   - Dialect shifting (formal English ↔ vernacular)
+#   - Register shifting (how you talk to your boss vs your friends)
+#   - "I sound different on the phone with my grandmother"
+#
+# Social code-switching:
+#   - Professional self vs casual self
+#   - "Work voice" vs "home voice"
+#   - Different humor styles in different groups
+#   - The version of you that exists at family dinners
+#
+# Cultural code-switching:
+#   - Navigating between majority and minority cultures
+#   - Immigrant experience: home culture vs host culture
+#   - "Acting white" / "Acting [any group]" as survival strategy
+#   - The exhaustion of constant translation
+#
+# Digital code-switching:
+#   - Different personas on different platforms
+#   - LinkedIn you vs Twitter you vs Discord you
+#   - The handle as lightweight persona
+#   - "My parents follow me on this account"
+#
+# MOOLLM models this explicitly:
+#   - Personas are NAMED code-switches
+#   - You can have auto-switching based on context
+#   - Rooms can EXPECT certain personas
+#   - The switch itself can be narrated
+
+  code_switching:
+    description: |
+      Personas can auto-activate based on context. This models
+      the real phenomenon of code-switching — where identity
+      presentation shifts fluidly based on social environment.
+      
+    triggers:
+      room_based:
+        description: "Activate a persona when entering a room"
+        example: |
+          # In CHARACTER.yml
+          auto_personas:
+            pub/: captain-ashford      # Be the captain at the pub
+            home/: null                # Be yourself at home
+            kitchen/: dutiful-child    # Different for Mother
+            
+      audience_based:
+        description: "Activate based on who's present"
+        example: |
+          auto_personas:
+            when_with:
+              mother: dutiful-child
+              strangers: guarded-professional
+              close_friends: null      # No mask needed
+              
+      context_based:
+        description: "Activate based on activity"
+        example: |
+          auto_personas:
+            during:
+              combat: battle-ready
+              negotiation: smooth-talker
+              grieving: vulnerable-self
+              
+    narration:
+      on_switch: |
+        When a persona auto-activates, narrate the shift:
+        
+        "You feel your posture straighten as you enter the pub.
+        The Captain's voice emerges — deeper, more confident.
+        You ARE Captain Ashford here. You always were."
+        
+      on_conflict: |
+        When two triggers conflict, narrate the tension:
+        
+        "Mother is at the pub. Who do you BE?
+        The dutiful child? The confident captain?
+        Your face flickers between masks. Choose."
+        
+    exhaustion:
+      description: |
+        Code-switching has a cost. Constant switching is TIRING.
+        This can be modeled as a need or buff drain.
+        
+      mechanics: |
+        switches_today: 0
+        switch_fatigue_threshold: 5
+        
+        # After 5 switches in a day:
+        buff: code_switch_fatigue
+        effect: "-1 to all social rolls. Need rest to reset."
+        
+      narrative: |
+        "You've been so many people today. The masks are heavy.
+        You need a moment to just BE — unfiltered, unperformed.
+        Find somewhere safe. Take off all the masks. Breathe."
+
+# THE POLITICS OF PASSING
+#
+# Some personas aren't optional. Some are survival.
+#
+# - Queer people "passing" in hostile environments
+# - Neurodivergent people "masking" to fit in
+# - Immigrants code-switching to avoid discrimination
+# - Anyone who has to hide part of themselves to be safe
+#
+# MOOLLM doesn't judge this. The Wardrobe holds ALL masks —
+# the playful ones and the protective ones. Some masks are
+# costumes. Some are armor. Both belong here.
+#
+# The goal is not to eliminate masks. The goal is to make
+# wearing them OPTIONAL. To build spaces where you can
+# take them off. To reduce the exhaustion of constant performance.
+#
+# In MOOLLM: rooms can be marked "safe" — where no persona
+# is expected, where you can be your base self, where the
+# code-switching fatigue can heal.
