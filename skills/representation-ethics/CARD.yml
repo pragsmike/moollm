@@ -64,6 +64,15 @@ methods:
     output: chat (recommended approach)
     effect: "Select from tradition → quote spectrum"
     invoked_by: [designer, player]
+    
+  CREATE_FRAMING_ROOM:
+    description: "Create a room that provides ethical framing to all contents"
+    parameters:
+      room_type: "theater, courtroom, classroom, laboratory, etc."
+      framing_mode: "performance, legal, educational, experimental, etc."
+    output: file (ROOM.yml) + directory structure
+    effect: "Establish DRY framing that propagates to all children"
+    invoked_by: [designer]
 
 # STATE
 
@@ -183,6 +192,100 @@ framing_inheritance:
     
     All can be ethical with appropriate framing and context.
 
+# ROOM-BASED FRAMING (DRY Pattern)
+
+room_framing:
+  principle: |
+    A room's framing propagates to everything within it.
+    Define framing ONCE at the room level — DRY.
+    All sub-rooms, characters, and objects inherit.
+    
+  theater_example:
+    description: |
+      A "theater" room establishes PERFORMANCE framing.
+      Everything inside is understood as acting, play, fiction.
+      No need to frame each character individually.
+      
+    structure: |
+      theater/
+      ├── ROOM.yml           # framing: performance, fiction, art
+      │
+      ├── stage/             # Inherits: everything here is ACTING
+      │   ├── ROOM.yml       # The performance space
+      │   ├── hamlet.yml     # A character PLAYING Hamlet
+      │   ├── ophelia.yml    # A character PLAYING Ophelia  
+      │   └── props/         # Objects used in performance
+      │       ├── skull.yml  # Yorick's skull (prop, not real)
+      │       └── sword.yml  # Stage combat sword
+      │
+      ├── audience/          # Inherits: everything here is WATCHING
+      │   ├── ROOM.yml       # The viewing space
+      │   └── spectators.yml # People who know it's a play
+      │
+      ├── backstage/         # Inherits: everything here is PREPARING
+      │   ├── ROOM.yml       # Behind the curtain
+      │   ├── costumes/      # Persona storage
+      │   └── green-room.yml # Where actors wait
+      │
+      └── staff/             # Inherits: everything here is PRODUCING
+          ├── ROOM.yml       # Production crew space
+          ├── director.yml   # The one framing the performance
+          ├── stage-manager.yml
+          └── tech-booth/
+              └── lighting.yml
+              
+    room_yml_example: |
+      # theater/ROOM.yml
+      room:
+        id: theater
+        name: "The Theater"
+        type: [performance, fiction, framed]
+        
+        framing:
+          mode: performance
+          inherits_to_children: true
+          disclaimer: "All within is understood as acting"
+          
+        ethical_context: |
+          Everything in this room is EXPLICITLY FRAMED as performance.
+          Characters playing real people are actors, not impersonators.
+          Historical figures are portrayals, not simulations.
+          The audience knows. The framing is the contract.
+          
+  other_framing_rooms:
+    courtroom:
+      framing: "legal proceeding, formal, adversarial"
+      children_inherit: "witnesses testify, lawyers argue, judge decides"
+      
+    classroom:
+      framing: "educational, exploratory, learning"
+      children_inherit: "discussions are for understanding, not belief"
+      
+    laboratory:
+      framing: "experimental, hypothetical, testing"
+      children_inherit: "we're trying things to see what happens"
+      
+    writers_room:
+      framing: "creative, brainstorming, nothing is real yet"
+      children_inherit: "characters are ideas being developed"
+      
+    debate_hall:
+      framing: "adversarial, positions may be assigned, devil's advocate"
+      children_inherit: "speakers argue positions, not personal beliefs"
+      
+  dry_benefit: |
+    Instead of:
+      hamlet.yml: { framing: "this is acting" }
+      ophelia.yml: { framing: "this is acting" }
+      claudius.yml: { framing: "this is acting" }
+      ... (repeat for every character)
+      
+    Do:
+      theater/ROOM.yml: { framing: "everything here is acting" }
+      theater/stage/hamlet.yml: (inherits framing)
+      theater/stage/ophelia.yml: (inherits framing)
+      ... (framing inherited automatically)
+
 # WHAT MAKES IT WRONG
 
 wrong_when:
@@ -218,6 +321,10 @@ advertisements:
   TRIBUTE_VS_IMPERSONATION:
     score: 88
     condition: "Walking the line between homage and deception"
+    
+  CREATE_FRAMING_ROOM:
+    score: 92
+    condition: "Need to frame many characters/objects consistently"
 
 # RELATED
 
@@ -226,6 +333,8 @@ see_also:
   - skills/persona     # Identity layers
   - skills/debate      # Historical figure debates
   - skills/soul-chat   # Multi-voice conversations
+  - skills/room        # Room-based framing inheritance
+  - skills/prototype   # DRY through inheritance
 
 # CREDITS
 
