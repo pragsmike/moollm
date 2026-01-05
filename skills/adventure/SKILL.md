@@ -1,50 +1,329 @@
-# Adventure Protocol Skill
-## Room-Based Exploration with Narrative Evidence Collection
-
-*"Every directory is a room. Every file is a clue. Navigation is investigation."*
-
+---
+name: adventure
+description: Room-based exploration with narrative evidence collection
+allowed-tools:
+  - read_file
+  - write_file
+  - list_dir
+tier: 1
+protocol: ADVENTURE
+tags: [exploration, narrative, investigation, game]
+lineage: "Colossal Cave, Zork, MUD, LambdaMOO"
+inherits: simulation
+related: [room, card, session-log, debugging, memory-palace, simulation, party]
+templates:
+  - file: ADVENTURE.yml.tmpl
+    purpose: Complete adventure state (inherits simulation properties)
+  - file: LOG.md.tmpl
+    purpose: Summary table (turns, locations, files changed)
+  - file: TRANSCRIPT.md.tmpl
+    purpose: Pure narration (story, YAML objects, mermaid diagrams)
 ---
 
-## Purpose
+# Adventure
 
-Transform file exploration into a narrative-driven adventure where:
-- The filesystem becomes a dungeon/world to explore
-- Files are artifacts, clues, or characters you encounter
-- Your progress is tracked in a persistent adventure log
-- Evidence accumulates toward understanding
+> *"Every directory is a room. Every file is a clue. Navigation is investigation."*
 
-Combines Memory Palace spatial organization with detective/adventure game mechanics.
+Turn exploration into a quest — or **any simulation** into a hybrid LLM/deterministic CLI.
 
----
+**Lineage:** Colossal Cave (Crowther & Woods), Scott Adams Adventures, Zork (Infocom), MUD (Bartle), LambdaMOO (Curtis).
 
-## When to Use
+**Inherits from:** [simulation/](../simulation/) — all simulation properties plus adventure-specific state.
 
-- Exploring an unfamiliar codebase
-- Investigating a bug through evidence
-- Onboarding to a new project
-- Documentation archaeology
-- Any exploration task that benefits from narrative framing
+> [!TIP]
+> **This is a general pattern.** Text adventure is the reference implementation, but the same architecture powers city sims, cloud management tools, board games — anything where deterministic transforms meet creative narration.
 
----
+> [!TIP]
+> **Perfect for codebase archaeology.** "Find where the auth bug was introduced" — that's a quest!
 
-## Prerequisites
+## The Premise
 
-- File tools (ls, read, write)
-- Working Memory Palace recommended
-- No execution required (Tier 1)
+An adventure creates a **player** with state, places them in a **room**, and the LLM **dungeon masters** them around.
 
----
+```yaml
+# player.yml
+name: Alice
+location: entrance-hall
+inventory:
+  - torch
+  - rope
+  - notebook
+health: 100
+notes: "Looking for the lost artifact"
+```
 
-## Protocol
+**The core loop:**
 
-### Step 1: Begin the Adventure
+```
+User: "go north"
+  → DM: Updates player.location, describes the new room
+User: "look around"
+  → DM: Reads room YAML, narrates contents atmospherically  
+User: "take the rusty key"
+  → DM: Moves key to player.inventory, narrates the action
+```
 
-1. Create an ADVENTURE.yml to track the quest
-2. Create a LOG.md for narrative progress
-3. Identify the starting "room" (directory)
-4. State the quest objective
+**The mapping:**
 
-### Step 2: Room Protocol
+- **Directories** = Rooms to enter
+- **Files** = Clues, artifacts, characters
+- **player.yml** = Your state (location, inventory, health)
+- **Chat** = How you control your character
+- **LLM** = Dungeon Master (narrates, adjudicates, surprises)
+
+This is [Memory Palace](../memory-palace/) with **narrative framing** and a **player character**.
+
+## Multi-User, Multi-Agent (Engelbart NLS tradition)
+
+Naturally supports **multiple simultaneous participants**:
+
+```yaml
+# characters/
+├── alice.yml        # Human player 1
+├── bob.yml          # Human player 2  
+├── merchant.yml     # NPC (DM-controlled)
+├── guard-bot.yml    # Autonomous bot (action queue)
+└── oracle.yml       # LLM agent with own goals
+```
+
+**Character types:**
+
+| Type | Controlled By | Example |
+|------|---------------|---------|
+| **Player Character** | Human via chat | Alice exploring the dungeon |
+| **NPC** | DM (LLM) responds when addressed | Merchant sells items |
+| **Bot** | Action queue runs autonomously | Guard patrols on schedule |
+| **Agent** | LLM with own goals & initiative | Oracle pursues prophecies |
+
+**All coexist in the same world:**
+
+```yaml
+# library/ROOM.yml
+occupants:
+  - alice          # Player exploring
+  - bob            # Another player
+  - librarian      # NPC who answers questions
+  - dust-sprite    # Bot that cleans autonomously
+```
+
+## Selection: Current Character or Swarm (Sims/Populous tradition)
+
+Like The Sims and Populous, you have a **selection** — who you're controlling right now:
+
+```yaml
+selection:
+  mode: single          # or: group, swarm
+  current: alice        # commands go to Alice
+  
+# Or control multiple at once:
+selection:
+  mode: group
+  current: [alice, bob, charlie]  # "go north" moves all three
+  
+# Or a whole swarm (Populous/Dungeon Keeper style):
+selection:
+  mode: swarm
+  filter: { type: imp, location: mines }
+```
+
+**Selection commands:**
+
+| Command | Effect |
+|---------|--------|
+| `SELECT alice` | Control Alice |
+| `SELECT alice, bob` | Control both |
+| `SELECT ALL imps` | Swarm control |
+| `CYCLE` | Next character in rotation |
+
+**Commands apply to selection:**
+
+```
+> SELECT alice, bob, charlie
+> go north
+Alice goes north.
+Bob goes north.  
+Charlie goes north.
+```
+
+**The coherence engine orchestrates all:**
+- Players get chat turns
+- NPCs respond when spoken to
+- Bots execute their action queues
+- Agents pursue goals in background
+- **Selection determines who receives your commands**
+
+## Quest Structure
+
+```mermaid
+graph TD
+    START[🎯 Quest Objective] --> R1[Enter Room]
+    R1 --> LOOK[👀 Look Around]
+    LOOK --> EXAMINE[🔍 Examine Objects]
+    EXAMINE --> COLLECT[📝 Collect Evidence]
+    COLLECT --> DECIDE{What next?}
+    DECIDE -->|New room| R1
+    DECIDE -->|Solved| END[🏆 Quest Complete]
+```
+
+## The Files
+
+```
+quest/
+├── ADVENTURE.yml     # Quest state
+├── LOG.md            # Narrative journal
+├── EVIDENCE/         # Collected clues
+└── MAP.yml           # Explored territory
+```
+
+### ADVENTURE.yml
+
+```yaml
+adventure:
+  quest: "Find the authentication bug"
+  status: in_progress
+  
+  current_room: "src/auth/"
+  rooms_explored: 5
+  clues_found: 3
+  
+  hypothesis: "Session cookie not being set"
+  confidence: 0.7
+```
+
+### LOG.md
+
+```markdown
+# Adventure Log
+
+## Day 1: Entering the Auth Dungeon
+
+I stepped into `src/auth/` — a maze of middleware.
+
+**Clues found:**
+- `session.ts` — handles cookie creation
+- `middleware.ts` — checks auth state
+
+**Suspicion:** The cookie is created but never sent...
+```
+
+## Commands
+
+| Command | Action |
+|---------|--------|
+| `GO [direction]` | Navigate |
+| `LOOK` | Describe current room |
+| `EXAMINE [object]` | Study a file |
+| `TAKE [object]` | Add to inventory |
+| `TALK TO [npc]` | Start conversation |
+| `COLLECT [clue]` | Add to evidence |
+| `DEDUCE` | Form/update hypothesis |
+| `MAP` | Show visited rooms |
+| `INVENTORY` | List held items |
+
+## Integration with Cards
+
+[Trading cards](../card/) can be your adventure companions:
+
+```yaml
+cards_in_play:
+  - card: "Index Owl 🦉"
+    goal: "Search for cookie-related code"
+  - card: "Git Goblin 🧌"
+    goal: "Find when session handling changed"
+```
+
+## Python Sister Script CLI (Future)
+
+> **Vision:** Generate a Python CLI simulator that handles deterministic operations, freeing the LLM to focus on narrative and reasoning.
+
+```bash
+$ adventure move alice north      # Python handles coordinates
+$ adventure lint quest/           # Python validates schemas
+$ adventure scan --pending        # Find all pending work
+```
+
+### Why Sister Script?
+
+| Operation | Python Does | LLM Does |
+|-----------|-------------|----------|
+| Parse YAML | ✓ Fast, accurate | Slow, may hallucinate |
+| Move character | ✓ Update coordinates | Narrate the journey |
+| Check room contents | ✓ List files | Describe atmosphere |
+| Detect inconsistencies | ✓ Cross-reference | Explain and repair |
+
+### XSLT for YAML
+
+The CLI works like **XSLT but for YAML and filesystem structure**:
+
+```yaml
+# transforms/move-character.yml
+trigger:
+  pattern:
+    file: "*/characters/*.yml"
+    has:
+      action_queue:
+        - action: MOVE
+          
+transform:
+  - update: "character.location = destination"
+  - update: "destination/ROOM.yml occupants += character"
+emit:
+  - event: movement
+    for_llm: "Narrate the journey"
+```
+
+**The transformation pipeline:**
+
+```
+1. SCAN    — Walk directory tree, load YAML files
+2. MATCH   — Find patterns that trigger transforms
+3. TRANSFORM — Apply deterministic changes
+4. EMIT    — Write events for LLM to narrate
+```
+
+**Python for precision. LLM for poetry.**
+
+### Attention Scheduling
+
+The CLI acts as an **attention scheduler** — scanning for pending work:
+
+```yaml
+# output/attention.yml
+focus:
+  items:
+    - type: inbox
+      location: workshop/inbox/
+      count: 3
+      suggest: "Process incoming messages"
+      
+    - type: action_queue
+      character: bob
+      next_action: "COOK dinner"
+      suggest: "Execute Bob's next action"
+```
+
+**The attention loop:**
+
+```
+CLI: Scan world → Find pending work → Rank by priority
+  ↓
+CLI: Write attention.yml with top items
+  ↓
+LLM: Read attention.yml → Process items → Write results
+  ↓
+[repeat]
+```
+
+## Evidence Types
+
+| Type | Description | Example |
+|------|-------------|---------|
+| **Clue** | Information that might matter | "Different test runner versions" |
+| **Item** | File worth remembering | CI config, setup.ts |
+| **Character** | Code entity with personality | "jest.config.js — Strict about modules" |
+| **Map** | Mental model of structure | Directory relationship diagram |
+
+## Room Protocol
 
 When entering any directory:
 
@@ -54,213 +333,45 @@ When entering any directory:
 4. **EXITS** — Note paths to other rooms
 5. **DECIDE** — Choose next direction
 
-### Step 3: Evidence Collection
+## Codebase Archaeology
 
-As you explore:
-- **CLUES** — Bits of information that might matter
-- **ITEMS** — Files worth remembering
-- **CHARACTERS** — Code entities, configs, patterns
-- **MAPS** — Mental models of structure
+Adventures work for code exploration:
 
-### Step 4: Conclude
+| Adventure | Investigation |
+|-----------|--------------|
+| Quest | Bug hunt |
+| Room | Directory |
+| Clue | Evidence |
+| Companion | Tool card in play |
+| Journal | session-log.md |
 
-1. Summarize findings
-2. Update adventure log
-3. Archive or continue quest
+## Live Examples
 
----
+- [examples/adventure-3/](../../examples/adventure-3/) — Full adventure instance
+- [examples/adventure-3/ADVENTURE.yml](../../examples/adventure-3/ADVENTURE.yml) — State file
+- [examples/adventure-3/pub/](../../examples/adventure-3/pub/) — Room with NPCs
 
-## Core Files
+## The Intertwingularity
 
-### ADVENTURE.yml
-```yaml
-quest:
-  name: "The Mystery of the Failing Tests"
-  objective: "Discover why tests fail on CI but pass locally"
-  status: "active"
-  
-starting_room: "project-root/"
-current_room: "src/tests/"
-
-evidence:
-  clues:
-    - id: "clue-001"
-      found_in: "package.json"
-      content: "Different test runner versions"
-      significance: "high"
-      
-  items:
-    - name: "CI Config"
-      path: ".github/workflows/test.yml"
-      notes: "Uses Node 18"
-      
-  characters:
-    - name: "jest.config.js"
-      type: "configuration"
-      personality: "Strict about module resolution"
-
-rooms_visited:
-  - path: "/"
-    entered: "2025-12-30T10:00"
-    notes: "Project root, standard layout"
-    
-  - path: "src/tests/"
-    entered: "2025-12-30T10:05"
-    notes: "Found failing test files"
-
-quest_log:
-  - "Began investigation in project root"
-  - "Noticed version mismatch in package.json"
-  - "Descended into tests directory"
+```mermaid
+graph LR
+    AP[⚔️ adventure] -->|IS-A| R[🚪 room]
+    AP -->|companions| TC[🎴 card]
+    AP -->|logs to| SL[📜 session-log]
+    AP -->|similar to| DB[🔧 debugging]
+    MP[🏛️ memory-palace] -->|sibling of| AP
 ```
 
-### LOG.md
-```markdown
-# Adventure Log: The Mystery of the Failing Tests
+## Dovetails With
 
-## Quest Objective
-Discover why tests fail on CI but pass locally.
+### Sister Skills
+- [simulation/](../simulation/) — Base class (adventure inherits this)
+- [room/](../room/) — Navigation
+- [party/](../party/) — Multi-character
+- [character/](../character/) — Player/NPC definitions
+- [card/](../card/) — Companions on the quest
+- [debugging/](../debugging/) — Debugging IS investigation quest
+- [session-log/](../session-log/) — Adventure LOG.md is session-log variant
 
----
-
-## Entry 1: The Beginning
-*10:00 AM - Project Root*
-
-I stand in the project root. Around me I see the usual suspects:
-- `package.json` — The manifest of dependencies
-- `src/` — Where the code lives
-- `.github/` — CI secrets dwell here
-
-I examine `package.json` first...
-
-**CLUE FOUND:** Test runner version is `^29.0.0` — a floating version!
-
-## Entry 2: Into the Tests
-*10:05 AM - src/tests/*
-
-I descend into the tests directory. The air grows thick with assertions.
-Files here: `user.test.ts`, `api.test.ts`, `setup.ts`
-
-I examine `setup.ts`...
-
-**ITEM ACQUIRED:** `setup.ts` — Contains global mocks
-
----
-
-## Current Status
-- **Location:** src/tests/
-- **Clues:** 1
-- **Items:** 1
-- **Next Move:** Examine CI config
-```
-
----
-
-## Room Description Format
-
-When you enter a room, narrate it:
-
-```markdown
-## [Directory Name]
-*[Timestamp] — [Path]*
-
-### Description
-What kind of place is this? What's the vibe?
-
-### Contents
-- `file1.js` — brief description
-- `subdir/` — [door] leads somewhere
-
-### Notable Findings
-What stands out? What's unusual?
-
-### Exits
-- ← Back to [parent]
-- → Into [subdir1]
-- → Into [subdir2]
-
-### Decision
-Where next, and why?
-```
-
----
-
-## Commands
-
-| Intent | Action |
-|--------|--------|
-| "Enter room X" | cd to directory, ls contents |
-| "Examine artifact" | Read file, note findings |
-| "Collect evidence" | Add to ADVENTURE.yml |
-| "Update log" | Append to LOG.md |
-| "Check inventory" | Review evidence section |
-| "Recall quest" | Read ADVENTURE.yml objective |
-| "Where am I?" | Note current path |
-| "Review journey" | Read LOG.md |
-
----
-
-## Evidence Types
-
-### Clues
-Small pieces of information:
-```yaml
-clues:
-  - id: "clue-003"
-    found_in: "config/database.yml"
-    content: "Production uses different pool size"
-    significance: "medium"
-    relates_to: ["clue-001"]
-```
-
-### Items
-Files worth tracking:
-```yaml
-items:
-  - name: "The Ancient Makefile"
-    path: "Makefile"
-    notes: "Contains build secrets"
-    acquired: "2025-12-30T10:15"
-```
-
-### Characters
-Code entities with personality:
-```yaml
-characters:
-  - name: "AuthMiddleware"
-    type: "guardian"
-    location: "src/middleware/auth.ts"
-    personality: "Suspicious of all requests"
-    quotes:
-      - "401 Unauthorized"
-      - "Token expired"
-```
-
-### Maps
-Mental models:
-```yaml
-maps:
-  - name: "Data Flow"
-    description: "How data moves from API to database"
-    rooms: ["routes/", "services/", "models/"]
-```
-
----
-
-## Tips
-
-1. **Stay in character** — The narrative frame aids memory
-2. **Log frequently** — Update LOG.md as you go
-3. **Evidence everything** — Small clues compound
-4. **Name your NPCs** — Config files have personalities
-5. **Draw maps** — Mental models in ADVENTURE.yml
-6. **Quest checkpoints** — Save state before major moves
-
----
-
-## Outputs
-
-- ADVENTURE.yml with quest state and evidence
-- LOG.md with narrative exploration record
-- Accumulated understanding of the territory
-- Transferable documentation of the journey
+### Kernel
+- [kernel/context-assembly-protocol.md](../../kernel/context-assembly-protocol.md) — Working set loading

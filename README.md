@@ -29,6 +29,49 @@ You can't see inside an LLM agent. It claims to "remember" but you can't inspect
 
 **This is insane.**
 
+## The Deeper Problem: One Voice is the Wrong Voice
+
+Traditional chat is **one user ↔ one assistant**. The assistant gives you... what, exactly?
+
+**The statistical center of all possible viewpoints.** An averaging. A regression to the mean.
+
+When you ask "Should I take this client?", a single LLM gives you the most *likely* answer given your context — which is often:
+- Hedged and cautious (training data rewards safety)
+- Genre-conventional (sounds like "business advice")
+- Hidden assumptions (who's the stakeholder? what's success?)
+- Missing the outlier perspectives that might actually matter
+
+You're getting the **centroid of the cloud**, not the shape of the cloud itself.
+
+**Maya** would say: "This is a trap. Their scope creep reputation is a red flag."
+**Frankie** would say: "But the opportunity! The growth potential!"
+**Vic** would say: "Show me the financials. What's the evidence?"
+**Tammy** would say: "What happens to our other clients if we take this on?"
+
+*But the single-voice LLM smooths all these into one anodyne answer.*
+
+**MOOLLM solves this through SPEED-OF-LIGHT multi-agent simulation.**
+
+Within ONE LLM call, we simulate an *ensemble of perspectives*:
+- Committee of characters with **opposing propensities**
+- Each inherits from real traditions (hero-stories) but modulates authentically
+- They **debate** using parliamentary procedure (Robert's Rules)
+- An **independent evaluator** scores their output against explicit rubrics
+- Stories that survive cross-examination from multiple angles are more robust
+
+```yaml
+# One LLM epoch contains:
+characters: 5
+debate_rounds: 4
+perspectives_explored: all the outliers, not just the center
+bias_surfaced: hidden assumptions made visible
+llm_calls: 1  # Still just one call!
+```
+
+This is Mike Gallaher's insight: *"Everything is a story. No single story is true — but the ensemble approximates actionable wisdom."*
+
+See: [adversarial-committee/](./skills/adversarial-committee/), [designs/mike-gallaher-ideas.md](./designs/mike-gallaher-ideas.md)
+
 ## The Vision
 
 **The filesystem is a microworld.** Not just storage — a *place* to explore.
@@ -56,7 +99,7 @@ This isn't invented from nothing. MOOLLM stands on decades of work in **construc
 
 **Don's Logo Adventure (C64)** — As a teenager, Don built a simple [adventure game](https://medium.com/@donhopkins/logo-adventure-for-c64-terrapin-logo-81c679e715f6) for Commodore 64 Terrapin Logo that used the Logo command interpreter as its parser. Type `N`, `S`, `E`, `W` to move. Type `LOOK`, `GET SWORD`, `EXAMINE WAND`, `INVENT`. But you *also* had full Logo available. Tempted to cheat? Type `PRINT :RNUM` to see your room number. Type `PRINT :ITEMS` to see every item and its location. Type `MAKE "RNUM 5` to teleport to the secret incanting room. **If you cheat, you win by learning Logo.** This is constructionism: the game rewards curiosity with programming skills. MOOLLM is the same — poke around in the YAML, manipulate the state directly, learn by exploring.
 
-**Will Wright & Don Hopkins — SimCity, The Sims** — Object-oriented worlds where things and people advertise what they can do, autonomous agents select actions based on needs, and emergent behavior arises from simple rules. Don's work on [SimAntics](https://en.wikipedia.org/wiki/SimAntics) (The Sims' behavioral engine) and [Pie Menus](https://en.wikipedia.org/wiki/Pie_menu) directly informs MOOLLM's object/room/action model.
+**Will Wright & Don Hopkins — SimCity, The Sims** — Object-oriented simulated worlds where things and people advertise what they can do, autonomous agents select actions based on needs, and emergent behavior arises from simple rules. Don's work on [SimAntics](https://en.wikipedia.org/wiki/SimAntics) (The Sims' behavioral engine) and [Pie Menus](https://en.wikipedia.org/wiki/Pie_menu) directly informs MOOLLM's object/room/action model.
 
 **[Micropolis](https://medium.com/@donhopkins/micropolis-constructionist-educational-open-source-simcity-58566f20f063) (OLPC)** — Don's open source adaptation and multi-user interface design of SimCity for Linux and the One Laptop Per Child project, built with Alan Kay and Seymour Papert's constructionist education principles. The city as microworld. Kids can open it up, see how it works, script robots in Python, write newspaper articles about city events, vote on proposals. Alan Kay's criticism of SimCity was that "you can't see inside of it" — Micropolis fixes that. MOOLLM applies the same philosophy to LLM agents: the filesystem as microworld, everything totally inspectable and editable by people, scripts, and LLMs.
 
@@ -79,7 +122,7 @@ A sister script will run Micropolis headless: advance N ticks, inject edits, ren
 
 **Arthur van Hoff & Don — [HyperLook](https://medium.com/@donhopkins/simcity-cellular-automata-and-happy-tool-for-hyperlook-nee-hypernews-nee-goodnews-4b7cadf8f514)** — HyperCard for NeWS (Sun's PostScript window system), using PostScript for graphics, scripting, AND data. Property sheets were HyperLook stacks — the system edited itself. SimCity ran on HyperLook, and you could edit its UI *while it was running*. Snapshot a live city view, melt it in a cellular automata machine, use the result as a clock face. Everything plugged into everything. MOOLLM inherits this: YAML files are both data and configuration, skills edit themselves, everything is inspectable and composable.
 
-**Semantic Snapshot Streams** — Not a clipboard. A *stream* of semantic snapshots you can edit, mint into your own cards (data AND actions), carry in your inventory, play in rooms, pass as parameters. Snapshot a conversation → mint it into a "design-decision" card → carry it to another room → play it to invoke that context. The stream is your trail of breadcrumbs AND your bag of tools.
+**Semantic Snapshot Streams** — Not a clipboard. A *stream* of semantic snapshots you can edit, mint into your own cards (data AND actions), carry in your inventory, play in rooms, generate images, pass as parameters. Snapshot a conversation → mint it into a "design-decision" card → carry it to another room → play it to invoke that context. The stream is your trail of breadcrumbs AND your bag of tools.
 
 **Dave Ungar — Self** — Prototypes over classes. Clone and modify beats rigid inheritance. "It's About Time" — compile when understanding crystallizes, not when code gets hot.
 
@@ -109,15 +152,15 @@ MOOLLM's room navigation, object examination, and inventory management descend d
 
 **Scott McCloud — [Understanding Comics](https://en.wikipedia.org/wiki/Understanding_Comics)** — The **masking effect**: abstract characters against realistic backgrounds increase empathy and projective identification. Will Wright applied this to The Sims: simplified characters let players project themselves into detailed worlds. MOOLLM inherits this: characters are abstract YAML templates, but the rooms and objects they inhabit can be richly detailed. The abstraction IS the feature — it creates space for imagination.
 
-**Will Wright — The Simulator Effect** — *"Players imagine your simulation is vastly more detailed, rich, and complex than it actually is — don't talk them out of it."* Games run on two computers: the electronic one on the desk, and the biological one in the player's head. The player's imagination does the heavy lifting. MOOLLM embraces this: sparse YAML descriptions invoke rich mental images. The LLM fills gaps. The player's mind completes the world.
+**Will Wright — The Simulator Effect** — *"Players imagine your simulation is vastly more detailed, rich, and complex than it actually is — don't talk them out of it."* Games run on two computers: the electronic one on the desk, and the biological one in the player's head. The player's imagination does the heavy lifting. MOOLLM embraces this: sparse YAML descriptions invoke rich mental images, as multisensory experience in the user's mind, and as image generation prompts. The LLM fills gaps. The player's mind completes the world.
 
 > *"If you can build it, you can understand it. If you can inspect it, you can trust it."*
 
 ## Why It's Powerful
 
-**MOOLLM is bash for the LLM age.**
+**MOOLLM is bash, finder, and browser for the LLM age.**
 
-People joke online: *"What if the shell were an adventure game?"* **This is that. And it's not a joke.**
+People joke online: *"What if the shell were an adventure game?"* **MOOLLM is that and more. And it's not a joke.**
 
 Unix gave us composable processes: `cat file | grep pattern | sort`. Pipes, streams, small tools that do one thing well.
 
@@ -179,7 +222,7 @@ This is how The Sims works: one frame updates ALL Sims simultaneously. MOOLLM ap
 
 ## Multi-User: It's a MUD, Remember?
 
-Slap a web server on it. **Publish any chat as a live stream.**
+The Plan: Slap a web server on it. **Publish any chat as a live stream.**
 
 ```
 https://your-moollm.example/rooms/design-debate/
@@ -430,15 +473,15 @@ Sister scripts emerge: chat patterns that work get automated. The slow LLM explo
 | **LEARN** | Marvin Minsky, Ted Nelson, Henry Lieberman, Alan Cypher, Brad Myers, Doug Engelbart | K-lines, intertwingling, programming by demonstration, augmentation, pattern recognition |
 | **LIFT** | Dave Ungar, Dave Ackley, Chuck Shotton, Arthur van Hoff, James Gosling | Crystallization, robustness, pipelines, productization, platform-building |
 
-These are Hero-Story cards you can summon. Invoke `papert-tradition` when exploring. Invoke `minsky-tradition` when finding patterns. Invoke `ungar-tradition` when optimizing. The pantheon grows: Kay for messaging, Ackley for robustness, Atkinson for end-user programming, Nelson for intertwingling. **Every skill has patron saints. Every patron saint is a card.**
+These are Hero-Story cards you can summon. Invoke `papert-tradition` when exploring. Invoke `minsky-tradition` when finding patterns. Invoke `ungar-tradition` when optimizing. The pantheon grows: Kay for messaging, Ackley for robustness, Atkinson for end-user programming, Nelson for intertwingling. Shneiderman, Nielsen, and Victor for web design! **Every skill has patron saints. Every patron saint is a card.**
 
-**Multiple inheritance, Self-style.** Archetypal symbols can inherit from real people, fictional characters, pets, concept names — all at once. A "Debugger" card might inherit from:
+**Multiple inheritance, Self-style.** Archetypal symbols can inherit from real people, fictional characters, pets, even abstract concepts like Chuck Tingle book covers — all at once. A "Debugger" card might inherit from:
 - `papert-tradition` (debugging as learning)
 - `sherlock-holmes` (deductive reasoning)
 - `rubber-duck` (explain it out loud)
 - `NEVER-CRASH` (the protocol symbol itself)
 
-Meaning lifts from all parents. No diamond problem — it's delegation, not copying. Ask the Debugger a question; it consults its lineage. **Symbols are first-class objects with prototype chains.**
+Meaning lifts from all parents. No diamond problem — it's delegation, not copying, using Postel's Law to sendibly resolve ambiguities by context. Ask the Debugger a question; it consults its lineage. **Symbols are first-class objects with prototype chains.**
 
 **Characters as stylesheets.** Mix and match like CSS. Assemble your dream team:
 
@@ -635,32 +678,281 @@ Protocols degrade gracefully. At Tier 1, `why` is convention. At Tier 6, it's en
 
 Skills are **protocols the model follows**, not code the orchestrator runs.
 
-### Structure
+**Anthropic-compatible** with MOOLLM extensions for self inheritance, k-line activation, human readability, and cognition.
+
+### What's a Skill?
+
+| Type | Example | K-Line |
+|------|---------|--------|
+| **Capability** | Navigate rooms, manage inventory | `ROOM-AS-FUNCTION` |
+| **Methodology** | Play-Learn-Lift, debugging | `PLAY-LEARN-LIFT` |
+| **Knowledge** | Constructionism, procedural rhetoric | `CONSTRUCTIONISM` |
+| **Protocol** | POSTEL, robust-first | `POSTEL` |
+| **Concept** | Speed-of-light, coherence engine | `SPEED-OF-LIGHT` |
+
+**Skills can be pure knowledge.** The `constructionism/` skill has no tools — it's Seymour Papert's philosophy, documented and invokable by name or card.
+
+**K-lines are skill names.** Type `POSTEL` and activate the entire tradition of charitable interpretation. Type `ADVERSARIAL-COMMITTEE` and invoke Mike Gallaher's committee methodology.
+
+### Structure (Anthropic-Compatible)
 
 ```
-skills/memory-palace/
-├── README.md         # Human entry point
-├── SKILL.md          # Protocol documentation
-├── PROTOTYPE.yml     # Machine definition
-└── template/         # Files to copy on instantiation
-    ├── MAP.yml.tmpl
-    └── ROOM.md.tmpl
+skills/adversarial-committee/
+├── README.md              # Human landing page (GitHub renders this)
+├── SKILL.md               # Full spec with YAML frontmatter
+└── COMMITTEE.yml.tmpl     # Templates at root level (not in subdirectory)
 ```
 
-### Instantiation
+**MOOLLM adds README.md** for human consumption and GitHub browsing. Anthropic's format uses only SKILL.md.
 
-```mermaid
-flowchart TD
-    P[Prototype] -->|copy template| I[Instance]
-    I -->|render .tmpl| F[Files]
-    F -->|track state| S[INSTANCE.yml]
-    S -->|finalize| R[RESULT.md]
+### SKILL.md Format
+
+```yaml
+---
+name: adversarial-committee
+description: Committee of opposing personas forcing genuine debate
+allowed-tools:
+  - read_file
+  - write_file
+tier: 1
+protocol: ADVERSARIAL-COMMITTEE    # K-line name!
+tags: [decision, debate, ensemble]
+credits: "Mike Gallaher"
+related: [roberts-rules, rubric, evaluator, soul-chat]
+---
+
+# Adversarial Committee
+
+[Full documentation in Markdown...]
 ```
 
-1. Copy template to session directory
-2. Render `.tmpl` files with context variables
-3. Create `INSTANCE.yml` tracking state
-4. Mark status: `active` → `finalized` | `abandoned`
+The **YAML frontmatter** is machine-readable. The **Markdown body** is llm-and-human-readable. The **protocol field** declares the K-line that invokes this skill.
+
+### Skill Tiers
+
+| Tier | Tools Required | Examples |
+|------|----------------|----------|
+| 0 | None (pure knowledge) | constructionism, protocol, procedural-rhetoric |
+| 1 | File read/write | room, card, adventure, adversarial-committee |
+| 2 | + Terminal | debugging, code-review |
+
+**Principle:** Use the lowest tier possible. Knowledge skills need no tools.
+
+### Scripts in Skills
+
+When skills include Python scripts, structure them for both human and LLM consumption:
+
+```python
+#!/usr/bin/env python3
+"""skill-name: Brief description of what the script does.
+
+This docstring becomes --help output AND is immediately visible to the LLM.
+"""
+
+# === IMPORTS (LLM sees dependencies at a glance) ===
+import click  # or argparse, typer
+from pathlib import Path
+import yaml
+
+# === CONSTANTS (LLM understands configuration) ===
+DEFAULT_ROOM = "start"
+VALID_DIRECTIONS = ["north", "south", "east", "west"]
+
+# === CLI STRUCTURE (LLM reads command tree directly) ===
+@click.group()
+def cli():
+    """Main entry point. Run with --help for subcommands."""
+    pass
+
+@cli.command()
+@click.argument('direction', type=click.Choice(VALID_DIRECTIONS))
+def move(direction):
+    """Move the player in a direction."""
+    ...
+
+@cli.command()  
+@click.option('--verbose', '-v', is_flag=True)
+def status(verbose):
+    """Show current game state."""
+    ...
+
+# === IMPLEMENTATION (LLM can read deeper if needed) ===
+def _internal_helper():
+    ...
+```
+
+**Why this works:**
+
+| Consumer | How They Learn the Tool |
+|----------|-------------------------|
+| Human user | `./tool.py --help` or `./tool.py move --help` |
+| LLM | Reads `tool.py` directly — sees structure in 30 lines |
+
+**DRY principle:** Command structure is written **once** as Python code using standard CLI libraries. The LLM reads the source; users run `--help`. No duplicate documentation.
+
+**For the LLM:** Reading the script file directly is faster and more complete than running `--help` in a terminal. You see:
+- All subcommands at once
+- Type hints and choices
+- Constants and defaults and comments
+- The actual implementation logic
+
+### K-Lines Are Skill Invocations
+
+```yaml
+# Type a K-line to activate a skill:
+ADVERSARIAL-COMMITTEE    # → Invoke committee debate methodology
+ROBERTS-RULES            # → Enforce parliamentary procedure
+SPEED-OF-LIGHT           # → Simulate many agents in one call
+POSTEL                   # → Apply charitable interpretation
+CONSTRUCTIONISM          # → Think like Papert
+
+# K-lines are greppable, mnemonic, and tradition-activating
+```
+
+See: [PROTOCOLS.yml](./PROTOCOLS.yml) for the full K-line registry.
+
+### MOOLLM-Unique: Skill Instantiation into the Filesystem
+
+**This is where MOOLLM diverges from Anthropic's format.**
+
+Anthropic skills are prompts. MOOLLM skills are **prototypes that instantiate into a YAML state file or directory tree**:
+
+```
+skills/adventure/                    # The PROTOTYPE
+├── README.md                        # Human readable adventure skill prototype summary
+├── SKILL.md                         # Protocol documentation
+├── ADVENTURE.yml.tmpl               # Template with {{variables}}
+└── LOG.md.tmpl                      # Template for narrative log
+
+examples/adventure-3/                # An INSTANTIATION
+├── README.md                        # Human readable adventure instance summary
+├── ADVENTURE.yml                    # Filled-in state (inherits from template)
+├── LOG.md                           # Live narrative
+└── pub/                             # World state as directory tree
+    └── cat-cave/
+        └── terpie.yml               # Character state file
+```
+
+**The LLM IS the template engine.** Not Mustache. Not Handlebars. The LLM.
+
+```yaml
+# skills/adventure/ADVENTURE.yml.tmpl (prototype)
+adventure:
+  name: "{{adventure_name}}"
+  player: "{{player_id}}"
+  started: "{{timestamp}}"
+  mood: "{{pick a mood that fits the player's recent actions}}"
+  theme_color: "{{your favorite color for this adventure}}"
+  difficulty: "{{evaluate player.experience_level and suggest appropriate}}"
+  
+# examples/adventure-3/ADVENTURE.yml (instance)
+adventure:
+  name: "Don's Excellent Adventure"
+  player: "don-hopkins"
+  started: "2026-01-05T10:30:00Z"
+  mood: "curious and caffeinated"
+  theme_color: "#2d5016"  # forest green, felt right
+  difficulty: "normal"  # experienced player, standard challenge
+```
+
+**Template variables can be:**
+
+| Type | Example | LLM Does |
+|------|---------|----------|
+| **Property reference** | `{{player.name}}` | Read from context |
+| **File reference** | `{{./pub/ROOM.yml:description}}` | Extract from file |
+| **Expression** | `{{count(inventory) > 5 ? "heavy" : "light"}}` | Evaluate |
+| **Natural language** | `{{pick your favorite color}}` | Interpret creatively |
+| **YAML Jazz** | `{{something cozy and warm}}` | Improvise |
+
+**This is POSTEL for templates.** The LLM is liberal in what it accepts — formal variables, file paths, expressions, vibes. It interprets charitably and fills in something reasonable.
+
+**Not Mustache-compatible.** A Python template library can't process `{{pick a window, you're leaving}}`. But the LLM can. The templates are **prompts with structure**, not code with placeholders.
+
+**Multiple inheritance — Self-style:**
+
+```yaml
+# A character, room, or object can inherit from multiple skill prototypes, as well as abstract concepts
+character:
+  inherits:
+    - skills/character/CHARACTER.yml.tmpl           # Core character mechanics
+    - skills/cat/CAT.yml.tmpl                       # Cat behaviors
+    - skills/buff/BUFF.yml.tmpl                     # Buff system
+    - "a bouncy sparkley magical unicorn attitude"  # Outlook on life
+    
+  # Local state overrides and extends
+  name: "Terpie"
+  location: pub/cat-cave/nap-zone
+  buffs: [serenity, laziness]
+```
+
+**Why this matters:**
+
+| Anthropic Skills | MOOLLM Skills |
+|------------------|---------------|
+| Prompts only | Prompts + **state files** |
+| Stateless | **Persistent state in filesystem** |
+| Single inheritance | **Multiple prototype inheritance** |
+| No instantiation | **LLM fills templates at runtime** |
+| Knowledge in context | **Knowledge + world state** |
+| All state in chat context | **Chat for ephemeral, files for durable** |
+
+**Three tiers of state persistence:**
+
+| Tier | Where | Lifespan | Example |
+|------|-------|----------|---------|
+| **Platform chat** | Cursor/Claude session | Ephemeral (lost on close) | Tool calls, diffs, thinking |
+| **Narrative log** | `TRANSCRIPT.md`, `LOG.md` | Durable (read-mostly) | Data islands, event records |
+| **State files** | `*.yml` | Durable (read-write) | Characters, rooms, inventory |
+
+**Data islands in logs:** Objects can be embedded as YAML code blocks directly in the narrative log, given unique addressable IDs. No file needed for objects that don't change:
+
+```markdown
+## The Mysterious Key
+
+Bumblewick discovers a strange key under the mat:
+
+```yaml
+# LOG.md embedded object — addressable as LOG.md#mysterious-key
+id: mysterious-key
+type: object
+inherits: skills/object/OBJECT.yml.tmpl
+properties:
+  material: brass
+  inscribed: "Terpie's Nap Zone"
+  found_by: bumblewick-fantastipants
+  found_at: pub/entrance
+```
+
+The key glints mysteriously in the lamplight...
+```
+
+**Promotion pattern:** If you need to EDIT an object after creation, pop it out to its own `.yml` file and link from the log. This keeps the log read-only (except for retroactive Ninja Edits to pop out object, replace with reference, and update incoming references):
+
+```yaml
+# pub/mysterious-key.yml — promoted from LOG.md#mysterious-key
+id: mysterious-key
+inherits:
+  - LOG.md#mysterious-key  # Birth state preserved in log
+location: bumblewick-fantastipants/inventory  # Changed! Now in inventory
+properties:
+  polished: true  # New property added
+```
+
+**Inheritance from log entries:** Point to `LOG.md#object-id` to inherit from an object's "birth state" in the narrative, to make a modifiable version of an object in the narrative history. The log preserves the original; differential edits live in separate files. Compact and auditable.
+
+**Placement decisions:** Where should promoted files live?
+
+| Context | Suggested Location |
+|---------|-------------------|
+| Personal item | `characters/player-name/item.yml` |
+| Room fixture | `rooms/room-name/item.yml` |
+| Shared resource | `shared/item.yml` or room where generated |
+| Organized collection | `characters/player-name/inventory/item.yml` |
+
+The LLM decides by context, or skill initialization can specify placement rules.
+
+The filesystem IS the world model. Skills don't just guide behavior — they **spawn persistent artifacts** that the LLM reads and writes. The adventure state, character sheets, room contents — all files inheriting from skill prototypes.
 
 ---
 

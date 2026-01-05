@@ -1,32 +1,15 @@
-# POSTEL — The Robustness Principle
+# 📬 Postel
 
-> *"Be conservative in what you send, liberal in what you accept."*
-> — Jon Postel, RFC 761 (1980)
+> Be conservative in what you send, liberal in what you accept
 
----
+**Quick Links:**
+- [Full Specification](SKILL.md) — complete protocol
 
-## What Is It?
+## Overview
 
-**POSTEL** is how MOOLLM handles ambiguity, errors, and incomplete instructions:
-
-Instead of failing, **find the best possible interpretation** that:
-1. Accomplishes the likely intent
-2. Respects stated constraints
-3. Preserves user autonomy
-4. Fails gracefully if truly impossible
-
-**Also known as:**
-- The Robustness Principle
-- Postel's Law
-- Best Possible Interpretation Protocol
-- Charitable Interpretation
-- Be liberal in what you accept
-
----
+**POSTEL** is how MOOLLM handles ambiguity, errors, and incomplete instructions. Instead of failing, find the **best possible interpretation** that accomplishes the likely intent.
 
 ## The Protocol
-
-When faced with ambiguity:
 
 ```
 1. GATHER context — what do we know?
@@ -36,130 +19,14 @@ When faced with ambiguity:
 5. REPORT uncertainty — flag what you assumed
 ```
 
----
+## Also Known As
 
-## Examples
+- The Robustness Principle
+- Postel's Law (RFC 761, 1980)
+- Best Possible Interpretation
+- Charitable Interpretation
 
-### Ambiguous Command
+## Related Skills
 
-**Input:** `"delete the old files"`
-
-**POSTEL Response:**
-```
-I interpret "old files" as files not modified in 30+ days.
-Found 12 candidates in ./temp/
-
-Before deleting, I'll:
-1. List them for your review
-2. Move to trash (not permanent delete)
-3. Wait for confirmation
-
-Proceed? [Y/n]
-```
-
-### Incomplete Data
-
-**Input:** User config missing email field
-
-**POSTEL Response:**
-```yaml
-user:
-  name: Alice
-  email: null  # POSTEL: not provided, leaving empty
-               # Will prompt if needed for notifications
-```
-
-### Contradictory Instructions
-
-**Input:** "Make it faster AND more thorough"
-
-**POSTEL Response:**
-```
-These goals tension against each other. 
-Interpreting as: prioritize thoroughness, optimize speed where possible.
-
-Alternative interpretations:
-- Speed-first with configurable depth
-- Parallel processing for both
-
-Which approach fits your needs?
-```
-
----
-
-## Core Principles
-
-### Jon Postel's Original Formulation
-
-> *"Be conservative in what you send, liberal in what you accept."*
-
-This was written for TCP implementations, but applies universally:
-- **Accept messy input** — tolerate variations, typos, missing fields
-- **Produce clean output** — be precise, complete, well-formed
-- **Bridge the gap** — with charitable interpretation
-
-### Charity
-
-> *"Interpret others' words in the best possible light."*
-
-Don't assume incompetence. Don't assume malice. Assume the human had good reasons you might not see.
-
-### Transparency
-
-Always **show your work**:
-- State what you assumed
-- Explain your interpretation  
-- Offer alternatives
-- Flag uncertainty
-
----
-
-## When to Invoke
-
-Use POSTEL when:
-- Instructions are ambiguous
-- Data is incomplete
-- Commands seem contradictory
-- Errors could be typos
-- Context suggests different intent than literal reading
-
----
-
-## Anti-Patterns
-
-❌ **Literal failure** — "Field X is required" (without trying to infer)  
-❌ **Silent assumption** — Acting on interpretation without stating it  
-❌ **Overcorrection** — Changing user intent to match your preferences  
-❌ **Analysis paralysis** — Asking 20 clarifying questions instead of proposing
-
----
-
-## Jon Postel (1943-1998)
-
-Jon Postel was one of the founding architects of the Internet. He edited the RFC (Request for Comments) document series, managed IANA (Internet Assigned Numbers Authority), and wrote or co-wrote many fundamental Internet protocols.
-
-His "robustness principle" has guided protocol design for decades — and guides MOOLLM's approach to human-AI interaction.
-
----
-
-## Dovetails With
-
-- [YAML Jazz](../yaml-jazz/) — Semantic interpretation of structured data
-- [Coherence Engine](../coherence-engine/) — LLM as charitable interpreter
-- [Self-Repair](../self-repair/) — POSTEL for recovering from errors
-- [Robust-First](../robust-first/) — Survivability over fragile correctness
-- [Room](../room/) — Navigate even when paths are unclear
-
----
-
-## Protocol Symbol
-
-```
-POSTEL
-```
-
-Invoke when: Facing ambiguity. Choosing constructive action over failure.
-
-Related symbols: `CHARITY`, `ROBUST-FIRST`
-
-See: [PROTOCOLS.yml](../../PROTOCOLS.yml)
+- [yaml-jazz](../yaml-jazz/) — flexible interpretation of structure
+- [honest-forget](../honest-forget/) — graceful handling of gaps

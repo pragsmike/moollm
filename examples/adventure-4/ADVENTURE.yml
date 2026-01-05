@@ -1,0 +1,97 @@
+# ADVENTURE.yml — Adventure 3 State
+#
+# This file IS the simulation. Reading it = loading the world.
+# Comments are semantic data. The LLM reads them. They matter.
+
+simulation:
+  turn: 1                    # Just begun. The whole world awaits.
+  paused: false              # Time flows. Stories happen.
+  
+parameters:
+  time:
+    advancement: normal      # One tick per room
+    time_of_day: morning     # Fresh light. New possibilities.
+    
+  git:
+    auto_commit: false
+    auto_push: false
+    
+  display:
+    narration_level: normal  # Rich but not overwhelming
+    show_mechanics: false    # Hide the math. Show the story.
+    debug_mode: false
+    
+  output:
+    write_to_chat: true
+    write_to_transcript: true
+    transcript_path: ./README.md
+    include_yaml_islands: true
+    include_links: true
+    link_format: markdown
+
+  gameplay:
+    difficulty: normal
+
+player:
+  character: characters/don-hopkins/   # Don Hopkins. Explorer. Builder.
+  location: start/                     # The beginning. Again.
+  
+party:
+  members:
+    - characters/don-hopkins/
+  leader: characters/don-hopkins/
+  
+selection:
+  targets: []                # Commands go to Don
+
+active_buffs: []
+# Nothing yet. Visit the pub for enhancement.
+
+world_state:
+  weather: clear             # Good for exploring
+
+flags:
+  grue_slain: false
+  treasure_found: false
+  mother_visited: false
+  pub_discovered: false
+  cat_cave_found: false
+
+adventure:
+  name: "Adventure 3 — Fresh Start"
+  objective: "Explore the world, make friends, find purpose"
+  status: active
+  started: null
+
+navigation:
+  starting_room: start/
+  current_room: start/
+  rooms_visited: []
+
+evidence:
+  clues: []
+  items: []
+  characters_met: []
+
+quest_log: []
+
+statistics:
+  rooms_explored: 0
+  clues_found: 0
+  items_acquired: 0
+  characters_met: 0
+  turns_elapsed: 0
+
+# SEED — Generation Guidance
+seed:
+  tone: whimsical but grounded
+  # Pratchett not Tolkien
+  
+  themes:
+    - discovery over combat
+    - relationships matter
+    - small moments are big
+    - cats know things
+    
+  aesthetic: cozy Amsterdam coffeeshop meets text adventure
+  # Warm wood, soft lighting, interesting regulars

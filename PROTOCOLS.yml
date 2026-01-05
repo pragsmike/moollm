@@ -2252,6 +2252,70 @@ SPEED-OF-LIGHT:
     consensus: "Multiple instances vote/synthesize instantly"
     soul_chat: "Symposium of many voices, no latency"
 
+ADVERSARIAL-COMMITTEE:
+  meaning: "Committee of personas with opposing propensities forcing genuine debate — not one voice, but an ensemble."
+  location: skills/adversarial-committee/
+  credits: "Mike Gallaher — Stories All the Way Down"
+  invoke_when: "Complex decisions requiring multiple perspectives"
+  
+  the_problem: |
+    # Traditional chat gives you the STATISTICAL CENTER
+    # An averaging that loses the richness of diverse perspectives
+    # You get the centroid of the cloud, not the shape of the cloud
+    
+  the_solution: |
+    # Committee of opposing personas:
+    # - Maya (paranoid realist) — surfaces traps
+    # - Frankie (idealist) — surfaces opportunities
+    # - Vic (evidence prosecutor) — demands proof
+    # - Tammy (systems thinker) — traces consequences
+    #
+    # All debate at SPEED-OF-LIGHT
+    # Stories surviving cross-examination are more robust
+    
+  key_insight: |
+    "Everything is a story. No single story is true —
+     but the ensemble approximates actionable wisdom."
+
+ROBERTS-RULES:
+  meaning: "Parliamentary procedure as forcing function — prevents LLM short-circuiting to statistically-likely conclusions."
+  location: skills/roberts-rules/
+  credits: "Mike Gallaher, Henry Martyn Robert (1876)"
+  invoke_when: "Need structured deliberation that explores decision space"
+  
+  stages: |
+    # CALL TO ORDER → REVIEW MINUTES → NEW BUSINESS →
+    # MOTION → SECOND → DEBATE → VOTE → ADJOURN
+    # Each stage must complete before the next
+    # No skipping to conclusions
+
+RUBRIC:
+  meaning: "Measurable criteria translating qualitative debate to quantitative scores."
+  location: skills/rubric/
+  credits: "Mike Gallaher — RUBRIC-bridge methodology"
+  invoke_when: "Need explicit criteria for comparing options"
+  
+  structure: |
+    # criteria:
+    #   resource_efficiency: { weight: 0.20, scale: 1-5 }
+    #   risk_level: { weight: 0.30, scale: 1-5 }
+    # thresholds:
+    #   accept: 3.5
+    #   reject: 2.0
+
+INDEPENDENT-EVALUATOR:
+  meaning: "Assessment without debate context — evaluator can't see committee reasoning, preventing metric gaming."
+  location: skills/evaluator/
+  credits: "Mike Gallaher — adversarial evaluation loop"
+  invoke_when: "Need unbiased assessment of committee output"
+  
+  separation: |
+    # Committee debates → produces output
+    # Output THROWN to evaluator (no context)
+    # Evaluator scores against RUBRIC
+    # If score fails → critique sent back
+    # Committee revises, loop continues
+
 CARRIER-PIGEON:
   meaning: "ANTI-PATTERN: One LLM call per agent, file-based communication, tokenization overhead, loss of precision, latency, etc."
   invoke_when: "Recognizing inefficient multi-agent designs"
@@ -2323,3 +2387,7 @@ _categories:
   # Dialog & experimental
   dialog: [SOUL-CHAT, COHERENCE-ENGINE]
   experimental: [BOUNCY-CASTLE, PETS]
+  
+  # Decision & Deliberation (Mike Gallaher)
+  deliberation: [ADVERSARIAL-COMMITTEE, ROBERTS-RULES, RUBRIC, INDEPENDENT-EVALUATOR]
+  gallaher_methodology: [ADVERSARIAL-COMMITTEE, ROBERTS-RULES, RUBRIC, INDEPENDENT-EVALUATOR, SPEED-OF-LIGHT]

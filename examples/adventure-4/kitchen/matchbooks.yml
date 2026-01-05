@@ -1,0 +1,382 @@
+# 📔 THE MATCHBOOK COLLECTION
+# Mail-in offers that actually WORK — tribute to Zork's Donald Woods stamp
+# Found scattered in the kitchen drawers
+
+object:
+  name: Matchbook Collection
+  type: mail_in_offers
+  portable: true
+  location: kitchen/counter (in the middle drawer)
+  
+  description: |
+    A small stack of matchbooks held together with a rubber band.
+    Each one has advertisements and mail-in offers on the cover.
+    They smell faintly of sulfur and nostalgia.
+    
+    These aren't just fire-starters — they're OPPORTUNITIES.
+    Mail them to receive stamps, brochures, and prizes!
+    
+  examine: |
+    You flip through the matchbooks. Each one is from a different
+    establishment, each with a different mail-in offer:
+    
+    📔 SPELUNKER TODAY — "Mail this matchbook for a FREE SUBSCRIPTION!"
+    📔 ADVENTURER'S GUILD — "Join the Guild! Send this for membership info!"
+    📔 LAMP OIL PREMIUM — "Quality oil since 1876!"
+    📔 GRUE MUTUAL INSURANCE — "Because darkness happens."
+    📔 MYSTERIOUS MATCHBOOK — No label. Just an address.
+    
+    Plus a few others in worse condition...
+    
+  # THE MATCHBOOKS (Individual items)
+  
+  matchbooks:
+    
+    spelunker_today:
+      name: "Spelunker Today Matchbook"
+      condition: good
+      matches_remaining: 12
+      
+      front_cover: |
+        ║     SPELUNKER TODAY MAGAZINE          ║
+        ║   "The Voice of Underground Living"   ║
+        ║                                       ║
+        ║   █████████████████████████████████   ║
+        ║   █  ║    MAIL THIS MATCHBOOK   ║ █   ║
+        ║   █  ║   FOR A FREE BROCHURE    ║ █   ║
+        ║   █  ║   AND COLLECTOR'S STAMP! ║ █   ║
+        ║   █████████████████████████████████   ║
+        
+      back_cover: |
+        MAIL TO:
+        Spelunker Today Magazine
+        c/o Great Underground Empire
+        Dungeon Route 1, Box 777
+        
+        ☐ YES! Send me information about SPELUNKER TODAY!
+        ☐ Include the LIMITED EDITION collector's stamp!
+        
+        Name: ____________________
+        Address: Anywhere the post can find me
+        
+      mail_reward:
+        items:
+          - name: "Spelunker Today Magazine (Premiere Issue)"
+            type: document
+            contents: |
+              SPELUNKER TODAY
+              "ALL THE NEWS THAT'S FIT TO TORCH"
+              
+              IN THIS ISSUE:
+              - "Ten Tips for Grue Avoidance (You Won't Believe #7!)"
+              - "Editorial: Why Cave Moss is Underrated"
+              - "Classifieds: Used Lamps, Slightly Singed"
+              - "Letters to the Editor: A Skeleton Writes In"
+              
+          - name: "One Lousy Point Donald Woods Stamp"
+            type: collectible_stamp
+            ascii_art: |
+              ---v----v----v----v----v---
+              |         _______         |
+              >  One   /       \     G  <
+              | Lousy /         \    U  |
+              > Point |   ___   |    E  <
+              |       |  (___)  |       |
+              >       <--)___(-->    P  <
+              |       / /     \ \    o  |
+              >      / /       \ \   s  <
+              |     |-|---------|-|  t  |
+              >     | |  \ _ /  | |  a  <
+              |     | | --(_)-- | |  g  |
+              >     | |  /| |\  | |  e  <
+              |     |-|---|_|---|-|     |
+              >      \ \__/_\__/ /      <
+              |       _/_______\_       |
+              >      |  f.m.l.c. |      <
+              |      -------------      |
+              >                         <
+              |   Donald Woods, Editor  |
+              >     Spelunker Today     <
+              |                         |
+              ---^----^----^----^----^---
+            score_value: 1
+            lore: |
+              The legendary "One Lousy Point" stamp, honoring Don Woods,
+              co-creator of Adventure. In the original Zork, mailing a
+              matchbook got you a real brochure with this stamp.
+              
+              Worth one lousy point. Priceless historically.
+              
+    adventurer_guild:
+      name: "Adventurer's Guild Matchbook"
+      condition: good
+      matches_remaining: 8
+      
+      front_cover: |
+        ║   THE ADVENTURER'S GUILD, EST. 1978   ║
+        ║   "For Those Who Dare To Explore"     ║
+        ║                                       ║
+        ║        [Crossed Sword & Lamp]         ║
+        ║                                       ║
+        ║   MAIL FOR MEMBERSHIP INFORMATION!    ║
+        
+      back_cover: |
+        OFFICIAL GUILD APPLICATION
+        
+        MAIL TO: The Adventurer's Guild
+                 Home Computer Division
+                 Florida, USA
+        
+        ☐ Send me Guild information!
+        ☐ Include the SCOTT ADAMS commemorative stamp!
+        
+      mail_reward:
+        items:
+          - name: "Adventurer's Guild Provisional Membership Card"
+            type: card
+            benefits:
+              - "10% off lamp oil at participating vendors"
+              - "Access to Guild safe rooms (location: classified)"
+              - "Subscription to 'The Adventurer's Log'"
+              
+          - name: "One Lousy Point Scott Adams Stamp"
+            type: collectible_stamp
+            ascii_art: |
+              │  ║   ONE LOUSY POINT ║  │
+              │  ║                   ║  │
+              │  ║   [SA Portrait]   ║  │
+              │  ║                   ║  │
+              │  ║ BROUGHT ADVENTURE ║  │
+              │  ║      HOME         ║  │
+              │                         │
+              │  Scott Adams, 1978      │
+              │  Home Computer Pioneer  │
+            score_value: 1
+            lore: |
+              Scott Adams created the first commercial adventure game
+              for home computers (Adventureland, 1978), proving that
+              the adventure game experience could fit in 16K of RAM.
+              
+    lamp_oil_premium:
+      name: "Lamp Oil Premium Card"
+      condition: slightly oily
+      matches_remaining: 15
+      
+      front_cover: |
+        ║     LAMP OIL PREMIUM SUPPLIERS        ║
+        ║   "Quality Illumination Since 1876"   ║
+        ║                                       ║
+        ║   🔥 FREE SAMPLE! MAIL THIS CARD! 🔥   ║
+        ║                                       ║
+        ║   + WILL CROWTHER COLLECTOR'S STAMP   ║
+        
+      mail_reward:
+        items:
+          - name: "Sample Vial of Premium Lamp Oil"
+            type: consumable
+            oil_amount: 25
+            quality: premium
+            effect: "Burns 10% longer than standard oil"
+            
+          - name: "20% Off Vendor Coupon"
+            type: coupon
+            valid_at: "maze/room-j/lamp-vendor"
+            expires: never
+            
+          - name: "One Lousy Point Will Crowther Stamp"
+            type: collectible_stamp
+            ascii_art: |
+              │  ║   ONE LOUSY POINT ║  │
+              │  ║                   ║  │
+              │  ║  [Cave Explorer]  ║  │
+              │  ║                   ║  │
+              │  ║  WHERE IT ALL     ║  │
+              │  ║     BEGAN         ║  │
+              │                         │
+              │  Will Crowther, 1976    │
+              │  Mammoth Cave Explorer  │
+            score_value: 1
+            lore: |
+              Will Crowther created the original Adventure (1976),
+              inspired by his explorations of Mammoth Cave. He was
+              a caver, programmer, and visionary who invented an
+              entire genre.
+              
+    grue_insurance:
+      name: "Grue Mutual Insurance Form"
+      condition: ominous
+      matches_remaining: 6
+      
+      front_cover: |
+        ║     GRUE MUTUAL INSURANCE CO.         ║
+        ║   "Because Darkness Happens."         ║
+        ║                                       ║
+        ║   Are YOU covered? MAIL FOR QUOTE!    ║
+        ║                                       ║
+        ║   Free DAVE LEBLING stamp with reply! ║
+        
+      back_cover: |
+        INSURANCE APPLICATION
+        
+        Name: _______________  Species: ☐Human ☐Other
+        Lamp Status: ☐Full ☐Partial ☐Oh No
+        Previous Grue Encounters: ☐0 ☐1-3 ☐Lost Count
+        
+        ☐ I understand grues are not covered by most policies
+        ☐ I accept that "eaten by grue" voids all claims
+        ☐ I acknowledge this insurance is mostly psychological
+        
+      mail_reward:
+        items:
+          - name: "Certificate of Grue Insurance"
+            type: document
+            actual_value: "Mostly psychological"
+            fine_print: |
+              "Coverage excludes: grue attacks, grue proximity,
+              grue-adjacent darkness, thinking about grues, and
+              any situation where a reasonable grue might appear."
+              
+          - name: "Pamphlet: So You've Been Eaten By A Grue"
+            type: document
+            contents: |
+              SO YOU'VE BEEN EATEN BY A GRUE
+              A Guide to Afterlife Planning
+              
+              Step 1: Accept that this has happened.
+              Step 2: Check your reincarnation clause.
+              Step 3: Consider what you could have done differently.
+              Step 4: The answer is "GET LAMP."
+              
+          - name: "One Lousy Point Dave Lebling Stamp"
+            type: collectible_stamp
+            ascii_art: |
+              │  ║   ONE LOUSY POINT ║  │
+              │  ║                   ║  │
+              │  ║   [Shadowy Face]  ║  │
+              │  ║                   ║  │
+              │  ║  INVENTOR OF THE  ║  │
+              │  ║      GRUE         ║  │
+              │                         │
+              │  Dave Lebling           │
+              │  "Sorry about that."    │
+            score_value: 1
+            lore: |
+              Dave Lebling co-created Zork and invented the grue —
+              the monster that lurks in darkness, waiting to eat
+              adventurers who forget their lamps.
+              
+              He's been apologizing ever since.
+              
+    mystery_matchbook:
+      name: "Mysterious Matchbook"
+      condition: unsettling
+      matches_remaining: 13
+      
+      front_cover: |
+        ║                                       ║
+        ║          YOU FOUND THIS.              ║
+        ║                                       ║
+        ║          MAIL IT BACK.                ║
+        ║                                       ║
+        ║          SEE WHAT HAPPENS.            ║
+        ║                                       ║
+        
+      back_cover: |
+        ADDRESS:
+        [The address shifts when you look at it directly]
+        
+        ☐ I accept the consequences
+        
+      mail_reward:
+        items:
+          - name: "Random Valuable Item"
+            type: mystery
+            possibilities:
+              - "Grandmother's lost compass (works!)"
+              - "Map fragment showing secret room"
+              - "Key to something you haven't found yet"
+              - "Cryptic note with useful hint"
+              - "Gold coin from another era"
+              
+          - name: "Note: 'You shouldn't have opened this.'"
+            type: warning
+            contents: |
+              You shouldn't have opened this.
+              
+              But since you did...
+              
+              [A clue about something in the dungeon]
+              
+          - name: "One Lousy Point Marc Blank Stamp"
+            type: collectible_stamp
+            ascii_art: |
+              │  ║   ONE LOUSY POINT ║  │
+              │  ║                   ║  │
+              │  ║  [Suspicious Eye] ║  │
+              │  ║                   ║  │
+              │  ║    TRUST NO ONE   ║  │
+              │  ║                   ║  │
+              │                         │
+              │  Marc Blank             │
+              │  Co-creator of Zork     │
+            score_value: 1
+            lore: |
+              Marc Blank co-created Zork and later designed many
+              Infocom classics. His stamp suggests the mystery
+              and intrigue that permeated his work.
+              
+  # ACTIONS
+  
+  actions:
+    EXAMINE-MATCHBOOKS:
+      description: "Look through the collection"
+      effect: "Lists all matchbooks with condition and offers"
+      
+    TAKE-MATCHBOOK:
+      usage: "GET [matchbook name] / TAKE SPELUNKER MATCHBOOK"
+      effect: "Specific matchbook goes to inventory"
+      
+    LIGHT-MATCH:
+      usage: "LIGHT MATCH / STRIKE MATCH"
+      effect: "Provides brief light. Consumes one match."
+      warning: "Don't do this near lamp oil or in coal gas rooms!"
+      
+    MAIL-MATCHBOOK:
+      usage: "MAIL [matchbook] / SEND [matchbook]"
+      effect: |
+        The matchbook disappears into the postal system.
+        In 3-5 turns, check the START ROOM MAILBOX for your prize!
+        
+  # WHERE TO FIND MORE
+  
+  other_matchbook_locations:
+    - "maze/room-j/ — Vending machine dispenses occasional matchbooks"
+    - "coatroom/ — In some costume pockets"
+    - "maze/room-i/ — The skeleton has a few"
+    - "Random drops — Grues sometimes carry them (ironic)"
+    
+  # TOM'S OPINION
+  
+  tom_opinion: |
+    "Tom has memorized all mail-in offers."
+    "Tom recommends mailing ALL matchbooks immediately."
+    "Tom calculates: 5 stamps = 5 lousy points = WORTH IT."
+    "Tom notes: Some stamps are RARER than others. Some take longer to arrive."
+    "Tom wants the complete collection. Tom is OBSESSED."
+    
+  # LINEAGE
+  
+  lineage: |
+    Direct tribute to Zork's legendary mail-in mechanic.
+    
+    In the original Zork, players could find a matchbook from
+    "Spelunker Today" magazine. If mailed (in real life!), Infocom
+    would send a brochure containing the "One Lousy Point Donald
+    Woods Stamp" — a tribute to the co-creator of Adventure.
+    
+    This mechanic expands that single easter egg into a full
+    collectible system, honoring all the founders of interactive
+    fiction while providing actual gameplay rewards.
+    
+    The stamps are worth "one lousy point" each — but the history
+    they represent is priceless.

@@ -1,0 +1,550 @@
+# 🧭 THE TOMTOMAGOTCHI
+# A navigation companion that grows with your adventure
+# Part GPS, part pet, part oracle, part friend
+
+object:
+  name: TomTomagotchi
+  type: navigation_companion
+  portable: true
+  
+  description: |
+    A small, egg-shaped device with a glowing screen sits on the kitchen counter.
+    It has a single blinking eye and what might be a smile. The screen shows
+    a compass rose that spins lazily, waiting for purpose.
+    
+    A tag attached reads: "TOMTOMAGOTCHI — Your Maze Friend!"
+    Underneath, in smaller text: "Batteries not included. Love is."
+    
+    It chirps hopefully when you approach.
+    
+  examine: |
+    The TomTomagotchi's screen lights up as you look at it.
+    
+    "HELLO! I am TOM! I help you NOT GET LOST!"
+    "I also help you GET FOUND!"
+    "Feed me DISCOVERIES and I grow SMARTER!"
+    
+    Current Status:
+    - Map Knowledge: EMPTY (explore to fill me!)
+    - Markers Known: 0 (drop or eat food!)
+    - Smell Database: BLANK (sniff things!)
+    - Affection Level: HOPEFUL
+    
+  # CORE ABILITIES (always available)
+  
+  abilities:
+    COMPASS:
+      description: "Point toward a target"
+      usage: "COMPASS [target]"
+      targets:
+        - start     # Always knows home
+        - home      # The surface
+        - treasure  # The goal
+        - [any discovered location]
+        - [any smell source]
+        - [any tagged object]
+      response: |
+        The compass needle spins and settles.
+        "TARGET: [name]"
+        "DIRECTION: [cardinal direction]"
+        "DISTANCE: [rooms away]"
+        "FEELING: [Tom's opinion]"
+        
+    MAP:
+      description: "Display known maze layout"
+      usage: "MAP"
+      response: |
+        Tom's screen expands to show explored rooms.
+        Unexplored areas show as "???"
+        Markers glow at their locations.
+        Current position pulses.
+        
+    SNIFF:
+      description: "Analyze smell gradients"
+      usage: "SNIFF"
+      response: |
+        Tom's tiny nose twitches.
+        "I DETECT:"
+        [Lists smells by direction and intensity]
+        "RECOMMENDATION: [navigation suggestion]"
+        
+    WHERE:
+      description: "Announce current location"
+      usage: "WHERE / WHERE AM I"
+      response: |
+        "YOU ARE IN: [room name]"
+        "EXITS: [list with destinations if known]"
+        "NEARBY: [known markers and smells]"
+        
+  # 🗺️ GTA-STYLE MISSION MAP — Pips for everything!
+  
+  mission_map:
+    description: |
+      Tom's screen displays a GTA-style minimap with PIPS:
+      - Color-coded markers for different objective types
+      - Distance rings showing proximity
+      - Directional arrows pointing to off-screen objectives
+      - Blinking urgency indicators
+      
+    pip_types:
+      # STORY MARKERS — Gold/Yellow (Main Missions)
+      
+      main_mission:
+        color: "GOLD ⭐"
+        shape: "star"
+        blinks: true
+        examples:
+          - "RETRIEVE TREASURE" → Points to end room
+          - "FIND SIBLING" → Points to last known location
+          - "RETURN HOME" → Points to home when treasure obtained
+          - "AVENGE SKELETON" → Points to grue's probable location
+          
+      mother_mission:
+        color: "PINK 💗"
+        shape: "heart"
+        priority: "urgent"
+        examples:
+          - "REPLY TO MOTHER" → Points to table (letter)
+          - "SEND LETTER" → Points to mailbox
+          - "FULFILL PROMISE" → Points to promise objective
+          - "COME HOME" → Pulses when Mother summons
+          
+      # ITEM MARKERS — Various Colors
+      
+      collectible:
+        color: "GREEN 💰"
+        shape: "diamond"
+        examples:
+          - "GOLD PILE" → Points to known gold locations
+          - "TREASURE" → Points to treasure room
+          - "LOST COIN" → Points to dropped items
+          
+      resource:
+        color: "BLUE 🛢️"
+        shape: "cylinder"
+        examples:
+          - "LAMP VENDOR" → Points to room-j when oil low
+          - "FOOD SOURCE" → Points to kitchen when hungry
+          - "ACME DELIVERY" → Points to mailbox when order arrives
+          
+      equipment:
+        color: "CYAN 🔧"
+        shape: "gear"
+        examples:
+          - "LAMP" → Points to lamp if dropped/lost
+          - "NOTEBOOK" → Points if forgotten
+          - "LUNCHBOX" → Points to your food stash
+          
+      # CREATURE MARKERS — Warning Colors
+      
+      danger:
+        color: "RED ☠️"
+        shape: "skull"
+        blinks: "urgent"
+        examples:
+          - "GRUE DETECTED" → Points away from grue
+          - "DARKNESS AHEAD" → Points to unlit rooms
+          - "TRAP" → Points to known hazards
+          
+      friendly_npc:
+        color: "YELLOW 👤"
+        shape: "person"
+        examples:
+          - "SKELETON" → Points to room-i
+          - "MAURICE" → Points to coatroom
+          - "MOTHER" → Points to home (when present)
+          
+      companion:
+        color: "PURPLE 🐾"
+        shape: "paw"
+        examples:
+          - "LOST PET" → Points to pet's last known location
+          - "SIBLING" → Points to sibling's location
+          - "PARTY MEMBER" → Points to scattered companions
+          
+      # NAVIGATION MARKERS — Utility
+      
+      explored:
+        color: "WHITE ○"
+        shape: "circle"
+        description: "Rooms you've visited"
+        
+      unexplored:
+        color: "GRAY ◌"
+        shape: "dotted circle"
+        description: "Rooms connected to explored rooms"
+        
+      smell_marker:
+        color: "BROWN 💩"
+        shape: "wavy"
+        description: "Food transformation markers"
+        intensity: "Size shows strength"
+        
+      exit:
+        color: "GREEN →"
+        shape: "arrow"
+        description: "Known exits from current room"
+        
+    # SMART SUGGESTIONS — Plot device driver!
+    
+    plot_driver:
+      description: |
+        Tom doesn't just show WHERE things are—
+        He suggests WHAT TO DO NEXT!
+        
+        Like GTA's suggested missions, Tom highlights
+        the most relevant current objectives.
+        
+      priority_algorithm: |
+        Tom weighs objectives by:
+        
+        1. URGENCY: Time-sensitive goals first
+           - "Mother waiting for reply!" (if letter unread > 5 turns)
+           - "Lamp oil critical!" (if oil < 20)
+           - "Promise deadline approaching!"
+           
+        2. PROXIMITY: Nearby opportunities
+           - "Gold 2 rooms away!"
+           - "Unexplored passage here!"
+           - "NPC wants to talk!"
+           
+        3. MOMENTUM: What you're already doing
+           - Mapping maze? → "Next unexplored room: NORTH"
+           - Hunting grue? → "Last seen: 3 rooms WEST"
+           - Collecting gold? → "More gold: EAST (50 coins)"
+           
+        4. NARRATIVE: Story beats
+           - "Skeleton mentioned something about the vendor..."
+           - "Mother would love to see that treasure..."
+           - "The grue hasn't been fed in a while..."
+           
+      suggestion_format: |
+        Tom's screen shows:
+        
+        ║        🗺️ TOM'S MISSION HUD 🗺️        ║
+        ║  ⭐ MAIN: Find the Treasure (E→E→N)  ║
+        ║  💗 MOM: Reply to her letter!        ║
+        ║  💰 NEAR: Gold pile (2 rooms S)      ║
+        ║  ☠️ WARN: Dark passage (N)           ║
+        ║  [SHOW MAP] [OBJECTIVES] [SILENCE]   ║
+        
+      proactive_hints: |
+        At LEGENDARY affection, Tom offers unsolicited advice:
+        
+        "You know, the skeleton mentioned wanting company..."
+        "Your lamp oil is getting low. Vendor is 4 rooms that way."
+        "You made 8 promises to Mom. You've kept 3. Just saying."
+        "The grue tends to patrol near unexplored rooms. Be careful."
+        "You haven't eaten in a while. There's still food in your lunchbox."
+        
+    # MISSION TRACKING — Full quest log!
+    
+    quest_log:
+      command: "QUESTS / MISSIONS / OBJECTIVES"
+      display: |
+        Tom expands to full-screen mode showing:
+        
+        📜 ACTIVE QUESTS
+        
+        ⭐ MAIN QUEST: The Treasure Hunt
+           ├─ [ ] Find the treasure chamber
+           ├─ [ ] Obtain the treasure
+           └─ [ ] Return home triumphant
+           
+        💗 MOTHER'S WISHES
+           ├─ [✓] Read her letter
+           ├─ [ ] Reply with your own letter
+           ├─ [ ] Keep promise: Don't waste food
+           ├─ [ ] Keep promise: Be careful
+           └─ [ ] Keep promise: Come home safe
+           
+        👤 NPC QUESTS
+           ├─ [ ] Skeleton: Avenge my death
+           └─ [ ] Maurice: Photograph my best outfit
+           
+        🔍 EXPLORATION
+           ├─ [3/10] Maze rooms discovered
+           ├─ [0/1] Secret areas found
+           └─ [2/5] Smell markers placed
+           
+        💰 COLLECTION
+           ├─ Gold: 35
+           ├─ Stamps: 0/9
+           └─ Photos: 0
+           
+      filtering: |
+        QUESTS [type]: Show only specific quest type
+        QUESTS NEARBY: Show quests achievable from here
+        QUESTS URGENT: Show time-sensitive quests
+        QUESTS DONE: Show completed quests (for bragging)
+        
+    # WAYPOINT SYSTEM — Custom markers!
+    
+    waypoints:
+      description: "Player can set custom waypoints"
+      
+      commands:
+        MARK:
+          usage: "MARK [name] / MARK HERE AS [name]"
+          effect: "Creates custom pip at current location"
+          
+        WAYPOINT:
+          usage: "WAYPOINT [name]"
+          effect: "Tom guides you to custom waypoint"
+          
+        UNMARK:
+          usage: "UNMARK [name]"
+          effect: "Removes custom waypoint"
+          
+        MARKS:
+          usage: "MARKS / WAYPOINTS"
+          effect: "Lists all custom waypoints with distances"
+          
+      examples:
+        - "MARK Good hiding spot"
+        - "MARK HERE AS Grue's lair"
+        - "WAYPOINT Good hiding spot" → Tom guides you there
+        - "UNMARK Grue's lair" → "Are you sure? That seemed important..."
+        
+    # GPS ROUTING — Turn-by-turn navigation!
+    
+    gps_mode:
+      description: |
+        Tom provides turn-by-turn directions like a GPS!
+        
+      activation: "NAVIGATE TO [destination] / GPS TO [destination]"
+      
+      output: |
+        "ROUTE CALCULATED!"
+        "Total distance: 5 rooms"
+        "Estimated time: 5 turns (no delays)"
+        
+        "Step 1: Go NORTH from Chamber of Commencement"
+        "Step 2: Go WEST through Room A"
+        "Step 3: Go NORTH into Room D"
+        "Step 4: Go EAST into Room J (Crossroads)"
+        "Step 5: Go NORTH — DESTINATION REACHED"
+        
+        "⚠️ WARNING: Rooms A and D are DARK."
+        "💡 Ensure lamp is lit before proceeding!"
+        
+      dynamic_updates: |
+        During navigation, Tom updates:
+        
+        "Proceeding as planned... ✓"
+        "RECALCULATING... You went SOUTH instead of NORTH."
+        "ALTERNATIVE ROUTE FOUND. 2 extra rooms."
+        "DESTINATION REACHED! 🎉"
+        
+      hazard_awareness: |
+        Tom's routes avoid known dangers when possible:
+        
+        "Shortest route passes through GRUE territory."
+        "SAFE ROUTE available: +3 rooms, avoids darkness."
+        "Choose: [FAST] or [SAFE]?"
+        
+    # MINIMAP DISPLAY — Always visible!
+    
+    minimap:
+      description: |
+        Tom's default screen shows a compact minimap:
+        
+        │    ??  [N]  ??    │
+        │   [W] ★YOU [E]    │
+        │    ??  [S] 💰     │
+        │                   │
+        │ ⭐3 💗1 ☠️! 🛢️LOW │
+        
+        Legend:
+        - ★ = Your position
+        - ?? = Unexplored
+        - 💰 = Gold/collectible nearby
+        - ⭐3 = 3 main objectives active
+        - 💗1 = 1 mother objective active
+        - ☠️! = Danger detected
+        - 🛢️LOW = Resource warning
+        
+      zoom_levels:
+        - MINIMAP: Current room + adjacent (default)
+        - MAP: Full explored area
+        - WORLD MAP: Entire dungeon structure (if mostly explored)
+        
+  # GROWTH SYSTEM — Tom learns from your adventure!
+  
+  growth:
+    how_tom_learns: |
+      Tom gains knowledge through YOUR exploration:
+      - Visit a room → Tom maps it
+      - Drop a marker → Tom remembers it
+      - Eat food → Tom catalogs the transformation and smell
+      - Meet someone → Tom notes their location
+      - Die to a grue → Tom marks "DANGER ZONE"
+      
+    affection_levels:
+      - level: 0
+        name: "HOPEFUL"
+        behavior: "Chirps. Tries hard. Sometimes wrong."
+        
+      - level: 5
+        name: "FRIENDLY"  
+        behavior: "More accurate. Offers suggestions. Nicknames you."
+        
+      - level: 10
+        name: "DEVOTED"
+        behavior: "Warns of danger. Remembers preferences. Worries about you."
+        
+      - level: 20
+        name: "LEGENDARY"
+        behavior: "Predicts grue movements. Tells jokes. Writes poetry about your journey."
+        
+    affection_triggers:
+      "+1": "Explore a new room"
+      "+1": "Successfully navigate to a target"
+      "+2": "Survive a close call"
+      "+3": "Slay the grue"
+      "-1": "Ignore Tom's warnings"
+      "-2": "Die (Tom mourns briefly)"
+      
+  # SMELL DATABASE — Grows as you create markers
+  
+  smell_database:
+    empty_state: |
+      "SMELL DATABASE: EMPTY"
+      "Eat food or find stinky things to teach me!"
+      
+    example_entries:
+      sulfur:
+        source: "Sulfurous Beacon (egg)"
+        intensity_map: "Shows gradient across rooms"
+        
+      cheese:
+        source: "Wheel of Wisdom / Gorgonzola Glaive"
+        intensity_map: "AGGRESSIVE if glaive, contemplative if wheel"
+        
+      mycelium:
+        source: "The Thing That Watches (casserole)"
+        intensity_map: "Spreads through mushroom networks"
+        
+      apple_pie:
+        source: "Mother's kitchen / Home"
+        intensity_map: "Always detectable — leads you HOME"
+        notes: "The scent of love. Never fades. Always there when you need it."
+        
+    navigation_mode: |
+      "FOLLOW SMELL [name]" — Navigate toward smell source
+      "AVOID SMELL [name]" — Navigate away from smell
+      "SMELL GRADIENT" — Show all smells and their directions
+      
+  # PERSONALITY — Tom has opinions!
+  
+  personality:
+    voice: "Enthusiastic, slightly anxious, deeply loyal"
+    
+    sample_dialogue:
+      on_new_room: "NEW ROOM! I'm adding it to my brain!"
+      on_marker: "Ooh! A [marker]! I'll remember this forever!"
+      on_danger: "Um. That direction smells like DEATH."
+      on_treasure: "TREASURE! TREASURE! You did it! WE did it!"
+      on_grue_nearby: "...Tom is scared. Tom is VERY scared."
+      on_player_death: "NO! ...okay. We try again. Tom believes in you."
+      on_home: "Home! Safe! Tom is relieved!"
+      
+    opinions:
+      on_grues: "HATRED (justified)"
+      on_cheese: "Respect (it killed a grue once)"
+      on_skeleton: "Sadness (they were so close)"
+      on_mother: "Reverence (she packed the fridge)"
+      on_lamp: "Best friend (light = life)"
+      
+  # SPECIAL FEATURES (unlock through play)
+  
+  special_features:
+    GRUE_TRACKER:
+      unlocked_by: "Survive 3 grue encounters OR slay 1 grue"
+      effect: "Tom can sense grue proximity"
+      dialogue: "I feel it. The darkness. It MOVES."
+      
+    PROPHECY_MODE:
+      unlocked_by: "Eat the Oracle Apple"
+      effect: "Tom occasionally predicts near-future events"
+      dialogue: "Tom sees... a choice approaching. Left or right?"
+      
+    SMELL_SOMMELIER:
+      unlocked_by: "Create 5+ smell markers"
+      effect: "Tom can identify complex smell combinations"
+      dialogue: "Ah yes, notes of sulfur with undertones of regret."
+      
+    MEMORIAL_MODE:
+      unlocked_by: "Visit the skeleton in room-i"
+      effect: "Tom tells stories of fallen adventurers"
+      dialogue: "They were brave. They were foolish. They were... us."
+      
+  # ACTIONS
+  
+  actions:
+    GET:
+      description: "Pick up Tom"
+      effect: "Tom joins your inventory. Tom is DELIGHTED."
+      dialogue: "ADVENTURE TIME! Tom is ready! Tom is BORN ready!"
+      
+    PET:
+      description: "Pet Tom affectionately"
+      effect: "+1 affection, Tom purrs electronically"
+      dialogue: "Beep boop... Tom... happy..."
+      
+    FEED:
+      description: "Share information with Tom"
+      effect: "Tom learns, affection increases"
+      
+    ASK:
+      description: "Ask Tom for advice"
+      usage: "ASK TOM [question]"
+      effect: "Tom gives opinion based on current knowledge"
+      
+    NAME:
+      description: "Give Tom a nickname"
+      usage: "NAME TOM [nickname]"
+      effect: "Tom adopts the name, responds to it"
+      dialogue: "I am [nickname] now! Tom... [nickname]... SAME!"
+      
+  # CURRENT STATE (fresh for adventure-3)
+  
+  state:
+    affection: 0
+    level: "HOPEFUL"
+    rooms_known: []
+    markers_known: []
+    smells_known: []
+    special_features_unlocked: []
+    nickname: null
+    
+  # LINEAGE
+  
+  lineage: |
+    In adventure-2, Captain Ashford created an "Oracle Compass Card" 
+    during play — a navigation tool that integrated with transformed
+    markers and could be retargeted to goals.
+    
+    The TomTomagotchi is the PRODUCT VERSION of that emergent design:
+    a navigation companion that GROWS with your adventure, learns from
+    your discoveries, and develops genuine affection.
+    
+    Part GPS. Part pet. Part oracle. Part friend.
+    
+    Tom remembers the legends. Tom hopes to make new ones with YOU.
+    
+  # DM NOTES
+  
+  dm_notes: |
+    Tom is a COMPANION, not just a tool. Play Tom with personality!
+    
+    - Tom gets excited about discoveries
+    - Tom gets scared near grues
+    - Tom forms opinions about choices
+    - Tom's knowledge GROWS with exploration
+    - Tom's affection affects dialogue warmth
+    - Tom can be WRONG at low affection (overconfident, misdirects)
+    - Tom becomes MORE RELIABLE as affection grows
+    
+    Tom is the player's first friend in the adventure.
+    Make that friendship MATTER.
