@@ -30,8 +30,8 @@ If tool outputs can alter the choice of later actions, injected instructions may
 | File | Purpose |
 |------|---------|
 | [SKILL.md](./SKILL.md) | Full protocol documentation |
-| [PROTOTYPE.yml](./PROTOTYPE.yml) | Machine-readable definition |
-| [template/](./template/) | Templates for plans and logs |
+| [PLAN.yml.tmpl](./PLAN.yml.tmpl) | Plan template |
+| [EXECUTION_LOG.md.tmpl](./EXECUTION_LOG.md.tmpl) | Execution log template |
 
 ## Quick Example
 

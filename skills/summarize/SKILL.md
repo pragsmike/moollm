@@ -30,8 +30,7 @@ When files are too large for context:
 | File | Purpose |
 |------|---------|
 | [SKILL.md](./SKILL.md) | Full protocol documentation |
-| [PROTOTYPE.yml](./PROTOTYPE.yml) | Machine-readable definition |
-| [template/](./template/) | Summary templates |
+| [SUMMARIES.yml.tmpl](./SUMMARIES.yml.tmpl) | Summary template |
 
 ## Example
 

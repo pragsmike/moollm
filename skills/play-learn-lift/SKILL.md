@@ -157,8 +157,8 @@ The pun is deliberate: **jazz** is free exploration (PLAY), and **standards** ar
 | File | Purpose |
 |------|---------|
 | [SKILL.md](./SKILL.md) | Full methodology documentation |
-| [PROTOTYPE.yml](./PROTOTYPE.yml) | Machine-readable definition |
-| [template/](./template/) | Templates for PLL cycles |
+| [CYCLE.yml.tmpl](./CYCLE.yml.tmpl) | Cycle template |
+| [PLAY_LOG.md.tmpl](./PLAY_LOG.md.tmpl) | Play log template |
 
 ---
 

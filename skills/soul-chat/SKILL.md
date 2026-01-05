@@ -49,8 +49,9 @@ Characters share data by embedding YAML/JSON blocks in their dialogue — [YAML-
 | File | Purpose |
 |------|---------|
 | [SKILL.md](./SKILL.md) | Full protocol documentation |
-| [PROTOTYPE.yml](./PROTOTYPE.yml) | Machine-readable skill definition |
-| [template/](./template/) | Templates for creating new chats |
+| [CHAT.md.tmpl](./CHAT.md.tmpl) | Chat template |
+| [CHARACTERS.yml.tmpl](./CHARACTERS.yml.tmpl) | Characters template |
+| [ENTITIES.yml.tmpl](./ENTITIES.yml.tmpl) | Entities template |
 
 ## Quick Start
 
@@ -60,7 +61,7 @@ Chats live **OUTSIDE** this directory (per [ABOUT-NOT-INSIDE](../../PROTOCOLS.ym
 
 Name chats with the subject first: `readme-symposium.md`, `yaml-jazz-debate.md`
 
-See [template/CHAT.md.tmpl](./template/CHAT.md.tmpl) for the full template.
+See [CHAT.md.tmpl](./CHAT.md.tmpl) for the full template.
 
 ## Entity Types
 

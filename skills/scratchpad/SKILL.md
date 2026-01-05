@@ -65,8 +65,7 @@ Not everything needs structure. Sometimes you just need a place to write freely.
 | File | Purpose |
 |------|---------|
 | [SKILL.md](./SKILL.md) | Protocol documentation |
-| [PROTOTYPE.yml](./PROTOTYPE.yml) | Skill definition |
-| [template/](./template/) | Starter template |
+| [scratch.md.tmpl](./scratch.md.tmpl) | Scratchpad template |
 
 ---
 

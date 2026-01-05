@@ -31,8 +31,8 @@ Track investigations and capture knowledge.
 | File | Purpose |
 |------|---------|
 | [SKILL.md](./SKILL.md) | Full protocol documentation |
-| [PROTOTYPE.yml](./PROTOTYPE.yml) | Machine-readable definition |
-| [template/](./template/) | Notebook and source templates |
+| [NOTEBOOK.yml.tmpl](./NOTEBOOK.yml.tmpl) | Notebook template |
+| [SOURCES.yml.tmpl](./SOURCES.yml.tmpl) | Sources template |
 
 ## Example
 

@@ -343,9 +343,8 @@ Each instance has its own state, goals, and lifecycle.
 | File | Purpose |
 |------|---------|
 | [SKILL.md](./SKILL.md) | Full protocol documentation |
-| [PROTOTYPE.yml](./PROTOTYPE.yml) | Machine-readable definition |
-| [template/CARD.yml.tmpl](./template/CARD.yml.tmpl) | Template for new cards |
-| [template/COLLECTION.yml.tmpl](./template/COLLECTION.yml.tmpl) | Template for card collections |
+| [CARD.yml.tmpl](./CARD.yml.tmpl) | Template for new cards |
+| [COLLECTION.yml.tmpl](./COLLECTION.yml.tmpl) | Template for card collections |
 
 ---
 

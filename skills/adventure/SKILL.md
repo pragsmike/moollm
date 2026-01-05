@@ -299,8 +299,8 @@ cards_in_play:
 | File | Purpose |
 |------|---------|
 | [SKILL.md](./SKILL.md) | Full protocol documentation |
-| [PROTOTYPE.yml](./PROTOTYPE.yml) | Machine-readable definition |
-| [template/](./template/) | Adventure templates |
+| [ADVENTURE.yml.tmpl](./ADVENTURE.yml.tmpl) | Adventure template |
+| [LOG.md.tmpl](./LOG.md.tmpl) | Log template |
 
 ---
 

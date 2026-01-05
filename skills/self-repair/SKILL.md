@@ -30,8 +30,7 @@ When something's wrong:
 | File | Purpose |
 |------|---------|
 | [SKILL.md](./SKILL.md) | Full protocol documentation |
-| [PROTOTYPE.yml](./PROTOTYPE.yml) | Machine-readable definition |
-| [template/](./template/) | Checklist templates |
+| [CHECKLIST.yml.tmpl](./CHECKLIST.yml.tmpl) | Checklist template |
 
 ## Repair Demons
 

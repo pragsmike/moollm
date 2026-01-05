@@ -79,8 +79,8 @@ Use **plan-then-execute/** when you need control.
 | File | Purpose |
 |------|---------|
 | [SKILL.md](./SKILL.md) | Full protocol documentation |
-| [PROTOTYPE.yml](./PROTOTYPE.yml) | Machine-readable definition |
-| [template/](./template/) | Plan templates |
+| [PLAN.yml.tmpl](./PLAN.yml.tmpl) | Plan template |
+| [PROGRESS.md.tmpl](./PROGRESS.md.tmpl) | Progress template |
 
 ---
 

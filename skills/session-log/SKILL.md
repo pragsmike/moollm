@@ -37,7 +37,7 @@ Each entry is a markdown heading with an embedded YAML block:
 # ```
 ```
 
-See [template/session-log.md.tmpl](./template/session-log.md.tmpl) for full format.
+See [session-log.md.tmpl](./session-log.md.tmpl) for full format.
 
 ## Why Markdown + YAML?
 
@@ -53,8 +53,8 @@ See [template/session-log.md.tmpl](./template/session-log.md.tmpl) for full form
 | File | Purpose |
 |------|---------|
 | [SKILL.md](./SKILL.md) | Full protocol documentation |
-| [PROTOTYPE.yml](./PROTOTYPE.yml) | Machine-readable definition |
-| [template/](./template/) | Log file templates |
+| [SESSION.yml.tmpl](./SESSION.yml.tmpl) | Session template |
+| [session-log.md.tmpl](./session-log.md.tmpl) | Log template |
 
 ## The Intertwingularity
 

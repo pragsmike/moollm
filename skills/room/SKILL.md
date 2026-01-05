@@ -749,8 +749,7 @@ Instead of isolated agent prisons, we have a **shared microworld**.
 | File | Purpose |
 |------|---------|
 | [SKILL.md](./SKILL.md) | Full protocol documentation |
-| [PROTOTYPE.yml](./PROTOTYPE.yml) | Machine-readable definition |
-| [template/ROOM.yml.tmpl](./template/ROOM.yml.tmpl) | Template for new rooms |
+| [ROOM.yml.tmpl](./ROOM.yml.tmpl) | Template for new rooms |
 
 ---
 

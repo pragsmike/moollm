@@ -37,7 +37,7 @@ MOOLLM skills directly parallel [Anthropic's emerging Skills model](https://docs
 | Anthropic Skills | MOOLLM Skills | Shared Philosophy |
 |------------------|---------------|-------------------|
 | Documentation-first | `README.md` + `SKILL.md` | Explain before automating |
-| Tool definitions | `PROTOTYPE.yml` | Machine-readable capability spec |
+| Tool definitions | YAML frontmatter in `SKILL.md` | Machine-readable capability spec |
 | Composable tools | Skill inheritance + composition | Build complex from simple |
 | Human approval gates | `PLAN-THEN-EXECUTE` | Trust but verify |
 | Skill libraries | `skills/` directory | Central, shareable |
@@ -147,9 +147,10 @@ Full materialization with state:
 
 ```
 skills/adventure/
-├── README.md           # Documentation
-├── PROTOTYPE.yml       # Machine-readable spec
-├── template/           # Templates for instances
+├── README.md           # Human-friendly landing page
+├── SKILL.md            # Full spec with YAML frontmatter
+├── ADVENTURE.yml.tmpl  # Templates at root level
+├── LOG.md.tmpl
 └── ...
 
 examples/adventure-1/   # ← An INSTANCE of the skill
@@ -262,20 +263,25 @@ Every skill directory contains:
 
 | File | Purpose | Required |
 |------|---------|----------|
-| `README.md` | Human-readable overview | ✓ |
-| `SKILL.md` | Full protocol documentation | Optional |
-| `PROTOTYPE.yml` | Machine-readable definition | ✓ |
-| `template/` | Templates for instantiation | Optional |
+| `README.md` | Human-friendly GitHub landing page | ✓ |
+| `SKILL.md` | Full spec with YAML frontmatter | ✓ |
+| `*.tmpl` | Templates at root level | Optional |
 
-### PROTOTYPE.yml Structure
+### SKILL.md Structure
 
 ```yaml
-skill:
-  name: "skill-name"
-  protocol: SKILL-SYMBOL
-  tier: 1  # Capability tier required
-  
-  description: "One-line summary"
+---
+name: skill-name
+description: "One-line summary"
+tier: 1  # Capability tier required
+allowed-tools:
+  - read_file
+  - write_file
+---
+
+# Skill Name
+
+Full documentation here...
   
   invokes:  # K-lines activated
     - "tradition-name"

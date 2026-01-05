@@ -1,20 +1,26 @@
+---
+name: basic-skill
+description: Minimal starter template for creating new MOOLLM skills
+license: MIT
+tier: 1
+allowed-tools:
+  - read_file
+  - write_file
+templates:
+  - TASK.yml.tmpl
+  - CHECKLIST.md.tmpl
+  - working_set.yml.tmpl
+---
+
 # Basic Skill Template
 
-## Purpose
-
-A minimal skill template demonstrating SIP structure.
-Use this as a starting point for creating new skills.
+A minimal skill template demonstrating the new skill structure. Use this as a starting point for creating new skills.
 
 ## When to Use
 
 - Learning how skills work
 - Creating a simple, single-purpose skill
 - Bootstrapping a new skill
-
-## Prerequisites
-
-- File tools (fs.read, fs.write, fs.ls)
-- No external dependencies
 
 ## Protocol
 
@@ -27,14 +33,14 @@ Use this as a starting point for creating new skills.
 ### Step 2: Execute
 
 1. Follow the specific task instructions
-2. Document progress in state/progress.yml
-3. Create artifacts in artifacts/
+2. Document progress
+3. Create artifacts as needed
 
 ### Step 3: Finalize
 
 1. Write RESULT.md summarizing what was done
 2. Write RETURN.md with compact output
-3. Update INSTANCE.yml status to "finalized"
+3. Update status to "finalized"
 
 ## Inputs
 
@@ -48,12 +54,6 @@ Use this as a starting point for creating new skills.
 - **RESULT.md**: Full description of what was accomplished
 - **RETURN.md**: Compact output for parent context
 - **artifacts/**: Any generated files
-
-## Examples
-
-See `examples/` directory:
-- `simple/`: Basic usage
-- `with-artifacts/`: Generating output files
 
 ## Tips
 

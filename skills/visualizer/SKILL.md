@@ -417,4 +417,4 @@ The Visualizer draws from the tradition of artists, photographers, and image-mak
 
 ---
 
-*See [PROTOTYPE.yml](./PROTOTYPE.yml) for full specification.*
+*See YAML frontmatter at top of this file for full specification.*

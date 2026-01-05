@@ -42,8 +42,8 @@ graph TD
 | File | Purpose |
 |------|---------|
 | [SKILL.md](./SKILL.md) | Full methodology documentation |
-| [PROTOTYPE.yml](./PROTOTYPE.yml) | Machine-readable definition |
-| [template/](./template/) | Templates for sister relationships |
+| [PROCEDURE.md.tmpl](./PROCEDURE.md.tmpl) | Procedure template |
+| [SISTER.yml.tmpl](./SISTER.yml.tmpl) | Sister relationship template |
 
 ## The Intertwingularity
 
