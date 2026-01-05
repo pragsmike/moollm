@@ -6,6 +6,7 @@ tier: 1
 allowed-tools:
   - read_file
   - write_file
+related: [yaml-jazz, robust-first, self-repair]
 ---
 
 # POSTEL — The Robustness Principle

@@ -6,6 +6,7 @@ tier: 1
 allowed-tools:
   - read_file
   - write_file
+related: [protocol, play-learn-lift, card, room]
 ---
 
 # SKILL

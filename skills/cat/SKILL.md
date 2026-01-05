@@ -2,8 +2,8 @@
 name: cat
 description: Feline interactions, buffs, and relationship building
 allowed-tools:
-  - file_read
-  - file_write
+  - read_file
+  - write_file
 tier: 1
 protocol: CAT
 tags: [pet, companion, interaction, buff, terpene]

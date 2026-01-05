@@ -6,6 +6,7 @@ tier: 1
 allowed-tools:
   - read_file
   - write_file
+related: [adventure, visualizer, session-log, card]
 ---
 
 # Storytelling Tools

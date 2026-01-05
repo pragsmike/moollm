@@ -1,11 +1,12 @@
 ---
 name: persona
-description: ""
+description: Identity layers for characters — WHO they are vs WHAT they do
 license: MIT
 tier: 1
 allowed-tools:
   - read_file
   - write_file
+related: [character, mind-mirror, buff, room]
 ---
 
 # Persona Skill

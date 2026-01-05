@@ -2,9 +2,9 @@
 name: card
 description: Portable tokens of capability, identity, and access
 allowed-tools:
-  - file_read
-  - file_write
-  - list_directory
+  - read_file
+  - write_file
+  - list_dir
 tier: 1
 protocol: TRADING-CARD
 tags: [gamification, capabilities, lloooomm, actor]

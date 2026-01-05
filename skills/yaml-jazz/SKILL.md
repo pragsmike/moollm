@@ -6,6 +6,7 @@ tier: 1
 allowed-tools:
   - read_file
   - write_file
+related: [postel, coherence-engine, soul-chat, mind-mirror]
 ---
 
 # YAML Jazz

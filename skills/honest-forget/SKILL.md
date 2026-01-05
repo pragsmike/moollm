@@ -8,6 +8,7 @@ allowed-tools:
   - write_file
   - list_dir
   - search_replace
+related: [summarize, session-log, memory-palace, self-repair]
 inputs:
   target:
     type: path

@@ -2,8 +2,8 @@
 name: code-review
 description: Systematic code analysis with evidence collection
 allowed-tools:
-  - file_read
-  - terminal_execute
+  - read_file
+  - run_terminal_cmd
 tier: 2
 protocol: CODE-REVIEW
 tags: [development, quality, review, security]

@@ -6,6 +6,7 @@ tier: 1
 allowed-tools:
   - read_file
   - write_file
+related: [sister-script, research-notebook, session-log, adventure]
 ---
 
 # Play Learn Lift

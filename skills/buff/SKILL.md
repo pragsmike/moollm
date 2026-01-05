@@ -2,8 +2,8 @@
 name: buff
 description: Temporary effects system — curses are just shitty buffs
 allowed-tools:
-  - file_read
-  - file_write
+  - read_file
+  - write_file
 tier: 1
 protocol: BUFF-AS-MODIFIER
 tags: [effects, curses, stats, game]

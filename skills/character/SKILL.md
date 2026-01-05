@@ -2,8 +2,8 @@
 name: character
 description: Core patterns for all characters — home, location, relationships, inventory
 allowed-tools:
-  - file_read
-  - file_write
+  - read_file
+  - write_file
 tier: 1
 protocol: CHARACTER-AS-ENTITY
 tags: [entity, location, relationships, inventory]

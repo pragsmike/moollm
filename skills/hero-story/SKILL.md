@@ -5,6 +5,7 @@ license: MIT
 tier: 0
 allowed-tools:
   - read_file
+related: [card, soul-chat, representation-ethics, mind-mirror]
 inputs:
   subject:
     type: string

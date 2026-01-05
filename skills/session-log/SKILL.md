@@ -6,6 +6,7 @@ tier: 1
 allowed-tools:
   - read_file
   - write_file
+related: [adventure, debugging, self-repair, summarize]
 ---
 
 # Session Log

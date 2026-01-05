@@ -10,6 +10,7 @@ allowed-tools:
   - search_replace
   - run_terminal_cmd
   - grep
+related: [adventure, session-log, research-notebook, play-learn-lift]
 inputs:
   symptom:
     type: string

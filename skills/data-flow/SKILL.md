@@ -2,9 +2,9 @@
 name: data-flow
 description: Rooms as pipeline nodes, exits as edges, objects as messages
 allowed-tools:
-  - file_read
-  - file_write
-  - terminal_execute
+  - read_file
+  - write_file
+  - run_terminal_cmd
 tier: 2
 protocol: DATA-FLOW
 tags: [pipeline, processing, kilroy, messaging]

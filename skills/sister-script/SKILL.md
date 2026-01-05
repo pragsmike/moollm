@@ -1,11 +1,13 @@
 ---
 name: sister-script
-description: ""
+description: Document-first automation — the doc is the source of truth
 license: MIT
 tier: 1
 allowed-tools:
   - read_file
   - write_file
+  - run_terminal_cmd
+related: [play-learn-lift, plan-then-execute, adventure]
 ---
 
 # Sister Script

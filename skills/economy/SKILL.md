@@ -7,6 +7,7 @@ allowed-tools:
   - read_file
   - write_file
   - search_replace
+related: [character, room, scoring, reward]
 inputs:
   item:
     type: string

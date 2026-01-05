@@ -7,6 +7,7 @@ allowed-tools:
   - read_file
   - write_file
   - list_dir
+related: [room, adventure, card, summarize]
 inputs:
   palace_name:
     type: string

@@ -2,9 +2,9 @@
 name: action-queue
 description: Sims-inspired task scheduling — queue actions, execute in order
 allowed-tools:
-  - file_read
-  - file_write
-  - list_directory
+  - read_file
+  - write_file
+  - list_dir
 tier: 1
 protocol: ACTION-QUEUE
 tags: [planning, tasks, essential, game]

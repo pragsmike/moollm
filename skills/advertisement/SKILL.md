@@ -2,9 +2,9 @@
 name: advertisement
 description: Objects announce what they can do — The Sims style
 allowed-tools:
-  - file_read
-  - file_write
-  - list_directory
+  - read_file
+  - write_file
+  - list_dir
 tier: 1
 protocol: ADVERTISEMENT
 tags: [game, interaction, sims, behavior]
