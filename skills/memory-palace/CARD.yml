@@ -19,18 +19,13 @@ card:
     
     The ancient mnemonic technique, applied to filesystems.
 
-# TOOLS REQUIRED
-
 tools:
   required:
-    - read_file   # Read room contents
-    - write_file  # Add knowledge
-    - list_dir    # Navigate palace
-  optional: []
+    - read_file
+    - write_file
+    - list_dir
 
-tier: 1  # File read/write
-
-# METHODS
+tier: 1
 
 methods:
   
@@ -48,8 +43,7 @@ methods:
     parameters:
       name: "Room name"
       location: "Where in the palace"
-      purpose: "What this room stores"
-    output: directory + file (ROOM.yml)
+    output: directory + file
     effect: "Add navigable room"
     invoked_by: [player]
     
@@ -67,8 +61,8 @@ methods:
     description: "Navigate through the palace"
     parameters:
       from: "Starting room"
-      to: "Destination or 'wander'"
-    output: chat (narration of journey)
+      to: "Destination"
+    output: chat
     effect: "Trigger associations along path"
     invoked_by: [player]
     
@@ -77,18 +71,9 @@ methods:
     parameters:
       room: "Where to look"
       topic: "What to recall"
-    output: chat (retrieved knowledge)
+    output: chat
     effect: "Find and present stored knowledge"
     invoked_by: [player]
-    
-  MAP:
-    description: "Show palace layout"
-    parameters: {}
-    output: chat (mermaid diagram)
-    effect: "Visualize room connections"
-    invoked_by: [player]
-
-# STATE
 
 state:
   palace:
@@ -96,77 +81,23 @@ state:
       type: string
     rooms:
       type: array
-      description: "List of room paths"
-      
-  room:
-    name:
-      type: string
-    purpose:
-      type: string
-    entries:
-      type: array
-      description: "Knowledge stored here"
-    exits:
-      type: object
-      description: "Connections to other rooms"
-      
-  entry:
-    content:
-      type: string
-      description: "The knowledge"
-    anchor:
-      type: string
-      description: "Mnemonic association"
-    placed:
-      type: datetime
-
-# THE ANCIENT TECHNIQUE
-
-technique:
-  origin: |
-    Ancient Greek/Roman orators memorized speeches by
-    imagining walking through a familiar building,
-    placing key points in each room.
-    
-  why_it_works: |
-    Spatial memory is powerful. We easily remember
-    where things are in physical space. The palace
-    technique hijacks this for abstract knowledge.
-    
-  moollm_application: |
-    Directories ARE rooms.
-    Files ARE objects in rooms.
-    Navigation IS remembering.
-    The filesystem is already a memory palace.
-
-# ADVERTISEMENTS
 
 advertisements:
   ORGANIZE_KNOWLEDGE:
     score: 90
     condition: "Need to structure and remember information"
     
-  SPATIAL_THINKING:
-    score: 85
-    condition: "Want to think spatially about abstract topics"
-    
   BUILD_KNOWLEDGE_BASE:
     score: 80
     condition: "Creating a reusable knowledge repository"
 
-# RELATED
-
 see_also:
-  - skills/room        # Rooms as contexts
-  - skills/adventure   # Narrative navigation
-  - skills/summarize   # What to put in rooms
-  - skills/scratchpad  # Working memory complement
-
-# CREDITS
+  - skills/room
+  - skills/adventure
+  - skills/summarize
+  - skills/scratchpad
 
 credits:
   technique:
-    - "Simonides of Ceos — Method of loci (~500 BCE)"
+    - "Simonides of Ceos — Method of loci"
     - "Frances Yates — The Art of Memory"
-  application:
-    - "Don Hopkins — Filesystem as memory palace"
