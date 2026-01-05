@@ -60,7 +60,7 @@ methods:
   DEBUG:
     description: "Diagnose why a skill isn't working"
     parameters:
-      skill_path: "Path to skill or instance"
+      skill-path: "Path to skill or instance"
     effect: |
       1. Check file structure
       2. Verify prototype chain
@@ -72,7 +72,7 @@ methods:
     description: "Evolve a skill's capabilities"
     parameters:
       skill: "Path to skill"
-      new_tier: "Target tier (0→1, 1→2)"
+      new-tier: "Target tier (0→1, 1→2)"
     effect: |
       1. Analyze current capability
       2. Identify what's needed for upgrade
@@ -89,21 +89,21 @@ prototypes:
 # What this card offers to the room
 
 advertisements:
-  CREATE_SKILL:
+  CREATE-SKILL:
     score: 80
     condition: "Need to make a new reusable capability"
     
-  FIX_SKILL:
+  FIX-SKILL:
     score: 70
     condition: "A skill is broken or incomplete"
     
-  TEACH_SKILLS:
+  TEACH-SKILLS:
     score: 60
     condition: "Someone wants to understand how skills work"
 
 # RELATED SKILLS
 
-see_also:
+see-also:
   - skills/protocol  # K-line names
   - skills/card  # Cards as capabilities
   - skills/constructionism  # Learning by building

@@ -36,9 +36,9 @@ methods:
       item: "What to buy"
       from: "Seller"
       price: "Cost (defaults to item.price)"
-    output: chat + state_change
+    output: chat + state-change
     effect: "Transfer gold, transfer item"
-    invoked_by: [player, npc]
+    invoked-by: [player, npc]
     
   SELL:
     description: "Sell an item"
@@ -46,9 +46,9 @@ methods:
       item: "What to sell"
       to: "Buyer"
       price: "Amount (defaults to item.value)"
-    output: chat + state_change
+    output: chat + state-change
     effect: "Receive gold, transfer item"
-    invoked_by: [player, npc]
+    invoked-by: [player, npc]
     
   TRADE:
     description: "Barter items without gold"
@@ -56,9 +56,9 @@ methods:
       give: "What you offer"
       receive: "What you want"
       with: "Trade partner"
-    output: chat + state_change
+    output: chat + state-change
     effect: "Exchange items if both agree"
-    invoked_by: [player, npc]
+    invoked-by: [player, npc]
     
   BALANCE:
     description: "Check gold balance"
@@ -66,7 +66,7 @@ methods:
       character: "Whose balance (defaults to player)"
     output: chat
     effect: "Display current gold"
-    invoked_by: [player]
+    invoked-by: [player]
     
   PRICE:
     description: "Check an item's price/value"
@@ -74,12 +74,12 @@ methods:
       item: "What to appraise"
     output: chat
     effect: "Display buy and sell prices"
-    invoked_by: [player]
+    invoked-by: [player]
 
 # STATE
 
 state:
-  economy_schema:
+  economy-schema:
     gold:
       type: integer
       description: "Currency amount"
@@ -90,17 +90,17 @@ state:
 # ADVERTISEMENTS
 
 advertisements:
-  MAKE_PURCHASE:
+  MAKE-PURCHASE:
     score: 85
     condition: "Want to buy something"
     
-  SELL_ITEM:
+  SELL-ITEM:
     score: 80
     condition: "Have something to sell"
 
 # RELATED
 
-see_also:
+see-also:
   - skills/character   # Gold lives on characters
   - skills/adventure   # Economic gameplay
   - skills/scoring     # Value assessment

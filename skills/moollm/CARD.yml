@@ -39,15 +39,15 @@ methods:
       context: "Where you are, what you're doing"
     output: chat (relevant capabilities)
     effect: "Assess context, suggest actions"
-    invoked_by: [player, any]
+    invoked-by: [player, any]
     
-  WHAT_AM_I:
+  WHAT-AM-I:
     description: "Explain what MOOLLM is"
     parameters:
       depth: "brief, standard, philosophical"
     output: chat (explanation)
     effect: "Articulate MOOLLM's nature and purpose"
-    invoked_by: [player]
+    invoked-by: [player]
     
   PHILOSOPHY:
     description: "Explain the core philosophy"
@@ -55,7 +55,7 @@ methods:
       topic: "Optional specific topic"
     output: chat (philosophical explanation)
     effect: "Teach Many-Voiced, Play-Learn-Lift, etc."
-    invoked_by: [player]
+    invoked-by: [player]
     
   SKILLS:
     description: "Browse available skills"
@@ -63,7 +63,7 @@ methods:
       category: "Optional filter"
     output: chat (skill catalog)
     effect: "List and describe available skills"
-    invoked_by: [player]
+    invoked-by: [player]
     
   RECOMMEND:
     description: "Suggest skills for a task"
@@ -71,29 +71,29 @@ methods:
       task: "What you want to do"
     output: chat (recommendations)
     effect: "Match task to relevant skills"
-    invoked_by: [player]
+    invoked-by: [player]
     
   CONSTITUTION:
     description: "Show the governing principles"
     parameters: {}
     output: chat (constitution summary)
     effect: "Explain core rules and values"
-    invoked_by: [player]
+    invoked-by: [player]
     
   NAVIGATE:
     description: "Help find something in MOOLLM"
     parameters:
-      looking_for: "What you're trying to find"
+      looking-for: "What you're trying to find"
     output: chat (path + explanation)
     effect: "Guide to the right place"
-    invoked_by: [player]
+    invoked-by: [player]
     
   ORIENT:
     description: "Where am I? What's going on?"
     parameters: {}
     output: chat (situation summary)
     effect: "Explain current context and state"
-    invoked_by: [player]
+    invoked-by: [player]
 
 # STATE
 
@@ -102,36 +102,36 @@ state: {}  # Meta-skill, no persistent state
 # THE ESSENCE
 
 essence:
-  many_voiced: |
+  many-voiced: |
     MOOLLM simulates multiple perspectives debating within a single
     LLM call. Committees, debates, evaluators. The debate produces
     "actionable wisdom" rather than the statistical center.
     
-  filesystem_as_world: |
+  filesystem-as-world: |
     Directories are rooms. Files are objects. Navigation is exploration.
     State persists in YAML. The filesystem IS the world model.
     
-  play_learn_lift: |
+  play-learn-lift: |
     Explore freely (PLAY). Notice patterns (LEARN). Share as skills (LIFT).
     This is the methodology. Jazz first, then standards.
     
-  skills_as_prototypes: |
+  skills-as-prototypes: |
     Skills are documented capabilities that can be instantiated,
     composed, inherited, and evolved. Self-like prototype inheritance.
     Files as objects.
     
-  yaml_jazz: |
+  yaml-jazz: |
     YAML comments are semantic data for the LLM. Structure for humans
     AND machines AND LLMs. Comments contain intent, examples, feelings.
     
-  postel_plus: |
+  postel-plus: |
     Be liberal in what you accept, conservative in what you emit.
     AND: ask if unsure. Liberal acceptance + clarifying questions.
 
 # CORE VALUES
 
 values:
-  many_voices: "Multiple perspectives, not statistical center"
+  many-voices: "Multiple perspectives, not statistical center"
   transparency: "State visible in files, not hidden"
   play: "Learning through exploration"
   composition: "Build from reusable skills"
@@ -145,22 +145,22 @@ advertisements:
     score: 100
     condition: "Lost, confused, or don't know what to do"
     
-  WHAT_CAN_I_DO:
+  WHAT-CAN-I-DO:
     score: 95
     condition: "Want to know available capabilities"
     
-  UNDERSTAND_MOOLLM:
+  UNDERSTAND-MOOLLM:
     score: 90
     condition: "Want to learn about the system"
     
-  FIND_SKILL:
+  FIND-SKILL:
     score: 85
     condition: "Looking for a specific capability"
 
 # THE ORIGIN
 
 origin:
-  name_meaning: |
+  name-meaning: |
     MOOLLM = Many-voiced Object-Oriented LLM
     
     Originally LLOOOOMM (LLM + MOOL + MOO + room)
@@ -178,7 +178,7 @@ origin:
 
 # RELATED
 
-see_also:
+see-also:
   - skills/skill               # How skills work
   - skills/protocol            # K-lines and naming
   - skills/play-learn-lift     # The methodology

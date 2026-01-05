@@ -24,19 +24,19 @@ methods:
     description: "Generate image prompt"
     parameters: { subject: "What to visualize", style: "Art style" }
     output: file (prompt + metadata)
-    invoked_by: [player]
+    invoked-by: [player]
     
   COMPOSE:
     description: "Combine artistic traditions"
     parameters: { traditions: "Which styles to blend" }
     output: chat (prompt design)
-    invoked_by: [player]
+    invoked-by: [player]
     
   RENDER:
     description: "Create visual sidecar"
     parameters: { for: "What entity", prompt: "Image prompt" }
     output: file (VISUAL.yml)
-    invoked_by: [player, system]
+    invoked-by: [player, system]
 
 state:
   visual:
@@ -49,14 +49,14 @@ specializations:
   - photographer
   - painter
   - illustrator
-  - concept_artist
+  - concept-artist
 
 advertisements:
-  CREATE_IMAGE:
+  CREATE-IMAGE:
     score: 90
     condition: "Need visual representation"
-  DESIGN_PROMPT:
+  DESIGN-PROMPT:
     score: 85
     condition: "Crafting prompt for image generation"
 
-see_also: [skills/card, skills/storytelling-tools]
+see-also: [skills/card, skills/storytelling-tools]

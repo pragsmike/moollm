@@ -58,11 +58,11 @@ methods:
   TRACE:
     description: "Trace a delegation chain"
     parameters:
-      instance_path: "Path to instance"
-      slot_name: "What you're looking for"
+      instance-path: "Path to instance"
+      slot-name: "What you're looking for"
     output: chat
     effect: |
-      Walk the prototype chain showing where slot_name
+      Walk the prototype chain showing where slot-name
       resolves, or report if unresolved.
       
   COMPARE:
@@ -83,21 +83,21 @@ state: {}
 # What this card offers to the room
 
 advertisements:
-  UNDERSTAND_INHERITANCE:
+  UNDERSTAND-INHERITANCE:
     score: 90
     condition: "Confused about how MOOLLM inheritance works"
     
-  DESIGN_PROTOTYPE:
+  DESIGN-PROTOTYPE:
     score: 80
     condition: "Need to create something that inherits from skills"
     
-  DEBUG_DELEGATION:
+  DEBUG-DELEGATION:
     score: 70
     condition: "Can't figure out why something isn't inheriting right"
 
 # RELATED
 
-see_also:
+see-also:
   - skills/skill/delegation-object-protocol.md
   - skills/skill/skill-instantiation-protocol.md
   - skills/constructionism
@@ -110,10 +110,10 @@ credits:
   creators:
     - "David Ungar — Self language (1987)"
     - "Randall Smith — Self language co-creator"
-  influenced_by:
+  influenced-by:
     - "Smalltalk — Alan Kay, Xerox PARC"
     - "Actor Model — Carl Hewitt"
-  applied_by:
+  applied-by:
     - "Brendan Eich — JavaScript prototypes - but lobotomized"
     - "Don Hopkins — MOOLLM DOP"
 

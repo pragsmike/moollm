@@ -113,11 +113,11 @@ distinction:
 # ADVERTISEMENTS
 
 advertisements:
-  MANAGE_CHARACTERS:
+  MANAGE-CHARACTERS:
     score: 90
     condition: "Need to work with character identities"
     
-  CREATE_CHARACTER:
+  CREATE-CHARACTER:
     score: 85
     condition: "Starting new adventure or adding player"
 

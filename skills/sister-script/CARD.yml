@@ -36,7 +36,7 @@ tier: 2  # May execute scripts
 
 # THE SCRIPT STRUCTURE PATTERN
 
-script_structure:
+script-structure:
   
   principle: |
     Structure Python scripts so the TOP of the file tells you everything
@@ -45,8 +45,8 @@ script_structure:
     Users run: `cli.py --help` or `cli.py command --help`
     LLMs read: Just the first ~100 lines to understand the full API
     
-  canonical_order:
-    1_imports: |
+  canonical-order:
+    1-imports: |
       """Script docstring — what this does."""
       
       import sys
@@ -58,9 +58,9 @@ script_structure:
       # Dependencies are immediately visible
       # LLM knows what's available
       
-    2_globals_and_enums: |
+    2-globals-and-enums: |
       # CONFIGURATION
-      DEFAULT_CONFIG_PATH = Path("~/.config/moollm/config.yml")
+      DEFAULT-CONFIG-PATH = Path("~/.config/moollm/config.yml")
       VERSION = "1.0.0"
       
       # ENUMS / CONSTANTS
@@ -72,41 +72,41 @@ script_structure:
       # STATE SHAPE
       @dataclass
       class AppState:
-          current_room: Path
+          current-room: Path
           inventory: list[str]
           turn: int = 0
           
       # Now LLM knows the state shape
       
-    3_cli_definition: |
+    3-cli-definition: |
       # CLI DEFINITION — This IS the API documentation
       
-      def create_parser() -> argparse.ArgumentParser:
+      def create-parser() -> argparse.ArgumentParser:
           parser = argparse.ArgumentParser(
               description="MOOLLM Sister Script CLI",
               epilog="See 'cli.py COMMAND --help' for command details."
           )
-          subparsers = parser.add_subparsers(dest="command")
+          subparsers = parser.add-subparsers(dest="command")
           
           # LOOK command
-          look_parser = subparsers.add_parser(
+          look-parser = subparsers.add-parser(
               "look",
               help="Describe the current room",
               description="Read ROOM.yml and display contents."
           )
-          look_parser.add_argument(
+          look-parser.add-argument(
               "--verbose", "-v",
-              action="store_true",
+              action="store-true",
               help="Show all room details"
           )
           
           # GO command  
-          go_parser = subparsers.add_parser(
+          go-parser = subparsers.add-parser(
               "go",
               help="Move to another room",
               description="Navigate through an exit to adjacent room."
           )
-          go_parser.add_argument(
+          go-parser.add-argument(
               "direction",
               help="Direction to go (north, south, etc.)"
           )
@@ -115,42 +115,42 @@ script_structure:
           
       # LLM now knows the FULL API without reading implementation
       
-    4_implementation: |
+    4-implementation: |
       # IMPLEMENTATION — Can be skimmed or skipped initially
       
-      def cmd_look(args, state):
+      def cmd-look(args, state):
           """Implementation of LOOK command."""
-          room = load_room(state.current_room)
+          room = load-room(state.current-room)
           # ... actual logic ...
           
-      def cmd_go(args, state):
+      def cmd-go(args, state):
           """Implementation of GO command."""
           # ... actual logic ...
           
       def main():
-          parser = create_parser()
-          args = parser.parse_args()
-          state = load_state()
+          parser = create-parser()
+          args = parser.parse-args()
+          state = load-state()
           
           commands = {
-              "look": cmd_look,
-              "go": cmd_go,
+              "look": cmd-look,
+              "go": cmd-go,
           }
           
           if args.command in commands:
               commands[args.command](args, state)
               
-      if __name__ == "__main__":
+      if --name-- == "--main--":
           main()
 
   benefits:
-    for_humans: |
+    for-humans: |
       - `cli.py --help` shows all commands
       - `cli.py go --help` shows command details
       - Standard CLI conventions
       - Self-documenting
       
-    for_llms: |
+    for-llms: |
       - Read top of file → know everything
       - Imports → know dependencies
       - Globals → know state shape
@@ -158,7 +158,7 @@ script_structure:
       - Don't need to read implementation to use it
       - CAN read implementation to enhance it
       
-    for_both: |
+    for-both: |
       - Single source of truth (no doc drift)
       - DRY — help text IS documentation
       - Changes to CLI auto-update --help
@@ -174,7 +174,7 @@ methods:
       procedure: "What to automate"
     output: file (PROCEDURE.md)
     effect: "Create documentation-first procedure"
-    invoked_by: [player]
+    invoked-by: [player]
     
   FOLLOW:
     description: "Execute documented procedure"
@@ -182,48 +182,48 @@ methods:
       procedure: "Which doc to follow"
     output: chat + effects
     effect: "LLM follows documented steps"
-    invoked_by: [player]
+    invoked-by: [player]
     
   EXTRACT:
     description: "Convert to Python CLI following the canonical structure"
     parameters:
       procedure: "Which doc"
-      cli_style: "argparse (stdlib) or click (fancy)"
+      cli-style: "argparse (stdlib) or click (fancy)"
     output: file (script.py) + chat
     effect: "Generate structured Python CLI from documentation"
-    invoked_by: [player, lift_phase]
+    invoked-by: [player, lift-phase]
     
   SYNC:
     description: "Update doc from script changes"
     parameters:
       script: "Which script"
-    output: state_change
+    output: state-change
     effect: "Keep doc and script aligned"
-    invoked_by: [player]
+    invoked-by: [player]
     
   UNDERSTAND:
     description: "LLM reads script top to understand API"
     parameters:
       script: "Which script to understand"
-      depth: "api_only (top 100 lines) or full"
+      depth: "api-only (top 100 lines) or full"
     output: chat (understanding)
     effect: "LLM gains knowledge of script's capabilities"
-    invoked_by: [player, automatic]
+    invoked-by: [player, automatic]
     
   ENHANCE:
     description: "Add new command to existing CLI"
     parameters:
       script: "Which script"
       command: "New command to add"
-    output: state_change + chat
+    output: state-change + chat
     effect: "Add CLI parser + implementation, maintaining structure"
-    invoked_by: [player]
+    invoked-by: [player]
 
 # STATE
 
 state:
-  known_scripts: []
-  script_apis: {}  # Cached API understanding
+  known-scripts: []
+  script-apis: {}  # Cached API understanding
 
 # THE METHODOLOGY
 
@@ -249,7 +249,7 @@ methodology:
     - Humans: run --help
     - LLMs: read top of file
     
-  cli_module_choice:
+  cli-module-choice:
     argparse:
       pros: "stdlib, no dependencies, widely understood"
       cons: "verbose, less pretty output"
@@ -268,25 +268,25 @@ methodology:
 # ADVERTISEMENTS
 
 advertisements:
-  AUTOMATE_PROCEDURE:
+  AUTOMATE-PROCEDURE:
     score: 90
     condition: "Repetitive task needs automation"
     
-  LIFT_TO_SCRIPT:
+  LIFT-TO-SCRIPT:
     score: 85
     condition: "Procedure is stable, ready for code"
     
-  UNDERSTAND_SCRIPT:
+  UNDERSTAND-SCRIPT:
     score: 88
     condition: "Need to use or enhance existing CLI"
     
-  STRUCTURE_FOR_LLM:
+  STRUCTURE-FOR-LLM:
     score: 92
     condition: "Writing script that LLM will interact with"
 
 # EXAMPLE: MINIMAL CANONICAL SCRIPT
 
-example_script: |
+example-script: |
   #!/usr/bin/env python3
   """MOOLLM Room Navigator — Move between rooms."""
   
@@ -295,39 +295,39 @@ example_script: |
   import yaml
   
   # --- STATE ---
-  STATE_FILE = Path(".moollm/state.yml")
+  STATE-FILE = Path(".moollm/state.yml")
   
   # --- CLI DEFINITION ---
-  def create_parser():
-      p = argparse.ArgumentParser(description=__doc__)
-      sub = p.add_subparsers(dest="cmd")
+  def create-parser():
+      p = argparse.ArgumentParser(description=--doc--)
+      sub = p.add-subparsers(dest="cmd")
       
-      sub.add_parser("look", help="Describe current room")
+      sub.add-parser("look", help="Describe current room")
       
-      go = sub.add_parser("go", help="Move to adjacent room")
-      go.add_argument("direction", help="north, south, etc.")
+      go = sub.add-parser("go", help="Move to adjacent room")
+      go.add-argument("direction", help="north, south, etc.")
       
       return p
   
   # --- IMPLEMENTATION ---
-  def cmd_look(args):
+  def cmd-look(args):
       # ... implementation ...
       pass
       
-  def cmd_go(args):
+  def cmd-go(args):
       # ... implementation ...
       pass
   
   def main():
-      args = create_parser().parse_args()
-      {"look": cmd_look, "go": cmd_go}.get(args.cmd, lambda a: None)(args)
+      args = create-parser().parse-args()
+      {"look": cmd-look, "go": cmd-go}.get(args.cmd, lambda a: None)(args)
   
-  if __name__ == "__main__":
+  if --name-- == "--main--":
       main()
 
 # RELATED
 
-see_also:
+see-also:
   - skills/play-learn-lift  # LIFT phase
   - skills/skill            # Skills can be automated
   - skills/protocol         # CLI commands as protocol
@@ -339,7 +339,7 @@ credits:
   methodology:
     - "Don Hopkins — Documentation-first automation"
     - "Literate programming (Knuth)"
-  python_patterns:
+  python-patterns:
     - "argparse — Python standard library"
     - "click — Pallets Projects"
     - "typer — Sebastián Ramírez"

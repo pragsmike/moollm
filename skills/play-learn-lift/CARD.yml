@@ -38,7 +38,7 @@ methods:
       domain: "What to explore"
     output: chat (guidance)
     effect: "Frame activity as low-stakes exploration"
-    invoked_by: [player]
+    invoked-by: [player]
     
   LEARN:
     description: "Reflect on patterns"
@@ -46,7 +46,7 @@ methods:
       experiences: "What you've tried"
     output: file (learnings) + chat
     effect: "Document patterns discovered"
-    invoked_by: [player]
+    invoked-by: [player]
     
   LIFT:
     description: "Share as reusable skill"
@@ -54,19 +54,19 @@ methods:
       learning: "What to share"
     output: file (skill) + chat
     effect: "Create skill from learnings"
-    invoked_by: [player]
+    invoked-by: [player]
     
   STAGE:
     description: "What stage am I in?"
     parameters: {}
     output: chat
     effect: "Assess current activity stage"
-    invoked_by: [player]
+    invoked-by: [player]
 
 # STATE
 
 state:
-  session_schema:
+  session-schema:
     stage:
       type: enum
       values: [play, learn, lift]
@@ -100,21 +100,21 @@ methodology:
 # ADVERTISEMENTS
 
 advertisements:
-  START_EXPLORATION:
+  START-EXPLORATION:
     score: 95
     condition: "Beginning something new"
     
-  CRYSTALLIZE_LEARNING:
+  CRYSTALLIZE-LEARNING:
     score: 90
     condition: "Have experience to reflect on"
     
-  CREATE_SKILL:
+  CREATE-SKILL:
     score: 85
     condition: "Want to share what you learned"
 
 # RELATED
 
-see_also:
+see-also:
   - skills/constructionism  # Learning philosophy
   - skills/skill            # Where lift outputs go
   - skills/scratchpad       # Play space

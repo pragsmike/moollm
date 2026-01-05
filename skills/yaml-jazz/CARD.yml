@@ -24,21 +24,21 @@ methods:
     description: "Create YAML Jazz structure"
     parameters: { content: "What to structure" }
     output: chat (YAML)
-    invoked_by: [player]
+    invoked-by: [player]
     
   INTERPRET:
     description: "Read YAML Jazz semantically"
     parameters: { yaml: "Content to interpret" }
     output: chat (understanding)
-    invoked_by: [any]
+    invoked-by: [any]
 
 state: {}
 
 principles:
-  comments_matter: "# Comments are semantic data for the LLM"
-  structure_guides: "Hierarchy implies relationship"
+  comments-matter: "# Comments are semantic data for the LLM"
+  structure-guides: "Hierarchy implies relationship"
   flexibility: "Accept variations, emit consistency (Postel)"
-  human_readable: "Optimize for understanding, not parsing"
+  human-readable: "Optimize for understanding, not parsing"
 
 example: |
   # A character's inner conflict
@@ -49,11 +49,11 @@ example: |
     # The tension between these drives the story
 
 advertisements:
-  SEMANTIC_YAML:
+  SEMANTIC-YAML:
     score: 90
     condition: "Need YAML that LLMs understand deeply"
-  DESIGN_STRUCTURE:
+  DESIGN-STRUCTURE:
     score: 85
     condition: "Creating human+machine+LLM readable format"
 
-see_also: [skills/postel, skills/protocol]
+see-also: [skills/postel, skills/protocol]

@@ -41,7 +41,7 @@ methods:
       focus: "What to look for (security, style, correctness)"
     output: file (REVIEW.yml) + chat
     effect: "Create review instance, scope the work"
-    invoked_by: [player, ci_system]
+    invoked-by: [player, ci-system]
     
   EXAMINE:
     description: "Review a specific file or section"
@@ -50,7 +50,7 @@ methods:
       lines: "Optional line range"
     output: chat (findings)
     effect: "Read code, note issues and observations"
-    invoked_by: [player]
+    invoked-by: [player]
     
   COMMENT:
     description: "Add a review comment"
@@ -59,37 +59,37 @@ methods:
       line: "Line number"
       severity: "info, suggestion, warning, error"
       message: "The comment"
-    output: state_change
+    output: state-change
     effect: "Add to review.comments array"
-    invoked_by: [player]
+    invoked-by: [player]
     
   APPROVE:
     description: "Approve the changes"
     parameters:
       notes: "Optional approval notes"
-    output: chat + state_change
+    output: chat + state-change
     effect: "Set review.status = approved"
-    invoked_by: [player]
+    invoked-by: [player]
     
-  REQUEST_CHANGES:
+  REQUEST-CHANGES:
     description: "Request changes before approval"
     parameters:
       blocking: "List of must-fix issues"
-    output: chat + state_change
-    effect: "Set review.status = changes_requested"
-    invoked_by: [player]
+    output: chat + state-change
+    effect: "Set review.status = changes-requested"
+    invoked-by: [player]
     
   SUMMARIZE:
     description: "Generate review summary"
     parameters: {}
     output: file (REVIEW.md) + chat
     effect: "Compile all findings into readable summary"
-    invoked_by: [player]
+    invoked-by: [player]
 
 # STATE
 
 state:
-  review_schema:
+  review-schema:
     target:
       type: string
       description: "What's being reviewed"
@@ -98,7 +98,7 @@ state:
       description: "Review focus areas"
     status:
       type: enum
-      values: [in_progress, approved, changes_requested, abandoned]
+      values: [in-progress, approved, changes-requested, abandoned]
     comments:
       type: array
       description: "List of review comments"
@@ -108,7 +108,7 @@ state:
 
 # REVIEW FOCUS AREAS
 
-focus_areas:
+focus-areas:
   correctness: "Does the code do what it claims?"
   security: "Are there vulnerabilities?"
   style: "Does it follow conventions?"
@@ -119,21 +119,21 @@ focus_areas:
 # ADVERTISEMENTS
 
 advertisements:
-  REVIEW_CODE:
+  REVIEW-CODE:
     score: 90
     condition: "Have code changes that need review"
     
-  SECURITY_AUDIT:
+  SECURITY-AUDIT:
     score: 85
     condition: "Need security-focused code review"
     
-  LEARN_CODEBASE:
+  LEARN-CODEBASE:
     score: 75
     condition: "Want to understand unfamiliar code"
 
 # RELATED
 
-see_also:
+see-also:
   - skills/debugging     # Finding problems
   - skills/rubric        # Structured criteria
   - skills/evaluator     # Independent assessment

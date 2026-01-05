@@ -37,26 +37,26 @@ methods:
     parameters:
       target: "Character to buff"
       buff: "Buff definition or reference"
-    output: chat + state_change
+    output: chat + state-change
     effect: "Add buff to target.buffs array"
-    invoked_by: [object, character, room, cat]
+    invoked-by: [object, character, room, cat]
     
   REMOVE:
     description: "Remove a specific buff"
     parameters:
       target: "Character"
-      buff_name: "Which buff to remove"
-    output: chat + state_change
+      buff-name: "Which buff to remove"
+    output: chat + state-change
     effect: "Remove from target.buffs"
-    invoked_by: [healer, item, time_decay]
+    invoked-by: [healer, item, time-decay]
     
   TICK:
     description: "Advance all buff durations by one turn"
     parameters:
       target: "Character or 'all'"
-    output: state_change
+    output: state-change
     effect: "Decrement durations, remove expired buffs"
-    invoked_by: [time, simulation, coherence_engine]
+    invoked-by: [time, simulation, coherence-engine]
     
   LIST:
     description: "Show active buffs on a character"
@@ -64,21 +64,21 @@ methods:
       target: "Character to inspect"
     output: chat
     effect: "Display buffs with remaining duration"
-    invoked_by: [player, npc]
+    invoked-by: [player, npc]
     
   CLEANSE:
     description: "Remove all negative buffs (curses)"
     parameters:
       target: "Character"
-    output: chat + state_change
+    output: chat + state-change
     effect: "Filter out buffs where polarity = negative"
-    invoked_by: [healer, shrine, item]
+    invoked-by: [healer, shrine, item]
 
 # STATE
 # Buff structure (lives on characters, not here)
 
 state:
-  buff_schema:
+  buff-schema:
     name:
       type: string
       description: "Display name"
@@ -94,7 +94,7 @@ state:
     stacks:
       type: boolean
       default: false
-    max_stacks:
+    max-stacks:
       type: integer
       description: "If stacking, limit"
     polarity:
@@ -104,7 +104,7 @@ state:
 
 # BUFF TYPES
 
-buff_types:
+buff-types:
   numeric:
     description: "Traditional stat modifiers"
     example: "{ energy: +2, focus: +1 }"
@@ -123,32 +123,32 @@ buff_types:
 
 # DURATION TYPES
 
-duration_types:
+duration-types:
   turns: "Integer number of simulation turns"
   forever: "Never expires (permanent buff)"
   percentage: "'50% per turn' — random decay"
   condition: "'until you eat' — event-based"
-  natural_language: "'about 5 minutes' — LLM judges"
+  natural-language: "'about 5 minutes' — LLM judges"
 
 # ADVERTISEMENTS
 
 advertisements:
-  MODIFY_STATS:
+  MODIFY-STATS:
     score: 90
     condition: "Need to temporarily change character capabilities"
     
-  APPLY_CURSE:
+  APPLY-CURSE:
     score: 85
     condition: "Something bad should happen to a character"
     hint: "Curses are just negative buffs"
     
-  GRANT_ABILITY:
+  GRANT-ABILITY:
     score: 80
     condition: "Character needs temporary new capability"
 
 # RELATED
 
-see_also:
+see-also:
   - skills/character  # Where buffs live
   - skills/time       # When buffs tick
   - skills/needs      # Buffs can modify needs

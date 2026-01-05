@@ -32,12 +32,12 @@ tier: 1
 
 methods:
   
-  CALL_TO_ORDER:
+  CALL-TO-ORDER:
     description: "Begin formal session"
     parameters: {}
-    output: chat + state_change
-    effect: "Set session.status = in_session"
-    invoked_by: [moderator]
+    output: chat + state-change
+    effect: "Set session.status = in-session"
+    invoked-by: [moderator]
     
   MINUTES:
     description: "Review previous session minutes"
@@ -45,71 +45,71 @@ methods:
       minutes: "Previous session record"
     output: chat
     effect: "Read and acknowledge minutes"
-    invoked_by: [moderator]
+    invoked-by: [moderator]
     
   MOTION:
     description: "Propose something"
     parameters:
       proposal: "What's being proposed"
-    output: chat + state_change
+    output: chat + state-change
     effect: "Record motion, await second"
-    invoked_by: [member]
+    invoked-by: [member]
     
   SECOND:
     description: "Support a motion"
     parameters:
       motion: "Which motion"
-    output: chat + state_change
+    output: chat + state-change
     effect: "Motion can now be debated"
-    invoked_by: [member]
+    invoked-by: [member]
     
   DEBATE:
     description: "Discuss the motion"
     parameters:
-      time_limit: "How long"
+      time-limit: "How long"
     output: chat (arguments)
     effect: "Members argue for/against"
-    invoked_by: [moderator]
+    invoked-by: [moderator]
     
-  CALL_QUESTION:
+  CALL-QUESTION:
     description: "End debate, call for vote"
     parameters: {}
-    output: chat + state_change
+    output: chat + state-change
     effect: "Move to voting"
-    invoked_by: [member, moderator]
+    invoked-by: [member, moderator]
     
   VOTE:
     description: "Record votes"
     parameters:
-      method: "voice, show, roll_call"
-    output: chat (tally) + state_change
+      method: "voice, show, roll-call"
+    output: chat (tally) + state-change
     effect: "Count votes, record result"
-    invoked_by: [moderator]
+    invoked-by: [moderator]
     
   ADJOURN:
     description: "End session"
     parameters: {}
-    output: chat + state_change
+    output: chat + state-change
     effect: "Set session.status = adjourned"
-    invoked_by: [moderator]
+    invoked-by: [moderator]
 
 # STATE
 
 state:
-  session_schema:
+  session-schema:
     status:
       type: enum
-      values: [not_started, in_session, debating, voting, adjourned]
-    current_motion:
+      values: [not-started, in-session, debating, voting, adjourned]
+    current-motion:
       type: object
-    motions_history:
+    motions-history:
       type: array
     minutes:
       type: array
 
 # WHY IT WORKS
 
-forcing_function:
+forcing-function:
   problem: |
     LLMs want to converge quickly to likely conclusions.
     Committee debates collapse to consensus too fast.
@@ -125,17 +125,17 @@ forcing_function:
 # ADVERTISEMENTS
 
 advertisements:
-  STRUCTURED_DELIBERATION:
+  STRUCTURED-DELIBERATION:
     score: 95
     condition: "Committee needs formal procedure"
     
-  PREVENT_RAILROADING:
+  PREVENT-RAILROADING:
     score: 90
     condition: "Discussion collapsing too quickly"
 
 # RELATED
 
-see_also:
+see-also:
   - skills/adversarial-committee  # Uses this procedure
   - skills/debate                 # Debate methods
   - skills/session-log            # Meeting records

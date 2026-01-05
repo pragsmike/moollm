@@ -23,42 +23,42 @@ methods:
   WEAR:
     description: "Put on a persona"
     parameters: { persona: "Which persona", character: "Who wears it" }
-    output: chat + state_change
-    invoked_by: [player, character]
+    output: chat + state-change
+    invoked-by: [player, character]
     
   REMOVE:
     description: "Take off current persona"
     parameters: { character: "Who" }
-    output: chat + state_change
-    invoked_by: [player, character]
+    output: chat + state-change
+    invoked-by: [player, character]
     
   CREATE:
     description: "Design a new persona"
     parameters: { name: "Persona name", traits: "Modifications", abilities: "What it grants" }
     output: file (PERSONA.yml)
-    invoked_by: [player, dm]
+    invoked-by: [player, dm]
     
   PREVIEW:
     description: "See how persona would change you"
     parameters: { persona: "Which", character: "Whose perspective" }
     output: chat
-    invoked_by: [player, mirror]
+    invoked-by: [player, mirror]
 
 state:
-  persona_schema:
+  persona-schema:
     name: { type: string }
     voice: { type: string, description: "How to speak in this role" }
-    trait_modifiers: { type: object, description: "Sims trait adjustments" }
+    trait-modifiers: { type: object, description: "Sims trait adjustments" }
     abilities: { type: array }
     constraints: { type: array }
     reputation: { type: object }
 
 advertisements:
-  CHANGE_IDENTITY:
+  CHANGE-IDENTITY:
     score: 90
     condition: "Want to present as someone different"
-  GAIN_ABILITIES:
+  GAIN-ABILITIES:
     score: 85
     condition: "Need capabilities the persona grants"
 
-see_also: [skills/character, skills/mind-mirror, skills/coatroom]
+see-also: [skills/character, skills/mind-mirror, skills/coatroom]

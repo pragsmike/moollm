@@ -35,9 +35,9 @@ methods:
     parameters:
       event: "What happened"
       details: "Additional context"
-    output: state_change
+    output: state-change
     effect: "Append to log"
-    invoked_by: [any, automatic]
+    invoked-by: [any, automatic]
     
   VIEW:
     description: "See recent log entries"
@@ -45,7 +45,7 @@ methods:
       count: "How many (default: 10)"
     output: chat
     effect: "Display log entries"
-    invoked_by: [player]
+    invoked-by: [player]
     
   SEARCH:
     description: "Find specific entries"
@@ -53,16 +53,16 @@ methods:
       query: "What to find"
     output: chat
     effect: "Filter and display matches"
-    invoked_by: [player]
+    invoked-by: [player]
 
 # STATE
 
 state:
-  log_schema:
+  log-schema:
     entries:
       type: array
       description: "List of log entries"
-    entry_schema:
+    entry-schema:
       timestamp:
         type: timestamp
       event:
@@ -73,13 +73,13 @@ state:
 # ADVERTISEMENTS
 
 advertisements:
-  AUDIT_TRAIL:
+  AUDIT-TRAIL:
     score: 85
     condition: "Need to know what happened"
 
 # RELATED
 
-see_also:
+see-also:
   - skills/self-repair    # Uses logs
   - skills/adventure      # TRANSCRIPT.md
 

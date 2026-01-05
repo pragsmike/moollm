@@ -42,15 +42,15 @@ methods:
       action: "Action name or compound [a, b, c]"
       target: "Optional target object/location"
     output: chat
-    effect: "Append action to character's action_queue"
-    invoked_by: [player, npc, room]
+    effect: "Append action to character's action-queue"
+    invoked-by: [player, npc, room]
     
   NEXT:
     description: "Execute next queued action"
     parameters: {}
-    output: chat + state_change
+    output: chat + state-change
     effect: "Pop and execute front of queue, update state"
-    invoked_by: [player, autonomous_agent, coherence_engine]
+    invoked-by: [player, autonomous-agent, coherence-engine]
     
   QUEUE:
     description: "Show current action queue"
@@ -58,7 +58,7 @@ methods:
       character: "Optional - defaults to current"
     output: chat
     effect: "Display numbered list of pending actions"
-    invoked_by: [player, npc]
+    invoked-by: [player, npc]
     
   URGENT:
     description: "Insert action at front of queue"
@@ -66,7 +66,7 @@ methods:
       action: "Action to insert"
     output: chat
     effect: "Prepend action to front of queue"
-    invoked_by: [player, npc, object]
+    invoked-by: [player, npc, object]
     
   CANCEL:
     description: "Remove action from queue"
@@ -74,14 +74,14 @@ methods:
       index: "Which action (1-indexed)"
     output: chat
     effect: "Remove action at index, shift others down"
-    invoked_by: [player]
+    invoked-by: [player]
     
   CLEAR:
     description: "Empty the entire queue"
     parameters: {}
     output: chat
-    effect: "Set action_queue to empty list"
-    invoked_by: [player]
+    effect: "Set action-queue to empty list"
+    invoked-by: [player]
     
   REORDER:
     description: "Move action to new position"
@@ -90,36 +90,36 @@ methods:
       to: "New position"
     output: chat
     effect: "Rearrange queue order"
-    invoked_by: [player]
+    invoked-by: [player]
     
   PAUSE:
     description: "Stop executing, keep queue"
     parameters: {}
     output: chat
-    effect: "Set queue_state.paused = true"
-    invoked_by: [player, object, event]
+    effect: "Set queue-state.paused = true"
+    invoked-by: [player, object, event]
     
   RESUME:
     description: "Continue executing queue"
     parameters: {}
     output: chat
-    effect: "Set queue_state.paused = false"
-    invoked_by: [player]
+    effect: "Set queue-state.paused = false"
+    invoked-by: [player]
 
 # STATE
 # What this card tracks when active
 
 state:
-  action_queue:
+  action-queue:
     type: array
     description: "List of pending actions"
     default: []
     
-  queue_state:
+  queue-state:
     paused:
       type: boolean
       default: false
-    current_index:
+    current-index:
       type: integer
       default: 0
     mode:
@@ -131,35 +131,35 @@ state:
 # What this card offers to the room
 
 advertisements:
-  SCHEDULE_ACTIONS:
+  SCHEDULE-ACTIONS:
     score: 85
     condition: "Need to plan a sequence of tasks"
     
-  MANAGE_AGENT:
+  MANAGE-AGENT:
     score: 80
     condition: "Autonomous agent needs task scheduling"
     
-  INTERRUPT_GRACEFULLY:
+  INTERRUPT-GRACEFULLY:
     score: 75
     condition: "Need to pause current task for urgent matter"
 
 # OBJECT PUSH PATTERN
 # How objects can push prerequisites
 
-object_hooks:
-  on_action_blocked:
+object-hooks:
+  on-action-blocked:
     description: "When an action can't proceed"
     behavior: "Push prerequisite action via URGENT"
     example: "Fridge pushes GET-FOOD before EAT"
     
-  on_resource_needed:
+  on-resource-needed:
     description: "When action needs something first"
     behavior: "Queue resource acquisition"
     example: "Workbench pushes GET-MATERIALS before CRAFT"
 
 # RELATED
 
-see_also:
+see-also:
   - skills/return-stack  # Past vs future
   - skills/advertisement # Objects suggest actions
   - skills/room          # Where actions happen

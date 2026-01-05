@@ -25,31 +25,31 @@ methods:
     description: "Generate execution plan"
     parameters: { goal: "What to achieve", constraints: "Limits" }
     output: file (PLAN.yml)
-    invoked_by: [player]
+    invoked-by: [player]
     
   REVIEW:
     description: "Human reviews frozen plan"
     parameters: { plan: "Which plan" }
     output: chat
-    invoked_by: [player]
+    invoked-by: [player]
     
   APPROVE:
     description: "Approve plan for execution"
     parameters: { plan: "Which plan" }
-    output: state_change
-    invoked_by: [player only]
+    output: state-change
+    invoked-by: [player only]
     
   EXECUTE:
     description: "Run approved plan exactly"
     parameters: { plan: "Approved plan" }
-    output: chat + state_changes
-    invoked_by: [system after approval]
+    output: chat + state-changes
+    invoked-by: [system after approval]
     
   ABORT:
     description: "Stop execution"
     parameters: { reason: "Why" }
-    output: chat + state_change
-    invoked_by: [player, system on error]
+    output: chat + state-change
+    invoked-by: [player, system on error]
 
 state:
   plan:
@@ -58,11 +58,11 @@ state:
     approval: { type: object, description: "Who approved, when" }
 
 advertisements:
-  SAFE_AUTOMATION:
+  SAFE-AUTOMATION:
     score: 95
     condition: "Multi-step task with untrusted data"
-  AUDIT_TRAIL:
+  AUDIT-TRAIL:
     score: 85
     condition: "Need record of what was planned vs done"
 
-see_also: [skills/planning, skills/roberts-rules, skills/action-queue]
+see-also: [skills/planning, skills/roberts-rules, skills/action-queue]

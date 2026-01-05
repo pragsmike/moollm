@@ -25,7 +25,7 @@ room:
   # The DM determines which state applies and plays accordingly
   visit_states:
     
-    BEFORE_STARTING:
+    BEFORE-STARTING:
       conditions:
         - "player.inventory is empty OR only has lamp (unlit)"
         - "player.score == 0"
@@ -71,7 +71,7 @@ room:
           waiting, and you have the whole rest of your life ahead. Go 
           see what's there. You might surprise yourself."
           
-    VISITING_MID_ADVENTURE:
+    VISITING-MID-ADVENTURE:
       conditions:
         - "player has entered maze"
         - "player.score > 0 OR player.moves > 10"
@@ -111,7 +111,7 @@ room:
         Mother gently tracks promises without being naggy:
         
         KEPT: "I'm so proud of you for [promise]."
-        IN_PROGRESS: "Still working on [promise]? I believe in you."
+        IN-PROGRESS: "Still working on [promise]? I believe in you."
         BROKEN: "...we can talk about [promise] later, dear."
         
       about_skeleton: |
@@ -124,7 +124,7 @@ room:
         "You SAW one? And you're still here? Tell me everything.
         What color were its eyes? Did it SPEAK?"
         
-    RETURNING_WITH_TREASURE:
+    RETURNING-WITH-TREASURE:
       conditions:
         - "treasure.yml in inventory"
         
@@ -169,7 +169,7 @@ room:
         
         Final verdict based on pattern. All reactions end with love.
         
-    RETURNING_AFTER_DEATH:
+    RETURNING-AFTER-DEATH:
       conditions:
         - "player.deaths > 0"
         - "player just died (this turn or recently)"
@@ -213,7 +213,7 @@ room:
         "That's when I learned: the maze isn't there to kill you.
         It's there to TEACH you. Even the worst lessons."
         
-    ENDING_WITHOUT_WRITING:
+    ENDING-WITHOUT-WRITING:
       conditions:
         - "player never replied to Mother's note"
         - "player is trying to end adventure"

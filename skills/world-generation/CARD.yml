@@ -24,19 +24,19 @@ methods:
     description: "Generate a new place"
     parameters: { seed: "Starting concept", style: "World style" }
     output: directory + files
-    invoked_by: [dm, exploration]
+    invoked-by: [dm, exploration]
     
   EXPAND:
     description: "Add to existing area"
     parameters: { from: "Existing place", direction: "How to expand" }
     output: new room
-    invoked_by: [exploration]
+    invoked-by: [exploration]
     
   CONNECT:
     description: "Link two areas"
     parameters: { a: "First place", b: "Second place" }
     output: exit updates
-    invoked_by: [dm]
+    invoked-by: [dm]
 
 state: {}
 
@@ -47,11 +47,11 @@ principle: |
   "What's north?" makes north exist.
 
 advertisements:
-  EXPAND_WORLD:
+  EXPAND-WORLD:
     score: 90
     condition: "Exploring beyond known areas"
-  CREATE_PLACE:
+  CREATE-PLACE:
     score: 85
     condition: "Need a new location"
 
-see_also: [skills/room, skills/adventure]
+see-also: [skills/room, skills/adventure]

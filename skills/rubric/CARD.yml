@@ -24,35 +24,35 @@ methods:
     description: "Design a rubric"
     parameters: { purpose: "What's being evaluated", criteria: "What matters" }
     output: file (RUBRIC.yml)
-    invoked_by: [designer, player]
+    invoked-by: [designer, player]
     
   SCORE:
     description: "Apply rubric to output"
     parameters: { output: "What to score", rubric: "Which rubric" }
     output: chat (scores)
-    invoked_by: [evaluator]
+    invoked-by: [evaluator]
     
   EXPLAIN:
     description: "Show rubric criteria"
     parameters: { rubric: "Which" }
     output: chat
-    invoked_by: [player]
+    invoked-by: [player]
 
 state:
-  rubric_schema:
+  rubric-schema:
     name: { type: string }
     criteria: { type: array }
     weights: { type: object }
     threshold: { type: number }
 
 advertisements:
-  DEFINE_QUALITY:
+  DEFINE-QUALITY:
     score: 95
     condition: "Need explicit success criteria"
-  SCORE_OUTPUT:
+  SCORE-OUTPUT:
     score: 90
     condition: "Need to compare options objectively"
 
-see_also: [skills/evaluator, skills/adversarial-committee, skills/scoring]
+see-also: [skills/evaluator, skills/adversarial-committee, skills/scoring]
 credits:
   methodology: "Mike Gallaher — RUBRIC-BRIDGE pattern"

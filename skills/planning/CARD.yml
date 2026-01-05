@@ -39,44 +39,44 @@ methods:
       depth: "How detailed (high-level, detailed)"
     output: file (PLAN.yml) + chat
     effect: "Create plan with steps"
-    invoked_by: [player]
+    invoked-by: [player]
     
   DECOMPOSE:
     description: "Break a step into sub-steps"
     parameters:
       step: "Which step to break down"
-    output: state_change
+    output: state-change
     effect: "Replace step with sub-steps"
-    invoked_by: [player]
+    invoked-by: [player]
     
   PROGRESS:
     description: "Mark step as done"
     parameters:
       step: "Which step"
       notes: "Optional completion notes"
-    output: state_change
+    output: state-change
     effect: "Update step status"
-    invoked_by: [player]
+    invoked-by: [player]
     
   STATUS:
     description: "Show plan progress"
     parameters: {}
     output: chat
     effect: "Display plan with completion status"
-    invoked_by: [player]
+    invoked-by: [player]
     
   REVISE:
     description: "Update the plan"
     parameters:
       changes: "What to change"
-    output: state_change
+    output: state-change
     effect: "Modify plan based on learnings"
-    invoked_by: [player]
+    invoked-by: [player]
 
 # STATE
 
 state:
-  plan_schema:
+  plan-schema:
     goal:
       type: string
     steps:
@@ -89,17 +89,17 @@ state:
 # ADVERTISEMENTS
 
 advertisements:
-  COMPLEX_TASK:
+  COMPLEX-TASK:
     score: 90
     condition: "Task has multiple steps"
     
-  TRACK_PROGRESS:
+  TRACK-PROGRESS:
     score: 80
     condition: "Working on ongoing project"
 
 # RELATED
 
-see_also:
+see-also:
   - skills/plan-then-execute  # More rigid
   - skills/action-queue       # Runtime queue
   - skills/scratchpad         # Working memory

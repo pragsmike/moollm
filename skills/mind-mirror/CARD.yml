@@ -39,25 +39,25 @@ methods:
       character: "Whose mirror to look in"
     output: chat (profile visualization)
     effect: "Display all four Thought Planes"
-    invoked_by: [player, mirror_object]
+    invoked-by: [player, mirror-object]
     
   ANALYZE:
     description: "Analyze personality from behavior"
     parameters:
       character: "Who to analyze"
       observations: "Behavioral evidence"
-    output: chat (analysis) + state_change
+    output: chat (analysis) + state-change
     effect: "Infer Mind Mirror settings from behavior"
-    invoked_by: [player]
+    invoked-by: [player]
     
   MODIFY:
     description: "Adjust personality traits"
     parameters:
       character: "Whose traits to modify"
       changes: "What to change"
-    output: state_change
+    output: state-change
     effect: "Update Mind Mirror profile"
-    invoked_by: [dm, persona_effect]
+    invoked-by: [dm, persona-effect]
     
   COMPARE:
     description: "Compare two characters' profiles"
@@ -66,7 +66,7 @@ methods:
       b: "Second character"
     output: chat (comparison)
     effect: "Show similarities and differences"
-    invoked_by: [player]
+    invoked-by: [player]
     
   PREDICT:
     description: "Predict behavior from profile"
@@ -75,13 +75,13 @@ methods:
       situation: "The scenario"
     output: chat (prediction)
     effect: "Use Mind Mirror to forecast response"
-    invoked_by: [dm, coherence_engine]
+    invoked-by: [dm, coherence-engine]
 
 # STATE
 
 state:
-  mind_mirror_profile:
-    thought_planes:
+  mind-mirror-profile:
+    thought-planes:
       emotional:
         type: object
         description: "Feeling/Not Feeling axis"
@@ -105,18 +105,18 @@ state:
 # THE MODEL
 
 model:
-  timothy_leary: |
+  timothy-leary: |
     Timothy Leary (1985) developed the Interpersonal
     Circumplex: a 2D model of personality based on
     dominance (vertical) and affiliation (horizontal).
     
-  four_planes: |
+  four-planes: |
     - EMOTIONAL: How do I feel? (passionate ↔ detached)
     - INTELLECTUAL: How do I think? (curious ↔ certain)
     - PHYSICAL: How do I act? (active ↔ passive)
     - SOCIAL: How do I relate? (open ↔ guarded)
     
-  complement_to_sims: |
+  complement-to-sims: |
     Sims traits (nice, outgoing, active, playful, neat)
     capture behavior. Mind Mirror captures motivation.
     Together: complete personality picture.
@@ -124,21 +124,21 @@ model:
 # ADVERTISEMENTS
 
 advertisements:
-  UNDERSTAND_PERSONALITY:
+  UNDERSTAND-PERSONALITY:
     score: 90
     condition: "Need deep insight into character's psyche"
     
-  PREDICT_BEHAVIOR:
+  PREDICT-BEHAVIOR:
     score: 85
     condition: "Want to anticipate how character will react"
     
-  DESIGN_CHARACTER:
+  DESIGN-CHARACTER:
     score: 80
     condition: "Creating complex, realistic personality"
 
 # RELATED
 
-see_also:
+see-also:
   - skills/character   # Where Mind Mirror lives
   - skills/persona     # Personas can modify Mind Mirror
   - skills/cat         # Cats have simplified Mind Mirror

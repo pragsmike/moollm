@@ -34,15 +34,15 @@ methods:
       system: "What to assess"
     output: chat (status)
     effect: "Check robustness vs correctness"
-    invoked_by: [player, self_repair]
+    invoked-by: [player, self-repair]
     
   DEGRADE:
     description: "Gracefully reduce functionality"
     parameters:
       component: "What to degrade"
-    output: state_change
+    output: state-change
     effect: "Disable non-essential, keep core alive"
-    invoked_by: [self_repair]
+    invoked-by: [self-repair]
 
 # STATE
 
@@ -51,11 +51,11 @@ state: {}
 # THE PHILOSOPHY
 
 philosophy:
-  ackley_quote: |
+  ackley-quote: |
     "Robust-first computing: A system that crashes is infinitely wrong,
     regardless of how correct it was up until the crash."
     
-  priority_order:
+  priority-order:
     1: "Survive"
     2: "Heal"
     3: "Function"
@@ -74,17 +74,17 @@ philosophy:
 # ADVERTISEMENTS
 
 advertisements:
-  ERROR_HANDLING:
+  ERROR-HANDLING:
     score: 90
     condition: "Something went wrong"
     
-  DESIGN_FOR_FAILURE:
+  DESIGN-FOR-FAILURE:
     score: 85
     condition: "Building systems that might fail"
 
 # RELATED
 
-see_also:
+see-also:
   - skills/self-repair  # Healing patterns
   - skills/postel       # Robustness principle
 

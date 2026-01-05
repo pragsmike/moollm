@@ -169,7 +169,7 @@ room:
       description: "See what masks hang here"
       effect: "List all personas in the wardrobe"
       
-    TRY_ON:
+    TRY-ON:
       description: "Wear a persona (temporarily)"
       parameters: [persona_id]
       effect: "Preview how you'd look and feel"

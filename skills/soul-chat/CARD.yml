@@ -38,7 +38,7 @@ methods:
       topic: "What about"
     output: chat (in entity's voice)
     effect: "Generate speech in character"
-    invoked_by: [player, any]
+    invoked-by: [player, any]
     
   DIALOGUE:
     description: "Multi-voice conversation"
@@ -47,7 +47,7 @@ methods:
       topic: "What about"
     output: chat (conversation)
     effect: "Generate back-and-forth dialogue"
-    invoked_by: [player]
+    invoked-by: [player]
     
   INTERVIEW:
     description: "Question an entity"
@@ -56,7 +56,7 @@ methods:
       questions: "What to ask"
     output: chat (Q&A)
     effect: "Entity answers in character"
-    invoked_by: [player]
+    invoked-by: [player]
 
 # STATE
 
@@ -65,31 +65,31 @@ state: {}
 # THE PHILOSOPHY
 
 philosophy:
-  everything_speaks: |
+  everything-speaks: |
     Not just characters — everything can have a voice:
     - Rooms describe their atmosphere
     - Objects explain their purpose
     - Algorithms narrate their process
     - Files reveal their history
     
-  yaml_jazz: |
+  yaml-jazz: |
     Comments in YAML become inner monologue.
     The LLM reads them as character voice.
 
 # ADVERTISEMENTS
 
 advertisements:
-  MULTI_PERSPECTIVE:
+  MULTI-PERSPECTIVE:
     score: 90
     condition: "Need multiple viewpoints"
     
-  GIVE_VOICE:
+  GIVE-VOICE:
     score: 85
     condition: "Want something to speak"
 
 # RELATED
 
-see_also:
+see-also:
   - skills/yaml-jazz            # Comment-as-voice
   - skills/adversarial-committee # Multi-voice debate
   - skills/character            # Who speaks

@@ -39,16 +39,16 @@ methods:
       keep: "Essential points to preserve"
     output: file (FORGET.yml) + chat
     effect: "Create summary, mark original as archived"
-    invoked_by: [player, coherence_engine]
+    invoked-by: [player, coherence-engine]
     
   ARCHIVE:
     description: "Move content to long-term storage"
     parameters:
       content: "What to archive"
       location: "Where to store it"
-    output: state_change
+    output: state-change
     effect: "Move file, leave pointer"
-    invoked_by: [player]
+    invoked-by: [player]
     
   RECALL:
     description: "Retrieve archived content"
@@ -56,7 +56,7 @@ methods:
       pointer: "The FORGET.yml reference"
     output: chat (content)
     effect: "Read original from archive"
-    invoked_by: [player]
+    invoked-by: [player]
     
   ADMIT:
     description: "Acknowledge forgotten content"
@@ -64,19 +64,19 @@ methods:
       topic: "What you can't remember"
     output: chat
     effect: "Honest acknowledgment with pointer to where it might be"
-    invoked_by: [player, automatic]
+    invoked-by: [player, automatic]
 
 # STATE
 
 state:
-  forget_schema:
-    original_path:
+  forget-schema:
+    original-path:
       type: path
       description: "Where the full content is"
     summary:
       type: string
       description: "What was important"
-    forgotten_at:
+    forgotten-at:
       type: timestamp
     reason:
       type: string
@@ -98,7 +98,7 @@ principle: |
 
 # THE METADATA PATTERN
 
-metadata_pattern:
+metadata-pattern:
   description: |
     Instead of reading a full file, create a lightweight metadata sidecar.
     The LLM can "sip" the metadata before deciding to read the whole file.
@@ -113,10 +113,10 @@ metadata_pattern:
       file: adventure-log.md
       summary: "Session 12: Party explored the maze, found the key"
       size: 45KB
-      last_modified: 2024-01-15
-      key_events: [found_key, met_sphinx, lost_torch]
-      characters_present: [bumblewick, terpie]
-      worth_reading_if: "Need details about the maze or the sphinx riddle"
+      last-modified: 2024-01-15
+      key-events: [found-key, met-sphinx, lost-torch]
+      characters-present: [bumblewick, terpie]
+      worth-reading-if: "Need details about the maze or the sphinx riddle"
       
   workflow:
     1: "LLM reads metadata first (tiny context cost)"
@@ -133,17 +133,17 @@ metadata_pattern:
 # ADVERTISEMENTS
 
 advertisements:
-  CONTEXT_OVERFLOW:
+  CONTEXT-OVERFLOW:
     score: 95
     condition: "Context is getting too large"
     
-  ARCHIVE_SESSION:
+  ARCHIVE-SESSION:
     score: 85
     condition: "Session ending, need to preserve learnings"
 
 # RELATED
 
-see_also:
+see-also:
   - skills/summarize     # Compression technique
   - skills/session-log   # Where to archive
   - skills/memory-palace # Organization

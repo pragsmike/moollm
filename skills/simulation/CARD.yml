@@ -35,52 +35,52 @@ methods:
   TICK:
     description: "Advance simulation by one turn"
     parameters: {}
-    output: chat + state_changes
+    output: chat + state-changes
     effect: "Increment turn, tick buffs, decay needs"
-    invoked_by: [player, time, automatic]
+    invoked-by: [player, time, automatic]
     
   PAUSE:
     description: "Pause the simulation"
     parameters: {}
-    output: state_change
+    output: state-change
     effect: "Set paused = true"
-    invoked_by: [player]
+    invoked-by: [player]
     
   RESUME:
     description: "Resume the simulation"
     parameters: {}
-    output: state_change
+    output: state-change
     effect: "Set paused = false"
-    invoked_by: [player]
+    invoked-by: [player]
     
   STATUS:
     description: "Show simulation state"
     parameters: {}
     output: chat
     effect: "Display turn, party, selection, flags"
-    invoked_by: [player]
+    invoked-by: [player]
     
   SELECT:
     description: "Set selection targets"
     parameters:
       targets: "What to select"
-    output: state_change
+    output: state-change
     effect: "Update selection list"
-    invoked_by: [player]
+    invoked-by: [player]
     
   CONFIGURE:
     description: "Set simulation parameters"
     parameters:
       parameter: "Which parameter"
       value: "New value"
-    output: state_change
+    output: state-change
     effect: "Update configuration"
-    invoked_by: [player]
+    invoked-by: [player]
 
 # STATE
 
 state:
-  simulation_schema:
+  simulation-schema:
     turn:
       type: integer
       default: 0
@@ -88,7 +88,7 @@ state:
       type: boolean
       default: false
     time:
-      time_of_day:
+      time-of-day:
         type: string
       advancement:
         type: enum
@@ -103,30 +103,30 @@ state:
       type: object
       description: "Game state flags"
     git:
-      auto_commit:
+      auto-commit:
         type: boolean
-      auto_push:
+      auto-push:
         type: boolean
     output:
-      log_path:
+      log-path:
         type: path
-      transcript_path:
+      transcript-path:
         type: path
 
 # ADVERTISEMENTS
 
 advertisements:
-  MANAGE_GAME_STATE:
+  MANAGE-GAME-STATE:
     score: 95
     condition: "Running a simulation or game"
     
-  CONTROL_TIME:
+  CONTROL-TIME:
     score: 90
     condition: "Need to advance or pause time"
 
 # RELATED
 
-see_also:
+see-also:
   - skills/adventure  # Inherits from this
   - skills/time       # Time management
   - skills/party      # Party management

@@ -23,12 +23,12 @@ methods:
   SIMULATE:
     description: "Run multiple simulation turns at once"
     parameters: { turns: "How many", entities: "Who participates" }
-    output: chat (narrative) + state_changes
-    invoked_by: [coherence_engine]
+    output: chat (narrative) + state-changes
+    invoked-by: [coherence-engine]
 
 state: {}
 
-the_insight: |
+the-insight: |
   External multi-agent systems:
     Agent A → API call → wait → Agent B → API call → wait → ...
     
@@ -42,11 +42,11 @@ the_insight: |
   - Instant telepathy between simulated entities
 
 advertisements:
-  MULTI_AGENT:
+  MULTI-AGENT:
     score: 95
     condition: "Need multiple agents to interact quickly"
-  COMMITTEE_DECISION:
+  COMMITTEE-DECISION:
     score: 90
     condition: "Adversarial committee needs to deliberate"
 
-see_also: [skills/adversarial-committee, skills/debate, skills/coherence-engine]
+see-also: [skills/adversarial-committee, skills/debate, skills/coherence-engine]

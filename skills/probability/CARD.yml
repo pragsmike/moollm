@@ -38,7 +38,7 @@ methods:
       context: "Relevant factors"
     output: chat (probability)
     effect: "Show odds and factors"
-    invoked_by: [dm, player]
+    invoked-by: [dm, player]
     
   RESOLVE:
     description: "Determine outcome based on probability"
@@ -47,7 +47,7 @@ methods:
       stakes: "What's at risk"
     output: chat (outcome narrative)
     effect: "Narrate success, failure, or partial"
-    invoked_by: [dm]
+    invoked-by: [dm]
 
 # STATE
 
@@ -56,7 +56,7 @@ state: {}
 # HOW IT WORKS
 
 mechanism:
-  no_dice: |
+  no-dice: |
     No random number generators. The LLM evaluates
     probability narratively, considering:
     - Character stats
@@ -69,13 +69,13 @@ mechanism:
 # ADVERTISEMENTS
 
 advertisements:
-  RESOLVE_UNCERTAINTY:
+  RESOLVE-UNCERTAINTY:
     score: 85
     condition: "Action with uncertain outcome"
 
 # RELATED
 
-see_also:
+see-also:
   - skills/buff      # Modifies odds
   - skills/character # Source of stats
 

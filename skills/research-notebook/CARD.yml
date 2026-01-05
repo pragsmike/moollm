@@ -37,47 +37,47 @@ methods:
       questions: "Initial questions"
     output: file (NOTEBOOK.yml) + chat
     effect: "Create research notebook"
-    invoked_by: [player]
+    invoked-by: [player]
     
   QUESTION:
     description: "Add a research question"
     parameters:
       question: "What to investigate"
-    output: state_change
+    output: state-change
     effect: "Add to questions list"
-    invoked_by: [player]
+    invoked-by: [player]
     
   SOURCE:
     description: "Record a source"
     parameters:
       source: "What you found"
       reliability: "How trustworthy"
-    output: state_change
+    output: state-change
     effect: "Add to sources list"
-    invoked_by: [player]
+    invoked-by: [player]
     
   FINDING:
     description: "Record a finding"
     parameters:
       finding: "What you learned"
       source: "Where from"
-    output: state_change
+    output: state-change
     effect: "Add to findings list"
-    invoked_by: [player]
+    invoked-by: [player]
     
   DECIDE:
     description: "Record a decision based on research"
     parameters:
       decision: "What you decided"
       rationale: "Why"
-    output: state_change
+    output: state-change
     effect: "Add to decisions list"
-    invoked_by: [player]
+    invoked-by: [player]
 
 # STATE
 
 state:
-  notebook_schema:
+  notebook-schema:
     topic:
       type: string
     questions:
@@ -92,13 +92,13 @@ state:
 # ADVERTISEMENTS
 
 advertisements:
-  RESEARCH_SOMETHING:
+  RESEARCH-SOMETHING:
     score: 90
     condition: "Need to learn about unfamiliar topic"
 
 # RELATED
 
-see_also:
+see-also:
   - skills/play-learn-lift  # LEARN phase
   - skills/debugging        # Investigation pattern
 

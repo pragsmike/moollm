@@ -44,7 +44,7 @@ methods:
       room: "Path to room (defaults to current)"
     output: chat (sorted list)
     effect: "Read all *.yml files, extract advertisements, score and sort"
-    invoked_by: [player, coherence_engine]
+    invoked-by: [player, coherence-engine]
     
   SHOW:
     description: "Display what an object advertises"
@@ -52,16 +52,16 @@ methods:
       object: "Object to inspect"
     output: chat
     effect: "Show object's full advertisement list with scores"
-    invoked_by: [player]
+    invoked-by: [player]
     
   SELECT:
     description: "Choose an advertised action"
     parameters:
       object: "Object offering the action"
       action: "Action to take"
-    output: chat + state_change
+    output: chat + state-change
     effect: "Execute the action, which may queue more actions"
-    invoked_by: [player, autonomous_agent]
+    invoked-by: [player, autonomous-agent]
     
   EVALUATE:
     description: "Score advertisements against character needs"
@@ -69,7 +69,7 @@ methods:
       character: "Character to score for"
     output: chat (re-scored list)
     effect: "Adjust scores based on needs, goals, context"
-    invoked_by: [coherence_engine, action_queue]
+    invoked-by: [coherence-engine, action-queue]
 
 # STATE
 # Advertisements are declared in object files, not here
@@ -79,7 +79,7 @@ state:
   # Advertisements live in the objects themselves
   
   # Object advertisement structure:
-  advertisement_schema:
+  advertisement-schema:
     action:
       type: string
       description: "Action name (CRAFT, EXAMINE, USE, etc.)"
@@ -92,7 +92,7 @@ state:
     score:
       type: integer
       description: "Base score (0-100)"
-    score_if:
+    score-if:
       type: string
       description: "Condition that modifies score"
     satisfies:
@@ -103,29 +103,29 @@ state:
 # What this card offers (yes, it advertises its own advertisements)
 
 advertisements:
-  DISCOVER_ACTIONS:
+  DISCOVER-ACTIONS:
     score: 90
     condition: "In a new room or unsure what to do"
     
-  BUILD_OBJECT:
+  BUILD-OBJECT:
     score: 85
     condition: "Creating new object that needs interactions"
     
-  UNDERSTAND_SIMS:
+  UNDERSTAND-SIMS:
     score: 75
     condition: "Learning how The Sims-style interaction works"
 
 # THE SIMS SECRET SAUCE
 # Why this pattern enabled massive expansion
 
-sims_insight:
-  why_it_worked:
+sims-insight:
+  why-it-worked:
     - "User-created objects — anyone could make new furniture/items"
     - "Expansion packs — drop in new objects with advertisements"
     - "No code changes — objects self-describe behaviors"
     - "Infinite variety — community created millions of objects"
     
-  moollm_parallel:
+  moollm-parallel:
     - "YAML files self-describe capabilities"
     - "New skills/objects plug in without changing core"
     - "LLM reads descriptions, figures out interactions"
@@ -133,7 +133,7 @@ sims_insight:
 
 # PIE MENU INTEGRATION
 
-pie_menu:
+pie-menu:
   description: "Advertisements naturally map to pie menus"
   behavior: |
     When player clicks an object, advertisements become
@@ -144,7 +144,7 @@ pie_menu:
 
 # RELATED
 
-see_also:
+see-also:
   - skills/action-queue    # Actions get queued from ads
   - skills/room            # Where objects live
   - skills/needs           # Scores adjusted by needs

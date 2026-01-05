@@ -28,7 +28,7 @@ tier: 1
 
 # DYNAMIC DEOPTIMIZATION (Self-inspired)
 
-dynamic_deoptimization:
+dynamic-deoptimization:
   inspiration: |
     Self (the language) aggressively inlines method calls for performance,
     eliminating the return stack entirely. But when you hit a breakpoint
@@ -37,7 +37,7 @@ dynamic_deoptimization:
     
     This is perfect for debugging: you get performance AND debuggability.
     
-  moollm_application: |
+  moollm-application: |
     MOOLLM doesn't maintain an explicit call stack during normal operation.
     Methods invoke methods, advertisements trigger actions, effects cascade.
     
@@ -46,7 +46,7 @@ dynamic_deoptimization:
     
     "How did we get here? What caused what?"
     
-  reconstructed_trace:
+  reconstructed-trace:
     description: |
       After-the-fact generation of a causal stack showing:
       - Which advertisement was triggered
@@ -74,7 +74,7 @@ dynamic_deoptimization:
       │
       └─ [6] Narrative generated: "You pick up the brass key..."
       
-    debugging_use: |
+    debugging-use: |
       When something goes wrong, RECONSTRUCT TRACE shows exactly
       what happened:
       
@@ -83,7 +83,7 @@ dynamic_deoptimization:
       → Trace reconstruction reveals step [4] failed because
         inventory file didn't exist yet.
         
-  vs_explicit_stack: |
+  vs-explicit-stack: |
     EXPLICIT STACK (traditional):
       - Maintained during execution
       - Overhead for every call
@@ -99,32 +99,32 @@ methods:
   PUSH:
     description: "Save current position"
     parameters: { label: "Optional bookmark name" }
-    output: state_change
-    invoked_by: [system on navigation, player]
+    output: state-change
+    invoked-by: [system on navigation, player]
     
   POP:
     description: "Return to previous position"
     parameters: {}
-    output: chat + state_change
-    invoked_by: [player]
+    output: chat + state-change
+    invoked-by: [player]
     
   BACK:
     description: "Go back N steps"
     parameters: { steps: "How many" }
-    output: chat + state_change
-    invoked_by: [player]
+    output: chat + state-change
+    invoked-by: [player]
     
   HISTORY:
     description: "Show navigation history"
     parameters: { limit: "How many to show" }
     output: chat
-    invoked_by: [player]
+    invoked-by: [player]
     
   GOTO:
     description: "Jump to bookmarked position"
     parameters: { label: "Bookmark name" }
-    output: chat + state_change
-    invoked_by: [player]
+    output: chat + state-change
+    invoked-by: [player]
     
   # Dynamic deoptimization methods
   
@@ -135,7 +135,7 @@ methods:
       depth: "How far back to trace (default: full)"
     output: chat (formatted trace)
     effect: "Analyze history to reconstruct cause/effect chain"
-    invoked_by: [player, debugger]
+    invoked-by: [player, debugger]
     
   WHY:
     description: "Ask why something has its current value"
@@ -143,7 +143,7 @@ methods:
       what: "The thing to explain (file path, field, state)"
     output: chat (causal explanation)
     effect: "Trace backwards to find cause"
-    invoked_by: [player]
+    invoked-by: [player]
     
   BLAME:
     description: "Find what action/method caused a particular change"
@@ -151,31 +151,31 @@ methods:
       change: "The change to investigate"
     output: chat (responsible action)
     effect: "Git-blame style attribution for state changes"
-    invoked_by: [player, debugger]
+    invoked-by: [player, debugger]
 
 state:
   stack:
     entries: { type: array, description: "Stack of positions" }
     bookmarks: { type: object, description: "Named positions" }
-  trace_cache:
-    recent_actions: { type: array, description: "Recent actions for reconstruction" }
-    state_snapshots: { type: array, description: "Periodic snapshots for diffing" }
+  trace-cache:
+    recent-actions: { type: array, description: "Recent actions for reconstruction" }
+    state-snapshots: { type: array, description: "Periodic snapshots for diffing" }
 
 advertisements:
-  TRACK_NAVIGATION:
+  TRACK-NAVIGATION:
     score: 85
     condition: "Exploring, want to backtrack"
-  BOOKMARK_POSITION:
+  BOOKMARK-POSITION:
     score: 80
     condition: "Want to remember this spot"
-  RECONSTRUCT_TRACE:
+  RECONSTRUCT-TRACE:
     score: 95
     condition: "Debugging, need to understand what happened"
-  EXPLAIN_STATE:
+  EXPLAIN-STATE:
     score: 90
     condition: "Confused about current state, asking 'why'"
 
-see_also:
+see-also:
   - skills/action-queue   # What actions were queued
   - skills/room           # Spatial navigation
   - skills/memory-palace  # Organized memory

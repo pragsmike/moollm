@@ -40,24 +40,24 @@ methods:
       destination: "Where to create instance"
     output: file (presence) + chat
     effect: "Create linked instance in new room"
-    invoked_by: [player, card]
+    invoked-by: [player, card]
     
   SYNC:
     description: "Synchronize state between presences"
     parameters:
       presences: "Which instances to sync"
-    output: state_change
+    output: state-change
     effect: "Merge divergent state"
-    invoked_by: [player, coherence_engine]
+    invoked-by: [player, coherence-engine]
     
   MERGE:
     description: "Combine multiple presences back into one"
     parameters:
       primary: "Which presence becomes the merged result"
       others: "Presences to absorb"
-    output: state_change
+    output: state-change
     effect: "Combine state, remove other presences"
-    invoked_by: [player]
+    invoked-by: [player]
     
   STATUS:
     description: "Show all active presences"
@@ -65,19 +65,19 @@ methods:
       card: "Which card"
     output: chat
     effect: "List all rooms where card is present"
-    invoked_by: [player]
+    invoked-by: [player]
 
 # STATE
 
 state:
-  presence_schema:
-    source_card:
+  presence-schema:
+    source-card:
       type: path
       description: "Original card"
     location:
       type: path
       description: "Where this presence is"
-    local_state:
+    local-state:
       type: object
       description: "State divergent from source"
     siblings:
@@ -86,26 +86,26 @@ state:
 
 # USE CASES
 
-use_cases:
-  parallel_exploration: "Scout multiple dungeon branches"
-  distributed_work: "Work on multiple files simultaneously"
-  consensus_building: "Participate in debates in multiple rooms"
-  hedge_bets: "Try different approaches, see which works"
+use-cases:
+  parallel-exploration: "Scout multiple dungeon branches"
+  distributed-work: "Work on multiple files simultaneously"
+  consensus-building: "Participate in debates in multiple rooms"
+  hedge-bets: "Try different approaches, see which works"
 
 # ADVERTISEMENTS
 
 advertisements:
-  PARALLEL_WORK:
+  PARALLEL-WORK:
     score: 90
     condition: "Need to do multiple things at once"
     
-  EXPLORE_BRANCHES:
+  EXPLORE-BRANCHES:
     score: 85
     condition: "Don't want to commit to one path"
 
 # RELATED
 
-see_also:
+see-also:
   - skills/card    # Cards can have presence
   - skills/room    # Where presences exist
   - skills/party   # Group dynamics

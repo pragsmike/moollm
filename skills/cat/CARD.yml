@@ -42,8 +42,8 @@ methods:
       cat: "Which cat"
     output: chat (reaction) + possible buff
     effect: "Quick mood boost, low risk"
-    invoked_by: [player, npc]
-    success_factors: ["cat.nice", "cat.outgoing"]
+    invoked-by: [player, npc]
+    success-factors: ["cat.nice", "cat.outgoing"]
     
   SCRITCH:
     description: "Find the sweet spot"
@@ -52,8 +52,8 @@ methods:
       where: "chin, ears, back, belly (risky!)"
     output: chat (reaction) + buff if successful
     effect: "Stronger effect, requires trust"
-    invoked_by: [player]
-    success_factors: ["trust_level", "location_risk"]
+    invoked-by: [player]
+    success-factors: ["trust-level", "location-risk"]
     
   HOLD:
     description: "Pick up and cuddle"
@@ -61,8 +61,8 @@ methods:
       cat: "Which cat"
     output: chat (reaction) + buff/debuff
     effect: "Intimate interaction, high risk/reward"
-    invoked_by: [player]
-    success_factors: ["trust_level", "cat.playful", "time_held"]
+    invoked-by: [player]
+    success-factors: ["trust-level", "cat.playful", "time-held"]
     
   PLAY:
     description: "Interactive toy time"
@@ -71,18 +71,18 @@ methods:
       toy: "Optional specific toy"
     output: chat (play session) + buff
     effect: "Builds relationship, satisfies cat's play need"
-    invoked_by: [player, npc]
-    success_factors: ["toy_interest", "cat.playful", "cat.active"]
+    invoked-by: [player, npc]
+    success-factors: ["toy-interest", "cat.playful", "cat.active"]
     
   FEED:
     description: "Offer food or treat"
     parameters:
       cat: "Which cat"
       food: "What to feed"
-    output: chat + state_change
+    output: chat + state-change
     effect: "Immediate goodwill, may cause dependency"
-    invoked_by: [player, npc]
-    success_factors: ["food_quality", "hunger_level"]
+    invoked-by: [player, npc]
+    success-factors: ["food-quality", "hunger-level"]
     
   OBSERVE:
     description: "Watch without interacting"
@@ -90,8 +90,8 @@ methods:
       cat: "Which cat"
     output: chat (behavior description)
     effect: "Learn personality, no relationship change"
-    invoked_by: [player]
-    success_factors: []
+    invoked-by: [player]
+    success-factors: []
     
   CALL:
     description: "Try to summon the cat"
@@ -99,14 +99,14 @@ methods:
       cat: "Which cat"
     output: chat (response)
     effect: "Cat may or may not come"
-    invoked_by: [player, npc]
-    success_factors: ["trust_level", "cat.independence"]
+    invoked-by: [player, npc]
+    success-factors: ["trust-level", "cat.independence"]
 
 # STATE
 # Cat instance structure
 
 state:
-  cat_schema:
+  cat-schema:
     name:
       type: string
     personality:
@@ -115,7 +115,7 @@ state:
       active: { type: integer, range: [0, 10] }
       playful: { type: integer, range: [0, 10] }
       neat: { type: integer, range: [0, 10] }
-    trust_level:
+    trust-level:
       type: integer
       range: [0, 100]
       description: "Built over time through positive interactions"
@@ -125,23 +125,23 @@ state:
     location:
       type: path
       description: "Where the cat currently is"
-    favorite_spots:
+    favorite-spots:
       type: array
       description: "Preferred locations"
-    scritch_spots:
+    scritch-spots:
       type: object
       description: "Sensitivity per body area"
 
 # BUFF EFFECTS
 # What petting cats can grant
 
-buff_effects:
-  PAT_success: "+1 Cheerful (5 turns)"
-  SCRITCH_success: "+2 Calm (10 turns), possible Lucky"
-  HOLD_success: "+3 Comforted (15 turns)"
-  PLAY_success: "+2 Energized (10 turns)"
+buff-effects:
+  PAT-success: "+1 Cheerful (5 turns)"
+  SCRITCH-success: "+2 Calm (10 turns), possible Lucky"
+  HOLD-success: "+3 Comforted (15 turns)"
+  PLAY-success: "+2 Energized (10 turns)"
   
-  failure_effects:
+  failure-effects:
     scratch: "-1 to next cat interaction"
     bite: "-2 Confidence (5 turns)"
     flee: "Cat unavailable for 3 turns"
@@ -149,37 +149,37 @@ buff_effects:
 # SPECIAL CATS
 # Themed cats with unique effects
 
-special_cats:
+special-cats:
   terpie:
     theme: "Cannabis terpenes"
-    buffs_grant: ["Myrcene Mellow", "Limonene Lift"]
+    buffs-grant: ["Myrcene Mellow", "Limonene Lift"]
     
   stroopwafel:
     theme: "Dutch coziness"
-    buffs_grant: ["Gezellig Glow", "Warm Feeling"]
+    buffs-grant: ["Gezellig Glow", "Warm Feeling"]
     
   kittens:
     note: "Named after terpenes (Myrcene, Limonene, Linalool...)"
-    buffs_grant: "Terpene-specific effects"
+    buffs-grant: "Terpene-specific effects"
 
 # ADVERTISEMENTS
 
 advertisements:
-  PET_A_CAT:
+  PET-A-CAT:
     score: 85
     condition: "Cat is present and approachable"
     
-  BUILD_TRUST:
+  BUILD-TRUST:
     score: 75
     condition: "Want to improve relationship with cat"
     
-  GET_BUFF:
+  GET-BUFF:
     score: 80
     condition: "Need a mood boost or luck"
 
 # RELATED
 
-see_also:
+see-also:
   - skills/character  # Cats are characters
   - skills/buff       # Cat interactions grant buffs
   - skills/mind-mirror # Cat personality traits

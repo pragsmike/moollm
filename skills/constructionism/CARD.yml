@@ -35,7 +35,7 @@ methods:
       form: "What to build (skill, room, character, experiment)"
     output: chat (guidance) + files
     effect: "Guide construction that teaches the concept"
-    invoked_by: [learner, teacher]
+    invoked-by: [learner, teacher]
     
   INSPECT:
     description: "Examine how something works"
@@ -43,16 +43,16 @@ methods:
       thing: "What to inspect"
     output: chat (explanation)
     effect: "Reveal internals, explain mechanics"
-    invoked_by: [learner]
+    invoked-by: [learner]
     
   MODIFY:
     description: "Change something to see what happens"
     parameters:
       thing: "What to modify"
       change: "What to change"
-    output: chat + state_change
+    output: chat + state-change
     effect: "Make change, observe consequences"
-    invoked_by: [learner]
+    invoked-by: [learner]
     
   SHARE:
     description: "Show your construction to others"
@@ -61,7 +61,7 @@ methods:
       audience: "Who to share with"
     output: chat
     effect: "Explain your construction, get feedback"
-    invoked_by: [learner]
+    invoked-by: [learner]
 
 # STATE
 
@@ -70,17 +70,17 @@ state: {}  # Pure philosophy, no persistent state
 # THE PHILOSOPHY
 
 philosophy:
-  core_insight: |
+  core-insight: |
     You can't learn to ride a bicycle by reading about it.
     You have to get on, fall down, and try again.
     
-  papert_quote: |
+  papert-quote: |
     "The computer is the Proteus of machines. Its essence is its
     universality, its power to simulate. Because it can take on a
     thousand forms and can serve a thousand functions, it can
     appeal to a thousand tastes."
     
-  moollm_application: |
+  moollm-application: |
     The filesystem is a microworld.
     Skills are constructions.
     YAML files are objects you can inspect and modify.
@@ -91,28 +91,28 @@ philosophy:
 concepts:
   microworld: "A simplified, explorable domain"
   construction: "Something you build to understand"
-  public_artifact: "Shareable result of learning"
+  public-artifact: "Shareable result of learning"
   debugging: "A natural part of learning"
-  powerful_ideas: "Concepts that unlock new thinking"
+  powerful-ideas: "Concepts that unlock new thinking"
 
 # ADVERTISEMENTS
 
 advertisements:
-  LEARN_BY_BUILDING:
+  LEARN-BY-BUILDING:
     score: 95
     condition: "Want to understand something deeply"
     
-  CREATE_MICROWORLD:
+  CREATE-MICROWORLD:
     score: 85
     condition: "Need a space for exploration and learning"
     
-  TEACH_CONCEPT:
+  TEACH-CONCEPT:
     score: 80
     condition: "Want to help someone learn"
 
 # RELATED
 
-see_also:
+see-also:
   - skills/play-learn-lift  # The methodology
   - skills/prototype        # Learning by cloning
   - skills/skill            # Skills are constructions

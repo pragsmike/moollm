@@ -24,15 +24,15 @@ tier: 1
 methods:
   SUMMARIZE:
     description: "Compress content"
-    parameters: { content: "What to summarize", target_length: "How short" }
+    parameters: { content: "What to summarize", target-length: "How short" }
     output: chat (summary)
-    invoked_by: [player, system]
+    invoked-by: [player, system]
     
   EXTRACT:
     description: "Pull key points"
     parameters: { content: "Source" }
     output: chat (bullet points)
-    invoked_by: [player]
+    invoked-by: [player]
     
   METADATA:
     description: "Create or update metadata sidecar for a file"
@@ -43,7 +43,7 @@ methods:
       bookmarks: "Optional named locations in file"
     output: file (foo-metadata.yml)
     effect: "Creates lightweight sidecar for efficient browsing"
-    invoked_by: [player, system, honest_forget]
+    invoked-by: [player, system, honest-forget]
     
   SIP:
     description: "Read metadata to decide if full file is needed"
@@ -51,7 +51,7 @@ methods:
       file: "Path to file or its metadata"
     output: chat (recommendation)
     effect: "Read metadata, suggest whether to read full file"
-    invoked_by: [player, automatic]
+    invoked-by: [player, automatic]
     
   BOOKMARK:
     description: "Add a named bookmark to a file's metadata"
@@ -60,15 +60,15 @@ methods:
       name: "Bookmark name"
       location: "Line number, range (10-25), or search pattern"
       note: "What's at this bookmark"
-    output: state_change
+    output: state-change
     effect: "Adds bookmark to foo-metadata.yml"
-    invoked_by: [player]
+    invoked-by: [player]
 
 state: {}
 
 # METADATA SIDECAR PROTOCOL
 
-metadata_protocol:
+metadata-protocol:
   
   naming: |
     For any file foo.yml, metadata lives in foo-metadata.yml
@@ -95,19 +95,19 @@ metadata_protocol:
       description: "Key terms for quick matching"
       example: ["villain", "antagonist", "evil", "boss-fight"]
       
-    relevance_hints:
+    relevance-hints:
       description: "When this file is likely relevant"
       example: "Read when: player encounters final boss, needs villain backstory"
       
-    last_modified:
+    last-modified:
       description: "When the source file was last changed"
       example: "2024-01-15T10:30:00Z"
       
-    original_path:
+    original-path:
       description: "Path to the full file"
       example: "./characters/lord-shadow.yml"
       
-    size_hint:
+    size-hint:
       description: "How big is the full file"
       example: "~200 lines, 4KB"
       
@@ -130,7 +130,7 @@ metadata_protocol:
         detailed: "Full backstory including childhood, heroic career, corruption arc..."
         combat: "Boss fight stats, weaknesses, attack patterns."
         narrative: "Key scenes, dialogue hooks, character arc progression."
-        spoiler_free: "A mysterious antagonist with unclear motivations."
+        spoiler-free: "A mysterious antagonist with unclear motivations."
         
     # DIFFERENTIAL CHANGES
     
@@ -140,10 +140,10 @@ metadata_protocol:
       example:
         - date: "2024-01-15"
           summary: "Added weakness to sunlight"
-          lines_affected: "85-90"
+          lines-affected: "85-90"
         - date: "2024-01-10"
           summary: "Rewrote backstory for consistency"
-          lines_affected: "15-60"
+          lines-affected: "15-60"
         - date: "2024-01-05"
           summary: "Initial creation"
           
@@ -180,7 +180,7 @@ metadata_protocol:
           style: "flat, symbolic, 64x64"
           use: "inventory icon, map marker"
           
-        card_face:
+        card-face:
           prompt: "Lord Shadow, dramatic portrait, dark armor with void crystal embedded in chest, purple energy crackling, fantasy art style"
           style: "detailed, painterly, vertical card format"
           use: "character card, tarot-style"
@@ -200,7 +200,7 @@ metadata_protocol:
           style: "emoji-sized, recognizable at small scale"
           suggested: "🦹‍♂️ or custom"
       
-  bookmark_types:
+  bookmark-types:
     point:
       description: "Single line reference"
       example: { name: "motivation", line: 42, note: "Why they turned evil" }
@@ -215,15 +215,15 @@ metadata_protocol:
       
     anchor:
       description: "Named YAML anchor reference"
-      example: { name: "stats", anchor: "&combat_stats", note: "Combat statistics" }
+      example: { name: "stats", anchor: "&combat-stats", note: "Combat statistics" }
       
-  example_metadata: |
+  example-metadata: |
     # lord-shadow-metadata.yml
     
     # BASIC INFO
-    original_path: "./lord-shadow.yml"
-    last_modified: "2024-01-15T10:30:00Z"
-    size_hint: "180 lines"
+    original-path: "./lord-shadow.yml"
+    last-modified: "2024-01-15T10:30:00Z"
+    size-hint: "180 lines"
     keywords: [villain, antagonist, boss, final-battle, corruption-arc]
     
     # MULTI-FOCUS SUMMARIES
@@ -237,9 +237,9 @@ metadata_protocol:
         his soul. Now as Lord Shadow, he seeks to spread the Void...
       combat: "Level 20 boss. Weak to sunlight. Phase 2 triggered at 50% HP."
       narrative: "Tragic villain. Redemption arc possible if player finds memories."
-      spoiler_free: "A mysterious dark lord threatening the realm."
+      spoiler-free: "A mysterious dark lord threatening the realm."
     
-    relevance_hints:
+    relevance-hints:
       - "Player near final dungeon"
       - "Discussion of corruption themes"
       - "Backstory reveals needed"
@@ -262,7 +262,7 @@ metadata_protocol:
         pattern: "^weakness:"
         note: "How to defeat - read before boss fight design"
         
-      - name: dialogue_style
+      - name: dialogue-style
         lines: "120-140"
         note: "Speech patterns for writing dialogue"
         
@@ -270,11 +270,11 @@ metadata_protocol:
     changes:
       - date: "2024-01-15"
         summary: "Added weakness to sunlight, balanced combat stats"
-        lines_affected: "85-90"
+        lines-affected: "85-90"
         
       - date: "2024-01-10"
         summary: "Rewrote backstory for consistency with Void Crystal lore"
-        lines_affected: "15-60"
+        lines-affected: "15-60"
         
     # RELATED FILES
     related:
@@ -300,7 +300,7 @@ metadata_protocol:
         prompt: "Dark hooded figure, glowing purple eyes, minimalist"
         style: "flat icon, 64x64"
         
-      card_face:
+      card-face:
         prompt: "Lord Shadow in dark armor, void crystal in chest, purple energy, dramatic portrait"
         style: "fantasy card art, vertical"
         
@@ -311,27 +311,27 @@ metadata_protocol:
       emoji: "🦹‍♂️"
 
 principles:
-  preserve_truth: "Never invent or distort"
-  highlight_key: "Main points first"
-  cite_source: "Link back to original"
-  compression_ratio: "Aim for 10:1 or better"
-  sip_before_gulp: "Read metadata first, full file only if needed"
+  preserve-truth: "Never invent or distort"
+  highlight-key: "Main points first"
+  cite-source: "Link back to original"
+  compression-ratio: "Aim for 10:1 or better"
+  sip-before-gulp: "Read metadata first, full file only if needed"
 
 advertisements:
-  COMPRESS_CONTEXT:
+  COMPRESS-CONTEXT:
     score: 90
     condition: "Context too large"
-  EXTRACT_ESSENCE:
+  EXTRACT-ESSENCE:
     score: 85
     condition: "Need key points quickly"
-  CREATE_METADATA:
+  CREATE-METADATA:
     score: 88
     condition: "File will be referenced repeatedly"
-  SIP_METADATA:
+  SIP-METADATA:
     score: 92
     condition: "Browsing files, deciding what to read"
 
-see_also:
+see-also:
   - skills/honest-forget   # Uses same metadata pattern
   - skills/memory-palace   # Organized memory
   - skills/scratchpad      # Working memory

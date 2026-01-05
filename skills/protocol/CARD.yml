@@ -24,23 +24,23 @@ methods:
     description: "Activate a protocol by name"
     parameters: { protocol: "Protocol name" }
     output: chat (activated behavior)
-    invoked_by: [any]
+    invoked-by: [any]
     
   DEFINE:
     description: "Create a new protocol"
     parameters: { name: "Protocol name", activates: "What it invokes" }
     output: file + PROTOCOLS.yml update
-    invoked_by: [designer]
+    invoked-by: [designer]
     
   LIST:
     description: "Show available protocols"
     parameters: { category: "Optional filter" }
     output: chat
-    invoked_by: [player]
+    invoked-by: [player]
 
 state: {}
 
-k_line_insight: |
+k-line-insight: |
   Marvin Minsky's K-lines: a symbol that when activated
   reactivates the mental state from when it was learned.
   
@@ -50,13 +50,13 @@ k_line_insight: |
   - PLAY-LEARN-LIFT = activate the methodology
 
 advertisements:
-  ACTIVATE_CAPABILITY:
+  ACTIVATE-CAPABILITY:
     score: 90
     condition: "Need to invoke a specific mode or pattern"
-  CREATE_PROTOCOL:
+  CREATE-PROTOCOL:
     score: 80
     condition: "Want to name a new capability cluster"
 
-see_also: [skills/skill, PROTOCOLS.yml]
+see-also: [skills/skill, PROTOCOLS.yml]
 credits:
   theory: "Marvin Minsky — K-lines, Society of Mind (1986)"

@@ -38,7 +38,7 @@ methods:
       character: "Who to check"
     output: chat (needs display)
     effect: "Show all needs with levels"
-    invoked_by: [player]
+    invoked-by: [player]
     
   SATISFY:
     description: "Fulfill a need"
@@ -47,18 +47,18 @@ methods:
       need: "Which need"
       amount: "How much to add"
       source: "What provided it"
-    output: chat + state_change
+    output: chat + state-change
     effect: "Increase need level, cap at max"
-    invoked_by: [object, action, buff]
+    invoked-by: [object, action, buff]
     
   DECAY:
     description: "Reduce needs over time"
     parameters:
       character: "Who (or 'all')"
       turns: "How many turns of decay"
-    output: state_change
+    output: state-change
     effect: "Reduce each need by its decay rate"
-    invoked_by: [time, simulation]
+    invoked-by: [time, simulation]
     
   URGENT:
     description: "Find most pressing need"
@@ -66,36 +66,36 @@ methods:
       character: "Who"
     output: chat
     effect: "Report lowest need"
-    invoked_by: [action_queue, player]
+    invoked-by: [action-queue, player]
 
 # STATE
 
 state:
-  needs_schema:
+  needs-schema:
     hunger:
       current: { type: integer, range: [0, 100] }
-      decay_per_turn: { type: integer, default: 5 }
+      decay-per-turn: { type: integer, default: 5 }
     energy:
       current: { type: integer, range: [0, 100] }
-      decay_per_turn: { type: integer, default: 3 }
+      decay-per-turn: { type: integer, default: 3 }
     fun:
       current: { type: integer, range: [0, 100] }
-      decay_per_turn: { type: integer, default: 4 }
+      decay-per-turn: { type: integer, default: 4 }
     social:
       current: { type: integer, range: [0, 100] }
-      decay_per_turn: { type: integer, default: 2 }
+      decay-per-turn: { type: integer, default: 2 }
     hygiene:
       current: { type: integer, range: [0, 100] }
-      decay_per_turn: { type: integer, default: 2 }
+      decay-per-turn: { type: integer, default: 2 }
     bladder:
       current: { type: integer, range: [0, 100] }
-      decay_per_turn: { type: integer, default: 4 }
+      decay-per-turn: { type: integer, default: 4 }
     comfort:
       current: { type: integer, range: [0, 100] }
-      decay_per_turn: { type: integer, default: 1 }
+      decay-per-turn: { type: integer, default: 1 }
     room:
       current: { type: integer, range: [0, 100] }
-      decay_per_turn: { type: integer, default: 1 }
+      decay-per-turn: { type: integer, default: 1 }
 
 # THRESHOLDS
 
@@ -109,7 +109,7 @@ thresholds:
 # ADVERTISEMENTS INTEGRATION
 
 integration:
-  objects_advertise: |
+  objects-advertise: |
     Objects score higher for needs they satisfy.
     Fridge advertises highly when hunger is low.
     False advertisements can be used for good and evil.
@@ -118,24 +118,24 @@ integration:
     Bed advertises highly when energy is low.
     Bed advertisement score modulated by relationship with bed, which increases with use so, you learn to sleep in the same place.
     
-  action_queue: |
+  action-queue: |
     Autonomous agents queue actions that
     satisfy their most urgent needs.
 
 # ADVERTISEMENTS
 
 advertisements:
-  SIMULATE_NEEDS:
+  SIMULATE-NEEDS:
     score: 90
     condition: "Character behavior should be need-driven"
     
-  CHECK_MOTIVATION:
+  CHECK-MOTIVATION:
     score: 80
     condition: "Why is this character doing that?"
 
 # RELATED
 
-see_also:
+see-also:
   - skills/character       # Where needs live
   - skills/advertisement   # Objects satisfy needs
   - skills/action-queue    # Needs drive queuing

@@ -395,7 +395,7 @@ room:
         - "Can be serious or silly"
         - "Everyone drinks (optional but expected)"
         
-    RING_GONG:
+    RING-GONG:
       description: "Use the Gong of Gezelligheid"
       usage: "RING GONG / GONG [times]"
       protocols:
@@ -557,17 +557,17 @@ room:
         - "The skeleton was almost out when they died"
         - "The vending machine has feelings"
         
-      MOSTLY_TRUE:
+      MOSTLY-TRUE:
         - "A grue can be killed with cheese" (it was BLUE cheese)
         - "Mother's letter has a secret" (it has many)
         - "The treasure is guarded" (by the grue? by puzzles?)
         
-      FALSE_BUT_FUN:
+      FALSE-BUT-FUN:
         - "There's a dragon in the depths"
         - "The bartender is actually the grue in disguise"
         - "If you say XYZZY three times, you go home"
         
-      PLOT_HOOKS:
+      PLOT-HOOKS:
         - "Someone's been asking about YOUR family..."
         - "The postal service is hiring"
         - "A stranger left something for you"

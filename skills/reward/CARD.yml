@@ -37,9 +37,9 @@ methods:
       recipient: "Who gets it"
       achievement: "What they did"
       reward: "What they get (or auto-generate)"
-    output: chat + state_change
+    output: chat + state-change
     effect: "Add reward to inventory or state"
-    invoked_by: [dm, room, object]
+    invoked-by: [dm, room, object]
     
   GENERATE:
     description: "Auto-generate thematic reward"
@@ -48,19 +48,19 @@ methods:
       context: "Where/how"
     output: chat (suggested reward)
     effect: "Propose appropriate reward"
-    invoked_by: [dm]
+    invoked-by: [dm]
 
 # STATE
 
 state:
-  rewards_schema:
+  rewards-schema:
     achievements:
       type: array
       description: "List of earned rewards"
 
 # REWARD TYPES
 
-reward_types:
+reward-types:
   items: "Physical objects"
   gold: "Currency"
   buffs: "Temporary effects"
@@ -72,13 +72,13 @@ reward_types:
 # ADVERTISEMENTS
 
 advertisements:
-  REWARD_ACHIEVEMENT:
+  REWARD-ACHIEVEMENT:
     score: 90
     condition: "Character accomplished something"
 
 # RELATED
 
-see_also:
+see-also:
   - skills/scoring  # What deserves reward
   - skills/economy  # Gold rewards
   - skills/buff     # Buff rewards

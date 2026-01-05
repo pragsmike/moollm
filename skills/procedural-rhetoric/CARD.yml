@@ -24,35 +24,35 @@ methods:
     description: "What does this design argue?"
     parameters: { system: "What to analyze" }
     output: chat
-    invoked_by: [player, designer]
+    invoked-by: [player, designer]
     
   DESIGN:
     description: "Create rules that embody an argument"
     parameters: { argument: "What to argue", domain: "System type" }
     output: chat + design spec
-    invoked_by: [designer]
+    invoked-by: [designer]
     
   CRITIQUE:
     description: "Surface unintentional rhetoric"
     parameters: { system: "What to critique" }
     output: chat
-    invoked_by: [player, reviewer]
+    invoked-by: [player, reviewer]
 
 state: {}
 
 examples:
   monopoly: "Wealth accumulates to winners — capitalism's feedback loops"
-  sims_needs: "Happiness = satisfying meters — consumerist assumption"
-  moollm_filesystem: "Knowledge is spatial — directories as understanding"
+  sims-needs: "Happiness = satisfying meters — consumerist assumption"
+  moollm-filesystem: "Knowledge is spatial — directories as understanding"
 
 advertisements:
-  INTENTIONAL_DESIGN:
+  INTENTIONAL-DESIGN:
     score: 90
     condition: "Creating a system or game"
-  UNDERSTAND_IDEOLOGY:
+  UNDERSTAND-IDEOLOGY:
     score: 85
     condition: "Want to see hidden assumptions"
 
-see_also: [skills/constructionism, skills/representation-ethics]
+see-also: [skills/constructionism, skills/representation-ethics]
 credits:
   theorist: "Ian Bogost — Persuasive Games (2007)"

@@ -39,7 +39,7 @@ methods:
       rubric: "Criteria to use"
     output: file (EVALUATION.yml) + chat
     effect: "Generate scores and rationale"
-    invoked_by: [adversarial_committee, player]
+    invoked-by: [adversarial-committee, player]
     
   CRITIQUE:
     description: "Provide specific improvement feedback"
@@ -48,50 +48,50 @@ methods:
       focus: "Areas to critique"
     output: chat (critique)
     effect: "Generate actionable feedback"
-    invoked_by: [player, adversarial_committee]
+    invoked-by: [player, adversarial-committee]
     
   APPROVE:
     description: "Mark output as acceptable"
     parameters:
       evaluation: "The evaluation"
-    output: chat + state_change
+    output: chat + state-change
     effect: "Set evaluation.status = approved"
-    invoked_by: [player]
+    invoked-by: [player]
     
   REJECT:
     description: "Return for revision"
     parameters:
       evaluation: "The evaluation"
       critique: "What needs fixing"
-    output: chat + state_change
+    output: chat + state-change
     effect: "Send critique back to source"
-    invoked_by: [player, automatic_threshold]
+    invoked-by: [player, automatic-threshold]
 
 # STATE
 
 state:
-  evaluation_schema:
-    output_ref:
+  evaluation-schema:
+    output-ref:
       type: path
       description: "What was evaluated"
-    rubric_ref:
+    rubric-ref:
       type: path
       description: "Criteria used"
     scores:
       type: object
       description: "Per-criterion scores"
-    total_score:
+    total-score:
       type: number
     status:
       type: enum
-      values: [pending, approved, rejected, revision_needed]
+      values: [pending, approved, rejected, revision-needed]
     critique:
       type: string
       description: "Feedback if not approved"
 
 # THE ADVERSARIAL LOOP
 
-adversarial_loop:
+adversarial-loop:
   why: |
     Committee members know they'll be scored but can't see
     evaluator's reasoning. This prevents gaming metrics.
@@ -104,17 +104,17 @@ adversarial_loop:
 # ADVERTISEMENTS
 
 advertisements:
-  INDEPENDENT_REVIEW:
+  INDEPENDENT-REVIEW:
     score: 95
     condition: "Need unbiased assessment of work product"
     
-  QUALITY_GATE:
+  QUALITY-GATE:
     score: 90
     condition: "Output needs to meet standards before proceeding"
 
 # RELATED
 
-see_also:
+see-also:
   - skills/adversarial-committee  # Produces output
   - skills/rubric                 # Defines criteria
   - skills/roberts-rules          # Committee procedure

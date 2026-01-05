@@ -39,32 +39,32 @@ methods:
       scope: "What to check"
     output: chat (issues found)
     effect: "Identify problems"
-    invoked_by: [player, startup, periodic]
+    invoked-by: [player, startup, periodic]
     
   REPAIR:
     description: "Fix identified issues"
     parameters:
       issues: "What to fix"
-    output: chat + state_changes
+    output: chat + state-changes
     effect: "Create missing files, fix state"
-    invoked_by: [player, automatic]
+    invoked-by: [player, automatic]
     
   STATUS:
     description: "Show repair demon status"
     parameters: {}
     output: chat
     effect: "Display health status"
-    invoked_by: [player]
+    invoked-by: [player]
 
 # STATE
 
 state:
-  repair_schema:
-    last_check:
+  repair-schema:
+    last-check:
       type: timestamp
-    issues_found:
+    issues-found:
       type: array
-    repairs_made:
+    repairs-made:
       type: array
 
 # CHECKLIST ITEMS
@@ -79,17 +79,17 @@ checklist:
 # ADVERTISEMENTS
 
 advertisements:
-  SOMETHING_BROKEN:
+  SOMETHING-BROKEN:
     score: 95
     condition: "System behaving strangely"
     
-  STARTUP_CHECK:
+  STARTUP-CHECK:
     score: 85
     condition: "Beginning new session"
 
 # RELATED
 
-see_also:
+see-also:
   - skills/robust-first  # Philosophy
   - skills/session-log   # Track repairs
 

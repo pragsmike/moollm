@@ -38,37 +38,37 @@ methods:
       room: "Which room (default: current)"
     output: chat (narrative description)
     effect: "Read ROOM.yml, narrate atmospherically"
-    invoked_by: [player, character]
+    invoked-by: [player, character]
     
   ENTER:
     description: "Move into a room"
     parameters:
       room: "Destination"
-    output: chat + state_change
+    output: chat + state-change
     effect: "Update location, trigger room events"
-    invoked_by: [player, character]
+    invoked-by: [player, character]
     
   EXIT:
     description: "Leave through an exit"
     parameters:
       direction: "Which exit"
-    output: chat + state_change
+    output: chat + state-change
     effect: "Move to connected room"
-    invoked_by: [player, character]
+    invoked-by: [player, character]
     
   CONTENTS:
     description: "List what's in the room"
     parameters: {}
     output: chat
     effect: "Show objects, characters, exits"
-    invoked_by: [player]
+    invoked-by: [player]
     
   ADVERTISE:
     description: "Show what actions are available"
     parameters: {}
     output: chat
     effect: "Collect and display all advertisements"
-    invoked_by: [player]
+    invoked-by: [player]
 
 # TINYMUD-STYLE BUILDER COMMANDS
 # 
@@ -76,7 +76,7 @@ methods:
 # Prefix with @ to invoke builder mode.
 # See: TinyMUD (1989), TinyMUCK, LambdaMOO
 
-builder_commands:
+builder-commands:
   
   DIG:
     description: "Create a new room (TinyMUD @dig)"
@@ -84,16 +84,16 @@ builder_commands:
     parameters:
       name: "Name for the new room"
       direction: "Optional: auto-create exit in this direction"
-      return_exit: "Optional: auto-create return exit"
+      return-exit: "Optional: auto-create return exit"
     output: directory + ROOM.yml
     effect: |
       Creates new room directory with ROOM.yml skeleton.
       If direction given, creates exit from current room.
-      If return_exit given, creates exit back.
+      If return-exit given, creates exit back.
     example: |
       @DIG Secret Garden
       @DIG Treasure Room NORTH (creates N exit + S return)
-    invoked_by: [builder, designer]
+    invoked-by: [builder, designer]
     
   OPEN:
     description: "Create an exit to another room (TinyMUD @open)"
@@ -102,12 +102,12 @@ builder_commands:
       direction: "Exit name/direction (NORTH, door, portal, etc.)"
       destination: "Path to target room"
       bidirectional: "Also create return exit? (default: false)"
-    output: state_change (ROOM.yml exits updated)
+    output: state-change (ROOM.yml exits updated)
     effect: "Adds exit to current room's ROOM.yml"
     example: |
       @OPEN NORTH TO ../maze/
       @OPEN 'secret door' TO ../treasure/ BIDIRECTIONAL
-    invoked_by: [builder, designer]
+    invoked-by: [builder, designer]
     
   LINK:
     description: "Link existing exit to a room (TinyMUD @link)"
@@ -115,18 +115,18 @@ builder_commands:
     parameters:
       exit: "Which exit to link"
       destination: "Where it should go"
-    output: state_change
+    output: state-change
     effect: "Updates exit destination"
-    invoked_by: [builder]
+    invoked-by: [builder]
     
   UNLINK:
     description: "Remove exit destination (leave exit but nowhere)"
     usage: "@UNLINK [exit]"
     parameters:
       exit: "Which exit to unlink"
-    output: state_change
+    output: state-change
     effect: "Exit becomes 'nowhere' (for puzzles, locked doors)"
-    invoked_by: [builder]
+    invoked-by: [builder]
     
   DESCRIBE:
     description: "Set room description (TinyMUD @describe)"
@@ -134,12 +134,12 @@ builder_commands:
     parameters:
       text: "The description text"
       field: "Which field (description, examine, atmosphere)"
-    output: state_change (ROOM.yml updated)
+    output: state-change (ROOM.yml updated)
     effect: "Updates room's description in ROOM.yml"
     example: |
       @DESCRIBE A musty library filled with ancient tomes...
       @DESCRIBE examine=The bookshelves reach to the ceiling.
-    invoked_by: [builder]
+    invoked-by: [builder]
     
   NAME:
     description: "Rename room or object (TinyMUD @name)"
@@ -147,9 +147,9 @@ builder_commands:
     parameters:
       target: "What to rename (default: current room)"
       name: "New name"
-    output: state_change
+    output: state-change
     effect: "Updates name field, potentially renames directory"
-    invoked_by: [builder]
+    invoked-by: [builder]
     
   LOCK:
     description: "Set access control on exit or room"
@@ -157,18 +157,18 @@ builder_commands:
     parameters:
       target: "Exit or room to lock"
       condition: "Lock condition (key, puzzle, character, etc.)"
-    output: state_change
+    output: state-change
     effect: "Adds lock condition to exit"
     example: |
-      @LOCK NORTH = has(brass_key)
-      @LOCK door = puzzle_solved(riddle_1)
-    invoked_by: [builder]
+      @LOCK NORTH = has(brass-key)
+      @LOCK door = puzzle-solved(riddle-1)
+    invoked-by: [builder]
     
   UNLOCK:
     description: "Remove lock from exit"
     usage: "@UNLOCK [exit]"
     effect: "Removes lock condition"
-    invoked_by: [builder]
+    invoked-by: [builder]
     
   TELEPORT:
     description: "Move instantly to any room (TinyMUD @teleport)"
@@ -176,10 +176,10 @@ builder_commands:
     parameters:
       target: "What to move (default: self)"
       destination: "Where to go"
-    output: state_change
+    output: state-change
     effect: "Instant movement, no exit required"
     note: "Builder power — skips locks, narratives"
-    invoked_by: [builder]
+    invoked-by: [builder]
     
   SET:
     description: "Set room properties/flags"
@@ -187,17 +187,17 @@ builder_commands:
     parameters:
       property: "What to set"
       value: "Value to set"
-    output: state_change
+    output: state-change
     effect: "Updates ROOM.yml property"
     example: |
       @SET atmosphere.lighting=dim
       @SET type=metaphysical
       @SET framing.mode=performance
-    invoked_by: [builder]
+    invoked-by: [builder]
 
 # WORLD GENERATION COMMANDS
     
-world_generation:
+world-generation:
   
   GENERATE:
     description: "Invoke world generation patterns"
@@ -221,7 +221,7 @@ world_generation:
         
       building:
         description: "Generate building with floors, rooms, stairs"
-        parameters: [floors, rooms_per_floor, type]
+        parameters: [floors, rooms-per-floor, type]
         example: "@GENERATE building floors=3 type=tavern"
         
       neighborhood:
@@ -231,10 +231,10 @@ world_generation:
         
       tree:
         description: "Generate branching structure (conversation, choices)"
-        parameters: [depth, branching_factor]
+        parameters: [depth, branching-factor]
         example: "@GENERATE tree depth=4 branches=3"
         
-    invoked_by: [designer, worldgen]
+    invoked-by: [designer, worldgen]
     
   CONNECT:
     description: "Auto-connect rooms based on proximity/theme"
@@ -246,7 +246,7 @@ world_generation:
     example: |
       @CONNECT maze/ grid
       @CONNECT dungeon/ random sparse
-    invoked_by: [designer]
+    invoked-by: [designer]
     
   POPULATE:
     description: "Add NPCs and objects to rooms"
@@ -259,7 +259,7 @@ world_generation:
     example: |
       @POPULATE maze/ WITH monsters density=sparse
       @POPULATE pub/ WITH patrons count=5
-    invoked_by: [designer]
+    invoked-by: [designer]
     
   THEME:
     description: "Apply theme to existing rooms"
@@ -269,13 +269,13 @@ world_generation:
       theme: "Theme to apply"
     effect: "Updates descriptions, objects, NPCs to match theme"
     example: |
-      @THEME dungeon/ AS gothic_horror
-      @THEME pub/ AS space_cantina
-    invoked_by: [designer]
+      @THEME dungeon/ AS gothic-horror
+      @THEME pub/ AS space-cantina
+    invoked-by: [designer]
 
 # STANDARD METHODS (for skill invocation)
 
-methods_standard:
+methods-standard:
   
   CREATE:
     description: "Create a new room (programmatic)"
@@ -285,12 +285,12 @@ methods_standard:
       exits: "Where it connects"
     output: directory + file (ROOM.yml)
     effect: "Create room directory with definition"
-    invoked_by: [designer, world_generation]
+    invoked-by: [designer, world-generation]
 
 # STATE
 
 state:
-  room_schema:
+  room-schema:
     id:
       type: string
     name:
@@ -315,7 +315,7 @@ state:
 
 # ROOM TYPES
 
-room_types:
+room-types:
   physical: "Normal navigable space"
   metaphysical: "Conceptual space (characters/, personas/)"
   container: "Nested room (cat-cave, bag of holding)"
@@ -329,17 +329,17 @@ advertisements:
     score: 90
     condition: "Need to go somewhere"
     
-  CREATE_SPACE:
+  CREATE-SPACE:
     score: 85
     condition: "Need a new room for content"
     
-  UNDERSTAND_LOCATION:
+  UNDERSTAND-LOCATION:
     score: 80
     condition: "Confused about where things are"
 
 # RELATED
 
-see_also:
+see-also:
   - skills/adventure         # Room-based exploration
   - skills/memory-palace     # Spatial organization
   - skills/card              # Cards activate in rooms
@@ -357,6 +357,6 @@ credits:
     - "TinyMUCK — Extended building language"
     - "LambdaMOO (1990) — Programmable rooms"
     - "Unix — Directories as navigable spaces"
-  builder_commands:
+  builder-commands:
     - "Jim Aspnes — TinyMUD creator, builder command syntax"
     - "Pavel Curtis — LambdaMOO, object-oriented rooms"

@@ -39,52 +39,52 @@ methods:
       members: "Initial members"
     output: file (PARTY.yml) + chat
     effect: "Create party with listed members"
-    invoked_by: [player]
+    invoked-by: [player]
     
   JOIN:
     description: "Add character to party"
     parameters:
       character: "Who joins"
       party: "Which party"
-    output: chat + state_change
+    output: chat + state-change
     effect: "Add to party.members"
-    invoked_by: [player, character]
+    invoked-by: [player, character]
     
   LEAVE:
     description: "Remove character from party"
     parameters:
       character: "Who leaves"
-    output: chat + state_change
+    output: chat + state-change
     effect: "Remove from party.members"
-    invoked_by: [player, character]
+    invoked-by: [player, character]
     
   STATUS:
     description: "Show party composition and state"
     parameters: {}
     output: chat
     effect: "Display members, location, resources"
-    invoked_by: [player]
+    invoked-by: [player]
     
   SPLIT:
     description: "Divide party into groups"
     parameters:
       groups: "How to divide members"
-    output: state_change
+    output: state-change
     effect: "Create sub-parties"
-    invoked_by: [player]
+    invoked-by: [player]
     
   REUNITE:
     description: "Merge split parties"
     parameters:
       parties: "Which parties to merge"
-    output: state_change
+    output: state-change
     effect: "Combine into one party"
-    invoked_by: [player]
+    invoked-by: [player]
 
 # STATE
 
 state:
-  party_schema:
+  party-schema:
     name:
       type: string
     members:
@@ -96,27 +96,27 @@ state:
     location:
       type: path
       description: "Where the party is (as a unit)"
-    shared_inventory:
+    shared-inventory:
       type: array
       description: "Items held by party, not individuals"
-    inter_party_relationships:
+    inter-party-relationships:
       type: object
       description: "How members feel about each other"
 
 # ADVERTISEMENTS
 
 advertisements:
-  MANAGE_GROUP:
+  MANAGE-GROUP:
     score: 85
     condition: "Multiple characters traveling together"
     
-  COORDINATE_ACTIONS:
+  COORDINATE-ACTIONS:
     score: 80
     condition: "Need group to act together"
 
 # RELATED
 
-see_also:
+see-also:
   - skills/character  # Party members
   - skills/simulation # Party in SIMULATION.yml
   - skills/adventure  # Party gameplay

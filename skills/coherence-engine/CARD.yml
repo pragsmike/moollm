@@ -39,9 +39,9 @@ methods:
     parameters:
       entity: "Character, room, or object"
       turns: "How many simulation turns"
-    output: chat (narration) + state_changes
+    output: chat (narration) + state-changes
     effect: "Update entity state, tick buffs, process needs"
-    invoked_by: [time, player, adventure]
+    invoked-by: [time, player, adventure]
     
   DETECT:
     description: "Find inconsistencies in world state"
@@ -49,25 +49,25 @@ methods:
       scope: "Area to check (room, character, or 'all')"
     output: chat (list of issues)
     effect: "Report contradictions, missing fields, broken refs"
-    invoked_by: [self_repair, player]
+    invoked-by: [self-repair, player]
     
   RECONCILE:
     description: "Fix detected inconsistencies"
     parameters:
       issues: "List of issues to fix"
       strategy: "How to resolve (auto, ask, conservative)"
-    output: chat + state_changes
+    output: chat + state-changes
     effect: "Update files to restore consistency"
-    invoked_by: [self_repair, player]
+    invoked-by: [self-repair, player]
     
   ORCHESTRATE:
     description: "Coordinate multiple entity updates"
     parameters:
       entities: "List of entities to update"
       event: "What triggered the update"
-    output: state_changes
+    output: state-changes
     effect: "Update all entities consistently"
-    invoked_by: [simulation, time]
+    invoked-by: [simulation, time]
 
 # STATE
 # Coherence engine doesn't have its own state — it operates on world state
@@ -78,12 +78,12 @@ state:
 
 # WHAT COHERENCE MEANS
 
-coherence_domains:
-  location_consistency: "Character.location matches room occupants"
-  inventory_consistency: "Object.location matches holder's inventory"
-  relationship_bidirectional: "If A knows B, does B know A?"
-  buff_expiration: "Buffs with duration 0 are removed"
-  reference_validity: "All paths resolve to actual files"
+coherence-domains:
+  location-consistency: "Character.location matches room occupants"
+  inventory-consistency: "Object.location matches holder's inventory"
+  relationship-bidirectional: "If A knows B, does B know A?"
+  buff-expiration: "Buffs with duration 0 are removed"
+  reference-validity: "All paths resolve to actual files"
 
 # THE BIG INSIGHT
 
@@ -100,21 +100,21 @@ insight: |
 # ADVERTISEMENTS
 
 advertisements:
-  MAINTAIN_CONSISTENCY:
+  MAINTAIN-CONSISTENCY:
     score: 90
     condition: "World state may have become inconsistent"
     
-  MULTI_ENTITY_UPDATE:
+  MULTI-ENTITY-UPDATE:
     score: 85
     condition: "Need to update multiple related entities"
     
-  UNDERSTAND_ORCHESTRATION:
+  UNDERSTAND-ORCHESTRATION:
     score: 75
     condition: "Learning how MOOLLM maintains world state"
 
 # RELATED
 
-see_also:
+see-also:
   - skills/self-repair   # Checklist-based healing
   - skills/simulation    # Central state hub
   - skills/time          # Triggers coherence checks

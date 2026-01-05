@@ -37,28 +37,28 @@ methods:
       factors: "What affects the score"
     output: chat (score breakdown)
     effect: "Calculate and explain score"
-    invoked_by: [dm, adventure]
+    invoked-by: [dm, adventure]
     
   TRACK:
     description: "Add to running score"
     parameters:
       points: "How many"
       reason: "Why"
-    output: state_change
+    output: state-change
     effect: "Update total score"
-    invoked_by: [dm, scoring]
+    invoked-by: [dm, scoring]
     
   LEADERBOARD:
     description: "Show high scores"
     parameters: {}
     output: chat
     effect: "Display rankings"
-    invoked_by: [player]
+    invoked-by: [player]
 
 # STATE
 
 state:
-  scoring_schema:
+  scoring-schema:
     total:
       type: integer
     breakdown:
@@ -77,13 +77,13 @@ factors:
 # ADVERTISEMENTS
 
 advertisements:
-  EVALUATE_PERFORMANCE:
+  EVALUATE-PERFORMANCE:
     score: 85
     condition: "Task completed, need assessment"
 
 # RELATED
 
-see_also:
+see-also:
   - skills/rubric   # Structured criteria
   - skills/reward   # What scores earn
   - skills/economy  # Score as currency

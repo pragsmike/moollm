@@ -44,48 +44,48 @@ methods:
       home: "Where their file lives"
     output: file (CHARACTER.yml) + chat
     effect: "Generate character in home directory"
-    invoked_by: [player, dm]
+    invoked-by: [player, dm]
     
   MOVE:
     description: "Change character's location"
     parameters:
       character: "Who to move"
       destination: "Where to go"
-    output: chat + state_change
+    output: chat + state-change
     effect: "Update character.location field"
-    invoked_by: [player, character, coherence_engine]
+    invoked-by: [player, character, coherence-engine]
     
   TAKE:
     description: "Pick up an object"
     parameters:
       item: "Object to take"
-    output: chat + state_change
+    output: chat + state-change
     effect: "Add to inventory, update object.location"
-    invoked_by: [player, character]
+    invoked-by: [player, character]
     
   DROP:
     description: "Put down an object"
     parameters:
       item: "Object to drop"
       where: "Optional specific location"
-    output: chat + state_change
+    output: chat + state-change
     effect: "Remove from inventory, place in room/location"
-    invoked_by: [player, character]
+    invoked-by: [player, character]
     
   WEAR:
     description: "Put on a persona"
     parameters:
       persona: "Persona to wear"
-    output: chat + state_change
-    effect: "Set character.current_persona"
-    invoked_by: [player, character]
+    output: chat + state-change
+    effect: "Set character.current-persona"
+    invoked-by: [player, character]
     
-  REMOVE_PERSONA:
+  REMOVE-PERSONA:
     description: "Take off current persona"
     parameters: {}
-    output: chat + state_change
-    effect: "Set current_persona to null"
-    invoked_by: [player, character]
+    output: chat + state-change
+    effect: "Set current-persona to null"
+    invoked-by: [player, character]
     
   STATUS:
     description: "Show character's current state"
@@ -93,22 +93,22 @@ methods:
       character: "Who to inspect"
     output: chat
     effect: "Display location, inventory, buffs, persona"
-    invoked_by: [player]
+    invoked-by: [player]
     
   RELATE:
     description: "Set or update relationship with another entity"
     parameters:
       other: "Other entity ID"
       feeling: "Natural language relationship description"
-    output: state_change
+    output: state-change
     effect: "Update relationships map"
-    invoked_by: [character, dm]
+    invoked-by: [character, dm]
 
 # STATE
 # Character structure
 
 state:
-  character_schema:
+  character-schema:
     id:
       type: string
       description: "Unique identifier"
@@ -126,13 +126,13 @@ state:
     gold:
       type: integer
       default: 0
-    current_persona:
+    current-persona:
       type: path | null
       description: "Reference to active persona"
-    sims_traits:
+    sims-traits:
       type: object
       description: "Base personality (nice, outgoing, active, playful, neat)"
-    mind_mirror:
+    mind-mirror:
       type: object
       description: "Thought Planes configuration"
     buffs:
@@ -140,11 +140,11 @@ state:
       description: "Active temporary effects"
     relationships:
       type: object
-      description: "Map of other_id → relationship object"
+      description: "Map of other-id → relationship object"
 
 # HOME VS LOCATION DISTINCTION
 
-location_protocol:
+location-protocol:
   home: "The directory path and file name where the CHARACTER.yml file lives. Never moves. Used by incoming references."
   location: "Where the character currently IS. Changes during play."
   movement: "Update location field, don't move files."
@@ -155,7 +155,7 @@ location_protocol:
 
 # CHARACTER TYPES
 
-character_types:
+character-types:
   player: "Controlled by human via chat"
   npc: "Controlled by DM, responds when addressed"
   companion: "Follows player, has own personality"
@@ -165,21 +165,21 @@ character_types:
 # ADVERTISEMENTS
 
 advertisements:
-  CREATE_CHARACTER:
+  CREATE-CHARACTER:
     score: 90
     condition: "Need a new entity that moves and acts"
     
-  MANAGE_INVENTORY:
+  MANAGE-INVENTORY:
     score: 85
     condition: "Need to pick up, drop, or use items"
     
-  CHANGE_PERSONA:
+  CHANGE-PERSONA:
     score: 80
     condition: "Want to wear or remove an identity layer"
 
 # RELATED
 
-see_also:
+see-also:
   - skills/persona      # Identity layers characters wear
   - skills/buff         # Temporary effects on characters
   - skills/needs        # Character motivations

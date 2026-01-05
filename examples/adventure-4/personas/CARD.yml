@@ -50,7 +50,7 @@ methods:
     effect: "Create new wearable identity"
     invoked_by: [player, dm]
     
-  TRY_ON:
+  TRY-ON:
     description: "Preview a persona"
     parameters:
       persona: "Which persona"
@@ -117,11 +117,11 @@ distinction:
 # ADVERTISEMENTS
 
 advertisements:
-  CHANGE_IDENTITY:
+  CHANGE-IDENTITY:
     score: 90
     condition: "Want to present differently"
     
-  CREATE_PERSONA:
+  CREATE-PERSONA:
     score: 85
     condition: "Need a new role or mask"
 

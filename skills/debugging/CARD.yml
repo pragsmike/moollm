@@ -42,32 +42,32 @@ methods:
       reproduction: "How to trigger it"
     output: file (DEBUG.yml) + chat
     effect: "Create debug session, document symptom"
-    invoked_by: [player]
+    invoked-by: [player]
     
   HYPOTHESIZE:
     description: "Form a theory about the cause"
     parameters:
       theory: "What might be wrong"
       evidence: "Why you think this"
-    output: chat + state_change
+    output: chat + state-change
     effect: "Add hypothesis to list"
-    invoked_by: [player]
+    invoked-by: [player]
     
   TEST:
     description: "Test a hypothesis"
     parameters:
       hypothesis: "Which theory to test"
       method: "How to test it"
-    output: chat (results) + state_change
+    output: chat (results) + state-change
     effect: "Run test, record outcome"
-    invoked_by: [player]
+    invoked-by: [player]
     
   NARROW:
     description: "Eliminate possibilities based on test results"
     parameters: {}
-    output: chat (analysis) + state_change
+    output: chat (analysis) + state-change
     effect: "Update hypothesis probabilities"
-    invoked_by: [player]
+    invoked-by: [player]
     
   TRACE:
     description: "Follow execution path"
@@ -76,7 +76,7 @@ methods:
       following: "What to trace (data, control, state)"
     output: chat (trace)
     effect: "Document execution flow"
-    invoked_by: [player]
+    invoked-by: [player]
     
   BISECT:
     description: "Binary search for when bug was introduced"
@@ -85,7 +85,7 @@ methods:
       bad: "Known bad state/commit"
     output: chat (bisection steps)
     effect: "Guide binary search"
-    invoked_by: [player]
+    invoked-by: [player]
     
   FIX:
     description: "Apply a fix"
@@ -94,19 +94,19 @@ methods:
       rationale: "Why this should work"
     output: file changes + chat
     effect: "Make changes, verify fix"
-    invoked_by: [player]
+    invoked-by: [player]
     
   DOCUMENT:
     description: "Record findings for future reference"
     parameters: {}
-    output: file (DEBUG_REPORT.md)
+    output: file (DEBUG-REPORT.md)
     effect: "Generate debugging report"
-    invoked_by: [player]
+    invoked-by: [player]
 
 # STATE
 
 state:
-  debug_session:
+  debug-session:
     symptom:
       type: string
     reproduction:
@@ -126,30 +126,30 @@ state:
 # DEBUGGING STRATEGIES
 
 strategies:
-  wolf_fence: "Divide and conquer — bisect the search space"
-  rubber_duck: "Explain the problem out loud"
+  wolf-fence: "Divide and conquer — bisect the search space"
+  rubber-duck: "Explain the problem out loud"
   simplify: "Remove complexity until bug disappears"
-  fresh_eyes: "Step away, return with new perspective"
+  fresh-eyes: "Step away, return with new perspective"
   assumptions: "Question everything you 'know'"
 
 # ADVERTISEMENTS
 
 advertisements:
-  FIX_BUG:
+  FIX-BUG:
     score: 95
     condition: "Something is broken and needs fixing"
     
-  INVESTIGATE_MYSTERY:
+  INVESTIGATE-MYSTERY:
     score: 85
     condition: "Unexpected behavior needs explanation"
     
-  SYSTEMATIC_SEARCH:
+  SYSTEMATIC-SEARCH:
     score: 80
     condition: "Need structured approach to finding cause"
 
 # RELATED
 
-see_also:
+see-also:
   - skills/adventure     # Debugging as exploration
   - skills/research-notebook  # Investigation patterns
   - skills/hypothesis-tracking  # (could be a skill!)

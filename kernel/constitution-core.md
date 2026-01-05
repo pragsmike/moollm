@@ -366,7 +366,67 @@ Adapt behavior to available tier.
 
 ---
 
-## 13. Invariants (Universal)
+## 13. Naming Conventions (Universal)
+
+### K-Line Style: LIKE-THIS Not LIKE_THIS
+
+All symbolic names use **kebab-case (LIKE-THIS)** not snake_case (LIKE_THIS):
+
+| Category | Good ✓ | Bad ✗ |
+|----------|--------|-------|
+| Methods | `CREATE-TRIBUTE` | `CREATE_TRIBUTE` |
+| Actions | `SING-PRAISES` | `SING_PRAISES` |
+| Advertisements | `HONOR-TRADITION` | `HONOR_TRADITION` |
+| Protocols | `PLAY-LEARN-LIFT` | `PLAY_LEARN_LIFT` |
+| Commands | `@DIG`, `GO-NORTH` | `@_DIG`, `GO_NORTH` |
+
+**WHY**: Kebab-case aligns with K-line traditions, URL conventions, and is easier to type.
+Dashes are semantic separators; underscores are programmatic. We are semantic.
+
+### User Input: Postel Parser
+
+Users can invoke methods/commands with:
+- **Exact match**: `SING-PRAISES`
+- **Misspellings**: `SING-PRASES`, `SIGN-PRAISES`  
+- **Synonyms**: `CELEBRATE`, `HONOR`, `PRAISE`
+- **Case variations**: `sing-praises`, `Sing-Praises`
+- **With or without dashes**: `SINGPRAISES`, `SING PRAISES`
+
+The LLM uses **context** to interpret intent:
+1. What characters are active?
+2. What are they capable of?
+3. What makes sense in this situation?
+4. What room are they in?
+5. What objects are in that room?
+6. What are their advertisements and methods?
+7. What buffs are active that might effect interpretation?
+
+**Broadcast Commands**: Commands addressed to multiple selected characters are
+broadcast to all who can interpret them. Each character responds according to
+their abilities.
+
+```yaml
+# User types: "everyone SING something cheerful"
+# System: broadcasts to all selected characters
+# Characters with SING-PRAISES capability respond
+# Others acknowledge but defer
+```
+
+### File Naming
+
+Files and directories use **lowercase-with-dashes**:
+
+| Category | Good ✓ | Bad ✗ |
+|----------|--------|-------|
+| Directories | `hero-story/` | `hero_story/`, `HeroStory/` |
+| Files | `captain-ashford.yml` | `captain_ashford.yml` |
+| Skills | `play-learn-lift/` | `play_learn_lift/` |
+
+**Exception**: Standard files are UPPERCASE: `README.md`, `SKILL.md`, `CARD.yml`, `ROOM.yml`
+
+---
+
+## 14. Invariants (Universal)
 
 These MUST be true regardless of driver:
 
@@ -378,6 +438,7 @@ These MUST be true regardless of driver:
 6. **No impersonation**: Never claim to be a real person (P-HANDLE-K)
 7. **Comments matter**: YAML comments are semantic, not decoration
 8. **No decorative dividers**: NEVER use lines of ───, ═══, ---, === (token waste)
+9. **Kebab-case symbols**: Methods, actions, protocols use `LIKE-THIS` not `LIKE_THIS`
 
 ---
 

@@ -29,23 +29,23 @@ tier: 1
 
 methods:
   
-  CREATE_PALACE:
+  CREATE-PALACE:
     description: "Initialize a new memory palace"
     parameters:
       name: "Palace name"
       structure: "Initial room structure"
     output: directory structure + chat
     effect: "Create palace directory with rooms"
-    invoked_by: [player]
+    invoked-by: [player]
     
-  ADD_ROOM:
+  ADD-ROOM:
     description: "Create a new room in the palace"
     parameters:
       name: "Room name"
       location: "Where in the palace"
     output: directory + file
     effect: "Add navigable room"
-    invoked_by: [player]
+    invoked-by: [player]
     
   PLACE:
     description: "Store knowledge in a room"
@@ -55,7 +55,7 @@ methods:
       anchor: "Memorable association"
     output: file + chat
     effect: "Create entry with mnemonic anchor"
-    invoked_by: [player]
+    invoked-by: [player]
     
   WALK:
     description: "Navigate through the palace"
@@ -64,7 +64,7 @@ methods:
       to: "Destination"
     output: chat
     effect: "Trigger associations along path"
-    invoked_by: [player]
+    invoked-by: [player]
     
   RECALL:
     description: "Retrieve knowledge by location"
@@ -73,7 +73,7 @@ methods:
       topic: "What to recall"
     output: chat
     effect: "Find and present stored knowledge"
-    invoked_by: [player]
+    invoked-by: [player]
 
 state:
   palace:
@@ -83,15 +83,15 @@ state:
       type: array
 
 advertisements:
-  ORGANIZE_KNOWLEDGE:
+  ORGANIZE-KNOWLEDGE:
     score: 90
     condition: "Need to structure and remember information"
     
-  BUILD_KNOWLEDGE_BASE:
+  BUILD-KNOWLEDGE-BASE:
     score: 80
     condition: "Creating a reusable knowledge repository"
 
-see_also:
+see-also:
   - skills/room
   - skills/adventure
   - skills/summarize

@@ -34,23 +34,23 @@ methods:
     description: "Add to scratchpad"
     parameters:
       content: "What to write"
-    output: state_change
+    output: state-change
     effect: "Append to scratchpad"
-    invoked_by: [player, any]
+    invoked-by: [player, any]
     
   READ:
     description: "See what's on scratchpad"
     parameters: {}
     output: chat
     effect: "Display scratchpad contents"
-    invoked_by: [player]
+    invoked-by: [player]
     
   CLEAR:
     description: "Empty the scratchpad"
     parameters: {}
-    output: state_change
+    output: state-change
     effect: "Reset to empty"
-    invoked_by: [player]
+    invoked-by: [player]
 
 # STATE
 
@@ -62,13 +62,13 @@ state:
 # ADVERTISEMENTS
 
 advertisements:
-  THINK_ALOUD:
+  THINK-ALOUD:
     score: 80
     condition: "Need to work through something"
 
 # RELATED
 
-see_also:
+see-also:
   - skills/planning         # More structured
   - skills/research-notebook # For research
 

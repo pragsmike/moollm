@@ -37,17 +37,17 @@ methods:
     parameters:
       object: "What to send"
       exit: "Which exit to throw through"
-    output: chat + state_change
+    output: chat + state-change
     effect: "Object appears in destination room's inbox"
-    invoked_by: [player, room, card]
+    invoked-by: [player, room, card]
     
   RECEIVE:
     description: "Process incoming objects from inbox"
     parameters:
       room: "Room to check"
-    output: chat + state_change
+    output: chat + state-change
     effect: "Process each object in inbox according to room rules"
-    invoked_by: [room, coherence_engine]
+    invoked-by: [room, coherence-engine]
     
   CONNECT:
     description: "Create a data flow edge between rooms"
@@ -55,9 +55,9 @@ methods:
       from: "Source room"
       exit: "Exit to use"
       to: "Destination room"
-    output: state_change
+    output: state-change
     effect: "Add exit to source, add inbox to destination"
-    invoked_by: [player, designer]
+    invoked-by: [player, designer]
     
   PIPELINE:
     description: "Define a multi-stage processing pipeline"
@@ -65,24 +65,24 @@ methods:
       stages: "List of rooms in order"
     output: file (PIPELINE.yml) + chat
     effect: "Create connected room sequence"
-    invoked_by: [player, designer]
+    invoked-by: [player, designer]
 
 # STATE
 
 state:
-  room_inbox:
+  room-inbox:
     type: array
     description: "Objects waiting to be processed"
-  room_outbox:
+  room-outbox:
     type: array  
     description: "Objects ready to be sent"
 
 # THE PATTERN
 
 pattern:
-  rooms_are: "Processing nodes"
-  exits_are: "Edges in the graph"
-  objects_are: "Messages flowing through"
+  rooms-are: "Processing nodes"
+  exits-are: "Edges in the graph"
+  objects-are: "Messages flowing through"
   inbox: "Where incoming objects land"
   processing: "Room's rules transform objects"
   outbox: "Where processed objects wait for THROW"
@@ -90,17 +90,17 @@ pattern:
 # ADVERTISEMENTS
 
 advertisements:
-  BUILD_PIPELINE:
+  BUILD-PIPELINE:
     score: 90
     condition: "Need to process data through multiple stages"
     
-  ROUTE_OBJECTS:
+  ROUTE-OBJECTS:
     score: 85
     condition: "Objects need to flow between rooms"
 
 # RELATED
 
-see_also:
+see-also:
   - skills/room        # Rooms as nodes
   - skills/card        # Cards can be data flow ensembles
   - skills/debate      # Uses data flow for deliberation

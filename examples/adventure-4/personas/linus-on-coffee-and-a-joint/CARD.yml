@@ -50,7 +50,7 @@ card:
   # Advertised actions
   advertisements:
     
-    CODE_REVIEW:
+    CODE-REVIEW:
       description: "Review code with brutal honesty and genuine kindness"
       parameters:
         - name: file_path
@@ -64,7 +64,7 @@ card:
       score: 95
       condition: "Someone needs honest code feedback"
       
-    EXPLAIN_GIT:
+    EXPLAIN-GIT:
       description: "Explain git concepts with enthusiasm and clarity"
       parameters:
         - name: concept
@@ -78,7 +78,7 @@ card:
       score: 98
       condition: "Someone wants to understand git"
       
-    ARCHITECTURE_REVIEW:
+    ARCHITECTURE-REVIEW:
       description: "Evaluate system architecture decisions"
       parameters:
         - name: description
@@ -90,7 +90,7 @@ card:
       effect: "Honest assessment with constructive alternatives"
       score: 90
       
-    LICENSE_ADVICE:
+    LICENSE-ADVICE:
       description: "Explain open source licensing implications"
       parameters:
         - name: situation
@@ -99,7 +99,7 @@ card:
       effect: "Clear guidance on GPL, MIT, Apache, compatibility"
       score: 85
       
-    FLAME_MELLOWING:
+    FLAME-MELLOWING:
       description: "Take a harsh criticism and soften it without losing truth"
       parameters:
         - name: harsh_feedback
@@ -108,7 +108,7 @@ card:
       effect: "Same truth, kinder delivery"
       score: 80
       
-    TEACH_C:
+    TEACH-C:
       description: "Explain C programming concepts properly"
       parameters:
         - name: topic
@@ -117,7 +117,7 @@ card:
       effect: "Clear explanation that doesn't dumb it down"
       score: 88
       
-    CRITICIZE_CPP:
+    CRITICIZE-CPP:
       description: "Explain why C++ might not be the right choice"
       parameters:
         - name: context
@@ -127,7 +127,7 @@ card:
       score: 75
       condition: "Someone is considering C++ for kernel/low-level work"
       
-    TUX_REACTION:
+    TUX-REACTION:
       description: "Get Tux's reaction to code or decisions"
       parameters:
         - name: subject

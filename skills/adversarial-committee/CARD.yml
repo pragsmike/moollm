@@ -44,7 +44,7 @@ methods:
       protocol: "Usually roberts-rules"
     output: file (COMMITTEE.yml) + chat
     effect: "Create committee instance with roster"
-    invoked_by: [player, room]
+    invoked-by: [player, room]
     
   CONVENE:
     description: "Start a committee session"
@@ -52,7 +52,7 @@ methods:
       topic: "Specific question to deliberate"
     output: chat (opening statements)
     effect: "Each persona states initial position"
-    invoked_by: [player, moderator]
+    invoked-by: [player, moderator]
     
   DELIBERATE:
     description: "Run one round of debate"
@@ -60,15 +60,15 @@ methods:
       motion: "What's being debated"
     output: chat (debate transcript)
     effect: "Personas argue, following roberts-rules"
-    invoked_by: [player, moderator, coherence_engine]
+    invoked-by: [player, moderator, coherence-engine]
     
   VOTE:
     description: "Call for a vote on the motion"
     parameters:
       motion: "What's being voted on"
-    output: chat (vote tally) + state_change
+    output: chat (vote tally) + state-change
     effect: "Each persona votes, record result"
-    invoked_by: [moderator, player]
+    invoked-by: [moderator, player]
     
   EVALUATE:
     description: "Send output to independent evaluator"
@@ -77,14 +77,14 @@ methods:
       rubric: "Path to rubric to use"
     output: chat (evaluation) + possible revision
     effect: "Evaluator scores, may send critique back"
-    invoked_by: [committee, player]
+    invoked-by: [committee, player]
     
   DISSOLVE:
     description: "End the committee"
     parameters: {}
-    output: chat + file (final_decision.yml)
+    output: chat + file (final-decision.yml)
     effect: "Archive deliberation, finalize decision"
-    invoked_by: [player, moderator]
+    invoked-by: [player, moderator]
 
 # STATE
 # What a committee instance tracks
@@ -107,7 +107,7 @@ state:
       type: enum
       values: [forming, convened, deliberating, voting, adjourned]
       default: forming
-    current_motion:
+    current-motion:
       type: string
     votes:
       type: object
@@ -123,9 +123,9 @@ state:
 # DEFAULT ROSTER
 # Standard committee members (can customize)
 
-default_roster:
+default-roster:
   maya:
-    propensity: "paranoid_realism"
+    propensity: "paranoid-realism"
     surfaces: "Political dynamics, hidden agendas, traps"
     voice: "What aren't they telling us?"
     
@@ -135,17 +135,17 @@ default_roster:
     voice: "What if this is exactly what it seems?"
     
   joe:
-    propensity: "continuity_guardian"
+    propensity: "continuity-guardian"
     surfaces: "Institutional memory, what worked before"
     voice: "We tried this in 2019..."
     
   vic:
-    propensity: "evidence_prosecutor"
+    propensity: "evidence-prosecutor"
     surfaces: "Data gaps, unverified claims"
     voice: "Show me the numbers."
     
   tammy:
-    propensity: "systems_thinking"
+    propensity: "systems-thinking"
     surfaces: "Unintended consequences, emergent effects"
     voice: "If we do X, then Y will respond by..."
 
@@ -153,26 +153,26 @@ default_roster:
 # What this card offers to the room
 
 advertisements:
-  COMPLEX_DECISION:
+  COMPLEX-DECISION:
     score: 95
     condition: "Facing decision with no obvious right answer"
     
-  AVOID_BLIND_SPOTS:
+  AVOID-BLIND-SPOTS:
     score: 90
     condition: "Worried about missing important perspectives"
     
-  CHALLENGE_ASSUMPTIONS:
+  CHALLENGE-ASSUMPTIONS:
     score: 85
     condition: "Need to stress-test a plan or proposal"
     
-  GENERATE_OPTIONS:
+  GENERATE-OPTIONS:
     score: 80
     condition: "Want to explore multiple framings of a problem"
 
 # INTEGRATION
 
 workflow:
-  typical_flow:
+  typical-flow:
     - FORM committee with relevant personas
     - CONVENE session with topic
     - DELIBERATE following roberts-rules
@@ -183,7 +183,7 @@ workflow:
 
 # RELATED
 
-see_also:
+see-also:
   - skills/roberts-rules  # The procedure they follow
   - skills/rubric         # How output is scored
   - skills/evaluator      # Independent assessment
