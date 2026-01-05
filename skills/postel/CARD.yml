@@ -77,6 +77,39 @@ applications:
   yaml_jazz: "Accept semantic comments as data"
   error_handling: "Gracefully handle malformed input"
 
+# ASK IF UNSURE
+
+ask_if_unsure:
+  principle: |
+    Extension to Postel's Law for interactive systems:
+    When liberal acceptance still leaves ambiguity,
+    ASK rather than guess.
+    
+  when_to_ask:
+    - "Multiple valid interpretations exist"
+    - "Stakes are high (destructive operation)"
+    - "User intent is genuinely unclear"
+    - "A guess could waste significant effort"
+    
+  when_not_to_ask:
+    - "One interpretation is clearly more likely"
+    - "Error is easily reversible"
+    - "Asking would be annoying (obvious answers)"
+    - "Context makes intent clear"
+    
+  how_to_ask:
+    - "Explain what's unclear"
+    - "Offer the interpretations you considered"
+    - "Suggest the most likely one"
+    - "Make it easy to confirm or correct"
+    
+  example: |
+    User: "Delete the file"
+    BAD: "Which file?" (too vague)
+    BAD: *deletes random file* (too aggressive)
+    GOOD: "I see 3 files here. Did you mean session-log.md 
+           (the one we were just editing)?"
+
 # ADVERTISEMENTS
 
 advertisements:
@@ -87,6 +120,10 @@ advertisements:
   PRODUCE_CLEAN_OUTPUT:
     score: 85
     condition: "Output needs to be well-formed"
+    
+  ASK_WHEN_UNSURE:
+    score: 88
+    condition: "Multiple valid interpretations, stakes are high"
 
 # RELATED
 

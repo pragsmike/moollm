@@ -221,8 +221,31 @@ see_also:
 
 credits:
   inspiration:
-    - "Will Crowther & Don Woods — Colossal Cave (1976)"
-    - "Infocom — Zork series"
-    - "Richard Bartle & Roy Trubshaw — MUD (1978)"
-    - "Pavel Curtis — LambdaMOO"
-    - "Douglas Engelbart — NLS/oN-Line System"
+    # Chronological order of key influences
+    - "Gary Gygax & Dave Arneson — D&D (1974): DM role, maps, monsters, quests"
+    - "Will Crowther & Don Woods — Colossal Cave Adventure (1976)"
+    - "Infocom — Zork series (1977-): Parser, puzzles, atmosphere"
+    - "Richard Bartle & Roy Trubshaw — MUD (1978): Multi-user, persistence"
+    - "TSR — D&D Monster Manual (1977): Bestiary as design pattern"
+    - "Pavel Curtis — LambdaMOO (1990): OO rooms, verbs, social"
+    - "Douglas Engelbart — NLS: Interactive systems"
+    
+  dnd_legacy: |
+    D&D invented the DM (Dungeon Master) — the original LLM role.
+    The DM:
+    - Interprets rules flexibly (Postel's Law)
+    - Narrates outcomes atmospherically
+    - Plays all NPCs
+    - Tracks state
+    - Responds to player creativity
+    
+    MOOLLM's adventure skill makes the LLM your DM.
+    
+  monster_manual: |
+    The Monster Manual (1977) established:
+    - Bestiary as reusable catalog
+    - Stats + flavor text pattern
+    - Challenge rating (difficulty)
+    - Treasure tables (rewards)
+    
+    MOOLLM characters inherit this pattern.

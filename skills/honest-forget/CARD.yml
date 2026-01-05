@@ -96,6 +96,40 @@ principle: |
      
   Leave tombstones. Point to graves. Never pretend to remember.
 
+# THE METADATA PATTERN
+
+metadata_pattern:
+  description: |
+    Instead of reading a full file, create a lightweight metadata sidecar.
+    The LLM can "sip" the metadata before deciding to read the whole file.
+    
+  naming: "<filename>-metadata.yml"
+  
+  example: |
+    For: adventure-log.md
+    Create: adventure-log-metadata.yml
+    
+    Contents:
+      file: adventure-log.md
+      summary: "Session 12: Party explored the maze, found the key"
+      size: 45KB
+      last_modified: 2024-01-15
+      key_events: [found_key, met_sphinx, lost_torch]
+      characters_present: [bumblewick, terpie]
+      worth_reading_if: "Need details about the maze or the sphinx riddle"
+      
+  workflow:
+    1: "LLM reads metadata first (tiny context cost)"
+    2: "Decide if full file is needed"
+    3: "If yes, read full file"
+    4: "If no, use summary and move on"
+    
+  benefits:
+    - "Reduces context consumption"
+    - "Faster decision-making"
+    - "Preserves the option to go deeper"
+    - "Metadata survives when details are forgotten"
+
 # ADVERTISEMENTS
 
 advertisements:

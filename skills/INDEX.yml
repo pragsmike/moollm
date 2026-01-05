@@ -5,6 +5,14 @@ skills:
   
   # --- META SKILLS ---
   
+  - name: "moollm"
+    path: "skills/moollm"
+    description: "The soul of MOOLLM — self-explanation, help, navigation, philosophy"
+    tier: 0
+    entry: "SKILL.md"
+    tags: ["meta", "help", "foundational", "navigation"]
+    use_when: "Confused, lost, asking 'what can I do?', wanting to understand MOOLLM"
+  
   - name: "skill"
     path: "skills/skill"
     description: "The meta-skill: how skills work, inherit, and instantiate"

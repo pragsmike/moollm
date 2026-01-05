@@ -1,0 +1,141 @@
+# CARD.yml — The Wardrobe of Masks
+#
+# The personas directory as a playable metaphysical room.
+# "Where the costumes hang. Masks, not faces."
+
+card:
+  id: personas
+  name: "The Wardrobe of Masks"
+  type: [room, metaphysical, repository]
+  
+  emoji: 🎭
+  
+  rarity: legendary
+  
+  description: |
+    The infinite corridor of masks and costumes. Personas are ROLES —
+    they have no location, no mortality, no inventory. Characters
+    wear them to become someone else.
+
+# TOOLS REQUIRED
+
+tools:
+  required:
+    - read_file
+    - write_file
+    - list_dir
+  optional: []
+
+tier: 1
+
+# METHODS
+
+methods:
+  
+  BROWSE:
+    description: "See all personas in the wardrobe"
+    parameters: {}
+    output: chat (persona list)
+    effect: "List all persona files"
+    invoked_by: [player]
+    
+  CREATE:
+    description: "Design a new persona"
+    parameters:
+      name: "Persona name"
+      archetype: "What kind of role"
+      voice: "How they speak"
+      abilities: "What wearing grants"
+    output: file (PERSONA.yml)
+    effect: "Create new wearable identity"
+    invoked_by: [player, dm]
+    
+  TRY_ON:
+    description: "Preview a persona"
+    parameters:
+      persona: "Which persona"
+      character: "Who's trying it"
+    output: chat (preview)
+    effect: "Show how character would change"
+    invoked_by: [player, mirror]
+    
+  ADOPT:
+    description: "Commit to wearing a persona"
+    parameters:
+      persona: "Which persona"
+      character: "Who wears it"
+    output: state_change
+    effect: "Set character.current_persona"
+    invoked_by: [player]
+    
+  SHED:
+    description: "Remove current persona"
+    parameters:
+      character: "Who removes it"
+    output: state_change
+    effect: "Set current_persona to null"
+    invoked_by: [player]
+    
+  TRANSFORM:
+    description: "Dramatic persona change"
+    parameters:
+      from: "Current persona"
+      to: "New persona"
+      character: "Who transforms"
+    output: chat (transformation narrative)
+    effect: "Theatrical persona switch"
+    invoked_by: [player, dm]
+
+# STATE
+
+state:
+  wardrobe_schema:
+    masks:
+      type: array
+      description: "List of persona IDs"
+    currently_worn:
+      type: object
+      description: "Character → persona mapping"
+
+# THE FUNDAMENTAL DISTINCTION
+
+distinction:
+  persona_is:
+    - "A costume, a mask, a role"
+    - "Immortal — can't die, only be forgotten"
+    - "Has NO location"
+    - "Cannot carry anything"
+    - "The ROLE, not the actor"
+    - "Ziggy Stardust, not David Bowie"
+    
+  persona_is_not:
+    - "A body (that's character)"
+    - "Mortal"
+    - "Located anywhere"
+    - "The person playing them"
+
+# ADVERTISEMENTS
+
+advertisements:
+  CHANGE_IDENTITY:
+    score: 90
+    condition: "Want to present differently"
+    
+  CREATE_PERSONA:
+    score: 85
+    condition: "Need a new role or mask"
+
+# RELATED
+
+see_also:
+  - skills/persona      # Persona skill
+  - examples/adventure-4/characters/CARD.yml  # The other half
+  - skills/mind-mirror  # Personality modifiers
+
+# CREDITS
+
+credits:
+  metaphor:
+    - "Theater — Costume department"
+    - "Jung — Persona archetype"
+    - "Commedia dell'arte — Stock characters"

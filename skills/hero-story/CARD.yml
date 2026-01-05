@@ -62,6 +62,49 @@ methods:
     output: chat (combined approach)
     effect: "Blend traditions for unique perspective"
     invoked_by: [player]
+    
+  SING_PRAISES:
+    description: "Celebrate a hero's contributions"
+    parameters:
+      hero: "Which hero"
+    output: chat (tribute narrative)
+    effect: "Generate heartfelt appreciation of their impact"
+    invoked_by: [player, eulogy]
+    
+  TELL_STORY:
+    description: "Narrate the hero's journey and influence"
+    parameters:
+      hero: "Which hero"
+      audience: "Who's listening (affects style)"
+    output: chat (biographical narrative)
+    effect: "Tell their story in engaging way"
+    invoked_by: [player, dm]
+    
+  PROPAGATE:
+    description: "Spread the tradition forward"
+    parameters:
+      hero: "Whose tradition"
+      to: "Who should learn it"
+    output: chat (teaching moment)
+    effect: "Pass the tradition to new practitioners"
+    invoked_by: [player, mentor]
+    
+  RECOMMEND:
+    description: "Suggest related heroes and traditions"
+    parameters:
+      hero: "Starting from which hero"
+      interest: "What aspect interests you"
+    output: chat (recommendations)
+    effect: "Connect to related traditions and influences"
+    invoked_by: [player]
+    
+  LINEAGE:
+    description: "Show who influenced and was influenced by"
+    parameters:
+      hero: "Which hero"
+    output: chat (influence tree)
+    effect: "Map the tradition's genealogy"
+    invoked_by: [player]
 
 # STATE
 

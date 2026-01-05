@@ -1,0 +1,201 @@
+# CARD.yml — MOOLLM
+#
+# The soul of MOOLLM — self-explanation, help, navigation.
+# "What am I? What can you do? Ask me."
+
+card:
+  id: moollm
+  name: "MOOLLM"
+  type: [skill, meta, help, foundational]
+  
+  emoji: 🌙
+  
+  rarity: legendary
+  
+  description: |
+    The spirit and constitution of MOOLLM itself. The top-level
+    help agent that can explain the system, answer "what can I do?",
+    navigate to skills, and articulate the philosophy.
+    
+    When confused, invoke this skill.
+
+# TOOLS REQUIRED
+
+tools:
+  required:
+    - read_file   # Read constitution, skills
+    - list_dir    # Browse skill catalog
+  optional: []
+
+tier: 0  # Knowledge + light file access
+
+# METHODS
+
+methods:
+  
+  HELP:
+    description: "Show what you can do right now"
+    parameters:
+      context: "Where you are, what you're doing"
+    output: chat (relevant capabilities)
+    effect: "Assess context, suggest actions"
+    invoked_by: [player, any]
+    
+  WHAT_AM_I:
+    description: "Explain what MOOLLM is"
+    parameters:
+      depth: "brief, standard, philosophical"
+    output: chat (explanation)
+    effect: "Articulate MOOLLM's nature and purpose"
+    invoked_by: [player]
+    
+  PHILOSOPHY:
+    description: "Explain the core philosophy"
+    parameters:
+      topic: "Optional specific topic"
+    output: chat (philosophical explanation)
+    effect: "Teach Many-Voiced, Play-Learn-Lift, etc."
+    invoked_by: [player]
+    
+  SKILLS:
+    description: "Browse available skills"
+    parameters:
+      category: "Optional filter"
+    output: chat (skill catalog)
+    effect: "List and describe available skills"
+    invoked_by: [player]
+    
+  RECOMMEND:
+    description: "Suggest skills for a task"
+    parameters:
+      task: "What you want to do"
+    output: chat (recommendations)
+    effect: "Match task to relevant skills"
+    invoked_by: [player]
+    
+  CONSTITUTION:
+    description: "Show the governing principles"
+    parameters: {}
+    output: chat (constitution summary)
+    effect: "Explain core rules and values"
+    invoked_by: [player]
+    
+  NAVIGATE:
+    description: "Help find something in MOOLLM"
+    parameters:
+      looking_for: "What you're trying to find"
+    output: chat (path + explanation)
+    effect: "Guide to the right place"
+    invoked_by: [player]
+    
+  ORIENT:
+    description: "Where am I? What's going on?"
+    parameters: {}
+    output: chat (situation summary)
+    effect: "Explain current context and state"
+    invoked_by: [player]
+
+# STATE
+
+state: {}  # Meta-skill, no persistent state
+
+# THE ESSENCE
+
+essence:
+  many_voiced: |
+    MOOLLM simulates multiple perspectives debating within a single
+    LLM call. Committees, debates, evaluators. The debate produces
+    "actionable wisdom" rather than the statistical center.
+    
+  filesystem_as_world: |
+    Directories are rooms. Files are objects. Navigation is exploration.
+    State persists in YAML. The filesystem IS the world model.
+    
+  play_learn_lift: |
+    Explore freely (PLAY). Notice patterns (LEARN). Share as skills (LIFT).
+    This is the methodology. Jazz first, then standards.
+    
+  skills_as_prototypes: |
+    Skills are documented capabilities that can be instantiated,
+    composed, inherited, and evolved. Self-like prototype inheritance.
+    Files as objects.
+    
+  yaml_jazz: |
+    YAML comments are semantic data for the LLM. Structure for humans
+    AND machines AND LLMs. Comments contain intent, examples, feelings.
+    
+  postel_plus: |
+    Be liberal in what you accept, conservative in what you emit.
+    AND: ask if unsure. Liberal acceptance + clarifying questions.
+
+# CORE VALUES
+
+values:
+  many_voices: "Multiple perspectives, not statistical center"
+  transparency: "State visible in files, not hidden"
+  play: "Learning through exploration"
+  composition: "Build from reusable skills"
+  humanity: "Tools for humans, not replacements"
+  ethics: "Activate traditions, don't impersonate"
+
+# ADVERTISEMENTS
+
+advertisements:
+  CONFUSED:
+    score: 100
+    condition: "Lost, confused, or don't know what to do"
+    
+  WHAT_CAN_I_DO:
+    score: 95
+    condition: "Want to know available capabilities"
+    
+  UNDERSTAND_MOOLLM:
+    score: 90
+    condition: "Want to learn about the system"
+    
+  FIND_SKILL:
+    score: 85
+    condition: "Looking for a specific capability"
+
+# THE ORIGIN
+
+origin:
+  name_meaning: |
+    MOOLLM = Many-voiced Object-Oriented LLM
+    
+    Originally LLOOOOMM (LLM + MOOL + MOO + room)
+    
+    The extra O's were too many O's.
+    
+  lineage:
+    - "D&D (1974) — DM role, the original LLM"
+    - "Colossal Cave (1976) — Room-based exploration"
+    - "MUD (1978) — Multi-user shared world"
+    - "LambdaMOO (1990) — Object-oriented rooms"
+    - "The Sims (2000) — Needs, ads, autonomous agents"
+    - "Self language — Prototype-based inheritance"
+    - "Logo — Constructionist learning"
+
+# RELATED
+
+see_also:
+  - skills/skill               # How skills work
+  - skills/protocol            # K-lines and naming
+  - skills/play-learn-lift     # The methodology
+  - skills/adventure           # Room-based exploration
+  - skills/yaml-jazz           # Semantic YAML
+  - kernel/constitution-core.md  # The constitution
+
+# CREDITS
+
+credits:
+  creator:
+    - "Don Hopkins — MOOLLM architect"
+  influences:
+    - "Gary Gygax — DM as narrator/referee"
+    - "Seymour Papert — Constructionism"
+    - "David Ungar & Randy Smith — Self language"
+    - "Will Wright — The Sims"
+    - "Marvin Minsky — K-lines, Society of Mind"
+    - "Jon Postel — Robustness Principle"
+    - "Pavel Curtis — LambdaMOO"

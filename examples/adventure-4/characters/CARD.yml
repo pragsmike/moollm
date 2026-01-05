@@ -1,0 +1,136 @@
+# CARD.yml — The Hall of Bodies
+#
+# The characters directory as a playable metaphysical room.
+# "Where the actors live. Bodies, not masks."
+
+card:
+  id: characters
+  name: "The Hall of Bodies"
+  type: [room, metaphysical, repository]
+  
+  emoji: 🧬
+  
+  rarity: legendary
+  
+  description: |
+    The repository of all character bodies. Characters are ACTORS —
+    they have location, inventory, mortality. They wear personas
+    like costumes, but this is who they ARE underneath.
+
+# TOOLS REQUIRED
+
+tools:
+  required:
+    - read_file
+    - write_file
+    - list_dir
+  optional: []
+
+tier: 1
+
+# METHODS
+
+methods:
+  
+  BROWSE:
+    description: "See all characters in the hall"
+    parameters: {}
+    output: chat (character list)
+    effect: "List all character directories"
+    invoked_by: [player]
+    
+  CREATE:
+    description: "Birth a new character"
+    parameters:
+      name: "Character name"
+      archetype: "Starting template"
+      backstory: "Origin story"
+    output: directory + CHARACTER.yml
+    effect: "Create new character with identity"
+    invoked_by: [player, dm]
+    
+  INSPECT:
+    description: "Study a character deeply"
+    parameters:
+      character: "Which character"
+    output: chat (full character profile)
+    effect: "Read and narrate character file"
+    invoked_by: [player]
+    
+  EMBODY:
+    description: "Become this character (for play)"
+    parameters:
+      character: "Which character"
+    output: state_change
+    effect: "Set as active player character"
+    invoked_by: [player]
+    
+  RETIRE:
+    description: "Mark a character as inactive"
+    parameters:
+      character: "Which character"
+      reason: "Why retiring"
+    output: state_change
+    effect: "Archive character, preserve history"
+    invoked_by: [player]
+    
+  EULOGY:
+    description: "Honor a character's story"
+    parameters:
+      character: "Which character"
+    output: chat (narrative tribute)
+    effect: "Tell the character's complete story"
+    invoked_by: [player, dm]
+
+# STATE
+
+state:
+  hall_schema:
+    residents:
+      type: array
+      description: "List of character IDs"
+    active_player:
+      type: string
+      description: "Currently embodied character"
+
+# THE FUNDAMENTAL DISTINCTION
+
+distinction:
+  character_is:
+    - "A body with physical presence"
+    - "Mortal — can be hurt, can die"
+    - "Has ONE location at any time"
+    - "Carries inventory"
+    - "The ACTOR, not the role"
+    - "David Bowie, not Ziggy Stardust"
+    
+  character_is_not:
+    - "A costume (that's persona)"
+    - "Immortal"
+    - "Omnipresent"
+    - "The role they play"
+
+# ADVERTISEMENTS
+
+advertisements:
+  MANAGE_CHARACTERS:
+    score: 90
+    condition: "Need to work with character identities"
+    
+  CREATE_CHARACTER:
+    score: 85
+    condition: "Starting new adventure or adding player"
+
+# RELATED
+
+see_also:
+  - skills/character    # Character skill
+  - examples/adventure-4/personas/CARD.yml  # The other half
+  - skills/mind-mirror  # Personality traits
+
+# CREDITS
+
+credits:
+  metaphor:
+    - "The Matrix — Bodies in pods"
+    - "Theater — Actors backstage"
