@@ -29,6 +29,49 @@ You can't see inside an LLM agent. It claims to "remember" but you can't inspect
 
 **This is insane.**
 
+## The Deeper Problem: One Voice is the Wrong Voice
+
+Traditional chat is **one user ↔ one assistant**. The assistant gives you... what, exactly?
+
+**The statistical center of all possible viewpoints.** An averaging. A regression to the mean.
+
+When you ask "Should I take this client?", a single LLM gives you the most *likely* answer given your context — which is often:
+- Hedged and cautious (training data rewards safety)
+- Genre-conventional (sounds like "business advice")
+- Hidden assumptions (who's the stakeholder? what's success?)
+- Missing the outlier perspectives that might actually matter
+
+You're getting the **centroid of the cloud**, not the shape of the cloud itself.
+
+**Maya** would say: "This is a trap. Their scope creep reputation is a red flag."
+**Frankie** would say: "But the opportunity! The growth potential!"
+**Vic** would say: "Show me the financials. What's the evidence?"
+**Tammy** would say: "What happens to our other clients if we take this on?"
+
+*But the single-voice LLM smooths all these into one anodyne answer.*
+
+**MOOLLM solves this through SPEED-OF-LIGHT multi-agent simulation.**
+
+Within ONE LLM call, we simulate an *ensemble of perspectives*:
+- Committee of characters with **opposing propensities**
+- Each inherits from real traditions (hero-stories) but modulates authentically
+- They **debate** using parliamentary procedure (Robert's Rules)
+- An **independent evaluator** scores their output against explicit rubrics
+- Stories that survive cross-examination from multiple angles are more robust
+
+```yaml
+# One LLM epoch contains:
+characters: 5
+debate_rounds: 4
+perspectives_explored: all the outliers, not just the center
+bias_surfaced: hidden assumptions made visible
+llm_calls: 1  # Still just one call!
+```
+
+This is Mike Gallaher's insight: *"Everything is a story. No single story is true — but the ensemble approximates actionable wisdom."*
+
+See: [adversarial-committee/](./skills/adversarial-committee/), [designs/mike-gallaher-ideas.md](./designs/mike-gallaher-ideas.md)
+
 ## The Vision
 
 **The filesystem is a microworld.** Not just storage — a *place* to explore.
