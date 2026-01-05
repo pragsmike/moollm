@@ -121,10 +121,12 @@ The pun is deliberate: **jazz standards** are the classic songs every musician k
 
 ## Dovetails With
 
-- [POSTEL](../postel/) — Be liberal in accepting ambiguous YAML
-- [Coherence Engine](../coherence-engine/) — LLM as interpreter
-- [Soul Chat](../soul-chat/) — Markdown with embedded YAML Jazz
-- [Room](../room/) — ROOM.yml files are YAML Jazz
+### Sister Skills
+- [postel/](../postel/) — Be liberal in accepting ambiguous YAML
+- [soul-chat/](../soul-chat/) — Markdown with embedded YAML Jazz
+
+### Kernel
+- [kernel/constitution-core.md](../../kernel/constitution-core.md) — Section 3: YAML Jazz Principle
 
 ---
 

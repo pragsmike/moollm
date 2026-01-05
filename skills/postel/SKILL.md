@@ -155,11 +155,13 @@ His "robustness principle" has guided protocol design for decades — and guides
 
 ## Dovetails With
 
-- [YAML Jazz](../yaml-jazz/) — Semantic interpretation of structured data
-- [Coherence Engine](../coherence-engine/) — LLM as charitable interpreter
-- [Self-Repair](../self-repair/) — POSTEL for recovering from errors
-- [Robust-First](../robust-first/) — Survivability over fragile correctness
-- [Room](../room/) — Navigate even when paths are unclear
+### Sister Skills
+- [yaml-jazz/](../yaml-jazz/) — Semantic interpretation
+- [robust-first/](../robust-first/) — Survivability over correctness
+- [self-repair/](../self-repair/) — POSTEL for error recovery
+
+### Kernel
+- [kernel/constitution-core.md](../../kernel/constitution-core.md) — Section 5: The Robustness Principle
 
 ---
 

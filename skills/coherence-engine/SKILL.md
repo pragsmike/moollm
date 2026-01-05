@@ -156,3 +156,14 @@ Next epoch:
 ```
 
 Non-blocking, parallel, resumable.
+
+## Dovetails With
+
+### Sister Skills
+- [speed-of-light/](../speed-of-light/) — Multi-turn simulation in one call
+- [yaml-jazz/](../yaml-jazz/) — Semantic data interpretation
+- [self-repair/](../self-repair/) — Consistency healing
+
+### Kernel
+- [kernel/README.md](../../kernel/README.md) — "The LLM is the Coherence Engine"
+- [kernel/constitution-core.md](../../kernel/constitution-core.md) — Operating principles

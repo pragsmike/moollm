@@ -385,6 +385,16 @@ planned:
     status: "active"
     protocol: "MIND-MIRROR"
     notes: "Timothy Leary 1985, Interpersonal Circumplex, character DNA"
+    
+  - name: "naming"
+    path: "skills/naming"
+    description: "Big-endian file naming as semantic binding"
+    tier: 1
+    entry: "SKILL.md"
+    tags: ["meta", "organization", "filesystem"]
+    use_when: "Naming files, organizing directories"
+    related: ["room", "character"]
+    notes: "Wraps kernel/NAMING.yml — the filesystem is a semantic network"
 
 # GUIDELINES
 

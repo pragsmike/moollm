@@ -212,13 +212,12 @@ Always include in context:
 - `WISDOM.yml`
 - `POINTERS.yml`
 
-## Integration
+## Dovetails With
 
-| Direction | Skill | Relationship |
-|-----------|-------|--------------|
-| → | [summarize](../summarize/) | The compression mechanism |
-| ← | [session-log](../session-log/) | What to potentially forget |
-| → | [memory-palace](../memory-palace/) | Where wisdom lives |
-| ← | [play-learn-lift](../play-learn-lift/) | Iterations to compress |
-| ← | [self-repair](../self-repair/) | Triggers forgetting when needed |
-| ↔ | `NEVER-DELETE` protocol | Archive, don't destroy |
+### Sister Skills
+- [summarize/](../summarize/) — The compression mechanism
+- [session-log/](../session-log/) — What to potentially forget
+- [self-repair/](../self-repair/) — Triggers forgetting when needed
+
+### Kernel
+- [kernel/memory-management-protocol.md](../../kernel/memory-management-protocol.md) — Full specification

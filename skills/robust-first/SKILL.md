@@ -197,10 +197,12 @@ Robust-first response:
 
 ## Dovetails With
 
-- [Self-Repair](../self-repair/) — Checklist-based healing
-- [POSTEL](../postel/) — Charitable interpretation of errors
-- [Coherence Engine](../coherence-engine/) — Cross-checks and repairs
-- [Session Log](../session-log/) — Recovery source for state
+### Sister Skills
+- [self-repair/](../self-repair/) — Checklist-based healing
+- [postel/](../postel/) — Charitable interpretation
+
+### Kernel
+- [kernel/self-healing-protocol.md](../../kernel/self-healing-protocol.md) — Full specification
 
 ---
 
