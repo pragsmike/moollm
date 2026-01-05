@@ -77,7 +77,7 @@ Think: **Engelbart's NLS** with multiple cursors.
 
 ---
 
-## File = Identity, Location = Home
+## File = Identity
 
 In MOOLLM, the filesystem IS the world. Your file name IS your identity.
 
@@ -186,7 +186,7 @@ When renaming via `CHANGE-MY-FILE-NAME`:
 
 | Rule | Why |
 |------|-----|
-| Stay in `characters/` | Characters belong together |
+| Stay in `characters/` tree | Characters belong together |
 | No overwriting | Can't steal someone else's identity |
 | `.yml` optional | We know what you mean |
 | Kebab-case preferred | `captain-ashford`, not `CaptainAshford` |

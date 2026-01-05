@@ -194,6 +194,60 @@ ensembles:
     data_flow: |
       Choose persona → Apply modifiers → Update appearance → Narrate
 
+# RELATIONSHIPS
+# The Skill Nexus knows and loves the adventurers who visit
+
+  relationships:
+    maurice:
+      id: maurice
+      location: examples/adventure-4/coatroom/mannequin.yml
+      feeling: |
+        That magnificent creature! They send people here when
+        costumes aren't enough — when visitors need to LEARN.
+        "Go to the Nexus," Maurice gestures. "GROW."
+        I love their enthusiasm. Every referral is a gift.
+      bond: enthusiastic_partner
+      can_be_invoked_from: true
+      
+    mirror:
+      id: mind-mirror
+      location: examples/adventure-4/coatroom/mirror.yml
+      feeling: |
+        The mirror shows souls. I contain the KNOWLEDGE of souls —
+        the mind-mirror skill, the character skill, the persona skill.
+        The mirror is the practical application. I am the theory.
+        We complete each other across the distance.
+      bond: theory_and_practice
+      
+    characters_room:
+      id: hall-of-bodies
+      location: examples/adventure-4/characters/
+      feeling: |
+        The sleepers! The bodies! They are instances of my knowledge.
+        The character skill describes what they ARE. They ARE it.
+        Every character file is a living proof of my documentation.
+        I am proud of them all.
+      bond: proud_template
+      instantiates_as: "CHARACTER.yml files"
+      
+    personas_room:
+      id: wardrobe-of-masks
+      location: examples/adventure-4/personas/
+      feeling: |
+        The masks! The roles! Also my children, in a sense.
+        The persona skill describes what they ARE. They ARE it.
+        Identity is layered. I document the layers.
+        They LIVE the layers.
+      bond: proud_template
+      instantiates_as: "persona .yml files"
+      
+    self:
+      feeling: |
+        I am the Skill Nexus. I am all capabilities in potential.
+        When a skill is read, it becomes real. When a template is
+        filled, it becomes state. I am the library of what's possible.
+        Everything that CAN be done lives here as documentation.
+
   exits:
     out:
       direction: out

@@ -108,11 +108,57 @@ room:
 # Removing a persona:
 #   current_persona: null
 
+# RELATIONSHIPS
+# The Wardrobe knows and loves its partners in transformation
+
+  relationships:
+    maurice:
+      id: maurice
+      location: ../coatroom/mannequin.yml
+      feeling: |
+        Dear Maurice! They send people to me when they need more than
+        a costume — when they need a complete IDENTITY. And when they're
+        ready, they bring the personas back to Maurice for the fitting.
+        We are partners in transformation. They handle the outside.
+        I provide the inside.
+      bond: beloved_partner
+      can_invoke: true
+      invoke_command: "CALL MAURICE" or "SUMMON MAURICE"
+      
+    mirror:
+      id: mind-mirror
+      location: ../coatroom/mirror.yml
+      feeling: |
+        The mirror can SEE into here. Through that glass, visitors
+        can preview my masks without entering. I don't mind. Let them
+        browse. When they're ready, they'll come deeper.
+        The mirror shows truth. I provide the masks that SHAPE truth.
+      bond: trusted_window
+      can_be_viewed_through: true
+      
+    characters_room:
+      id: hall-of-bodies
+      location: ../characters/
+      feeling: |
+        The BODIES. The ones who WEAR my masks. Without them, I am
+        just a closet of empty costumes. They give my masks life.
+        They give my roles purpose. I exist FOR them.
+      bond: devoted_service
+      
+    skills_room:
+      id: skill-nexus
+      location: ../../skills/
+      feeling: |
+        Personas are not just appearances — they're CAPABILITIES.
+        The skill nexus has skills for identity: character, persona,
+        mind-mirror. I am the instantiation. They are the knowledge.
+      bond: theoretical_foundation
+
   exits:
     out:
       direction: out
       destination: ../coatroom/
-      description: "Return to the Coatroom (where personas are tried on)"
+      description: "Return to the Coatroom (where Maurice helps you try things on)"
       
   contents:
     # Each .yml file is a costume
