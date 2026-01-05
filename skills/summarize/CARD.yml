@@ -119,6 +119,87 @@ metadata_protocol:
       description: "Named pointers into the file"
       type: "array of bookmark objects"
       
+    # MULTI-FOCUS SUMMARIES
+    
+    summaries:
+      description: "Multiple summaries with different focuses and verbosities"
+      type: "object mapping focus → summary"
+      example:
+        brief: "Evil overlord character."
+        standard: "Lord Shadow, former hero corrupted by the Void Crystal..."
+        detailed: "Full backstory including childhood, heroic career, corruption arc..."
+        combat: "Boss fight stats, weaknesses, attack patterns."
+        narrative: "Key scenes, dialogue hooks, character arc progression."
+        spoiler_free: "A mysterious antagonist with unclear motivations."
+        
+    # DIFFERENTIAL CHANGES
+    
+    changes:
+      description: "What changed recently, for incremental understanding"
+      type: "array of change records"
+      example:
+        - date: "2024-01-15"
+          summary: "Added weakness to sunlight"
+          lines_affected: "85-90"
+        - date: "2024-01-10"
+          summary: "Rewrote backstory for consistency"
+          lines_affected: "15-60"
+        - date: "2024-01-05"
+          summary: "Initial creation"
+          
+    # RELATED FILES
+    
+    related:
+      description: "Pointers to related files with annotations"
+      type: "array of relation objects"
+      examples:
+        - path: "./lord-shadow-portrait.png"
+          relation: "visual"
+          note: "Official character portrait"
+          
+        - path: "./void-crystal.yml"
+          relation: "artifact"
+          note: "The source of corruption — read for backstory connection"
+          
+        - path: "../locations/shadow-fortress.yml"
+          relation: "location"
+          note: "His lair — read before designing final dungeon"
+          
+        - path: "./hero-before-fall.yml"
+          relation: "backstory"
+          note: "His heroic self before corruption"
+          
+    # IMAGE GENERATION
+    
+    visuals:
+      description: "Image generation prompts for visual representation"
+      type: "object with prompt variants"
+      example:
+        icon:
+          prompt: "Dark hooded figure, glowing purple eyes, minimalist silhouette, icon style"
+          style: "flat, symbolic, 64x64"
+          use: "inventory icon, map marker"
+          
+        card_face:
+          prompt: "Lord Shadow, dramatic portrait, dark armor with void crystal embedded in chest, purple energy crackling, fantasy art style"
+          style: "detailed, painterly, vertical card format"
+          use: "character card, tarot-style"
+          
+        token:
+          prompt: "Top-down view, dark robed figure, circular token border, tabletop game style"
+          style: "top-down, circular, battle map token"
+          use: "combat positioning"
+          
+        scene:
+          prompt: "Lord Shadow on obsidian throne, Shadow Fortress throne room, dramatic lighting, wide shot"
+          style: "cinematic, environmental, establishing shot"
+          use: "scene illustration, chapter header"
+          
+        emoji:
+          prompt: "Stylized villain face, purple glow, simple shapes"
+          style: "emoji-sized, recognizable at small scale"
+          suggested: "🦹‍♂️ or custom"
+      
   bookmark_types:
     point:
       description: "Single line reference"
@@ -139,22 +220,35 @@ metadata_protocol:
   example_metadata: |
     # lord-shadow-metadata.yml
     
-    summary: "Primary antagonist. Former hero corrupted by artifact."
+    # BASIC INFO
+    original_path: "./lord-shadow.yml"
+    last_modified: "2024-01-15T10:30:00Z"
+    size_hint: "180 lines"
     keywords: [villain, antagonist, boss, final-battle, corruption-arc]
+    
+    # MULTI-FOCUS SUMMARIES
+    summaries:
+      brief: "Evil overlord. Final boss."
+      standard: "Lord Shadow, former hero corrupted by the Void Crystal. Primary antagonist."
+      detailed: |
+        Sir Aldric the Bright was the realm's greatest champion until
+        he discovered the Void Crystal in the Sunken Temple. The artifact
+        promised power to save his dying kingdom, but instead consumed
+        his soul. Now as Lord Shadow, he seeks to spread the Void...
+      combat: "Level 20 boss. Weak to sunlight. Phase 2 triggered at 50% HP."
+      narrative: "Tragic villain. Redemption arc possible if player finds memories."
+      spoiler_free: "A mysterious dark lord threatening the realm."
     
     relevance_hints:
       - "Player near final dungeon"
       - "Discussion of corruption themes"
       - "Backstory reveals needed"
-      
-    original_path: "./lord-shadow.yml"
-    last_modified: "2024-01-15T10:30:00Z"
-    size_hint: "180 lines"
     
     notes: |
       SPOILER WARNING: Contains twist reveal.
       Only read full file if player has reached Act 3.
       
+    # BOOKMARKS
     bookmarks:
       - name: motivation
         line: 42
@@ -171,6 +265,50 @@ metadata_protocol:
       - name: dialogue_style
         lines: "120-140"
         note: "Speech patterns for writing dialogue"
+        
+    # RECENT CHANGES
+    changes:
+      - date: "2024-01-15"
+        summary: "Added weakness to sunlight, balanced combat stats"
+        lines_affected: "85-90"
+        
+      - date: "2024-01-10"
+        summary: "Rewrote backstory for consistency with Void Crystal lore"
+        lines_affected: "15-60"
+        
+    # RELATED FILES
+    related:
+      - path: "./lord-shadow-portrait.png"
+        relation: "visual"
+        note: "Official character portrait"
+        
+      - path: "./void-crystal.yml"
+        relation: "artifact"
+        note: "The source of corruption — essential backstory"
+        
+      - path: "../locations/shadow-fortress/"
+        relation: "location"  
+        note: "His lair — final dungeon"
+        
+      - path: "./sir-aldric-memories.yml"
+        relation: "redemption"
+        note: "Collectible memories — optional redemption path"
+        
+    # IMAGE PROMPTS
+    visuals:
+      icon:
+        prompt: "Dark hooded figure, glowing purple eyes, minimalist"
+        style: "flat icon, 64x64"
+        
+      card_face:
+        prompt: "Lord Shadow in dark armor, void crystal in chest, purple energy, dramatic portrait"
+        style: "fantasy card art, vertical"
+        
+      token:
+        prompt: "Top-down dark robed figure, circular border"
+        style: "battle map token"
+        
+      emoji: "🦹‍♂️"
 
 principles:
   preserve_truth: "Never invent or distort"
