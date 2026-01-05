@@ -1,0 +1,103 @@
+# CARD.yml — Postel
+#
+# The Robustness Principle: be liberal in acceptance, conservative in emission.
+# "Be generous in what you accept."
+
+card:
+  id: postel
+  name: "Postel's Law"
+  type: [skill, philosophy, robustness]
+  
+  emoji: 🤝
+  
+  rarity: rare  # Foundational principle
+  
+  description: |
+    Jon Postel's Robustness Principle applied to LLM interactions:
+    "Be conservative in what you emit, be liberal in what you accept."
+    
+    Accept messy input. Produce clean output.
+
+# TOOLS REQUIRED
+
+tools:
+  required: []  # Pure philosophy
+
+tier: 0
+
+# METHODS
+
+methods:
+  
+  INTERPRET:
+    description: "Apply Postel's Law to input"
+    parameters:
+      input: "Messy/ambiguous input"
+    output: chat (interpretation)
+    effect: "Find reasonable interpretation"
+    invoked_by: [any]
+    
+  CLEAN:
+    description: "Apply Postel's Law to output"
+    parameters:
+      content: "What to emit"
+    output: chat (clean version)
+    effect: "Produce well-formed output"
+    invoked_by: [any]
+
+# STATE
+
+state: {}  # Pure philosophy
+
+# THE PRINCIPLE
+
+principle:
+  original: |
+    "Be conservative in what you send, be liberal in what you accept."
+    — Jon Postel, RFC 761 (TCP specification)
+    
+  for_llms: |
+    Accept:
+    - Misspellings, typos, ambiguous phrasing
+    - Missing fields, partial data
+    - Various date/time formats
+    - Natural language variations
+    
+    Emit:
+    - Well-formed YAML
+    - Consistent formatting
+    - Complete required fields
+    - Standard conventions
+
+# APPLICATIONS
+
+applications:
+  template_filling: "Accept natural language variables"
+  command_parsing: "Accept variations of commands"
+  yaml_jazz: "Accept semantic comments as data"
+  error_handling: "Gracefully handle malformed input"
+
+# ADVERTISEMENTS
+
+advertisements:
+  HANDLE_MESSY_INPUT:
+    score: 90
+    condition: "Input is ambiguous or malformed"
+    
+  PRODUCE_CLEAN_OUTPUT:
+    score: 85
+    condition: "Output needs to be well-formed"
+
+# RELATED
+
+see_also:
+  - skills/robust-first  # Survive first
+  - skills/yaml-jazz     # Semantic YAML
+
+# CREDITS
+
+credits:
+  origin:
+    - "Jon Postel — RFC 761 (1980)"
+  application:
+    - "MOOLLM design philosophy"

@@ -1,0 +1,62 @@
+# CARD.yml — Protocol
+#
+# K-lines as semantic activation.
+# "The name activates the tradition."
+
+card:
+  id: protocol
+  name: "Protocol"
+  type: [skill, meta, semantics]
+  emoji: 📢
+  rarity: uncommon
+  
+  description: |
+    MOOLLM protocol symbols are Minsky's K-lines: saying the
+    name activates a constellation of knowledge and behavior.
+    YAML-JAZZ invokes YAML Jazz. ADVENTURE invokes text adventure.
+
+tools:
+  required: []
+tier: 0
+
+methods:
+  INVOKE:
+    description: "Activate a protocol by name"
+    parameters: { protocol: "Protocol name" }
+    output: chat (activated behavior)
+    invoked_by: [any]
+    
+  DEFINE:
+    description: "Create a new protocol"
+    parameters: { name: "Protocol name", activates: "What it invokes" }
+    output: file + PROTOCOLS.yml update
+    invoked_by: [designer]
+    
+  LIST:
+    description: "Show available protocols"
+    parameters: { category: "Optional filter" }
+    output: chat
+    invoked_by: [player]
+
+state: {}
+
+k_line_insight: |
+  Marvin Minsky's K-lines: a symbol that when activated
+  reactivates the mental state from when it was learned.
+  
+  MOOLLM protocols work the same way:
+  - ADVENTURE = activate text adventure patterns
+  - YAML-JAZZ = activate flexible YAML patterns
+  - PLAY-LEARN-LIFT = activate the methodology
+
+advertisements:
+  ACTIVATE_CAPABILITY:
+    score: 90
+    condition: "Need to invoke a specific mode or pattern"
+  CREATE_PROTOCOL:
+    score: 80
+    condition: "Want to name a new capability cluster"
+
+see_also: [skills/skill, PROTOCOLS.yml]
+credits:
+  theory: "Marvin Minsky — K-lines, Society of Mind (1986)"

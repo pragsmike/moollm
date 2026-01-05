@@ -145,7 +145,7 @@ state:
 # HOME VS LOCATION DISTINCTION
 
 location_protocol:
-  home: "Where the CHARACTER.yml file lives. Never moves."
+  home: "The directory path and file name where the CHARACTER.yml file lives. Never moves. Used by incoming references."
   location: "Where the character currently IS. Changes during play."
   movement: "Update location field, don't move files."
   example: |
