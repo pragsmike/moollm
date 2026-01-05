@@ -9,7 +9,7 @@ Userland protocols over files.
 
 ---
 
-## Skill Index (50 skills)
+## Skill Index (54 skills)
 
 ### 🧠 Philosophy & Core Concepts
 
@@ -82,6 +82,19 @@ Userland protocols over files.
 | [probability/](./probability/) | Success calculation from stats |
 | [scoring/](./scoring/) | Achievement valuation |
 | [reward/](./reward/) | Dynamic achievement rewards |
+
+### 🗳️ Decision & Deliberation (Mike Gallaher's Methodology)
+
+| Skill | One-liner |
+|-------|-----------|
+| [adversarial-committee/](./adversarial-committee/) | Committee of opposing personas force genuine debate |
+| [roberts-rules/](./roberts-rules/) | Parliamentary procedure prevents short-circuiting |
+| [rubric/](./rubric/) | Measurable criteria for scoring decisions |
+| [evaluator/](./evaluator/) | Independent assessment without debate context |
+
+> *"Everything is a story. No single story is true — but the ensemble approximates actionable wisdom."*
+> 
+> See: [designs/mike-gallaher-ideas.md](../designs/mike-gallaher-ideas.md)
 
 ### 🧠 Memory & Context
 
@@ -203,6 +216,13 @@ graph TD
     CHAR -->|affected by| BUFF[buff]
     
     SR[self-repair] -->|monitors| SL
+    
+    %% Mike Gallaher's Decision System
+    AC[adversarial-committee] -->|follows| RR[roberts-rules]
+    AC -->|produces| OUT[output]
+    OUT -->|THROW| EV[evaluator]
+    RUB[rubric] -->|defines criteria| EV
+    EV -->|critique if fail| AC
 ```
 
 Every skill connects to others. Navigate freely.

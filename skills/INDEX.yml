@@ -319,6 +319,52 @@ skills:
     tags: ["development", "quality", "review"]
     use_when: "Reviewing PRs, auditing code quality, or security review"
     
+  # --- DECISION & DELIBERATION (Mike Gallaher's Methodology) ---
+  
+  - name: "adversarial-committee"
+    path: "skills/adversarial-committee"
+    description: "Committee of personas with opposing propensities forcing genuine debate"
+    tier: 1
+    entry: "SKILL.md"
+    protocol: "ADVERSARIAL-COMMITTEE"
+    tags: ["decision", "debate", "ensemble", "storytelling"]
+    use_when: "Complex decisions requiring multiple perspectives"
+    related: ["roberts-rules", "rubric", "evaluator", "soul-chat"]
+    credits: "Mike Gallaher"
+    
+  - name: "roberts-rules"
+    path: "skills/roberts-rules"
+    description: "Parliamentary procedure as forcing function for genuine deliberation"
+    tier: 1
+    entry: "SKILL.md"
+    protocol: "ROBERTS-RULES"
+    tags: ["decision", "procedure", "deliberation", "structure"]
+    use_when: "Preventing LLM from short-circuiting to likely conclusions"
+    related: ["adversarial-committee", "session-log"]
+    credits: "Mike Gallaher, Henry Martyn Robert (1876)"
+    
+  - name: "rubric"
+    path: "skills/rubric"
+    description: "Measurable criteria translating qualitative debate to quantitative scores"
+    tier: 1
+    entry: "SKILL.md"
+    protocol: "RUBRIC"
+    tags: ["decision", "scoring", "evaluation", "criteria"]
+    use_when: "Need explicit criteria for comparing options"
+    related: ["adversarial-committee", "evaluator", "scoring"]
+    credits: "Mike Gallaher"
+    
+  - name: "evaluator"
+    path: "skills/evaluator"
+    description: "Independent assessment without debate context — adversarial loop prevents gaming"
+    tier: 1
+    entry: "SKILL.md"
+    protocol: "INDEPENDENT-EVALUATOR"
+    tags: ["decision", "evaluation", "adversarial", "review"]
+    use_when: "Need unbiased assessment of committee output"
+    related: ["adversarial-committee", "rubric", "room"]
+    credits: "Mike Gallaher"
+    
   - name: "debugging"
     path: "skills/debugging"
     description: "Systematic bug investigation with hypothesis tracking"
