@@ -20,6 +20,48 @@ working_set:
   # What LLM call is this for?
   call_id: null
   
+  # VM METADATA — The "virtual machine" running this context
+  vm:
+    # Model identification
+    model:
+      name: null          # e.g., "claude-sonnet-4-20250514", "gpt-4o"
+      provider: null      # e.g., "anthropic", "openai", "local"
+      version: null       # Model version/date
+      
+    # Orchestrator information
+    orchestrator:
+      name: null          # e.g., "cursor", "claude-code", "moollm-orchestrator"
+      version: null
+      driver: null        # e.g., "drivers/cursor.yml"
+      
+    # Session information
+    session:
+      id: null            # Unique session identifier
+      started_at: null    # ISO 8601
+      call_count: 0       # How many LLM calls this session
+      
+    # Capabilities available
+    capabilities:
+      tier: null          # 0-6 per constitution
+      tools:
+        read_file: null   # true/false
+        write_file: null
+        list_dir: null
+        grep: null
+        terminal: null
+        browser: null
+        mcp: null
+      features:
+        streaming: null
+        function_calling: null
+        vision: null
+        
+    # Resource limits
+    limits:
+      max_tokens_per_call: null
+      rate_limit: null    # calls per minute
+      cost_per_1k_tokens: null
+  
   # Total token budget and usage
   budget:
     max_tokens: 128000  # Model's context window
