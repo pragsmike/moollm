@@ -927,7 +927,7 @@ properties:
 The key glints mysteriously in the lamplight...
 ```
 
-**Promotion pattern:** If you need to EDIT an object after creation, pop it out to its own `.yml` file and link from the log. This keeps the log read-only (except for retroactive Ninja Edits to pop out object, replace with reference, and update references):
+**Promotion pattern:** If you need to EDIT an object after creation, pop it out to its own `.yml` file and link from the log. This keeps the log read-only (except for retroactive Ninja Edits to pop out object, replace with reference, and update incoming references):
 
 ```yaml
 # pub/mysterious-key.yml — promoted from LOG.md#mysterious-key
@@ -939,7 +939,7 @@ properties:
   polished: true  # New property added
 ```
 
-**Inheritance from log entries:** Point to `LOG.md#object-id` to inherit from an object's "birth state" in the narrative. The log preserves the original; differential edits live in separate files. Compact and auditable.
+**Inheritance from log entries:** Point to `LOG.md#object-id` to inherit from an object's "birth state" in the narrative, to make a modifiable version of an object in the narrative history. The log preserves the original; differential edits live in separate files. Compact and auditable.
 
 **Placement decisions:** Where should promoted files live?
 
