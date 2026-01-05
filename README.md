@@ -897,7 +897,60 @@ character:
 | Knowledge in context | **Knowledge + world state** |
 | All state in chat context | **Chat for ephemeral, files for durable** |
 
-**Ephemeral vs. durable state:** Some state lives temporarily in chat context (quick calculations, draft ideas, conversation flow). If it matters enough to survive the session, promote it to the filesystem. The chat is scratchpad; the files are memory.
+**Three tiers of state persistence:**
+
+| Tier | Where | Lifespan | Example |
+|------|-------|----------|---------|
+| **Platform chat** | Cursor/Claude session | Ephemeral (lost on close) | Tool calls, diffs, thinking |
+| **Narrative log** | `TRANSCRIPT.md`, `LOG.md` | Durable (read-mostly) | Data islands, event records |
+| **State files** | `*.yml` | Durable (read-write) | Characters, rooms, inventory |
+
+**Data islands in logs:** Objects can be embedded as YAML code blocks directly in the narrative log, given unique addressable IDs. No file needed for objects that don't change:
+
+```markdown
+## The Mysterious Key
+
+Bumblewick discovers a strange key under the mat:
+
+```yaml
+# LOG.md embedded object — addressable as LOG.md#mysterious-key
+id: mysterious-key
+type: object
+inherits: skills/object/OBJECT.yml.tmpl
+properties:
+  material: brass
+  inscribed: "Terpie's Nap Zone"
+  found_by: bumblewick-fantastipants
+  found_at: pub/entrance
+```
+
+The key glints mysteriously in the lamplight...
+```
+
+**Promotion pattern:** If you need to EDIT an object after creation, pop it out to its own `.yml` file and link from the log. This keeps the log read-only:
+
+```yaml
+# pub/mysterious-key.yml — promoted from LOG.md#mysterious-key
+id: mysterious-key
+inherits:
+  - LOG.md#mysterious-key  # Birth state preserved in log
+location: bumblewick-fantastipants/inventory  # Changed! Now in inventory
+properties:
+  polished: true  # New property added
+```
+
+**Inheritance from log entries:** Point to `LOG.md#object-id` to inherit from an object's "birth state" in the narrative. The log preserves the original; differential edits live in separate files. Compact and auditable.
+
+**Placement decisions:** Where should promoted files live?
+
+| Context | Suggested Location |
+|---------|-------------------|
+| Personal item | `characters/player-name/item.yml` |
+| Room fixture | `rooms/room-name/item.yml` |
+| Shared resource | `shared/item.yml` or room where generated |
+| Organized collection | `characters/player-name/inventory/item.yml` |
+
+The LLM decides by context, or skill initialization can specify placement rules.
 
 The filesystem IS the world model. Skills don't just guide behavior — they **spawn persistent artifacts** that the LLM reads and writes. The adventure state, character sheets, room contents — all files inheriting from skill prototypes.
 
