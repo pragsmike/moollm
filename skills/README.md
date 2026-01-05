@@ -9,127 +9,103 @@ Userland protocols over files.
 
 ---
 
-## What is a Skill?
+## Skill Index (50 skills)
 
-A skill is a **userland protocol** that defines:
+### 🧠 Philosophy & Core Concepts
 
-- [x] **Directory layouts** and naming conventions
-- [x] **File formats** and schemas
-- [x] **Behavioral rules** and checklists
-- [x] **Interaction patterns** the model follows
+| Skill | One-liner |
+|-------|-----------|
+| [constructionism/](./constructionism/) | Learn by building inspectable things (Papert, Kay, Logo) |
+| [skill/](./skill/) | **The meta-skill.** How skills work, evolve, compose |
+| [protocol/](./protocol/) | UPPER-CASE-HYPHENATED symbols as greppable K-lines |
+| [yaml-jazz/](./yaml-jazz/) | Semantic YAML where comments are data |
+| [postel/](./postel/) | The Robustness Principle — be liberal in acceptance |
+| [robust-first/](./robust-first/) | Survive first, be correct later (Dave Ackley) |
+| [coherence-engine/](./coherence-engine/) | LLM as consistency maintainer & orchestrator |
+| [speed-of-light/](./speed-of-light/) | Many turns in one call — instant telepathy |
 
-Skills are implemented purely through:
+### 🎮 Methodology (How to Work)
 
-- [x] File tools (`ls`, `read`, `write`, `patch`)
-- [x] Search tools (lexical, vector)
-- [x] The model reading and following documented rules
+| Skill | One-liner |
+|-------|-----------|
+| [play-learn-lift/](./play-learn-lift/) | Explore → Learn → Share wisdom |
+| [planning/](./planning/) | Flexible task decomposition |
+| [plan-then-execute/](./plan-then-execute/) | Frozen plans with human approval gates |
+| [sister-script/](./sister-script/) | Document-first automation |
+| [research-notebook/](./research-notebook/) | Structured investigation with sources |
+| [debugging/](./debugging/) | Hypothesis-driven bug hunting |
+| [code-review/](./code-review/) | Systematic code analysis |
 
-> [!IMPORTANT]
-> **Skills do NOT require orchestrator changes.** They're pure documentation.
+### 🏠 Spatial (Room/Card System)
 
----
+| Skill | One-liner |
+|-------|-----------|
+| [room/](./room/) | Directories as activation contexts |
+| [card/](./card/) | Capabilities as portable, playable cards |
+| [adventure/](./adventure/) | Narrative room exploration |
+| [memory-palace/](./memory-palace/) | Spatial knowledge organization |
+| [data-flow/](./data-flow/) | Rooms as pipeline nodes (THROW/INBOX) |
+| [return-stack/](./return-stack/) | Navigation history as continuation |
+| [multi-presence/](./multi-presence/) | Same card active in multiple rooms |
 
-## Key Principles
+### 👤 Characters & Identity
 
-### 1. Skills are Documents
-A skill is defined by its documentation, not its code.
-The model reads the docs and follows them.
+| Skill | One-liner |
+|-------|-----------|
+| [character/](./character/) | Core patterns — home, location, relationships |
+| [persona/](./persona/) | Identity layers (WHO vs WHAT) |
+| [soul-chat/](./soul-chat/) | Everything speaks — multi-voice dialogues |
+| [mind-mirror/](./mind-mirror/) | Personality via four Thought Planes (Leary) |
+| [hero-story/](./hero-story/) | Safe K-line references to real people |
+| [representation-ethics/](./representation-ethics/) | Ethics of simulating people |
+| [visualizer/](./visualizer/) | Semantic image generation with metadata |
 
-### 2. Skills are Instantiated
-Running a skill = copying its template into a session workspace.
-The instance is the activation record.
+### 🎲 Game Mechanics (Sims-style)
 
-### 3. Skills can Compose
-Skills can delegate to other skills via prototype chains.
-Self-like inheritance through file lookup.
+| Skill | One-liner |
+|-------|-----------|
+| [simulation/](./simulation/) | Central hub — turns, party, selection, world |
+| [time/](./time/) | Simulation turns vs LLM iterations |
+| [buff/](./buff/) | Temporary effects (curses = negative buffs) |
+| [needs/](./needs/) | Dynamic motivations — hunger, energy, fun |
+| [party/](./party/) | Companions and group dynamics |
+| [action-queue/](./action-queue/) | Sims-style task queue |
+| [advertisement/](./advertisement/) | Objects announce what they can do |
+| [world-generation/](./world-generation/) | Questions create places |
+| [cat/](./cat/) | Cat behavior patterns |
 
-### 4. Skills are Debuggable
-Every skill action is visible in files.
-No hidden state, no magic.
+### 💰 Economy & Scoring
 
----
+| Skill | One-liner |
+|-------|-----------|
+| [economy/](./economy/) | Currency, trade, gold flow |
+| [probability/](./probability/) | Success calculation from stats |
+| [scoring/](./scoring/) | Achievement valuation |
+| [reward/](./reward/) | Dynamic achievement rewards |
 
-## Skill Index
+### 🧠 Memory & Context
 
-### Methodology (How to Work)
+| Skill | One-liner |
+|-------|-----------|
+| [summarize/](./summarize/) | Compress without losing truth |
+| [honest-forget/](./honest-forget/) | Graceful memory decay |
+| [session-log/](./session-log/) | Human-readable audit trail |
+| [scratchpad/](./scratchpad/) | Working memory |
 
-| Skill | Purpose | Tier |
-|-------|---------|------|
-| [skill/](./skill/) | **The meta-skill.** How skills work, evolve, and compose. Central + local skills. | 1 |
-| [protocol/](./protocol/) | **The naming convention.** UPPER-CASE-HYPHENATED symbols. Greppable K-lines. | 1 |
-| [play-learn-lift/](./play-learn-lift/) | Explore → Learn → Share wisdom | 1 |
-| [sister-script/](./sister-script/) | Document-first automation | 2 |
-| [plan-then-execute/](./plan-then-execute/) | Frozen plans with approval gates | 2 |
-| [planning/](./planning/) | Flexible task decomposition | 1 |
+### 🔧 System & Recovery
 
-### Memory & Context
+| Skill | One-liner |
+|-------|-----------|
+| [self-repair/](./self-repair/) | Checklist-based healing |
+| [storytelling-tools/](./storytelling-tools/) | Narrative capture — notebooks, letters, photos |
+| [procedural-rhetoric/](./procedural-rhetoric/) | Design with intentional ideology (Bogost) |
 
-| Skill | Purpose | Tier |
-|-------|---------|------|
-| [summarize/](./summarize/) | Compress without losing truth | 1 |
-| [honest-forget/](./honest-forget/) | Graceful memory decay | 1 |
-| [session-log/](./session-log/) | Human-readable audit trail | 1 |
-| [memory-palace/](./memory-palace/) | Spatial knowledge organization | 1 |
+### 📦 Templates
 
-### Spatial (The Room/Card System)
-
-| Skill | Purpose | Tier |
-|-------|---------|------|
-| [room/](./room/) | Directories as activation contexts, objects, vehicles, turtle | 1 |
-| [card/](./card/) | Capabilities as instantiable cards | 1 |
-| [data-flow/](./data-flow/) | Rooms as pipeline nodes, THROW/INBOX/OUTBOX | 1 |
-| [adventure/](./adventure/) | Narrative room exploration | 1 |
-| [hero-story/](./hero-story/) | Safe K-line references to real people | 1 |
-| [representation-ethics/](./representation-ethics/) | Nuanced ethics of simulating people | 1 |
-| [mind-mirror/](./mind-mirror/) | Personality modeling via four Thought Planes | 1 |
-| [visualizer/](./visualizer/) | Semantic image generation with metadata | 1 |
-
-### Entity & Dialogue
-
-| Skill | Purpose | Tier |
-|-------|---------|------|
-| [soul-chat/](./soul-chat/) | Everything speaks — multi-voice dialogues | 1 |
-
-### Core Concepts (Foundational Protocols)
-
-| Skill | Purpose | Tier |
-|-------|---------|------|
-| [constructionism/](./constructionism/) | **The philosophy.** Learn by building inspectable things. Papert, Kay, Logo, Micropolis. | 1 |
-| [coherence-engine/](./coherence-engine/) | LLM as consistency maintainer, simulator, orchestrator | 1 |
-| [speed-of-light/](./speed-of-light/) | Many turns in one call, no round-trip noise | 1 |
-| [yaml-jazz/](./yaml-jazz/) | Semantic YAML where comments matter | 1 |
-| [postel/](./postel/) | The Robustness Principle — be liberal in what you accept | 1 |
-| [robust-first/](./robust-first/) | Survive first, be correct later | 1 |
-
-### Simulation & Performance
-
-| Skill | Purpose | Tier |
-|-------|---------|------|
-| [speed-of-light/](./speed-of-light/) | Many turns in one LLM call — instant communication | 1 |
-| [multi-presence/](./multi-presence/) | Same card active in multiple rooms at once | 1 |
-| [advertisement/](./advertisement/) | Objects announce what they can do (The Sims style) | 1 |
-
-### Navigation & Scheduling
-
-| Skill | Purpose | Tier |
-|-------|---------|------|
-| [return-stack/](./return-stack/) | Where you've been — navigation history as continuation | 1 |
-| [action-queue/](./action-queue/) | What you'll do — Sims-style task queue | 1 |
-
-### Development
-
-| Skill | Purpose | Tier |
-|-------|---------|------|
-| [research-notebook/](./research-notebook/) | Structured investigation | 1 |
-| [debugging/](./debugging/) | Hypothesis-driven bug hunting | 2 |
-| [code-review/](./code-review/) | Systematic code analysis | 2 |
-
-### System
-
-| Skill | Purpose | Tier |
-|-------|---------|------|
-| [self-repair/](./self-repair/) | Checklist-based healing | 1 |
-| [scratchpad/](./scratchpad/) | Working memory | 1 |
+| Skill | One-liner |
+|-------|-----------|
+| [templates/](./templates/) | Starter templates for new skills |
+| [templates/basic-skill/](./templates/basic-skill/) | Minimal skill template |
 
 ---
 
@@ -138,39 +114,26 @@ No hidden state, no magic.
 | Tier | Tools Required | Examples |
 |------|----------------|----------|
 | 0 | None (pure prompt) | Writing styles, reasoning patterns |
-| 1 | File only | Scratchpad, planning, memory palace |
-| 2 | File + execution | Code review, debugging |
-| 3 | Full access | Git workflow, deployment |
+| 1 | File read/write | Most skills |
+| 2 | + Terminal | Debugging, code-review |
 
 **Principle:** Use the lowest tier possible.
 
 ---
 
-## Skill Anatomy
+## Skill Anatomy (New Structure)
 
 ```
 skills/
   my-skill/
     README.md         # Human entry point (GitHub renders this)
-    SKILL.md          # Full protocol documentation
-    PROTOTYPE.yml     # Machine-readable definition
-    template/         # Files to copy on instantiation
-      *.tmpl          # Templates with placeholders
+    SKILL.md          # Full spec with YAML frontmatter
+    *.tmpl            # Templates at root level
 ```
 
-Every skill directory has a `README.md` — the intertwingled index.
-
----
-
-## Integration with MOOLLM
-
-| Skill Concept | MOOLLM Equivalent |
-|---------------|-------------------|
-| Skill prototype | Trading card template |
-| Skill instance | Room activation (card in play) |
-| Template files | Character soul structure |
-| Checklist | Protocol steps |
-| Delegation | Prototype inheritance |
+Every skill has:
+- `README.md` — Quick overview, links
+- `SKILL.md` — Full protocol with YAML frontmatter defining `name`, `tier`, `allowed-tools`
 
 ---
 
@@ -178,21 +141,18 @@ Every skill directory has a `README.md` — the intertwingled index.
 
 ### Use a Skill
 
-1. Read the skill's `README.md` to understand it
-2. Copy the `template/` files to your working directory
-3. Fill in the templates with your specifics
-4. Follow the documented protocol in `SKILL.md`
+1. Read the skill's `README.md`
+2. Read `SKILL.md` for full protocol
+3. Copy `*.tmpl` files to your working directory
+4. Follow the documented protocol
 
 ### Create a New Skill
 
-1. Create `skills/my-skill/`
-2. Write `README.md` (human entry point)
-3. Write `SKILL.md` (full protocol)
-4. Write `PROTOTYPE.yml` (machine definition)
-5. Create `template/` with starter files
-6. Register in `INDEX.yml`
-
-See [templates/basic-skill/](./templates/basic-skill/) for a minimal example.
+1. Copy `skills/templates/basic-skill/` to `skills/my-skill/`
+2. Edit `SKILL.md` (YAML frontmatter + documentation)
+3. Edit `README.md` (human overview)
+4. Create `*.tmpl` templates as needed
+5. Register in `INDEX.yml`
 
 ---
 
@@ -201,9 +161,8 @@ See [templates/basic-skill/](./templates/basic-skill/) for a minimal example.
 | File | Purpose |
 |------|---------|
 | [INDEX.yml](./INDEX.yml) | Machine-readable skill registry |
-| [skill-instantiation-protocol.md](./skill-instantiation-protocol.md) | SIP: How skills are invoked |
-| [delegation-object-protocol.md](./delegation-object-protocol.md) | DOP: Self-like inheritance |
-| [templates/](./templates/) | Skill templates for bootstrapping |
+| [skill-instantiation-protocol.md](./skill-instantiation-protocol.md) | How skills are invoked |
+| [delegation-object-protocol.md](./delegation-object-protocol.md) | Self-like inheritance |
 
 ---
 
@@ -222,8 +181,6 @@ See [templates/basic-skill/](./templates/basic-skill/) for a minimal example.
 
 > *"Everything is deeply intertwingled."* — Ted Nelson
 
-Skills don't stand alone. They form a web:
-
 ```mermaid
 graph TD
     PLL[play-learn-lift] -->|LIFT stage| SS[sister-script]
@@ -237,11 +194,15 @@ graph TD
     TC -->|can speak| SC[soul-chat]
     R -->|can speak| SC
     
-    SR[self-repair] -->|monitors| SL
-    SR -->|creates| HOT[hot.yml/cold.yml]
+    SIM[simulation] -->|manages| TIME[time]
+    SIM -->|manages| PARTY[party]
+    SIM -->|manages| CHAR[character]
     
-    DB[debugging] -->|uses| AP
-    DB -->|logs to| SL
+    CHAR -->|wears| PERSONA[persona]
+    CHAR -->|has| NEEDS[needs]
+    CHAR -->|affected by| BUFF[buff]
+    
+    SR[self-repair] -->|monitors| SL
 ```
 
 Every skill connects to others. Navigate freely.
@@ -249,7 +210,7 @@ Every skill connects to others. Navigate freely.
 ---
 
 <details>
-<summary><strong>📚 See Also (click to expand)</strong></summary>
+<summary><strong>📚 See Also</strong></summary>
 
 ### Protocols & Symbols
 - [PROTOCOLS.yml](../PROTOCOLS.yml) — Full symbol index (K-lines)
@@ -258,14 +219,8 @@ Every skill connects to others. Navigate freely.
 ### Kernel (Infrastructure)
 - [kernel/](../kernel/) — The basement
 - [kernel/NAMING.yml](../kernel/NAMING.yml) — File naming conventions
-- [kernel/tool-calling-protocol.md](../kernel/tool-calling-protocol.md) — WHY-REQUIRED
 
 ### Schemas (Shapes)
 - [schemas/](../schemas/) — Data format definitions
-- [schemas/agent-directory-schema.yml](../schemas/agent-directory-schema.yml) — `.agent/` structure
-
-### Meta
-- [skill-instantiation-protocol.md](./skill-instantiation-protocol.md) — How skills are born
-- [delegation-object-protocol.md](./delegation-object-protocol.md) — How skills inherit
 
 </details>
