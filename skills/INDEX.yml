@@ -1,6 +1,76 @@
 # MOOLLM Skill Registry
 
 skills:
+  # TIER 0: KNOWLEDGE ONLY (No tools, just understanding)
+  
+  # --- META SKILLS ---
+  
+  - name: "skill"
+    path: "skills/skill"
+    description: "The meta-skill: how skills work, inherit, and instantiate"
+    tier: 0
+    entry: "SKILL.md"
+    tags: ["meta", "foundational", "inheritance"]
+    use_when: "Creating, understanding, or debugging skills"
+    docs: ["delegation-object-protocol.md", "skill-instantiation-protocol.md"]
+    
+  - name: "protocol"
+    path: "skills/protocol"
+    description: "K-lines as semantic activation — protocol names invoke capability clusters"
+    tier: 0
+    entry: "SKILL.md"
+    tags: ["meta", "semantics", "k-lines"]
+    use_when: "Understanding or creating protocol invocations"
+    
+  - name: "yaml-jazz"
+    path: "skills/yaml-jazz"
+    description: "Comments as semantic data — structure for LLMs, not just machines"
+    tier: 0
+    entry: "SKILL.md"
+    tags: ["meta", "yaml", "semantics"]
+    use_when: "Designing YAML files for LLM consumption"
+    
+  - name: "postel"
+    path: "skills/postel"
+    description: "Be liberal in what you accept, conservative in what you emit"
+    tier: 0
+    entry: "SKILL.md"
+    tags: ["meta", "robustness", "philosophy"]
+    use_when: "Designing interfaces, handling varied input"
+    
+  - name: "robust-first"
+    path: "skills/robust-first"
+    description: "Dave Ackley: stay alive and heal, don't crash"
+    tier: 0
+    entry: "SKILL.md"
+    tags: ["meta", "robustness", "philosophy"]
+    use_when: "Designing for graceful degradation"
+    
+  - name: "constructionism"
+    path: "skills/constructionism"
+    description: "Papert: learn by building in microworlds"
+    tier: 0
+    entry: "SKILL.md"
+    tags: ["meta", "learning", "philosophy"]
+    use_when: "Designing learning experiences or microworlds"
+    
+  - name: "speed-of-light"
+    path: "skills/speed-of-light"
+    description: "Simulate many turns inside one LLM call"
+    tier: 0
+    entry: "SKILL.md"
+    tags: ["meta", "simulation", "ensemble"]
+    use_when: "Multi-agent deliberation in single call"
+    related: ["adversarial-committee", "debate", "soul-chat"]
+    
+  - name: "coherence-engine"
+    path: "skills/coherence-engine"
+    description: "LLM as consistency maintainer and orchestrator"
+    tier: 0
+    entry: "SKILL.md"
+    tags: ["meta", "simulation", "consistency"]
+    use_when: "Understanding how LLM maintains world state"
+    
   # TIER 1: FILE-ONLY (No execution required)
   
   # --- CORE METHODOLOGY ---
@@ -105,6 +175,15 @@ skills:
     entry: "SKILL.md"
     tags: ["exploration", "narrative", "investigation"]
     use_when: "Exploring an unfamiliar codebase or investigating a bug"
+    
+  - name: "hero-story"
+    path: "skills/hero-story"
+    description: "Campbell's monomyth as narrative template"
+    tier: 1
+    entry: "SKILL.md"
+    tags: ["narrative", "structure", "journey"]
+    use_when: "Structuring long-form adventures or projects"
+    related: ["adventure", "storytelling-tools"]
     
   # --- LLOOOOMM EXPERIMENTAL ---
   
@@ -288,6 +367,58 @@ skills:
     use_when: "Creating cats, kittens, or cat-like creatures"
     related: ["character", "buff", "room"]
     
+  # --- AGENTIC PATTERNS ---
+  
+  - name: "action-queue"
+    path: "skills/action-queue"
+    description: "Sims-style task queue — objects can push prerequisites"
+    tier: 1
+    entry: "SKILL.md"
+    protocol: "ACTION-QUEUE"
+    tags: ["game", "actions", "queue", "sims"]
+    use_when: "Managing character actions and priorities"
+    related: ["advertisement", "needs", "character"]
+    
+  - name: "advertisement"
+    path: "skills/advertisement"
+    description: "Objects broadcast available actions with scores"
+    tier: 1
+    entry: "SKILL.md"
+    protocol: "ADVERTISEMENT"
+    tags: ["game", "actions", "broadcast", "sims"]
+    use_when: "Objects or rooms offering contextual interactions"
+    related: ["action-queue", "room", "card"]
+    
+  - name: "multi-presence"
+    path: "skills/multi-presence"
+    description: "Same card instantiated in multiple rooms simultaneously"
+    tier: 1
+    entry: "SKILL.md"
+    protocol: "MULTI-PRESENCE"
+    tags: ["cards", "cloning", "parallel", "distributed"]
+    use_when: "Exploring multiple rooms, parallel work, consensus building"
+    related: ["card", "room", "party"]
+    
+  - name: "return-stack"
+    path: "skills/return-stack"
+    description: "Navigation history as first-class continuation"
+    tier: 1
+    entry: "SKILL.md"
+    protocol: "RETURN-STACK"
+    tags: ["navigation", "history", "continuation"]
+    use_when: "Managing breadcrumbs, backtracking, or history manipulation"
+    related: ["room", "adventure", "memory-palace"]
+    
+  - name: "data-flow"
+    path: "skills/data-flow"
+    description: "Rooms as nodes, exits as edges, objects as messages"
+    tier: 1
+    entry: "SKILL.md"
+    protocol: "DATA-FLOW"
+    tags: ["dataflow", "programming", "rooms", "kilroy"]
+    use_when: "Building pipelines, factories, or processing networks"
+    related: ["room", "card", "debate"]
+    
   # TIER 2: READ + EXECUTE
   
   - name: "sister-script"
@@ -430,28 +561,35 @@ planned:
     notes: "LLOOOOMM experimental - safe K-line wrappers"
     
   - name: "representation-ethics"
-    description: "Nuanced ethics of simulating real and fictional people"
-    tier: 1
-    status: "active"
+    path: "skills/representation-ethics"
+    description: "Ethics of simulating real and fictional people"
+    tier: 0
+    entry: "SKILL.md"
     protocol: "REPRESENTATION-ETHICS"
-    notes: "Consent hierarchy, game frames, Sims precedent, self-sovereignty"
+    tags: ["ethics", "representation", "consent", "philosophy"]
+    use_when: "Simulating real people, creating fictional versions"
+    notes: "Consent hierarchy, game frames, Sims precedent"
     
   - name: "mind-mirror"
+    path: "skills/mind-mirror"
     description: "Personality modeling via four Thought Planes"
     tier: 1
-    status: "active"
+    entry: "SKILL.md"
     protocol: "MIND-MIRROR"
-    notes: "Timothy Leary 1985, Interpersonal Circumplex, character DNA"
+    tags: ["personality", "traits", "sims", "circumplex"]
+    use_when: "Defining deep personality, character DNA"
+    related: ["character", "persona"]
+    notes: "Timothy Leary 1985, Interpersonal Circumplex"
     
   - name: "naming"
     path: "skills/naming"
     description: "Big-endian file naming as semantic binding"
-    tier: 1
+    tier: 0
     entry: "SKILL.md"
     tags: ["meta", "organization", "filesystem"]
     use_when: "Naming files, organizing directories"
     related: ["room", "character"]
-    notes: "Wraps kernel/NAMING.yml — the filesystem is a semantic network"
+    notes: "Wraps kernel/NAMING.yml"
 
 # GUIDELINES
 

@@ -480,7 +480,11 @@ learned_skills:
 - **[../constructionism/](../constructionism/)** — Building skills by doing
 - **[../soul-chat/](../soul-chat/)** — Skills embedded in design conversations
 - **[../../kernel/](../../kernel/)** — Core skill infrastructure
-- **[../delegation-object-protocol.md](../delegation-object-protocol.md)** — Skill inheritance
+
+### Protocol Documents (in this directory)
+
+- **[delegation-object-protocol.md](./delegation-object-protocol.md)** — Self-like prototype inheritance for LLMs
+- **[skill-instantiation-protocol.md](./skill-instantiation-protocol.md)** — How skills become activation records
 
 ---
 
