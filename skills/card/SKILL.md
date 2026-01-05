@@ -8,7 +8,7 @@ allowed-tools:
 tier: 1
 protocol: TRADING-CARD
 tags: [gamification, capabilities, lloooomm, actor]
-related: [room, soul-chat, adventure, delegation-object-protocol]
+related: [room, soul-chat, adventure, delegation-object-protocol, return-stack, visualizer]
 templates:
   - file: CARD.yml.tmpl
     purpose: Individual card template
@@ -151,6 +151,135 @@ A **card in play** is an instance with:
 - Room it lives in
 
 You can have **multiple activations** of the same card, in the same or different rooms. They're independent task instances.
+
+---
+
+## Activation Records
+
+**Playing a card = creating an activation record.**
+
+When you play a card in a room, you're instantiating a method with its own persistent state:
+
+```yaml
+# design-room/architect-task-001.activation
+card: architect.card
+method: generate_proposal
+state:
+  iteration: 3
+  current_draft: proposal-v3.yml
+  feedback_received: [critic-001, economist-001]
+  status: awaiting_vote
+  
+# Parameters supplied when played
+params:
+  project: "cat-cave-expansion"
+  budget: 50000
+  constraints: "must be cozy, TARDIS-like"
+```
+
+### Cards Have Multiple Methods
+
+Like Self objects, a card can have **any number of methods**:
+
+```yaml
+# architect.card
+card:
+  name: Architect
+  type: professional
+  
+  methods:
+    generate_proposal:
+      description: "Create a design proposal"
+      params:
+        project: required
+        budget: optional
+        constraints: optional
+      creates: proposal.yml
+      
+    review_proposal:
+      description: "Critique an existing proposal"
+      params:
+        proposal: required   # LLM supplies from context
+      creates: review.yml
+      
+    revise_proposal:
+      description: "Update proposal based on feedback"
+      params:
+        proposal: required
+        feedback: required   # List of review activations
+      creates: proposal-revised.yml
+      
+    finalize:
+      description: "Lock in the final design"
+      params:
+        proposal: required
+        approvals: "all committee members"
+```
+
+### Implicit Parameter Resolution
+
+Methods can request **named parameters** — the LLM supplies them from context:
+
+```yaml
+# Playing architect.review_proposal without explicit params:
+> PLAY architect.review_proposal
+
+# LLM infers from context:
+params:
+  proposal: ./proposal-v3.yml  # Only proposal file in room
+```
+
+The LLM applies POSTEL — be liberal in what you accept. If the context makes the parameter obvious, fill it in.
+
+### Pure State Cards
+
+Cards don't need methods at all. They can be **pure state containers**:
+
+```yaml
+# image-prompt-cluster.card
+card:
+  name: "Cozy Coffeeshop Vibe"
+  type: prompt-cluster
+  
+  # No methods — just state for other cards to reference
+  state:
+    style: "warm lighting, exposed brick, jazz atmosphere"
+    palette: ["#8B4513", "#D2691E", "#F4A460", "#FFDEAD"]
+    textures: ["worn leather", "reclaimed wood", "steam"]
+    mood: "gezelligheid"
+    artists: ["Edward Hopper", "Vilhelm Hammershøi"]
+    
+  # Other cards can inherit or reference this cluster
+  use_as: "visualizer prompt context"
+```
+
+When the `visualizer` card generates an image, it can **inherit from** or **compose with** prompt clusters:
+
+```yaml
+# visualizer activation
+card: visualizer.card
+method: generate_image
+params:
+  subject: "Terpie the cat napping"
+  context: [image-prompt-cluster.card]  # Inherit the vibe
+```
+
+### Activation Lifecycle
+
+```
+PLAY card.method      → Create activation file in room
+                      → State: pending
+                      
+LLM executes method   → State: in_progress
+                      → State evolves with each iteration
+                      
+Method completes      → State: completed
+                      → Return value written
+                      → Activation archived or deleted
+                      
+Multiple activations  → Same card, different states
+                      → Independent execution contexts
+```
 
 ---
 
