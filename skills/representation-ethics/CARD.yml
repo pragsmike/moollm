@@ -34,17 +34,36 @@ methods:
     parameters:
       representation: "What's being simulated"
       context: "How it's being used"
+      framing: "How it's presented (play, tribute, biographical, etc.)"
     output: chat (analysis)
     effect: "Evaluate against ethics framework"
     invoked_by: [designer, player]
     
   REFRAME:
-    description: "Convert impersonation to tradition activation"
+    description: "Convert problematic impersonation to ethical approach"
     parameters:
       problematic: "The problematic representation"
     output: chat (alternative)
-    effect: "Suggest hero-story approach"
+    effect: "Suggest tradition activation or performance framing"
     invoked_by: [designer]
+    
+  FRAME:
+    description: "Establish ethical framing for a discussion"
+    parameters:
+      topic: "What's being discussed/simulated"
+      participants: "Who's being represented"
+    output: chat (framing language)
+    effect: "Create explicit performative/exploratory context"
+    invoked_by: [player, dm]
+    
+  ABSTRACTION:
+    description: "Choose appropriate abstraction level"
+    parameters:
+      subject: "Real person being referenced"
+      purpose: "Why they're being invoked"
+    output: chat (recommended approach)
+    effect: "Select from tradition → quote spectrum"
+    invoked_by: [designer, player]
 
 # STATE
 
@@ -54,8 +73,9 @@ state: {}
 
 framework:
   key_distinction: |
-    IMPERSONATION: "I am Richard Feynman and I think..."
+    DECEPTIVE IMPERSONATION: "I am Richard Feynman and I think..."
     TRADITION ACTIVATION: "Applying Feynman's curiosity tradition..."
+    PERFORMANCE IMPERSONATION: "Tonight, playing Feynman..." (clearly framed)
     
   consent_hierarchy:
     - "Public figures (public words only)"
@@ -68,21 +88,154 @@ framework:
     when it's clearly gamified, user-controlled, and
     doesn't claim to represent their actual thoughts.
 
+# PERFORMANCE IMPERSONATION
+
+performance:
+  description: |
+    There's a rich tradition of EXPLICIT impersonation that's ethical
+    because it's clearly framed as performance, tribute, or play.
+    The audience knows it's not the real person.
+    
+  examples:
+    elvis_impersonators: |
+      Elvis impersonators are a beloved tradition. Everyone knows
+      it's not really Elvis. The framing is explicit: "tribute artist",
+      "impersonator", "the King lives on through..."
+      
+      The impersonator channels Elvis's style, voice, moves — but
+      doesn't claim to BE Elvis or speak his actual thoughts.
+      
+    tribute_bands: |
+      "The Australian Pink Floyd Show" isn't Pink Floyd.
+      They play Pink Floyd's music, recreate the experience,
+      honor the tradition. Nobody is deceived.
+      
+      Tribute bands are CELEBRATION, not deception.
+      
+    biopics_and_plays: |
+      Actors play real people all the time:
+      - Cate Blanchett as Bob Dylan
+      - Gary Oldman as Churchill
+      - Lin-Manuel Miranda's Hamilton
+      
+      The framing is clear: "based on", "inspired by", "a portrayal of".
+      Artistic license is expected and understood.
+      
+    drag_and_celebrity_impersonation: |
+      Drag performers often embody celebrities as homage.
+      RuPaul's Drag Race has "Snatch Game" — playing celebrities.
+      It's clearly performance, clearly play, clearly tribute.
+      
+  why_its_ethical: |
+    The key is TRANSPARENT FRAMING:
+    
+    1. The audience knows it's a performance
+    2. The performer doesn't claim to BE the person
+    3. It's understood as tribute, art, or entertainment
+    4. The real person's actual views aren't misrepresented as fact
+    
+  moollm_application: |
+    In MOOLLM, if the CONTEXT is clearly framed as:
+    - A simulation
+    - A game
+    - A "what if" exploration
+    - A tribute/homage
+    - A discussion of possibilities
+    
+    Then characters WITHIN that context inherit the framing.
+    
+    Example: "Let's simulate a debate between historical philosophers"
+    The framing makes clear this is imaginative exploration,
+    not a claim about what Plato actually thought.
+
+# FRAMING INHERITANCE
+
+framing_inheritance:
+  principle: |
+    When a discussion or simulation is framed as performance/play,
+    all characters within it inherit that framing automatically.
+    
+  examples:
+    - context: "Let's play a game where you're a detective"
+      framing: "play, game"
+      inheritance: "Detective character is clearly fictional/performative"
+      
+    - context: "Imagine Einstein and Feynman debating quantum mechanics"
+      framing: "imagine, exploration"
+      inheritance: "Both characters are imaginative reconstructions"
+      
+    - context: "In this adventure, you meet a character inspired by Bowie"
+      framing: "adventure, inspired by"
+      inheritance: "Character is tribute, not simulation"
+      
+  abstraction_levels:
+    direct_quote: "Feynman wrote: '...' (cite source)"
+    tradition_activation: "The Feynman approach would be..."
+    inspired_character: "A character with Feynman's curiosity..."
+    performative_embodiment: "Tonight, playing Feynman in our debate..."
+    fictional_homage: "Professor Fineman, who reminds everyone of..."
+    
+  the_spectrum: |
+    MOST ABSTRACT ←────────────────────────→ MOST DIRECT
+    
+    Tradition    Inspired    Homage    Performance    Biographical    Quote
+    activation   character   (renamed)  impersonation  portrayal      (cited)
+    
+    All can be ethical with appropriate framing and context.
+
+# WHAT MAKES IT WRONG
+
+wrong_when:
+  deception: "Claiming to actually BE the person"
+  misrepresentation: "Putting false words in their mouth as fact"
+  defamation: "Damaging reputation through false portrayal"
+  exploitation: "Using likeness for profit without consent (varies by law)"
+  violation: "Exposing private information"
+  
+  the_test: |
+    Would a reasonable person be deceived about:
+    - Whether this is the real person's actual view?
+    - Whether this is performance vs reality?
+    
+    If yes → problematic
+    If no → likely fine
+
 # ADVERTISEMENTS
 
 advertisements:
   ETHICS_CHECK:
     score: 95
     condition: "Creating representation of real person"
+    
+  FRAME_DISCUSSION:
+    score: 90
+    condition: "About to simulate or discuss real people"
+    
+  CHOOSE_ABSTRACTION:
+    score: 85
+    condition: "Unsure how directly to represent someone"
+    
+  TRIBUTE_VS_IMPERSONATION:
+    score: 88
+    condition: "Walking the line between homage and deception"
 
 # RELATED
 
 see_also:
-  - skills/hero-story  # Safe representation
+  - skills/hero-story  # Safe K-line references
   - skills/persona     # Identity layers
+  - skills/debate      # Historical figure debates
+  - skills/soul-chat   # Multi-voice conversations
 
 # CREDITS
 
 credits:
   framework:
     - "MOOLLM representation ethics"
+  cultural_precedents:
+    - "Elvis impersonators — Tribute artist tradition"
+    - "Tribute bands — Celebrating through recreation"
+    - "Biographical film/theater — Artistic portrayal"
+    - "Drag performance — Celebrity embodiment as homage"
+    - "SNL, impressionists — Satirical impersonation"
+    - "Historical reenactment — Educational performance"
