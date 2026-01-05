@@ -1,0 +1,140 @@
+# CARD.yml — Simulation
+#
+# Central hub for simulation state — turns, party, selection, world.
+# "The game state lives here."
+
+card:
+  id: simulation
+  name: "Simulation"
+  type: [skill, game, state, central]
+  
+  emoji: 🎮
+  
+  rarity: epic
+  
+  description: |
+    Central hub for all simulation state. Manages turns, time,
+    party composition, selection targets, and global parameters.
+    
+    Adventure skill inherits from this.
+
+# TOOLS REQUIRED
+
+tools:
+  required:
+    - read_file
+    - write_file
+  optional: []
+
+tier: 1
+
+# METHODS
+
+methods:
+  
+  TICK:
+    description: "Advance simulation by one turn"
+    parameters: {}
+    output: chat + state_changes
+    effect: "Increment turn, tick buffs, decay needs"
+    invoked_by: [player, time, automatic]
+    
+  PAUSE:
+    description: "Pause the simulation"
+    parameters: {}
+    output: state_change
+    effect: "Set paused = true"
+    invoked_by: [player]
+    
+  RESUME:
+    description: "Resume the simulation"
+    parameters: {}
+    output: state_change
+    effect: "Set paused = false"
+    invoked_by: [player]
+    
+  STATUS:
+    description: "Show simulation state"
+    parameters: {}
+    output: chat
+    effect: "Display turn, party, selection, flags"
+    invoked_by: [player]
+    
+  SELECT:
+    description: "Set selection targets"
+    parameters:
+      targets: "What to select"
+    output: state_change
+    effect: "Update selection list"
+    invoked_by: [player]
+    
+  CONFIGURE:
+    description: "Set simulation parameters"
+    parameters:
+      parameter: "Which parameter"
+      value: "New value"
+    output: state_change
+    effect: "Update configuration"
+    invoked_by: [player]
+
+# STATE
+
+state:
+  simulation_schema:
+    turn:
+      type: integer
+      default: 0
+    paused:
+      type: boolean
+      default: false
+    time:
+      time_of_day:
+        type: string
+      advancement:
+        type: enum
+        values: [paused, slow, normal, fast]
+    party:
+      type: array
+      description: "References to party member characters"
+    selection:
+      type: array
+      description: "Currently selected targets"
+    flags:
+      type: object
+      description: "Game state flags"
+    git:
+      auto_commit:
+        type: boolean
+      auto_push:
+        type: boolean
+    output:
+      log_path:
+        type: path
+      transcript_path:
+        type: path
+
+# ADVERTISEMENTS
+
+advertisements:
+  MANAGE_GAME_STATE:
+    score: 95
+    condition: "Running a simulation or game"
+    
+  CONTROL_TIME:
+    score: 90
+    condition: "Need to advance or pause time"
+
+# RELATED
+
+see_also:
+  - skills/adventure  # Inherits from this
+  - skills/time       # Time management
+  - skills/party      # Party management
+  - skills/character  # State per character
+
+# CREDITS
+
+credits:
+  inspiration:
+    - "The Sims — Simulation loops"
+    - "City builders — Game state management"

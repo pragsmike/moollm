@@ -1,0 +1,108 @@
+# CARD.yml — Sister Script
+#
+# Document-first automation — the doc is the source of truth.
+# "The documentation becomes the code."
+
+card:
+  id: sister-script
+  name: "Sister Script"
+  type: [skill, automation, methodology]
+  
+  emoji: 👯
+  
+  rarity: uncommon
+  
+  description: |
+    Document-first automation. Write the procedure as documentation.
+    The LLM follows it. When stable, extract into Python CLI.
+    The doc remains the source of truth.
+
+# TOOLS REQUIRED
+
+tools:
+  required:
+    - read_file
+    - write_file
+  optional:
+    - run_terminal_cmd
+
+tier: 2  # May execute scripts
+
+# METHODS
+
+methods:
+  
+  DOCUMENT:
+    description: "Write procedure as documentation"
+    parameters:
+      procedure: "What to automate"
+    output: file (PROCEDURE.md)
+    effect: "Create documentation-first procedure"
+    invoked_by: [player]
+    
+  FOLLOW:
+    description: "Execute documented procedure"
+    parameters:
+      procedure: "Which doc to follow"
+    output: chat + effects
+    effect: "LLM follows documented steps"
+    invoked_by: [player]
+    
+  EXTRACT:
+    description: "Convert to Python CLI"
+    parameters:
+      procedure: "Which doc"
+    output: file (script.py) + chat
+    effect: "Generate Python from documentation"
+    invoked_by: [player, lift_phase]
+    
+  SYNC:
+    description: "Update doc from script changes"
+    parameters:
+      script: "Which script"
+    output: state_change
+    effect: "Keep doc and script aligned"
+    invoked_by: [player]
+
+# STATE
+
+state: {}
+
+# THE METHODOLOGY
+
+methodology:
+  flow:
+    1: "Write procedure as PROCEDURE.md"
+    2: "LLM follows it (PLAY/LEARN)"
+    3: "Refine until stable"
+    4: "Extract to Python (LIFT)"
+    5: "Keep doc as source of truth"
+    
+  why: |
+    Documentation is readable by everyone.
+    Scripts are only readable by programmers.
+    The doc comes first, stays authoritative.
+
+# ADVERTISEMENTS
+
+advertisements:
+  AUTOMATE_PROCEDURE:
+    score: 90
+    condition: "Repetitive task needs automation"
+    
+  LIFT_TO_SCRIPT:
+    score: 85
+    condition: "Procedure is stable, ready for code"
+
+# RELATED
+
+see_also:
+  - skills/play-learn-lift  # LIFT phase
+  - skills/skill            # Skills can be automated
+
+# CREDITS
+
+credits:
+  methodology:
+    - "Don Hopkins — Documentation-first automation"
+    - "Literate programming"

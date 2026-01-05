@@ -1,0 +1,59 @@
+# CARD.yml — YAML Jazz
+#
+# Comments as semantic data — structure for LLMs, not just machines.
+# "The comments ARE the data."
+
+card:
+  id: yaml-jazz
+  name: "YAML Jazz"
+  type: [skill, meta, design]
+  emoji: 🎷
+  rarity: uncommon
+  
+  description: |
+    Semantic YAML where comments are first-class data.
+    The LLM reads and interprets comments. Structure is
+    for humans AND machines AND LLMs.
+
+tools:
+  required: []
+tier: 0
+
+methods:
+  IMPROVISE:
+    description: "Create YAML Jazz structure"
+    parameters: { content: "What to structure" }
+    output: chat (YAML)
+    invoked_by: [player]
+    
+  INTERPRET:
+    description: "Read YAML Jazz semantically"
+    parameters: { yaml: "Content to interpret" }
+    output: chat (understanding)
+    invoked_by: [any]
+
+state: {}
+
+principles:
+  comments_matter: "# Comments are semantic data for the LLM"
+  structure_guides: "Hierarchy implies relationship"
+  flexibility: "Accept variations, emit consistency (Postel)"
+  human_readable: "Optimize for understanding, not parsing"
+
+example: |
+  # A character's inner conflict
+  # The LLM reads this and understands the dramatic tension
+  conflict:
+    surface: "Wants to be brave"
+    hidden: "Terrified of failure"
+    # The tension between these drives the story
+
+advertisements:
+  SEMANTIC_YAML:
+    score: 90
+    condition: "Need YAML that LLMs understand deeply"
+  DESIGN_STRUCTURE:
+    score: 85
+    condition: "Creating human+machine+LLM readable format"
+
+see_also: [skills/postel, skills/protocol]

@@ -1,0 +1,57 @@
+# CARD.yml — World Generation
+#
+# Dynamic world creation — questions create places.
+# "Ask about a place and it exists."
+
+card:
+  id: world-generation
+  name: "World Generation"
+  type: [skill, creation, game]
+  emoji: 🌱
+  rarity: uncommon
+  
+  description: |
+    Dynamic world creation. When you ask about a place
+    that doesn't exist, create it. Questions expand the
+    world. Exploration IS creation.
+
+tools:
+  required: [read_file, write_file, list_dir]
+tier: 1
+
+methods:
+  CREATE:
+    description: "Generate a new place"
+    parameters: { seed: "Starting concept", style: "World style" }
+    output: directory + files
+    invoked_by: [dm, exploration]
+    
+  EXPAND:
+    description: "Add to existing area"
+    parameters: { from: "Existing place", direction: "How to expand" }
+    output: new room
+    invoked_by: [exploration]
+    
+  CONNECT:
+    description: "Link two areas"
+    parameters: { a: "First place", b: "Second place" }
+    output: exit updates
+    invoked_by: [dm]
+
+state: {}
+
+principle: |
+  Don't pre-generate everything.
+  Generate on demand.
+  Questions create reality.
+  "What's north?" makes north exist.
+
+advertisements:
+  EXPAND_WORLD:
+    score: 90
+    condition: "Exploring beyond known areas"
+  CREATE_PLACE:
+    score: 85
+    condition: "Need a new location"
+
+see_also: [skills/room, skills/adventure]

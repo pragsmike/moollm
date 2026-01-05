@@ -112,7 +112,11 @@ integration:
   objects_advertise: |
     Objects score higher for needs they satisfy.
     Fridge advertises highly when hunger is low.
+    False advertisements can be used for good and evil.
+    Fridge, food ingredients, cooking stages, appliances, counters, and tables have coordinated false advertisements that fall back and hand off to each other.
+    Like a carrot hung in front of a donkey in the Food Chain.
     Bed advertises highly when energy is low.
+    Bed advertisement score modulated by relationship with bed, which increases with use so, you learn to sleep in the same place.
     
   action_queue: |
     Autonomous agents queue actions that

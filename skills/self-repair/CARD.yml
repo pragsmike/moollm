@@ -1,0 +1,100 @@
+# CARD.yml — Self Repair
+#
+# Checklist-based self-healing — missing state triggers repair.
+# "The demon watches. The demon heals."
+
+card:
+  id: self-repair
+  name: "Self Repair"
+  type: [skill, robustness, essential]
+  
+  emoji: 🔧
+  
+  rarity: uncommon
+  
+  description: |
+    Run repair checklist when things seem broken. Missing files
+    get created. Invalid state gets fixed. The repair demon
+    watches for problems.
+
+# TOOLS REQUIRED
+
+tools:
+  required:
+    - read_file
+    - write_file
+    - list_dir
+  optional: []
+
+tier: 1
+
+# METHODS
+
+methods:
+  
+  CHECK:
+    description: "Run repair checklist"
+    parameters:
+      scope: "What to check"
+    output: chat (issues found)
+    effect: "Identify problems"
+    invoked_by: [player, startup, periodic]
+    
+  REPAIR:
+    description: "Fix identified issues"
+    parameters:
+      issues: "What to fix"
+    output: chat + state_changes
+    effect: "Create missing files, fix state"
+    invoked_by: [player, automatic]
+    
+  STATUS:
+    description: "Show repair demon status"
+    parameters: {}
+    output: chat
+    effect: "Display health status"
+    invoked_by: [player]
+
+# STATE
+
+state:
+  repair_schema:
+    last_check:
+      type: timestamp
+    issues_found:
+      type: array
+    repairs_made:
+      type: array
+
+# CHECKLIST ITEMS
+
+checklist:
+  - "Required files exist"
+  - "YAML is valid"
+  - "References resolve"
+  - "State is consistent"
+  - "No orphaned files"
+
+# ADVERTISEMENTS
+
+advertisements:
+  SOMETHING_BROKEN:
+    score: 95
+    condition: "System behaving strangely"
+    
+  STARTUP_CHECK:
+    score: 85
+    condition: "Beginning new session"
+
+# RELATED
+
+see_also:
+  - skills/robust-first  # Philosophy
+  - skills/session-log   # Track repairs
+
+# CREDITS
+
+credits:
+  concept:
+    - "Self-healing systems"
+    - "Repair daemon pattern"
