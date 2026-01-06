@@ -136,13 +136,31 @@ The story is MORE honest now, not less. We're not hiding that these are simulati
 ## Files Changed
 
 ```
-3 files changed
+4 files changed
 
 Modified:
 - examples/adventure-4/pub/guest-book.yml (tribute archive framing)
 - examples/adventure-4/pub/ROOM.yml (tribute protocol)
 - examples/adventure-4/sessions/don-session-1.md (invocation + acknowledgment beats)
+- designs/PR-TRIBUTE-FRAMING-ETHICS.md (this file)
 ```
+
+---
+
+## 🔬 Accuracy Fix: Andy Looney
+
+After implementing the tribute framing, we received a photo correction:
+**Andy wears a lab coat, not a beard!**
+
+Updated description from:
+> *"a tall bearded man with twinkling eyes"*
+
+To:
+> *"a tall man in a white lab coat with twinkling eyes and the unmistakable air of a mad scientist"*
+
+Added "The guy in the lab coat" to his `also_known_as` list.
+
+**This demonstrates the ethical loop in action:** Even tributes should be accurate to the person being honored. The Mad Scientist of Games deserves his proper costume! 🔬🃏
 
 ---
 
