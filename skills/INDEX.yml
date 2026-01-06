@@ -608,7 +608,10 @@ planned:
 
 guidelines:
   structure:
-    - "Every skill needs README.md (landing page) and SKILL.md (full spec with YAML frontmatter)"
+    - "Every skill needs README.md (landing page), SKILL.md (full spec), and CARD.yml (interface)"
+    - "README.md: Human-friendly overview, when to use, quick start"
+    - "SKILL.md: Full specification with YAML frontmatter"
+    - "CARD.yml: Machine-readable interface — methods, tools, state, advertisements"
     - "Templates live at skill root level (not in template/ subdirectory)"
     - "Templates use .tmpl extension for files with variable substitution"
     
@@ -619,8 +622,9 @@ guidelines:
     
   naming:
     - "Skill directories: lowercase-with-dashes"
-    - "Core files: UPPERCASE.ext (README.md, SKILL.md)"
+    - "Core files: UPPERCASE.ext (README.md, SKILL.md, CARD.yml)"
     - "Templates: FILENAME.ext.tmpl at skill root"
+    - "Methods in CARD.yml: LIKE-THIS (kebab-case, not LIKE_THIS)"
     
   registration:
     - "Register here when skill is ready for use"

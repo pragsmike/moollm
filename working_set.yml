@@ -50,6 +50,8 @@ working_set:
         grep: null
         terminal: null
         browser: null
+        python: null
+        javascript: null
         mcp: null
       features:
         streaming: null
