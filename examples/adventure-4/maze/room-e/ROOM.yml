@@ -43,8 +43,8 @@ room:
       destination: ../room-f/
       description: "Cobwebs thin out this way. Relatively."
     south:
-      destination: ../room-b/
-      description: "You hear a faint echo from this direction."
+      destination: ../crystal-cave/
+      description: "A prismatic glow cuts through the cobwebs"
     east:
       destination: ../room-g/
       description: "More passages. More twistiness."

@@ -45,8 +45,8 @@ room:
       destination: ../room-b/
       description: "A passage with '7 DAYS' scratched ominously beside it"
     south:
-      destination: ../room-d/
-      description: "A passage. Someone drew a smiley face here. Unsettling."
+      destination: ../crystal-cave/
+      description: "A faint prismatic glow emanates from this direction"
     east:
       destination: ../room-d/
       description: "The scratches here say 'DEFINITELY NOT A LOOP'"

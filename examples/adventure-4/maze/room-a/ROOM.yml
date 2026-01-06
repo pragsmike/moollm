@@ -49,8 +49,11 @@ room:
       destination: ../room-b/
       description: "A passage. Twisty. Little. You know the drill."
     west:
+      destination: ../crystal-cave/
+      description: "A faint prismatic glow... crystals?"
+    down:
       destination: ../room-d/
-      description: "Another passage, equally twisty, equally little"
+      description: "A sloping passage leading deeper"
   
   # Distinguishing feature (for the observant)
   feature: puddle

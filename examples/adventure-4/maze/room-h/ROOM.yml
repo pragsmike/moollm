@@ -45,8 +45,8 @@ room:
   
   exits:
     north:
-      destination: ../room-j/
-      description: "The mushrooms thin out this way."
+      destination: ../garden/
+      description: "Is that... sunlight? And grass?"
     south:
       destination: ../room-f/
       description: "It gets colder down there."
@@ -56,6 +56,9 @@ room:
     west:
       destination: ../room-d/
       description: "A golden glow — warmer than mushroom light!"
+    up:
+      destination: ../room-j/
+      description: "The mushrooms thin out this way."
   
   ambience: |
     The mushrooms pulse in a rhythm that almost sounds like breathing.

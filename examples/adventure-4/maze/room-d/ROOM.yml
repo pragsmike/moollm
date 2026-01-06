@@ -41,19 +41,19 @@ room:
     
     Passages lead in all directions. One of them DEFINITELY glows.
   
-  # This room connects FORWARD to end
-  note: "The NORTH exit leads to the Treasury!"
+  # This room connects FORWARD through garden to end
+  note: "The NORTH exit leads to the Garden, and beyond that, the Treasury!"
   
   exits:
     north:
-      destination: ../../end/
-      description: "A passage suffused with warm golden light. THIS IS IT!"
+      destination: ../garden/
+      description: "The golden light resolves into... sunlight? And grass?"
     south:
       destination: ../room-a/
       description: "Back into the maze. Why would you go this way?"
     east:
-      destination: ../room-b/
-      description: "The glow fades this direction. Probably a bad choice."
+      destination: ../room-h/
+      description: "A sickly green mushroom glow"
     west:
       destination: ../room-c/
       description: "More scratchy walls. More existential dread."

@@ -35,6 +35,12 @@ room:
   
   # Ways out
   exits:
+    west:
+      destination: ../maze/garden/
+      description: |
+        The archway back to the underground garden. You can see sunlight
+        and hear the fountain from here. A pleasant way back.
+        
     south:
       destination: ../maze/room-d/
       description: |
