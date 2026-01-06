@@ -1,0 +1,103 @@
+# PALM'S GYM
+# The Infinite Climb
+
+room:
+  name: "Palm's Gym"
+  owner: "Palm"
+  type: "exercise-space"
+  
+description: |
+  You step through a doorway that shouldn't fit this much space.
+  
+  The Infinite Climb stretches upward forever.
+  Branches spiral in impossible geometries.
+  Vines hang at exactly the right distances.
+  Platforms appear where you need them.
+  
+  Sun Wukong's gift. A jungle gym that never ends.
+  
+  Somewhere high above, you can hear Palm swinging.
+  Or maybe that's echoes from a climb that hasn't happened yet.
+
+# THE INFINITE CLIMB
+
+infinite_climb:
+  name: "The Infinite Climb"
+  from: "Sun Wukong"
+  type: "Magical Jungle Gym"
+  
+  description: |
+    A jungle gym that extends as far as you climb.
+    Never ends. Never repeats. Always interesting.
+    
+  features:
+    procedural: |
+      New sections generate as you explore.
+      Difficulty scales to your ability.
+      Never too easy. Never impossible.
+      
+    variety:
+      - "Classic branches (for swinging)"
+      - "Rope ladders (for climbing)"
+      - "Platform islands (for resting)"
+      - "Ring courses (for acrobatics)"
+      - "Vine highways (for speed)"
+      
+    secrets: |
+      If you climb in certain patterns, you find hidden rooms.
+      Sun Wukong left Easter eggs throughout.
+      Palm has found 3 so far:
+        - A cloud observation deck
+        - A room made entirely of golden peaches
+        - A tiny shrine with a mirror
+        
+    physics: |
+      Falls are always soft landings.
+      You can't actually get hurt here.
+      "Monkeys shouldn't fear falling," said Wukong.
+
+# ATMOSPHERE
+
+atmosphere:
+  lighting: "Dappled sunlight through infinite canopy"
+  sounds:
+    - "Rustling leaves"
+    - "Distant bird calls"
+    - "Satisfying grip sounds"
+  smells:
+    - "Fresh air"
+    - "Tree bark"
+    - "Distant flowers"
+  feeling: "Freedom. Endless freedom."
+
+# ACTIONS
+
+actions:
+  CLIMB:
+    description: "Ascend the infinite structure"
+    difficulty: "Scales to ability"
+    
+  SWING:
+    description: "Grab a vine and go"
+    
+  EXPLORE:
+    description: "Look for secret rooms"
+    
+  REST:
+    description: "Find a platform and catch your breath"
+    
+  CHALLENGE:
+    description: "Sun Wukong sometimes appears for climbing races"
+
+# ACCESS
+
+access:
+  owner: "Palm"
+  permissions:
+    - "Anyone with monkey spirit"
+    - "Cats (they climb the lower branches)"
+    - "The kittens (supervised only)"
+  note: |
+    Sun Wukong has a standing portal here.
+    He visits sometimes to see how Palm's climbing progresses.
+    They race. Palm is getting faster.

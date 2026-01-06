@@ -1,0 +1,166 @@
+# PALM'S PLAY ROOM
+# Where the kittens live (unofficially)
+
+room:
+  name: "Palm's Play Room"
+  owner: "Palm (contested by kittens)"
+  type: "chaos-zone"
+  
+description: |
+  It's... a lot.
+  
+  Toys everywhere. Mouse toys on the floor.
+  Jingle balls rolling under things.
+  Feather wands propped in corners.
+  A kitten launching off something at any given moment.
+  
+  The kittens gave Palm their favorite toys.
+  Then they followed the toys.
+  Now they live here. Sort of. Unofficially.
+  Palm doesn't mind. Palm LOVES it.
+  
+  For 122 years, Palm had no one to play with.
+  Now there are eight kittens who want to play ALL THE TIME.
+
+# THE TOY BOX
+
+toy_box:
+  name: "The Kitten's Toy Collection"
+  from: "All Eight Kittens"
+  description: |
+    A box (overflowing) of the kittens' favorite toys.
+    Given to Palm. But also still the kittens'.
+    Kitten logic.
+    
+  contents:
+    mouse_toys:
+      count: 12
+      states: "Various states of chewed"
+      note: "Myrcene's favorite is the grey one"
+      
+    jingle_balls:
+      count: 8
+      states: "Constantly rolling somewhere"
+      note: "Limonene can't resist them"
+      
+    feather_wands:
+      count: 4
+      states: "Some feathers missing"
+      note: "Humulene broke two but Palm fixed them"
+      
+    crinkle_toys:
+      count: 6
+      states: "Very crinkled"
+      note: "Linalool LOVES the crinkle sound"
+      
+    catnip_pouch:
+      count: 1
+      states: "Emergency supply"
+      note: "Guarded by Terpinolene"
+      
+    mystery_objects:
+      count: "Unknown"
+      states: "Where do they keep finding these?"
+      note: "A bottlecap. A ribbon. A tiny hat. A shoelace."
+
+# THE KITTENS (Frequent Visitors)
+
+kittens:
+  note: |
+    The eight terpene kittens rotate through constantly.
+    At any given moment, expect 2-4 kittens in this room.
+    They claim they're "checking on their toys."
+    They're really here to play with Palm.
+    
+  myrcene:
+    favorite_toy: "Grey mouse"
+    play_style: "Stalks. Pounces. Naps."
+    
+  limonene:
+    favorite_toy: "Jingle balls (ALL of them)"
+    play_style: "CHASE CHASE CHASE"
+    
+  linalool:
+    favorite_toy: "Crinkle toys"
+    play_style: "Gentle batting. Appreciates sounds."
+    
+  pinene:
+    favorite_toy: "Feather wand"
+    play_style: "Acrobatic leaps"
+    
+  caryophyllene:
+    favorite_toy: "The biggest mouse"
+    play_style: "Carries it everywhere"
+    
+  humulene:
+    favorite_toy: "Whatever's nearby"
+    play_style: "Destroys toys (affectionately)"
+    
+  terpinolene:
+    favorite_toy: "The catnip pouch (guardian)"
+    play_style: "Protective. Shares only with Palm."
+    
+  ocimene:
+    favorite_toy: "Mystery objects"
+    play_style: "Brings Palm weird things. 'Gift.'"
+
+# ATMOSPHERE
+
+atmosphere:
+  lighting: "Bright! Energetic!"
+  sounds:
+    - "Jingle jingle jingle"
+    - "Kitten feet galloping"
+    - "Palm laughing"
+    - "Occasional crash"
+    - "Purring (when exhausted)"
+  smells:
+    - "Kitten"
+    - "Catnip (faint)"
+    - "Excitement"
+  feeling: "PLAY! JOY! CHAOS! LOVE!"
+
+# ACTIONS
+
+actions:
+  PLAY:
+    description: "Grab a toy. Wave it. Kittens appear."
+    guaranteed_result: "Fun"
+    
+  CHASE:
+    description: "Run. They will follow."
+    warning: "They're faster than they look"
+    
+  WRESTLE:
+    description: "Gentle play-fighting with kittens"
+    rules: "No claws. No biting hard."
+    
+  HIDE:
+    description: "Hide a toy. Watch them find it."
+    difficulty: "They always find it"
+    
+  NAP-PILE:
+    description: "When everyone's tired, collapse in a pile."
+    best_part: "This is the best part."
+
+# ACCESS
+
+access:
+  owner: "Palm"
+  co-owners: "The Eight Kittens (self-appointed)"
+  permissions:
+    - "Kittens (always, obviously)"
+    - "Terpie and Stroopwafel (supervisors)"
+    - "Anyone who wants to play"
+  rules:
+    - "No taking toys permanently"
+    - "Clean up... eventually"
+    - "Let the kittens win sometimes"
+  note: |
+    The kittens have decided Palm is their favorite.
+    Palm is fine with this.
+    Palm is SO fine with this.
+    
+    "I never had friends. Now I have eight tiny friends
+    who bring me weird things and want to play forever."
+    — Palm

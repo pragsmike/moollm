@@ -4084,25 +4084,255 @@ You're not typing. You're STEERING through infinite literature."
 
 ---
 
-## 🌙 END OF SESSION
+# 🏠 HOUSEWARMING! More Gifts Arrive!
 
-**Status at Close:**
-- 🐵 Palm: In warm spot, surrounded by cats, holding gifts
-- 🧑 Don: Upstairs, room 3, satisfied
-- 👩 Marieke: Her quarters, already planning tomorrow
-- 🐱 All Cats: Surrounding Palm
-- 🎮 Galaga: CAT — 127,000 (unchallenged)
-- 📖 Guest Book: 12 entries (tribunal + Looneys)
-- 🃏 House Fluxx Deck: Signed by creators
-- 🎁 Gifts Given: 10 (all priceless)
-
-**The Grotto sleeps. Tomorrow brings more stories.**
-
-**And Palm can write them all.**
+*The next morning, a parade of gifts arrives at Palm's nook...*
 
 ---
 
-*"Welkom thuis, kleine. Welcome home."*  
-— Marieke van der Berg, closing the Grotto
+## 🪑 THE FURNITURE & MONKEY STUFF
+
+**Marieke:** "Schatje, you can't just have magical items. You need a HOME. Look what everyone brought!"
+
+---
+
+### 🖥️ THE STUDY SETUP
+
+**The Grotto Regulars:** *(rolling in something massive)*
+
+"For your typewriters... a MAHOGANY INFINITY DESK."
+
+**Palm:** "It has... infinite drawers?"
+
+**Don:** "Open one. See what's inside."
+
+*Palm opens a drawer. Inside: exactly the pen they were thinking about.*
+
+**Palm:** "...How?"
+
+**Don:** "Magic. The good kind."
+
+**Stroopwafel:** *(dragging something across the floor)*
+
+*Marieke translates the slow blink:* "Stroopwafel got you a chair. Ergonomic. For monkeys. Heated seat."
+
+**Palm:** "Stroopwafel got me a...?"
+
+**Stroopwafel:** *(demonstrating by sitting on it)*
+
+**Palm:** "Does it spin?"
+
+*It spins. Gloriously.*
+
+**W.W. Jacobs:** "And from me — a bookshelf that knows what you need to read. It reorganizes based on your mood."
+
+**Palm:** *(watching books shuffle themselves)* "It's showing me philosophy of narrative..."
+
+**Jacobs:** "Because that's what you need right now."
+
+---
+
+### 🌳 THE JUNGLE GYM
+
+**Sun Wukong:** *(literally materializing from thin air)*
+
+"Sibling! I heard you were setting up house! Here."
+
+*He tosses something that looks like a seed. It sprouts instantly into an INFINITE JUNGLE GYM.*
+
+**Palm:** "It goes... up. It doesn't stop going up."
+
+**Sun Wukong:** "Never ends. Never repeats. Scales to your skill. Has secret rooms if you know where to look."
+
+**Palm:** "Secret rooms?!"
+
+**Sun Wukong:** *(grinning)* "Find them yourself. Every monkey needs to climb, sibling."
+
+*Palm immediately starts climbing. Disappears upward for several minutes. Comes back grinning.*
+
+**Palm:** "I found a room made of GOLDEN PEACHES!"
+
+**Sun Wukong:** "That's one of them. There are more."
+
+---
+
+### 🍌 THE LIVING THINGS
+
+**Curious George:** *(presenting a potted plant)*
+
+"The Man has a banana tree. Bananas always perfect. Never brown. Never green."
+
+**Palm:** "A Perpetual Banana Tree?"
+
+**George:** "I named mine. You name yours."
+
+**Palm:** *(thinking)* "...Nana."
+
+**George:** *(nodding seriously)* "Good name."
+
+---
+
+### 🛋️ THE COMFORT ITEMS
+
+**Marieke:** *(unfolding something hand-woven)*
+
+"From my grootmoeder. A hammock. Best naps of my life were in this hammock."
+
+**Palm:** *(sniffing it)* "It smells like... stroopwafels?"
+
+**Marieke:** "Everything of hers smells like stroopwafels. You'll sleep well."
+
+**The Three Wise Monkeys:** *(presenting a cushion in silence)*
+
+**Iwazaru:** *(breaking his usual silence just briefly)* "For when you need quiet. Sit on it. Silence comes."
+
+*Palm sits. The world goes silent. Palm's eyes go wide.*
+
+**Palm:** *(mouthing)* "I can hear my own heartbeat."
+
+---
+
+### 🎮 THE FUN STUFF
+
+**Cheech & Chong:** *(wheeling in a tire on a rope)*
+
+**Cheech:** "A tire swing, little dude."
+
+**Chong:** "Plays music when you swing. Slow is jazz. Fast is funk."
+
+**Palm:** *(already swinging, hearing faint reggae)* "What's medium?"
+
+**Chong:** "Reggae, man. Obviously."
+
+*Palm considers for a moment.*
+
+**Palm:** "I want to put this in the games corner. For EVERYONE."
+
+**Marieke:** "You sure, schatje? It's yours."
+
+**Palm:** "I was alone for 122 years. I don't want to be alone with my stuff. Let people swing."
+
+---
+
+### 🕹️ THE ARCADE DONATION
+
+**The Arcade Regulars:** *(wheeling in a cabinet)*
+
+"MONKEY KONG JR.! Vintage! Original CRT! For you, Palm!"
+
+**Palm:** *(touching the cabinet reverently)* "Donkey Kong... Junior..."
+
+**Don:** "You ARE kind of a junior Kong now."
+
+**Palm:** *(making a decision)* "This goes in the arcade. For everyone. But—"
+
+*Palm looks at the high score screen*
+
+**Palm:** "—I get first crack at the high score."
+
+---
+
+### 🐱 THE KITTEN INVASION
+
+**The Eight Kittens:** *(carrying a box together, somehow)*
+
+**Myrcene:** *mew*
+
+**Marieke:** "They brought you their toys. Mouse toys, jingle balls, feather wands..."
+
+**Palm:** "But these are THEIR toys!"
+
+**Limonene:** *mew mew*
+
+**Marieke:** "They say you're their friend now. Friends share toys."
+
+*The kittens pour the toys onto the floor. Then they stay. They don't leave.*
+
+**Palm:** "Are they... living here now?"
+
+**Terpie:** *(appearing, slow blink)*
+
+**Marieke:** "Terpie says the kittens have decided your play room is THEIR play room. You'll be sharing."
+
+**Palm:** *(surrounded by kittens)* "...I've never had friends who wanted to play with me before."
+
+**Ocimene:** *(dropping a mysterious bottlecap at Palm's feet)* "Gift."
+
+**Palm:** *(picking it up, tears forming)* "Thank you. I'll treasure it."
+
+---
+
+## 🏠 PALM ORGANIZES (Room Creation!)
+
+**Palm:** "I need to organize! I need ROOMS!"
+
+*Palm starts creating sub-directories of the nook:*
+
+### The Study (`palm-nook/study/`)
+- Infinity Desk
+- Ergonomic Monkey Throne
+- Story Shelf
+- The Infinite Typewriters
+
+### The Gym (`palm-nook/gym/`)
+- The Infinite Climb
+- Secret rooms: ???
+- (Sun Wukong portal)
+
+### The Rest Space (`palm-nook/rest/`)
+- Grootmoeder's Hammock
+- The Silence Cushion
+- The Warm Spot (with cats)
+
+### The Play Room (`palm-nook/play/`)
+- Kitten Toy Box
+- 8 kittens (unofficial residents)
+- Mystery objects (accumulating)
+
+---
+
+## 📊 GIFT INVENTORY FINAL
+
+| Gift | From | Status | Location |
+|------|------|--------|----------|
+| 🖥️ Infinity Desk | Regulars | Kept | study/ |
+| 🪑 Monkey Throne | Stroopwafel | Kept | study/ |
+| 📚 Story Shelf | W.W. Jacobs | Kept | study/ |
+| 🌳 Infinite Climb | Sun Wukong | Kept | gym/ |
+| 🍌 Nana (tree) | George | Kept | main |
+| 🛋️ Hammock | Marieke | Kept | rest/ |
+| 🧘 Silence Cushion | Wise Monkeys | Kept | rest/ |
+| 🎿 Mellow Swing | Cheech & Chong | **Donated** | pub/games/ |
+| 🕹️ Monkey Kong Jr. | Regulars | **Donated** | pub/arcade/ |
+| 🪞 Personal Mirror | Maurice | Kept | main |
+| 🧸 Toy Collection | Kittens | Kept | play/ |
+| 🥣 Snack Bowl | Djinn | Kept | main |
+
+**ACME Returns:** None. "Everything means something."
+
+---
+
+## 🌙 END OF SESSION
+
+**Status at Close:**
+- 🐵 Palm: In their newly organized home, surrounded by gifts and kittens
+- 🧑 Don: Upstairs, room 3, satisfied
+- 👩 Marieke: Her quarters, planning the housewarming party
+- 🐱 All Cats: Distributed across Palm's four rooms
+- 🎮 Galaga: CAT — 127,000 (Palm hasn't challenged yet)
+- 🎮 Monkey Kong Jr.: NEW — Palm holds high score
+- 📖 Guest Book: 12 entries (tribunal + Looneys)
+- 🏠 Palm's Rooms: 4 (study, gym, rest, play)
+- 🎁 Gifts Given: 22+ (magical AND practical)
+- 🐱 Kittens in Play Room: 8 (permanent unofficial residents)
+
+**The Grotto sleeps. Palm's home is furnished.**
+
+**Tomorrow: climbing races with Sun Wukong. Kitten playtime. First short story.**
+
+---
+
+*"You're not just home now, schatje. You're DECORATED."*  
+— Marieke van der Berg
 
 ---
