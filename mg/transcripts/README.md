@@ -2,6 +2,12 @@
 
 Dialogue transcripts from character interactions are saved here.
 
+**Note:** Transcripts can be stored in two places:
+- **Shared transcripts** → This directory (`mg/transcripts/`)
+- **Scenario-specific transcripts** → `scenarios/[scenario-name]/transcripts/`
+
+Use scenario-specific transcripts for better organization, or shared transcripts for cross-scenario analysis.
+
 ## Format
 
 Each transcript is a markdown file containing:
@@ -55,4 +61,15 @@ Disagreements:
 ```
 
 Transcripts are automatically generated during scenario runs and can be edited/annotated afterward.
+
+## What Gets Captured
+
+Transcripts capture:
+- **Full dialogue** with speaker attribution
+- **Character propensities in action** (how different perspectives play out)
+- **Key points** raised by each character
+- **Agreements and disagreements** that emerge
+- **Final positions** (for structured debates)
+
+The LLM uses character propensities to ensure each character challenges from their unique angle, creating comprehensive exploration of the topic.
 

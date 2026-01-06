@@ -11,12 +11,13 @@ Each scenario is a self-contained interaction with its own:
 
 ```
 scenarios/
-├── [scenario-name]/
-│   ├── README.md          # Scenario description and setup
-│   ├── SCENARIO.yml       # Scenario state (participants, topic, etc.)
-│   └── transcripts/       # Scenario-specific transcripts (optional)
-│       └── [session].md
-└── ...
+├── README.md              # This file
+├── .template-SCENARIO.yml  # Template to copy for new scenarios
+└── [scenario-name]/
+    ├── README.md          # Scenario description and setup
+    ├── SCENARIO.yml       # Scenario state (participants, topic, etc.)
+    └── transcripts/       # Scenario-specific transcripts (optional)
+        └── [session].md
 ```
 
 ## Naming Conventions
@@ -41,11 +42,19 @@ scenarios/
 
 ## Creating a New Scenario
 
-1. Create directory: `scenarios/[scenario-name]/`
-2. Copy `SCENARIO.yml` template from `mg/SCENARIO.yml`
-3. Create `README.md` with scenario description
-4. Update `mg/SCENARIOS.yml` to register the new scenario
-5. Set active participants in `SCENARIO.yml`
+1. **Create directory** → `scenarios/[scenario-name]/`
+2. **Copy template** → Copy `.template-SCENARIO.yml` to `scenarios/[scenario-name]/SCENARIO.yml`
+   - **Note:** Use `scenarios/.template-SCENARIO.yml`, not the root `mg/SCENARIO.yml` (which is legacy)
+3. **Create README.md** → Describe the scenario, setup, and narrative context
+4. **Configure SCENARIO.yml** → Set:
+   - `active_participants` (character file paths)
+   - `topic` (what they're discussing)
+   - `type` (debate, roundtable, consultation, etc.)
+   - `protocol` (optional: `DEBATE`, `ADVERSARIAL-COMMITTEE`, `ROBERTS-RULES`, etc.)
+5. **Update SCENARIOS.yml** → (Optional) Register the scenario in `mg/SCENARIOS.yml` for tracking
+6. **Run scenario** → LLM simulates dialogue using character files
+
+**See `../BEHAVIORS.md`** for available MOOLLM behaviors you can use in scenarios.
 
 ## Character References
 
@@ -61,4 +70,25 @@ Or use relative paths from scenario root:
 active_participants:
   - ../../characters/frankie-kerouac.yml
 ```
+
+**Important:** Ensure all characters have **debate propensities** defined. Characters without propensities won't debate effectively. See `../characters/README.md` for details.
+
+## Protocols & Behaviors
+
+You can invoke MOOLLM behaviors in your `SCENARIO.yml`:
+
+```yaml
+scenario:
+  type: debate
+  protocol: DEBATE  # or ADVERSARIAL-COMMITTEE, ROBERTS-RULES, etc.
+```
+
+See `../BEHAVIORS.md` for:
+- **DEBATE** — Structured multi-perspective deliberation
+- **ADVERSARIAL-COMMITTEE** — Committee with opposing views
+- **ROBERTS-RULES** — Parliamentary procedure
+- **SOUL-CHAT** — Free-form conversations
+- **SPEED-OF-LIGHT** — Simulate many turns in one call
+
+Mention the protocol name (e.g., `DEBATE`) or structure your scenario accordingly.
 

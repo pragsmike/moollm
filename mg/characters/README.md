@@ -104,3 +104,15 @@ The LLM will read each bio and create a full character file with all necessary f
 
 See [../CHARACTER-RUBRIC.md](../CHARACTER-RUBRIC.md) for how to score character sheets for debate effectiveness, and [../CHARACTER-SCORES.md](../CHARACTER-SCORES.md) for current character scores.
 
+**Scoring Guidelines:**
+- Aim for **75+ points** for strong debate participants
+- **90-100 points** = Excellent debate participant
+- Check existing scores to see what works well
+- Team composition matters — diverse propensities score better
+
+## Company/Person Names
+
+Character files use **fictional aliases** for any real companies or people mentioned in backgrounds. This ensures safe public distribution. The alias mappings are in private files (`.company-aliases.yml`, `.person-aliases.yml`) excluded from git.
+
+When creating new characters, use aliases for real entities. Product vendors (Avid, Dolby, Genelec, SSL, Backblaze) are acceptable to keep as-is.
+

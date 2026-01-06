@@ -12,19 +12,28 @@ This directory contains scenarios that simulate interactions and debates among a
 mg/
 ├── README.md              # This file
 ├── SCENARIOS.yml          # Master index of all scenarios (optional)
+├── SCENARIO.yml           # Template/legacy (use scenarios/.template-SCENARIO.yml for new scenarios)
+├── CHARACTER-RUBRIC.md    # How to score characters for debate effectiveness
+├── CHARACTER-SCORES.md    # Current character scores (for reference)
+├── BEHAVIORS.md           # Guide to MOOLLM behaviors for scenarios
+├── .gitignore             # Excludes private alias files
+├── .company-aliases.yml   # PRIVATE: Company name mappings (not for public distribution)
+├── .person-aliases.yml    # PRIVATE: Person name mappings (not for public distribution)
 ├── bios/                  # Source character sketches (to be transformed)
 │   └── [character-name].md
 ├── characters/            # MOOLLM-formatted character files (SHARED across scenarios)
-│   └── [character-name].yml
+│   ├── README.md          # Character format guide (includes propensities)
+│   └── [character-name].yml  # All include debate propensities
 ├── transcripts/           # Shared transcripts (or use scenario-specific)
 │   └── [scenario-name].md
 └── scenarios/             # Individual scenario directories
-    ├── [scenario-name]/   # e.g., "echopoint-consultation", "monica-meeting", "timeline-a"
-    │   ├── README.md      # Scenario description, setup, narrative context
-    │   ├── SCENARIO.yml   # Scenario-specific state (participants, topic, etc.)
-    │   └── transcripts/   # Scenario-specific transcripts (optional)
-    │       └── [session].md
-    └── ...
+    ├── README.md          # How to create scenarios
+    ├── .template-SCENARIO.yml  # Template to copy for new scenarios
+    └── [scenario-name]/   # e.g., "echopoint-consultation", "monica-meeting"
+        ├── README.md      # Scenario description, setup, narrative context
+        ├── SCENARIO.yml   # Scenario-specific state (participants, topic, etc.)
+        └── transcripts/   # Scenario-specific transcripts (optional)
+            └── [session].md
 ```
 
 ---
@@ -71,8 +80,13 @@ Each scenario uses a **subset** of characters from `characters/`. Characters are
 
 1. **Add bios** → Place character sketches in `bios/` (markdown format)
 2. **Transform** → Convert bios to MOOLLM character files in `characters/`
+   - **Important:** Ensure characters include **debate propensities** (see `characters/README.md`)
+   - Use `CHARACTER-RUBRIC.md` to evaluate character quality for debates
 3. **Create scenario directory** → `scenarios/[scenario-name]/`
-4. **Set up SCENARIO.yml** → Define active participants, topic, type
+4. **Set up SCENARIO.yml** → Copy from `scenarios/.template-SCENARIO.yml` and define:
+   - Active participants (character file paths)
+   - Topic and type (debate, roundtable, etc.)
+   - Protocol/behavior (e.g., `DEBATE`, `ADVERSARIAL-COMMITTEE`, `ROBERTS-RULES`)
 5. **Run interaction** → LLM simulates dialogue/debate using character files
 6. **Capture transcript** → Save to scenario's `transcripts/` or shared `transcripts/`
 
@@ -96,10 +110,13 @@ Each scenario uses a **subset** of characters from `characters/`. Characters are
 Characters are MOOLLM-formatted YAML files with:
 - **Personality traits** (Sims-style or Mind Mirror)
 - **Background/biography**
+- **Debate propensities** (type, risk tolerance, epistemology) — **REQUIRED for effective debates**
 - **Beliefs/positions** on topics
 - **Speaking style** and vocabulary
 - **Relationships** with other characters
 - **Goals** in the scenario
+
+**Critical:** All characters include **explicit propensities** that define their debate role and perspective. This is essential for structured, productive debates. See `characters/README.md` for details on propensities.
 
 See `characters/` for examples after transformation.
 
@@ -119,11 +136,17 @@ See `characters/` for examples after transformation.
 
 ## Usage
 
-1. Add your character bios to `bios/`
-2. Transform: "Transform the bios in mg/bios/ into MOOLLM character files"
-3. Create scenario: "Create a scenario directory 'echopoint-consultation' with Echopoint team + Marcus's committee"
-4. Run: "Start the scenario — have them discuss the facility upgrade for 5 rounds"
-5. Review: Transcripts are saved automatically
+1. **Add character bios** → Place sketches in `bios/` (markdown format)
+2. **Transform characters** → "Transform the bios in mg/bios/ into MOOLLM character files"
+   - Characters will include debate propensities automatically
+   - Review `CHARACTER-SCORES.md` to see how characters score
+3. **Evaluate characters** → Use `CHARACTER-RUBRIC.md` to assess debate readiness
+4. **Create scenario** → Create directory in `scenarios/` and copy `.template-SCENARIO.yml`
+5. **Configure scenario** → Set active participants, topic, protocol (e.g., `DEBATE`, `ADVERSARIAL-COMMITTEE`)
+6. **Run interaction** → "Start the scenario — have them discuss [topic] for 5 rounds"
+7. **Review transcripts** → Saved automatically to scenario's `transcripts/` or shared `transcripts/`
+
+**See `BEHAVIORS.md`** for available MOOLLM behaviors you can use in scenarios.
 
 ---
 
@@ -152,5 +175,40 @@ scenarios:
 
 ---
 
-*See [bios/README.md](bios/README.md) for bio format guidelines.*
-*See [scenarios/](scenarios/) for individual scenario directories.*
+## Key Concepts
+
+### Debate Propensities
+
+All characters include **explicit propensities** that define their debate role:
+- **Type** (e.g., `operational_realism`, `paranoid_realism`, `idealism`)
+- **Risk tolerance** (low, medium, high, varies)
+- **Epistemology** (how they determine truth)
+- **What they surface** (blind spots they reveal)
+- **Distinctive voice** (signature phrase)
+
+Propensities ensure characters challenge from different angles, preventing premature consensus and forcing comprehensive exploration. See `characters/README.md` for details.
+
+### Character Evaluation
+
+Use `CHARACTER-RUBRIC.md` to score characters (0-100 points) on debate effectiveness. `CHARACTER-SCORES.md` shows current character scores for reference.
+
+### MOOLLM Behaviors
+
+See `BEHAVIORS.md` for predefined behaviors you can use:
+- **DEBATE** — Structured multi-perspective deliberation
+- **ADVERSARIAL-COMMITTEE** — Committee with opposing views
+- **ROBERTS-RULES** — Parliamentary procedure
+- **SOUL-CHAT** — Free-form character conversations
+- **SPEED-OF-LIGHT** — Simulate many turns in one call
+
+Invoke by mentioning the protocol name (e.g., `DEBATE`) or structuring your scenario accordingly.
+
+### Company/Person Aliases
+
+Character bios use fictional aliases for real companies and people to avoid legal issues. The alias mappings are in private files (`.company-aliases.yml`, `.person-aliases.yml`) excluded from git.
+
+---
+
+*See [bios/README.md](bios/README.md) for bio format guidelines.*  
+*See [characters/README.md](characters/README.md) for character format and propensities.*  
+*See [scenarios/README.md](scenarios/README.md) for how to create scenarios.*
