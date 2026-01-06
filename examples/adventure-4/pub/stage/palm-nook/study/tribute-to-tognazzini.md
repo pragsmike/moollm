@@ -93,7 +93,7 @@ French mathematician proposes "le miracle des singes dactylographes" — a milli
 
 **1928 — [Arthur Eddington](https://en.wikipedia.org/wiki/Arthur_Eddington)**
 
-Astrophysicist writes in *[The Nature of the Physical World](https://archive.org/details/natureofphysical00eddi)*: "If an army of monkeys were strumming on typewriters they might write all the books in the British Museum." His point: the Second Law of Thermodynamics gives us certainty from improbability. Some things just won't happen.
+Astrophysicist writes in *[The Nature of the Physical World](https://en.wikipedia.org/wiki/The_Nature_of_the_Physical_World)*: "If an army of monkeys were strumming on typewriters they might write all the books in the British Museum." His point: the Second Law of Thermodynamics gives us certainty from improbability. Some things just won't happen.
 
 **1930 — [James Jeans](https://en.wikipedia.org/wiki/James_Jeans)**
 
@@ -355,7 +355,7 @@ Not anymore.
 | **MacKay's Book** | [Information Theory, Inference, and Learning Algorithms](http://www.inference.org.uk/mackay/itila/) (free) |
 | **Weasel Program** | [Wikipedia: Weasel program](https://en.wikipedia.org/wiki/Weasel_program) |
 | **Borel's Book (1914)** | [Internet Archive: Le Hasard](https://archive.org/details/lehasard00boreuoft) — Chapter 3 has typing monkeys |
-| **Eddington's Book** | [Internet Archive: The Nature of the Physical World](https://archive.org/details/natureofphysical00eddi) |
+| **Eddington's Book** | [Wikipedia: The Nature of the Physical World](https://en.wikipedia.org/wiki/The_Nature_of_the_Physical_World) |
 | **Jeans' Book** | [Wikimedia Commons: The Mysterious Universe (PDF)](https://commons.wikimedia.org/wiki/File:James_Jeans_-_The_Mysterious_Universe.pdf) |
 | **Academic Analysis** | [Cambridge: Shakespeare and Nonhuman Intelligence](https://assets.cambridge.org/97810092/02640/excerpt/9781009202640_excerpt.pdf) |
 | **Internet Culture** | [Know Your Meme: Infinite Monkey Theorem](https://knowyourmeme.com/memes/infinite-monkey-theorem-monkey-typing) |
