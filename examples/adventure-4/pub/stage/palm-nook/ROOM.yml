@@ -19,10 +19,6 @@ room:
     position: "Stage left, beside the curtains"
     accessibility: "Open to all (Palm welcomes visitors)"
 
-# ═══════════════════════════════════════════════════════════════
-# PHYSICAL SPACE
-# ═══════════════════════════════════════════════════════════════
-
 physical:
   size: "Small alcove (capuchin-sized comfort)"
   
@@ -55,10 +51,6 @@ physical:
       use: "Palm watches all performances"
       note: "Sometimes the performers wave to Palm"
 
-# ═══════════════════════════════════════════════════════════════
-# ATMOSPHERE
-# ═══════════════════════════════════════════════════════════════
-
 atmosphere:
   lighting: "Warm amber, string lights, candle glow"
   temperature: "Cozy warm"
@@ -73,10 +65,6 @@ atmosphere:
     Safe. Contained but not trapped.
     A place to retreat without being alone.
     Home.
-
-# ═══════════════════════════════════════════════════════════════
-# RESIDENTS & VISITORS
-# ═══════════════════════════════════════════════════════════════
 
 residents:
   permanent:
@@ -97,10 +85,6 @@ residents:
       status: "Regular visitor"
       visits_for: "Stories, laughter, shared joints"
 
-# ═══════════════════════════════════════════════════════════════
-# BEHAVIORS & CUSTOMS
-# ═══════════════════════════════════════════════════════════════
-
 customs:
   visiting_protocol: |
     Palm's nook is OPEN by default. The curtain means privacy.
@@ -120,10 +104,6 @@ customs:
     - "Petting kittens"
     - "Just... existing. Freely."
 
-# ═══════════════════════════════════════════════════════════════
-# SPECIAL PROPERTIES
-# ═══════════════════════════════════════════════════════════════
-
 properties:
   sanctuary: true
   note: |
@@ -142,10 +122,6 @@ properties:
   kitten_magnetism:
     active: true
     effect: "Kittens are inexplicably drawn here"
-
-# ═══════════════════════════════════════════════════════════════
-# META
-# ═══════════════════════════════════════════════════════════════
 
 meta:
   created: "During Palm's self-actualization ceremony"

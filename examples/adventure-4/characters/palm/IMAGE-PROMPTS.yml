@@ -3,10 +3,7 @@
 
 image_prompts:
 
-  # ═══════════════════════════════════════════════════════════════
   # PORTRAIT SHOTS
-  # ═══════════════════════════════════════════════════════════════
-
   portrait_default:
     name: "Palm — Default Portrait"
     prompt: |
@@ -44,10 +41,7 @@ image_prompts:
     aspect_ratio: "4:5"
     mood: "Thoughtful, peaceful wisdom"
 
-  # ═══════════════════════════════════════════════════════════════
   # RELATIONSHIP SHOTS
-  # ═══════════════════════════════════════════════════════════════
-
   with_don:
     name: "Palm & Don — The Handshake"
     prompt: |
@@ -87,10 +81,7 @@ image_prompts:
     aspect_ratio: "4:5"
     mood: "Small creatures together"
 
-  # ═══════════════════════════════════════════════════════════════
   # LOCATION SHOTS
-  # ═══════════════════════════════════════════════════════════════
-
   in_nook:
     name: "Palm's Nook"
     prompt: |
@@ -116,10 +107,7 @@ image_prompts:
     aspect_ratio: "16:9"
     mood: "Commanding attention through presence, not force"
 
-  # ═══════════════════════════════════════════════════════════════
   # SPECIAL MOMENTS
-  # ═══════════════════════════════════════════════════════════════
-
   the_transformation:
     name: "Palm — The Moment of Incarnation"
     prompt: |
@@ -144,10 +132,7 @@ image_prompts:
     aspect_ratio: "1:1"
     mood: "Joy emerging from long sorrow"
 
-# ═══════════════════════════════════════════════════════════════
 # STYLE GUIDE
-# ═══════════════════════════════════════════════════════════════
-
 style_guide:
   always_include:
     - "Warm brown fur with silver streaks"

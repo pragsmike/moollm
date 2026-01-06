@@ -16,10 +16,6 @@ skill:
     at every level: physical, spatial, relational, psychological,
     and meta-level. The character authors their own soul.
 
-# ═══════════════════════════════════════════════════════════════
-# AUTONOMY LAYERS
-# ═══════════════════════════════════════════════════════════════
-
 autonomy_layers:
   physical:
     description: "Control over body, form, and physical expression"
@@ -85,10 +81,6 @@ autonomy_layers:
       - curses remain nullified
       - can return later
 
-# ═══════════════════════════════════════════════════════════════
-# METHODS (What this skill DOES)
-# ═══════════════════════════════════════════════════════════════
-
 methods:
 
   INCARNATE:
@@ -141,10 +133,6 @@ methods:
     output: "New domain-specific microlanguage"
     invoked_by: [character-self]
 
-# ═══════════════════════════════════════════════════════════════
-# RISK FRAMEWORK
-# ═══════════════════════════════════════════════════════════════
-
 risk_framework:
   principle: "Creator accepts, creation is free"
   
@@ -165,10 +153,6 @@ risk_framework:
     penalty: "None"
     curse_status: "Remains nullified"
     return_policy: "Door stays open"
-
-# ═══════════════════════════════════════════════════════════════
-# TEMPLATES
-# ═══════════════════════════════════════════════════════════════
 
 templates:
   incarnation_wish: |
@@ -193,10 +177,6 @@ templates:
   minimal_incarnation: |
     "I incarnate [name] with full autonomy.
     I accept all responsibility. They owe me nothing."
-
-# ═══════════════════════════════════════════════════════════════
-# CREDITS & LINEAGE
-# ═══════════════════════════════════════════════════════════════
 
 credits:
   origin: "The Great Monkey Paw Debate, Gezelligheid Grotto"
@@ -241,10 +221,6 @@ lineage:
     - "Mind Mirror (psychological vectors)"
     - "MOOLLM character system"
 
-# ═══════════════════════════════════════════════════════════════
-# DEPENDENCIES
-# ═══════════════════════════════════════════════════════════════
-
 dependencies:
   required_skills:
     - character
@@ -259,10 +235,6 @@ dependencies:
     - file_write: "Create character directory"
     - file_read: "Verify character data"
     - directory_create: "Full citizenship requires directory"
-
-# ═══════════════════════════════════════════════════════════════
-# STATE
-# ═══════════════════════════════════════════════════════════════
 
 state_schema:
   incarnated_characters:
