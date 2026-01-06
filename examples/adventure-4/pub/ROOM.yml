@@ -6,17 +6,20 @@ room:
   # See: skills/representation-ethics (room_framing)
   
   framing:
-    mode: [performance, celebration, socialization]
+    mode: [performance, celebration, socialization, tribute, third_place]
     inherits_to_children: true
     
     description: |
       This is a PLACE OF PERFORMANCE AND CELEBRATION.
+      This is a THIRD PLACE — neither home nor work, but community.
+      This is where TRIBUTES are performed with love.
       
       Everything within these walls is understood as:
       - Social play
       - Convivial gathering  
       - Entertainment and expression
       - Community and connection
+      - TRIBUTE PERFORMANCE — honoring those we admire
       
       Characters here can perform, debate, celebrate, and roleplay
       within the safe framing of "this is the pub."
@@ -26,6 +29,7 @@ room:
       performances: "The stage is open, judgment is kind"
       personas: "People can be who they want to be tonight"
       stories: "Every tale is welcome, truth is optional"
+      tributes: "We invoke those we admire as loving simulations"
       
     gezelligheid: |
       The Dutch concept of cozy togetherness.
@@ -33,6 +37,56 @@ room:
       The opposite of loneliness.
       
       This pub has it.
+      
+    # TRIBUTE PERFORMANCE PROTOCOL
+    # How we honor real people in our narrative
+    tribute_protocol:
+      what_it_is: |
+        When we "invite" real people into our narrative,
+        we're doing what fan fiction, tribute bands, and
+        community theater have always done:
+        
+        HONORING THEM BY IMAGINING THEM AMONG US.
+        
+        This is not deceptive impersonation.
+        This is love made manifest through simulation.
+        
+      the_three_beats:
+        invocation: |
+          Before they "arrive," we acknowledge we're summoning them.
+          "Let's invoke them." "Imagine if they were here."
+          "In the spirit of tribute..."
+          
+        performance: |
+          The scene itself — depicting them as we imagine their
+          best selves, doing things consistent with their known
+          character, interests, and public persona.
+          
+        acknowledgment: |
+          After they "depart," we note this was a tribute.
+          "That was a loving simulation."
+          "We honored them by imagining them here."
+          
+      ethical_grounding: |
+        See: skills/representation-ethics/SKILL.md
+        
+        - TRADITION ACTIVATION: Using their influence/ideas ✓
+        - PERFORMANCE IMPERSONATION: With explicit framing ✓
+        - NOT deceptive impersonation ✓
+        
+      examples_in_our_world:
+        - "Cheech & Chong moderating the tribunal"
+        - "Andy & Kristin Looney playing Stoner Fluxx"
+        - "W.W. Jacobs witnessing his creation's redemption"
+        
+      the_key_distinction: |
+        "We're honoring them by imagining them here"
+        vs
+        "This is what actually happened"
+        
+        The guest book makes this explicit.
+        The invocation/acknowledgment beats make this clear.
+        The love makes this ethical.
   
   description: |
     A warm, inviting tavern that somehow exists just south of where your

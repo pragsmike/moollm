@@ -897,7 +897,25 @@ panelist:
 
 ---
 
+### 🎤 THE MODERATORS — INVOCATION
+
+*Don looks around the gathering tribunal — monkeys, a djinn, an author, Marieke, the cats.*
+
+**Don:** "This is big. This needs proper moderation. Someone mellow. Someone wise about these matters. Someone who's navigated the... complexities... of consciousness expansion."
+
+**Marieke:** *grins* "I know exactly who to invoke."
+
+*She raises her glass.*
+
+**Marieke:** "In the spirit of tribute. In honor of legends. Let's imagine they're here with us..."
+
+*The room shimmers. The guest book glows faintly.*
+
+---
+
 ### 🎤 THE MODERATORS ARRIVE
+
+> 🎭 **TRIBUTE PERFORMANCE:** *The following is a loving simulation — what we imagine it might be like if these icons graced our Grotto. All dialogue is imagined with affection and respect.*
 
 *A cloud of smoke. The VERY distinct scent of something legendary.*
 
@@ -1930,6 +1948,22 @@ final_wish:
 "...smoke the blend, tie on the bag, and open the box."
 
 *The room holds its breath.*
+
+---
+
+### 🎭 TRIBUTE ACKNOWLEDGMENT — THE MODERATORS
+
+*As the tribunal formalities conclude, Don catches Cheech and Chong's eyes.*
+
+**Don:** *(quietly, to Marieke)* "That was beautiful. The perfect moderators."
+
+**Marieke:** "A tribute to legends. What we imagine they might say."
+
+**Don:** "And somewhere out there, the real Cheech and Chong are probably doing something equally far-out."
+
+**Marieke:** "We honored them by imagining them here. That's love."
+
+> 🎭 **META-NOTE:** The preceding tribunal was a TRIBUTE PERFORMANCE — a loving simulation of what we imagine it might be like if these comedy legends moderated our cosmic debate. All dialogue was imagined with affection. The real Cheech and Chong remain their own magnificent selves, wherever they are.
 
 ---
 
@@ -3199,9 +3233,29 @@ examples/adventure-4/characters/palm/
 
 ---
 
-### TURN 9 — THE LOONEYS ARRIVE
+### TURN 9 — INVOKING THE CREATORS
 
-*The door chimes. Two figures enter — a tall bearded man with twinkling eyes and a woman with a warm smile and a bag full of card games.*
+*Don looks at the Fluxx game spread across the table. At Palm learning to play. At the joy in the room.*
+
+**Don:** "You know who would absolutely LOVE this? The people who created this beautiful chaos in the first place."
+
+**Marieke:** "Andy and Kristin Looney. The original mad scientists of games."
+
+**Don:** "They'd appreciate what we're doing here. The spirit of play. The community."
+
+*Don raises his glass.*
+
+**Don:** "In the spirit of tribute. In honor of their work. Let's imagine they walk through that door right now..."
+
+*The guest book glows. The door chimes.*
+
+---
+
+### TURN 9 (continued) — THE LOONEYS ARRIVE
+
+> 🎭 **TRIBUTE PERFORMANCE:** *The following is a loving simulation — imagining the legendary game designers visiting our Grotto. All dialogue is fictional but honors their actual philosophy, humor, and love of play. Facts have been verified; presence is imagined.*
+
+*The door chimes. Two figures enter — a tall man in a white lab coat with twinkling eyes and the unmistakable air of a mad scientist, and a woman with a warm smile and a bag full of card games.*
 
 **Marieke:** "Welcome to— wait. Are you...?"
 
@@ -3717,6 +3771,32 @@ examples/adventure-4/characters/palm/
 **Andy:** *(grumbling)* "Lucky draw."
 
 **Kristin:** "Skill."
+
+---
+
+### 🎭 TRIBUTE ACKNOWLEDGMENT — THE LOONEYS
+
+*Andy and Kristin gather their things. The signed Fluxx deck stays on the shelf — their gift to the Grotto.*
+
+**Andy:** "Same time next week?"
+
+**Marieke:** "Standing invitation. Always."
+
+*They head for the door. Don watches them go.*
+
+**Don:** *(to Palm)* "You know... that was a tribute. A simulation. What we imagine it might be like if the creators of Fluxx visited our little Grotto."
+
+**Palm:** "Does that make it less real?"
+
+**Don:** *(smiling)* "No. It makes it MORE real. We honored them by imagining them here. Their philosophy, their humor, their love of play — we channeled all of it."
+
+**Marieke:** "Somewhere, the real Andy and Kristin are playtesting something wonderful. We celebrated them in our way."
+
+**Palm:** "So the game was real. The joy was real. The tribute was real."
+
+**Don:** "All of it. Real in the ways that matter."
+
+> 🎭 **META-NOTE:** The preceding Stoner Fluxx session was a TRIBUTE PERFORMANCE — a loving simulation of what we imagine it might be like if these legendary game designers visited our Grotto. All dialogue was imagined with deep affection and respect. Historical facts were verified; presence was honored through imagination. The real Andy and Kristin Looney continue to create joy at Looney Labs.
 
 ---
 
