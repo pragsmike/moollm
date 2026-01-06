@@ -176,10 +176,69 @@ arcade:
     type: video_game
     multiplayer: true
 
-# THE STAGE — Now in its own sub-room!
-# See: pub/stage/ROOM.yml
-# A raised platform with spotlight, curtains, backdrops, and the mercy gong.
-# Weekly events: Comedy (Freeday), Karaoke (Thundersday), Quiz Night, and more!
+# THE STAGE — Social Performance Games
+# Full details: pub/stage/ROOM.yml
+stage_games:
+  location: pub/stage/
+  description: |
+    A raised platform with spotlight, curtains, backdrops, and the mercy gong.
+    These are the SOCIAL games — performance, participation, connection.
+    
+  # QUICK MENU: What can you play on the stage?
+  weekly_events:
+    
+    moonday_open_stage:
+      name: "Open Stage Night"
+      games: [PERFORM, POETRY-SLAM, INTERPRETIVE-DANCE, OPEN-MIC]
+      vibe: "Anything goes"
+      
+    treesday_storytelling:
+      name: "Storytelling Circle"
+      games: [TELL-TALE, CONTINUE-STORY, CHALLENGE-TRUTH, REQUEST-STORY]
+      vibe: "Tales by firelight"
+      pairs_with: "Linalool Lavender + mulled wine"
+      
+    woodsday_quiz:
+      name: "Quiz Night"
+      games: [FORM-TEAM, ANSWER, WAGER, CHALLENGE-ANSWER]
+      vibe: "Grim knows things"
+      cost: "1 gold entry"
+      prize: "Tab cleared"
+      
+    thundersday_karaoke:
+      name: "🎤 Karaoke Night"
+      games: [SING, DUET, GROUP-NUMBER, KARAOKE-ROULETTE, REQUEST-SONG]
+      vibe: "Sea shanties and courage"
+      pairs_with: "Limonene Lift"
+      
+    freeday_comedy:
+      name: "🎭 Open Mic Comedy"
+      games: [SIGN-UP, PERFORM-SET, HECKLE-SUPPORTIVE, CALLBACK, CROWD-WORK, ROAST]
+      vibe: "Everyone bombs once"
+      pairs_with: "NYC Diesel"
+      
+    starday_music:
+      name: "Live Music Night"
+      games: [LISTEN, TIP, REQUEST, DANCE, SING-ALONG]
+      vibe: "Bad acoustics, great energy"
+      
+    sunday_jam:
+      name: "Jam Session"
+      games: [JAM, START-GROOVE, FOLLOW, SOLO, TRADE-FOURS]
+      vibe: "Terpie naps through it"
+      instruments: "House guitar, tambourine, kazoos"
+      
+  # ANYTIME GAMES (no scheduled event needed)
+  anytime:
+    - name: "PERFORM"
+      command: "PERFORM [act]"
+      description: "Take the stage anytime it's free"
+    - name: "CHALLENGE"
+      command: "CHALLENGE [person] TO [karaoke/comedy/dance-off]"
+      description: "Audience decides winner"
+    - name: "REQUEST"
+      command: "REQUEST [song/topic]"
+      cost: "1 gold tip"
 
 # SPECIAL GAMES (Pie Table)
 pie_table:

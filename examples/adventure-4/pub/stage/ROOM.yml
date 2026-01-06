@@ -137,7 +137,7 @@ equipment:
       - "Unknown — 'I killed here. Then I died here. Worth it.'"
       - "Grim — (one word: 'Maybe.')"
 
-# WEEKLY SCHEDULE
+# WEEKLY SCHEDULE — What You Can Play
 
 weekly_schedule:
   
@@ -147,6 +147,20 @@ weekly_schedule:
     description: "Anything goes. Poetry, music, interpretive dance, whatever."
     host: null  # Self-organized
     cost: 0
+    # GAMES YOU CAN PLAY:
+    games:
+      - name: "PERFORM"
+        command: "PERFORM [anything]"
+        description: "Take the stage and do your thing"
+      - name: "POETRY-SLAM"
+        command: "RECITE [poem]"
+        description: "Snap fingers, not clap"
+      - name: "INTERPRETIVE-DANCE"
+        command: "DANCE [theme]"
+        description: "Express yourself. The cats will watch."
+      - name: "OPEN-MIC"
+        command: "SIGN-UP then PERFORM"
+        description: "First come, first served"
     
   treesday:
     event: "Storytelling Circle"
@@ -156,6 +170,24 @@ weekly_schedule:
       Lily the kitten often appears for emotional support.
     host: "Henk (unofficial)"
     cost: 0
+    # GAMES YOU CAN PLAY:
+    games:
+      - name: "TELL-TALE"
+        command: "STORY [topic/theme]"
+        description: "Share a story, true or not"
+      - name: "CONTINUE-STORY"
+        command: "AND-THEN [continuation]"
+        description: "Add to someone else's story"
+      - name: "CHALLENGE-TRUTH"
+        command: "TRUTH-OR-TALE?"
+        description: "Guess if the story was real"
+      - name: "REQUEST-STORY"
+        command: "REQUEST STORY ABOUT [topic]"
+        description: "Ask someone to tell a specific tale"
+    pairs_well_with:
+      strain: "Linalool Lavender"
+      drink: "Mulled wine"
+      snack: "Bitterballen"
     
   woodsday:
     event: "Quiz Night"
@@ -168,6 +200,33 @@ weekly_schedule:
     currency: gold
     prize: "Winner's tab cleared"
     team_size: "2-5"
+    # GAMES YOU CAN PLAY:
+    games:
+      - name: "FORM-TEAM"
+        command: "FORM-TEAM [name] WITH [players]"
+        description: "Create your quiz team"
+      - name: "ANSWER"
+        command: "ANSWER [response]"
+        description: "Submit your team's answer"
+      - name: "WAGER"
+        command: "WAGER [amount] ON [question]"
+        description: "Double or nothing on confidence"
+      - name: "CHALLENGE-ANSWER"
+        command: "CHALLENGE [ruling]"
+        description: "Dispute a ruling (Grim decides)"
+    categories:
+      rotating:
+        - "Dungeon Lore"
+        - "Potion Ingredients"
+        - "Famous Adventurers"
+        - "Cat Breeds"
+        - "Things Grim Knows But Shouldn't"
+        - "Amsterdam Coffeeshop History"
+        - "ACME Product Recalls"
+    pairs_well_with:
+      strain: "Pinene Forest (for focus)"
+      drink: "Coffee (lots)"
+      snack: "Cheese plate"
     
   thundersday:
     event: "🎤 Karaoke Night"
@@ -178,6 +237,26 @@ weekly_schedule:
       in languages that don't exist.
     host: "Rotating (sign up at bar)"
     cost: 0
+    # GAMES YOU CAN PLAY:
+    games:
+      - name: "SING"
+        command: "SING [song title]"
+        description: "Take the mic and belt it out"
+      - name: "DUET"
+        command: "DUET WITH [partner] SINGING [song]"
+        description: "Two voices, one song"
+      - name: "GROUP-NUMBER"
+        command: "RALLY FOR [song]"
+        description: "Get the whole pub singing"
+      - name: "KARAOKE-ROULETTE"
+        command: "SPIN-THE-SONGBOOK"
+        description: "Random song, no backing out"
+      - name: "JUDGE"
+        command: "SCORE [performer] [1-10]"
+        description: "Rate the performance"
+      - name: "REQUEST-SONG"
+        command: "REQUEST [song] FOR [person]"
+        description: "Volunteer someone else"
     rules:
       - "Duets encouraged"
       - "Group numbers HIGHLY encouraged"
@@ -190,6 +269,10 @@ weekly_schedule:
       - "Country Roads"
       - "That one sea shanty nobody knows the words to"
     ocie_warning: "Ocie has been known to knock the mic off stage"
+    pairs_well_with:
+      strain: "Limonene Lift (for energy)"
+      drink: "Whatever gives you courage"
+      snack: "Nothing — you'll be singing"
       
   freeday:
     event: "🎭 Open Mic Comedy Night"
@@ -202,6 +285,26 @@ weekly_schedule:
       Marieke has final say on order.
     host: "Marieke"
     cost: 0
+    # GAMES YOU CAN PLAY:
+    games:
+      - name: "SIGN-UP"
+        command: "SIGN-UP FOR COMEDY"
+        description: "Add your name to the list"
+      - name: "PERFORM-SET"
+        command: "PERFORM COMEDY [theme/style]"
+        description: "Do your 5 minutes"
+      - name: "HECKLE-SUPPORTIVE"
+        command: "HECKLE 'You got this!'"
+        description: "Encourage the comic"
+      - name: "CALLBACK"
+        command: "CALLBACK [earlier joke]"
+        description: "Reference something from earlier"
+      - name: "CROWD-WORK"
+        command: "ENGAGE [audience member]"
+        description: "Improvise with the crowd"
+      - name: "ROAST"
+        command: "ROAST [willing participant]"
+        description: "Lovingly destroy someone (with consent)"
     rules:
       - "5 minute sets for newbies"
       - "10 minutes for returning comics"
@@ -222,6 +325,10 @@ weekly_schedule:
       "Everyone bombs once. It builds character.
       If they laugh, great. If they don't, you learned something.
       Either way, free drink after your set."
+    pairs_well_with:
+      strain: "NYC Diesel (talkative)"
+      drink: "One beer before, water during"
+      snack: "Nothing — dry mouth is real"
       
   starday:
     event: "Live Music Night"
@@ -232,6 +339,27 @@ weekly_schedule:
     host: "varies"
     cost: 0
     tip_jar: true
+    # GAMES YOU CAN PLAY:
+    games:
+      - name: "LISTEN"
+        command: "LISTEN TO [performer]"
+        description: "Enjoy the music"
+      - name: "TIP"
+        command: "TIP [amount]"
+        description: "Show appreciation"
+      - name: "REQUEST"
+        command: "REQUEST [song]"
+        description: "Ask for a specific song"
+      - name: "DANCE"
+        command: "DANCE TO [song]"
+        description: "Move to the music"
+      - name: "SING-ALONG"
+        command: "JOIN-IN ON [chorus]"
+        description: "If they invite the crowd"
+    pairs_well_with:
+      strain: "Gezelligheid"
+      drink: "Whatever you like"
+      snack: "Stroopwafel"
     
   sunday:
     event: "Rest Day / Jam Session"
@@ -241,6 +369,33 @@ weekly_schedule:
       Terpie naps through it. That's his review.
     host: null
     cost: 0
+    # GAMES YOU CAN PLAY:
+    games:
+      - name: "JAM"
+        command: "JAM WITH [instrument]"
+        description: "Add to the sound"
+      - name: "START-GROOVE"
+        command: "START [rhythm/chord progression]"
+        description: "Set the foundation"
+      - name: "FOLLOW"
+        command: "FOLLOW [other musician]"
+        description: "Match their energy"
+      - name: "SOLO"
+        command: "TAKE-SOLO"
+        description: "Step forward and shine"
+      - name: "TRADE-FOURS"
+        command: "TRADE WITH [musician]"
+        description: "Call and response"
+    instruments_available:
+      - "House guitar (slightly out of tune)"
+      - "Tambourine"
+      - "Bongos"
+      - "Kazoos (many)"
+      - "Whatever's in the props box"
+    pairs_well_with:
+      strain: "Terpie's Choice"
+      drink: "Coffee (afternoon vibes)"
+      snack: "Appeltaart"
 
 # MONTHLY CHAMPIONSHIPS
 
