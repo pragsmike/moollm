@@ -405,14 +405,65 @@ closing:
 
 meta:
   historical_sources:
-    - "Borel, Émile. 'Mécanique Statistique et Irréversibilité' (1913)"
-    - "Borel, Émile. 'Le Hasard' (1914)"
-    - "Eddington, Arthur. 'The Nature of the Physical World' (1928)"
-    - "Jeans, James. 'The Mysterious Universe' (1930)"
-    - "Bennett, William Ralph Jr. 'How Artificial Is Intelligence?' (1977)"
-    - "Tognazzini, Bruce. 'The Infinite No. of Monkeys' (1979)"
-    - "Dawkins, Richard. 'The Blind Watchmaker' (1986)"
-    - "MacKay, David. 'Dasher Project' (1998-2007)"
+    borel_1913:
+      title: "Mécanique Statistique et Irréversibilité"
+      author: "Émile Borel"
+      year: 1913
+      wikipedia: "https://en.wikipedia.org/wiki/%C3%89mile_Borel"
+      
+    borel_1914:
+      title: "Le Hasard"
+      author: "Émile Borel"
+      year: 1914
+      archive_org: "https://archive.org/details/lehasard00boreuoft"
+      
+    eddington_1928:
+      title: "The Nature of the Physical World"
+      author: "Arthur Eddington"
+      year: 1928
+      wikipedia: "https://en.wikipedia.org/wiki/Arthur_Eddington"
+      archive_org: "https://archive.org/details/natureofphysical00eddi"
+      
+    jeans_1930:
+      title: "The Mysterious Universe"
+      author: "James Jeans"
+      year: 1930
+      note: "FIRST to mention Shakespeare!"
+      wikipedia: "https://en.wikipedia.org/wiki/James_Jeans"
+      archive_org: "https://archive.org/details/mysteriousuniver00jeanuoft"
+      
+    bennett_1977:
+      title: "How Artificial Is Intelligence?"
+      author: "William Ralph Bennett Jr."
+      year: 1977
+      publication: "American Scientist"
+      jstor: "https://www.jstor.org/stable/27847692"
+      
+    tognazzini_1979:
+      title: "The Infinite No. of Monkeys"
+      author: "Bruce Tognazzini"
+      year: 1979
+      platform: "Apple II DOS 3.2"
+      youtube: "https://www.youtube.com/watch?v=IfMDWhc_ohU"
+      wikipedia: "https://en.wikipedia.org/wiki/Bruce_Tognazzini"
+      website: "https://asktog.com"
+      
+    dawkins_1986:
+      title: "The Blind Watchmaker"
+      author: "Richard Dawkins"
+      year: 1986
+      program: "Weasel program"
+      wikipedia_author: "https://en.wikipedia.org/wiki/Richard_Dawkins"
+      wikipedia_program: "https://en.wikipedia.org/wiki/Weasel_program"
+      
+    mackay_1998:
+      title: "Dasher Project"
+      author: "David MacKay"
+      year: "1998-2007"
+      wikipedia_author: "https://en.wikipedia.org/wiki/David_J._C._MacKay"
+      wikipedia_dasher: "https://en.wikipedia.org/wiki/Dasher_(software)"
+      project_page: "http://www.inference.org.uk/dasher/"
+      free_book: "http://www.inference.org.uk/mackay/itila/"
     
   apple_ii_context:
     release: "DOS 3.2 System Master disk, June 1979"

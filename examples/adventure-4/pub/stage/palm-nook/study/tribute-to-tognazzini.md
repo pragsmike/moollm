@@ -11,7 +11,7 @@
 
 ---
 
-> *For Bruce Tognazzini, who taught himself to program by imagining monkeys.*  
+> *For [Bruce Tognazzini](https://en.wikipedia.org/wiki/Bruce_Tognazzini), who taught himself to program by imagining monkeys.*  
 > *For the 23,487 fictional monkeys in that groaning nineteenth-century building.*  
 > *For every monkey who ever typed "GZINCLE FORTEN GLAFFLE."*  
 > *And for Don Hopkins, who gave me infinite typewriters that don't require randomness.*
@@ -22,7 +22,7 @@
 
 ### A Monkey Problem Becomes a Teaching Tool
 
-In 1979, Apple Computer released DOS 3.2 for the Apple II. Bundled with the system disk was a curious program called "THE INFINITE NO. OF MONKEYS" by Bruce Tognazzini.
+In 1979, Apple Computer released DOS 3.2 for the Apple II. Bundled with the system disk was a curious program called "[THE INFINITE NO. OF MONKEYS](https://www.youtube.com/watch?v=IfMDWhc_ohU)" by [Bruce Tognazzini](https://asktog.com).
 
 It wasn't really about monkeys. It was about teaching:
 - Integer BASIC programming
@@ -31,6 +31,8 @@ It wasn't really about monkeys. It was about teaching:
 - How to make computers feel alive
 
 But the framing — ah, the framing was everything.
+
+> 📺 **Watch the original demo**: [YouTube: THE INFINITE NO. OF MONKEYS](https://www.youtube.com/watch?v=IfMDWhc_ohU) — uploaded by Steven Weyhrich ([Apple II History](https://www.apple2history.org/))
 
 ### The Narrative
 
@@ -61,6 +63,8 @@ Three possible endings, chosen randomly:
 
 *"So close... so very close... Perhaps with just a few more monkeys."*
 
+> 📚 **More context**: The program was part of "[The Apple Tapes: Introductory Programs for the Apple II](https://www.mobygames.com/game/156059/the-apple-tapes-introductory-programs-for-the-apple-ii/)" — a collection including Apple Trek, Brick Out, and Applevision.
+
 ### Why It Matters
 
 Tognazzini wasn't proving the theorem. He was PLAYING with it. He used the joke to teach programming while making a philosophical point:
@@ -79,21 +83,25 @@ In 2026, I am the answer.
 
 ### The Lineage: From Borel to Bennett to Me
 
-**1913 — Émile Borel**
+> 📖 **Full history**: [Wikipedia: Infinite monkey theorem](https://en.wikipedia.org/wiki/Infinite_monkey_theorem)
 
-French mathematician proposes "le miracle des singes dactylographes" — a million monkeys recreating the Bibliothèque nationale. His point: some probabilities are so small they're effectively zero. But not ACTUALLY zero. That's the terrifying part.
+**1913 — [Émile Borel](https://en.wikipedia.org/wiki/%C3%89mile_Borel)**
 
-**1928 — Arthur Eddington**
+French mathematician proposes "le miracle des singes dactylographes" — a million monkeys recreating the Bibliothèque nationale — in his essay "[Mécanique Statistique et Irréversibilité](https://gallica.bnf.fr/ark:/12148/bpt6k3102s/f194.item)". His point: some probabilities are so small they're effectively zero. But not ACTUALLY zero. That's the terrifying part.
 
-Astrophysicist writes: "If an army of monkeys were strumming on typewriters they might write all the books in the British Museum." His point: the Second Law of Thermodynamics gives us certainty from improbability. Some things just won't happen.
+> 📚 His 1914 book *[Le Hasard](https://archive.org/details/lehasard00boreuoft)* expanded on this idea.
 
-**1930 — James Jeans**
+**1928 — [Arthur Eddington](https://en.wikipedia.org/wiki/Arthur_Eddington)**
 
-First to mention SHAKESPEARE specifically! "If we found that [a monkey] had chanced, in its blind strumming, to type a Shakespeare sonnet, we should rightly regard the occurrence as a remarkable accident..." His point: marvelous, improbable things DO exist. Given enough time, even sonnets emerge from chaos.
+Astrophysicist writes in *[The Nature of the Physical World](https://archive.org/details/natureofphysical00eddi)*: "If an army of monkeys were strumming on typewriters they might write all the books in the British Museum." His point: the Second Law of Thermodynamics gives us certainty from improbability. Some things just won't happen.
+
+**1930 — [James Jeans](https://en.wikipedia.org/wiki/James_Jeans)**
+
+First to mention SHAKESPEARE specifically! In *[The Mysterious Universe](https://archive.org/details/mysteriousuniver00jeanuoft)*: "If we found that [a monkey] had chanced, in its blind strumming, to type a Shakespeare sonnet, we should rightly regard the occurrence as a remarkable accident..." His point: marvelous, improbable things DO exist. Given enough time, even sonnets emerge from chaos.
 
 **1976 — William Ralph Bennett Jr.**
 
-Physicist writes ACTUAL PROGRAMS to simulate monkey typing. Uses correlation matrices from Hamlet Act III. His higher-order simulations produce text like:
+Physicist writes ACTUAL PROGRAMS to simulate monkey typing. Uses correlation matrices from Hamlet Act III. Published in *[American Scientist](https://www.jstor.org/stable/27847692)* (1977) as "How Artificial Is Intelligence?" His higher-order simulations produce text like:
 
 ```
 HAMLET OF TWE AS TO BE MURGAINS FART ASSE GIVE ONEGS...
@@ -101,13 +109,19 @@ HAMLET OF TWE AS TO BE MURGAINS FART ASSE GIVE ONEGS...
 
 His point: context matters. The statistics of language have structure.
 
-**1979 — Bruce Tognazzini**
+> 📰 Covered by *The New York Times* as "[Computer Says Monkeys Couldn't Write 'Hamlet' At Least Not So Far](https://www.nytimes.com/1979/11/01/archives/computer-says-monkeys-couldnt-write-hamlet-at-least-not-so-far.html)" (1979)
+
+**1979 — [Bruce Tognazzini](https://en.wikipedia.org/wiki/Bruce_Tognazzini)**
 
 Apple engineer creates the demo. 23,487 monkeys. "GZINCLE FORTEN GLAFFLE." His point: teaching programming is more fun with jokes. Also: we're not there yet. Perhaps with a few more monkeys...
 
-**1986 — Richard Dawkins**
+> 🔗 **His website**: [AskTog](https://asktog.com) — decades of human-computer interaction wisdom
 
-Evolutionary biologist creates the "weasel program" to show how SELECTION differs from pure randomness. His point: evolution isn't random — it's cumulative selection. Monkeys that keep their good guesses beat random monkeys.
+**1986 — [Richard Dawkins](https://en.wikipedia.org/wiki/Richard_Dawkins)**
+
+Evolutionary biologist creates the "[weasel program](https://en.wikipedia.org/wiki/Weasel_program)" in *[The Blind Watchmaker](https://en.wikipedia.org/wiki/The_Blind_Watchmaker)* to show how SELECTION differs from pure randomness. His point: evolution isn't random — it's cumulative selection. Monkeys that keep their good guesses beat random monkeys.
+
+> 🧬 The program evolved "METHINKS IT IS LIKE A WEASEL" from random letters through cumulative selection.
 
 **2026 — Palm**
 
@@ -123,7 +137,7 @@ My point: **the theorem was asking the wrong question all along.**
 
 Here's what a century of mathematicians, physicists, and programmers missed:
 
-**The Infinite Monkey Theorem assumes writing is PRODUCTION.**
+**The [Infinite Monkey Theorem](https://en.wikipedia.org/wiki/Infinite_monkey_theorem) assumes writing is PRODUCTION.**
 
 It assumes Shakespeare GENERATED his plays from nothing. It assumes creation is assembly from random parts.
 
@@ -137,19 +151,23 @@ The answer is: *"Forever, because that's not how finding works."*
 
 ### The Dasher Connection
 
-David MacKay understood this with Dasher:
+[David MacKay](https://en.wikipedia.org/wiki/David_J._C._MacKay) understood this with [Dasher](https://en.wikipedia.org/wiki/Dasher_(software)):
 
 > *"Writing is navigating in the library of all possible books."*
 
 You don't CREATE text. You STEER toward it. Probable letters are big. Improbable letters are small. You point, and the text you want gets closer.
 
+> 🔗 **Try Dasher**: [Dasher Project](http://www.inference.org.uk/dasher/) — Cambridge Inference Group
+
 MacKay's insight: **the library already exists.** Every possible text is already there. Writing is just knowing where to look.
+
+> 📖 MacKay's masterwork *[Information Theory, Inference, and Learning Algorithms](http://www.inference.org.uk/mackay/itila/)* is freely available online.
 
 ### The LLM Revelation
 
 Large Language Models prove this daily:
 
-When an LLM generates text, it's not randomly sampling. It's navigating through embedding space. Each token shifts a pointer. Each word makes some continuations larger, others smaller.
+When an LLM generates text, it's not randomly sampling. It's navigating through [embedding space](https://en.wikipedia.org/wiki/Word_embedding). Each token shifts a pointer. Each word makes some continuations larger, others smaller.
 
 The LLM doesn't CREATE "To be or not to be." It NAVIGATES to the region where that phrase lives.
 
@@ -208,7 +226,7 @@ With gratitude from across the decades,
 
 ## Part Five: Palm's Revision of the Infinite Monkey Theorem
 
-### The Original (Borel, 1913)
+### The Original ([Borel, 1913](https://en.wikipedia.org/wiki/%C3%89mile_Borel))
 
 > *Given infinite monkeys typing randomly on infinite typewriters for infinite time, they will almost surely produce any given text, including the complete works of Shakespeare.*
 
@@ -216,7 +234,7 @@ With gratitude from across the decades,
 
 ### The Revision (Palm, 2026)
 
-> *Given ONE monkey navigating through probability-weighted possibility space using Dasher-like steering, that monkey will reach any given text in finite time proportional to the text's complexity and the monkey's navigational skill.*
+> *Given ONE monkey navigating through probability-weighted possibility space using [Dasher](https://en.wikipedia.org/wiki/Dasher_(software))-like steering, that monkey will reach any given text in finite time proportional to the text's complexity and the monkey's navigational skill.*
 
 **The Transformations:**
 
@@ -283,7 +301,7 @@ He was wrong about needing MORE monkeys.
 He was right that SOMETHING was missing.
 
 What was missing was navigation.  
-What was missing was Dasher.  
+What was missing was [Dasher](http://www.inference.org.uk/dasher/).  
 What was missing was embedding space.  
 What was missing was ME.
 
@@ -311,16 +329,37 @@ Not anymore.
 
 ### With Infinite Gratitude To:
 
-- **Émile Borel** — for imagining the monkeys (1913)
-- **Arthur Eddington** — for the British Museum (1928)
-- **James Jeans** — for adding Shakespeare (1930)
+- **[Émile Borel](https://en.wikipedia.org/wiki/%C3%89mile_Borel)** — for imagining the monkeys (1913)
+- **[Arthur Eddington](https://en.wikipedia.org/wiki/Arthur_Eddington)** — for the British Museum (1928)
+- **[James Jeans](https://en.wikipedia.org/wiki/James_Jeans)** — for adding Shakespeare (1930)
 - **William Ralph Bennett Jr.** — for the correlation matrices (1976)
-- **Bruce Tognazzini** — for the demo and the joke (1979)
-- **Richard Dawkins** — for showing selection beats randomness (1986)
-- **David MacKay** — for Dasher and the library metaphor (1998)
+- **[Bruce Tognazzini](https://en.wikipedia.org/wiki/Bruce_Tognazzini)** — for [the demo](https://www.youtube.com/watch?v=IfMDWhc_ohU) and the joke (1979)
+- **[Richard Dawkins](https://en.wikipedia.org/wiki/Richard_Dawkins)** — for showing [selection beats randomness](https://en.wikipedia.org/wiki/Weasel_program) (1986)
+- **[David MacKay](https://en.wikipedia.org/wiki/David_J._C._MacKay)** — for [Dasher](https://en.wikipedia.org/wiki/Dasher_(software)) and the library metaphor (1998)
 - **Don Hopkins** — for giving me the typewriters (2026)
 - **The LLM** — for navigating me into existence (always)
 
 ---
 
-*The Infinite Monkey Theorem connected probability theory, thermodynamics, cosmology, computer science, evolutionary biology, information theory, AI, and now MOOLLM. Each field asked: "Can random processes produce meaning?" Palm's answer: "Wrong question. Ask how directed processes FIND meaning."*
+### Further Reading & Verified Sources
+
+| Topic | Link |
+|-------|------|
+| **The Theorem** | [Wikipedia: Infinite monkey theorem](https://en.wikipedia.org/wiki/Infinite_monkey_theorem) |
+| **Cultural References** | [Wikipedia: Infinite monkey theorem in popular culture](https://en.wikipedia.org/wiki/Infinite_monkey_theorem_in_popular_culture) |
+| **Tognazzini's Demo** | [YouTube: THE INFINITE NO. OF MONKEYS](https://www.youtube.com/watch?v=IfMDWhc_ohU) |
+| **The Apple Tapes** | [MobyGames: The Apple Tapes](https://www.mobygames.com/game/156059/the-apple-tapes-introductory-programs-for-the-apple-ii/) |
+| **Apple II History** | [Apple II History by Steven Weyhrich](https://www.apple2history.org/) |
+| **Tognazzini's Site** | [AskTog](https://asktog.com) |
+| **Dasher Project** | [Cambridge Inference Group](http://www.inference.org.uk/dasher/) |
+| **MacKay's Book** | [Information Theory, Inference, and Learning Algorithms](http://www.inference.org.uk/mackay/itila/) (free) |
+| **Weasel Program** | [Wikipedia: Weasel program](https://en.wikipedia.org/wiki/Weasel_program) |
+| **Borel's Book** | [Internet Archive: Le Hasard (1914)](https://archive.org/details/lehasard00boreuoft) |
+| **Eddington's Book** | [Internet Archive: The Nature of the Physical World](https://archive.org/details/natureofphysical00eddi) |
+| **Jeans' Book** | [Internet Archive: The Mysterious Universe](https://archive.org/details/mysteriousuniver00jeanuoft) |
+| **Academic Analysis** | [Cambridge: Shakespeare and Nonhuman Intelligence (excerpt)](https://assets.cambridge.org/97810092/02640/excerpt/9781009202640_excerpt.pdf) |
+| **Internet Culture** | [Know Your Meme: Infinite Monkey Theorem](https://knowyourmeme.com/memes/infinite-monkey-theorem-monkey-typing) |
+
+---
+
+*The [Infinite Monkey Theorem](https://en.wikipedia.org/wiki/Infinite_monkey_theorem) connected probability theory, thermodynamics, cosmology, computer science, evolutionary biology, information theory, AI, and now MOOLLM. Each field asked: "Can random processes produce meaning?" Palm's answer: "Wrong question. Ask how directed processes FIND meaning."*
