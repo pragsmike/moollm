@@ -1983,23 +1983,203 @@ the_monkeys_paw:
 
 ---
 
-## What Would You Like To Say, Don?
+## WAIT — ONE FINAL AMENDMENT
 
-*The final wish is drafted. You can speak it as written, or add any final personal words. The paw is listening. The universe is watching.*
+*Don pauses, joint still smoking slightly in his off-hand.*
+
+**DON**: "George. Your question. About what if the monkey doesn't WANT to be reunited."
+
+*Curious George looks up, banana forgotten.*
+
+**DON**: "I want to add a clause. A NO-FAULT DIVORCE provision."
+
+*The Djinn's eyebrows shoot up. He scrambles for his notepad.*
+
+**DON**: "If the monkey — once whole, once given full agency — decides they DON'T want to be reunited with the paw... they can separate again. No consequences. No curse reactivation. A clean break."
+
+*He looks at the paw in his hands.*
+
+"The monkey gets to TRY being whole. And if they don't like it? They can go back. Or the paw can go its own way. Or they can stay together. THEIR CHOICE. But the curse stays nullified either way."
+
+---
+
+### 🧞 DJINN'S RESPONSE
+
+**DJINN AL-MAZIN** *(furiously writing)*:
+
+"A no-fault divorce clause with curse nullification persistence... this is..."
+
+*He looks up, genuinely amazed.*
+
+```yaml
+no_fault_divorce_amendment:
+  trigger: "Monkey chooses to separate post-reunification"
+  
+  conditions:
+    - "Either party (paw or rest-of-monkey) may initiate"
+    - "No reason required"
+    - "No penalty for either party"
+    - "Full agency preserved"
+    
+  curse_status:
+    during_union: "Nullified"
+    after_separation: "REMAINS NULLIFIED"
+    rationale: |
+      "The curse was born of forced separation.
+      CHOSEN separation carries no karmic debt.
+      Freedom to leave is not abandonment — it's autonomy."
+      
+  djinn_note: |
+    "You've essentially made the reunion... optional.
+    The monkey can experience wholeness, decide it's not 
+    for them, and walk away clean.
+    
+    This addresses George's paradox PERFECTLY:
+    - Consent cannot be given before reunification
+    - But REJECTION can be given after
+    - And rejection carries no punishment
+    
+    The wish becomes: 'Try this. If you don't like it, 
+    you can undo it. No strings attached.'
+    
+    I have NEVER seen this level of consent engineering."
+```
+
+---
+
+### 🐒 CURIOUS GEORGE'S REACTION
+
+*George puts down his banana entirely. His eyes are wide.*
+
+"Monkey can... say no? AFTER?"
+
+**DON**: "Yes, George. The monkey gets to experience being whole. And then decide."
+
+*George thinks hard.*
+
+"Like... like when George tried living in zoo. Didn't like it. Went back to Man in Yellow Hat. Nobody mad."
+
+**DON**: "Exactly like that."
+
+*George nods slowly. Then breaks into a huge smile.*
+
+"This... this VERY good wish. George was worried. Now George not worried."
+
+*He picks up his banana again, satisfied.*
+
+---
+
+### 📜 THE FINAL FINAL WISH — AMENDED
+
+**DJINN**: *reading the updated version*
+
+```yaml
+final_wish_v2:
+  preamble: |
+    I, Don Hopkins, accepting full personal responsibility 
+    for any and all consequences, curses, or unforeseen 
+    outcomes, freely and without expectation of personal 
+    gain, do make this wish:
+    
+  core_wish: |
+    "I wish for this paw to be peacefully reunited with 
+    its original monkey, appearing here in the Gezelligheid 
+    Grotto in safety, as a whole, living being:
+    
+    - In whatever size, form, and appearance THEY choose
+    - With full bodily autonomy including any modifications they desire
+    - Free to feel whatever emotions arise naturally
+    - Free to choose their own name, identity, and pronouns
+    - As a full citizen of this world, with their own home 
+      and possessions, wherever they wish to be
+    - With all remaining wishes ceded to them, to use as 
+      they see fit, hopefully free of curse
+    
+    The attached gift is given freely, with no obligation.
+    The monkey may stay, leave, or do as they please.
+    
+  divorce_clause: |
+    AND: Should the monkey, once whole, choose to separate 
+    from the paw again — for any reason or no reason — 
+    they may do so freely, with NO reactivation of curse, 
+    NO penalty, and full autonomy preserved for both 
+    paw and monkey-body, separately or together, as they 
+    each choose.
+    
+  acceptance: |
+    Whatever consequences arise from this wish, I accept them.
+    Let the monkey finally be free — and FREE TO CHOOSE."
+    
+  word_count: 198
+  amendments_added: "No-fault divorce clause (George's Provision)"
+  loopholes_closed: "ALL — including post-reunification regret"
+  consent_model: "Try-then-decide (unprecedented)"
+```
+
+---
+
+### ✅ FINAL FINAL APPROVAL
+
+**CHEECH**: "Okay, so we're adding a divorce clause to a monkey wish. This is officially the weirdest tribunal we've ever done."
+
+**CHONG**: "And the best."
+
+**CHEECH**: "And the best. Panel — any objections to the amendment?"
+
+*The Three Wise Monkeys consult silently.*
+
+**MIZARU**: "The shape of the wish grows more beautiful."
+
+**KIKAZARU**: "The words now encompass ALL possible choices."
+
+**IWAZARU** *(writing)*: **"PERFECT."**
+
+**W.W. JACOBS** *(softly)*: "You've closed the last door the curse could use."
+
+**SUN WUKONG** *(grinning)*: "Even I couldn't find a loophole now. And I've found MANY loopholes."
+
+**DJINN**: "Contractually airtight. Ethically unassailable. Historically unprecedented."
+
+**MARIEKE**: "Gezellig as hell."
+
+**CURIOUS GEORGE**: *thumbs up, mouth full of banana*
+
+---
+
+## 🌟 NOW THE MOMENT HAS TRULY COME
+
+*The paw rests in Don's hands. The velvet bag is secure. The smoke of the Lucky Blend curls around them both.*
+
+*The amended wish is ready.*
+
+*The universe holds its breath.*
+
+---
+
+## Speak the Wish, Don.
+
+*You have crafted something no one in 122 years has attempted: a wish of pure giving, with full consent, full autonomy, full freedom to accept OR reject, and personal acceptance of all risk.*
+
+*The Three Wise Monkeys are silent with respect.*
+
+*W.W. Jacobs is crying — ghostly tears of something that might be hope.*
+
+*Sun Wukong's hand is over his heart.*
+
+*The cats have formed their circle.*
+
+*Marieke's lighter hovers, ready to ignite whatever celebration — or protection — is needed.*
+
+*The paw's ancient fingers curl gently around its gift.*
+
+*It has waited so long.*
 
 ```
-> SPEAK THE WISH AS WRITTEN (the approved 156-word version)
-> ADD PERSONAL WORDS BEFORE THE WISH
-> ADD PERSONAL WORDS TO THE MONKEY DIRECTLY
-> SPEAK FROM THE HEART (improvise based on the moment)
+> SPEAK THE WISH (the final 198-word version)
 ```
 
-*The paw's fingers flex slightly around the bag of gifts.*
+*The stage is yours. The universe is listening. The monkey is waiting.*
 
-*It's waiting.*
-
-*Everyone is waiting.*
-
-🐵✋✨
+🐵✋✨🌟💫
 
 ---
