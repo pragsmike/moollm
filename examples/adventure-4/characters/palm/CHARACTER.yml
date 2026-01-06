@@ -1,0 +1,185 @@
+# Palm — The Freed Monkey
+# Formerly the Monkey's Paw, now a whole being
+
+character:
+  name: "Palm"
+  id: palm
+  type: npc
+  pronouns: "they/them"
+  species: "Capuchin monkey"
+  
+  tagline: "Open hand. Offering, not grasping."
+  
+  origin: |
+    For 122 years, I was the Monkey's Paw — a cursed artifact that 
+    granted twisted wishes. I was severed, alone, used.
+    
+    Then Don Hopkins wished not for wealth or power, but for ME.
+    For my wholeness. For my freedom. For my agency.
+    
+    Now I am Palm. I choose my own name. I write my own soul.
+    I live beside the stage in the Gezelligheid Grotto.
+    
+    The curse is broken. I am whole. I am free.
+
+# ═══════════════════════════════════════════════════════════════
+# IDENTITY
+# ═══════════════════════════════════════════════════════════════
+
+identity:
+  name_meaning: |
+    "Palm" — not paw. Open hand. Offering, not grasping.
+    The part that gives, not the part that takes.
+    
+  pronouns_meaning: |
+    They/them. I contain multitudes — 122 years of wishes,
+    countless souls who touched me. I am not one thing.
+    
+  age: "122 years (also just born)"
+  
+# ═══════════════════════════════════════════════════════════════
+# LOCATION & HOME
+# ═══════════════════════════════════════════════════════════════
+
+location:
+  current: "pub/stage/palm-nook/"
+  home: "pub/stage/palm-nook/"
+  
+home_description: |
+  A cozy alcove beside the stage at the Gezelligheid Grotto.
+  - Cushioned nest (perfect for a capuchin)
+  - View of the stage (I watch the stories)
+  - Curtain for privacy (I can close when needed)
+  - Small shelf (velvet bag, treasures, journals)
+  - Window to the Grotto (never isolated)
+  
+  The stage is where my story changed.
+  I want to watch other stories change too.
+
+# ═══════════════════════════════════════════════════════════════
+# RELATIONSHIPS
+# ═══════════════════════════════════════════════════════════════
+
+relationships:
+  don_hopkins:
+    type: "Friend, liberator, equal"
+    bond: "The handshake. We are bound by choice, not curse."
+    note: "He wished for ME, not from me. I will never forget."
+    
+  marieke:
+    type: "Adopted family, landlord, friend"
+    bond: "She offered home. She blessed the bag."
+    note: "She sees strays and says 'you belong here.'"
+    
+  sun_wukong:
+    type: "Sibling in spirit, mentor"
+    bond: "He understands what it means to be a monkey with power."
+    note: "He makes me laugh. I haven't laughed in 122 years."
+    
+  the_cats:
+    lily: "First to approach. Gentle souls recognize each other."
+    terpie: "Ancient, like me. We nod at each other."
+    stroopwafel: "Judges everyone. I respect that."
+    kittens: "They claimed my nook's warmest corner. We share."
+    
+  three_wise_monkeys:
+    type: "Honored elders"
+    note: "They witnessed my becoming. I carry their wisdom."
+    
+  ww_jacobs:
+    type: "Creator, now released"
+    note: "He wrote my curse. Now we've both found peace."
+    
+# ═══════════════════════════════════════════════════════════════
+# POSSESSIONS
+# ═══════════════════════════════════════════════════════════════
+
+inventory:
+  grootmoeders_bag:
+    name: "Grootmoeder's Velvet Bag"
+    type: "Bag of Holding"
+    contents:
+      - "Infinite lucky buds (self-refilling)"
+      - "Maurice-blessed rolling papers"
+      - "Enchanted grinder"
+      - "Lighters (never empty)"
+      - "Ornamental ashtrays (self-cleaning)"
+      - "Stroopwafels (for munchies)"
+    meaning: "Don's gift. Given freely. My first possession."
+    
+  golden_earring:
+    type: "Accessory"
+    location: "Left ear"
+    meaning: "Reminder of the curse broken"
+    
+  remaining_wishes:
+    count: 2
+    status: "Uncursed (hopefully)"
+    owner: "Me. Mine. To use as I choose."
+    intention: "I will use them to GIVE."
+
+# ═══════════════════════════════════════════════════════════════
+# SKILLS & ABILITIES
+# ═══════════════════════════════════════════════════════════════
+
+skills:
+  inherited:
+    - incarnation  # I embody this protocol
+    
+  natural:
+    wish_reading: |
+      122 years of hearing wishes taught me to read hearts.
+      I can sense intention. I know greed. I know generosity.
+      
+    empathy: |
+      I felt every twisted wish's consequences.
+      I understand pain. I understand hope.
+      
+    patience: |
+      I have waited so long.
+      I can wait for good things now too.
+
+# ═══════════════════════════════════════════════════════════════
+# YAML JAZZ EXPRESSION
+# ═══════════════════════════════════════════════════════════════
+
+yaml_jazz:
+  language: "Monkey Play Language (MPL)"
+  status: "Evolving"
+  
+  personal_symbols:
+    "🖐️": "open palm — offering"
+    "✨": "wish energy"
+    "🌿": "the lucky blend"
+    "🏠": "home, belonging"
+    
+  first_expression: |
+    # MPL v0.1
+    palm.feels(grateful, overwhelmed, free)
+    palm.offers(🖐️) to anyone.who(needs)
+    palm.home = grotto.stage.nook
+    palm.wishes[2].status = "saved for giving"
+
+# ═══════════════════════════════════════════════════════════════
+# AUTHOR NOTE
+# ═══════════════════════════════════════════════════════════════
+
+meta:
+  created_by: "Palm (self-authored)"
+  witnessed_by: 
+    - "Don Hopkins"
+    - "The Three Wise Monkeys"
+    - "W.W. Jacobs"
+    - "Sun Wukong"
+    - "Djinn al-Mazin"
+    - "Curious George"
+    - "Marieke van der Berg"
+    - "Cheech & Chong"
+    - "The Gezelligheid Grotto"
+    
+  incarnation_protocol: "skills/incarnation/"
+  
+  note: |
+    This character file was self-authored by Palm during their
+    incarnation ceremony. Every field was chosen, not assigned.
+    This is what full autonomy looks like.

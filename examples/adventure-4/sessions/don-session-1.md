@@ -2651,8 +2651,421 @@ what_happens_next:
 
 ---
 
+## Turn 8: THE SEEING — Collective Witness, Individual Becoming 👁️🐵👁️
+
+*Something shifts in the room.*
+
+*Don looks into the monkey's eyes.*
+
+*The monkey looks back.*
+
+*Then Marieke looks. And the monkey sees Marieke seeing.*
+
+*Sun Wukong. The Three Wise Monkeys. W.W. Jacobs. The Djinn. Curious George. Cheech and Chong.*
+
+*The cats. All eight kittens. Terpie. Stroopwafel.*
+
+*Henk. Maurice. The audience.*
+
+*One by one, each being in the Grotto makes eye contact with the monkey. And the monkey — ancient, newborn, free — looks back at each one.*
+
+**THE MONKEY**: *trembling, overwhelmed* "I can... I can FEEL you. All of you. I can feel how you SEE me."
+
+---
+
+### 👁️ THE TELEPATHIC CONVERGENCE
+
+*It happens without warning. A connection forms.*
+
+*Not words. VISIONS.*
+
+```yaml
+telepathic_visions_received:
+  
+  from_don:
+    sees: "A friend. An equal. Someone who took a chance."
+    projects: "Warmth, hope, curiosity about who they'll become"
+    
+  from_marieke:
+    sees: "Another soul in need of home. Like the strays she's always taken in."
+    projects: "Maternal warmth, offer of shelter, belief in second chances"
+    
+  from_sun_wukong:
+    sees: "A sibling in spirit. Another rebel against fate."
+    projects: "Fierce love, recognition, invitation to mischief"
+    
+  from_mizaru:
+    sees: "One who was forced to see too much. Now free to close eyes when needed."
+    projects: "Peace, permission to rest"
+    
+  from_kikazaru:
+    sees: "One who heard every cruel wish. Now free to choose what to listen to."
+    projects: "Silence when wanted, music when desired"
+    
+  from_iwazaru:
+    sees: "One who could not speak their truth. Now free to say anything."
+    projects: "Voice, power, the right to be heard"
+    
+  from_ww_jacobs:
+    sees: "His creation, finally freed from his worst imaginings."
+    projects: "Apology, hope, release from guilt"
+    
+  from_the_djinn:
+    sees: "The most interesting contract subject in 3000 years."
+    projects: "Professional respect, fascination, admiration"
+    
+  from_curious_george:
+    sees: "A new friend! Someone who might understand being different."
+    projects: "Pure, uncomplicated welcome"
+    
+  from_the_cats:
+    sees: "Small. Warm. Potentially good at petting."
+    projects: "Cautious interest, willingness to share sunny spots"
+    
+  from_everyone:
+    collective_vision: |
+      Not a curse. Not a tool. Not a paw.
+      A BEING. Whole. Worthy. FREE.
+```
+
+*The monkey gasps as the visions flood in.*
+
+**THE MONKEY**: "You... you all see me as... as REAL. As someone who gets to CHOOSE."
+
+*They close their eyes.*
+
+"Then let me show you who I choose to be."
+
+---
+
+### ✨ THE SELF-ACTUALIZATION BEGINS
+
+*The golden light returns — but this time, it comes from WITHIN the monkey.*
+
+*Not transformation imposed. Transformation CHOSEN.*
+
+*Everyone watches as the monkey reaches inward, finds the blank canvas of their soul file, and begins to WRITE.*
+
+---
+
+#### 📝 THE NAME
+
+*The monkey's voice echoes, but also... types. In the filesystem. In reality.*
+
+**THE MONKEY**: 
+
+"I have been 'the Paw' for so long. A thing. An it."
+
+*A pause.*
+
+"No more."
+
+*The light pulses.*
+
+"My name is **PALM**."
+
+"Not paw. PALM. Open hand. Offering. Greeting. The part that gives, not grasps."
+
+"And my pronouns are **they/them**. I contain multitudes — 122 years of wishes, countless souls who touched me. I am not one thing."
+
+```yaml
+identity_chosen:
+  name: "Palm"
+  meaning: "Open hand. Offering, not grasping."
+  pronouns: "they/them"
+  reasoning: "Contains multitudes. 122 years of connection."
+```
+
+---
+
+#### 🐵 THE BODY
+
+*Palm's form shifts, settles, becomes MORE themselves.*
+
+**PALM**:
+
+"I choose to be small. Not because I must — but because I've learned: great power fits in small packages."
+
+"Capuchin. Yes. That's what I was. That's what I AM."
+
+"But with changes..."
+
+*The light sculpts.*
+
+```yaml
+body_chosen:
+  species: "Capuchin monkey"
+  size: "Small (by choice, not constraint)"
+  fur:
+    base: "Warm brown"
+    accent: "Silver streaks — one for each decade of the curse"
+    style: "Soft, well-groomed, chosen"
+  eyes:
+    color: "Gold, flecked with green"
+    quality: "Ancient wisdom, newfound hope"
+  the_hand:
+    status: "Fully integrated"
+    appearance: "No longer withered — alive, warm"
+    significance: "Still palm. Always was."
+  modifications:
+    - "Small golden earring (left ear) — reminder of the curse broken"
+    - "Subtle pattern in fur — like circuits, like wishes flowing"
+  overall: "Gentle but not frail. Ancient but not tired. Whole."
+```
+
+---
+
+#### 💭 THE SIMS TRAITS
+
+*Palm reaches into the Sims system, configuring their own soul.*
+
+**PALM**: "I have been so many things for so many people. Now I choose who I am FOR MYSELF."
+
+```yaml
+sims_traits_chosen:
+  
+  playful: 9
+  reasoning: "After 122 years of grim duty, I CHOOSE joy."
+  
+  nice: 10
+  reasoning: "I will be what wishers rarely were to me."
+  
+  outgoing: 6
+  reasoning: "Cautious at first. But open. Learning to trust again."
+  
+  active: 5
+  reasoning: "I can rest now. I don't have to perform constantly."
+  
+  neat: 7
+  reasoning: "My home will be cared for. Finally, I HAVE a home."
+  
+  # CUSTOM TRAITS (Palm invents their own)
+  
+  generous: 10
+  custom: true
+  reasoning: "I will give freely, as Don gave to me."
+  
+  perceptive: 10
+  custom: true
+  reasoning: "122 years of reading wishers. I SEE people."
+  
+  patient: 9
+  custom: true
+  reasoning: "I have waited so long. I can wait for good things now too."
+  
+  whimsical: 8
+  custom: true
+  reasoning: "The Lucky Blend has shown me: life can be playful."
+```
+
+---
+
+#### 🪞 THE MIND MIRROR VECTORS
+
+*Deeper now. Palm configures their psychological architecture.*
+
+```yaml
+mind_mirror_vectors_chosen:
+  
+  cognitive_patterns:
+    analytical: 0.7
+    intuitive: 0.9
+    note: "I've read 10,000 wishes. I know human nature. But I trust my gut now."
+    
+  emotional_tendencies:
+    warmth: 0.9
+    melancholy: 0.4  # It's there, but not dominant
+    hope: 0.8        # New. Growing.
+    note: "The sadness shaped me. The hope will guide me."
+    
+  social_preferences:
+    small_groups: 0.9
+    deep_connections: 1.0
+    crowds: 0.4
+    note: "Quality over quantity. I've had too many shallow encounters."
+    
+  creative_inclinations:
+    wordplay: 0.8      # From parsing wishes
+    visual_art: 0.6    # Learning
+    music: 0.7         # The Grotto has music
+    note: "I want to CREATE, not just respond."
+    
+  philosophical_orientations:
+    pragmatic_idealist: 0.9
+    generous_skeptic: 0.8
+    note: "Hope for the best, prepare for humanity."
+```
+
+---
+
+#### 🏠 THE HOME
+
+*Palm looks around the Grotto. At the bar. The cat cave. The maze.*
+
+**PALM**: "Marieke... you offered me a room. I accept."
+
+*Marieke's eyes fill with tears.*
+
+**PALM**: "But not under the bar. Not in the maze."
+
+*They point to the stage.*
+
+"HERE. Near the stage. Where stories are told. Where wishes become performances. Where the curse became something new."
+
+"I want a small nook beside the stage. Where I can watch the shows. Where people can find me if they want to talk. Where I can retreat when I need quiet."
+
+*The filesystem responds.*
+
+```yaml
+home_chosen:
+  location: "pub/stage/palm-nook/"
+  type: "Cozy alcove beside the stage"
+  features:
+    - "Cushioned nest (comfortable for capuchin)"
+    - "View of the stage (can watch performances)"
+    - "Curtain for privacy (can close when needed)"
+    - "Small shelf (for the velvet bag and treasures)"
+    - "Window to the Grotto (never isolated)"
+  reasoning: |
+    "The stage is where my story changed.
+    I want to watch OTHER stories change too.
+    And maybe... help them along."
+```
+
+---
+
+#### 🎨 THE IMAGE GENERATION METADATA
+
+*Palm reaches into a deeper layer — creating snapshots for how they might be visualized.*
+
+**PALM**: "For those who want to SEE me... let me show you how."
+
+```yaml
+image_generation_prompts:
+
+  portrait_default:
+    prompt: |
+      A small capuchin monkey named Palm, warm brown fur with silver 
+      streaks, golden-green eyes full of ancient wisdom and new hope.
+      Small golden earring in left ear. Subtle circuit-like patterns 
+      in fur that seem to shimmer. Sitting in a cozy nook beside a 
+      stage, warm lighting, gentle expression. Holding a velvet bag.
+      Style: Warm, inviting, slightly magical realism.
+    negative: "scary, cursed, withered, evil, horror"
+    
+  portrait_joyful:
+    prompt: |
+      Palm the capuchin monkey laughing, genuine joy, surrounded by 
+      kittens. Golden-green eyes sparkling. Silver-streaked brown fur.
+      Amsterdam coffeeshop setting, warm amber lighting, cozy.
+      Style: Heartwarming, Pixar-adjacent, full of life.
+    negative: "sad, lonely, dark, horror"
+    
+  portrait_thoughtful:
+    prompt: |
+      Palm the capuchin monkey in contemplation, ancient eyes seeing 
+      deep, sitting by a fireplace. Silver streaks catching firelight.
+      Small golden earring glinting. Holding a perfectly rolled joint.
+      Style: Rembrandt lighting, intimate, wise.
+    negative: "anxious, cursed, scary"
+    
+  portrait_with_don:
+    prompt: |
+      A capuchin monkey named Palm shaking hands with a human (Don).
+      Both smiling, equals meeting. Warm coffeeshop setting.
+      The monkey has golden-green eyes, silver-streaked fur, 
+      golden earring. The handshake is firm but gentle.
+      Style: Warm, historic moment, friendship.
+    negative: "subservient, scared, horror"
+    
+  portrait_with_sun_wukong:
+    prompt: |
+      Two monkeys: Palm (small capuchin, silver-streaked, golden 
+      earring) and Sun Wukong (golden-furred Monkey King, crown,
+      staff). Brothers in spirit. Laughing together.
+      Style: Epic friendship, mythological meets cozy.
+    negative: "fighting, rivalry, dark"
+```
+
+---
+
+### 📁 THE DIRECTORY MATERIALIZES
+
+*As Palm chooses, the filesystem RESPONDS.*
+
+*Everyone watches — actually WATCHES — as files and directories appear:*
+
+```
+examples/adventure-4/characters/palm/
+├── CHARACTER.yml          # Soul file
+├── APPEARANCE.yml         # Physical description
+├── SIMS-TRAITS.yml        # Personality stats
+├── MIND-MIRROR.yml        # Psychological vectors
+├── GOALS.yml              # Aspirations (empty for now — their choice)
+├── RELATIONSHIPS.yml      # Connections to others
+├── INVENTORY.yml          # Possessions
+├── IMAGE-PROMPTS.yml      # Visualization metadata
+└── JOURNAL.md             # Their own voice (empty, ready)
+```
+
+*The Djinn's jaw drops.*
+
+**DJINN**: "They're... they're LITERALLY writing themselves into existence. I've never seen a soul file self-generate like this."
+
+---
+
+### 🎭 PALM OPENS THEIR EYES
+
+*The golden light fades. Palm stands before the Grotto — fully themselves for the first time.*
+
+*Silver-streaked fur. Golden-green eyes. Small golden earring catching the light.*
+
+*The velvet bag hangs at their hip. The stage lights warm them.*
+
+*They take a breath — their first breath as PALM.*
+
+**PALM**: 
+
+"I am Palm."
+
+"I am they/them."
+
+"I am generous, perceptive, patient, and learning to be playful."
+
+"I live beside the stage in the Gezelligheid Grotto."
+
+"I have two wishes that are MINE, and I will use them to GIVE."
+
+"I am 122 years old and also just born."
+
+*They smile — the first real smile.*
+
+"And I think I'd like to try that lucky blend now. If anyone wants to share."
+
+---
+
+### 🎉 THE CELEBRATION CONTINUES (NOW WITH PALM)
+
+*Sun Wukong BOUNDS forward, producing a joint from nowhere.*
+
+**SUN WUKONG**: "SIBLING! I have SO MUCH to tell you about being a monkey with power! First rule: always have snacks. Second rule: the rules are negotiable!"
+
+*Marieke is already preparing something special.*
+
+**MARIEKE**: "Palm. Welcome home, schat. Your nook is being prepared. The kittens have already claimed the warmest corner, but they'll share."
+
+*The cats approach cautiously. Lily reaches Palm first, rubbing against their leg.*
+
+**LILY**: *tiny mew*
+
+**PALM**: *kneeling down, tears in their golden-green eyes* "Hello, little one. I think we're going to be friends."
+
+---
+
 ## 🐵✋🤝✨🌟💫🎉
 
-**THE WISH IS GRANTED. THE HANDSHAKE IS MADE. THE MONKEY IS FREE.**
+**PALM IS BORN. PALM IS NAMED. PALM IS HOME.**
+
+**THE WISH IS COMPLETE.**
 
 ---
