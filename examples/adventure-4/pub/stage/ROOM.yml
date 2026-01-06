@@ -436,10 +436,10 @@ weekly_schedule:
         description: "The ultimate punctuation (practice first)"
       - name: "WIG-TOSS"
         command: "WIG-TOSS [direction/target]"
-        description: "Fling that hair for DRAMA — reveal underneath!"
+        description: "Fling that hair into the audience for DRAMA like a bride throws flowers — reveal underneath!"
       - name: "CROWD-SURF"
         command: "CROWD-SURF"
-        description: "Trust fall into glory — the audience carries you"
+        description: "Trust fall into glory — the audience carries you, and knows when to send you back to the stage after the bridge is complete"
       - name: "SLAY"
         command: "SLAY [look/performance]"
         description: "Absolutely murder the moment"
@@ -484,6 +484,26 @@ weekly_schedule:
         catchphrase: "Death becomes me."
         rare: "Only performs once a month. Don't miss it."
         
+      madame_maurice:
+        name: "Madame Maurice"
+        real_identity: "Maurice (the Coatroom's master of transformation)"
+        style: "Theatrical maximalism — if one boa is good, seven is better"
+        catchphrase: "Darling, the REAL you was in the closet all along."
+        signature: "Costume changes MID-SONG. How? Nobody knows."
+        backstory: |
+          Maurice runs the Coatroom by day, helping adventurers find
+          their personas. But on Starday nights? Maurice BECOMES.
+          The ultimate expression of what the Coatroom teaches:
+          identity is a costume, and costumes are POWER.
+        special_talent: |
+          Can read your soul and dress you for it.
+          Has been known to pull the PERFECT accessory from nowhere.
+          The props box fears and respects Madame Maurice.
+        relationship_to_mirror: |
+          The Mind Mirror in the Coatroom shows who you ARE.
+          Madame Maurice shows who you could BECOME.
+          They are partners in transformation.
+        
       the_terpene_queens:
         name: "The Terpene Queens"
         description: "A rotating cast inspired by the kittens"
@@ -492,6 +512,10 @@ weekly_schedule:
           - "Lemon Drop (citrus sunshine energy)"
           - "Lily Luxe (soft, healing beauty)"
           - "Pine Fierce (sharp looks, sharper tongue)"
+          - "Carrie On (fierce protector energy)"
+          - "Hops Couture (dignified elegance)"
+          - "O-C-Mischief (chaos in heels)"
+          - "Terpy Surprise (you never know what you're getting)"
         
     rules:
       - "Respect the performers (tips, not gropes)"
