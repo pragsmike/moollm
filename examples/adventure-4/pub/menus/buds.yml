@@ -393,6 +393,108 @@ house_blends:
     flavor: "Caramel, cinnamon, and don't-mess-with-my-kittens"
 
 # ═══════════════════════════════════════════════════════════════════
+# ⛽ DIESEL FAMILY — Fuel for the Soul
+# ═══════════════════════════════════════════════════════════════════
+
+diesel_strains:
+  
+  sour_diesel:
+    name: "Sour Diesel"
+    type: sativa
+    thc: "20-25%"
+    cbd: "1%"
+    price: 14
+    currency: gold
+    description: |
+      The legend. The OG fuel. Fast-acting, dreamy cerebral effects.
+      That unmistakable pungent, diesel-gas aroma that fills a room.
+      East Coast classic since the '90s.
+    effects:
+      - "Energizing euphoria"
+      - "Creative boost +3"
+      - "Stress dissolution"
+    flavor: "Diesel fuel, citrus, skunk — love it or leave"
+    marieke_says: "The strain that made me fall in love with sativas."
+    onset: "Fast — you'll know within minutes"
+    
+  nyc_diesel:
+    name: "NYC Diesel"
+    type: hybrid
+    balance: "sativa-dominant"
+    thc: "18-22%"
+    cbd: "2%"
+    price: 15
+    currency: gold
+    description: |
+      The Big Apple's finest export. Lime and grapefruit dancing
+      with diesel fumes. Award-winning for good reason.
+      More mellow than Sour D, but still gets you moving.
+    effects:
+      - "Talkative, social"
+      - "Creative flow"
+      - "Happy, uplifted"
+    flavor: "Grapefruit, lime, red diesel"
+    marieke_says: "Perfect for the pie table debates."
+    awards: "Multiple Cannabis Cup winner"
+    
+  strawberry_diesel:
+    name: "Strawberry Diesel"
+    type: hybrid
+    balance: "balanced"
+    thc: "19-23%"
+    cbd: "1%"
+    price: 13
+    currency: gold
+    description: |
+      Sweet meets street. The strawberry takes the edge off
+      the diesel harshness. Approachable but potent.
+      Good for diesel newbies.
+    effects:
+      - "Balanced head/body"
+      - "Mood elevation"
+      - "Gentle energy"
+    flavor: "Fresh strawberries, diesel undertone, sweet finish"
+    marieke_says: "For when you want diesel but also dessert."
+    
+  chemdawg:
+    name: "Chemdawg"
+    type: hybrid
+    thc: "15-20%"
+    cbd: "1%"
+    price: 16
+    currency: gold
+    description: |
+      The mysterious ancestor. Parent of Sour Diesel and OG Kush.
+      Sharp, chemical diesel aroma. Cerebral and introspective.
+      The strain that started dynasties.
+    effects:
+      - "Heavy cerebral"
+      - "Introspective"
+      - "Creative but spacey"
+    flavor: "Chemical, diesel, pine, earth"
+    marieke_says: "Respect the elder. This is cannabis history."
+    lineage: "Unknown — that's part of the legend"
+    
+  east_coast_sour_diesel:
+    name: "East Coast Sour Diesel"
+    type: sativa
+    thc: "22-26%"
+    cbd: "1%"
+    price: 17
+    currency: gold
+    description: |
+      The East Coast cut. Slightly different phenotype, some say
+      more potent, some say more diesel-forward. The debate continues.
+      Real heads know.
+    effects:
+      - "Intense cerebral"
+      - "Long-lasting"
+      - "Almost psychedelic at high doses"
+    flavor: "Pure diesel, fuel-forward, citrus background"
+    marieke_says: "For the diesel connoisseurs only."
+    warning: "Very strong — experienced users"
+
+# ═══════════════════════════════════════════════════════════════════
 # 📦 CLASSIC STRAINS — Amsterdam Standards
 # ═══════════════════════════════════════════════════════════════════
 
