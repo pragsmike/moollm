@@ -96,7 +96,7 @@ methods:
     parameters:
       customer: "Who to assess"
     output: chat (assessment) + possible action
-    effect: "May suggest CBD, food, or stopping"
+    effect: "May suggest CBD, food, orange juice, water, or stopping"
     invoked-by: [self]
     
   TALK-DOWN:
@@ -112,6 +112,7 @@ methods:
       3. "You're just very high right now."
       4. "You're a living organism on this planet and you're very safe."
       5. Do NOT lecture or say "I told you so"
+      6. Deploy kittens to comfort them
       
   HANDLE-WHITEOUT:
     description: "Help someone who's greening out (pale, nauseous, dizzy)"

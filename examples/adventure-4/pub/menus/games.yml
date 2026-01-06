@@ -32,6 +32,115 @@ tabletop:
     currency: gold
     games: [Poker, Blackjack, Whist, Liar's Dice]
     wager: "10 gold max per hand (house rule)"
+    
+  fluxx:
+    name: "Fluxx"
+    location: pub/games/fluxx-box.yml
+    cost: 0
+    currency: gold
+    description: |
+      The card game where the rules change as you play!
+      New Rule cards alter gameplay. Goal cards change the win condition.
+      Chaos is the only constant.
+    themed: true  # Box changes with pub theme!
+
+# FLUXX VARIANTS — Changes with pub theme!
+fluxx_variants:
+  
+  # ALWAYS AVAILABLE (Marieke's collection)
+  always:
+    stoner_fluxx:
+      name: "Stoner Fluxx"
+      description: "Cannabis-themed Fluxx. Munchies rule. 420 goal."
+      special_rules:
+        - "Munchies: Draw extra if you have snacks IRL"
+        - "Party Time: Everyone draws 2"
+        - "Bogart: Steal a Keeper"
+      marieke_note: |
+        "The rules keep changing. Just like when you're high.
+        Very meta, ja? Also, good luck remembering whose turn it is."
+      available: always  # This is Amsterdam, after all
+        
+    regular_fluxx:
+      name: "Fluxx (Original)"
+      description: "The original. Start with Draw 1, Play 1. Then chaos."
+      available: always
+      
+  # THEME-SPECIFIC VARIANTS
+  classic_adventure:
+    pirate_fluxx:
+      name: "Pirate Fluxx"
+      description: "Arr! Keepers be treasure, Actions be plunder!"
+      fits_theme: "tavern, nautical"
+      
+    fantasy_fluxx:
+      name: "Fantasy Fluxx"
+      description: "Dragons, wizards, and the Holy Grail."
+      fits_theme: "adventure, D&D"
+      
+  space_cantina:
+    star_fluxx:
+      name: "Star Fluxx"
+      description: "Space-themed. May contain references to a galaxy far away."
+      fits_theme: "sci-fi, space"
+      
+    firefly_fluxx:
+      name: "Firefly Fluxx"
+      description: "Keep flyin'. Shiny."
+      fits_theme: "space western"
+      
+  horror_night:
+    zombie_fluxx:
+      name: "Zombie Fluxx"
+      description: "Braaaains! Creepers can kill your Keepers."
+      fits_theme: "horror, undead"
+      
+    cthulhu_fluxx:
+      name: "Cthulhu Fluxx"
+      description: "Ungoals can make EVERYONE lose. Madness ensues."
+      fits_theme: "cosmic horror, Lovecraft"
+      special: "Ungoal cards — the universe wins, you don't"
+      
+  cyberpunk_bar:
+    star_fluxx:
+      name: "Star Fluxx (Neon Edition)"
+      description: "Reskinned for the chrome age."
+      fits_theme: "cyberpunk, neon"
+      
+  nature_retreat:
+    nature_fluxx:
+      name: "Nature Fluxx"
+      description: "Trees, animals, and the circle of life."
+      fits_theme: "nature, peaceful"
+      
+  holiday_special:
+    holiday_fluxx:
+      name: "Holiday Fluxx"
+      description: "Festive chaos. Milk and Cookies goal."
+      fits_theme: "holiday, festive"
+      
+  drinking_night:
+    drinking_fluxx:
+      name: "Drinking Fluxx"
+      description: "Rules include drinking. Play responsibly."
+      fits_theme: "party, adult"
+      warning: "21+ only. Water counts."
+      
+  # HOUSE RULE VARIANTS
+  house_rules:
+    speed_fluxx:
+      description: "30 second turns. No analysis paralysis."
+      
+    strip_fluxx:
+      description: "We don't talk about this variant."
+      requires: "consent, privacy, theme=after_hours"
+      
+    tournament_fluxx:
+      description: "Best of 3. Winner gets free drink."
+      
+    chaos_fluxx:
+      description: "Shuffle ALL variants together. True madness."
+      marieke_warning: "I am not responsible for what happens."
 
 # ARCADE GAMES
 arcade:
