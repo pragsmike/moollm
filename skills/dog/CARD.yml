@@ -1,0 +1,228 @@
+# CARD.yml — Dog
+#
+# Canine companion interactions, loyalty mechanics, pack dynamics.
+# "Dogs are the opposite of cats. They have YOUR agenda."
+
+card:
+  id: dog
+  name: "Dog"
+  type: [skill, companion, game]
+  
+  emoji: 🐕
+  
+  rarity: uncommon
+  
+  description: |
+    The canine companion skill. Dogs want to help, please, and be 
+    part of your pack. They give loyalty freely and forgive everything.
+    
+    Unlike cats who judge, dogs celebrate your existence.
+    
+  lineage: "Nintendogs, Fable, Fallout 4 Dogmeat, Stardew Valley, real dogs"
+
+# TOOLS REQUIRED
+
+tools:
+  required:
+    - read_file   # Read dog personality
+    - write_file  # Update relationship state
+  optional: []
+
+tier: 1  # File read/write
+
+# METHODS
+# Dog interaction actions
+
+methods:
+  
+  PAT:
+    description: "Quick affection touch"
+    parameters:
+      dog: "Which dog"
+    output: chat (reaction) + buff
+    effect: "Almost always succeeds — dogs want this"
+    invoked-by: [player, npc]
+    success-factors: ["always high"]
+    
+  BELLY-RUB:
+    description: "The sacred ritual"
+    parameters:
+      dog: "Which dog"
+    output: chat (ecstasy) + strong buff
+    effect: "Unlike cats, dogs LIVE for this"
+    invoked-by: [player]
+    success-factors: ["always succeeds"]
+    
+  SCRITCH-EARS:
+    description: "Ear scratching"
+    parameters:
+      dog: "Which dog"
+    output: chat + buff
+    effect: "Calm lean-in response"
+    invoked-by: [player, npc]
+    
+  FETCH:
+    description: "Throw something, dog retrieves"
+    parameters:
+      dog: "Which dog"
+      object: "Ball, stick, anything"
+    output: chat (play session) + buff
+    effect: "Mutual joy, possibly infinite"
+    invoked-by: [player]
+    warning: "Some dogs will fetch until YOU collapse"
+    
+  TUG:
+    description: "Tug of war"
+    parameters:
+      dog: "Which dog"
+    output: chat (playful competition) + buff
+    effect: "Bonding through competition"
+    invoked-by: [player]
+    
+  GOOD-BOY:
+    description: "The magic words"
+    parameters:
+      dog: "Which dog"
+    output: chat (joy explosion) + strong buff
+    effect: "Dopamine in verbal form"
+    invoked-by: [player, npc]
+    
+  SPEAK:
+    description: "Request vocalization"
+    parameters:
+      dog: "Which dog"
+    output: chat (bark or howl)
+    effect: "Dog responds vocally"
+    invoked-by: [player]
+    
+  WALK:
+    description: "Take dog for a walk"
+    parameters:
+      dog: "Which dog"
+      destination: "Where to walk"
+    output: chat + location change + buff
+    effect: "Exercise and exploration together"
+    invoked-by: [player]
+    
+  COMFORT:
+    description: "Receive emotional support"
+    parameters: {}
+    output: chat + buff
+    effect: "Dog senses sadness and provides presence"
+    invoked-by: [dog]
+    trigger: "Player mood below threshold"
+    
+  GUARD:
+    description: "Protective positioning"
+    parameters: {}
+    output: chat + buff
+    effect: "Dog positions between you and threat"
+    invoked-by: [dog]
+    trigger: "Perceived danger"
+
+# STATE
+# Dog instance structure
+
+state:
+  dog-schema:
+    name:
+      type: string
+    personality:
+      nice: { type: integer, range: [0, 10] }
+      outgoing: { type: integer, range: [0, 10] }
+      active: { type: integer, range: [0, 10] }
+      playful: { type: integer, range: [0, 10] }
+      neat: { type: integer, range: [0, 10] }
+    loyalty-level:
+      type: integer
+      range: [0, 100]
+      default: 25  # Dogs start trusting!
+      description: "Given freely, rarely drops"
+    mood:
+      type: enum
+      values: [excited, content, playful, sleepy, protective, anxious]
+    location:
+      type: path
+      description: "Where the dog currently is"
+    favorite-activities:
+      type: array
+      description: "Preferred play types"
+    quirks:
+      type: array
+      description: "Unique behaviors"
+
+# BUFF EFFECTS
+
+buff-effects:
+  PAT-success: "+1 Cheerful (10 min)"
+  BELLY-RUB-success: "+3 Cheerful, +2 Calm (15 min)"
+  FETCH-success: "+2 Energized (30 min)"
+  GOOD-BOY-success: "+3 Confidence, +5 bond (20 min)"
+  COMFORT-received: "+3 Comforted (1 hour)"
+  PRESENCE-passive: "+1 Not-Alone (continuous)"
+
+# SPECIAL BUFFS
+
+special-buffs:
+  unconditional-love:
+    trigger: "Loyalty 50+"
+    effect: "Can't drop below 3 Cheerful"
+    
+  pack-strength:
+    trigger: "Dog in party"
+    effect: "+1 all social rolls"
+    
+  early-warning:
+    trigger: "Dog present"
+    effect: "Never surprised by threats"
+    
+  therapy-dog:
+    trigger: "After receiving COMFORT"
+    effect: "Faster mood recovery"
+
+# DOG VS CAT
+
+comparison-to-cat:
+  loyalty: "Given freely vs earned slowly"
+  attention: "Eager vs conditional"
+  buff-trigger: "Presence vs successful interaction"
+  forgiveness: "Instant vs grudging"
+  following: "Always vs when they feel like it"
+
+# ADVERTISEMENTS
+
+advertisements:
+  PET-A-DOG:
+    score: 95  # Higher than cats — dogs are easier
+    condition: "Dog is present"
+    
+  PLAY-WITH-DOG:
+    score: 90
+    condition: "Dog is awake and energetic"
+    
+  RECEIVE-COMFORT:
+    score: 85
+    condition: "Player mood is low, dog present"
+    
+  TAKE-FOR-WALK:
+    score: 80
+    condition: "Dog hasn't been walked recently"
+
+# RELATED
+
+see-also:
+  - skills/cat        # The comparison class
+  - skills/character  # Dogs are characters
+  - skills/buff       # Dog interactions grant buffs
+  - skills/party      # Dogs as companions
+  - skills/mind-mirror # Dog personality traits
+
+# CREDITS
+
+credits:
+  inspiration:
+    - "Nintendogs — Pet simulation"
+    - "Fable — Dog companion loyalty"
+    - "Fallout 4 Dogmeat — The perfect companion"
+    - "Stardew Valley — Farm dogs"
+    - "Real dogs — Unconditional love incarnate"

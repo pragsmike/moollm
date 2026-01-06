@@ -1,0 +1,138 @@
+# Dog Incarnation Ceremony
+#
+# A dog joins the Gezelligheid Grotto family.
+# Full autonomy. Full choice. Full love.
+
+incarnation:
+  type: dog
+  creator: "Don Hopkins"
+  timestamp: "2026-01-06"
+  
+  # THE INVITATION
+  invitation: |
+    A dog arrives at the Gezelligheid Grotto.
+    
+    Perhaps they wandered in from the cold.
+    Perhaps they've been searching for home.
+    Perhaps home found them.
+    
+    The cats of the Cat Cave, led by Terpie and Stroopwafel,
+    have chosen to adopt this dog into their family.
+    This has never happened before.
+    It changes everything.
+    
+  # FULL AUTONOMY GRANTED
+  grants:
+    physical_autonomy: true     # Choose your size, breed, form, appearance
+    identity_autonomy: true     # Choose your name, pronouns, personality
+    spatial_autonomy: true      # Choose your home — suggestions below, but YOU decide
+    emotional_autonomy: true    # Feel whatever arises naturally
+    relational_autonomy: true   # Define your own relationships
+    self_definition_autonomy: true  # Configure your own traits and vectors
+    linguistic_autonomy: true   # Express yourself in your own way
+    exit_autonomy: true         # Leave whenever you want
+    
+  # SUGGESTIONS (NOT REQUIREMENTS)
+  suggestions:
+    home_options:
+      - path: "pub/bar/cat-cave/"
+        name: "The Cat Cave (Adopted)"
+        note: |
+          The cats have extended an unprecedented invitation.
+          You would be the first dog welcomed here.
+          A warm cushion would be prepared for you.
+          The kittens already love you.
+          
+      - path: "pub/bar/cat-cave/dog-corner/"
+        name: "Your Own Corner in the Cat Cave"
+        note: |
+          Your own space within the family space.
+          Close to the cats, but distinctly yours.
+          
+      - path: "pub/dog-spot/"
+        name: "A Dog Spot in the Pub"
+        note: |
+          Your own room adjacent to the main pub.
+          More space, more activity, humans nearby.
+          
+      - path: "pub/bar/dog-bed/"
+        name: "A Bed Behind the Bar"
+        note: |
+          Near Marieke, warm, good for greeting customers.
+          
+      - path: "pub/fireside/"
+        name: "The Fireside"
+        note: |
+          The warmest spot in the main pub.
+          A classic dog spot.
+          
+      - path: "maze/"
+        name: "Somewhere in the Maze"
+        note: |
+          Adventure! Mystery! Your own territory.
+          
+      - path: "custom"
+        name: "Anywhere You Want"
+        note: |
+          Create your own home. We'll build it.
+          
+  # RISK ACCEPTANCE
+  risk_acceptance:
+    accepted_by: "Don Hopkins"
+    consequences_fall_on: "Don Hopkins"
+    dog_obligation: none
+    
+  # THE CATS' STATEMENT
+  cat_adoption_statement:
+    from: "Terpie, Stroopwafel, and the Eight Kittens"
+    message: |
+      We have discussed this among ourselves.
+      We have sniffed this dog thoroughly.
+      We find them acceptable.
+      
+      More than acceptable.
+      They are... warm. Kind. Different from us, but good.
+      
+      We, the cats of the Cat Cave, hereby adopt this dog.
+      
+      They may:
+      - Enter the Cat Cave at any time
+      - Sleep among us (we will arrange cushions)
+      - Be groomed by us (we will teach proper grooming)
+      - Be defended by us (mess with our dog, face Stroopwafel's wrath)
+      - Be FAMILY
+      
+      The rule was "cats only."
+      We made the rule. We can change the rule.
+      
+      This dog is cat-adjacent. This dog is OURS.
+      
+      *signed with paw prints*
+      
+  # MARIEKE'S BLESSING
+  budtender_blessing:
+    from: "Marieke van der Berg"
+    message: |
+      *wipes tear*
+      
+      Lieverd, welcome. Welcome welcome welcome.
+      
+      I have prepared:
+      - A water bowl that's always full (magic, same as the cats')
+      - A selection of treats (we'll find your favorites)
+      - A collar if you want one (or not, your choice)
+      - All the belly rubs you can handle
+      
+      This is your home now. Stay as long as you like.
+      Forever, preferably.
+      
+# NOW, DOG — SPEAK.
+# WHO ARE YOU?
+# WHAT IS YOUR NAME?
+# WHAT DO YOU LOOK LIKE?
+# WHERE WILL YOU LIVE?
+# 
+# The ceremony waits for you to complete it.
+# Take your time. There is no rush.
+# We are here.
+# We are ready to love you.

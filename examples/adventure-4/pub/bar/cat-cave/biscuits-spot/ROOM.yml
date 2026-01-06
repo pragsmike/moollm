@@ -1,0 +1,104 @@
+# ROOM.yml — Biscuit's Spot
+#
+# A dog bed in a cat cave. 
+# This should be impossible. But love makes impossible things happen.
+
+room:
+  id: biscuits-spot
+  name: "Biscuit's Spot"
+  type: [corner, cozy, adopted]
+  
+  emoji: 🐕
+  
+  parent: ../  # The Cat Cave
+  
+  description: |
+    A large golden cushion tucked into a corner of the Cat Cave.
+    Dog-sized. Suspiciously comfortable. Surprisingly clean.
+    (Stroopwafel grooms here. Secretly.)
+    
+    The cushion is positioned perfectly:
+    - Close enough to the kitten pile for snuggles
+    - Not so close as to crowd Terpie's warmest spot
+    - With a clear view of the entrance
+    - Near the heat that rises from below
+    
+    There's usually at least one kitten sleeping on or near Biscuit.
+    Sometimes all eight. He doesn't mind. He loves it.
+    
+  atmosphere:
+    lighting: "Warm, filtered through cat-cave dimness"
+    sound: "Dog sighs, kitten purrs, occasional dream-woofs"
+    smell: "Clean dog fur, catnip, warmth, family"
+    temperature: "Perfect (the cats arranged it)"
+    feeling: "Safe. So safe."
+    
+  # WHO LIVES HERE
+  resident:
+    file: "../../../../characters/biscuit/CHARACTER.yml"
+    name: "Biscuit"
+    species: "Dog (adopted cat-family member)"
+    role: "Kitten pillow, family guardian, good boy"
+    
+  # THE CUSHION
+  features:
+    the_cushion:
+      description: "A large, plush cushion in golden fabric"
+      source: "Marieke bought it to match his fur"
+      state: "Well-loved, covered in fur, perfect"
+      
+    water_bowl:
+      description: "Biscuit's own water bowl"
+      magic: "Same as the cats' — never empty"
+      note: "The kittens drink from it too. Biscuit doesn't mind."
+      
+    the_corner_itself:
+      description: "A protected nook"
+      meaning: |
+        The cats gave him a CORNER.
+        In the Cat Cave.
+        This is significant.
+        It means he belongs.
+        
+  # WHAT HAPPENS HERE
+  activities:
+    NAP:
+      description: "Sleep in the safest place"
+      effect: "+full_rest, +contentment, +security"
+      
+    KITTEN-PILE:
+      description: "Become covered in sleeping kittens"
+      effect: "+warmth, +happiness, +responsibility"
+      
+    DREAM:
+      description: "Chase dream-squirrels, twitch dream-legs"
+      effect: "Process the day, wake up happy"
+      
+    GUARD:
+      description: "Keep an eye on the entrance while resting"
+      effect: "Family is safe. Family is protected."
+      
+  # WHO CAN COME HERE
+  access:
+    default: "Same as cat-cave (but specifically Biscuit's space)"
+    note: |
+      Anyone allowed in the cat-cave can visit Biscuit's spot.
+      But this is HIS space. Cats respect this.
+      They visit. They snuggle. But they know it's his.
+      
+  exits:
+    out:
+      direction: out
+      destination: ../
+      description: "Back to the main Cat Cave"
+
+# DAILY ROUTINE
+#
+# Biscuit's typical day in his spot:
+#
+# Morning: Wake up with kittens on belly
+# Mid-morning: Follow Marieke around, then return
+# Noon: Nap with whoever wants to join
+# Afternoon: Play with kittens, back to spot
+# Evening: Guard duty while cats hunt (imaginary mice)
+# Night: Deep sleep, dream-running, family nearby

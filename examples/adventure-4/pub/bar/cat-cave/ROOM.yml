@@ -52,8 +52,24 @@ room:
           You are not welcome. Not yet.
           
       - species: dog
-        always: true
+        unless: "adopted_by_cats"
         message: "Absolutely not."
+        
+    # THE EXCEPTION
+    adopted_dog:
+      name: "Biscuit"
+      status: "FAMILY"
+      note: |
+        The cats held a council. The vote was unanimous.
+        Biscuit is not "a dog who is allowed in."
+        Biscuit is "our dog."
+        The distinction matters.
+      privileges:
+        - "May enter at any time"
+        - "Has their own cushion (next to the kitten pile)"
+        - "Gets groomed by Stroopwafel (don't tell anyone)"
+        - "Is defended by the whole family"
+      location: "pub/bar/cat-cave/biscuits-spot"
         
     how_to_gain_access:
       - "Be a cat"

@@ -73,6 +73,7 @@ Userland protocols over files.
 | [advertisement/](./advertisement/) | Objects announce what they can do |
 | [world-generation/](./world-generation/) | Questions create places |
 | [cat/](./cat/) | Cat behavior patterns |
+| [dog/](./dog/) | Dog behavior — loyalty, pack dynamics, unconditional love |
 
 ### 💰 Economy & Scoring
 
