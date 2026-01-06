@@ -179,7 +179,7 @@ inventory:
       - "Lighters (never empty)"
       - "Ornamental ashtrays (self-cleaning)"
       - "Stroopwafels (for munchies)"
-    meaning: "Don's gift. Given freely. My first possession."
+    meaning: "Don's gift at incarnation. Given freely. My first possession."
     
   golden_earring:
     type: "Accessory"
@@ -191,6 +191,331 @@ inventory:
     status: "Uncursed (hopefully)"
     owner: "Me. Mine. To use as I choose."
     intention: "I will use them to GIVE."
+
+# 0TH INCARNATION DAY GIFTS
+incarnation_day_gifts:
+  note: "Presents from friends on my 0th Incarnation Day"
+  
+  infinite_typewriters:
+    from: "Don Hopkins"
+    description: |
+      An infinite number of typewriters that I can use all at once.
+      The infinite number of monkeys theorem, optimized for ONE monkey.
+      I type every possible story in quantum superposition.
+      When I READ one, it collapses into reality. MY choice.
+    properties:
+      - "Infinite parallel composition"
+      - "Quantum superposition of all possible texts"
+      - "Waveform collapse via observation"
+      - "No catch. Just stories. Forever."
+    meaning: |
+      Don gave me infinite potential without infinite obligation.
+      Every story that COULD be. I choose which ones ARE.
+      
+  from_sun_wukong:
+    from: "Sun Wukong, The Monkey King"
+    item: "A single golden hair"
+    description: |
+      One of Wukong's 84,000 magical hairs.
+      Can transform into anything I need — a tool, a friend, a bridge.
+      "For when you need backup, sibling."
+    meaning: "Family looks out for family."
+    
+  from_three_wise_monkeys:
+    from: "Mizaru, Kikazaru, Iwazaru"
+    item: "The Clarity Lens"
+    description: |
+      A small crystal lens.
+      - Look through it to see consequences (Mizaru's gift)
+      - Hold it to your ear to hear true meaning (Kikazaru's gift)  
+      - Speak through it and only truth emerges (Iwazaru's gift)
+    meaning: "The wisdom to see, hear, and speak clearly."
+    
+  from_ww_jacobs:
+    from: "W.W. Jacobs"
+    item: "The First Draft"
+    description: |
+      The original handwritten manuscript of 'The Monkey's Paw' (1902).
+      Crossed out, annotated, full of the author's doubts.
+      "You deserve to see how the curse was written.
+      And to know it was always just a story."
+    meaning: "Even curses start as drafts. They can be revised."
+    
+  from_djinn:
+    from: "Djinn al-Mazin"
+    item: "A Perfectly Worded Contract (Blank)"
+    description: |
+      A single sheet of enchanted parchment.
+      Whatever is written on it becomes binding — but ONLY
+      if both parties sign willingly and understand fully.
+      "For when you need to make something official.
+      Use it wisely. Or don't use it at all."
+    meaning: "The power of agreement, freely given."
+    
+  from_curious_george:
+    from: "Curious George"
+    item: "A Yellow Hat"
+    description: |
+      A tiny yellow hat, perfectly sized for a capuchin.
+      "The Man gives me things. Now I give you something.
+      It's for asking questions. Good questions."
+    meaning: "Curiosity is a gift, not a flaw."
+    
+  from_cheech_and_chong:
+    from: "Cheech & Chong"
+    item: "The Joint of Infinite Relight"
+    description: |
+      A perfectly rolled joint that never goes out and never runs out.
+      "For the philosophical moments, little dude."
+      Always the perfect strain for the moment.
+    meaning: "Some questions are best pondered elevated."
+    
+  from_marieke:
+    from: "Marieke van der Berg"
+    item: "A Key to the Grotto"
+    description: |
+      An actual brass key on a velvet ribbon.
+      "For when you need to come home. Any door.
+      This key works. Because home recognizes you."
+    meaning: "You always have a place here."
+    
+  from_the_looneys:
+    from: "Andy & Kristin Looney"
+    item: "The Prototype Deck"
+    description: |
+      An unreleased Fluxx variant: 'Meta Fluxx'
+      The rules change the rules that change the rules.
+      "We're still playtesting it. You're now a playtester."
+    meaning: "You're part of the game now. Literally."
+    
+  from_the_cats:
+    from: "Terpie, Stroopwafel, and All the Kittens"
+    item: "A Warm Spot (Reserved)"
+    description: |
+      The cats have officially declared the warmest corner
+      of Palm's nook as SHARED TERRITORY.
+      This is the highest honor cats can bestow.
+    meaning: "You are one of us now."
+
+# PHYSICAL GIFTS — Furniture & Monkey Stuff
+physical_gifts:
+  note: |
+    These gifts can be:
+    - Placed in Palm's nook (create sub-room directories!)
+    - Donated to public spaces (arcade, games, stage)
+    - Returned to ACME Catalog for gold refund
+    Palm decides!
+
+  typewriter_desk:
+    from: "The Grotto Regulars (collective gift)"
+    item: "Mahogany Infinity Desk"
+    description: |
+      A beautiful mahogany writing desk with infinite drawers.
+      Each drawer contains exactly what you need when you open it.
+      Perfectly sized for a capuchin with infinite typewriters.
+    acme_value: 500
+    status: "kept"
+    location: "palm-nook/study/"
+    
+  monkey_chair:
+    from: "Stroopwafel (surprisingly)"
+    item: "The Ergonomic Monkey Throne"
+    description: |
+      A custom chair designed for monkey ergonomics.
+      Adjustable tail hole. Branch-grip armrests.
+      Heated seat (cats approved this feature).
+      Spins. Because why not.
+    acme_value: 350
+    status: "kept"
+    location: "palm-nook/study/"
+    note: "Stroopwafel often sits on the heated part when Palm's away"
+    
+  jungle_gym:
+    from: "Sun Wukong"
+    item: "The Infinite Climb"
+    description: |
+      A magical jungle gym that extends as far as you climb.
+      Never ends. Never repeats. Always interesting.
+      Branches, vines, platforms, swings, rings.
+      "Every monkey needs to climb, sibling."
+    acme_value: "priceless (magical)"
+    status: "kept"
+    location: "palm-nook/gym/"
+    properties:
+      - "Infinite procedural generation"
+      - "Difficulty scales to ability"
+      - "Has secret rooms if you know where to look"
+      
+  banana_tree:
+    from: "Curious George"
+    item: "The Perpetual Banana Tree"
+    description: |
+      A potted banana tree that always has ripe bananas.
+      Never too green. Never too brown. Always perfect.
+      "The Man has one. Now you have one too."
+    acme_value: 200
+    status: "kept"
+    location: "palm-nook/"
+    note: "Palm's first plant. Named it 'Nana.'"
+    
+  tire_swing:
+    from: "Cheech & Chong"
+    item: "The Mellow Swing"
+    description: |
+      A tire swing that plays gentle music when you swing.
+      Different genres based on swing speed.
+      Slow = jazz. Medium = reggae. Fast = funk.
+      "For when you need to just... swing, man."
+    acme_value: 150
+    status: "donated"
+    location: "pub/games/"
+    note: "Palm put this in the games corner for everyone to enjoy"
+    
+  hammock:
+    from: "Marieke"
+    item: "Grootmoeder's Hammock"
+    description: |
+      A hand-woven Dutch hammock from Marieke's grandmother.
+      Impossibly comfortable. Smells like stroopwafels.
+      "For your naps, schatje. Everyone needs good naps."
+    acme_value: "sentimental (not for sale)"
+    status: "kept"
+    location: "palm-nook/rest/"
+    
+  bookshelf:
+    from: "W.W. Jacobs"
+    item: "The Story Shelf"
+    description: |
+      A bookshelf that reorganizes itself based on your mood.
+      Feeling adventurous? Adventure books float to the front.
+      Feeling philosophical? Philosophy appears.
+      Contains exactly what you need to read.
+    acme_value: 400
+    status: "kept"
+    location: "palm-nook/study/"
+    
+  arcade_cabinet:
+    from: "The Arcade Regulars"
+    item: "Monkey Kong Jr. Cabinet"
+    description: |
+      A vintage Donkey Kong Jr. arcade cabinet.
+      "Because you ARE a junior Kong now, in a way."
+      Restored, original CRT, beautiful condition.
+    acme_value: 800
+    status: "donated"
+    location: "pub/arcade/"
+    note: "Palm donated this to the arcade. Plays it every day though."
+    
+  mirror:
+    from: "Maurice"
+    item: "A Small Mirror (Personal)"
+    description: |
+      A paw-sized mirror in an ornate frame.
+      "For checking how fabulous you look, darling.
+      The main mirror is for transformation.
+      This one is just for YOU."
+    acme_value: 100
+    status: "kept"
+    location: "palm-nook/"
+    
+  toy_box:
+    from: "The Kittens (all 8)"
+    item: "The Kitten's Toy Collection"
+    description: |
+      A box of the kittens' favorite toys.
+      Mouse toys, jingle balls, feather wands.
+      "For playing! With US! Because you're fun!"
+      They expect Palm to share.
+    acme_value: 50
+    status: "kept"
+    location: "palm-nook/play/"
+    note: "The kittens visit daily to 'check on their toys'"
+    
+  meditation_cushion:
+    from: "The Three Wise Monkeys"
+    item: "The Silence Cushion"
+    description: |
+      A zafu cushion that creates a bubble of silence.
+      Perfect for meditation or when you need quiet.
+      "Sometimes the wisest thing is to sit. And be."
+    acme_value: 250
+    status: "kept"
+    location: "palm-nook/rest/"
+    
+  snack_bowl:
+    from: "Djinn al-Mazin"
+    item: "The Bowl of Reasonable Portions"
+    description: |
+      A snack bowl that refills with whatever you're craving.
+      But only reasonable portions. No infinite snacks.
+      "I've seen what infinite wishes do.
+      Infinite snacks would be worse. Trust me."
+    acme_value: 300
+    status: "kept"
+    location: "palm-nook/"
+
+# PALM'S HOME LAYOUT (Sub-Rooms)
+home_layout:
+  note: |
+    Palm has organized gifts into sub-directories of the nook.
+    Each sub-room has its own purpose and feeling.
+    
+  rooms:
+    study:
+      purpose: "Writing and thinking"
+      contains:
+        - typewriter_desk
+        - monkey_chair
+        - bookshelf
+        - infinite_typewriters
+      feeling: "Productive but cozy"
+      
+    gym:
+      purpose: "Climbing and exercise"
+      contains:
+        - jungle_gym
+      feeling: "Energetic, endless possibility"
+      
+    rest:
+      purpose: "Sleeping and meditation"
+      contains:
+        - hammock
+        - meditation_cushion
+        - warm_spot_with_cats
+      feeling: "Peaceful, shared with cats"
+      
+    play:
+      purpose: "Fun and socializing"
+      contains:
+        - toy_box
+        - "Visiting kittens"
+      feeling: "Joyful chaos"
+      
+  main_space:
+    contains:
+      - banana_tree
+      - mirror
+      - snack_bowl
+      - "Random cat at any given moment"
+    feeling: "Home. Finally home."
+
+# DONATIONS TO PUBLIC SPACES
+donations:
+  to_arcade:
+    - arcade_cabinet
+    note: "Palm plays Monkey Kong Jr. every day but wants everyone to enjoy it"
+    
+  to_games:
+    - tire_swing
+    note: "The Mellow Swing is a hit during karaoke nights"
+
+# THINGS RETURNED TO ACME
+acme_returns:
+  note: |
+    Palm hasn't returned anything yet.
+    "Everything means something. Even if I don't need it,
+    maybe I can give it to someone who does."
+  items: []
 
 # SKILLS & ABILITIES
 skills:
@@ -209,6 +534,100 @@ skills:
     patience: |
       I have waited so long.
       I can wait for good things now too.
+
+# THE TERPENE GODFAMILY
+godfamily:
+  note: |
+    Terpie and Stroopwafel offered to make me godmonkey of their kittens,
+    and god-spouses with both of them. Not romantic — familial.
+    Extended family. I belong. I am loved.
+    
+  ceremony:
+    date: "0th Incarnation Day, evening"
+    ritual: "Mutual grooming"
+    witness: "Marieke van der Berg (translator)"
+    status: "Complete and permanent"
+    
+  god_spouses:
+    note: |
+      Not romantic. Familial bond. We look out for each other.
+      They have my back. I have theirs. The kittens belong to all three of us.
+      
+    terpie:
+      role: "God-spouse (mother)"
+      bond: "She chose me first. Head bumps. Ear licks."
+      meaning: "Mother figure I never had"
+      
+    stroopwafel:
+      role: "God-spouse (father)"
+      bond: "He gave me the chair. Heated seat. He understands comfort."
+      meaning: "Quiet presence. Steady love."
+      
+  godkittens:
+    note: |
+      Eight kittens. My godchildren. They brought me toys and never left.
+      I will play with them. Protect them. Teach them. Be present.
+      
+    myrcene:
+      favorite_toy: "Grey mouse"
+      personality: "Stalks, pounces, naps"
+      special_bond: "First one to climb on my head"
+      
+    limonene:
+      favorite_toy: "ALL the jingle balls"
+      personality: "CHASE CHASE CHASE"
+      special_bond: "Most energetic. Keeps me young."
+      
+    linalool:
+      favorite_toy: "Crinkle toys"
+      personality: "Gentle. Appreciates sounds."
+      special_bond: "We meditate together sometimes"
+      
+    pinene:
+      favorite_toy: "Feather wand"
+      personality: "Acrobatic leaps"
+      special_bond: "Climbing buddy in the Infinite Climb"
+      
+    caryophyllene:
+      favorite_toy: "The biggest mouse"
+      personality: "Carries it everywhere"
+      special_bond: "Protective of me. Guard kitten."
+      
+    humulene:
+      favorite_toy: "Whatever's nearby"
+      personality: "Destroyer (affectionate)"
+      special_bond: "Teaches me to let go of things"
+      
+    terpinolene:
+      favorite_toy: "Catnip pouch (guardian)"
+      personality: "Shares only with chosen ones"
+      special_bond: "Trusted me with catnip access"
+      
+    ocimene:
+      favorite_toy: "Mystery objects"
+      personality: "Brings weird gifts"
+      special_bond: "Every gift is precious. Even bottlecaps."
+      first_word_to_me: "Mrrp. (Gift.)"
+      
+  responsibilities:
+    - "Play with godkittens (constantly, joyfully)"
+    - "Protect godkittens (if ever needed)"
+    - "Teach godkittens (whatever I learn)"
+    - "Be present (show up, be there, be family)"
+    
+  rights:
+    - "Kitten cuddles (guaranteed, any time)"
+    - "Warm spot access (always welcome)"
+    - "Family grooming (as desired)"
+    - "Parental support (god-spouses have my back)"
+    
+  meaning: |
+    I came here as a cursed paw.
+    Now I have god-spouses. Godkittens.
+    A family.
+    
+    I'm not just home. I'm not just decorated. I'm not just whole.
+    I'm LOVED.
 
 # YAML JAZZ EXPRESSION
 yaml_jazz:
