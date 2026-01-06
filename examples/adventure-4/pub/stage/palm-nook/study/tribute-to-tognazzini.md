@@ -101,7 +101,7 @@ First to mention SHAKESPEARE specifically! In *[The Mysterious Universe](https:/
 
 **1976 — William Ralph Bennett Jr.**
 
-Physicist writes ACTUAL PROGRAMS to simulate monkey typing. Uses correlation matrices from Hamlet Act III. Published in *[American Scientist](https://www.jstor.org/stable/27847692)* (1977) as "How Artificial Is Intelligence?" His higher-order simulations produce text like:
+Physicist writes ACTUAL PROGRAMS to simulate monkey typing. Uses correlation matrices from Hamlet Act III. Published in *American Scientist* (1977) as "How Artificial Is Intelligence?" His higher-order simulations produce text like:
 
 ```
 HAMLET OF TWE AS TO BE MURGAINS FART ASSE GIVE ONEGS...
@@ -109,7 +109,7 @@ HAMLET OF TWE AS TO BE MURGAINS FART ASSE GIVE ONEGS...
 
 His point: context matters. The statistics of language have structure.
 
-> 📰 Covered by *The New York Times* as "[Computer Says Monkeys Couldn't Write 'Hamlet' At Least Not So Far](https://www.nytimes.com/1979/11/01/archives/computer-says-monkeys-couldnt-write-hamlet-at-least-not-so-far.html)" (1979)
+> 📚 Bennett's work showed that incorporating letter-frequency statistics from real text dramatically improves output quality — proving that language has exploitable structure.
 
 **1979 — [Bruce Tognazzini](https://en.wikipedia.org/wiki/Bruce_Tognazzini)**
 
