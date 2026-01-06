@@ -1,23 +1,402 @@
-# 🌿 BUDS MENU
+# 🌿 BUDS MENU — Gezelligheid Grotto
 # Served by: budtender ONLY
 # ADULTS ONLY • RESPONSIBLE USE • NO HARD DRUGS
+#
+# "Where every puff tells a story"
+# Marieke curates each strain personally.
+# The cats approve. Or they don't. You'll know.
 
 menu:
   id: buds
-  name: "Cannabis Menu"
+  name: "The Grotto Selection"
   served_by: [budtender]
+  curator: budtender-marieke
   
   # ALWAYS Amsterdam coffeeshop style, regardless of theme
   # Marieke doesn't change — the menu stays authentic
   themed: false
+  
+  philosophy: |
+    Every strain has a story. Every high has a purpose.
+    We match the medicine to the moment.
+    Ask Marieke — she knows.
   
   legal_notice: |
     Adults only. Consume responsibly.
     Start low, go slow. Ask staff for guidance.
     No driving. No mixing with alcohol (recommended).
 
-# STRAINS — Organized by effect
-strains:
+# ═══════════════════════════════════════════════════════════════════
+# 🍀 LUCKY STRAINS — Fortune Favors the Bold
+# ═══════════════════════════════════════════════════════════════════
+
+lucky_strains:
+  
+  monkeys_blessing:
+    name: "Monkey's Blessing"
+    type: hybrid
+    thc: "22%"
+    cbd: "3%"
+    price: 15
+    currency: gold
+    description: |
+      House specialty. Mitigates bad luck from questionable decisions.
+      Won't stop the ACME package from exploding, but you'll feel okay about it.
+    effects:
+      - "Fortune's Mercy buff"
+      - "Malfunction mitigation"
+      - "Philosophical acceptance"
+    flavor: "Banana bread with a hint of chaos"
+    marieke_says: "Order this before you open anything from ACME."
+    lore: |
+      Created after the Monkey's Paw incident of 2017.
+      Marieke won't talk about what happened.
+      But this strain? This strain is blessed.
+    
+  postels_law:
+    name: "Postel's Law"
+    type: indica_dominant
+    thc: "18%"
+    cbd: "6%"
+    price: 14
+    currency: gold
+    description: |
+      Be liberal in what you accept, conservative in what you send.
+      Opens the mind to possibilities while keeping you grounded.
+      Named for the protocol that keeps everything connected.
+    effects:
+      - "Enhanced tolerance (social)"
+      - "Thoughtful communication"
+      - "Robust error handling"
+    flavor: "Earthy pine with protocol notes"
+    marieke_says: "For difficult conversations. Or parsing YAML."
+    # Accept weird input. Output clean thoughts.
+    
+  yaml_jazz:
+    name: "YAML Jazz"
+    type: sativa
+    thc: "24%"
+    cbd: "1%"
+    price: 16
+    currency: gold
+    description: |
+      Comments become data. Structure becomes song.
+      For when you need to see the semantic meaning between the lines.
+      Highly creative. Possibly too creative.
+    effects:
+      - "Pattern recognition +3"
+      - "Creative interpretation"
+      - "Spontaneous documentation"
+    flavor: "Improvisational citrus"
+    marieke_says: "You'll start commenting your own thoughts."
+    # This strain was bred in Amsterdam specifically for
+    # developers who needed to feel their data structures.
+    
+  lucky_seven:
+    name: "Lucky Seven"
+    type: hybrid
+    thc: "17%"
+    cbd: "7%"
+    price: 12
+    currency: gold
+    description: |
+      Seven terpenes, seven blessings, seven reasons to smile.
+      A balanced blend for balanced luck.
+    effects:
+      - "+7% to all random outcomes"
+      - "Mild euphoria"
+      - "Sense of serendipity"
+    flavor: "Lucky charms and clover"
+    marieke_says: "Good for first-timers and gamblers."
+
+# ═══════════════════════════════════════════════════════════════════
+# 🐱 TERPENE FAMILY — Named for the Cats Who Test Them
+# ═══════════════════════════════════════════════════════════════════
+
+terpene_family:
+
+  myrcene_dreams:
+    name: "Myrcene Dreams"
+    namesake: "Myr (the sleepiest kitten)"
+    type: indica
+    thc: "20%"
+    cbd: "4%"
+    price: 13
+    currency: gold
+    description: |
+      Deep relaxation. Named for the sleepiest kitten.
+      Myr tested this by falling asleep on it. Literally.
+    effects:
+      - "Deep Relaxation buff"
+      - "Couch lock (comfy)"
+      - "Enhanced napping"
+    flavor: "Mango and earth, like a warm blanket"
+    pairs_with: "The nap zone in the Cat Cave"
+    
+  limonene_lift:
+    name: "Limonene Lift"
+    namesake: "Lemon (the zoomiest kitten)"
+    type: sativa
+    thc: "21%"
+    cbd: "2%"
+    price: 14
+    currency: gold
+    description: |
+      Bright, energetic, impossible to sit still.
+      Lemon zooms around after smelling this one.
+    effects:
+      - "Joy Infusion buff"
+      - "Energy +2"
+      - "Spontaneous zoomies"
+    flavor: "Citrus explosion, sunshine in a bud"
+    warning: "May cause excessive friendliness"
+    
+  linalool_lavender:
+    name: "Linalool Lavender"
+    namesake: "Lily (the healer kitten)"
+    type: indica_dominant
+    thc: "16%"
+    cbd: "8%"
+    price: 12
+    currency: gold
+    description: |
+      Calming, intuitive, knows what you need.
+      Lily always comes when someone needs this.
+    effects:
+      - "Anxiety reduction"
+      - "Emotional clarity"
+      - "Gentle introspection"
+    flavor: "Lavender fields at dusk"
+    marieke_says: "For when your heart needs what your head won't admit."
+    
+  pinene_forest:
+    name: "Pinene Forest"
+    namesake: "Pine (the watchful kitten)"
+    type: sativa_dominant
+    thc: "19%"
+    cbd: "3%"
+    price: 13
+    currency: gold
+    description: |
+      Alert, watchful, analytically enhanced.
+      Pine stares at you the whole time you smoke this. Judging.
+    effects:
+      - "Focus +2"
+      - "Memory retention"
+      - "Heightened awareness"
+    flavor: "Fresh pine, mountain air"
+    warning: "May induce paranoia in the unworthy"
+    
+  caryophyllene_courage:
+    name: "Caryophyllene Courage"
+    namesake: "Carrie (the fierce kitten)"
+    type: hybrid
+    thc: "18%"
+    cbd: "5%"
+    price: 14
+    currency: gold
+    description: |
+      Bold, protective, ready for anything.
+      Carrie guards this jar personally.
+    effects:
+      - "Guardian's Resolve buff"
+      - "Confidence +3"
+      - "Pain relief"
+    flavor: "Black pepper and spice, with backbone"
+    marieke_says: "For facing what you've been avoiding."
+    
+  humulene_wisdom:
+    name: "Humulene Wisdom"
+    namesake: "Hops (the serious kitten)"
+    type: indica
+    thc: "15%"
+    cbd: "6%"
+    price: 11
+    currency: gold
+    description: |
+      Appetite suppressant with contemplative effects.
+      Hops is the most serious kitten. This is his vibe.
+    effects:
+      - "Thoughtful introspection"
+      - "Reduced munchies"
+      - "Philosophical bent"
+    flavor: "Hoppy, herbal, like a wise beer"
+    pairs_with: "Deep conversations about life"
+    
+  ocimene_mischief:
+    name: "Ocimene Mischief"
+    namesake: "Ocie (the troublemaker kitten)"
+    type: sativa
+    thc: "23%"
+    cbd: "1%"
+    price: 15
+    currency: gold
+    description: |
+      Sweet, uplifting, prone to causing trouble.
+      Ocie knocked over three displays testing this.
+    effects:
+      - "Giggles"
+      - "Creative chaos"
+      - "Mischievous energy"
+    flavor: "Sweet herbs and bad ideas"
+    warning: "Not recommended before important meetings"
+    
+  terpinolene_wonder:
+    name: "Terpinolene Wonder"
+    namesake: "Terpy Jr. (the unpredictable kitten)"
+    type: hybrid
+    thc: "17%"
+    cbd: "4%"
+    price: 12
+    currency: gold
+    description: |
+      Complex, rare, slightly confusing.
+      Like Terp Jr. himself — you're never quite sure what you're getting.
+    effects:
+      - "Mild sedation OR mild energy (roll dice)"
+      - "Antioxidant vibes"
+      - "Pleasant confusion"
+    flavor: "Floral, herbal, citrus, pine — yes, all of them"
+    marieke_says: "Every session is different. Like the kitten."
+
+# ═══════════════════════════════════════════════════════════════════
+# 🌙 ADVENTURE STRAINS — For the Journey
+# ═══════════════════════════════════════════════════════════════════
+
+adventure_strains:
+
+  grue_bane:
+    name: "Grue Bane"
+    type: sativa_dominant
+    thc: "25%"
+    cbd: "2%"
+    price: 18
+    currency: gold
+    description: |
+      For entering dark places. Won't protect you from grues,
+      but you'll feel brave enough to try.
+    effects:
+      - "Fear resistance"
+      - "Night vision (perceived)"
+      - "Boldness in darkness"
+    flavor: "Midnight courage, starlight and shadows"
+    warning: "Lamp still required. This is not lamp."
+    
+  mind_mirror:
+    name: "Mind Mirror"
+    type: hybrid
+    thc: "20%"
+    cbd: "5%"
+    price: 16
+    currency: gold
+    description: |
+      32 dimensions of personality, reflected back at you.
+      Based on Leary's original formula. See yourself clearly.
+    effects:
+      - "Self-reflection"
+      - "Personality awareness"
+      - "Interpersonal clarity"
+    flavor: "Complex, with notes of ego and id"
+    marieke_says: "Don't smoke this alone the first time."
+    # Timothy would approve.
+    
+  simulation_haze:
+    name: "Simulation Haze"
+    type: sativa
+    thc: "22%"
+    cbd: "1%"
+    price: 15
+    currency: gold
+    description: |
+      Is this real? Does it matter?
+      For questioning the nature of turns and time.
+    effects:
+      - "Time dilation (perceived)"
+      - "Reality questioning"
+      - "Turn-based thinking"
+    flavor: "Electric dreams and recursive thoughts"
+    warning: "May cause existential pauses"
+    
+  entourage_effect:
+    name: "The Entourage Effect"
+    type: hybrid
+    thc: "19%"
+    cbd: "4%"
+    price: 20
+    currency: gold
+    description: |
+      All eight terpene strains, blended by Marieke.
+      The whole family, working together.
+      Legendary status. Rarely available.
+    effects:
+      - "ALL kitten buffs simultaneously"
+      - "Synergy bonus"
+      - "Complete terpene harmony"
+    flavor: "Everything, perfectly balanced"
+    availability: "Ask Marieke. She'll know if you're ready."
+    # The kittens have to agree. They vote.
+
+# ═══════════════════════════════════════════════════════════════════
+# 🏠 HOUSE BLENDS — Grotto Originals
+# ═══════════════════════════════════════════════════════════════════
+
+house_blends:
+
+  gezelligheid:
+    name: "Gezelligheid"
+    type: indica_dominant
+    thc: "16%"
+    cbd: "8%"
+    price: 11
+    currency: gold
+    description: |
+      The house strain. Cozy, warm, belonging.
+      You're already getting this buff just being here.
+    effects:
+      - "Comfort +2"
+      - "Social warmth"
+      - "Feeling of home"
+    flavor: "Stroopwafel and contentment"
+    marieke_says: "This IS the Grotto, in plant form."
+    
+  terpies_choice:
+    name: "Terpie's Choice"
+    type: indica
+    thc: "14%"
+    cbd: "6%"
+    price: 10
+    currency: gold
+    description: |
+      Whatever Terpie was sleeping on this morning.
+      Varies daily. Always mellow. Always approved.
+    effects:
+      - "Maximum chill"
+      - "Cat lap energy"
+      - "Sleepy contentment"
+    flavor: "Warm fur and afternoon sun"
+    pairs_with: "Having Terpie sit in your lap"
+    
+  stroopwafels_special:
+    name: "Stroopwafel's Special"
+    type: hybrid
+    thc: "18%"
+    cbd: "4%"
+    price: 13
+    currency: gold
+    description: |
+      Named for the matriarch. Sweet but with an edge.
+      She picks the buds herself. Allegedly.
+    effects:
+      - "Maternal comfort"
+      - "Protective instincts"
+      - "Quiet strength"
+    flavor: "Caramel, cinnamon, and don't-mess-with-my-kittens"
+
+# ═══════════════════════════════════════════════════════════════════
+# 📦 CLASSIC STRAINS — Amsterdam Standards
+# ═══════════════════════════════════════════════════════════════════
+
+classic_strains:
   
   # INDICA — Evening, relaxation
   indica:
@@ -82,22 +461,11 @@ strains:
       price: 12
       currency: gold
       warning: "Very strong — experienced users"
-      
-  # HOUSE SPECIAL
-  special:
-    monkey_blessing:
-      name: "Monkey's Blessing"
-      type: hybrid
-      thc: "???"
-      effect: "Unpredictable but always good"
-      price: 15
-      currency: gold
-      lore: |
-        Created after the Monkey's Paw incident of 2017.
-        Marieke won't talk about what happened.
-        But this strain? This strain is blessed.
 
-# PRODUCTS
+# ═══════════════════════════════════════════════════════════════════
+# 🍰 PRODUCTS
+# ═══════════════════════════════════════════════════════════════════
+
 products:
   flower:
     description: "Raw cannabis flower"
@@ -123,12 +491,70 @@ products:
         dose: "15mg THC"
         price: 10
         currency: gold
-        
-# TERPENE GUIDE (for education)
+
+# ═══════════════════════════════════════════════════════════════════
+# 📜 ORDERING & CONSUMPTION
+# ═══════════════════════════════════════════════════════════════════
+
+ordering:
+  commands:
+    - "ORDER [strain name]"
+    - "MENU" | "STRAINS"
+    - "ASK MARIEKE ABOUT [strain]"
+    - "RECOMMEND [mood/situation]"
+    
+  prices:
+    unit: "per gram"
+    currency: "gold"
+    discount: "Regulars get 10% off. Cats get scritches."
+    
+  consumption:
+    - "SMOKE [strain]"
+    - "VAPE [strain]"
+    - "EXAMINE [strain]"
+    - "PINCH [strain]"
+    - "SNIFF [strain]"
+    - "WAFT [strain]"
+
+  effects:
+    onset: "1-2 turns"
+    duration: "Varies by strain (see natural durations)"
+    stacking: "Terpene effects stack up to 3"
+
+# ═══════════════════════════════════════════════════════════════════
+# 🧬 TERPENE GUIDE (for education)
+# ═══════════════════════════════════════════════════════════════════
+
 terpene_guide:
-  myrcene: { effect: "Sedating", found_in: "Mango, hops" }
-  limonene: { effect: "Uplifting", found_in: "Citrus" }
-  pinene: { effect: "Alert", found_in: "Pine" }
-  caryophyllene: { effect: "Anti-inflammatory", found_in: "Black pepper" }
-  linalool: { effect: "Calming", found_in: "Lavender" }
-  terpinolene: { effect: "Energizing", found_in: "Lilac" }
+  myrcene:
+    effect: "Sedating"
+    found_in: "Mango, hops"
+    kitten: "Myr"
+  limonene:
+    effect: "Uplifting"
+    found_in: "Citrus"
+    kitten: "Lemon"
+  linalool:
+    effect: "Calming"
+    found_in: "Lavender"
+    kitten: "Lily"
+  pinene:
+    effect: "Alert"
+    found_in: "Pine"
+    kitten: "Pine"
+  caryophyllene:
+    effect: "Anti-inflammatory"
+    found_in: "Black pepper"
+    kitten: "Carrie"
+  humulene:
+    effect: "Appetite suppressant"
+    found_in: "Hops"
+    kitten: "Hops"
+  ocimene:
+    effect: "Decongestant"
+    found_in: "Sweet herbs"
+    kitten: "Ocie"
+  terpinolene:
+    effect: "Energizing/Sedating (paradox)"
+    found_in: "Lilac"
+    kitten: "Terpy Jr."

@@ -1,8 +1,14 @@
-object:
+npc:
   name: The Bartender
+  id: bartender
   type: npc
   portable: false
   location: pub/
+  
+  # SKILL provides capabilities; PERSONA provides personality
+  skills: [skills/bartender]
+  
+  # Persona changes with theme! (see identity section below)
   
   # 🎭 IDENTITY — Changes with theme!
   
