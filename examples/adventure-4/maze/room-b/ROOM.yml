@@ -84,3 +84,27 @@ room:
     biscuit_says: |
       I have discovered other dogs who are also me.
       They are good dogs. We marked the center together.
+
+  # TERPY JR.'S ECHO-FRIENDS (Midnight Prowl)
+  terpy_jr_incident:
+    date: "2026-01-06 (late night)"
+    what_happened: |
+      Terpy Jr. got lost on the way home from the garden.
+      Ended up in the echo chamber.
+      Discovered "other cats" (his own echoes).
+    
+    dialogue:
+      terpy_jr: "*MEOW!*"
+      echo: "*meow meow meow...*"
+      terpy_jr: "There are OTHER CATS here!"
+      echo: "*cats here... cats here...*"
+      terpy_jr: "FRIENDS!"
+      echo: "*friends... friends...*"
+      
+    duration: "Two full turns (14-15)"
+    departure: "*'Bye friends!'*"
+    
+    assessment: |
+      Unlike Biscuit, who had an existential moment,
+      Terpy Jr. just accepted the echo-cats as friends.
+      No crisis. Just joy. Classic Terpy Jr.

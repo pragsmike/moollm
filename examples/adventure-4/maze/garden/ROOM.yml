@@ -177,3 +177,72 @@ room:
       
       This is the best place. I marked it thoroughly so the whole
       garden knows about Biscuit. Every corner. Every corner.
+
+  # THE MIDNIGHT PROWL — Cat Deposits
+  # All 10 cats visited the garden that night
+  cat_deposits:
+    date: "2026-01-06 (late night)"
+    total_cats: 10
+    deposits:
+      - cat: "Lemon"
+        location: "Northeast, 2 feet from Biscuit's spot"
+        style: "Enthusiastic"
+        note: "First to arrive, did zoomies, splashed in fountain"
+        
+      - cat: "Terpie"
+        location: "South, under flowering vine"
+        style: "Regal"
+        note: "Surveyed domain before selecting perfect spot"
+        
+      - cat: "Lily"
+        location: "East, near bench"
+        style: "Delicate"
+        note: "Chose spot for aesthetic harmony"
+        
+      - cat: "Pine"
+        location: "Exactly 4 feet from fountain"
+        style: "Calculated"
+        note: "Optimal distance determined analytically"
+        
+      - cat: "Carrie"
+        location: "Northwest corner"
+        style: "Defensive"
+        note: "Maintained guard position throughout"
+        
+      - cat: "Ocie"
+        location: "Wherever she ended up"
+        style: "Small but proud"
+        note: "Followed others, did her best"
+        
+      - cat: "Hops"
+        location: "West garden"
+        style: "Precisely placed"
+        note: "Inspected multiple locations, rejected several for drainage"
+        
+      - cat: "Stroopwafel"
+        location: "Northeast, 1 foot from Biscuit's spot"
+        style: "Territorial acknowledgment"
+        note: "Deliberately adjacent to dog's spot. Respect."
+        
+      - cat: "Myr"
+        location: "Garden center, in sunlight"
+        style: "Sleepy"
+        note: "Fell asleep before finishing burial"
+        
+      - cat: "Terpy Jr."
+        location: "Random"
+        style: "Chaotic"
+        note: "Questionable burial technique. Arrived via echo chamber."
+        
+    garden_status_after: |
+      The garden now smells strongly of:
+      - Dog (Biscuit)
+      - Cat family (all 10)
+      - Happiness
+      - Grass
+      - Flowers
+      - Shared territory
+      
+    philosophy: |
+      "We share the garden now. The dog marked it. We marked it.
+       It is OURS. All of us." — Terpie
