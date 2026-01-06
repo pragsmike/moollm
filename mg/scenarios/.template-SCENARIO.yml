@@ -1,0 +1,112 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# SCENARIO.yml — Multi-Character Interaction State
+# 
+# Copy this file to your scenario directory and customize it.
+# This file tracks the RUNTIME state of character interactions for THIS scenario.
+# ═══════════════════════════════════════════════════════════════════════════════
+
+scenario:
+  name: null  # e.g., "Echopoint Consultation", "AI Ethics Debate"
+  type: null  # debate, roundtable, interview, symposium, dialogue, consultation, meeting
+  
+  # ─────────────────────────────────────────────────────────────────────────────
+  # ACTIVE PARTICIPANTS
+  # List character files participating in THIS scenario
+  # Use relative paths from this scenario directory
+  # ─────────────────────────────────────────────────────────────────────────────
+  
+  active_participants:
+    # - ../../characters/frankie-kerouac.yml
+    # - ../../characters/marcus-chen.yml
+    []
+    
+  # ─────────────────────────────────────────────────────────────────────────────
+  # CURRENT FOCUS
+  # Who is currently speaking or being addressed?
+  # ─────────────────────────────────────────────────────────────────────────────
+  
+  current_focus: null  # e.g., "../../characters/frankie-kerouac.yml" or "all"
+  
+  # ─────────────────────────────────────────────────────────────────────────────
+  # SCENARIO STATE
+  # Current topic, round, phase of interaction
+  # ─────────────────────────────────────────────────────────────────────────────
+  
+  state:
+    topic: null           # Current topic of discussion
+    round: 0              # Round number (for structured debates)
+    phase: null           # opening, discussion, rebuttal, closing, etc.
+    turn_order: []        # Order of speakers (if structured)
+    current_speaker: null # Who's turn it is
+    
+    # For debates:
+    positions: {}         # Character positions on the topic
+    #   frankie-kerouac: "pro"
+    #   maya-tilted-hat: "con"
+    
+    # For roundtables:
+    topics_covered: []    # List of topics discussed
+    
+  # ─────────────────────────────────────────────────────────────────────────────
+  # DIALOGUE STATE
+  # Track the flow of conversation
+  # ─────────────────────────────────────────────────────────────────────────────
+  
+  dialogue:
+    transcript_path: "transcripts/session-1.md"  # Where transcripts are saved
+    current_exchange: null # Current back-and-forth
+    key_points: []          # Major points raised
+    agreements: []         # Points of consensus
+    disagreements: []       # Points of conflict
+    
+  # ─────────────────────────────────────────────────────────────────────────────
+  # SIMULATION STATE
+  # Global state affecting all participants in THIS scenario
+  # ─────────────────────────────────────────────────────────────────────────────
+  
+  simulation:
+    turn_number: 0
+    time_elapsed: null     # Duration of scenario
+    
+    # Global flags
+    flags:
+      scenario_started: false
+      scenario_complete: false
+      
+    # Pending events (processed by coherence engine)
+    event_queue: []
+    
+  # ─────────────────────────────────────────────────────────────────────────────
+  # SESSION HISTORY
+  # Lightweight log of significant events
+  # (Full transcript is in transcripts/)
+  # ─────────────────────────────────────────────────────────────────────────────
+  
+  session:
+    started: null         # Timestamp when scenario began
+    last_action: null     # Last character action/speech
+    last_speaker: null    # Who spoke last
+    
+  # ─────────────────────────────────────────────────────────────────────────────
+  # NARRATIVE CONTEXT
+  # How this scenario relates to others (if part of a larger narrative)
+  # ─────────────────────────────────────────────────────────────────────────────
+  
+  narrative_context:
+    sequence: null         # Position in linear narrative (1, 2, 3...)
+    follows: null         # Previous scenario (if linear)
+    precedes: null        # Next scenario (if linear)
+    timeline: null        # Timeline identifier (if alternate reality)
+    alternate_of: null    # Which scenario this is an alternate of
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# DOVETAILS WITH
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# - ../../characters/      — Character files (shared across scenarios)
+# - ../../bios/            — Source character sketches
+# - transcripts/          — Scenario-specific transcripts
+# - ../../SCENARIOS.yml   — Master index of all scenarios
+# - skills/adventure/     — Similar structure, different focus
+# - skills/coherence-engine/  — What processes this file
+

@@ -1,0 +1,8 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# MG Directory Gitignore
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# Alias mappings (private, not for public distribution)
+.company-aliases.yml
+.person-aliases.yml
+

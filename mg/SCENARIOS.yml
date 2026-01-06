@@ -1,0 +1,128 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# SCENARIOS.yml — Master Index of All Scenarios
+# 
+# This file tracks all scenarios, their relationships, and metadata.
+# Useful for:
+# - Linear narratives (which scenario follows which)
+# - Alternate realities (which scenarios are parallel)
+# - Character tracking (which characters appear in which scenarios)
+# - Navigation (quick reference to all scenarios)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+scenarios:
+  # ─────────────────────────────────────────────────────────────────────────────
+  # SCENARIO INDEX
+  # Each scenario has its own directory in scenarios/
+  # ─────────────────────────────────────────────────────────────────────────────
+  
+  # Example: Linear Narrative
+  # act-1-consultation:
+  #   name: "Act 1: Initial Consultation"
+  #   type: consultation
+  #   directory: scenarios/act-1-consultation/
+  #   participants:
+  #     - characters/frankie-kerouac.yml
+  #     - characters/maya-tilted-hat.yml
+  #     - characters/marcus-chen.yml
+  #   narrative_position:
+  #     sequence: 1
+  #     follows: null
+  #     precedes: act-2-debate
+  #   status: completed
+  #   
+  # act-2-debate:
+  #   name: "Act 2: Technical Debate"
+  #   type: debate
+  #   directory: scenarios/act-2-debate/
+  #   participants:
+  #     - characters/frankie-kerouac.yml
+  #     - characters/vic-eyebrow.yml
+  #     - characters/marcus-chen.yml
+  #   narrative_position:
+  #     sequence: 2
+  #     follows: act-1-consultation
+  #     precedes: act-3-resolution
+  #   status: pending
+  #
+  # Example: Alternate Realities
+  # timeline-a-standard:
+  #   name: "Timeline A: Standard Consultation"
+  #   type: consultation
+  #   directory: scenarios/timeline-a-standard/
+  #   participants:
+  #     - characters/echopoint-team
+  #     - characters/marcus-chen.yml
+  #   narrative_position:
+  #     timeline: "a"
+  #     alternate_of: null
+  #   status: completed
+  #
+  # timeline-b-aggressive:
+  #   name: "Timeline B: Aggressive Timeline"
+  #   type: consultation
+  #   directory: scenarios/timeline-b-aggressive/
+  #   participants:
+  #     - characters/echopoint-team
+  #     - characters/marcus-chen.yml
+  #   narrative_position:
+  #     timeline: "b"
+  #     alternate_of: timeline-a-standard
+  #   status: pending
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CHARACTER TRACKING
+# Which characters appear in which scenarios
+# ─────────────────────────────────────────────────────────────────────────────
+
+character_appearances:
+  # Example:
+  # frankie-kerouac:
+  #   scenarios:
+  #     - act-1-consultation
+  #     - act-2-debate
+  #     - timeline-a-standard
+  #   total_appearances: 3
+  #
+  # marcus-chen:
+  #   scenarios:
+  #     - act-1-consultation
+  #     - monica-meeting
+  #   total_appearances: 2
+
+# ─────────────────────────────────────────────────────────────────────────────
+# NARRATIVE STRUCTURE
+# How scenarios relate to each other
+# ─────────────────────────────────────────────────────────────────────────────
+
+narrative_structure:
+  type: null  # linear, branching, parallel, mixed
+  # 
+  # linear: Sequential scenes in order
+  # branching: Multiple paths from a decision point
+  # parallel: Alternate realities/timelines
+  # mixed: Combination of above
+  
+  # Example linear:
+  # entry_point: act-1-consultation
+  # sequence:
+  #   - act-1-consultation
+  #   - act-2-debate
+  #   - act-3-resolution
+  #
+  # Example parallel:
+  # timelines:
+  #   a: [timeline-a-standard, timeline-a-decision]
+  #   b: [timeline-b-aggressive, timeline-b-decision]
+  #   c: [timeline-c-budget-cut, timeline-c-decision]
+
+# ─────────────────────────────────────────────────────────────────────────────
+# METADATA
+# ─────────────────────────────────────────────────────────────────────────────
+
+metadata:
+  created: null  # ISO 8601
+  last_updated: null
+  total_scenarios: 0
+  active_scenarios: 0
+  completed_scenarios: 0
+
