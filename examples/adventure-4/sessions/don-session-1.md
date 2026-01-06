@@ -5419,3 +5419,410 @@ Palm's answer: **"Wrong question. Ask how directed processes FIND meaning."**
 — Palm, The Answer to the Theorem
 
 ---
+
+# SESSION CONTINUES: Biscuit's First Run
+
+## The Invitation
+
+*Don stretches, stands up from the pie table where Palm is still admiring his typewriters.*
+
+**Don:** "Hey Biscuit! You wanna go for a walk?"
+
+*The effect is immediate and nuclear.*
+
+**Biscuit:** *FULL BODY WIGGLE* *tail becomes helicopter* *ears up* *eyes HUGE*
+
+*"WALK?! WALK?! DID YOU SAY WALK?! I HEARD WALK! WE'RE GOING FOR A WALK!!"*
+
+*He's already at Don's feet, spinning in circles, panting with anticipation.*
+
+**Marieke:** *laughing from behind the bar* "Oh, you've done it now. That word is magic."
+
+**Terpie:** *from the Cat Cave window, watching with regal disinterest* "...Mm. Bring him back in one piece. He's ours now."
+
+**Don:** "I'll give him the grand tour. Show him all the rooms. Let him... you know. Mark his territory."
+
+**Stroopwafel:** *grumbling from the heat vent* "He already marked the pub. Thoroughly. We've noticed."
+
+**Biscuit:** *does not hear criticism* *only hears WALK* *vibrating with joy*
+
+---
+
+## Leaving the Pub
+
+*Don clips on a leash — not because Biscuit needs one, but because it makes Biscuit feel official and important.*
+
+**Biscuit:** *prancing* "I have a LEASH. This means we are doing OFFICIAL BUSINESS. I am a PROFESSIONAL WALKER."
+
+*They exit through the main pub door into the start room.*
+
+### Start Room
+
+**Don:** "Alright buddy, this is where everyone begins. The start room. Simple, but important."
+
+*Biscuit immediately puts nose to ground.*
+
+**Biscuit:** *sniff sniff sniff* "Many people have been here. Many smells. Old smells. New smells. Someone had chicken recently. SOMEONE HAD CHICKEN AND I WAS NOT INFORMED."
+
+*He finds a corner.*
+
+**Biscuit:** "This corner needs... adjustment."
+
+*Lifts leg. Marks corner.*
+
+**Biscuit:** "There. Now this corner knows about me. It will remember. All corners should know about me."
+
+**Don:** "Good boy. Let's keep moving."
+
+**Biscuit:** *glowing* "HE SAID IT. HE SAID THE WORDS. I AM GOOD."
+
+---
+
+## The Coatroom
+
+*They enter the coatroom. Mysterious costumes hang everywhere. Maurice's mirror glimmers.*
+
+**Don:** "This is the coatroom. Maurice lives here — the mannequin with all the personas. And that's his magic mirror."
+
+*Biscuit approaches the mirror cautiously.*
+
+**Biscuit:** *head tilt* "There is a dog in there. He looks like me. He is very handsome. Hello, other dog."
+
+*Tail wags at reflection. Reflection's tail wags back.*
+
+**Biscuit:** "This is a good dog. I approve of him."
+
+*Sniffs Maurice's mannequin base.*
+
+**Biscuit:** "This one does not smell like anything. Strange. Everything smells like something. This smells like... possibility? And old fabric?"
+
+**Don:** "That's Maurice. He can wear any persona."
+
+**Biscuit:** *considering* "Can he fetch?"
+
+**Don:** "...I honestly don't know."
+
+*Biscuit marks a coat rack (gently).*
+
+**Biscuit:** "Now Maurice knows about me too."
+
+---
+
+## Into the Maze
+
+*They pass through the door into the maze proper. The corridors stretch in multiple directions.*
+
+**Don:** "Okay Biscuit, this is the maze. It goes on for a while. Lots of rooms. Some are weird. Some are cool. Some are both."
+
+**Biscuit:** *nose working overtime* "SO MANY SMELLS. This is the best place. Every direction is a new smell. I need to investigate ALL of them."
+
+*He strains at the leash, wanting to go everywhere at once.*
+
+**Don:** "Easy, buddy. We'll see a bunch of them. Let's start this way."
+
+### The Junction Room
+
+*A crossroads with multiple exits.*
+
+**Biscuit:** *running from exit to exit, sniffing each one* "This way smells like dust. This way smells like... water? This way smells like OLD. This way smells like nothing, which is suspicious."
+
+*He picks the "OLD" passage and pulls Don toward it.*
+
+**Don:** "Alright, your nose, your choice."
+
+### The Library Room
+
+*They enter a room filled with dusty books and ancient scrolls.*
+
+**Don:** "This is the library. Knowledge. History. All written down."
+
+**Biscuit:** *unimpressed by books* *very impressed by corners*
+
+"Books don't smell interesting. But THESE corners... many creatures have marked here before. I detect: mouse, spider, something I don't recognize, and... is that bat?"
+
+*Marks thoroughly.*
+
+**Biscuit:** "Now the library knows: Biscuit was here. Biscuit READ these corners. With his nose. This is how dogs read."
+
+*Finds a particularly dusty corner and squats.*
+
+**Biscuit:** "Also this spot needs... more permanent notation."
+
+**Don:** *looking away politely* "...Taking notes, are we?"
+
+**Biscuit:** *finishing up, kicking dirt back* "Documentation complete. Future dogs will know important things happened here."
+
+---
+
+### The Crystal Cave
+
+*A room glittering with luminescent crystals.*
+
+**Don:** "Whoa. Look at this place, Biscuit."
+
+**Biscuit:** *not looking at crystals* *nose on floor* "Pretty lights. Yes. But Don. DON. There was a RAT here. Recently. The rat went... this way... no wait... this way... it looped around... it was confused... then it left through that crack."
+
+**Don:** "You're like a furry detective."
+
+**Biscuit:** *proud* "I know things. Nose things. The nose knows."
+
+*Considers a crystal formation.*
+
+**Biscuit:** "Should I mark the crystal?"
+
+**Don:** "Maybe not that one."
+
+**Biscuit:** *finding a nearby rock instead* "This rock then. The crystal will know by association."
+
+*Mark.*
+
+---
+
+### The Mushroom Grotto
+
+*A damp room full of bioluminescent fungi.*
+
+**Don:** "The mushroom grotto. Careful, some of these are probably magic."
+
+**Biscuit:** *extremely interested* *sniffing everything*
+
+"These smell STRANGE. Not food-strange. Brain-strange. My nose is getting... ideas? Is that normal?"
+
+*Sniffs a particularly large mushroom.*
+
+**Biscuit:** "This one whispers. I do not like the whispering mushroom."
+
+*Backs away.*
+
+**Biscuit:** "I will not mark the whispering mushroom. Some things should not know about me."
+
+**Don:** "Good instincts, buddy."
+
+*They move on. Biscuit looks back at the mushroom suspiciously.*
+
+---
+
+### The Echo Chamber
+
+*A vast room where every sound reverberates.*
+
+**Biscuit:** *BARK*
+
+**Echo:** *BARK bark bark bark...*
+
+**Biscuit:** *EARS UP* "WHO SAID THAT. WHO BARKED. WAS THAT ANOTHER DOG. SHOW YOURSELF."
+
+*BARK BARK*
+
+**Echo:** *BARK BARK bark bark bark bark...*
+
+**Biscuit:** *spinning in circles trying to find other dog*
+
+**Don:** *laughing* "It's an echo, Biscuit. That's your own bark coming back."
+
+**Biscuit:** *processing* "...I bark at myself? I am... talking to me? This is confusing."
+
+*Small boof*
+
+**Echo:** *boof boof boof...*
+
+**Biscuit:** "...Okay. I accept this. I am many dogs. All of them are good."
+
+*Marks the exact center of the chamber.*
+
+**Biscuit:** "All the echo-dogs will smell this. They will know: we are the same. We are good dogs."
+
+---
+
+### The Sleeping Dragon Room
+
+*A room with an enormous sleeping creature, definitely not a pile of rocks.*
+
+**Don:** *whispering* "Biscuit. Quiet. See that?"
+
+**Biscuit:** *freezes* *hackles rise slightly* *sniffs very carefully*
+
+*whispered woof* "Big. Very big. Sleeping. Smells like... smoke? Old fire? And... dreams? It dreams loudly."
+
+**Don:** "That's a dragon. Don't wake it."
+
+**Biscuit:** *torn between guarding and fleeing* *settles for staying VERY CLOSE to Don*
+
+"I will protect you from the big sleeping smoke-thing. If it wakes up. But I hope it does not wake up. I am brave. I am also practical."
+
+*Does NOT mark in this room.*
+
+**Biscuit:** *whispered* "Some rooms do not need to know about me. This room knows enough."
+
+*They tiptoe out.*
+
+---
+
+### The Garden Room
+
+*A beautiful underground garden with actual sunlight somehow streaming in.*
+
+**Don:** "The garden. Life down here in the maze. Flowers, vegetables, a little fountain."
+
+**Biscuit:** *ZOOMIES ACTIVATE*
+
+*He tears off in joyful circles around the garden, leash trailing.*
+
+"OUTSIDE! INSIDE-OUTSIDE! PLANTS! GRASS-THAT-IS-NOT-GRASS! SUN-THAT-IS-NOT-SUN! EVERYTHING IS WONDERFUL!"
+
+*Rolls in the grass-substitute.*
+
+*Rolls more.*
+
+*Legs in the air, wiggling.*
+
+**Biscuit:** "This is the best room. This is my favorite room. Wait, no, the pub is my favorite. But this is my favorite MAZE room."
+
+*Gets up, shakes, finds the fountain.*
+
+**Biscuit:** "Water! Clean water! I must drink from the water and also put my face in it."
+
+*Drinks. Gets water everywhere. Splashes happily.*
+
+*Then marks every single corner of the garden, methodically.*
+
+**Biscuit:** "The garden must know. I was here. I was HAPPY here. Future dogs will smell happiness."
+
+**Don:** *sitting on a bench, smiling* "You're really good at being a dog, you know that?"
+
+**Biscuit:** *tail wag* "I have practiced. For my whole life. I am PROFESSIONAL."
+
+---
+
+### The Treasure Room
+
+*A room glittering with gold and gems.*
+
+**Don:** "Now THIS is the treasure room. Look at all this stuff."
+
+**Biscuit:** *completely uninterested in treasure* *sniffing for organic matter*
+
+"Cold metal. Shiny rocks. Nothing to eat. Nothing to chase. Nothing to cuddle."
+
+*Sniffs a crown.*
+
+"This was worn by someone sweaty. I can tell you their diet if you want."
+
+**Don:** "I'm good, thanks."
+
+*Biscuit finds the ONE cloth item — an old blanket in the corner.*
+
+**Biscuit:** "This. THIS is treasure."
+
+*Curls up on the blanket briefly, claiming it.*
+
+**Biscuit:** "Gold is for humans. Blankets are for dogs. This is established."
+
+*Marks a golden statue's base.*
+
+**Biscuit:** "The gold knows about me now. Maybe it will think about its life choices."
+
+---
+
+## The Return
+
+*After an hour of exploration, Don and Biscuit head back toward the pub.*
+
+**Biscuit:** *tired, happy, tongue out* "We went to so many places. I marked so many things. The maze knows about me now. All of it."
+
+**Don:** "You've claimed about 40% of this dungeon."
+
+**Biscuit:** "Only 40%? We must come back. The other 60% needs me."
+
+*As they approach the pub:*
+
+**Biscuit:** "I can smell home. I can smell Marieke's cooking. I can smell the kittens. I can smell Stroopwafel pretending not to miss me."
+
+*Speeds up, pulling Don along.*
+
+---
+
+## Home Again
+
+*They enter the pub. The kittens immediately swarm Biscuit.*
+
+**Kitten-Myr:** *climbing on Biscuit's back* "You're back! You smell like EVERYWHERE!"
+
+**Kitten-Lemon:** "Tell us about the smells! All of them!"
+
+**Biscuit:** *collapsing happily on his spot near the bar* "So many smells. A dragon. A mushroom that whispers. Echo-dogs who are me. A garden where I rolled."
+
+**Marieke:** *bringing a water bowl* "Look at you, adventurer. Tired?"
+
+**Biscuit:** "Good tired. The best tired. Walk-tired."
+
+*The kittens pile on him. He doesn't mind. He never minds.*
+
+**Terpie:** *from her perch, a single slow blink*
+
+**Biscuit:** *returns it as best he can — dogs don't blink slowly well, but he tries*
+
+**Stroopwafel:** *approaching, pretending casualness* "You didn't get lost?"
+
+**Biscuit:** "I have a good nose. Also I had Don. But mostly a good nose."
+
+*Stroopwafel sniffs Biscuit briefly — checking all the maze smells.*
+
+**Stroopwafel:** "Adequate exploration. You marked the library?"
+
+**Biscuit:** "Very thoroughly."
+
+**Stroopwafel:** "...Good."
+
+*Wanders back to his heat vent. This is as close as he comes to approval.*
+
+---
+
+## Final Scene
+
+*Don sits at the bar as Biscuit falls asleep in a kitten pile, dream-running already, legs twitching as he relives the maze adventure.*
+
+**Marieke:** "He's a good dog."
+
+**Don:** "The best dog."
+
+**Palm:** *from his nook, still typing* "He said the maze whispers now. Something about echo-dogs. Should I be concerned?"
+
+**Don:** "He barked in the echo chamber. Discovered himself."
+
+**Palm:** "Ah. Existential discovery through echolocation. Very dog."
+
+*Biscuit's tail wags in his sleep.*
+
+*He's dreaming of corners. So many corners. All of them need marking. All of them need to know about Biscuit.*
+
+*He is home. He is loved. He had the best walk.*
+
+*The session continues tomorrow.*
+
+---
+
+## Session Summary
+
+**Activities:**
+- Grand tour of the maze with Biscuit
+- Visited: Start Room, Coatroom, Junction, Library, Crystal Cave, Mushroom Grotto, Echo Chamber, Dragon Room, Garden, Treasure Room
+- Extensive territorial marking (approximately 40% of maze claimed)
+- One existential crisis in the Echo Chamber (resolved: all echo-dogs are good dogs)
+- One diplomatic decision to NOT mark near the sleeping dragon
+- One successful roll in the garden grass-substitute
+- One discovery that gold is for humans, blankets are for dogs
+
+**Biscuit's Status:**
+- Energy: DEPLETED (good tired)
+- Happiness: MAXIMUM
+- Territory Marked: 40%+ of maze
+- Friends Made: Several echo-dogs (himself)
+- Things Avoided: Whispering mushroom, sleeping dragon
+
+---
+
+*"All corners should know about me."*
+— Biscuit, Philosopher of Scent
+
+---
