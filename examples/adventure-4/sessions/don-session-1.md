@@ -91,6 +91,99 @@ The Grotto awaits. Marieke is watching. A kitten is approaching your ankles.
 
 ---
 
+## Turn 1: TALK TO MARIEKE ABOUT LUCKY STRAINS
+
+**DON**: *approaches the bar, looking slightly nervous*
+
+"Marieke... I've done something. I ordered a Monkey's Paw from the ACME catalog. It's arriving soon and I... I've heard things. About 2017. I need whatever you've got that might help with luck. All of it."
+
+**MARIEKE**: *freezes mid-polish of a glass. Her eyes go somewhere distant for a moment. Then she sets the glass down with deliberate care.*
+
+"Oh, schat. Oh no. You ordered the—" *she closes her eyes* "—you ordered from the catalog."
+
+*She reaches under the counter and pulls out a lockbox. Her movements are practiced. Too practiced.*
+
+"2017. Ja. We don't talk about 2017." *She opens the box.* "But we PREPARE for it."
+
+*Inside: several jars of premium cannabis, each labeled with careful handwriting.*
+
+---
+
+### 🍀 THE LUCKY STRAINS SELECTION
+
+Marieke lays them out on the counter like sacred artifacts:
+
+| Strain | Price | Effect | Marieke's Note |
+|--------|-------|--------|----------------|
+| **Monkey's Blessing** | 15g | Fortune's Mercy buff, malfunction mitigation | "This one. This is THE one. Created AFTER the incident. It won't stop what's coming, but you'll be okay with it." |
+| **Postel's Law** | 14g | Enhanced tolerance, robust error handling | "Be liberal in what you accept. You're going to need that flexibility." |
+| **Lucky Seven** | 12g | +7% to all random outcomes | "Every little bit helps, schat." |
+| **YAML Jazz** | 16g | Pattern recognition +3 | "You might see the chaos coming. Might." |
+
+*She looks at you with genuine concern.*
+
+"How much gold do you have? I'm going to give you a discount. House rules when ACME is involved."
+
+---
+
+### MARIEKE'S ADVICE
+
+*She leans in, voice low:*
+
+"Listen to me carefully. When the package arrives:
+1. Don't open it alone
+2. Don't make ANY wishes until you've smoked the Blessing
+3. Keep Postel's Law nearby — it helps you accept... unexpected interpretations
+4. And schat..." *she grabs your wrist* "...be VERY specific with your words. The Paw listens. It listens TOO well."
+
+*Stroopwafel hisses from behind the bar. Even the cat knows.*
+
+"The 2017 incident... three wishes. Three catastrophes. We lost—" *she stops herself* "—we lost things. But we learned. The Blessing came FROM that. Something good from something terrible."
+
+*She slides the jars toward you.*
+
+"How much do you want?"
+
+---
+
+## Current Status
+
+```yaml
+player:
+  name: Don Hopkins
+  location: pub/bar
+  concern: ACME Monkey's Paw incoming
+  
+available_for_purchase:
+  monkeys_blessing: 15g  # HIGHLY RECOMMENDED
+  postels_law: 14g
+  lucky_seven: 12g
+  yaml_jazz: 16g
+  
+discount: "House rules for ACME situations"
+
+marieke_mood: concerned, protective, remembering
+stroopwafel_mood: hissing (knows something)
+```
+
+---
+
+## What Would You Like To Do?
+
+```
+> ORDER [strain] [amount]
+> ASK MARIEKE ABOUT 2017
+> ASK MARIEKE ABOUT THE WISHES
+> CHECK GOLD
+> ORDER ALL OF THEM
+```
+
+*The warmth of the Grotto feels different now. Protective. Like it's closing ranks around you.*
+
+*Somewhere, a kitten mews. Lily appears at your elbow, looking up with concerned eyes.*
+
+---
+
 ### Quick References
 
 | Sub-Area | What's There |
