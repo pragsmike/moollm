@@ -57,3 +57,23 @@ room:
   ambience: |
     Drip. Drip. Drip. The puddle grows imperceptibly larger.
     Or does it? Hard to tell. Everything is hard to tell in here.
+    
+  # BISCUIT'S MARKINGS (Session: Don's First Run)
+  biscuit_markings:
+    date: "2026-01-06"
+    marked:
+      - location: "near puddle"
+        type: territorial
+        note: "Junction marked — this is the crossroads"
+    detected_smells:
+      north: "dust — old and undisturbed"
+      south: "lamplight and safety"
+      east: "faint echo... sound has a smell?"
+      west: "something OLD. Very old. Chose this direction."
+    assessment: |
+      SO MANY SMELLS. This is the best place.
+      Every direction is a new smell.
+      I need to investigate ALL of them.
+    biscuit_says: |
+      The maze begins here. I have claimed the entrance.
+      Future dogs will know: Biscuit explored this way.

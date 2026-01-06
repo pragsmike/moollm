@@ -60,3 +60,29 @@ room:
   ambience: |
     The mushrooms pulse in a rhythm that almost sounds like breathing.
     You try not to think about what's breathing. You fail.
+    
+  # BISCUIT'S MARKINGS (Session: Don's First Run)
+  # THE WHISPERING MUSHROOM REJECTION
+  biscuit_markings:
+    date: "2026-01-06"
+    marked: []  # DELIBERATELY EMPTY
+    why_no_marking: |
+      Biscuit explicitly chose NOT to mark this room.
+      "Some things should not know about me."
+    detected_smells:
+      - smell: "STRANGE"
+        location: "everywhere"
+        assessment: "Not food-strange. Brain-strange. Ideas in my nose?"
+      - smell: "whispering"
+        location: "large central mushroom"
+        assessment: "This one whispers. I do not like the whispering mushroom."
+        action_taken: "Backed away. Rejected."
+    the_whispering_mushroom:
+      detected: true
+      response: "Ears back, backed away, refused interaction"
+      judgment: "Some things should not know about me"
+      instinct_rating: "GOOD (Don approved)"
+    biscuit_says: |
+      I will not mark the whispering mushroom.
+      Some rooms do not need to know about me.
+      This room knows enough.

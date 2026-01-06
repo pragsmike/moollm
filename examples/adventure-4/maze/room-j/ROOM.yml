@@ -69,3 +69,22 @@ room:
     This is the kind of place where destinies are decided.
     Or at least where you decide which direction to go next.
     Choose wisely. Or don't. You'll reincarnate either way.
+    
+  # BISCUIT'S MARKINGS (Session: Don's First Run)
+  biscuit_markings:
+    date: "2026-01-06"
+    marked:
+      - location: "by the vending machine"
+        type: territorial
+        note: "The machine hums. I marked near the hum."
+    detected_smells:
+      north: "golden light — good direction"
+      south: "green glow — mushrooms, suspicious"
+      east: "old bones — skeleton, noted"
+      west: "carved stone — someone was here long ago"
+    vending_machine_investigation:
+      sniffed: true
+      assessment: "Smells like oil and old coins. No food. Disappointing."
+    biscuit_says: |
+      Four ways to go. I smelled them all.
+      The golden way is best. The green way whispers.

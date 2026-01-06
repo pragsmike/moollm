@@ -147,3 +147,23 @@ room:
     Water drips somewhere in the darkness — the universal soundtrack
     of underground adventure. The air is cool and smells of earth,
     mystery, and the lingering scent of legends past.
+
+  # BISCUIT'S MARKINGS (Session: Don's First Run)
+  # "All corners should know about me." — Biscuit
+  biscuit_markings:
+    date: "2026-01-06"
+    marked:
+      - location: "southeast corner"
+        type: territorial
+        note: "Primary claiming mark"
+    detected_smells:
+      - smell: "chicken"
+        location: "near the mailbox"
+        assessment: "SOMEONE HAD CHICKEN AND I WAS NOT INFORMED"
+        intensity: "fading but definite"
+      - smell: "legends past"
+        location: "wall carvings"
+        assessment: "Many heroes. Much history. Good smells."
+    biscuit_says: |
+      This corner knows about me now. It will remember.
+      All corners should know about me.

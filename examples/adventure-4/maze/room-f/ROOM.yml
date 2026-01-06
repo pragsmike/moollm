@@ -88,3 +88,32 @@ room:
     always come. This one is young and hungry.
     
     Will you be its first meal? Or its last?
+    
+  # BISCUIT'S MARKINGS (Session: Don's First Run)
+  # THE DRAGON ROOM DIPLOMACY
+  biscuit_markings:
+    date: "2026-01-06"
+    marked: []  # DELIBERATELY EMPTY
+    why_no_marking: |
+      Biscuit explicitly chose NOT to mark this room.
+      "Some rooms do not need to know about me. This room knows enough."
+    detected_smells:
+      - smell: "smoke, old fire"
+        location: "pervasive"
+        assessment: "Big. Very big. Sleeping."
+      - smell: "dreams"
+        location: "from the sleeping thing"
+        assessment: "It dreams loudly. I can smell its dreams."
+      - smell: "danger"
+        location: "everywhere"
+        assessment: "Hackles rose. Stayed close to Don."
+    the_dragon_incident:
+      detected: "large sleeping creature (definitely not rocks)"
+      response: "Froze. Hackles up. Whispered woof."
+      protective_instinct: "Positioned between Don and threat"
+      marking_decision: "NO. Absolutely not."
+      reason: "Practical bravery — some things don't need provocation"
+    biscuit_whispered: |
+      I will protect you from the big sleeping smoke-thing.
+      If it wakes up. But I hope it does not wake up.
+      I am brave. I am also practical.
