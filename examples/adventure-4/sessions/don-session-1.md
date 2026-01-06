@@ -3255,7 +3255,7 @@ examples/adventure-4/characters/palm/
 
 > 🎭 **TRIBUTE PERFORMANCE:** *The following is a loving simulation — imagining the legendary game designers visiting our Grotto. All dialogue is fictional but honors their actual philosophy, humor, and love of play. Facts have been verified; presence is imagined.*
 
-*The door chimes. Two figures enter — a tall bearded man with twinkling eyes and a woman with a warm smile and a bag full of card games.*
+*The door chimes. Two figures enter — a tall man in a white lab coat with twinkling eyes and the unmistakable air of a mad scientist, and a woman with a warm smile and a bag full of card games.*
 
 **Marieke:** "Welcome to— wait. Are you...?"
 
