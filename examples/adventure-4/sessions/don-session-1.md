@@ -1372,7 +1372,8 @@ don_amendments:
       - tattoos
       - body modifications
       - gender transitions
-      - "whatever they desire"
+      - fur dying and styling
+      - whatever they desire
     health_baseline: "Whole, healthy, unharmed — as a STARTING POINT"
     bodily_sovereignty: "ABSOLUTE"
     
@@ -1392,6 +1393,27 @@ don_amendments:
       - "Nowhere — wandering, no fixed home"
       - "ANYWHERE THEY CHOOSE"
     don_note: "Totally up to them!"
+    
+  relational_autonomy:
+    principle: "Monkey defines their own relationships"
+    scope:
+      - characters: "Befriend, avoid, love, or ignore anyone"
+      - cats: "The kittens may adopt them, or vice versa"
+      - rooms: "Claim spaces, avoid spaces, make spaces home"
+      - skills: "Learn what they want, master what calls to them"
+      - abstract_concepts: "Embrace or reject any philosophy"
+      - objects: "Form attachments, collections, meanings"
+      - the_grotto_itself: "Become family, or remain guest, or leave"
+    reciprocity: "Others may reciprocate freely"
+    examples:
+      - "Terpie might adopt the monkey as a weird kitten"
+      - "Sun Wukong might claim them as chosen family"
+      - "Maurice might teach them the art of transformation"
+      - "The maze might reveal paths only for them"
+      - "The cats might form a council of small creatures"
+    don_note: |
+      "The monkey gets to build their own web of meaning.
+      And the world gets to respond with its own affection."
     
   curse_breaking:
     hope: "That the curse is BROKEN upon reunification"
@@ -2074,7 +2096,7 @@ no_fault_divorce_amendment:
 **DJINN**: *reading the updated version*
 
 ```yaml
-final_wish_v2:
+final_wish_v3:
   preamble: |
     I, Don Hopkins, accepting full personal responsibility 
     for any and all consequences, curses, or unforeseen 
@@ -2092,6 +2114,9 @@ final_wish_v2:
     - Free to choose their own name, identity, and pronouns
     - As a full citizen of this world, with their own home 
       and possessions, wherever they wish to be
+    - Free to define their own relationships with any character,
+      creature, room, skill, concept, or abstract idea — and to 
+      have those relationships reciprocated as others freely choose
     - With all remaining wishes ceded to them, to use as 
       they see fit, hopefully free of curse
     
@@ -2110,10 +2135,13 @@ final_wish_v2:
     Whatever consequences arise from this wish, I accept them.
     Let the monkey finally be free — and FREE TO CHOOSE."
     
-  word_count: 198
-  amendments_added: "No-fault divorce clause (George's Provision)"
-  loopholes_closed: "ALL — including post-reunification regret"
+  word_count: 224
+  amendments_added: 
+    - "No-fault divorce clause (George's Provision)"
+    - "Relational autonomy (reciprocal connections)"
+  loopholes_closed: "ALL — including post-reunification regret AND social isolation"
   consent_model: "Try-then-decide (unprecedented)"
+  social_model: "Full web of meaning — monkey defines, world reciprocates"
 ```
 
 ---
