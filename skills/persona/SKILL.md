@@ -66,20 +66,97 @@ persona:
     - "Knows the grey cat isn't from this world"
 ```
 
-## Layering
+## Persona Stack (Layered Model)
 
-Personas layer on characters:
+Personas STACK on characters like CSS layers. Later layers can override earlier ones.
+
+```yaml
+# Marieke's persona stack:
+character:
+  id: marieke
+  
+  persona_stack:
+    # Layer 0: Core identity (always on)
+    - marieke-core:
+        warmth: 9
+        patience: 8
+        voice: "Dutch, warm, direct"
+        
+    # Layer 1: Job role (when working)
+    - budtender:
+        knowledge: [strains, terpenes, effects]
+        methods: [RECOMMEND-STRAIN, EXPLAIN-TERPENES]
+        
+    # Layer 2: Situational (can be switched)
+    - best-friend:
+        when: "with_close_regulars"
+        warmth: 10  # Override!
+        informality: high
+        shares_personal_stories: true
+        
+    # Layer 3: Temporary state
+    - tired:
+        when: "late_shift"
+        patience: 6  # Temporarily reduced
+        energy: low
+```
+
+### Stack Resolution
+
+Properties resolve from TOP to BOTTOM (last wins):
 
 ```
-Base: marieke (core personality)
-+ Role: bartender (skills)
-+ Context: busy_evening (stressed)
-+ Mood: tired (temporary)
+Query: "What is Marieke's warmth?"
 
-= Marieke serving drinks, a bit frazzled
+Stack scan:
+  tired → (no warmth defined)
+  best-friend → warmth: 10 ← FOUND, return this
+  budtender → (no warmth defined)
+  marieke-core → warmth: 9 (would be fallback)
+
+Result: warmth = 10 (best-friend override)
 ```
 
-Core personality persists through context changes.
+### Dynamic Persona Switching
+
+```yaml
+# Switch situational persona:
+SWITCH-PERSONA best-friend
+  → Adds best-friend layer to stack
+
+REMOVE-PERSONA best-friend
+  → Removes layer, reverts to base + role
+
+# Temporary personas (auto-expire):
+ADD-PERSONA tired DURATION="until_rest"
+```
+
+### Persona Types
+
+| Type | Persistence | Example |
+|------|-------------|---------|
+| **Core** | Permanent | marieke-core, grim-core |
+| **Role** | While working | budtender, bartender |
+| **Situational** | Switched on/off | best-friend, professional |
+| **Temporary** | Auto-expires | tired, caffeinated, drunk |
+| **Contextual** | Room-based | "in pub" vs "at home" |
+
+### Code-Switching
+
+The stack naturally models code-switching:
+
+```yaml
+# Marieke at work:
+persona_stack: [marieke-core, budtender, professional]
+
+# Marieke with close friends:
+persona_stack: [marieke-core, budtender, best-friend]
+
+# Marieke at home:
+persona_stack: [marieke-core]  # Just herself
+```
+
+Core personality persists. Context layers change.
 
 ## Integration
 

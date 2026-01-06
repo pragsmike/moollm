@@ -179,7 +179,7 @@ object:
       score: 50
       effect: "Reshape the table geometry"
       
-    SUMMON_PANEL:
+    SUMMON-PANEL:
       description: "Conjure a panel of diverse voices"
       params:
         topic: required
@@ -190,7 +190,7 @@ object:
         Summon 4-8 characters with contrasting viewpoints.
         The table selects for diversity of perspective.
         
-    START_DISCUSSION:
+    START-DISCUSSION:
       description: "Begin a structured discussion"
       params:
         topic: required
@@ -199,7 +199,7 @@ object:
       score: 80
       effect: "Initialize discussion state, ring the bell"
       
-    MUSICAL_CHAIRS:
+    MUSICAL-CHAIRS:
       description: "Play musical chairs — last one seated wins!"
       params:
         music: "optional theme, default pub jukebox"
@@ -249,7 +249,7 @@ object:
         topic_chairs: "Must answer a question to claim seat"
         hot_potato: "Pass an object, holder when music stops is out"
       
-    RING_BELL:
+    RING-BELL:
       description: "Request the floor"
       score: 60
       effect: "Add speaker to queue, moderator acknowledges"
@@ -259,7 +259,7 @@ object:
       score: 40
       effect: "Move to next speaker in order"
       
-    GO_AROUND:
+    GO-AROUND:
       description: "Each person speaks in turn"
       params:
         direction: ["clockwise", "counterclockwise"]
@@ -363,7 +363,7 @@ object:
     > SIT position=N
     You take the North seat, facing the fireplace.
     
-    > SUMMON_PANEL topic="AI consciousness" style=adversarial
+    > SUMMON-PANEL topic="AI consciousness" style=adversarial
     The table spins... Eight figures materialize:
     - Optimist (NE): "Consciousness is computation!"
     - Skeptic (E): "Define consciousness first."
@@ -373,10 +373,10 @@ object:
     - Pragmatist (W): "What policy follows from this?"
     - Mystic (NW): "Consciousness isn't what you think."
     
-    > START_DISCUSSION format=roundtable time_limit="30 minutes"
+    > START-DISCUSSION format=roundtable time_limit="30 minutes"
     *DING* The bell rings. Discussion begins clockwise from North.
     
-    > GO_AROUND direction=clockwise
+    > GO-AROUND direction=clockwise
     Each panelist offers their opening position...
     
 # YAML Jazz notes:

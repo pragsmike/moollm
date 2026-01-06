@@ -60,6 +60,13 @@ skills/
 ├── adventure/       # Text adventure CLI
 ├── play-learn-lift/ # The methodology itself
 ├── skill/           # This meta-skill (you are here!)
+│   ├── README.md           # Landing page
+│   ├── SKILL.md            # This file
+│   ├── CARD.yml            # Skill as playable card
+│   ├── README.md.tmpl      # Template for new skill READMEs
+│   ├── SKILL.md.tmpl       # Template for new skill specs
+│   ├── delegation-object-protocol.md    # Self-like inheritance
+│   └── skill-instantiation-protocol.md  # How skills become instances
 └── ...
 ```
 
@@ -480,7 +487,11 @@ learned_skills:
 - **[../constructionism/](../constructionism/)** — Building skills by doing
 - **[../soul-chat/](../soul-chat/)** — Skills embedded in design conversations
 - **[../../kernel/](../../kernel/)** — Core skill infrastructure
-- **[../delegation-object-protocol.md](../delegation-object-protocol.md)** — Skill inheritance
+
+### Protocol Documents (in this directory)
+
+- **[delegation-object-protocol.md](./delegation-object-protocol.md)** — Self-like prototype inheritance for LLMs
+- **[skill-instantiation-protocol.md](./skill-instantiation-protocol.md)** — How skills become activation records
 
 ---
 

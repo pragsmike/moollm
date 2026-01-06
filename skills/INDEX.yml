@@ -1,6 +1,116 @@
 # MOOLLM Skill Registry
 
 skills:
+  # TIER 0: KNOWLEDGE ONLY (No tools, just understanding)
+  
+  # --- META SKILLS ---
+  
+  - name: "moollm"
+    path: "skills/moollm"
+    description: "The soul of MOOLLM — self-explanation, help, navigation, philosophy"
+    tier: 0
+    entry: "SKILL.md"
+    tags: ["meta", "help", "foundational", "navigation"]
+    use_when: "Confused, lost, asking 'what can I do?', wanting to understand MOOLLM"
+  
+  - name: "skill"
+    path: "skills/skill"
+    description: "The meta-skill: how skills work, inherit, and instantiate"
+    tier: 0
+    entry: "SKILL.md"
+    tags: ["meta", "foundational", "inheritance"]
+    use_when: "Creating, understanding, or debugging skills"
+    docs: ["delegation-object-protocol.md", "skill-instantiation-protocol.md"]
+    
+  - name: "protocol"
+    path: "skills/protocol"
+    description: "K-lines as semantic activation — protocol names invoke capability clusters"
+    tier: 0
+    entry: "SKILL.md"
+    tags: ["meta", "semantics", "k-lines"]
+    use_when: "Understanding or creating protocol invocations"
+    
+  - name: "yaml-jazz"
+    path: "skills/yaml-jazz"
+    description: "Comments as semantic data — structure for LLMs, not just machines"
+    tier: 0
+    entry: "SKILL.md"
+    tags: ["meta", "yaml", "semantics"]
+    use_when: "Designing YAML files for LLM consumption"
+    
+  - name: "postel"
+    path: "skills/postel"
+    description: "Be liberal in what you accept, conservative in what you emit"
+    tier: 0
+    entry: "SKILL.md"
+    tags: ["meta", "robustness", "philosophy"]
+    use_when: "Designing interfaces, handling varied input"
+    
+  - name: "robust-first"
+    path: "skills/robust-first"
+    description: "Dave Ackley: stay alive and heal, don't crash"
+    tier: 0
+    entry: "SKILL.md"
+    tags: ["meta", "robustness", "philosophy"]
+    use_when: "Designing for graceful degradation"
+    
+  - name: "constructionism"
+    path: "skills/constructionism"
+    description: "Papert: learn by building in microworlds"
+    tier: 0
+    entry: "SKILL.md"
+    tags: ["meta", "learning", "philosophy"]
+    use_when: "Designing learning experiences or microworlds"
+    
+  - name: "prototype"
+    path: "skills/prototype"
+    description: "Self language philosophy — objects clone, not instantiate"
+    tier: 0
+    entry: "SKILL.md"
+    protocol: "PROTOTYPE"
+    tags: ["meta", "inheritance", "philosophy", "self"]
+    use_when: "Understanding or designing prototype-based inheritance"
+    related: ["skill", "character", "card"]
+    credits: "David Ungar, Randall Smith (Self, 1987)"
+    
+  - name: "speed-of-light"
+    path: "skills/speed-of-light"
+    description: "Simulate many turns inside one LLM call"
+    tier: 0
+    entry: "SKILL.md"
+    tags: ["meta", "simulation", "ensemble"]
+    use_when: "Multi-agent deliberation in single call"
+    related: ["adversarial-committee", "debate", "soul-chat"]
+    
+  - name: "coherence-engine"
+    path: "skills/coherence-engine"
+    description: "LLM as consistency maintainer and orchestrator"
+    tier: 0
+    entry: "SKILL.md"
+    tags: ["meta", "simulation", "consistency"]
+    use_when: "Understanding how LLM maintains world state"
+    
+  - name: "representation-ethics"
+    path: "skills/representation-ethics"
+    description: "Ethics of simulating real and fictional people"
+    tier: 0
+    entry: "SKILL.md"
+    protocol: "REPRESENTATION-ETHICS"
+    tags: ["ethics", "representation", "consent", "philosophy"]
+    use_when: "Simulating real people, creating fictional versions, tribute/impersonation"
+    related: ["persona", "character", "hero-story"]
+    notes: "Consent hierarchy, game frames, Sims precedent, room-based framing"
+    
+  - name: "naming"
+    path: "skills/naming"
+    description: "Big-endian file naming as semantic binding"
+    tier: 0
+    entry: "SKILL.md"
+    tags: ["meta", "organization", "filesystem"]
+    use_when: "Naming files, organizing directories"
+    related: ["room", "character"]
+    notes: "Wraps kernel/NAMING.yml"
+    
   # TIER 1: FILE-ONLY (No execution required)
   
   # --- CORE METHODOLOGY ---
@@ -67,6 +177,17 @@ skills:
     use_when: "Defining character personality, voice, backstory, or role separation"
     related: ["character", "mind-mirror", "room"]
     
+  - name: "mind-mirror"
+    path: "skills/mind-mirror"
+    description: "Personality modeling via four Thought Planes"
+    tier: 1
+    entry: "SKILL.md"
+    protocol: "MIND-MIRROR"
+    tags: ["personality", "traits", "sims", "circumplex"]
+    use_when: "Defining deep personality, character DNA, psychological profile"
+    related: ["character", "persona"]
+    notes: "Timothy Leary 1985, Interpersonal Circumplex"
+    
   - name: "summarize"
     path: "skills/summarize"
     description: "Context compression—compress without losing meaning"
@@ -105,6 +226,15 @@ skills:
     entry: "SKILL.md"
     tags: ["exploration", "narrative", "investigation"]
     use_when: "Exploring an unfamiliar codebase or investigating a bug"
+    
+  - name: "hero-story"
+    path: "skills/hero-story"
+    description: "Campbell's monomyth as narrative template"
+    tier: 1
+    entry: "SKILL.md"
+    tags: ["narrative", "structure", "journey"]
+    use_when: "Structuring long-form adventures or projects"
+    related: ["adventure", "storytelling-tools"]
     
   # --- LLOOOOMM EXPERIMENTAL ---
   
@@ -288,6 +418,82 @@ skills:
     use_when: "Creating cats, kittens, or cat-like creatures"
     related: ["character", "buff", "room"]
     
+  # --- ROLE SKILLS (inherit for NPC capabilities) ---
+  
+  - name: "bartender"
+    path: "skills/bartender"
+    description: "Generic bartending — pour drinks, manage tabs, know secrets"
+    tier: 1
+    entry: "SKILL.md"
+    protocol: "BARTENDER"
+    tags: ["role", "service", "social", "npc"]
+    use_when: "Character needs bartending capabilities"
+    related: ["character", "persona", "economy", "budtender"]
+    note: "ROLE skill provides methods, not personality (that's persona)"
+    
+  - name: "budtender"
+    path: "skills/budtender"
+    description: "Cannabis bartender — strains, terpenes, responsible service"
+    tier: 1
+    entry: "SKILL.md"
+    protocol: "BUDTENDER"
+    tags: ["role", "service", "cannabis", "npc"]
+    use_when: "Character needs cannabis expertise"
+    inherits: ["bartender"]
+    related: ["bartender", "character", "persona"]
+    
+  # --- AGENTIC PATTERNS ---
+  
+  - name: "action-queue"
+    path: "skills/action-queue"
+    description: "Sims-style task queue — objects can push prerequisites"
+    tier: 1
+    entry: "SKILL.md"
+    protocol: "ACTION-QUEUE"
+    tags: ["game", "actions", "queue", "sims"]
+    use_when: "Managing character actions and priorities"
+    related: ["advertisement", "needs", "character"]
+    
+  - name: "advertisement"
+    path: "skills/advertisement"
+    description: "Objects broadcast available actions with scores"
+    tier: 1
+    entry: "SKILL.md"
+    protocol: "ADVERTISEMENT"
+    tags: ["game", "actions", "broadcast", "sims"]
+    use_when: "Objects or rooms offering contextual interactions"
+    related: ["action-queue", "room", "card"]
+    
+  - name: "multi-presence"
+    path: "skills/multi-presence"
+    description: "Same card instantiated in multiple rooms simultaneously"
+    tier: 1
+    entry: "SKILL.md"
+    protocol: "MULTI-PRESENCE"
+    tags: ["cards", "cloning", "parallel", "distributed"]
+    use_when: "Exploring multiple rooms, parallel work, consensus building"
+    related: ["card", "room", "party"]
+    
+  - name: "return-stack"
+    path: "skills/return-stack"
+    description: "Navigation history as first-class continuation"
+    tier: 1
+    entry: "SKILL.md"
+    protocol: "RETURN-STACK"
+    tags: ["navigation", "history", "continuation"]
+    use_when: "Managing breadcrumbs, backtracking, or history manipulation"
+    related: ["room", "adventure", "memory-palace"]
+    
+  - name: "data-flow"
+    path: "skills/data-flow"
+    description: "Rooms as nodes, exits as edges, objects as messages"
+    tier: 1
+    entry: "SKILL.md"
+    protocol: "DATA-FLOW"
+    tags: ["dataflow", "programming", "rooms", "kilroy"]
+    use_when: "Building pipelines, factories, or processing networks"
+    related: ["room", "card", "debate"]
+    
   # TIER 2: READ + EXECUTE
   
   - name: "sister-script"
@@ -385,15 +591,8 @@ skills:
     tags: ["debugging", "investigation", "methodology"]
     use_when: "Something isn't working, mysterious behavior, performance issues"
     
-  # TEMPLATES (For learning and bootstrapping)
-  
-  - name: "basic-skill"
-    path: "skills/templates/basic-skill"
-    description: "Minimal skill template for learning and bootstrapping"
-    tier: 1
-    entry: "SKILL.md"
-    tags: ["template", "learning"]
-    use_when: "Creating a new skill from scratch"
+  # META — The skill skill has templates for creating other skills
+  # See skills/skill/ for: SKILL.md.tmpl, README.md.tmpl, SKILL.yml.tmpl, CARD.yml
 
 # PLANNED SKILLS (TODO)
 
@@ -428,36 +627,15 @@ planned:
     status: "planned"
     protocol: "PETS"
     notes: "LLOOOOMM experimental - safe K-line wrappers"
-    
-  - name: "representation-ethics"
-    description: "Nuanced ethics of simulating real and fictional people"
-    tier: 1
-    status: "active"
-    protocol: "REPRESENTATION-ETHICS"
-    notes: "Consent hierarchy, game frames, Sims precedent, self-sovereignty"
-    
-  - name: "mind-mirror"
-    description: "Personality modeling via four Thought Planes"
-    tier: 1
-    status: "active"
-    protocol: "MIND-MIRROR"
-    notes: "Timothy Leary 1985, Interpersonal Circumplex, character DNA"
-    
-  - name: "naming"
-    path: "skills/naming"
-    description: "Big-endian file naming as semantic binding"
-    tier: 1
-    entry: "SKILL.md"
-    tags: ["meta", "organization", "filesystem"]
-    use_when: "Naming files, organizing directories"
-    related: ["room", "character"]
-    notes: "Wraps kernel/NAMING.yml — the filesystem is a semantic network"
 
 # GUIDELINES
 
 guidelines:
   structure:
-    - "Every skill needs README.md (landing page) and SKILL.md (full spec with YAML frontmatter)"
+    - "Every skill needs README.md (landing page), SKILL.md (full spec), and CARD.yml (interface)"
+    - "README.md: Human-friendly overview, when to use, quick start"
+    - "SKILL.md: Full specification with YAML frontmatter"
+    - "CARD.yml: Machine-readable interface — methods, tools, state, advertisements"
     - "Templates live at skill root level (not in template/ subdirectory)"
     - "Templates use .tmpl extension for files with variable substitution"
     
@@ -468,8 +646,9 @@ guidelines:
     
   naming:
     - "Skill directories: lowercase-with-dashes"
-    - "Core files: UPPERCASE.ext (README.md, SKILL.md)"
+    - "Core files: UPPERCASE.ext (README.md, SKILL.md, CARD.yml)"
     - "Templates: FILENAME.ext.tmpl at skill root"
+    - "Methods in CARD.yml: LIKE-THIS (kebab-case, not LIKE_THIS)"
     
   registration:
     - "Register here when skill is ready for use"

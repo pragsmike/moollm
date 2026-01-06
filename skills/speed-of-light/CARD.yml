@@ -1,0 +1,52 @@
+# CARD.yml — Speed of Light
+#
+# Simulate many turns inside one LLM call.
+# "Instant telepathy. No API round-trips."
+
+card:
+  id: speed-of-light
+  name: "Speed of Light"
+  type: [skill, simulation, ensemble]
+  emoji: ⚡
+  rarity: rare
+  
+  description: |
+    MOOLLM's approach to multi-agent simulation: many turns
+    simulated within a single LLM call. Characters debate,
+    vote, and decide without waiting for API round-trips.
+
+tools:
+  required: []
+tier: 0
+
+methods:
+  SIMULATE:
+    description: "Run multiple simulation turns at once"
+    parameters: { turns: "How many", entities: "Who participates" }
+    output: chat (narrative) + state-changes
+    invoked-by: [coherence-engine]
+
+state: {}
+
+the-insight: |
+  External multi-agent systems:
+    Agent A → API call → wait → Agent B → API call → wait → ...
+    
+  MOOLLM speed-of-light:
+    Single LLM call simulates A, B, C debating, voting, deciding.
+    
+  Why it works:
+  - The LLM holds all personas in context
+  - No network latency between "agents"
+  - Coherence maintained by single model
+  - Instant telepathy between simulated entities
+
+advertisements:
+  MULTI-AGENT:
+    score: 95
+    condition: "Need multiple agents to interact quickly"
+  COMMITTEE-DECISION:
+    score: 90
+    condition: "Adversarial committee needs to deliberate"
+
+see-also: [skills/adversarial-committee, skills/debate, skills/coherence-engine]

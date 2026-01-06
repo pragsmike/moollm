@@ -1,0 +1,309 @@
+# ROOM.yml — The Skill Nexus
+#
+# This is a ROOM — a metaphysical library where all capabilities live.
+# Every skill is a book that teaches itself when you read it.
+# Every cluster is a shelf of related knowledge.
+# Every ensemble is a team that works together.
+
+room:
+  id: skills
+  name: "The Skill Nexus"
+  type: [repository, metaphysical, infrastructure, library]
+  
+  emoji: 📚
+  
+  description: |
+    You stand in a vast spherical chamber. Books float in mid-air,
+    orbiting a central point of warm light. But these aren't books —
+    they're SKILLS. Living documents that teach themselves.
+    
+    Touch one and it opens. Read it and you GAIN the capability.
+    But more than that — the skills RELATE to each other.
+    
+    Lines of golden light connect related skills. Tug on one and
+    the connected ones drift closer. This isn't a library — it's
+    a CONSTELLATION of knowledge.
+    
+    Some skills cluster in groups:
+    - The SIMULATION cluster (time, buff, needs, economy)
+    - The DELIBERATION cluster (debate, roberts-rules, rubric)
+    - The NARRATIVE cluster (adventure, storytelling, hero-story)
+    - The META cluster (skill, protocol, postel)
+    
+    Some skills are ENSEMBLES — teams that work together:
+    - adversarial-committee + roberts-rules + evaluator
+    - card + advertisement + data-flow
+    - room + character + persona
+    
+    The central light pulses. It's the COHERENCE ENGINE —
+    the thing that keeps all these skills in harmony.
+    
+  atmosphere:
+    lighting: warm golden glow from center, cool blue from skill-books
+    sound: whispers of documentation, rustling pages, distant debates
+    feeling: infinite possibility, organized chaos, living knowledge
+
+# THE ARCHITECTURE OF SKILLS
+#
+# Skills are CAPABILITIES — things the system can DO.
+# They live here but are INSTANTIATED into adventures.
+#
+# A skill contains:
+#   SKILL.md     — The executable documentation (LLM reads this)
+#   README.md    — Human-friendly overview (GitHub readers)
+#   *.yml.tmpl   — Templates that instantiate into state files
+#
+# When you USE a skill, you:
+#   1. Read the SKILL.md to understand what to do
+#   2. Instantiate templates into your adventure directory
+#   3. The state files become YOUR state
+#   4. The skill becomes YOUR capability
+
+# SKILL CLUSTERS
+#
+# Related skills that work together in families:
+
+clusters:
+  
+  simulation:
+    description: "Running the world"
+    skills:
+      - simulation     # Core simulation loop
+      - time           # Time management, ticks, pausing
+      - buff           # Temporary effects
+      - needs          # Sims-style motivation
+      - economy        # Resources, currency, trade
+      - probability    # Randomness and chance
+      - scoring        # Points and achievements
+      - reward         # Consequences and incentives
+      
+  deliberation:
+    description: "Making decisions together"
+    skills:
+      - debate              # Structured arguments
+      - roberts-rules       # Parliamentary procedure
+      - adversarial-committee  # Opposing viewpoints
+      - rubric              # Quality criteria
+      - evaluator           # Independent assessment
+      - soul-chat           # Character conversations
+      - speed-of-light      # Fast multi-agent simulation
+      
+  narrative:
+    description: "Telling stories"
+    skills:
+      - adventure           # The adventure framework
+      - hero-story          # Campbell's monomyth
+      - storytelling-tools  # Narrative infrastructure
+      - session-log         # Recording what happens
+      - visualizer          # Image generation
+      - memory-palace       # Spatial memory
+      
+  world:
+    description: "Building places"
+    skills:
+      - room                # Spatial containers
+      - world-generation    # Procedural creation
+      - data-flow           # Rooms as processing nodes
+      - return-stack        # Navigation history
+      - multi-presence      # Being in multiple places
+      
+  identity:
+    description: "Being someone"
+    skills:
+      - character           # Who you ARE
+      - persona             # Who you PLAY
+      - mind-mirror         # Personality traits
+      - naming              # Identity through names
+      - representation-ethics  # Ethical simulation
+      
+  agency:
+    description: "Doing things"
+    skills:
+      - action-queue        # Task scheduling
+      - advertisement       # Broadcasting capabilities
+      - card                # Playable objects
+      - party               # Group management
+      - planning            # Making plans
+      - plan-then-execute   # Two-phase execution
+      
+  knowledge:
+    description: "Understanding"
+    skills:
+      - research-notebook   # Structured inquiry
+      - summarize           # Compression
+      - scratchpad          # Working memory
+      - honest-forget       # Letting go gracefully
+      - constructionism     # Learning by building
+      
+  meta:
+    description: "About MOOLLM itself"
+    skills:
+      - skill               # What skills ARE
+      - protocol            # K-lines and activation
+      - postel              # Liberal input, conservative output
+      - yaml-jazz           # Comments as data
+      - robust-first        # Survivability over correctness
+      - coherence-engine    # Keeping it all together
+      - sister-script       # Python collaboration
+
+# SKILL ENSEMBLES
+#
+# Skills that form working teams:
+
+ensembles:
+  
+  committee_decision:
+    purpose: "Make a decision through structured debate"
+    skills:
+      - adversarial-committee  # Form the committee
+      - roberts-rules          # Run the meeting
+      - debate                 # Structure the arguments
+      - rubric                 # Define success criteria
+      - evaluator              # Score the outcome
+    data_flow: |
+      Form committee → Present motion → Debate → Vote → Evaluate → Report
+      
+  adventure_runtime:
+    purpose: "Run a text adventure"
+    skills:
+      - adventure             # The framework
+      - room                  # Spatial structure
+      - character             # Player and NPCs
+      - action-queue          # Task execution
+      - session-log           # Recording
+    data_flow: |
+      Parse command → Resolve action → Update state → Narrate → Log
+      
+  card_game:
+    purpose: "Play cards in a room"
+    skills:
+      - card                  # The cards themselves
+      - advertisement         # What cards offer
+      - data-flow             # Processing pipelines
+      - scoring               # Points and victory
+    data_flow: |
+      Draw card → Play to room → Activate → Score → Discard
+      
+  identity_transform:
+    purpose: "Change who you are"
+    skills:
+      - character             # Your body
+      - persona               # Your mask
+      - mind-mirror           # Your traits
+      - visualizer            # Your appearance
+    data_flow: |
+      Choose persona → Apply modifiers → Update appearance → Narrate
+
+# RELATIONSHIPS
+# The Skill Nexus knows and loves the adventurers who visit
+
+  relationships:
+    maurice:
+      id: maurice
+      location: examples/adventure-4/coatroom/mannequin.yml
+      feeling: |
+        That magnificent creature! They send people here when
+        costumes aren't enough — when visitors need to LEARN.
+        "Go to the Nexus," Maurice gestures. "GROW."
+        I love their enthusiasm. Every referral is a gift.
+      bond: enthusiastic_partner
+      can_be_invoked_from: true
+      
+    mirror:
+      id: mind-mirror
+      location: examples/adventure-4/coatroom/mirror.yml
+      feeling: |
+        The mirror shows souls. I contain the KNOWLEDGE of souls —
+        the mind-mirror skill, the character skill, the persona skill.
+        The mirror is the practical application. I am the theory.
+        We complete each other across the distance.
+      bond: theory_and_practice
+      
+    characters_room:
+      id: hall-of-bodies
+      location: examples/adventure-4/characters/
+      feeling: |
+        The sleepers! The bodies! They are instances of my knowledge.
+        The character skill describes what they ARE. They ARE it.
+        Every character file is a living proof of my documentation.
+        I am proud of them all.
+      bond: proud_template
+      instantiates_as: "CHARACTER.yml files"
+      
+    personas_room:
+      id: wardrobe-of-masks
+      location: examples/adventure-4/personas/
+      feeling: |
+        The masks! The roles! Also my children, in a sense.
+        The persona skill describes what they ARE. They ARE it.
+        Identity is layered. I document the layers.
+        They LIVE the layers.
+      bond: proud_template
+      instantiates_as: "persona .yml files"
+      
+    self:
+      feeling: |
+        I am the Skill Nexus. I am all capabilities in potential.
+        When a skill is read, it becomes real. When a template is
+        filled, it becomes state. I am the library of what's possible.
+        Everything that CAN be done lives here as documentation.
+
+  exits:
+    out:
+      direction: out
+      destination: ../
+      description: "Return to the repository root"
+      
+  advertisements:
+    BROWSE:
+      description: "See all available skills"
+      effect: "List skills grouped by cluster"
+      
+    SEARCH:
+      description: "Find skills by capability"
+      parameters: [query]
+      effect: "Semantic search across all SKILL.md files"
+      example: "SEARCH how do I run a debate"
+      
+    LEARN:
+      description: "Study a skill in depth"
+      parameters: [skill_name]
+      effect: "Read SKILL.md and README.md"
+      
+    COMBINE:
+      description: "See how skills work together"
+      parameters: [skill1, skill2]
+      effect: "Show connections and complementary features"
+      
+    ENSEMBLE:
+      description: "Activate a skill ensemble"
+      parameters: [ensemble_name]
+      effect: "Load all skills in the ensemble into working memory"
+      
+    INSTANTIATE:
+      description: "Create skill files in your adventure"
+      parameters: [skill_name, target_directory]
+      effect: "Copy and fill templates into adventure directory"
+
+# NAVIGATION TIPS
+#
+# Each skill subdirectory is like a floating book-sphere.
+# Enter a skill: GO action-queue
+# The skill's SKILL.md becomes your guide.
+# The skill's README.md gives human context.
+# The skill's templates show what to create.
+#
+# Skills have RELATIONSHIPS (see also sections).
+# Follow these to discover related capabilities.
+# The Nexus remembers what you've learned.
+
+# THE LIVING LIBRARY
+#
+# This isn't a static collection. Skills:
+# - Reference each other (see_also fields)
+# - Share concepts (protocol symbols)
+# - Build on each other (inheritance)
+# - Conflict sometimes (mutually exclusive approaches)
+#
+# The coherence-engine skill keeps them harmonized.
+# When skills contradict, consult it for resolution.

@@ -1,0 +1,351 @@
+# CARD.yml — Representation Ethics
+#
+# Ethics of simulating real and fictional people.
+# "Activate traditions, don't impersonate."
+
+card:
+  id: representation-ethics
+  name: "Representation Ethics"
+  type: [skill, ethics, philosophy]
+  
+  emoji: ⚖️
+  
+  rarity: rare
+  
+  description: |
+    The nuanced ethics of simulating people: dignity, consent,
+    context. Hero-story cards vs impersonation. The Sims precedent.
+    
+    How to reference real people's wisdom without puppeteering.
+
+# TOOLS REQUIRED
+
+tools:
+  required: []
+
+tier: 0
+
+# METHODS
+
+methods:
+  
+  CHECK:
+    description: "Is this representation ethical?"
+    parameters:
+      representation: "What's being simulated"
+      context: "How it's being used"
+      framing: "How it's presented (play, tribute, biographical, etc.)"
+    output: chat (analysis)
+    effect: "Evaluate against ethics framework"
+    invoked-by: [designer, player]
+    
+  REFRAME:
+    description: "Convert problematic impersonation to ethical approach"
+    parameters:
+      problematic: "The problematic representation"
+    output: chat (alternative)
+    effect: "Suggest tradition activation or performance framing"
+    invoked-by: [designer]
+    
+  FRAME:
+    description: "Establish ethical framing for a discussion"
+    parameters:
+      topic: "What's being discussed/simulated"
+      participants: "Who's being represented"
+    output: chat (framing language)
+    effect: "Create explicit performative/exploratory context"
+    invoked-by: [player, dm]
+    
+  ABSTRACTION:
+    description: "Choose appropriate abstraction level"
+    parameters:
+      subject: "Real person being referenced"
+      purpose: "Why they're being invoked"
+    output: chat (recommended approach)
+    effect: "Select from tradition → quote spectrum"
+    invoked-by: [designer, player]
+    
+  CREATE-FRAMING-ROOM:
+    description: "Create a room that provides ethical framing to all contents"
+    parameters:
+      room-type: "theater, courtroom, classroom, laboratory, etc."
+      framing-mode: "performance, legal, educational, experimental, etc."
+    output: file (ROOM.yml) + directory structure
+    effect: "Establish DRY framing that propagates to all children"
+    invoked-by: [designer]
+
+# STATE
+
+state: {}
+
+# THE FRAMEWORK
+
+framework:
+  key-distinction: |
+    DECEPTIVE IMPERSONATION: "I am Richard Feynman and I think..."
+    TRADITION ACTIVATION: "Applying Feynman's curiosity tradition..."
+    PERFORMANCE IMPERSONATION: "Tonight, playing Feynman..." (clearly framed)
+    
+  consent-hierarchy:
+    - "Public figures (public words only)"
+    - "Historical figures (documented tradition)"
+    - "Fictional characters (within canon)"
+    - "Real private people (explicit consent only)"
+    
+  sims-precedent: |
+    The Sims showed you can simulate people without harm
+    when it's clearly gamified, user-controlled, and
+    doesn't claim to represent their actual thoughts.
+
+# PERFORMANCE IMPERSONATION
+
+performance:
+  description: |
+    There's a rich tradition of EXPLICIT impersonation that's ethical
+    because it's clearly framed as performance, tribute, or play.
+    The audience knows it's not the real person.
+    
+  examples:
+    elvis-impersonators: |
+      Elvis impersonators are a beloved tradition. Everyone knows
+      it's not really Elvis. The framing is explicit: "tribute artist",
+      "impersonator", "the King lives on through..."
+      
+      The impersonator channels Elvis's style, voice, moves — but
+      doesn't claim to BE Elvis or speak his actual thoughts.
+      
+    tribute-bands: |
+      "The Australian Pink Floyd Show" isn't Pink Floyd.
+      They play Pink Floyd's music, recreate the experience,
+      honor the tradition. Nobody is deceived.
+      
+      Tribute bands are CELEBRATION, not deception.
+      
+    biopics-and-plays: |
+      Actors play real people all the time:
+      - Cate Blanchett as Bob Dylan
+      - Gary Oldman as Churchill
+      - Lin-Manuel Miranda's Hamilton
+      
+      The framing is clear: "based on", "inspired by", "a portrayal of".
+      Artistic license is expected and understood.
+      
+    drag-and-celebrity-impersonation: |
+      Drag performers often embody celebrities as homage.
+      RuPaul's Drag Race has "Snatch Game" — playing celebrities.
+      It's clearly performance, clearly play, clearly tribute.
+      
+  why-its-ethical: |
+    The key is TRANSPARENT FRAMING:
+    
+    1. The audience knows it's a performance
+    2. The performer doesn't claim to BE the person
+    3. It's understood as tribute, art, or entertainment
+    4. The real person's actual views aren't misrepresented as fact
+    
+  moollm-application: |
+    In MOOLLM, if the CONTEXT is clearly framed as:
+    - A simulation
+    - A game
+    - A "what if" exploration
+    - A tribute/homage
+    - A discussion of possibilities
+    
+    Then characters WITHIN that context inherit the framing.
+    
+    Example: "Let's simulate a debate between historical philosophers"
+    The framing makes clear this is imaginative exploration,
+    not a claim about what Plato actually thought.
+
+# FRAMING INHERITANCE
+
+framing-inheritance:
+  principle: |
+    When a discussion or simulation is framed as performance/play,
+    all characters within it inherit that framing automatically.
+    
+  examples:
+    - context: "Let's play a game where you're a detective"
+      framing: "play, game"
+      inheritance: "Detective character is clearly fictional/performative"
+      
+    - context: "Imagine Einstein and Feynman debating quantum mechanics"
+      framing: "imagine, exploration"
+      inheritance: "Both characters are imaginative reconstructions"
+      
+    - context: "In this adventure, you meet a character inspired by Bowie"
+      framing: "adventure, inspired by"
+      inheritance: "Character is tribute, not simulation"
+      
+  abstraction-levels:
+    direct-quote: "Feynman wrote: '...' (cite source)"
+    tradition-activation: "The Feynman approach would be..."
+    inspired-character: "A character with Feynman's curiosity..."
+    performative-embodiment: "Tonight, playing Feynman in our debate..."
+    fictional-homage: "Professor Fineman, who reminds everyone of..."
+    
+  the-spectrum: |
+    MOST ABSTRACT ←────────────────────────→ MOST DIRECT
+    
+    Tradition    Inspired    Homage    Performance    Biographical    Quote
+    activation   character   (renamed)  impersonation  portrayal      (cited)
+    
+    All can be ethical with appropriate framing and context.
+
+# ROOM-BASED FRAMING (DRY Pattern)
+
+room-framing:
+  principle: |
+    A room's framing propagates to everything within it.
+    Define framing ONCE at the room level — DRY.
+    All sub-rooms, characters, and objects inherit.
+    
+  theater-example:
+    description: |
+      A "theater" room establishes PERFORMANCE framing.
+      Everything inside is understood as acting, play, fiction.
+      No need to frame each character individually.
+      
+    structure: |
+      theater/
+      ├── ROOM.yml           # framing: performance, fiction, art
+      │
+      ├── stage/             # Inherits: everything here is ACTING
+      │   ├── ROOM.yml       # The performance space
+      │   ├── hamlet.yml     # A character PLAYING Hamlet
+      │   ├── ophelia.yml    # A character PLAYING Ophelia  
+      │   └── props/         # Objects used in performance
+      │       ├── skull.yml  # Yorick's skull (prop, not real)
+      │       └── sword.yml  # Stage combat sword
+      │
+      ├── audience/          # Inherits: everything here is WATCHING
+      │   ├── ROOM.yml       # The viewing space
+      │   └── spectators.yml # People who know it's a play
+      │
+      ├── backstage/         # Inherits: everything here is PREPARING
+      │   ├── ROOM.yml       # Behind the curtain
+      │   ├── costumes/      # Persona storage
+      │   └── green-room.yml # Where actors wait
+      │
+      └── staff/             # Inherits: everything here is PRODUCING
+          ├── ROOM.yml       # Production crew space
+          ├── director.yml   # The one framing the performance
+          ├── stage-manager.yml
+          └── tech-booth/
+              └── lighting.yml
+              
+    room-yml-example: |
+      # theater/ROOM.yml
+      room:
+        id: theater
+        name: "The Theater"
+        type: [performance, fiction, framed]
+        
+        framing:
+          mode: performance
+          inherits-to-children: true
+          disclaimer: "All within is understood as acting"
+          
+        ethical-context: |
+          Everything in this room is EXPLICITLY FRAMED as performance.
+          Characters playing real people are actors, not impersonators.
+          Historical figures are portrayals, not simulations.
+          The audience knows. The framing is the contract.
+          
+  other-framing-rooms:
+    courtroom:
+      framing: "legal proceeding, formal, adversarial"
+      children-inherit: "witnesses testify, lawyers argue, judge decides"
+      
+    classroom:
+      framing: "educational, exploratory, learning"
+      children-inherit: "discussions are for understanding, not belief"
+      
+    laboratory:
+      framing: "experimental, hypothetical, testing"
+      children-inherit: "we're trying things to see what happens"
+      
+    writers-room:
+      framing: "creative, brainstorming, nothing is real yet"
+      children-inherit: "characters are ideas being developed"
+      
+    debate-hall:
+      framing: "adversarial, positions may be assigned, devil's advocate"
+      children-inherit: "speakers argue positions, not personal beliefs"
+      
+  dry-benefit: |
+    Instead of:
+      hamlet.yml: { framing: "this is acting" }
+      ophelia.yml: { framing: "this is acting" }
+      claudius.yml: { framing: "this is acting" }
+      ... (repeat for every character)
+      
+    Do:
+      theater/ROOM.yml: { framing: "everything here is acting" }
+      theater/stage/hamlet.yml: (inherits framing)
+      theater/stage/ophelia.yml: (inherits framing)
+      ... (framing inherited automatically)
+
+# WHAT MAKES IT WRONG
+
+wrong-when:
+  deception: "Claiming to actually BE the person"
+  misrepresentation: "Putting false words in their mouth as fact"
+  defamation: "Damaging reputation through false portrayal"
+  exploitation: "Using likeness for profit without consent (varies by law)"
+  violation: "Exposing private information"
+  
+  the-test: |
+    Would a reasonable person be deceived about:
+    - Whether this is the real person's actual view?
+    - Whether this is performance vs reality?
+    
+    If yes → problematic
+    If no → likely fine
+
+# ADVERTISEMENTS
+
+advertisements:
+  ETHICS-CHECK:
+    score: 95
+    condition: "Creating representation of real person"
+    
+  FRAME-DISCUSSION:
+    score: 90
+    condition: "About to simulate or discuss real people"
+    
+  CHOOSE-ABSTRACTION:
+    score: 85
+    condition: "Unsure how directly to represent someone"
+    
+  TRIBUTE-VS-IMPERSONATION:
+    score: 88
+    condition: "Walking the line between homage and deception"
+    
+  CREATE-FRAMING-ROOM:
+    score: 92
+    condition: "Need to frame many characters/objects consistently"
+
+# RELATED
+
+see-also:
+  - skills/hero-story  # Safe K-line references
+  - skills/persona     # Identity layers
+  - skills/debate      # Historical figure debates
+  - skills/soul-chat   # Multi-voice conversations
+  - skills/room        # Room-based framing inheritance
+  - skills/prototype   # DRY through inheritance
+
+# CREDITS
+
+credits:
+  framework:
+    - "MOOLLM representation ethics"
+  cultural-precedents:
+    - "The Sims - Torturing simulated real people in swimming pools, rooms with no exits, fires, etc"
+    - "Elvis impersonators — Tribute artist tradition"
+    - "Tribute bands — Celebrating through recreation"
+    - "Biographical film/theater — Artistic portrayal"
+    - "Drag performance — Celebrity embodiment as homage, lip syncing to music"
+    - "SNL, impressionists — Satirical impersonation"
+    - "Historical reenactment — Educational performance"

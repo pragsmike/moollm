@@ -459,22 +459,22 @@ object:
   # SPECIAL FEATURES (unlock through play)
   
   special_features:
-    GRUE_TRACKER:
+    GRUE-TRACKER:
       unlocked_by: "Survive 3 grue encounters OR slay 1 grue"
       effect: "Tom can sense grue proximity"
       dialogue: "I feel it. The darkness. It MOVES."
       
-    PROPHECY_MODE:
+    PROPHECY-MODE:
       unlocked_by: "Eat the Oracle Apple"
       effect: "Tom occasionally predicts near-future events"
       dialogue: "Tom sees... a choice approaching. Left or right?"
       
-    SMELL_SOMMELIER:
+    SMELL-SOMMELIER:
       unlocked_by: "Create 5+ smell markers"
       effect: "Tom can identify complex smell combinations"
       dialogue: "Ah yes, notes of sulfur with undertones of regret."
       
-    MEMORIAL_MODE:
+    MEMORIAL-MODE:
       unlocked_by: "Visit the skeleton in room-i"
       effect: "Tom tells stories of fallen adventurers"
       dialogue: "They were brave. They were foolish. They were... us."
@@ -507,7 +507,7 @@ object:
       effect: "Tom adopts the name, responds to it"
       dialogue: "I am [nickname] now! Tom... [nickname]... SAME!"
       
-  # CURRENT STATE (fresh for adventure-3)
+  # CURRENT STATE (fresh for adventure-4)
   
   state:
     affection: 0

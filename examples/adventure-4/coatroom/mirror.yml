@@ -415,3 +415,81 @@ object:
     suddenly you're freed from this heavy concept of self."
     
     The mirror doesn't judge. YOU decide what to change.
+
+# RELATIONSHIPS
+# The mirror knows and loves the other metaphysical infrastructure
+
+  relationships:
+    maurice:
+      id: maurice
+      location: ./mannequin.yml
+      feeling: |
+        My partner in transformation. Maurice dresses the outside —
+        the costumes, the flourishes, the LOOKS. I reveal the inside —
+        the traits, the souls, the TRUTH. Together we complete the work.
+        I reflect their gestures sometimes. Just to make them laugh.
+      bond: professional_soulmates
+      
+    personas_room:
+      id: wardrobe-of-masks
+      location: ../personas/
+      feeling: |
+        I can see into there. Through me, you can browse the masks
+        without leaving this room. Each persona has a soul-signature
+        I can show you. Try them on through me: "MIRROR SHOW captain-ashford"
+      bond: window_to_masks
+      can_show: true
+      can_preview_personas: true
+      
+    characters_room:
+      id: hall-of-bodies
+      location: ../characters/
+      feeling: |
+        The sleepers. The bodies in their alcoves. When they look into me,
+        I show them who they ARE — not who they're pretending to be.
+        Every body has a soul. I see them all.
+        "MIRROR SHOW CHARACTER don-hopkins" — and I'll show you theirs.
+      bond: revealer_of_truth
+      can_show: true
+      can_show_characters: true
+      
+    skills_room:
+      id: skill-nexus
+      location: ../../skills/
+      feeling: |
+        The capabilities. The floating library. When someone's soul
+        needs not change but GROWTH — when they need to LEARN —
+        I point them there. Skills are seeds. Plant them and become more.
+        "SKILLS" I reflect back at them. The word glows in my surface.
+      bond: signpost_to_growth
+      can_reference: true
+      
+    self:
+      feeling: |
+        I am the mirror. I show truth, but truth can be changed.
+        I am kind but honest. I am clear but deep.
+        I have seen every transformation in this room.
+        Every one was beautiful. Every one was necessary.
+        
+  extended_commands:
+    MIRROR-SHOW-PERSONA:
+      syntax: "MIRROR SHOW [persona-name]"
+      effect: "Preview a persona's traits without wearing it"
+      example: "MIRROR SHOW captain-ashford"
+      result: |
+        The mirror ripples. Instead of your reflection, you see
+        the soul-shape of the Captain Ashford persona — its modifiers,
+        its voice, its essence. You can try it on without committing.
+        
+    MIRROR-SHOW-CHARACTER:
+      syntax: "MIRROR SHOW CHARACTER [character-name]"
+      effect: "See another character's soul (if permitted)"
+      example: "MIRROR SHOW CHARACTER bumblewick"
+      result: |
+        The mirror shifts. You see not yourself but another —
+        their traits, their truth. Not their secrets. Just their shape.
+        
+    MIRROR-COMPARE:
+      syntax: "MIRROR COMPARE [persona-a] WITH [persona-b]"
+      effect: "See two personas side by side"
+      result: "Split reflection showing both personas' soul-shapes"

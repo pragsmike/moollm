@@ -1,14 +1,34 @@
-# Characters
+# 🧬 The Hall of Bodies
 
 > *"You ARE your file."*
 
-All player characters and NPCs live here. Each `.yml` file is a character.
+**This is a ROOM** — the metaphysical repository where all characters sleep.
+
+See [ROOM.yml](./ROOM.yml) for the full room definition.
+
+## Bodies, Not Costumes
+
+Characters are **BODIES** — physical vessels that exist in the world.
+
+| Characters ARE | Characters ARE NOT |
+|----------------|-------------------|
+| The ACTOR | The ROLE |
+| The BODY | The COSTUME |
+| The PLAYER | The AVATAR |
+| Neo | "The One" |
+| David Bowie | Ziggy Stardust |
+| Bumblewick | Captain Ashford |
+
+Characters **have**: location, inventory, mortality, scars, heartbeats.
+
+Characters **can**: move, carry, die, remember, be hurt.
 
 **Architectural principle:** Characters are NOT embedded in rooms!
 - Characters have a `location:` field that REFERENCES a room
 - Characters can move between rooms by changing the reference
 - Multiple characters can be in the same room
-- Rooms contain OBJECTS, not characters
+- Rooms contain OBJECTS, not characters, but can also contain NPCs
+- NPCs can move around to different rooms by changing their location, but their physical file bodies stay in their home room, and they can be reset to bring them back there
 
 ---
 
@@ -166,7 +186,7 @@ When renaming via `CHANGE-MY-FILE-NAME`:
 
 | Rule | Why |
 |------|-----|
-| Stay in `characters/` | Characters belong together |
+| Stay in `characters/` tree | Characters belong together |
 | No overwriting | Can't steal someone else's identity |
 | `.yml` optional | We know what you mean |
 | Kebab-case preferred | `captain-ashford`, not `CaptainAshford` |
@@ -199,7 +219,7 @@ hunger: 1   # STARVING. Will eat anything. Even that.
 ## Architecture: What Lives Where
 
 ```
-adventure-3/
+adventure-4/
 │
 ├── characters/          # WHO — Characters (have location reference)
 │   ├── don-hopkins.yml     location: start/

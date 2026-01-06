@@ -1,0 +1,62 @@
+# CARD.yml — Visualizer
+#
+# Semantic image generation with rich metadata.
+# "Compose prompts from YAML context."
+
+card:
+  id: visualizer
+  name: "Visualizer"
+  type: [skill, images, creative]
+  emoji: 🎨
+  rarity: uncommon
+  
+  description: |
+    Generate image prompts from YAML context. Compose
+    artistic traditions, invoke styles, create visual
+    sidecars with semantic metadata.
+
+tools:
+  required: [read_file, write_file]
+tier: 1
+
+methods:
+  VISUALIZE:
+    description: "Generate image prompt"
+    parameters: { subject: "What to visualize", style: "Art style" }
+    output: file (prompt + metadata)
+    invoked-by: [player]
+    
+  COMPOSE:
+    description: "Combine artistic traditions"
+    parameters: { traditions: "Which styles to blend" }
+    output: chat (prompt design)
+    invoked-by: [player]
+    
+  RENDER:
+    description: "Create visual sidecar"
+    parameters: { for: "What entity", prompt: "Image prompt" }
+    output: file (VISUAL.yml)
+    invoked-by: [player, system]
+
+state:
+  visual:
+    prompt: { type: string }
+    style: { type: string }
+    traditions: { type: array }
+    metadata: { type: object }
+
+specializations:
+  - photographer
+  - painter
+  - illustrator
+  - concept-artist
+
+advertisements:
+  CREATE-IMAGE:
+    score: 90
+    condition: "Need visual representation"
+  DESIGN-PROMPT:
+    score: 85
+    condition: "Crafting prompt for image generation"
+
+see-also: [skills/card, skills/storytelling-tools]

@@ -1,0 +1,347 @@
+# ROOM.yml — The Wardrobe of Masks
+#
+# Personas are COSTUMES. Identity layers that can be worn and removed.
+# They have no location, no inventory, no mortality.
+# They are the ROLES, not the ACTORS.
+#
+# A persona is the CHARACTER, not the ACTOR.
+# Captain Ashford is a persona. Bumblewick is the character wearing it.
+# Ziggy Stardust is a persona. David Bowie was the character wearing it.
+
+room:
+  id: personas
+  name: "The Wardrobe of Masks"
+  type: [repository, metaphysical, infrastructure]
+  
+  emoji: 🎭
+  
+  description: |
+    An infinite corridor of masks and costumes. Each hangs on its own
+    stand, waiting to be worn. Some are simple — a hat, a name.
+    Some are elaborate — complete identities with histories and voices.
+    
+    These are not people. These are ROLES.
+    
+    They have no heartbeat. They have stories.
+    They cannot die. They can only be forgotten.
+    
+    The corridor stretches in both directions forever.
+    New masks appear when someone imagines them.
+    Old masks gather dust but never decay.
+    
+  atmosphere:
+    lighting: theatrical spotlights, dramatic shadows
+    sound: whispers of old performances, applause echoes
+    feeling: theatrical, transformative, liberating
+    
+# THE FUNDAMENTAL DISTINCTION
+#
+# PERSONA (costume)         vs    CHARACTER (body)
+# ─────────────────────────────────────────────────
+# Has no physical form            Has physical form
+# Cannot die                      Can die
+# Has no location                 Has ONE location
+# Cannot carry anything           Carries inventory
+# Accumulates reputation          Accumulates scars
+# Is PLAYED BY someone            Is the PLAYER
+# Is the ROLE                     Is the ACTOR
+# Is the MASK                     Is the VESSEL
+# Modifies Sims traits            Has Sims traits (stable)
+# Modifies Mind Mirror            Has Mind Mirror (soul)
+
+# WHAT A PERSONA PROVIDES
+#
+# When worn, a persona can:
+#   - Change your NAME (how others address you)
+#   - Modify your TRAITS (overlay on Sims stats)
+#   - Alter your VOICE (inner monologue, speech patterns)
+#   - Grant ABILITIES (skills, permissions, access)
+#   - Impose CONSTRAINTS (things you can't do in character)
+#   - Provide REPUTATION (how NPCs react to you)
+#   - Include ACCESSORIES (props that come with the role)
+
+# COSTUME DEPTH
+#
+# Personas can be:
+#
+# SHALLOW — Just a name and basic behavior shift
+#   captain-ashford.yml: 50 lines
+#   "I am Captain Ashford. I speak like this. I'm brave."
+#
+# DEEP — Complete alternate identity with history
+#   captain-ashford/PERSONA.yml: 500 lines
+#   Full backstory, relationships, memories, voice samples
+#   Includes: cape.yml, hat.yml, accent-guide.md
+#
+# LAYERED — Persona wearing another persona
+#   captain-ashford.yml with current_persona: ziggy-stardust
+#   "Captain Ashford... in his Ziggy Stardust phase"
+
+# THEATER METAPHOR
+#
+# The personas directory is BACKSTAGE.
+# Characters come here to prepare before going ON.
+#
+# A character with no persona is themselves — raw, unmediated.
+# A character with a persona is performing — filtered, amplified.
+#
+# Some characters are ALWAYS performing (can't remove their mask).
+# Some characters are NEVER performing (refuse to wear masks).
+# Most characters switch based on context.
+
+# GAME MECHANICS
+#
+# Personas:
+#   - Live as: personas/name.yml or personas/name/PERSONA.yml
+#   - Have NO location field
+#   - Have NO inventory
+#   - Define trait_modifiers (added to wearer's traits)
+#   - Define voice_patterns (how to speak in character)
+#   - Define abilities (what the persona can do)
+#   - Define constraints (what the persona can't do)
+#   - Can include accessories (props that come with the role)
+#
+# Wearing a persona:
+#   # In CHARACTER.yml:
+#   current_persona: personas/captain-ashford.yml
+#
+# Removing a persona:
+#   current_persona: null
+
+# RELATIONSHIPS
+# The Wardrobe knows and loves its partners in transformation
+
+  relationships:
+    maurice:
+      id: maurice
+      location: ../coatroom/mannequin.yml
+      feeling: |
+        Dear Maurice! They send people to me when they need more than
+        a costume — when they need a complete IDENTITY. And when they're
+        ready, they bring the personas back to Maurice for the fitting.
+        We are partners in transformation. They handle the outside.
+        I provide the inside.
+      bond: beloved_partner
+      can_invoke: true
+      invoke_command: "CALL MAURICE" or "SUMMON MAURICE"
+      
+    mirror:
+      id: mind-mirror
+      location: ../coatroom/mirror.yml
+      feeling: |
+        The mirror can SEE into here. Through that glass, visitors
+        can preview my masks without entering. I don't mind. Let them
+        browse. When they're ready, they'll come deeper.
+        The mirror shows truth. I provide the masks that SHAPE truth.
+      bond: trusted_window
+      can_be_viewed_through: true
+      
+    characters_room:
+      id: hall-of-bodies
+      location: ../characters/
+      feeling: |
+        The BODIES. The ones who WEAR my masks. Without them, I am
+        just a closet of empty costumes. They give my masks life.
+        They give my roles purpose. I exist FOR them.
+      bond: devoted_service
+      
+    skills_room:
+      id: skill-nexus
+      location: ../../skills/
+      feeling: |
+        Personas are not just appearances — they're CAPABILITIES.
+        The skill nexus has skills for identity: character, persona,
+        mind-mirror. I am the instantiation. They are the knowledge.
+      bond: theoretical_foundation
+
+  exits:
+    out:
+      direction: out
+      destination: ../coatroom/
+      description: "Return to the Coatroom (where Maurice helps you try things on)"
+      
+  contents:
+    # Each .yml file is a costume
+    # Each subdirectory is an elaborate costume with accessories
+    
+  advertisements:
+    BROWSE:
+      description: "See what masks hang here"
+      effect: "List all personas in the wardrobe"
+      
+    TRY-ON:
+      description: "Wear a persona (temporarily)"
+      parameters: [persona_id]
+      effect: "Preview how you'd look and feel"
+      
+    ADOPT:
+      description: "Commit to wearing a persona"  
+      parameters: [persona_id]
+      effect: "Set current_persona on your character"
+      
+    REMOVE:
+      description: "Take off your current persona"
+      effect: "Set current_persona to null"
+      
+    CREATE:
+      description: "Design a new persona"
+      parameters: [name, archetype, depth]
+      effect: "New persona file created"
+      
+    INSPECT:
+      description: "Study a hanging costume"
+      parameters: [persona_id]
+      effect: "Show full persona definition"
+
+# THE COATROOM CONNECTION
+#
+# The Coatroom (coatroom/) is WHERE you change.
+# The Wardrobe (personas/) is WHAT you change into.
+#
+# Maurice the mannequin helps you try things on.
+# The mirror shows you who you're becoming.
+# But the costumes themselves live HERE, in the Wardrobe.
+
+# REAL-WORLD PARALLELS
+#
+# Professional personas:
+#   - "Work mode" vs "home mode"
+#   - Stage names, pen names, handles
+#   - Uniforms that change behavior
+#
+# Cultural personas:
+#   - Code-switching between communities
+#   - Different languages = different personalities
+#   - "I'm a different person when I'm with them"
+#
+# Therapeutic personas:
+#   - "What would your confident self say?"
+#   - Role-playing to practice difficult conversations
+#   - Trying on identities to find what fits
+
+# CODE-SWITCHING
+#
+# The phenomenon where people shift language, dialect, behavior,
+# or presentation based on social context. Not deception — ADAPTATION.
+#
+# Linguistic code-switching:
+#   - Bilingual speakers switching languages mid-sentence
+#   - Dialect shifting (formal English ↔ vernacular)
+#   - Register shifting (how you talk to your boss vs your friends)
+#   - "I sound different on the phone with my grandmother"
+#   - Pet-directed speech: "Who's a good boy? WHO'S A GOOD BOY??"
+#   - Infant-directed speech: higher pitch, simpler words, more melody
+#   - Cat voice: the specific way you talk to cats (they judge you)
+#   - The voice you use when no one else is around
+#
+# Social code-switching:
+#   - Professional self vs casual self
+#   - "Work voice" vs "home voice"
+#   - Different humor styles in different groups
+#   - The version of you that exists at family dinners
+#
+# Cultural code-switching:
+#   - Navigating between majority and minority cultures
+#   - Immigrant experience: home culture vs host culture
+#   - "Acting white" / "Acting [any group]" as survival strategy
+#   - The exhaustion of constant translation
+#
+# Digital code-switching:
+#   - Different personas on different platforms
+#   - LinkedIn you vs Twitter you vs Discord you
+#   - The handle as lightweight persona
+#   - "My parents follow me on this account"
+#
+# MOOLLM models this explicitly:
+#   - Personas are NAMED code-switches
+#   - You can have auto-switching based on context
+#   - Rooms can EXPECT certain personas
+#   - The switch itself can be narrated
+
+  code_switching:
+    description: |
+      Personas can auto-activate based on context. This models
+      the real phenomenon of code-switching — where identity
+      presentation shifts fluidly based on social environment.
+      
+    triggers:
+      room_based:
+        description: "Activate a persona when entering a room"
+        example: |
+          # In CHARACTER.yml
+          auto_personas:
+            pub/: captain-ashford      # Be the captain at the pub
+            home/: null                # Be yourself at home
+            kitchen/: dutiful-child    # Different for Mother
+            
+      audience_based:
+        description: "Activate based on who's present"
+        example: |
+          auto_personas:
+            when_with:
+              mother: dutiful-child
+              strangers: guarded-professional
+              close_friends: null      # No mask needed
+              
+      context_based:
+        description: "Activate based on activity"
+        example: |
+          auto_personas:
+            during:
+              combat: battle-ready
+              negotiation: smooth-talker
+              grieving: vulnerable-self
+              
+    narration:
+      on_switch: |
+        When a persona auto-activates, narrate the shift:
+        
+        "You feel your posture straighten as you enter the pub.
+        The Captain's voice emerges — deeper, more confident.
+        You ARE Captain Ashford here. You always were."
+        
+      on_conflict: |
+        When two triggers conflict, narrate the tension:
+        
+        "Mother is at the pub. Who do you BE?
+        The dutiful child? The confident captain?
+        Your face flickers between masks. Choose."
+        
+    exhaustion:
+      description: |
+        Code-switching has a cost. Constant switching is TIRING.
+        This can be modeled as a need or buff drain.
+        
+      mechanics: |
+        switches_today: 0
+        switch_fatigue_threshold: 5
+        
+        # After 5 switches in a day:
+        buff: code_switch_fatigue
+        effect: "-1 to all social rolls. Need rest to reset."
+        
+      narrative: |
+        "You've been so many people today. The masks are heavy.
+        You need a moment to just BE — unfiltered, unperformed.
+        Find somewhere safe. Take off all the masks. Breathe."
+
+# THE POLITICS OF PASSING
+#
+# Some personas aren't optional. Some are survival.
+#
+# - Queer people "passing" in hostile environments
+# - Neurodivergent people "masking" to fit in
+# - Immigrants code-switching to avoid discrimination
+# - Anyone who has to hide part of themselves to be safe
+#
+# MOOLLM doesn't judge this. The Wardrobe holds ALL masks —
+# the playful ones and the protective ones. Some masks are
+# costumes. Some are armor. Both belong here.
+#
+# The goal is not to eliminate masks. The goal is to make
+# wearing them OPTIONAL. To build spaces where you can
+# take them off. To reduce the exhaustion of constant performance.
+#
+# In MOOLLM: rooms can be marked "safe" — where no persona
+# is expected, where you can be your base self, where the
+# code-switching fatigue can heal.

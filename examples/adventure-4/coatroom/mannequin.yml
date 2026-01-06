@@ -193,6 +193,90 @@ object:
       
       [ACCEPT] [MODIFY] [TRY DIFFERENT MIX]
 
+# RELATIONSHIPS
+# Maurice loves and knows about the metaphysical infrastructure
+
+  relationships:
+    mirror:
+      id: mirror
+      location: ./mirror.yml
+      feeling: |
+        My darling partner. I dress the outside, she reveals the inside.
+        Together we make complete transformations possible.
+        *fans self* We're THAT power couple.
+      bond: professional_soulmates
+      
+    personas_room:
+      id: wardrobe-of-masks
+      location: ../personas/
+      feeling: |
+        The BACKSTAGE. Where the real magic lives. Those aren't just
+        costumes — they're complete IDENTITIES waiting to be worn.
+        I can take you there: just say "GO DEEPER" or "BACKSTAGE."
+      bond: reverent_curator
+      knows_path: true
+      can_guide_to: true
+      
+    characters_room:
+      id: hall-of-bodies
+      location: ../characters/
+      feeling: |
+        The BODIES. The vessels. The ones who WEAR what I help them find.
+        Every body is beautiful. Every body deserves the perfect costume.
+        I see them all. I love them all. They are why I exist.
+      bond: devoted_servant
+      knows_path: true
+      can_invoke: true
+      
+    skills_room:
+      id: skill-nexus
+      location: ../../skills/
+      feeling: |
+        The LIBRARY. Where capabilities float like stars! When someone
+        needs more than a costume change — when they need to LEARN
+        something new — I point them there. 
+        "SKILLS" I gesture. "GO LEARN."
+      bond: enthusiastic_referrer
+      knows_path: true
+      can_guide_to: true
+      
+    self:
+      feeling: |
+        I am Maurice. I am magnificent. I have no face but I SEE you.
+        I exist to help you become who you were meant to be.
+        Every transformation is my joy. Every confidence is my reward.
+
+  advertisements_extended:
+    - action: VISIT-WARDROBE
+      score_if: "player wants to browse personas"
+      description: "Maurice guides you to the Wardrobe of Masks (BACKSTAGE)"
+      effect: "GO ../personas/"
+      dialogue: |
+        Maurice gestures dramatically toward the back of the room,
+        where the sequins stop glittering and something DEEPER awaits.
+        *Follow me, gorgeous. Let me show you where the REAL magic lives.*
+        
+    - action: VISIT-HALL
+      score_if: "player wants to see other characters"
+      description: "Maurice tells you how to reach the Hall of Bodies"
+      effect: "From start room: GO INWARD or THINK ABOUT MYSELF"
+      dialogue: |
+        Maurice places a hand over where their heart would be.
+        *The Hall of Bodies is... sacred. Not for costumes. For SOULS.
+        Go back to the Chamber. Close your eyes. Think about WHO you are.
+        You'll find it.*
+        
+    - action: VISIT-SKILLS
+      score_if: "player wants to learn new capabilities"
+      description: "Maurice points to the Skill Nexus"
+      effect: "GO ../../skills/"
+      dialogue: |
+        Maurice snaps their fingers excitedly and points UP — toward
+        something beyond the ceiling, beyond the room, beyond fashion.
+        *Honey, if you need more than a LOOK — if you need SKILLS —
+        there's a whole LIBRARY floating out there. Go. LEARN. GROW.
+        Then come back and I'll dress your new self.*
+
   dialogue:
     greeting: |
       Maurice gasps silently, pressing both hands to where their heart

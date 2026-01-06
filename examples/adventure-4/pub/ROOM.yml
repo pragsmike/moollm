@@ -2,6 +2,38 @@ room:
   name: The Rusty Lantern
   type: pub
   
+  # 🎭 ROOM FRAMING — Everything here inherits this context
+  # See: skills/representation-ethics (room_framing)
+  
+  framing:
+    mode: [performance, celebration, socialization]
+    inherits_to_children: true
+    
+    description: |
+      This is a PLACE OF PERFORMANCE AND CELEBRATION.
+      
+      Everything within these walls is understood as:
+      - Social play
+      - Convivial gathering  
+      - Entertainment and expression
+      - Community and connection
+      
+      Characters here can perform, debate, celebrate, and roleplay
+      within the safe framing of "this is the pub."
+      
+    what_this_means:
+      debates: "Arguments are sport, not war"
+      performances: "The stage is open, judgment is kind"
+      personas: "People can be who they want to be tonight"
+      stories: "Every tale is welcome, truth is optional"
+      
+    gezelligheid: |
+      The Dutch concept of cozy togetherness.
+      Warmth. Belonging. Comfort in company.
+      The opposite of loneliness.
+      
+      This pub has it.
+  
   description: |
     A warm, inviting tavern that somehow exists just south of where your
     adventure begins. The sign outside creaks: "THE RUSTY LANTERN — Est. ???"
@@ -13,12 +45,26 @@ room:
     This is where quests begin and end. Where strangers become allies.
     Where gold becomes ale and ale becomes courage.
     
+    But more than that — this is a place of CELEBRATION. Of PERFORMANCE.
+    Of COMMUNITY. The small stage in the corner has seen poetry and
+    pratfalls. The round table hosts debates and revelry. The gong
+    hangs ready to call for attention... or mercy.
+    
+    *Gezelligheid* lives here.
+    
   examine: |
     The pub feels... timeless. Like it's been here forever, waiting for you.
+    
+    A STAGE occupies the corner — small but loved. Open mic every night.
+    The PIE TABLE sits in the center — an octagonal round table for
+    discussions, debates, and games. Eight seats. One gong.
     
     A dart board hangs on one wall, well-worn from use.
     A chess set sits on a corner table, mid-game abandoned.
     A deck of cards rests on the bar, ready for whatever game you fancy.
+    
+    The CAT CAVE entrance beckons cat lovers.
+    The GONG OF GEZELLIGHEID hangs within reach of the pie table.
     
     Stairs lead up to rooms for rent.
     A back door leads to... somewhere mysterious.
@@ -185,6 +231,14 @@ room:
     - fruit-machine.yml
     - pinball-machine.yml
     - seating.yml
+    # Performance & celebration
+    - pie-table.yml      # Round table for debates, 8 seats
+    - gong.yml           # Gong of Gezelligheid
+    - stage.yml          # Performance area
+    - tip-jar.yml        # For performers
+    
+  sub_rooms:
+    - cat-cave/          # The TARDIS-like cat sanctuary
     
   # 🎲 ACTIVITIES
   
@@ -272,13 +326,218 @@ room:
         - "Risk being noticed"
         
     PERFORM:
-      description: "Entertain the pub"
-      usage: "PERFORM [song/story/trick]"
+      description: "Take the stage and entertain!"
+      usage: "PERFORM [song/story/trick/poetry/standup/magic]"
+      venue: "The small stage in the corner"
       effects:
         - "Earn tips if good"
         - "Earn drinks thrown if bad"
         - "Make an impression"
-        - "Some themes have open mic night"
+        - "Every night is open mic night"
+        - "The gong ends bad performances (mercifully)"
+      framing: |
+        This is PERFORMANCE. The audience knows.
+        You can be anyone on that stage.
+        Adopt a persona, tell wild tales, be vulnerable.
+        The pub framing protects you.
+        
+    DEBATE:
+      description: "Join the pie table for structured discussion"
+      usage: "DEBATE [topic] / JOIN DEBATE"
+      venue: "The Pie Table (octagonal, 8 seats)"
+      effects:
+        - "Summon characters to fill empty seats"
+        - "Apply Robert's Rules (or chaos rules)"
+        - "The gong calls to order or ends mercifully"
+        - "Musical Chairs variant available"
+      framing: |
+        Debates at the pie table are SPORT, not war.
+        Devil's advocate is expected and honored.
+        Strong opinions, loosely held.
+        
+    CELEBRATE:
+      description: "Mark a victory, birthday, achievement"
+      usage: "CELEBRATE [occasion] / TOAST [target]"
+      effects:
+        - "Free round from the bartender (first one)"
+        - "Stories shared about the occasion"
+        - "Buff: CELEBRATED (+morale, social)"
+        - "Everyone raises a glass"
+        - "The gong rings once in honor"
+        
+    SING:
+      description: "Lead the pub in song"
+      usage: "SING [song] / LEAD SONG"
+      effects:
+        - "Whole pub may join in (if they know it)"
+        - "Establishes mood"
+        - "Can commemorate fallen companions"
+        - "Can embarrass yourself gloriously"
+      sea_shanties: "Particularly effective"
+      
+    STORY:
+      description: "Tell a tale to any who'll listen"
+      usage: "TELL STORY / SHARE TALE [topic]"
+      venue: "By the fire, or on stage"
+      effects:
+        - "Draw listeners"
+        - "Share wisdom (or lies)"
+        - "Process adventures through narrative"
+        - "Create legends"
+      framing: "All stories here are welcome. Truth is optional."
+      
+    TOAST:
+      description: "Raise a glass to someone or something"  
+      usage: "TOAST [target]"
+      effects:
+        - "Honor a person, victory, or memory"
+        - "Social bonding"
+        - "Can be serious or silly"
+        - "Everyone drinks (optional but expected)"
+        
+    RING-GONG:
+      description: "Use the Gong of Gezelligheid"
+      usage: "RING GONG / GONG [times]"
+      protocols:
+        once: "Call to attention — something important"
+        twice: "Emergency — everyone stop"
+        thrice: "Mercy / End this — debates, performances"
+      effects:
+        - "Ends performances gracefully"
+        - "Calls debates to order"
+        - "Gets everyone's attention"
+        - "Automatic during Musical Chairs"
+        
+  # 🎭 PERFORMANCE & CELEBRATION VENUES
+  
+  venues:
+    
+    the_stage:
+      name: "The Rusty Stage"
+      description: |
+        A small raised platform in the corner. Worn by countless feet.
+        Stained by spilled drinks and tears (happy and sad).
+        
+        Anyone can perform. Everyone does eventually.
+        
+      capacity: "1-3 performers"
+      features:
+        - "Surprisingly good acoustics"
+        - "A stool for bards"
+        - "Hooks for props"
+        - "Enough light to be seen, enough dark to be brave"
+      performances:
+        - "Songs (sea shanties especially popular)"
+        - "Poetry (open mic every night)"
+        - "Standup (tough crowd but fair)"
+        - "Storytelling (by the fire or on stage)"
+        - "Magic tricks (real or fake both welcome)"
+        - "Dramatic readings (including code reviews)"
+        
+    the_pie_table:
+      name: "The Pie Table"
+      description: |
+        An octagonal table in the center of the pub. Eight seats,
+        addressable by compass direction. A lazy susan in the middle.
+        A bell for calling to order. Within reach of the gong.
+        
+        This is where debates happen. Discussions. Games.
+        It's a physical pie menu — you can summon anyone to any seat.
+        
+      capacity: 8
+      seats: [N, NE, E, SE, S, SW, W, NW]
+      features:
+        - "Lazy susan for sharing"
+        - "Bell for calling to order"
+        - "Gong within reach"
+        - "Can summon historical/fictional figures (framed as performance)"
+        - "Musical Chairs variant"
+      activities:
+        - "Structured debates (Robert's Rules optional)"
+        - "Brainstorming sessions"
+        - "Code reviews (Linus persona recommended)"
+        - "Philosophical discussions"
+        - "Musical Chairs (elimination game)"
+        
+    the_gong:
+      name: "The Gong of Gezelligheid"
+      description: |
+        A brass gong hanging near the pie table.
+        It has three protocols:
+        
+        RING ONCE:  Attention! Something important.
+        RING TWICE: Emergency! Everyone stop.
+        RING THRICE: Mercy! End this (debates, performances, suffering).
+        
+      powers:
+        - "Can end any performance (gracefully)"
+        - "Can call debates to order"
+        - "Rings automatically during Musical Chairs"
+        - "Respects the tradition of gezelligheid"
+        
+    the_fireside:
+      name: "The Hearth"
+      description: |
+        The fireplace is a gathering spot for stories.
+        Pull up a chair. Listen. Share.
+        
+      atmosphere: "Warm, intimate, timeless"
+      activities:
+        - "Storytelling"
+        - "Quiet conversation"
+        - "Staring into flames (philosophical mode)"
+        - "Warming up after the maze"
+        
+  # 🤝 SOCIAL MECHANICS
+  
+  social:
+    
+    description: |
+      The pub is a SOCIAL SPACE. Relationships form here.
+      
+      Every interaction can affect relationships:
+      - Share a drink → bond
+      - Win a game → respect (or resentment)
+      - Perform well → admiration
+      - Tell a great story → remembered
+      - Help someone → trust
+      
+    buffs_available:
+      WELCOMED:
+        trigger: "First visit, good greeting"
+        effect: "People are friendly here"
+        duration: "This visit"
+        
+      CELEBRATED:
+        trigger: "CELEBRATE action, major achievement"
+        effect: "+morale, +social, everyone knows you"
+        duration: "Lingers"
+        
+      RESPECTED:
+        trigger: "Win debate, show skill, help someone"
+        effect: "People take you seriously"
+        duration: "Persistent"
+        
+      BELOVED:
+        trigger: "Many positive interactions over time"
+        effect: "The pub feels like home"
+        duration: "Permanent (unless betrayed)"
+        
+      ENTERTAINER:
+        trigger: "Successful performance"
+        effect: "Free drinks, performance opportunities"
+        duration: "This visit"
+        
+    debuffs_possible:
+      TROUBLEMAKER:
+        trigger: "Start fights, cheat at games, insult bartender"
+        effect: "Watched. Possibly barred."
+        recovery: "Apologize, make amends"
+        
+      BORE:
+        trigger: "Bad performances, long-winded stories"
+        effect: "People drift away"
+        recovery: "Be funnier, or be quieter"
         
   # 📢 RUMOR SYSTEM
   
@@ -298,17 +557,17 @@ room:
         - "The skeleton was almost out when they died"
         - "The vending machine has feelings"
         
-      MOSTLY_TRUE:
+      MOSTLY-TRUE:
         - "A grue can be killed with cheese" (it was BLUE cheese)
         - "Mother's letter has a secret" (it has many)
         - "The treasure is guarded" (by the grue? by puzzles?)
         
-      FALSE_BUT_FUN:
+      FALSE-BUT-FUN:
         - "There's a dragon in the depths"
         - "The bartender is actually the grue in disguise"
         - "If you say XYZZY three times, you go home"
         
-      PLOT_HOOKS:
+      PLOT-HOOKS:
         - "Someone's been asking about YOUR family..."
         - "The postal service is hiring"
         - "A stranger left something for you"

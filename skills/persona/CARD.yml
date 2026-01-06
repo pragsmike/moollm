@@ -1,0 +1,64 @@
+# CARD.yml — Persona
+#
+# Identity layers — WHO someone is vs WHAT they do.
+# "The costume you wear. The role you play."
+
+card:
+  id: persona
+  name: "Persona"
+  type: [skill, identity, game]
+  emoji: 🎭
+  rarity: uncommon
+  
+  description: |
+    Identity layers that modify how a character presents.
+    Characters are BODIES. Personas are COSTUMES.
+    Wear one to change voice, abilities, reputation.
+
+tools:
+  required: [read_file, write_file]
+tier: 1
+
+methods:
+  WEAR:
+    description: "Put on a persona"
+    parameters: { persona: "Which persona", character: "Who wears it" }
+    output: chat + state-change
+    invoked-by: [player, character]
+    
+  REMOVE:
+    description: "Take off current persona"
+    parameters: { character: "Who" }
+    output: chat + state-change
+    invoked-by: [player, character]
+    
+  CREATE:
+    description: "Design a new persona"
+    parameters: { name: "Persona name", traits: "Modifications", abilities: "What it grants" }
+    output: file (PERSONA.yml)
+    invoked-by: [player, dm]
+    
+  PREVIEW:
+    description: "See how persona would change you"
+    parameters: { persona: "Which", character: "Whose perspective" }
+    output: chat
+    invoked-by: [player, mirror]
+
+state:
+  persona-schema:
+    name: { type: string }
+    voice: { type: string, description: "How to speak in this role" }
+    trait-modifiers: { type: object, description: "Sims trait adjustments" }
+    abilities: { type: array }
+    constraints: { type: array }
+    reputation: { type: object }
+
+advertisements:
+  CHANGE-IDENTITY:
+    score: 90
+    condition: "Want to present as someone different"
+  GAIN-ABILITIES:
+    score: 85
+    condition: "Need capabilities the persona grants"
+
+see-also: [skills/character, skills/mind-mirror, skills/coatroom]
