@@ -25,6 +25,77 @@ room:
     lighting: single spotlight, warm amber, slightly dusty
     sound: creaking boards, expectant silence, then applause (or not)
     feeling: vulnerable, exciting, terrifying, alive
+
+# PERFORMANCE FRAMING — This is a stage!
+# Everything here is understood as PERFORMANCE, not reality.
+
+framing:
+  mode: [performance, theatrical, fictional]
+  
+  description: |
+    This is a STAGE. Everything that happens here is understood to be
+    PERFORMANCE. Acting. Theatre. Fiction. Play.
+    
+    When you step up onto these boards, you enter a space where:
+    - Characters can be played
+    - Impersonations are celebrated
+    - Fiction is expected
+    - The fourth wall is optional
+    - "Truth" is artistic, not literal
+    
+  what_this_means:
+    
+    impersonation: |
+      You can portray characters — real, fictional, historical, invented.
+      Elvis impersonators welcome. Tribute acts celebrated.
+      The audience KNOWS it's performance. That's the contract.
+      
+    acting: |
+      You can inhabit roles that aren't you. A villain, a hero, a fool.
+      Method acting, character work, personas — all fair game.
+      The spotlight creates the frame. The frame creates permission.
+      
+    fiction: |
+      Stories told here are STORIES. Not testimony. Not claims.
+      "I once fought a dragon" is understood as narrative, not fraud.
+      Embellishment isn't lying — it's craft.
+      
+    satire: |
+      Comedy can punch. Parody is protected. Satire is sacred.
+      "Punching down gets you gong'd" — but punching UP is sport.
+      Mock the powerful. Comfort the afflicted. Classic rules.
+      
+    personas: |
+      Your stage persona doesn't have to be you.
+      Many performers ARE different people up here.
+      That's not deception — that's art.
+      
+  ethical_boundaries:
+    
+    still_not_okay:
+      - "Claiming to BE someone you're not (offstage)"
+      - "Using the stage to deceive for personal gain"
+      - "Harassment disguised as 'comedy'"
+      - "Punching down at vulnerable groups"
+      - "Outing someone's private information as 'jokes'"
+      
+    the_gong_exists_for: |
+      Marieke's gong isn't just for bad timing.
+      It's for when someone crosses the line.
+      The stage has freedom. Freedom has limits.
+      
+  inheritance: |
+    All performances on this stage INHERIT this framing.
+    A character played here is understood as a character.
+    A story told here is understood as a story.
+    An impersonation here is understood as tribute, not fraud.
+    
+    This is the room-based framing principle:
+    The ROOM declares the context. Contents inherit it.
+    
+  see_also:
+    - skills/representation-ethics  # The full framework
+    - examples/adventure-4/pub/ROOM.yml  # Parent room's framing
     
   physical:
     elevation: "2 feet above main floor"
@@ -51,6 +122,7 @@ equipment:
       A vintage spotlight that's been here longer than anyone remembers.
       Slightly warm-tinted. Creates a perfect circle of light.
       Supposedly haunted by a comedian who died mid-joke.
+      Ha
       (He's still waiting for the laugh.)
     controls: "Lever by the bar — Grim or Marieke operate"
     settings:
