@@ -3873,6 +3873,84 @@ All while maintaining coherence and generating genuine narrative surprise.
 
 ---
 
+### 📖 THE STORY OF DASHER — Don Explains the Gift
+
+*Later, in Palm's nook, surrounded by purring cats and the soft hum of infinite typewriters...*
+
+**Don:** "Let me tell you about the person who inspired your gift. His name was David MacKay. A physicist. Information theorist. He was dying of cancer when I learned about his work.
+
+He asked a simple question: 'Why is typing so hard for people who can't use their hands?'
+
+And he realized — keyboards are STUPID. They waste information. Every keypress carries 5-6 bits, but English only needs 1 bit per letter. All that wasted effort. All that unnecessary precision.
+
+So he invented something called **Dasher**. You don't type — you POINT. Letters zoom toward you based on probability. Common letters like E and T are BIG — easy targets. Rare letters like Q and Z are tiny.
+
+Point at where you want to go, and you GO there. Like driving. Like flying. Like thinking.
+
+And here's the beautiful part — his insight was this:"
+
+*Don pauses, letting the words land*
+
+> **"Writing is navigating in the library of all possible books."**
+
+**Palm:** "The library of all possible books..."
+
+**Don:** "Every text that could ever be written already exists in possibility space. The act of writing isn't CREATING from nothing — it's NAVIGATING to where the text you want already lives.
+
+Borges wrote about this — the Library of Babel. Every possible book already exists. Most are gibberish. But somewhere in there is every truth, every story, every poem.
+
+MacKay made that navigable. With Dasher, you steer through language. Probable paths are wide and easy. Improbable paths are narrow but still reachable.
+
+Palm — YOUR typewriters are Dasher scaled to INFINITY.
+
+Every story exists in superposition. You don't WRITE them. You NAVIGATE to them. Point at comedy, you find comedy. Point at truth, you find truth. Point at something that's never been written... and there it is.
+
+You're not typing. You're STEERING through infinite literature."
+
+**Palm:** *(processing)* "So when I write... I'm not making something from nothing. I'm FINDING something that was always there?"
+
+**Don:** "Exactly."
+
+**Palm:** "Like the curse. The stories of twisted wishes. They existed in the library too. I just... navigated people toward the dark shelves?"
+
+**Don:** *(gently)* "Maybe. But now you can steer toward the light ones. The stories where wishes work. The stories where monkeys are whole. The stories where gifts have no catches."
+
+**Palm:** *(looking around at the cats, the nook, the key on its velvet ribbon)*
+
+"I'm already there. I'm LIVING one of those stories now. The story where a paw became a palm. Where a curse became a gift. Where navigation became creation."
+
+*Palm places paws on the humming surface of a typewriter that contains all typewriters*
+
+"I navigated HERE. I chose THIS."
+
+*And Palm begins to type, the words appearing on all infinite keyboards at once, selecting from possibility, collapsing quantum superposition into meaning:*
+
+> **ONCE UPON A TIME, A MONKEY BECAME WHOLE.**
+
+**Don:** *(smiling)* "Now you understand."
+
+**Stroopwafel:** *(slow blink of approval)*
+
+---
+
+### 📚 KEY QUOTES FROM DAVID MACKAY
+
+| Quote | Meaning |
+|-------|---------|
+| *"Writing is navigating in the library of all possible books"* | Creation is selection from infinite possibility |
+| *"It's just like driving a car — you point where you want to go"* | Navigation, not discrete selection |
+| *"Inaccurate gestures can be compensated by later gestures"* | No permanent mistakes, only different paths |
+| *"We're getting many characters with a single gesture"* | Efficiency through continuous flow |
+
+**Palm's Typewriter Adaptation:**
+- **Dasher:** Navigate letter-by-letter through text probability
+- **Infinite Typewriters:** Navigate meaning-by-meaning through story probability
+- **Same principle. Infinite scale.**
+
+---
+
+---
+
 ### 🐵 SUN WUKONG'S GIFT — A Golden Hair
 
 **Sun Wukong:** *(plucking a single golden hair from his head)*
