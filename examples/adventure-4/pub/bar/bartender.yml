@@ -250,27 +250,27 @@ npc:
   # 🎪 SPECIAL EVENTS
   
   special_events:
-    LAST_CALL:
+    LAST-CALL:
       trigger: "Very late in adventure"
       description: |
         The bartender announces last call.
         "Time to go home, adventurer. One way or another."
         
-    MOTHER_S_TAB:
+    MOTHERS-TAB:
       trigger: "Running low on gold"
       description: |
         "Your mother left a tab here. Still has credit.
         Don't tell her I told you. She'd want you to earn it."
         (One-time assistance)
         
-    THE_REGULARS:
+    THE-REGULARS:
       trigger: "Third visit to the pub"
       description: |
         The patrons start to recognize you.
         "Hey, it's the one with the lamp!"
         New social dynamics unlock.
         
-    BARTENDER_S_FAVOR:
+    BARTENDERS-FAVOR:
       trigger: "Helping another patron"
       description: |
         The bartender notices kindness.

@@ -41,7 +41,7 @@ object:
         Use this moment wisely.
       cooldown: "1 minute"
       
-    RING_TWICE:
+    RING-TWICE:
       description: "Double strike — emergency interrupt"
       score: 40
       score_if: "urgent situation OR point_of_order"
@@ -51,7 +51,7 @@ object:
         The ringer must state the emergency.
       cooldown: "5 minutes"
       
-    RING_THRICE:
+    RING-THRICE:
       description: "Triple strike — The Gong Show termination"
       score: 20
       score_if: "performance_failing OR debate_deadlocked OR mercy_needed"
@@ -68,7 +68,7 @@ object:
         - Someone needs to be mercifully stopped
         - Continuing would be crueler than ending
         
-    CEREMONIAL_RING:
+    CEREMONIAL-RING:
       description: "Formal announcement strike"
       params:
         announcement: required
@@ -78,13 +78,13 @@ object:
         Room enters receptive listening mode.
         Announcement follows the reverberations.
         
-    CELEBRATION_RING:
+    CELEBRATION-RING:
       description: "Joyous strike for good news"
       score: 70
       score_if: "good_news OR victory OR milestone"
       
     # AUTOGONG — automatic integration with pub/pie-table.yml
-    AUTOGONG_ELIMINATION:
+    AUTOGONG-ELIMINATION:
       description: "Auto-rings once when someone is eliminated"
       triggered_by: "pie-table.yml#MUSICAL_CHAIRS"
       automatic: true
@@ -93,7 +93,7 @@ object:
         "Better luck next round!" the gong seems to say.
         The eliminated player takes a bow and joins the audience.
         
-    AUTOGONG_VICTORY:
+    AUTOGONG-VICTORY:
       description: "Auto-rings thrice when winner is crowned"
       triggered_by: "pie-table.yml#MUSICAL_CHAIRS"
       automatic: true
@@ -216,7 +216,7 @@ object:
     
     ---
     
-    > RING_THRICE
+    > RING-THRICE
     *GONNNNGGG* — *GONNNNGGG* — *GONNNNNNNGGGGGGG*
     
     The debate about tabs vs spaces ends. Finally.

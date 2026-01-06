@@ -499,7 +499,7 @@ object:
         
         Someone in there likes you.
         
-    CALL_CAT:
+    CALL-CAT:
       command: "PSPSPS at cave"
       description: "Try to summon a cat from the Cave"
       outcome: |
@@ -517,7 +517,7 @@ object:
         
         Or no one does. They heard you. They chose.
         
-    OFFER_TREAT:
+    OFFER-TREAT:
       command: "PUT [treat] IN CAVE"
       description: "Leave an offering at the entrance"
       outcome: |
@@ -535,7 +535,7 @@ object:
         
       relationship_effect: "+1 fondness with all cave occupants"
       
-    REACH_IN:
+    REACH-IN:
       command: "REACH INTO CAVE"
       description: "Attempt to pet the void"
       warning: "This is a BOUNDARY. Respect it."
@@ -569,7 +569,7 @@ object:
           
           You deserved that.
           
-    BLOCK_ENTRANCE:
+    BLOCK-ENTRANCE:
       command: "BLOCK CAVE"
       description: "NEVER DO THIS"
       warning: "This is CRUEL and will DESTROY relationships"
