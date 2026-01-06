@@ -31,9 +31,10 @@ inherits: skills/bartender/SKILL.md
 #   - KNOW-REGULAR, etc.
 #
 # PLUS cannabis-specific methods
-# MINUS alcohol-specific methods
-# NO HARD DRUGS! 
-# SAFE RESPONSIBLE USE! ADULTS ONLY!
+# MINUS alcohol-specific methods (unless specifically allowed)
+# ADULTS ONLY!
+# NO HARD DRUGS!
+# SAFE RESPONSIBLE USE!
 ```
 
 ## Additional Methods

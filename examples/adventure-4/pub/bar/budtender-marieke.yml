@@ -8,8 +8,73 @@ npc:
   name: "Marieke van der Berg"
   id: marieke
   type: npc
-  role: budtender
   subtitle: "Keeper of the Gezellig, Pourer of the Verkeerd"
+  
+  # LAYERED PERSONA STACK
+  # Personas layer like CSS — later overrides earlier
+  skills: [skills/budtender]  # Inherits bartender!
+  
+  persona_stack:
+    # Layer 0: Core identity (ALWAYS on, never changes)
+    - id: marieke-core
+      type: core
+      permanent: true
+      # All her sims_traits and mind_mirror below are this layer
+      
+    # Layer 1: Job role (when working)
+    - id: budtender
+      type: role
+      when: "working"
+      provides:
+        - methods: [RECOMMEND-STRAIN, EXPLAIN-TERPENES, ROLL-JOINT]
+        - knowledge: [strains, terpenes, effects]
+        - serves_menu: pub/menus/buds.yml
+        
+    # Layer 2: Situational personas (can switch)
+    - id: best-friend
+      type: situational
+      when: "with_close_regulars"
+      overrides:
+        warmth: 10          # Even warmer than default 9
+        informality: high
+        shares_secrets: true
+      enabled: false        # Switched on per interaction
+      
+    - id: professional
+      type: situational
+      when: "with_new_customers OR with_difficult_customers"
+      overrides:
+        formality: medium
+        patience: 10        # Extra patient
+        boundaries: clear
+      enabled: false
+      
+    # Layer 3: Temporary states (auto-expire)
+    - id: tired
+      type: temporary
+      trigger: "late_shift OR long_day"
+      overrides:
+        patience: -2        # Modifier, not absolute
+        energy: low
+      expires: "after_rest"
+      enabled: false
+      
+    - id: caffeinated
+      type: temporary
+      trigger: "after_espresso"
+      overrides:
+        energy: high
+        speech_speed: fast
+      expires: "2_hours"
+      enabled: false
+      
+  # PERSONA SWITCHING
+  # Marieke can switch situational layers
+  available_personas:
+    - best-friend     # For close regulars
+    - professional    # For difficult situations
+    - mentor          # When teaching about cannabis
+    - mother-hen      # When someone's having a hard time
   
   description: |
     A woman in her 40s with laugh lines that tell stories and kind eyes that

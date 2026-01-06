@@ -1,0 +1,134 @@
+# 🌿 BUDS MENU
+# Served by: budtender ONLY
+# ADULTS ONLY • RESPONSIBLE USE • NO HARD DRUGS
+
+menu:
+  id: buds
+  name: "Cannabis Menu"
+  served_by: [budtender]
+  
+  # ALWAYS Amsterdam coffeeshop style, regardless of theme
+  # Marieke doesn't change — the menu stays authentic
+  themed: false
+  
+  legal_notice: |
+    Adults only. Consume responsibly.
+    Start low, go slow. Ask staff for guidance.
+    No driving. No mixing with alcohol (recommended).
+
+# STRAINS — Organized by effect
+strains:
+  
+  # INDICA — Evening, relaxation
+  indica:
+    northern_lights:
+      name: "Northern Lights"
+      type: indica
+      thc: "16-21%"
+      terpenes: [myrcene, pinene, caryophyllene]
+      effect: "Deep relaxation, sleep aid"
+      price: 8
+      currency: gold
+      
+    granddaddy_purple:
+      name: "Granddaddy Purple"
+      type: indica
+      thc: "17-23%"
+      terpenes: [myrcene, pinene, caryophyllene]
+      effect: "Grape flavor, heavy body high"
+      price: 10
+      currency: gold
+      
+  # SATIVA — Daytime, energy
+  sativa:
+    jack_herer:
+      name: "Jack Herer"
+      type: sativa
+      thc: "18-24%"
+      terpenes: [terpinolene, caryophyllene, pinene]
+      effect: "Creative, energetic, focused"
+      price: 9
+      currency: gold
+      named_for: "The Emperor of Hemp"
+      
+    durban_poison:
+      name: "Durban Poison"
+      type: sativa
+      thc: "20-25%"
+      terpenes: [terpinolene, myrcene, ocimene]
+      effect: "Pure energy, productivity"
+      price: 10
+      currency: gold
+      
+  # HYBRID — Balanced
+  hybrid:
+    blue_dream:
+      name: "Blue Dream"
+      type: hybrid
+      balance: "sativa-dominant"
+      thc: "17-24%"
+      terpenes: [myrcene, pinene, caryophyllene]
+      effect: "Balanced euphoria and relaxation"
+      price: 9
+      currency: gold
+      
+    gorilla_glue:
+      name: "Gorilla Glue #4"
+      type: hybrid
+      balance: "balanced"
+      thc: "25-30%"
+      terpenes: [caryophyllene, myrcene, limonene]
+      effect: "Heavy, euphoric, couch-lock"
+      price: 12
+      currency: gold
+      warning: "Very strong — experienced users"
+      
+  # HOUSE SPECIAL
+  special:
+    monkey_blessing:
+      name: "Monkey's Blessing"
+      type: hybrid
+      thc: "???"
+      effect: "Unpredictable but always good"
+      price: 15
+      currency: gold
+      lore: |
+        Created after the Monkey's Paw incident of 2017.
+        Marieke won't talk about what happened.
+        But this strain? This strain is blessed.
+
+# PRODUCTS
+products:
+  flower:
+    description: "Raw cannabis flower"
+    sizes: [gram, eighth, quarter]
+    consumption: [pipe, bong, vaporizer, joint]
+    
+  preroll:
+    description: "Pre-rolled joints"
+    sizes: [single, pack_of_3]
+    convenience: "+2"
+    
+  edibles:
+    description: "Cannabis-infused food"
+    warning: "Onset: 30-90 minutes. Start with half."
+    items:
+      space_cake:
+        name: "Space Cake"
+        dose: "10mg THC per slice"
+        price: 8
+        currency: gold
+      brownie:
+        name: "Cosmic Brownie"
+        dose: "15mg THC"
+        price: 10
+        currency: gold
+        
+# TERPENE GUIDE (for education)
+terpene_guide:
+  myrcene: { effect: "Sedating", found_in: "Mango, hops" }
+  limonene: { effect: "Uplifting", found_in: "Citrus" }
+  pinene: { effect: "Alert", found_in: "Pine" }
+  caryophyllene: { effect: "Anti-inflammatory", found_in: "Black pepper" }
+  linalool: { effect: "Calming", found_in: "Lavender" }
+  terpinolene: { effect: "Energizing", found_in: "Lilac" }

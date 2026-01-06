@@ -1,0 +1,97 @@
+# 🍺 DRINKS MENU
+# Served by: bartender (primary), budtender (coffee/tea only)
+
+menu:
+  id: drinks
+  name: "Drinks Menu"
+  served_by: [bartender]
+  partial_by: [budtender]  # Coffee and tea only
+  
+  # Changes with pub theme!
+  themed: true
+
+# THEME: classic_adventure (default)
+classic_adventure:
+  ale:
+    name: "House Ale"
+    price: 1
+    currency: gold
+    effect: "+1 Courage, -1 Coordination (stacks)"
+    
+  mead:
+    name: "Honeyed Mead"
+    price: 2
+    currency: gold
+    effect: "+2 Charisma (1 hour)"
+    
+  wine:
+    name: "Red Wine"
+    price: 3
+    currency: gold
+    variants: [house, elven, dwarven]
+    
+  spirits:
+    name: "Hard Spirits"
+    price: 5
+    currency: gold
+    warning: "Strong stuff"
+    effect: "+3 Courage, -2 Wisdom"
+    
+  coffee:
+    name: "Strong Coffee"
+    price: 1
+    currency: gold
+    effect: "+1 Alertness"
+    served_by: [bartender, budtender]
+    
+  tea:
+    name: "Herbal Tea"
+    price: 1
+    currency: gold
+    variants: [chamomile, mint, mystery]
+    served_by: [bartender, budtender]
+    
+  water:
+    name: "Clean Water"
+    price: 0
+    currency: gold
+    note: "Always free"
+
+# THEME: space_cantina
+space_cantina:
+  blue_milk:
+    name: "Blue Milk"
+    price: 1
+    currency: credits
+    
+  jawa_juice:
+    name: "Jawa Juice"
+    price: 2
+    currency: credits
+    effect: "+1 Energy"
+    
+  spotchka:
+    name: "Spotchka"
+    price: 3
+    currency: credits
+    effect: "Glows blue, tastes purple"
+
+# THEME: cyberpunk_bar
+cyberpunk_bar:
+  synth_beer:
+    name: "Synth-Beer"
+    price: 1
+    currency: eddies
+    
+  real_whiskey:
+    name: "Real Whiskey"
+    price: 10
+    currency: eddies
+    note: "Suspiciously expensive"
+    
+  combat_stim:
+    name: "Combat Stim"
+    price: 15
+    currency: eddies
+    effect: "+2 Reflexes (combat only)"
+    warning: "Addictive"

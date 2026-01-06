@@ -1,0 +1,104 @@
+# 🎲 GAMES MENU
+# Managed by: games corner, arcade
+# Some games are free, some have buy-in
+
+menu:
+  id: games
+  name: "Games Menu"
+  location: [pub/games/, pub/arcade/]
+  
+# TABLETOP GAMES (games corner)
+tabletop:
+  darts:
+    name: "Darts"
+    location: pub/games/dart-board.yml
+    cost: 0
+    currency: gold
+    wager: optional
+    games: [501, Cricket, Around the Clock]
+    
+  chess:
+    name: "Chess"
+    location: pub/games/chess-table.yml
+    cost: 0
+    currency: gold
+    wager: optional
+    note: "Finish the abandoned game for a free drink"
+    
+  cards:
+    name: "Card Games"
+    location: pub/games/card-deck.yml
+    cost: 0
+    currency: gold
+    games: [Poker, Blackjack, Whist, Liar's Dice]
+    wager: "10 gold max per hand (house rule)"
+
+# ARCADE GAMES
+arcade:
+  fruit_machine:
+    name: "Goblin's Fortune"
+    location: pub/arcade/fruit-machine.yml
+    cost: 1
+    currency: copper
+    type: slot_machine
+    jackpot: "100 gold (allegedly)"
+    
+  pinball:
+    name: "Dungeon Flipper"
+    location: pub/arcade/pinball-machine.yml
+    cost: 1
+    currency: copper
+    type: pinball
+    high_score: "AAA — since time immemorial"
+    
+  pacman:
+    name: "Gobble Ghost"
+    location: pub/arcade/pacman-cabinet.yml
+    cost: 1
+    currency: copper
+    type: video_game
+    high_score: "GRM — Grim the bartender"
+    
+  pong:
+    name: "Paddle & Ball"
+    location: pub/arcade/pong-cabinet.yml
+    cost: 1
+    currency: copper
+    type: video_game
+    multiplayer: true
+
+# SPECIAL GAMES (Pie Table)
+pie_table:
+  debates:
+    name: "Structured Debate"
+    location: pub/pie-table.yml
+    cost: 0
+    requires: "3+ participants"
+    rules: "Robert's Rules of Order"
+    
+  musical_chairs:
+    name: "Musical Chairs"
+    location: pub/pie-table.yml
+    cost: 0
+    requires: "4+ participants"
+    prize: "Bragging rights, winner picks next activity"
+    
+  panel_discussion:
+    name: "Summon a Panel"
+    location: pub/pie-table.yml
+    cost: 0
+    effect: "The table summons diverse perspectives"
+
+# TOURNAMENTS
+tournaments:
+  dart_league:
+    schedule: "Every Freeday evening"
+    entry: 2
+    currency: gold
+    prize: "Winner's tab cleared + trophy"
+    
+  poker_night:
+    schedule: "Every Starday"
+    buy_in: 5
+    currency: gold
+    style: "Texas Hold'em"

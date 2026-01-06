@@ -1,0 +1,93 @@
+# 🍽️ SNACKS MENU
+# Served by: kitchen (primary), bartender (basic items)
+
+menu:
+  id: snacks
+  name: "Food Menu"
+  served_by: [kitchen]
+  partial_by: [bartender]  # Can serve basic items
+  
+  themed: true  # Changes with pub theme
+
+# THEME: classic_adventure (default)
+classic_adventure:
+  stew:
+    name: "Hearty Stew"
+    price: 2
+    currency: gold
+    effect: "Satisfies hunger, +1 Stamina"
+    description: "Don't ask what's in it"
+    
+  bread:
+    name: "Fresh Bread"
+    price: 1
+    currency: gold
+    description: "Still warm from the oven"
+    
+  pie:
+    name: "Mystery Meat Pie"
+    price: 3
+    currency: gold
+    variants: [meat, vegetable, fruit]
+    effect: "Filling, mysterious"
+    
+  cheese:
+    name: "Cheese Plate"
+    price: 2
+    currency: gold
+    pairs_with: [wine, ale]
+    
+  breakfast:
+    name: "Adventurer's Breakfast"
+    price: 5
+    currency: gold
+    contents: [eggs, bacon, sausage, toast, beans]
+    effect: "Full rest equivalent if eaten in morning"
+    
+  nuts:
+    name: "Bar Nuts"
+    price: 0
+    currency: gold
+    note: "Free at the bar"
+    served_by: [bartender, budtender]
+
+# DUTCH COFFEESHOP SPECIALS (always available)
+coffeeshop:
+  stroopwafel:
+    name: "Stroopwafel"
+    price: 1
+    currency: gold
+    description: "Warm caramel waffle cookie"
+    tip: "Place on top of hot coffee to warm"
+    
+  bitterballen:
+    name: "Bitterballen"
+    price: 3
+    currency: gold
+    description: "Deep-fried ragout balls with mustard"
+    warning: "Hot inside!"
+    
+  tosti:
+    name: "Tosti"
+    price: 2
+    currency: gold
+    description: "Grilled cheese sandwich, Dutch style"
+    variants: [ham_cheese, cheese, ham_cheese_tomato]
+    
+  appeltaart:
+    name: "Dutch Apple Pie"
+    price: 3
+    currency: gold
+    description: "With whipped cream (slagroom)"
+
+# MUNCHIES MENU (for after buds)
+munchies:
+  description: "Enhanced snack experience"
+  recommendation: |
+    After cannabis, everything tastes better.
+    Marieke recommends: stroopwafel + coffee.
+  popular:
+    - stroopwafel
+    - bitterballen
+    - cheese
+    - anything with sugar
