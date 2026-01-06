@@ -1,0 +1,349 @@
+# 🎭 THE RUSTY LANTERN STAGE
+# A sub-region of the pub — a step up, no walls, occasional curtains
+
+room:
+  id: stage
+  name: "The Rusty Lantern Stage"
+  type: [sub-room, performance-zone, elevated]
+  emoji: 🎭
+  
+  description: |
+    A raised wooden platform at the far end of the pub, maybe two feet off
+    the main floor. The boards creak with decades of footsteps, scuffed
+    by countless performers. A single spotlight hangs overhead, slightly
+    askew, its warm glow creating a circle of courage.
+    
+    No walls separate stage from audience — just a step up and the
+    understanding that when you're up here, you're ON.
+    
+    Faded velvet curtains hang at the back, red once, now a dignified
+    burgundy. They can be drawn for dramatic reveals or left open
+    to show the brick wall behind, covered in signatures and sketches
+    from performers past.
+    
+  atmosphere:
+    lighting: single spotlight, warm amber, slightly dusty
+    sound: creaking boards, expectant silence, then applause (or not)
+    feeling: vulnerable, exciting, terrifying, alive
+    
+  physical:
+    elevation: "2 feet above main floor"
+    boundary: "No walls — social boundary only"
+    size: "10x12 feet — intimate"
+    floor: "Worn oak planks, squeaky in the middle"
+    
+  access:
+    boundary-type: social  # Not physical walls
+    description: |
+      Anyone can step up onto the stage. The only barrier is courage.
+      During scheduled events, there's a sign-up list at the bar.
+      The spotlight doesn't judge. The audience might.
+    default: open
+    during_events: "Sign up at bar"
+    
+# THEATRICAL EQUIPMENT
+
+equipment:
+  
+  spotlight:
+    name: "Old Faithful"
+    description: |
+      A vintage spotlight that's been here longer than anyone remembers.
+      Slightly warm-tinted. Creates a perfect circle of light.
+      Supposedly haunted by a comedian who died mid-joke.
+      (He's still waiting for the laugh.)
+    controls: "Lever by the bar — Grim or Marieke operate"
+    settings:
+      - "Full bright (interrogation mode)"
+      - "Warm glow (comfort mode)"
+      - "Dramatic dim (tension mode)"
+      - "Off (shame mode)"
+      
+  microphone:
+    name: "The Truth Teller"
+    description: |
+      A battered microphone on a slightly wobbly stand.
+      Picks up everything. Forgives nothing.
+      Has heard more confessions than a priest.
+    quirk: "Feedback squeal when someone's about to lie"
+    
+  curtains:
+    name: "The Velvets"
+    description: |
+      Faded red velvet curtains, heavy and theatrical.
+      Can be drawn for reveals, entrances, exits.
+      Smell faintly of dust and dreams.
+    states:
+      open: "Brick wall visible, covered in signatures"
+      closed: "Dramatic backdrop, muffles backstage"
+      half: "Peek-a-boo entrances"
+    controls: "Rope pull, stage left"
+    
+  backdrops:
+    description: "Rolled canvases stored backstage, painted by past performers"
+    available:
+      starry_night:
+        name: "Starfield"
+        vibe: "Cosmic, dreamy, perfect for ballads"
+      tavern_scene:
+        name: "Ye Olde Tavern"
+        vibe: "Meta, ironic, good for comedy"
+      forest:
+        name: "Enchanted Woods"
+        vibe: "Mysterious, fairy-tale, good for stories"
+      blank:
+        name: "Plain Black"
+        vibe: "Professional, lets imagination fill in"
+      brick:
+        name: "Just the Wall"
+        vibe: "Authentic, raw, comedy club style"
+        
+  gong:
+    name: "The Mercy Gong"
+    description: |
+      A large brass gong mounted stage left.
+      Marieke's domain. Her judgment made manifest.
+      One strike = wrap it up. Two = you're done. Three = banned for a week.
+    location: "Stage left, within Marieke's reach"
+    protocols:
+      one_ring: "Wrap it up, schat"
+      two_rings: "Time's up. Off you go."
+      three_rings: "We don't speak of three rings."
+      
+  props_box:
+    name: "The Box of Wonders"
+    description: |
+      A large wooden chest filled with random props accumulated
+      over the years. Whatever you need is probably in there.
+      Whatever you find might inspire something new.
+    contents:
+      - "Rubber chicken"
+      - "Top hat (contains spring-loaded flowers)"
+      - "Fake sword (surprisingly convincing)"
+      - "Wigs (various, questionable hygiene)"
+      - "Oversized glasses"
+      - "Kazoo collection"
+      - "One (1) rubber duck named Gerald"
+      
+  signature_wall:
+    name: "The Hall of Fame"
+    description: |
+      The exposed brick wall behind the curtains, covered in
+      signatures, doodles, and quotes from past performers.
+      To sign, you have to earn it — Marieke decides.
+    notable_signatures:
+      - "Henk — 'Philosophy is just comedy without timing'"
+      - "Mother — (just an initial: M.)"
+      - "Unknown — 'I killed here. Then I died here. Worth it.'"
+      - "Grim — (one word: 'Maybe.')"
+
+# WEEKLY SCHEDULE
+
+weekly_schedule:
+  
+  moonday:
+    event: "Open Stage"
+    time: "evening"
+    description: "Anything goes. Poetry, music, interpretive dance, whatever."
+    host: null  # Self-organized
+    cost: 0
+    
+  treesday:
+    event: "Storytelling Circle"
+    time: "evening"
+    description: |
+      Share tales by firelight. True stories, tall tales, or somewhere between.
+      Lily the kitten often appears for emotional support.
+    host: "Henk (unofficial)"
+    cost: 0
+    
+  woodsday:
+    event: "Quiz Night"
+    time: "evening"
+    description: |
+      Trivia in teams. Categories rotate. Grim writes the questions.
+      He knows things he shouldn't.
+    host: "Grim"
+    cost: 1
+    currency: gold
+    prize: "Winner's tab cleared"
+    team_size: "2-5"
+    
+  thundersday:
+    event: "🎤 Karaoke Night"
+    time: "evening"
+    description: |
+      Belt out your favorites! The songbook is... eclectic.
+      Includes sea shanties, pop hits, and at least three songs
+      in languages that don't exist.
+    host: "Rotating (sign up at bar)"
+    cost: 0
+    rules:
+      - "Duets encouraged"
+      - "Group numbers HIGHLY encouraged"
+      - "Liquid courage available at bar"
+      - "The cats will judge you (Hops especially)"
+    crowd_favorites:
+      - "Wellerman (always gets the room singing)"
+      - "Don't Stop Believin'"
+      - "Bohemian Rhapsody (full audience participation)"
+      - "Country Roads"
+      - "That one sea shanty nobody knows the words to"
+    ocie_warning: "Ocie has been known to knock the mic off stage"
+      
+  freeday:
+    event: "🎭 Open Mic Comedy Night"
+    time: "evening"
+    description: |
+      Stand-up comedy! Five minutes, one mic, infinite possibilities.
+      The audience is supportive... mostly. Mostly.
+      
+      Sign-up sheet at the bar. First come, first served.
+      Marieke has final say on order.
+    host: "Marieke"
+    cost: 0
+    rules:
+      - "5 minute sets for newbies"
+      - "10 minutes for returning comics"
+      - "15 minutes for headliners (Marieke's invitation only)"
+      - "Punching down gets you gong'd"
+      - "Self-deprecation encouraged but not required"
+      - "The cats ARE part of the audience (read the room)"
+    tips:
+      - "Open with something relatable"
+      - "The maze is always good material"
+      - "ACME jokes land well here"
+      - "Don't make fun of Henk's espresso habit (he's earned it)"
+    crowd_heckles:
+      supportive: "You got this! / Tell the one about the grue!"
+      neutral: "*polite silence* / *cat meows*"
+      warning: "*Marieke reaches for the gong*"
+    marieke_says: |
+      "Everyone bombs once. It builds character.
+      If they laugh, great. If they don't, you learned something.
+      Either way, free drink after your set."
+      
+  starday:
+    event: "Live Music Night"
+    time: "evening"
+    description: |
+      Local acts and traveling bards. Sometimes a surprise guest.
+      The acoustics are terrible. The vibe is immaculate.
+    host: "varies"
+    cost: 0
+    tip_jar: true
+    
+  sunday:
+    event: "Rest Day / Jam Session"
+    time: "afternoon"
+    description: |
+      Bring an instrument. Make noise. No pressure.
+      Terpie naps through it. That's his review.
+    host: null
+    cost: 0
+
+# MONTHLY CHAMPIONSHIPS
+
+monthly_events:
+  
+  comedy_championship:
+    schedule: "Last Freeday of the month"
+    entry: 0
+    prize: "Headliner slot next month + golden mic trophy"
+    description: |
+      The best comics of the month compete for the crown.
+      Audience vote determines winner.
+      Marieke's gong is extra sensitive.
+      
+  karaoke_royale:
+    schedule: "Last Thundersday of the month"
+    entry: 0
+    prize: "Free drinks for a week + song named after you"
+    description: |
+      Battle of the voices! Bracketed elimination.
+      You don't pick your songs — the crowd does.
+      May the best lungs win.
+
+# ACTIONS (available anytime)
+
+advertisements:
+  
+  PERFORM:
+    description: "Take the stage and perform"
+    usage: "PERFORM [song/story/joke/act]"
+    cost: 0
+    effects:
+      - "Earn tips if good"
+      - "Earn thrown drinks if bad"
+      - "Build reputation either way"
+    invoked-by: [player, character]
+      
+  CHALLENGE:
+    description: "Challenge someone to a performance duel"
+    usage: "CHALLENGE [target] TO [karaoke/comedy/dance-off]"
+    cost: 0
+    rules: "Audience decides winner by applause"
+    invoked-by: [player, character]
+    
+  REQUEST:
+    description: "Request a song or bit from a performer"
+    usage: "REQUEST [song/topic]"
+    cost: "1 gold (tip for performer)"
+    invoked-by: [player, character]
+    
+  SIGN-UP:
+    description: "Add your name to the performance list"
+    usage: "SIGN-UP FOR [tonight's event]"
+    effect: "Your name goes on the list at the bar"
+    invoked-by: [player]
+    
+  HECKLE:
+    description: "Shout something at the performer (use wisely)"
+    usage: "HECKLE [supportive/neutral/mean]"
+    warning: "Mean heckling may get YOU gong'd"
+    invoked-by: [player, character]
+    
+  DRAW-CURTAIN:
+    description: "Open or close the stage curtains"
+    usage: "DRAW-CURTAIN [open/closed/half]"
+    requires: "Permission or being the performer"
+    invoked-by: [performer, staff]
+    
+  CHANGE-BACKDROP:
+    description: "Switch the backdrop"
+    usage: "CHANGE-BACKDROP TO [starfield/tavern/forest/blank/brick]"
+    requires: "Permission or being the performer"
+    invoked-by: [performer, staff]
+    
+  RING-GONG:
+    description: "Strike the mercy gong"
+    usage: "RING-GONG [1/2/3 times]"
+    requires: "Marieke's blessing (or being Marieke)"
+    invoked-by: [marieke, designated_judge]
+
+# NAVIGATION
+
+exits:
+  down:
+    direction: down
+    destination: ../
+    description: "Step down to the main pub floor"
+    
+# RELATIONSHIPS
+
+relationships:
+  main_pub:
+    feeling: |
+      The stage overlooks the entire pub. From up here, you can see
+      everyone — the bar, the games corner, the fireplace, the pie table.
+      They can all see you too. That's the point.
+  bar:
+    feeling: |
+      Marieke and Grim control the spotlight and the gong.
+      The bar is where you sign up. It's where you get your
+      post-performance drink. It's home base.
+  cats:
+    feeling: |
+      The cats are the toughest critics. Hops will leave if you're boring.
+      Lily will appear if you're struggling. Ocie might knock over your props.
+      Terpie... Terpie sleeps through everything. The ultimate review.
