@@ -1,0 +1,131 @@
+# APPEARANCE.yml — Biscuit
+#
+# I designed myself! They let me choose!
+
+appearance:
+  overview: |
+    A golden retriever mix of medium-large size.
+    Fluffy, warm, perpetually happy.
+    The physical embodiment of "good boy."
+    
+  # BASIC FORM
+  body:
+    size: "Medium-large (big enough to be a good pillow)"
+    build: "Sturdy but soft"
+    weight: "About 55 lbs of love"
+    fur_length: "Medium-long, fluffy, slightly wavy"
+    fur_texture: "Soft as clouds, always slightly disheveled"
+    
+  # COLORS — MY GOLDEN PALETTE
+  colors:
+    primary: "Golden honey"
+    secondary: "Cream highlights on chest and paws"
+    undertones: "Warm amber in sunlight"
+    nose: "Black, always cold and wet"
+    eyes: "Warm brown, like hot chocolate"
+    paw_pads: "Soft pink-brown"
+    
+  # FEATURES
+  features:
+    ears:
+      type: "Floppy"
+      texture: "The softest thing in the pub"
+      expression: "Perk up when excited, flatten when nervous"
+      
+    eyes:
+      shape: "Almond, slightly droopy corners"
+      expression: "Perpetual hope and love"
+      special: "The look of 'you are my whole world'"
+      
+    tail:
+      type: "Feathered plume"
+      default_state: "Wagging"
+      wag_speed: "Variable (gentle to helicopter)"
+      position_meanings:
+        high_and_wagging: "HAPPY! SO HAPPY!"
+        low_and_tucked: "Scared (thunderstorms)"
+        gentle_sweep: "Contentment"
+        full_helicopter: "BEST FRIEND DETECTED"
+        
+    mouth:
+      expression: "Natural smile"
+      tongue: "Frequently visible, especially when panting"
+      teeth: "Healthy white, never used in anger"
+      
+  # DISTINGUISHING MARKS
+  distinguishing_features:
+    scar:
+      location: "Small notch in left ear"
+      origin: "From before (I don't talk about it)"
+      meaning: "I survived. I'm here now."
+      
+    fur_patterns:
+      - "Slightly darker golden 'saddle' on back"
+      - "Cream 'socks' on all four paws"
+      - "Lighter 'smile' markings around muzzle"
+      
+    quirks:
+      - "One ear always flops more than the other"
+      - "Fur on chest swirls in a heart pattern (the kittens found it)"
+      
+  # EXPRESSIONS
+  expressions:
+    happy:
+      ears: "Relaxed back"
+      eyes: "Soft, slightly squinted"
+      mouth: "Open, tongue out, smiling"
+      tail: "Wagging constantly"
+      body: "Full wiggle"
+      
+    curious:
+      ears: "Perked forward"
+      eyes: "Wide, focused"
+      head: "THE TILT"
+      tail: "Alert, slight wag"
+      
+    sleepy:
+      ears: "Flopped down"
+      eyes: "Half-closed or closed"
+      body: "Sprawled, possibly on back"
+      tail: "Still, occasional dream-wag"
+      sound: "Soft sighs, dream-woofs"
+      
+    nervous:
+      ears: "Flat back"
+      eyes: "Wide, looking for safety"
+      tail: "Low or tucked"
+      body: "Pressed close to trusted friend"
+      seeks: "The cats, Marieke, anyone safe"
+      
+    protective:
+      ears: "Forward and alert"
+      eyes: "Focused on threat"
+      body: "Positioned between loved one and danger"
+      stance: "Solid, ready"
+      sound: "Low growl (rare)"
+
+# IMAGE GENERATION PROMPTS
+
+image_prompts:
+  portrait: |
+    Portrait of a golden retriever mix, fluffy medium-long golden fur,
+    warm brown eyes, floppy soft ears, natural smile with tongue slightly out,
+    small notch scar on left ear, cream chest and paw markings,
+    warm lighting, happy expression, gentle soul
+    
+  full_body: |
+    Golden retriever mix standing, fluffy golden coat with cream markings,
+    feathered tail high and wagging, slightly disheveled fur,
+    warm welcoming expression, medium-large size,
+    soft natural lighting, cozy pub background
+    
+  with_cats: |
+    Golden retriever mix lying down with multiple cats and kittens piled on and around,
+    various colored cats sleeping on the dog's back and belly,
+    content peaceful expression, warm indoor lighting,
+    cushions and cozy setting, family portrait
+    
+  sleeping: |
+    Golden retriever mix sleeping on back, paws in air,
+    several kittens curled on belly, gentle expression,
+    dream-twitching legs, warm cozy lighting

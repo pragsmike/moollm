@@ -427,7 +427,17 @@ skills:
     protocol: "CAT-AS-COMPANION"
     tags: ["game", "cat", "pet", "companion", "interaction"]
     use_when: "Creating cats, kittens, or cat-like creatures"
-    related: ["character", "buff", "room"]
+    related: ["character", "buff", "room", "dog"]
+    
+  - name: "dog"
+    path: "skills/dog"
+    description: "Dog behavior patterns — loyalty, pack dynamics, unconditional love"
+    tier: 1
+    entry: "SKILL.md"
+    protocol: "DOG-AS-COMPANION"
+    tags: ["game", "dog", "pet", "companion", "interaction", "loyalty"]
+    use_when: "Creating dogs or dog-like creatures"
+    related: ["character", "buff", "room", "cat", "party"]
     
   # --- ROLE SKILLS (inherit for NPC capabilities) ---
   
