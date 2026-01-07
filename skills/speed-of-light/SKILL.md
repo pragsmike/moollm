@@ -364,20 +364,15 @@ The LLM's internal representation is **infinitely richer** than its tokenized ou
 
 ---
 
-## Related Work: MemGPT
+## Related Work
 
-**MemGPT** (Packer et al., 2023) takes an OS-inspired approach to context management:
-- Main context (RAM) vs External context (disk)
-- Virtual context management via paging
-- Self-directed memory management
+**MemGPT** (Packer et al., 2023) — [arXiv:2310.08560](https://arxiv.org/abs/2310.08560)
 
-**MOOLLM's Speed of Light is complementary:**
-- MemGPT: Extend context via paging
-- MOOLLM: **Minimize paging** via speed-of-light simulation
+MemGPT solves context limits via **paging** — moving data between main context (RAM) and external storage (disk). It's the OS approach.
 
-> When you can simulate 33 turns in one call, you don't need to page as often.
+MOOLLM's Speed of Light is **complementary**: minimize the *need* to page by simulating many turns in one call.
 
-**Reference:** [arXiv:2310.08560](https://arxiv.org/abs/2310.08560) — "Towards LLMs as Operating Systems"
+See: [designs/MEMGPT-ANALYSIS.md](../../designs/MEMGPT-ANALYSIS.md) for detailed comparison.
 
 ---
 
