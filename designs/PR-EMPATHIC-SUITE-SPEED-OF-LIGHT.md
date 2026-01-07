@@ -245,6 +245,39 @@ Both methods are widely supported (GitHub, GitLab, VS Code).
 
 ---
 
+## 💬 Comment Intelligence (Empathic Templates)
+
+The LLM distinguishes between **meta-comments** and **concrete comments**:
+
+| Type | Indicators | Action |
+|------|------------|--------|
+| **Meta** | `# TEMPLATE:`, `# INSTRUCTION:`, `# NOTE:` | **Stripped** |
+| **Concrete** | `# This explains...`, explanatory style | **Preserved** |
+
+**The principle:** *Meta-comments teach the generator. Concrete comments teach the reader.*
+
+---
+
+## 🎬 Dramatic Irony Pattern (Evaluator)
+
+The LLM has global knowledge but roleplays evaluator's isolation — with optional **Ron Howard-style narration**:
+
+```yaml
+evaluator_assessment:
+  reasoning: |
+    The committee seems confident in their approach.
+    
+    # NARRATOR: They were not confident. Maya had called it
+    # "a disaster waiting to happen" three times.
+```
+
+- Preserves **methodological value** of blind evaluation
+- Adds **dramatic tension** for readers
+- Demonstrates **LLM self-awareness** about simulation
+- Creates **Arrested Development energy** 🍌
+
+---
+
 ## 📊 Impact Analysis
 
 ### Files Changed
@@ -252,8 +285,9 @@ Both methods are widely supported (GitHub, GitLab, VS Code).
 | Category | Files |
 |----------|-------|
 | **Speed of Light** | `SKILL.md`, `CARD.yml` (major expansion) |
-| **Empathic Expressions** | NEW: `SKILL.md`, `README.md`, `CARD.yml` |
-| **Empathic Templates** | NEW: `SKILL.md`, `README.md`, `CARD.yml` |
+| **Empathic Expressions** | NEW: `SKILL.md`, `README.md`, `CARD.yml` + naming conventions |
+| **Empathic Templates** | NEW: `SKILL.md`, `README.md`, `CARD.yml` + comment intelligence |
+| **Evaluator** | `README.md` (dramatic irony pattern) |
 | **Skill Meta-Skill** | `SKILL.md`, `CARD.yml`, `README.md` (major rewrite) |
 | **Index Updates** | `INDEX.yml`, `README.md` |
 | **PR Descriptions** | This file, `PR-SKILL-META-SKILL-UPGRADE.md` |
