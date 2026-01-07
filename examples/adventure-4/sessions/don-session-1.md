@@ -260,7 +260,7 @@ stroopwafel_mood: hissing (knows something)
 | [`stage/`](../pub/stage/) | Spotlight, mic, curtains, comedy signup |
 | [`games/`](../pub/games/) | Darts, chess, cards, Fluxx |
 | [`arcade/`](../pub/arcade/) | Fruit machine, Pac-Man, pinball, Pong |
-| `pie-table/` | Debate arena, bell, eight chairs |
+| [`pie-table.yml`](../pub/pie-table.yml) | Debate arena, bell, eight chairs |
 
 | Menu | Ask For |
 |------|---------|
