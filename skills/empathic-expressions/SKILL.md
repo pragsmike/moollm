@@ -84,7 +84,7 @@ All under one roof. One pipeline. Seamless transitions.
 | **Best practices** | Follows conventions |
 | **Documented** | Comments explain intent |
 | **Tested** | Includes edge cases |
-| **Naming** | Applies good consistent big-endian naming conventions and appropriate syntax |
+| **Naming** | Applies comprehensible consistent big-endian naming conventions and appropriate syntax |
 
 ### The Teaching Gift
 
@@ -301,10 +301,10 @@ clarification-triggers:
 │                  EMPATHIC SUITE                     │
 ├─────────────────────────────────────────────────────┤
 │                                                     │
-│  ┌─────────────────────┐   ┌─────────────────────┐ │
-│  │ EMPATHIC-EXPRESSIONS│──▶│ EMPATHIC-TEMPLATES  │ │
-│  │ (interpret intent)  │   │ (instantiate)       │ │
-│  └─────────────────────┘   └─────────────────────┘ │
+│  ┌─────────────────────┐   ┌─────────────────────┐  │
+│  │ EMPATHIC-EXPRESSIONS│──▶│ EMPATHIC-TEMPLATES  │  │
+│  │ (interpret intent)  │   │ (instantiate)       │  │
+│  └─────────────────────┘   └─────────────────────┘  │
 │           │                         │               │
 │           ▼                         ▼               │
 │  ┌─────────────────────┐   ┌─────────────────────┐ │
