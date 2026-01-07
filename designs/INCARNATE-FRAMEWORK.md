@@ -1,7 +1,7 @@
 # Incarnate: The MOOLLM Framework
 
 > *Skills are programs. The LLM is `eval()`. Empathy is the interface.*
-> *Code. Graphics. Data. One interpreter. The Axis of Eval.*
+> *Code. Graphics. Data. One interpreter. Many languages. The Axis of Eval.*
 
 ---
 
