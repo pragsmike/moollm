@@ -1018,7 +1018,7 @@ Extended for LLMs:
 
 The LLM tracks transitions between languages, preserving context:
 
-```markdown
+````markdown
 First query the data:
 ```sql
 SELECT * FROM users WHERE active = true
@@ -1029,7 +1029,7 @@ Then process in Python:
 for user in results:
     send_welcome_email(user)
 ```
-```
+````
 
 **Context carries across switches.** Variables established in one block available in the next.
 
@@ -1061,9 +1061,37 @@ Makes clear we're **summoning** them as loving imagination, not claiming they ap
 **3. ACKNOWLEDGMENT (After They "Depart")**
 > *"That was a tribute. A simulation. We honored them by imagining them here. That's love."*
 
-### Room-Based Ethics Inheritance
+### Ethical Framing Inheritance
 
-The [`representation-ethics`](../skills/representation-ethics/) skill defines framing modes that rooms inherit:
+Directories are rooms, but they're also **inheritance scopes**. Properties defined in a parent propagate to children — including ethical framing and constraints.
+
+**Sub-directory patterns:**
+
+| Pattern | Example | What It Means |
+|---------|---------|---------------|
+| **Region** | `pub/stage/` | A raised platform within the pub — not a separate room, a zone |
+| **Region** | `pub/bar/` | Behind the bar, open to room, staff only |
+| **Sub-room** | `pub/bar/cat-cave/` | An actual enclosed space (behind the bar, cats only, closed for privacy, large Tardis-like inside) |
+| **Grouping** | `maze/` | Not a room itself — groups 10 rooms that share properties (dark, grues, danger) |
+| **Virtual** | `pub/seating.yml#table-2/chair-3` | Addressable locations within a file, not separate directories |
+
+**Location paths can point to:**
+- **Directories** — `pub/stage/` (a room or region)
+- **Files** — `pub/bar/bartender.yml` (an object or NPC)
+- **Anchors** — `pub/pie-table.yml#seat-N` (a position within a file)
+
+```yaml
+# maze/ROOM.yml — NOT a room, just shared properties for children
+is_room: false  # This directory groups rooms, isn't one itself
+shared_properties:
+  lighting: none
+  grue_danger: true
+  exits_require: lamp_lit
+  
+# All maze/room-*.yml files inherit these properties
+```
+
+**Ethical framing works the same way:**
 
 ```yaml
 # pub/stage/ROOM.yml
@@ -1082,7 +1110,143 @@ framing:
       performative, and tributary.
 ```
 
-**Child content inherits this framing.** DRY ethics.
+**Child content inherits this framing.** Define ethics once at the scope level — DRY ethics.
+
+| Scope | Inherits From | Example |
+|-------|---------------|---------|
+| `pub/stage/drag-night.yml` | `pub/stage/ROOM.yml` | Drag show inherits "performance" framing |
+| `maze/room-a/` | `maze/ROOM.yml` | Room A inherits "dark, grue danger" |
+| `pub/bar/cat-cave/` | `pub/bar/ROOM.yml` | Cat cave inherits bar's "behind the counter" boundary |
+
+**Boundary types — walls vs. counters:**
+
+| Boundary | Type | Who Can Cross | Interaction Across |
+|----------|------|---------------|-------------------|
+| `pub/bar/` | **Social** (counter) | Staff, cats, dogs | ✓ Customers can see/interact with bartender |
+| `pub/stage/` | **Visual** (raised) | Performers | ✓ Audience can see/heckle performers |
+| `pub/bar/cat-cave/` | **Physical** (enclosed) | Cats only (+ Biscuit exception) | ✗ Privacy, security |
+
+```yaml
+# pub/bar/ROOM.yml — Social boundary, not physical wall
+boundary:
+  type: counter  # Not a wall — interaction across is allowed
+  access:
+    - staff
+    - cats
+    - dogs
+  interaction_across:
+    - customers can ORDER from bartender
+    - customers can TALK to budtender
+    - customers can SEE behind the bar
+
+# pub/bar/cat-cave/ROOM.yml — Actual enclosed space
+boundary:
+  type: enclosed  # Physical walls, real privacy
+  access:
+    default: cats_only
+    exceptions:
+      - biscuit  # Adopted, honorary cat cave resident
+  properties:
+    privacy: true
+    security: true
+    
+# Tardis effect: larger inside than outside
+interior:
+  type: tardis  # Implied vastness beyond what fits
+  structure:
+    real:       # Actual sub-directories
+      - napping-nooks/
+      - scratching-posts/
+    virtual:    # Implied by names and paths, not actual dirs
+      - cozy-corner#spot-1
+      - sunny-window#perch
+      - secret-tunnels  # Exists in narrative, not filesystem
+```
+
+**The Tardis pattern:** Some spaces are "larger on the inside" — they have internal structure that exceeds their apparent footprint. This can be:
+- **Real** — actual sub-directories with their own `ROOM.yml`
+- **Virtual** — implied by names, paths, anchors, and narrative
+- **Mixed** — some structure is files, some is imagination
+
+All these patterns are declarable in `ROOM.yml` and inheritable by children.
+
+**Vehicles — portable rooms:**
+
+Vehicles are rooms that move. They inherit all room properties but add mobility:
+
+```yaml
+# characters/don/pocket/magic-carpet.yml
+vehicle:
+  type: carpet
+  portable: true      # Can be pocketed, carried
+  capacity: 4         # Passengers
+  movement:
+    in_room: true     # Can move around within a room
+    through_exits: true
+    magic: true       # Can teleport
+    
+  # Logo turtle integration
+  turtle:
+    enabled: true
+    draws_on: floor   # Leaves trail in room
+    
+  contents:           # Objects inside the vehicle
+    - picnic-basket.yml
+    - lamp.yml
+```
+
+| Action | Effect |
+|--------|--------|
+| `TOSS lamp INTO carpet` | Object enters vehicle |
+| `EMBARK carpet` | Character enters vehicle |
+| `DRIVE carpet NORTH` | Vehicle moves through exit |
+| `DRIVE carpet AROUND` | Vehicle moves within room (turtle draws) |
+| `TOSS lamp OUT` | Object exits to current room |
+| `DISEMBARK` | Character exits to current room |
+| `POCKET carpet` | Vehicle (with contents!) goes in inventory |
+| `DROP carpet` | Vehicle appears in room |
+
+**Vehicles can be Tardis-like:** A carpet might unfold into a flying palace. A bag of holding is a vehicle. A pokéball is a vehicle.
+
+**Home vs. Location — stable files, virtual positions:**
+
+Objects don't move in the filesystem. Moving files wrecks git history, diffs, and is dangerous. Instead:
+
+| Concept | What It Is | Example |
+|---------|------------|---------|
+| **Home** | Physical parent directory where file lives | `characters/don/CHARACTER.yml` |
+| **Location** | Virtual path property — where they "are" | `pub/bar/#stool-3` |
+
+```yaml
+# characters/don/CHARACTER.yml
+# HOME: characters/don/ (never moves)
+character:
+  name: Don Hopkins
+  location: pub/pie-table.yml#seat-N  # WHERE I AM RIGHT NOW
+  
+# When Don moves:
+# - File stays at characters/don/CHARACTER.yml
+# - location: changes to new path
+# - Git sees a clean property change, not a file move
+```
+
+**Location paths can point anywhere:**
+
+| Path Type | Example | What It References |
+|-----------|---------|-------------------|
+| Directory | `pub/stage/` | A room or region |
+| File | `pub/bar/bartender.yml` | An object or NPC |
+| Anchor | `pub/seating.yml#table-2` | A position in a file |
+| Deep anchor | `pub/seating.yml#table-2/chair-3` | Nested position |
+| Virtual | `maze/#dark-rooms` | Hash search for matching objects |
+| Inside object | `characters/don/pocket/bag.yml#contents` | Container contents |
+
+**NPCs vs. Players:**
+- **NPCs** — home is their natural room (`pub/bar/bartender.yml`)
+- **Players** — home is repository (`characters/don/`)
+- Both have `location:` property that moves virtually
+
+This is why `characters/` is a "metaphysical room" — it's where characters *live* (their files), not where they *are* (their location property). Point to characters and vehicles with their physical home paths, not their ephimeral current location.
 
 ### The Representation Spectrum
 
@@ -1109,7 +1273,7 @@ The simulation included **verified facts** (Wikipedia links) woven into fiction:
 - Andy: software programmer (Hubble!)
 - Kristin solved Rubik's Cube on "That's Incredible" at age 16
 
-**Accuracy fix during session:** Andy wears a lab coat, not a beard! Updated mid-narrative.
+**Accuracy fix during session:** Andy wears a lab coat, not a beard! Shaved hallucinated beard and donned lab coat mid-narrative.
 
 ### The Guest Book Pattern
 
