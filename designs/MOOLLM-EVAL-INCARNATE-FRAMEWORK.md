@@ -1117,6 +1117,58 @@ framing:
 | `maze/room-a/` | `maze/ROOM.yml` | Room A inherits "dark, grue danger" |
 | `pub/bar/cat-cave/` | `pub/bar/ROOM.yml` | Cat cave inherits bar's "behind the counter" boundary |
 
+**Boundary types — walls vs. counters:**
+
+| Boundary | Type | Who Can Cross | Interaction Across |
+|----------|------|---------------|-------------------|
+| `pub/bar/` | **Social** (counter) | Staff, cats, dogs | ✓ Customers can see/interact with bartender |
+| `pub/stage/` | **Visual** (raised) | Performers | ✓ Audience can see/heckle performers |
+| `pub/bar/cat-cave/` | **Physical** (enclosed) | Cats only (+ Biscuit exception) | ✗ Privacy, security |
+
+```yaml
+# pub/bar/ROOM.yml — Social boundary, not physical wall
+boundary:
+  type: counter  # Not a wall — interaction across is allowed
+  access:
+    - staff
+    - cats
+    - dogs
+  interaction_across:
+    - customers can ORDER from bartender
+    - customers can TALK to budtender
+    - customers can SEE behind the bar
+
+# pub/bar/cat-cave/ROOM.yml — Actual enclosed space
+boundary:
+  type: enclosed  # Physical walls, real privacy
+  access:
+    default: cats_only
+    exceptions:
+      - biscuit  # Adopted, honorary cat cave resident
+  properties:
+    privacy: true
+    security: true
+    
+# Tardis effect: larger inside than outside
+interior:
+  type: tardis  # Implied vastness beyond what fits
+  structure:
+    real:       # Actual sub-directories
+      - napping-nooks/
+      - scratching-posts/
+    virtual:    # Implied by names and paths, not actual dirs
+      - cozy-corner#spot-1
+      - sunny-window#perch
+      - secret-tunnels  # Exists in narrative, not filesystem
+```
+
+**The Tardis pattern:** Some spaces are "larger on the inside" — they have internal structure that exceeds their apparent footprint. This can be:
+- **Real** — actual sub-directories with their own `ROOM.yml`
+- **Virtual** — implied by names, paths, anchors, and narrative
+- **Mixed** — some structure is files, some is imagination
+
+All these patterns are declarable in `ROOM.yml` and inheritable by children.
+
 ### The Representation Spectrum
 
 From [`skills/representation-ethics/`](../skills/representation-ethics/):
