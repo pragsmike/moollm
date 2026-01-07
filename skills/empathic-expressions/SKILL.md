@@ -177,7 +177,11 @@ kubectl apply -f deployment.yaml
 
 Clean data islands. Clear boundaries. Syntax highlighting preserved.
 
-**Nesting tip:** Use 4+ backticks for outer fence when inner content has 3-backtick blocks.
+**Nesting code blocks (CommonMark/GFM standard):**
+- Use **4+ backticks** for outer fence: ```````` wraps content with ````` blocks
+- Or use **tildes** for one level: `~~~` outer, ``` inner
+- Both are widely supported (GitHub, GitLab, VS Code, most parsers)
+- Individual backticks can be escaped with `\`` but fences cannot
 
 ### Inline Switching
 
