@@ -401,7 +401,7 @@ gong:
     - RING-THRICE: "The Gong Show termination"
 ```
 
-Sims scan advertisements and choose based on needs + personality. The LLM does the same.
+The Sims scan advertisements and chooses based on needs + personalities + relationships. The LLM does the same.
 
 **SimAntics → Empathic Expressions:**
 
