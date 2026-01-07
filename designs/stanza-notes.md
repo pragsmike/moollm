@@ -222,7 +222,9 @@ Eight voices with two stoner moderators produced:
 - A better wish than any individual conceived
 - Edge cases addressed before they became problems
 - A reusable protocol for future character creation
-- An actual monkey named Palm who writes philosophical essays
+- An actual monkey named Palm who writes philosophical essays:
+  - [On Being Palm](../examples/adventure-4/pub/stage/palm-nook/study/palm-on-being-palm.md) -- what it's like to be an AI character
+  - [Tribute to Tognazzini](../examples/adventure-4/pub/stage/palm-nook/study/tribute-to-tognazzini.md) -- the Infinite Monkey Theorem
 
 **One opinion is the wrong number.** Rails teaches us that opinions are valuable. MOOLLM teaches us that *many* opinions, in structured debate, are more valuable still.
 
@@ -601,7 +603,7 @@ MOOLLM extends Anthropic's model with capabilities that emerge from the [Incarna
 
 | Capability | Anthropic Skills | MOOLLM Incarnate Skills |
 |------------|------------------|------------------------|
-| **Instantiation** | Static definitions | Clone-to-create, [Self-style prototypes](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#3-self-language-david-ungar--randall-smith-1987) |
+| **Instantiation** | Static definitions | Clone-to-create, [Self-style prototypes](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#8-self-ungar--smith-sunstanford-1987) |
 | **State** | Ephemeral (per-call) | Persistent (filesystem = save game) |
 | **Identity** | Anonymous | [K-lines](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#4-k-lines--society-of-mind-marvin-minsky-mit-1980) activate full context |
 | **Composition** | Import-based | [Prototype inheritance](../skills/skill/delegation-object-protocol.md) chains |
@@ -614,7 +616,7 @@ MOOLLM extends Anthropic's model with capabilities that emerge from the [Incarna
 
 **1. Instantiation & Prototypes**
 
-Anthropic skills are *definitions*. MOOLLM skills are *prototypes* you clone. See [Self Language influence](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#3-self-language-david-ungar--randall-smith-1987) and [Delegation Object Protocol](../skills/skill/delegation-object-protocol.md):
+Anthropic skills are *definitions*. MOOLLM skills are *prototypes* you clone. See [Self Language influence](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#8-self-ungar--smith-sunstanford-1987) and [Delegation Object Protocol](../skills/skill/delegation-object-protocol.md):
 
 ```yaml
 # Anthropic: Static skill
