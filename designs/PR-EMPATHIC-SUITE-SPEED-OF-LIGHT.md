@@ -166,6 +166,85 @@ Templates use Empathic Expressions for:
 
 ---
 
+## 🛠️ Major Skill Meta-Skill Upgrade
+
+Also in this PR: **complete rewrite of the skill meta-skill** integrating Anthropic's foundation while highlighting MOOLLM's unique contributions.
+
+### MOOLLM Innovations (with proof)
+
+| Innovation | Description | Proof |
+|------------|-------------|-------|
+| **Instantiation** | Skills as prototypes creating instances | adventure-4 from adventure/ |
+| **K-lines** | Names as activation vectors (Minsky) | "Palm" activates entire soul |
+| **Empathic Templates** | Smart semantic generation | Biscuit's description |
+| **Three-Tier Persistence** | Platform → Narrative → State | 6000+ line session logs |
+| **Speed of Light** | Proven multi-agent simulation | 33-turn Fluxx, 21-turn cats |
+
+### Summary: Foundation + Innovation
+
+| Anthropic Foundation | MOOLLM Adds |
+|----------------------|-------------|
+| Documentation ✓ | + README.md for discovery |
+| Tool definitions ✓ | + CARD.yml with advertisements |
+| Composability ✓ | + Prototype inheritance (Self) |
+| (Stateless) | **Three-tier persistence** |
+| (Single-agent) | **Speed-of-light multi-agent** |
+
+---
+
+## 📐 Naming Conventions Documented
+
+### Case Conventions Table
+
+| Convention | When | Example |
+|------------|------|---------|
+| **UPPER-KEBAB** | K-lines, protocols, advertisements, commands | `SPEED-OF-LIGHT`, `CREATE-SKILL` |
+| **lower-kebab** | URLs, YAML keys, file names, skill names | `empathic-expressions`, `session-log.yml` |
+| **snake_case** | Python, SQL, tool names | `send_email()`, `read_file` |
+| **camelCase** | JavaScript, TypeScript | `sendEmail()`, `userId` |
+| **PascalCase** | Classes, components, types | `UserProfile`, `ActionQueue` |
+| **SCREAMING_SNAKE** | Constants, environment vars | `MAX_RETRIES`, `API_KEY` |
+
+### Big-Endian Naming
+
+```yaml
+# Good (general → specific)
+user-profile-avatar
+session-log-entry
+
+# Bad (specific → general)
+avatar-user-profile
+entry-session-log
+```
+
+**Why:** Sorts together, tab-completes, greps naturally, scans faster.
+
+---
+
+## 🔧 Nested Code Block Escaping
+
+Documented the CommonMark/GFM standard for nesting code blocks:
+
+```
+# Use 4+ backticks for outer when inner has 3:
+````markdown
+```sql
+SELECT * FROM users
+```
+````
+
+# Or use tildes for one level:
+~~~markdown
+```sql
+SELECT * FROM users
+```
+~~~
+```
+
+Both methods are widely supported (GitHub, GitLab, VS Code).
+
+---
+
 ## 📊 Impact Analysis
 
 ### Files Changed
@@ -175,8 +254,9 @@ Templates use Empathic Expressions for:
 | **Speed of Light** | `SKILL.md`, `CARD.yml` (major expansion) |
 | **Empathic Expressions** | NEW: `SKILL.md`, `README.md`, `CARD.yml` |
 | **Empathic Templates** | NEW: `SKILL.md`, `README.md`, `CARD.yml` |
+| **Skill Meta-Skill** | `SKILL.md`, `CARD.yml`, `README.md` (major rewrite) |
 | **Index Updates** | `INDEX.yml`, `README.md` |
-| **This PR** | `PR-EMPATHIC-SUITE-SPEED-OF-LIGHT.md` |
+| **PR Descriptions** | This file, `PR-SKILL-META-SKILL-UPGRADE.md` |
 
 ### New Concepts Introduced
 
@@ -188,6 +268,8 @@ Templates use Empathic Expressions for:
 | **Big-Tent Language Support** | One skill, all languages, seamless switching |
 | **LLM as Code Processor** | Five roles: interpreter, printer, linter, compiler, depseudofier |
 | **Generous Clarification** | Ask when ambiguous, never assume |
+| **UPPER-KEBAB vs lower-kebab** | Distinct naming for K-lines vs file names |
+| **Big-Endian Naming** | General → specific for sorting/completion |
 
 ---
 
