@@ -543,7 +543,7 @@ $ adventure.py lint quest/
           → LLM: Compile the musical behavior to a note sequence.
 ```
 
-**The LLM's job:** Transform empathic descriptions into deterministic parameters.
+**The LLM's job:** Transform empathic descriptions into deterministic parameters and data (like in character dialog), and to generate runtime JavaScript code to bring that data to life.
 
 ### Runtime Expressions: JavaScript in YAML
 
@@ -598,15 +598,15 @@ function roll(dice) {
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│  1. AUTHOR                                                       │
+│  1. AUTHOR                                                      │
 │     Write empathic YAML in Cursor                               │
 │     (readable, expressive, human/LLM-friendly)                  │
 └─────────────────────────────────────────────────────────────────┘
                               ↓
 ┌─────────────────────────────────────────────────────────────────┐
-│  2. LINT                                                         │
+│  2. LINT                                                        │
 │     $ adventure.py lint quest/                                  │
-│                                                                  │
+│                                                                 │
 │     Validates schemas, cross-references, consistency            │
 │     Outputs events for LLM to fix:                              │
 │       [WARN] Missing description                                │
@@ -616,11 +616,11 @@ function roll(dice) {
 └─────────────────────────────────────────────────────────────────┘
                               ↓
 ┌─────────────────────────────────────────────────────────────────┐
-│  3. LLM COMPILES                                                 │
+│  3. LLM COMPILES                                                │
 │     The LLM acts as the compiler!                               │
-│                                                                  │
+│                                                                 │
 │     Linted YAML  ──→  HTML + CSS + JSON + JavaScript            │
-│                                                                  │
+│                                                                 │
 │     - Generates compiled_behavior with JS expressions           │
 │     - Creates navigation structure                              │
 │     - Builds dialogue trees                                     │
@@ -628,47 +628,47 @@ function roll(dice) {
 └─────────────────────────────────────────────────────────────────┘
                               ↓
 ┌─────────────────────────────────────────────────────────────────┐
-│  4. BROWSER RUNTIME                                              │
-│                                                                  │
+│  4. BROWSER RUNTIME                                             │
+│                                                                 │
 │  ┌──────────────────────────────────────────────────────────┐   │
 │  │  ┌─────────────┐  ┌────────────────────────────────────┐ │   │
-│  │  │             │  │  💬 SCROLLING CHAT                 │ │   │
-│  │  │  🖼️ IMAGE   │  │                                    │ │   │
-│  │  │  (generated)│  │  You enter the pub. A fire        │ │   │
-│  │  │             │  │  crackles in the hearth...        │ │   │
-│  │  │             │  │                                    │ │   │
-│  │  │             │  │  > The bartender nods at you.     │ │   │
-│  │  │             │  │                                    │ │   │
-│  │  └─────────────┘  └────────────────────────────────────┘ │   │
+│  │  │             │  │  💬 SCROLLING CHAT                  │ │   │
+│  │  │  🖼️ IMAGE   │  │                                     │ │   │
+│  │  │  (generated)│  │  You enter the pub. A fire          │ │   │
+│  │  │             │  │  crackles in the hearth...          │ │   │
+│  │  │             │  │                                     │ │   │
+│  │  │             │  │  > The bartender nods at you.       │ │   │
+│  │  │             │  │                                     │ │   │
+│  │  └─────────────┘  └─────────────────────────────────────┘ │   │
 │  │                                                           │   │
-│  │  ┌─────────────────────────────────────────────────────┐ │   │
-│  │  │  🎯 POINT-AND-CLICK COMMANDS                        │ │   │
+│  │  ┌──────────────────────────────────────────────────────┐ │   │
+│  │  │  🎯 POINT-AND-CLICK COMMANDS                         │ │   │
 │  │  │                                                      │ │   │
-│  │  │  [Bartender] [Fireplace] [Notice Board] [Door→]    │ │   │
+│  │  │  [Bartender] [Fireplace] [Notice Board] [Door→]      │ │   │
 │  │  │                                                      │ │   │
-│  │  │  Right-click → PIE MENU                             │ │   │
+│  │  │  Right-click → PIE MENU                              │ │   │
 │  │  │       ╭─────╮                                        │ │   │
 │  │  │      ╱ TALK  ╲                                       │ │   │
 │  │  │     │   TO    │                                      │ │   │
-│  │  │  ASK ●───────● ORDER                                │ │   │
+│  │  │  ASK ●───────● ORDER                                 │ │   │
 │  │  │     │ ABOUT  │                                       │ │   │
 │  │  │      ╲       ╱                                       │ │   │
 │  │  │       ╰─────╯                                        │ │   │
-│  │  └─────────────────────────────────────────────────────┘ │   │
+│  │  └──────────────────────────────────────────────────────┘ │   │
 │  │                                                           │   │
-│  │  ┌─────────────────────────────────────────────────────┐ │   │
+│  │  ┌──────────────────────────────────────────────────────┐ │   │
 │  │  │  ⌨️ TEXT INPUT                                       │ │   │
 │  │  │  > _                                                 │ │   │
-│  │  └─────────────────────────────────────────────────────┘ │   │
-│  └──────────────────────────────────────────────────────────┘   │
+│  │  └──────────────────────────────────────────────────────┘ │   │
+│  └───────────────────────────────────────────────────────────┘   │
 │                                                                  │
-│  engine.js evaluates expressions:                               │
-│    - roll('1d20') for skill checks                              │
-│    - pick_random() for dialogue variation                       │
-│    - Conditional state changes                                  │
+│  engine.js evaluates expressions:                                │
+│    - roll('1d20') for skill checks                               │
+│    - pick_random() for dialogue variation                        │
+│    - Conditional state changes                                   │
 │                                                                  │
-│  Complex situations → escalate to LLM API (optional)            │
-└─────────────────────────────────────────────────────────────────┘
+│  Complex situations → escalate to LLM API (optional)             │
+└──────────────────────────────────────────────────────────────────┘
 ```
 
 ### adventure.py — The Linter & Hinter
@@ -832,6 +832,135 @@ With this pipeline:
 7. **Share** — Upload anywhere, runs in any browser
 
 **Cursor becomes a point-and-click adventure authoring system.**
+
+---
+
+## Inspiration: Scott Adams, Don Hopkins & Memory Palaces
+
+This system is directly inspired by a [Hacker News conversation (Nov 2021)](https://news.ycombinator.com/item?id=29316066) between **Scott Adams** (creator of *Adventureland*, the first commercial text adventure, 1978) and **Don Hopkins** (SimCity, The Sims, pie menus).
+
+### The Method of Loci Connection
+
+Don Hopkins asked Scott Adams:
+
+> *"How do you think Adventure games are like the Method of Loci, or Memory Palaces, in that they can help you remember and retrieve vast amounts of information geographically?"*
+
+The [Method of Loci](https://en.wikipedia.org/wiki/Method_of_loci) is an ancient memory technique — you imagine walking through a building, placing items to remember at different locations. When you need to recall them, you mentally walk the same path.
+
+**Adventure games ARE memory palaces.** The rooms, objects, and spatial relationships create lasting mental maps.
+
+### Pie Menus = Room Navigation
+
+Don Hopkins realized:
+
+> *"Eventually I realized that 4-item and 8-item pie menus are the essential elements of an Adventure map, as long as you think of 'menus' as rooms in a map with two-way links that you can move back and forth through, instead of a hierarchal tree of menus with one-way exits!"*
+
+```
+      N
+      ↑
+  NW ↖ ↗ NE
+W ←  ●  → E     Pie menu = Room exits = Memory palace navigation
+  SW ↙ ↘ SE
+      ↓
+      S
+```
+
+This is why our compiled adventures use pie menus — they're not just UI, they're **spatial memory**.
+
+### Code as Buildings
+
+Don Hopkins visualizes code as memory palaces:
+
+> *"Each function is a little building like an office or a shop, which has a sign out front telling what services or products it sells, and contains everything inside you need to solve some kind of problem.*
+> 
+> *You're standing behind the front counter, just about to receive a customer though the front entrance door with the parameters you need for one particular instance of that problem.*
+> 
+> *You go into the back room, solve the problem, then deliver the results out the exit door at the back of the building."*
+
+See: [Nassi-Shneiderman diagrams](https://en.wikipedia.org/wiki/Nassi%E2%80%93Shneiderman_diagram) — structured flowcharts that look like building floor plans.
+
+### The Vision: Archives as Adventures
+
+Both Scott Adams and Don Hopkins want to publish their **papers, articles, emails, and biographies as interactive adventures**:
+
+```yaml
+# scott-adams-archive/
+archive:
+  name: "Scott Adams Interactive Archive"
+  
+  rooms:
+    office_1978/:
+      description: "The room where Adventureland was born"
+      objects:
+        - trs80.yml              # The original machine
+        - yellow_legal_pad.yml   # Early puzzle designs
+        - cassette_tapes.yml     # First distribution medium
+      papers:
+        - "Cramming a world into 16K"
+        
+    correspondence/:
+      description: "Letters across decades"
+      characters:
+        - infocom_founders.yml   # The friendly rivalry
+        - fans.yml               # Letters from players
+        
+# don-hopkins-archive/
+archive:
+  name: "Don Hopkins Interactive Archive"
+  
+  rooms:
+    pie_menu_lab/:
+      description: "Where pie menus were invented"
+      objects:
+        - pie_menu_demo.yml      # Working demo!
+        - dr_dobbs_article.yml   # 1991 paper, explorable
+        
+    cellular_automata/:
+      objects:
+        - conway_life.yml        # Playable Game of Life
+        - wireworld.yml          # Circuit simulation
+        - langtons_ant.yml       # Emergent behavior
+        
+    simcity_archaeology/:
+      description: "The Sims object system"
+      objects:
+        - simantics.yml          # The behavior engine
+        - edith.yml              # The editor
+```
+
+### What This Enables
+
+| Traditional Archive | Adventure Archive |
+|---------------------|-------------------|
+| Read papers linearly | Explore rooms of ideas |
+| Static biography | Talk to younger/older selves |
+| Download files | Interact with objects |
+| Search text | Ask characters questions |
+| Passive consumption | Active discovery |
+
+**The archive becomes alive.** You don't just read about the TRS-80 — you examine it, poke at it, hear Scott's voice explaining what each part meant.
+
+### The Lineage
+
+Don Hopkins built multiple iterations of this vision:
+
+1. **DreamScape** (1995, WWDC) — ScriptX implementation
+2. **MediaGraph** (Unity3D) — Music navigation for Will Wright's Stupid Fun Club  
+3. **iLoci** (2008, iPhone) — Memory palace app
+
+Each iteration: *"a little different and a little better, as technology advanced."*
+
+**Now it's our turn.** Cursor + LLM + this adventure system = the next iteration.
+
+### The Banned Magic
+
+The Method of Loci was **banned by the Puritans in 1584** for evoking "bizarre and irrelevant" imagery. 
+
+Don Hopkins notes:
+
+> *"Mnemonics was seen as dangerous and magical and heretical back in the Medieval world... And they were right, fortunately: Dangerous magic that works by evoking bizarre and irrelevant imagery can be quite useful as well as entertaining!"*
+
+We're bringing it back. 🏰✨
 
 ---
 
