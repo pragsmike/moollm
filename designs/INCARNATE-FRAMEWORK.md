@@ -854,7 +854,7 @@ This is how tribunal members were created — each was a card (Wise Monkey, Djin
 
 ### Cards as Activation Records
 
-Playing a card creates a stack frame:
+Playing a card creates a stack frame that inherits from the entire card or one of its advertised methods, like Self:
 
 ```yaml
 # design-room/architect-task-001.activation
@@ -870,7 +870,7 @@ advertisements:
   REVISE: {}     # Request iteration
 ```
 
-Like Self, cards have **multiple methods**. The LLM supplies implicit parameters from context (Postel).
+Like Self, cards have **multiple methods** and **multiple inheritance**. The LLM supplies implicit parameters from context (Postel).
 
 ---
 
@@ -898,34 +898,34 @@ Traditional systems fight the LLM:
 
 | Skill | Role | Connection |
 |-------|------|------------|
-| **empathic-expressions** | Intent → Code | The big tent for all languages |
-| **empathic-templates** | Smart instantiation | Uses expressions for vars/conditions |
-| **postel** | Generous interpretation | Foundation for all empathic skills |
-| **yaml-jazz** | Comments as data | Semantic structure |
-| **speed-of-light** | Internal simulation | Minimizes tokenization |
+| [`empathic-expressions`](../skills/empathic-expressions/) | Intent → Code | The big tent for all languages |
+| [`empathic-templates`](../skills/empathic-templates/) | Smart instantiation | Uses expressions for vars/conditions |
+| [`postel`](../skills/postel/) | Generous interpretation | Foundation for all empathic skills |
+| [`yaml-jazz`](../skills/yaml-jazz/) | Comments as data | Semantic structure |
+| [`speed-of-light`](../skills/speed-of-light/) | Internal simulation | Minimizes tokenization |
 
 ### How They Dovetail
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    EMPATHIC SUITE                            │
+│                    EMPATHIC SUITE                           │
 ├─────────────────────────────────────────────────────────────┤
-│                                                              │
+│                                                             │
 │   ┌───────────────────────┐    ┌───────────────────────┐    │
 │   │ EMPATHIC-EXPRESSIONS  │───▶│ EMPATHIC-TEMPLATES    │    │
-│   │ (interpret intent)    │    │ (smart instantiation)  │    │
+│   │ (interpret intent)    │    │ (smart instantiation) │    │
 │   └───────────────────────┘    └───────────────────────┘    │
-│            │                            │                    │
-│            ▼                            ▼                    │
+│            │                            │                   │
+│            ▼                            ▼                   │
 │   ┌───────────────────────┐    ┌───────────────────────┐    │
 │   │ POSTEL (generous)     │    │ YAML-JAZZ (style)     │    │
 │   └───────────────────────┘    └───────────────────────┘    │
-│                                                              │
+│                                                             │
 │   All follow SPEED-OF-LIGHT philosophy:                     │
 │   • Work in vectors, delay tokenization                     │
 │   • Preserve precision as long as possible                  │
 │   • Minimize boundary crossings                             │
-│                                                              │
+│                                                             │
 └─────────────────────────────────────────────────────────────┘
 ```
 
