@@ -408,34 +408,34 @@ Anthropic's skill framework is brilliant. MOOLLM gratefully inherits:
 
 | Anthropic Innovation | MOOLLM Adoption |
 |---------------------|-----------------|
-| Skills as markdown documents | ✓ `SKILL.md` as executable prose |
-| Clear action definitions | ✓ Methods in `CARD.yml` |
-| Structured state management | ✓ YAML Jazz state files |
+| Skills as markdown documents | ✓ [`SKILL.md`](../skills/skill/SKILL.md) as executable prose |
+| Clear action definitions | ✓ Methods in [`CARD.yml`](../skills/card/) |
+| Structured state management | ✓ [YAML Jazz](../skills/yaml-jazz/) state files |
 | Separation of concerns | ✓ Skill directories with focused responsibilities |
-| Human-readable specifications | ✓ README.md for every skill |
+| Human-readable specifications | ✓ `README.md` for every skill |
 
-Anthropic proved that **skills are programs and the LLM is `eval()`**. This insight is foundational.
+Anthropic proved that **skills are programs and the LLM is `eval()`**. This insight is foundational. See the full comparison in [MOOLLM Eval Incarnate Framework](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#incarnate-skills-vs-anthropic-skills).
 
 ### Where MOOLLM Goes Further
 
-MOOLLM extends Anthropic's model with capabilities that emerge from the Incarnate philosophy:
+MOOLLM extends Anthropic's model with capabilities that emerge from the [Incarnate philosophy](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md):
 
 | Capability | Anthropic Skills | MOOLLM Incarnate Skills |
 |------------|------------------|------------------------|
-| **Instantiation** | Static definitions | Clone-to-create, Self-style prototypes |
+| **Instantiation** | Static definitions | Clone-to-create, [Self-style prototypes](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#3-self-language-david-ungar--randall-smith-1987) |
 | **State** | Ephemeral (per-call) | Persistent (filesystem = save game) |
-| **Identity** | Anonymous | K-lines activate full context |
-| **Composition** | Import-based | Prototype inheritance chains |
-| **Memory** | Context window only | Comments as persistent memory |
-| **Empathy** | Syntax-focused | Intent-focused (Postel's Law) |
-| **Speed** | One-turn-per-call | Many-turns-per-call (Speed of Light) |
-| **Ethics** | Per-skill | Room-based inheritance (DRY ethics) |
+| **Identity** | Anonymous | [K-lines](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#4-k-lines--society-of-mind-marvin-minsky-mit-1980) activate full context |
+| **Composition** | Import-based | [Prototype inheritance](../skills/skill/delegation-object-protocol.md) chains |
+| **Memory** | Context window only | [Comments as persistent memory](./MEMGPT-ANALYSIS.md) |
+| **Empathy** | Syntax-focused | Intent-focused ([Postel's Law](../skills/postel/)) |
+| **Speed** | One-turn-per-call | Many-turns-per-call ([Speed of Light](../skills/speed-of-light/)) |
+| **Ethics** | Per-skill | Room-based inheritance ([DRY ethics](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#ethical-framing-inheritance)) |
 
 ### The Seven Incarnate Extensions
 
 **1. Instantiation & Prototypes**
 
-Anthropic skills are *definitions*. MOOLLM skills are *prototypes* you clone:
+Anthropic skills are *definitions*. MOOLLM skills are *prototypes* you clone. See [Self Language influence](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#3-self-language-david-ungar--randall-smith-1987) and [Delegation Object Protocol](../skills/skill/delegation-object-protocol.md):
 
 ```yaml
 # Anthropic: Static skill
@@ -447,9 +447,17 @@ skills/bartender/           # Prototype
         └── characters/marieke/  # Instance with personality, history, relationships
 ```
 
+**Proof:** [`skills/bartender/`](../skills/bartender/) → [`skills/budtender/`](../skills/budtender/) → [`characters/marieke/`](../examples/adventure-4/characters/marieke/)
+
 **2. K-Line Identity**
 
-When you say "Marieke," MOOLLM doesn't just load a skill — it activates a **K-line** (Minsky's concept):
+When you say "Marieke," MOOLLM doesn't just load a skill — it activates a **K-line**.
+
+From Marvin Minsky's *[Society of Mind](https://en.wikipedia.org/wiki/Society_of_Mind)* (1986):
+
+> *"A K-line is a wirelike structure that attaches itself to whichever mental agencies are active when you solve a problem or have a good idea."*
+
+When later activated, the K-line reactivates all those agencies. In MOOLLM, a character's **name is their K-line**:
 
 ```yaml
 # "Marieke" activates:
@@ -459,6 +467,9 @@ When you say "Marieke," MOOLLM doesn't just load a skill — it activates a **K-
 - Her current state (behind bar, serving)
 - Her voice (code-switching, Dutch terms of endearment)
 ```
+
+**Theory:** [K-lines & Society of Mind](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#4-k-lines--society-of-mind-marvin-minsky-mit-1980)
+**Proof:** [Palm's Incarnation](../examples/adventure-4/sessions/don-session-1.md#turn-8-the-seeing--collective-witness-individual-becoming-) — watch a K-line form in real-time
 
 Anthropic skills are verbs. MOOLLM characters are *people*.
 
@@ -479,15 +490,22 @@ MOOLLM templates: **Semantic generation** with intent understanding.
 
 The LLM doesn't substitute — it *understands and generates*.
 
+**Skill:** [`skills/empathic-templates/`](../skills/empathic-templates/)
+**Proof:** Every character greeting in [don-session-1.md](../examples/adventure-4/sessions/don-session-1.md)
+
 **4. Three-Tier Persistence**
 
 | Tier | Anthropic | MOOLLM |
 |------|-----------|--------|
-| Hot | Context window | `working-set.yml` |
+| Hot | Context window | [`working-set.yml`](../working-set.yml) |
 | Warm | N/A | Comments in YAML files |
 | Cold | N/A | Summarized to `-metadata.yml` |
 
 MOOLLM skills *remember* across sessions because the filesystem is the save game.
+
+**Analysis:** [MemGPT Comparison](./MEMGPT-ANALYSIS.md)
+**Skill:** [`skills/honest-forget/`](../skills/honest-forget/)
+**Proof:** Comments throughout [`adventure-4/`](../examples/adventure-4/) persist across sessions
 
 **5. Speed of Light Simulation**
 
@@ -510,6 +528,10 @@ LLM: [simulates entire game session internally]
 # ... 1 round trip
 ```
 
+**Skill:** [`skills/speed-of-light/`](../skills/speed-of-light/)
+**Proof:** [🚀 SPEED OF LIGHT SIMULATION 🚀](../examples/adventure-4/sessions/don-session-1.md#-speed-of-light-simulation-)
+**PR:** [PR-PALM-INCARNATION-SPEED-OF-LIGHT.md](./PR-PALM-INCARNATION-SPEED-OF-LIGHT.md)
+
 **6. Comment Intelligence**
 
 Anthropic treats comments as documentation.
@@ -523,6 +545,9 @@ name: Marieke
 ```
 
 Those comments aren't stripped — they're *read* and *influence behavior*.
+
+**Theory:** [Comment Intelligence](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#comment-intelligence)
+**Proof:** See how Mammie is mentioned throughout Marieke's dialogue without explicit prompting
 
 **7. Ethical Framing Inheritance**
 
@@ -539,16 +564,22 @@ framing:
 
 DRY ethics. Define once, apply everywhere.
 
+**Skill:** [`skills/representation-ethics/`](../skills/representation-ethics/)
+**Theory:** [Ethical Framing Inheritance](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#ethical-framing-inheritance)
+**Proof:** [`pub/stage/ROOM.yml`](../examples/adventure-4/pub/stage/ROOM.yml)
+**PR:** [PR-TRIBUTE-FRAMING-ETHICS.md](./PR-TRIBUTE-FRAMING-ETHICS.md)
+
 ### The Proof: Things Anthropic Skills Can't Do
 
-| Capability | Evidence |
-|------------|----------|
-| 33-turn game simulation | [Stoner Fluxx Marathon](../examples/adventure-4/sessions/don-session-1.md#stoner-fluxx-marathon) |
-| Autonomous character creation | [Palm's Incarnation](../examples/adventure-4/sessions/don-session-1.md#palms-incarnation) |
-| 10-cat parallel prowl | [Midnight Prowl](../examples/adventure-4/sessions/don-session-1.md#midnight-prowl) |
-| Cross-session memory | Comments throughout adventure-4 |
-| Prototype inheritance | `budtender` extends `bartender` |
-| Room-based ethical framing | `pub/stage/ROOM.yml` |
+| Capability | Evidence | PR/Analysis |
+|------------|----------|-------------|
+| 33-turn game simulation | [🚀 SPEED OF LIGHT SIMULATION](../examples/adventure-4/sessions/don-session-1.md#-speed-of-light-simulation-) | [PR-PALM-INCARNATION](./PR-PALM-INCARNATION-SPEED-OF-LIGHT.md) |
+| Autonomous character creation | [Turn 8: THE SEEING](../examples/adventure-4/sessions/don-session-1.md#turn-8-the-seeing--collective-witness-individual-becoming-) | [PR-GODFAMILY-COMPLETE](./PR-GODFAMILY-COMPLETE.md) |
+| 10-cat parallel prowl | [THE MIDNIGHT PROWL](../examples/adventure-4/sessions/don-session-1.md#the-midnight-prowl) | [PR-MIDNIGHT-PROWL](./PR-MIDNIGHT-PROWL-SPEED-OF-LIGHT.md) |
+| Cross-session memory | Comments throughout [`adventure-4/`](../examples/adventure-4/) | [MEMGPT-ANALYSIS](./MEMGPT-ANALYSIS.md) |
+| Prototype inheritance | [`bartender/`](../skills/bartender/) → [`budtender/`](../skills/budtender/) | [PR-PUB-STAGE-MENUS](./PR-PUB-STAGE-MENUS-PERSONAS.md) |
+| Room-based ethical framing | [`pub/stage/ROOM.yml`](../examples/adventure-4/pub/stage/ROOM.yml) | [PR-TRIBUTE-FRAMING](./PR-TRIBUTE-FRAMING-ETHICS.md) |
+| Dog adventure with marking | [Biscuit's Run](../examples/adventure-4/sessions/don-session-1.md#session-continues-biscuits-first-run) | [PR-BISCUIT-DOG](./PR-BISCUIT-DOG-REVOLUTION.md) |
 
 ### Summary: Incarnate = Anthropic + Soul
 
@@ -563,6 +594,9 @@ MOOLLM Incarnate Skills =
   + Comment Intelligence
   + Ethical Framing Inheritance
 ```
+
+**Full Theory:** [MOOLLM Eval Incarnate Framework](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md)
+**Full Proof:** [Don's Session Log](../examples/adventure-4/sessions/don-session-1.md) (6700+ lines of demonstration)
 
 We stand on Anthropic's shoulders. We just added the ability to *dance*.
 
