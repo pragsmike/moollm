@@ -177,13 +177,29 @@ The first real windowing system. Multiple views of the same object. Edit from an
 
 **MOOLLM inherits:** Multiple views of same data (YAML, Markdown, Mermaid, narrative).
 
-### 2. Smalltalk ([Alan Kay](https://medium.com/@donhopkins/alan-kay-on-should-web-browsers-have-stuck-to-being-document-viewers-and-a-discussion-of-news-5cb92c7b3445), Xerox PARC, 1970s)
+### 2. NLS/Augment (Douglas Engelbart, SRI, 1968)
+
+"The Mother of All Demos." Introduced the mouse, hypertext, video conferencing, collaborative editing, and the vision of **augmenting human intellect**.
+
+> *"The digital revolution is far more significant than the invention of writing or even of printing."*
+
+| NLS Innovation | MOOLLM Connection |
+|----------------|-------------------|
+| **Hypertext** | Links between files, rooms, characters |
+| **Collaborative editing** | Shared filesystem as world state |
+| **View controls** | Multiple representations of same data |
+| **Mouse/pointing** | Spatial navigation, pie menus |
+| **Bootstrapping** | Play-Learn-Lift — use the system to improve the system |
+
+**MOOLLM inherits:** Hypertext linking, collaborative world-building, the vision of tools that augment human capability. The filesystem IS a hypertext system.
+
+### 3. Smalltalk ([Alan Kay](https://medium.com/@donhopkins/alan-kay-on-should-web-browsers-have-stuck-to-being-document-viewers-and-a-discussion-of-news-5cb92c7b3445), Xerox PARC, 1970s)
 
 Objects all the way down. Message passing. Live programming. "The computer is a medium."
 
 **MOOLLM inherits:** Everything is an object (directory). Message passing (K-lines). Live editing (filesystem as state).
 
-### 3. HyperCard (Bill Atkinson, Apple, 1987)
+### 4. HyperCard (Bill Atkinson, Apple, 1987)
 
 End-user programming. Reader = Writer symmetry. "See your own face in the system."
 
@@ -191,7 +207,7 @@ End-user programming. Reader = Writer symmetry. "See your own face in the system
 
 **MOOLLM inherits:** Play-Learn-Lift. Users can inspect, modify, and create skills.
 
-### 4. Self (Ungar & Smith, Sun/Stanford, 1987)
+### 5. Self (Ungar & Smith, Sun/Stanford, 1987)
 
 Prototypes instead of classes. Delegation instead of inheritance. "Objects all the way down, but simpler."
 
@@ -223,7 +239,7 @@ MOOLLM: Room → Parent Directory → Skill → Prototype → ...
 - Dynamic deoptimization ([`return-stack`](../skills/return-stack/) skill)
 - Slots as data+behavior (YAML Jazz comments)
 
-### 5. NeWS (James Gosling, Sun, 1986)
+### 6. NeWS (James Gosling, Sun, 1986)
 
 Network-extensible window system. PostScript as the universal language. "Send programs, not data."
 
@@ -231,7 +247,7 @@ Network-extensible window system. PostScript as the universal language. "Send pr
 
 **MOOLLM inherits:** LLM as universal interpreter. Skills as programs. YAML Jazz as the universal language.
 
-### 6. [HyperLook](https://medium.com/@donhopkins/hyperlook-nee-hypernews-nee-goodnews-99f411e58ce4) (Arthur van Hoff, Turing Institute, 1989-1992)
+### 7. [HyperLook](https://medium.com/@donhopkins/hyperlook-nee-hypernews-nee-goodnews-99f411e58ce4) (Arthur van Hoff, Turing Institute, 1989-1992)
 
 HyperCard reimagined for NeWS. PostScript for code, graphics, AND data. Network delegation.
 
@@ -239,13 +255,13 @@ HyperCard reimagined for NeWS. PostScript for code, graphics, AND data. Network 
 
 **MOOLLM inherits:** Object => Room => Parent => Skill => Prototype delegation. The Axis of Eval.
 
-### 7. PostScript & The Linguistic Motherboard (John Warnock, Owen Densmore)
+### 8. PostScript & The Linguistic Motherboard (John Warnock, Owen Densmore)
 
 > *"PostScript is a linguistic 'mother board', which has 'slots' for several 'cards'. The first card we built was a graphics card. We're considering other cards..."*
 
 **MOOLLM inherits:** LLM as linguistic motherboard. Skills as cards. `CARD.yml` is literal!
 
-### 8. SimCity, The Sims, and [The Simulator Effect](https://donhopkins.medium.com/will-wright-on-designing-user-interfaces-to-simulation-games-1996-video-update-2023-da098a51ef91) (Will Wright)
+### 9. SimCity, The Sims, and [The Simulator Effect](https://donhopkins.medium.com/will-wright-on-designing-user-interfaces-to-simulation-games-1996-video-update-2023-da098a51ef91) (Will Wright)
 
 > *"He designs games to run on two computers at once: the electronic one on the player's desk, running his shallow tame simulation, and the biological one in the player's head, running their deep wild imagination."*
 
@@ -328,13 +344,13 @@ don_queue:
 - Buffs as temporary modifiers
 - SimAntics → empathic expressions (intent → behavior)
 
-### 9. Constructionism (Seymour Papert)
+### 10. Constructionism (Seymour Papert)
 
 Learning by building inspectable things. Logo. Turtle graphics. "Low floor, high ceiling, wide walls."
 
 **MOOLLM inherits:** The [`constructionism`](../skills/constructionism/) skill. Play-Learn-Lift as methodology.
 
-### 10. TinyMUD & LambdaMOO (Jim Aspnes, Pavel Curtis, 1989-1990)
+### 11. TinyMUD & LambdaMOO (Jim Aspnes, Pavel Curtis, 1989-1990)
 
 Text-based virtual worlds where users build rooms, objects, and behaviors. The original "user-generated content" platforms.
 
@@ -397,7 +413,7 @@ MOO taught us that virtual worlds need:
 - Social spaces (pub, stage, cat cave)
 - Consent protocols (incarnation skill)
 
-### 11. K-lines & Society of Mind (Marvin Minsky, MIT, 1980s)
+### 12. K-lines & Society of Mind (Marvin Minsky, MIT, 1980s)
 
 > *"A K-line attaches to whichever mental agencies are active when you solve a problem or have a good idea. When you activate that K-line later, the attached agencies turn partially on, recreating a 'mental state' similar to the one you were in before."*
 
@@ -590,7 +606,7 @@ All three dimensions exist in the same file. The LLM reads them all simultaneous
 
 ### Palm's Incarnation (2026-01-05)
 
-A monkey's paw wish created a living character:
+A monkey's paw wish for "the rest of the monkey" created a living character:
 - Full autonomy protocol invoked
 - Character chose own name, gender, body, traits
 - Created own home directory
@@ -643,14 +659,14 @@ A single LLM call simulated:
 | [`empathic-expressions`](../skills/empathic-expressions/) | Code dimension (intent → code) | [Empathic Suite](#the-empathic-suite-dovetailing-skills) |
 | [`empathic-templates`](../skills/empathic-templates/) | Smart generation | [Biscuit's description](#empathic-templates-smart-instantiation) |
 | [`speed-of-light`](../skills/speed-of-light/) | Many turns, one call | [33-turn Fluxx](#proof-the-numbers) |
-| [`prototype`](../skills/prototype/) | Self-style inheritance | [Self section](#4-self-ungar--smith-sunstanford-1987) |
+| [`prototype`](../skills/prototype/) | Self-style inheritance | [Self section](#5-self-ungar--smith-sunstanford-1987) |
 | [`postel`](../skills/postel/) | Generous interpretation | [Postel foundation](#postels-law-the-foundation) |
 | [`yaml-jazz`](../skills/yaml-jazz/) | Comments as semantic data | [Axis of Eval](#the-axis-of-eval-code-graphics-data) |
 | [`representation-ethics`](../skills/representation-ethics/) | Ethical framing | [Tribute Protocol](#ethical-representation-the-tribute-protocol) |
 | [`adventure`](../skills/adventure/) | Room-based narrative | [adventure-4](../examples/adventure-4/) |
-| [`room`](../skills/room/) | TinyMUD-style building | [MOO section](#10-tinymud--lambdamoo-jim-aspnes-pavel-curtis-1989-1990) |
-| [`needs`](../skills/needs/) | Character motivation | [Sims section](#8-simcity-the-sims-and-the-simulator-effect-will-wright) |
-| [`action-queue`](../skills/action-queue/) | Sims-style task ordering | [Action Queues](#8-simcity-the-sims-and-the-simulator-effect-will-wright) |
+| [`room`](../skills/room/) | TinyMUD-style building | [MOO section](#11-tinymud--lambdamoo-jim-aspnes-pavel-curtis-1989-1990) |
+| [`needs`](../skills/needs/) | Character motivation | [Sims section](#9-simcity-the-sims-and-the-simulator-effect-will-wright) |
+| [`action-queue`](../skills/action-queue/) | Sims-style task ordering | [Action Queues](#9-simcity-the-sims-and-the-simulator-effect-will-wright) |
 
 ---
 
@@ -1194,6 +1210,7 @@ Don't update the screen (tokenize) on every keystroke. Wait until the user pause
 | Person | Contribution | MOOLLM Connection |
 |--------|--------------|-------------------|
 | **Ivan Sutherland** | Sketchpad, first windows | Multiple views |
+| **Douglas Engelbart** | NLS/Augment, hypertext, mouse, collaboration | Linking, shared state, augmentation |
 | **Alan Kay** | Smalltalk, Dynabook, "computer as medium" | Objects, messaging, vision |
 | **Bill Atkinson** | HyperCard | Reader=Writer, Play-Learn-Lift |
 | **David Ungar & Randy Smith** | Self language (1987) | Prototypes, delegation, dynamic deoptimization |
