@@ -501,7 +501,7 @@ character:
 # but only when the others weren't looking. Pride, after all.
 ```
 
-**The Simulator Effect in MOOLLM:** We don't simulate everything — we imply it, and the LLM fills in. The YAML is the electronic computer; the LLM is the biological one.
+**The Simulator Effect in MOOLLM:** We don't simulate everything — we imply it, and the LLM fills in. The YAML is the "game state"; the LLM plays the role of the imagination that fills gaps with meaning.
 
 ---
 
