@@ -592,7 +592,7 @@ Everything is files. No hidden memory. If it's not in a file, it doesn't exist.
 .agent/
   sessions/current/
     session-log.md      # Append-only audit
-    working_set.yml     # What's in context
+    working-set.yml     # What's in context
     hot.yml             # Keep loaded
     cold.yml            # Can evict
 ```
