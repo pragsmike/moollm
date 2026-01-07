@@ -92,7 +92,8 @@ The LLM applies appropriate naming conventions per language and context:
 
 | Convention | When | Example |
 |------------|------|---------|
-| **kebab-case** | K-lines, protocols, URLs, YAML keys | `SPEED-OF-LIGHT`, `empathic-expressions` |
+| **UPPER-KEBAB** | K-lines, protocols, advertisements, commands | `SPEED-OF-LIGHT`, `EMPATHIC-EXPRESSIONS`, `CREATE-SKILL` |
+| **lower-kebab** | URLs, YAML keys, file names, skill names | `empathic-expressions`, `user-profile`, `session-log.yml` |
 | **snake_case** | Python, SQL, tool names | `send_email()`, `user_id`, `read_file` |
 | **camelCase** | JavaScript, TypeScript | `sendEmail()`, `userId` |
 | **PascalCase** | Classes, components, types | `UserProfile`, `ActionQueue` |
