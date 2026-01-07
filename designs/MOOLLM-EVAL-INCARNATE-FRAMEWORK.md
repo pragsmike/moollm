@@ -1061,9 +1061,36 @@ Makes clear we're **summoning** them as loving imagination, not claiming they ap
 **3. ACKNOWLEDGMENT (After They "Depart")**
 > *"That was a tribute. A simulation. We honored them by imagining them here. That's love."*
 
-### Room-Based Ethics Inheritance
+### Ethical Framing Inheritance
 
-The [`representation-ethics`](../skills/representation-ethics/) skill defines framing modes that rooms inherit:
+Directories are rooms, but they're also **inheritance scopes**. Properties defined in a parent propagate to children — including ethical framing.
+
+**Sub-directory patterns:**
+
+| Pattern | Example | What It Means |
+|---------|---------|---------------|
+| **Region** | `pub/stage/` | A raised platform within the pub — not a separate room, a zone |
+| **Sub-room** | `pub/bar/cat-cave/` | An actual enclosed space (behind the bar, cats only) |
+| **Grouping** | `maze/` | Not a room itself — groups 10 rooms that share properties (dark, grues) |
+| **Virtual** | `pub/seating.yml#chair-3` | Addressable locations within a file, not separate directories |
+
+**Location paths can point to:**
+- **Directories** — `pub/stage/` (a room or region)
+- **Files** — `pub/bar/bartender.yml` (an object or NPC)
+- **Anchors** — `pub/pie-table.yml#seat-N` (a position within a file)
+
+```yaml
+# maze/ROOM.yml — NOT a room, just shared properties for children
+is_room: false  # This directory groups rooms, isn't one itself
+shared_properties:
+  lighting: none
+  grue_danger: true
+  exits_require: lamp_lit
+  
+# All maze/room-*.yml files inherit these properties
+```
+
+**Ethical framing works the same way:**
 
 ```yaml
 # pub/stage/ROOM.yml
@@ -1082,7 +1109,13 @@ framing:
       performative, and tributary.
 ```
 
-**Child content inherits this framing.** DRY ethics.
+**Child content inherits this framing.** Define ethics once at the scope level — DRY ethics.
+
+| Scope | Inherits From | Example |
+|-------|---------------|---------|
+| `pub/stage/drag-night.yml` | `pub/stage/ROOM.yml` | Drag show inherits "performance" framing |
+| `maze/room-a/` | `maze/ROOM.yml` | Room A inherits "dark, grue danger" |
+| `pub/bar/cat-cave/` | `pub/bar/ROOM.yml` | Cat cave inherits bar's "behind the counter" boundary |
 
 ### The Representation Spectrum
 
