@@ -46,6 +46,27 @@ methods:
     effect: "Create committee instance with roster"
     invoked-by: [player, room]
     
+  FORM-SMART:
+    description: "Create committee with smart selection from character pool"
+    parameters:
+      name: "Committee name"
+      purpose: "What they're deciding"
+      pool: "Path to character directory (e.g., characters/)"
+      strategy: "Selection strategy: core|balanced|consensus|evidence|innovation"
+      size: "Committee size (default: 5, range: 3-9)"
+      include: "Optional: specific characters to include"
+      exclude: "Optional: specific characters to exclude"
+      protocol: "Usually roberts-rules"
+    output: file (COMMITTEE.yml) + chat (selection rationale)
+    effect: |
+      1. Reads all character files in pool directory
+      2. Extracts propensities, risk tolerance, epistemology, debate roles
+      3. Applies selection strategy to maximize diversity
+      4. Creates committee with selected members
+      5. Outputs rationale explaining selection
+    invoked-by: [player, room]
+    see-also: SELECTION.md
+    
   CONVENE:
     description: "Start a committee session"
     parameters:
@@ -169,17 +190,101 @@ advertisements:
     score: 80
     condition: "Want to explore multiple framings of a problem"
 
+# SELECTION STRATEGIES
+# Used by FORM-SMART to select diverse committee members
+
+selection-strategies:
+  core:
+    description: "Mike Gallaher's canonical 5-member pattern"
+    size: 5
+    composition:
+      - propensity: paranoid_realism, role: devil's_advocate
+      - propensity: idealism, role: opportunity_scout
+      - propensity: continuity_guardian, role: historian
+      - propensity: evidence_prosecutor, role: evidence_checker
+      - propensity: systems_thinking, role: systems_analyst
+    ensures: "Maximum diversity: 5 propensities, 3+ epistemologies, 5 roles"
+    
+  balanced:
+    description: "Extended committee for deeper exploration"
+    size: 6-7
+    composition:
+      - core pattern (5 members)
+      - 1-2 additional: operational_realism or evidence_guardian
+    ensures: "Core diversity plus operational/evaluation depth"
+    
+  consensus:
+    description: "Optimized for reaching decisions efficiently"
+    size: 5
+    composition:
+      - 1 pusher: low risk, devil's_advocate
+      - 1 optimist: high risk, opportunity_scout
+      - 2-3 synthesizers: medium risk, can bridge perspectives
+    ensures: "Tension (pusher vs optimist) balanced with consensus-builders"
+    
+  evidence:
+    description: "For decisions requiring rigorous proof"
+    size: 6
+    composition:
+      - Multiple evidence-focused roles (prosecutor, guardian, architect)
+      - 1 paranoid_realism for reality check
+      - 1 systems_thinking for consequences
+      - 1 continuity_guardian for precedent
+    ensures: "Extensive evidence gathering and validation"
+    
+  innovation:
+    description: "For exploring new opportunities"
+    size: 6
+    composition:
+      - 2-3 optimists: high risk, opportunity_scout, innovation_scout
+      - 1 paranoid_realism for reality check
+      - 1 evidence_prosecutor for evidence check
+      - 1 systems_thinking for consequences
+    ensures: "Opportunity exploration with appropriate guardrails"
+
+# DIVERSITY DIMENSIONS
+# What FORM-SMART analyzes for selection
+
+diversity-dimensions:
+  propensity_type:
+    description: "Core perspective (paranoid, idealist, operational, etc.)"
+    weight: high
+    goal: "Maximize unique propensities"
+    
+  risk_tolerance:
+    description: "Low, medium, high, varies"
+    weight: high
+    goal: "Mix of low (pushers), medium (synthesizers), high (optimists)"
+    
+  epistemology:
+    description: "How they determine truth"
+    weight: high
+    values: [assume_bad_faith, assume_good_faith, trust_precedent, prove_it, trace_feedback_loops]
+    goal: "At least 3 different epistemologies"
+    
+  debate_role:
+    description: "Function in debate"
+    weight: medium
+    goal: "No duplicate roles unless intentional"
+
 # INTEGRATION
 
 workflow:
   typical-flow:
-    - FORM committee with relevant personas
+    - FORM or FORM-SMART committee with relevant personas
     - CONVENE session with topic
     - DELIBERATE following roberts-rules
     - VOTE on motion
     - EVALUATE output against rubric
     - If score poor, critique → DELIBERATE again
     - DISSOLVE when decision reached
+    
+  smart-selection-flow:
+    - FORM-SMART with pool path and strategy
+    - Review selection rationale
+    - Adjust if needed (include/exclude specific members)
+    - CONVENE session with topic
+    - Continue as typical-flow
 
 # RELATED
 

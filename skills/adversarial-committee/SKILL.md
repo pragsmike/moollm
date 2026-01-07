@@ -4,9 +4,10 @@ description: Committee of personas with opposing propensities forcing genuine de
 allowed-tools:
   - read_file
   - write_file
+  - list_dir
 tier: 1
 protocol: ADVERSARIAL-COMMITTEE
-tags: [debate, decision, ensemble, storytelling]
+tags: [debate, decision, ensemble, storytelling, selection]
 credits: "Mike Gallaher — core methodology"
 related: [roberts-rules, rubric, evaluator, soul-chat, speed-of-light, card]
 ---
@@ -59,6 +60,8 @@ committee:
 
 ## Formation
 
+### Manual Formation (FORM)
+
 ```yaml
 # committee/COMMITTEE.yml
 committee:
@@ -81,6 +84,30 @@ committee:
   evaluation: independent
   rubric: client-evaluation-rubric.yml
 ```
+
+### Smart Selection (FORM-SMART)
+
+Automatically select diverse members from a character pool:
+
+```yaml
+# Usage: FORM-SMART name="Strategy Review" pool="characters/" strategy="core"
+
+# Strategies:
+#   core      — Canonical 5-member pattern (paranoid, idealist, historian, evidence, systems)
+#   balanced  — Extended 6-7 members for deeper exploration
+#   consensus — Optimized for reaching decisions efficiently
+#   evidence  — For decisions requiring rigorous proof
+#   innovation — For exploring new opportunities
+
+# Output: COMMITTEE.yml with selected members + selection rationale
+```
+
+**Selection Principles:**
+1. **Diversity is essential** — opposing propensities create productive tension
+2. **Balance for consensus** — include synthesizers who can bridge perspectives
+3. **Avoid redundancy** — no duplicate propensities, epistemologies, or roles
+
+See [SELECTION.md](SELECTION.md) for detailed selection guide.
 
 ## Debate Protocol
 
@@ -168,6 +195,8 @@ deliberation:
 
 | Command | Action |
 |---------|--------|
+| `FORM [members]` | Create committee with specified personas |
+| `FORM-SMART [pool] [strategy]` | Create committee with smart selection from pool |
 | `CONVENE [committee]` | Activate committee for deliberation |
 | `PRESENT [question]` | Introduce topic for debate |
 | `DEBATE` | Run structured debate rounds |

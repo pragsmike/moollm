@@ -203,6 +203,12 @@ See `BEHAVIORS.md` for predefined behaviors you can use:
 
 Invoke by mentioning the protocol name (e.g., `DEBATE`) or structuring your scenario accordingly.
 
+### Committee Selection
+
+Use the `FORM-SMART` method from `skills/adversarial-committee/` to automatically select diverse committee members from your character pool. See `COMMITTEE-SELECTION.md` for local guidance, or `skills/adversarial-committee/SELECTION.md` for the full selection guide.
+
+**Strategies:** `core`, `balanced`, `consensus`, `evidence`, `innovation`
+
 ### Company/Person Aliases
 
 Character bios use fictional aliases for real companies and people to avoid legal issues. The alias mappings are in private files (`.company-aliases.yml`, `.person-aliases.yml`) excluded from git.
