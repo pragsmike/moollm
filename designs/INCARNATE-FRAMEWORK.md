@@ -239,7 +239,7 @@ HyperCard reimagined for NeWS. PostScript for code, graphics, AND data. Network 
 
 **MOOLLM inherits:** Object => Room => Parent => Skill => Prototype delegation. The Axis of Eval.
 
-### 7. PostScript & The Linguistic Motherboard (John Warnock)
+### 7. PostScript & The Linguistic Motherboard (John Warnock, Owen Densmore)
 
 > *"PostScript is a linguistic 'mother board', which has 'slots' for several 'cards'. The first card we built was a graphics card. We're considering other cards..."*
 
@@ -258,13 +258,14 @@ HyperCard reimagined for NeWS. PostScript for code, graphics, AND data. Network 
 | **Needs** | Hunger, Social, Fun, Hygiene, etc. | `skills/needs/` — character motives |
 | **Action Queue** | Sims queue up tasks | `skills/action-queue/` — ordered intentions |
 | **Advertisements** | Objects broadcast available actions | `CARD.yml` advertisements section |
-| **Autonomy** | Sims make their own decisions | Characters act independently in Speed of Light |
+| **Autonomy** | Sims make their own decisions | Characters act independently at Speed of Light |
 | **Buffs/Moodlets** | Temporary state modifiers | `skills/buff/` — temporary effects |
 | **Traits** | Personality system | `SIMS-TRAITS.yml` in character directories |
+| **SimAntics** | Visual behavior programming language | Empathic expressions + prompts |
 
 **Object Advertisements:**
 
-The Sims' revolutionary insight: **objects advertise what they can do**.
+The Sims' revolutionary insight: **objects advertise what they can do** based on n.
 
 ```yaml
 # A Sims refrigerator advertises:
@@ -283,6 +284,20 @@ gong:
 ```
 
 Sims scan advertisements and choose based on needs + personality. The LLM does the same.
+
+**SimAntics → Empathic Expressions:**
+
+SimAntics was The Sims' visual behavior programming language. Non-programmers could define complex behaviors by connecting nodes in flowcharts. Intent → behavior.
+
+```
+SimAntics:    [IF hungry] → [GO fridge] → [GET food] → [EAT]
+                     ↓
+Empathic:     "if the sim is hungry, have them get food from the fridge"
+                     ↓
+MOOLLM:       The LLM interprets natural language intent as behavior
+```
+
+SimAntics democratized behavior authoring. Empathic expressions take this further — no visual editor needed, just describe what you want.
 
 **Action Queues:**
 
@@ -311,6 +326,7 @@ don_queue:
 - Autonomy — characters make decisions
 - Traits as personality system
 - Buffs as temporary modifiers
+- SimAntics → empathic expressions (intent → behavior)
 
 ### 9. Constructionism (Seymour Papert)
 
