@@ -41,6 +41,35 @@ Don Hopkins coined this phrase to describe HyperLook's unification of three dime
 
 PostScript's insight: **text is graphics** — glyphs are vectors, transforms apply to both. MOOLLM inherits this: Markdown IS graphics (formatted text), Mermaid IS graphics (diagrams from text), image prompts ARE graphics (descriptions → images).
 
+### Pivoting Through The Axis
+
+The same content can be **pivoted** from dimension to dimension:
+
+```
+        ┌─────────────────────────────────────────┐
+        │              THE SAME TEXT              │
+        └─────────────────────────────────────────┘
+                          │
+          ┌───────────────┼───────────────┐
+          ▼               ▼               ▼
+       ┌──────┐       ┌──────┐       ┌──────┐
+       │ CODE │       │ DATA │       │GRAPH │
+       └──────┘       └──────┘       └──────┘
+       Execute        Interpret       Render
+       as behavior    as structure    as visuals
+```
+
+| Operation | Pivot Direction | Example |
+|-----------|-----------------|---------|
+| **Generate** | → Graphics | LLM writes Markdown prose |
+| **Interpret** | → Data | LLM extracts structure from prose |
+| **Execute** | → Code | LLM follows instructions in comments |
+| **Render** | → Graphics | Mermaid text becomes diagram |
+| **Parse** | → Data | YAML string becomes object |
+| **Eval** | → Code | Expression becomes result |
+
+**The LLM is the pivot.** It rotates content through the Axis of Eval, treating the same text as code, data, or graphics depending on context.
+
 In HyperLook, PostScript was the universal medium. In MOOLLM, **YAML Jazz + Markdown** is the universal medium, and the **LLM** is the interpreter.
 
 ```yaml
