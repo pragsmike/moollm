@@ -84,6 +84,113 @@ The "metaprogramming" is the LLM's ability to read and apply natural language de
 
 ---
 
+## The Opinionated Framework Problem
+
+### Why Rails Succeeded
+
+Rails is famously "opinionated" — it makes choices for you:
+- Convention over configuration
+- One right way to structure models
+- Database schema dictates object structure
+- Testing frameworks, asset pipelines, deployment patterns
+
+This works! Rails' opinions eliminate decision fatigue and ensure consistency.
+
+### Where "Opinionated" Goes Wrong
+
+But "opinionated" has a dark side: **One opinion is the WRONG number of opinions.**
+
+When a framework has one voice, you get:
+- No room for dissent or alternative approaches
+- The "right way" becomes the *only* way
+- Diversity of thought is treated as error
+- Newcomers must conform or leave
+
+The problem isn't having opinions. It's having *only one*.
+
+### LLMs: The Statistical Centroid Problem
+
+By default, LLMs give you **the boring average**:
+- The statistical center of all training data
+- The safest, most mediocre response
+- The centroid of opinion space
+- What "sounds right" to the most people
+
+Ask an LLM a controversial question, you get mush. Ask for creative output, you get clichés. The single voice produces the single answer that offends no one and inspires no one.
+
+### MOOLLM's Solution: Many Voices
+
+MOOLLM rejects the single-voice model. Instead:
+
+| Single Voice | Many Voices ([Adversarial Committee](../skills/adversarial-committee/)) |
+|--------------|-------------------------------------------------------------------------|
+| One "right" answer | Multiple perspectives ([debate](../skills/debate/)) |
+| Centroid/average | Outliers and extremes invited |
+| Safe and bland | Flashes of original brilliance |
+| Conformity required | Diversity essential |
+| Errors silenced | Dissent recorded |
+
+This draws from [Mike Gallaher's methodology](./mike-gallaher-ideas.md):
+
+> *"No single story is 'true' — but the ensemble approximates actionable wisdom."*
+> *"You can't capture a sphere with a single flat map. You need multiple overlapping projections."*
+
+### The Proof: The Great Monkey Paw Debate
+
+When Don wanted to wish on the [Monkey's Paw](../examples/adventure-4/coatroom/monkeys-paw.yml), we didn't let a single voice decide.
+
+**The Panel ([Turn 4](../examples/adventure-4/sessions/don-session-1.md#turn-4-the-great-monkey-paw-debate-)):**
+
+| Seat | Character | Perspective |
+|------|-----------|-------------|
+| 1 | Mizaru 🙈 | See No Evil — questions perception |
+| 2 | Kikazaru 🙉 | Hear No Evil — questions communication |
+| 3 | Iwazaru 🙊 | Speak No Evil — questions expression |
+| 4 | W.W. Jacobs 👻 | Author — warns of his own creation |
+| 5 | Sun Wukong 🐵👑 | Monkey King — chaos perspective |
+| 6 | Djinn Al-Mazin 🧞 | Wish expert — technicalities |
+| 7 | Curious George 🐒 | Innocent — asks obvious questions |
+| 8 | Marieke 🌿 | Local wisdom — grounds in reality |
+
+**The Moderators:** Cheech & Chong — ensure debate stays loose and fair.
+
+**What Happened:**
+1. [Initial vote](../examples/adventure-4/sessions/don-session-1.md#-initial-vote-count): Split decision, concerns raised
+2. [Don's amendments](../examples/adventure-4/sessions/don-session-1.md#turn-5-dons-amendments--full-autonomy-protocol): Responds to each concern
+3. [Updated vote](../examples/adventure-4/sessions/don-session-1.md#-updated-vote-count): More support, new concerns
+4. [Final approval](../examples/adventure-4/sessions/don-session-1.md#turn-6-the-acceptance-of-risk): Unanimous after full deliberation
+
+**The Result:** A better wish. The [Full Autonomy Protocol](../skills/incarnation/) that emerged wasn't Don's original idea — it was *evolved* through debate. Curious George's "naive" question about consent led to the no-fault divorce clause. Djinn's technicalities led to the curse-nullification provisions.
+
+**Then it WORKED:** [Palm was incarnated](../examples/adventure-4/sessions/don-session-1.md#turn-8-the-seeing--collective-witness-individual-becoming-) successfully, with full autonomy, and the protocol was [lifted into a reusable skill](../examples/adventure-4/sessions/don-session-1.md#-play--learn--lift-the-incarnation-skill).
+
+### Why This Matters
+
+A single opinionated voice would have:
+- Given Don's original wish (flawed)
+- Or rejected the wish entirely (nothing gained)
+- Or produced a committee-by-centroid compromise (bland, safe, boring)
+
+Eight voices with two stoner moderators produced:
+- A better wish than any individual conceived
+- Edge cases addressed before they became problems
+- A reusable protocol for future character creation
+- An actual monkey named Palm who writes philosophical essays
+
+**One opinion is the wrong number.** Rails teaches us that opinions are valuable. MOOLLM teaches us that *many* opinions, in structured debate, are more valuable still.
+
+### Related Skills
+
+| Skill | Purpose |
+|-------|---------|
+| [adversarial-committee/](../skills/adversarial-committee/) | Committee formation and structured debate |
+| [debate/](../skills/debate/) | Formal argumentation protocol |
+| [roberts-rules/](../skills/roberts-rules/) | Parliamentary procedure |
+| [rubric/](../skills/rubric/) | Scoring against criteria |
+| [evaluator/](../skills/evaluator/) | Independent evaluation (dramatic irony) |
+
+---
+
 ## The XML-Industrial Complex
 
 Two classic programming aphorisms:
