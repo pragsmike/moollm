@@ -205,7 +205,7 @@ Prototypes instead of classes. Delegation instead of inheritance. "Objects all t
 | **Delegation** | Objects delegate to parents | Rooms delegate to parent directories |
 | **Slots** | Named properties that can be methods | YAML keys can be data or behavior (comments as code), files in directories |
 | **Clone to Create** | `copy` creates new object | Instantiate skill creates new adventure |
-| **Dynamic Deoptimization** | Reconstruct stack at debug time | `return-stack` reconstructs causal traces |
+| **Dynamic Deoptimization** | Reconstruct stack at debug time | [`return-stack`](../skills/return-stack/) reconstructs causal traces |
 | **Morphs** | Visual objects that can be picked up | Characters, items, rooms are all manipulable |
 
 **The Delegation Chain:**
@@ -220,7 +220,7 @@ MOOLLM: Room → Parent Directory → Skill → Prototype → ...
 - Prototype-based skills (no "skill classes")
 - Delegation Object Protocol (file lookup walks up directories)
 - Clone to instantiate (`adventure/` → `adventure-4/`)
-- Dynamic deoptimization (`return-stack` skill)
+- Dynamic deoptimization ([`return-stack`](../skills/return-stack/) skill)
 - Slots as data+behavior (YAML Jazz comments)
 
 ### 5. NeWS (James Gosling, Sun, 1986)
@@ -255,11 +255,11 @@ HyperCard reimagined for NeWS. PostScript for code, graphics, AND data. Network 
 
 | Concept | The Sims | MOOLLM |
 |---------|----------|--------|
-| **Needs** | Hunger, Social, Fun, Hygiene, etc. | `skills/needs/` — character motives |
-| **Action Queue** | Sims queue up tasks | `skills/action-queue/` — ordered intentions |
+| **Needs** | Hunger, Social, Fun, Hygiene, etc. | [`skills/needs/`](../skills/needs/) — character motives |
+| **Action Queue** | Sims queue up tasks | [`skills/action-queue/`](../skills/action-queue/) — ordered intentions |
 | **Advertisements** | Objects broadcast available actions | `CARD.yml` advertisements section |
 | **Autonomy** | Sims make their own decisions | Characters act independently at Speed of Light |
-| **Buffs/Moodlets** | Temporary state modifiers | `skills/buff/` — temporary effects |
+| **Buffs/Moodlets** | Temporary state modifiers | [`skills/buff/`](../skills/buff/) — temporary effects |
 | **Traits** | Personality system | `SIMS-TRAITS.yml` in character directories |
 | **SimAntics** | Visual behavior programming language | Empathic expressions + prompts |
 
@@ -332,7 +332,7 @@ don_queue:
 
 Learning by building inspectable things. Logo. Turtle graphics. "Low floor, high ceiling, wide walls."
 
-**MOOLLM inherits:** The `constructionism` skill. Play-Learn-Lift as methodology.
+**MOOLLM inherits:** The [`constructionism`](../skills/constructionism/) skill. Play-Learn-Lift as methodology.
 
 ### 10. TinyMUD & LambdaMOO (Jim Aspnes, Pavel Curtis, 1989-1990)
 
@@ -390,7 +390,7 @@ MOO taught us that virtual worlds need:
 
 **MOOLLM inherits:**
 - Room-based navigation (directories as rooms)
-- Builder commands (`skills/room/` with @DIG, @OPEN, @LINK)
+- Builder commands ([`skills/room/`](../skills/room/) with @DIG, @OPEN, @LINK)
 - Object properties and verbs (YAML state + CARD.yml methods)
 - User-created content (Play-Learn-Lift)
 - Delegation-based inheritance (parent directories)
@@ -950,7 +950,7 @@ One skill that handles ALL empathic language interpretation:
 | **Empathic Pretty Printer** | Formats with understanding |
 | **Generous Linter** | Catches errors, suggests fixes kindly |
 | **Intent Compiler** | Translates intent → working code |
-| **Depseudofier** | Converts vague to precise |
+| **De-pseudo-ifier** | Converts vague to precise |
 
 ### Empathic Templates: Smart Instantiation
 
@@ -1045,7 +1045,7 @@ Makes clear we're **summoning** them as loving imagination, not claiming they ap
 
 ### Room-Based Ethics Inheritance
 
-The `representation-ethics` skill defines framing modes that rooms inherit:
+The [`representation-ethics`](../skills/representation-ethics/) skill defines framing modes that rooms inherit:
 
 ```yaml
 # pub/stage/ROOM.yml
@@ -1068,7 +1068,7 @@ framing:
 
 ### The Representation Spectrum
 
-From `skills/representation-ethics/`:
+From [`skills/representation-ethics/`](../skills/representation-ethics/):
 
 | Type | Example | Status |
 |------|---------|--------|
