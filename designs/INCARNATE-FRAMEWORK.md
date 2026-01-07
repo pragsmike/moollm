@@ -31,13 +31,15 @@ MOOLLM stands on the shoulders of giants. This document traces the lineage.
 
 Don Hopkins coined this phrase to describe HyperLook's unification of three dimensions around PostScript:
 
-| Dimension | HyperLook (PostScript) | MOOLLM (YAML Jazz) |
-|-----------|------------------------|---------------------|
+| Dimension | HyperLook (PostScript) | MOOLLM (YAML Jazz + Markdown) |
+|-----------|------------------------|-------------------------------|
 | **Code** | PostScript procedures | Empathic Expressions, Protocols, Skills |
-| **Graphics** | PostScript drawing | Descriptions, IMAGE-PROMPTS.yml, Markup, Mermaid |
+| **Graphics** | PostScript drawing (text IS graphics) | Markdown, HTML, CSS, SVG, Mermaid, image prompts |
 | **Data** | PostScript dictionaries | YAML structure, State files, Comments |
 
 **One language. Three dimensions. One interpreter.**
+
+PostScript's insight: **text is graphics** — glyphs are vectors, transforms apply to both. MOOLLM inherits this: Markdown IS graphics (formatted text), Mermaid IS graphics (diagrams from text), image prompts ARE graphics (descriptions → images).
 
 In HyperLook, PostScript was the universal medium. In MOOLLM, **YAML Jazz + Markdown** is the universal medium, and the **LLM** is the interpreter.
 
@@ -45,7 +47,7 @@ In HyperLook, PostScript was the universal medium. In MOOLLM, **YAML Jazz + Mark
 # The LLM reads this as:
 #   - DATA: structured YAML
 #   - CODE: instructions in comments
-#   - GRAPHICS: descriptions that generate images
+#   - GRAPHICS: descriptions that generate formatted text and images
 
 character:
   name: "Palm"
@@ -117,7 +119,7 @@ HyperCard reimagined for NeWS. PostScript for code, graphics, AND data. Network 
 
 **MOOLLM inherits:** LLM as linguistic motherboard. Skills as cards. `CARD.yml` is literal!
 
-### 8. SimCity & The Simulator Effect (Will Wright)
+### 8. SimCity, The Sims, and The Simulator Effect (Will Wright)
 
 > *"He designs games to run on two computers at once: the electronic one on the player's desk, running his shallow tame simulation, and the biological one in the player's head, running their deep wild imagination."*
 
@@ -189,7 +191,7 @@ Skills exist at different levels of embodiment:
 | **Mentioned** | K-line in conversation | Ephemeral | "Use POSTEL here" |
 | **Modeled** | Behavior in chat | Session | PLAY-LEARN-LIFT in action |
 | **Embedded** | YAML in narrative | Document | Data island in LOG.md |
-| **Incarnate** | Directory with state | Persistent | `examples/adventure-4/` |
+| **Incarnate** | Directory or file with state | Persistent | `examples/adventure-4/` |
 
 ---
 
