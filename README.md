@@ -1101,6 +1101,7 @@ graph TD
 |--------|------------------|
 | **[kernel/](./kernel/)** | ⚙️ Core protocols: Constitution, Memory, Context, Tool Calling, Self-Healing. The "OS" layer. |
 | **[PROTOCOLS.yml](./PROTOCOLS.yml)** | 📜 Master registry of all K-line symbols. The vocabulary of MOOLLM. |
+| <nobr>**[designs/MOOLLM-EVAL-INCARNATE-FRAMEWORK.md](./designs/MOOLLM-EVAL-INCARNATE-FRAMEWORK.md)**</nobr> | 📖 **The manifesto.** Intellectual genealogy, Axis of Eval, Incarnate Skills, proofs from simulation. |
 | **[designs/kilroy-ideas.md](./designs/kilroy-ideas.md)** | 🔗 How MOOLLM synergizes with Chuck Shotton's Kilroy data flow platform. |
 
 ### 🎪 More Skills
@@ -1110,9 +1111,9 @@ graph TD
 | <nobr>**[skills/memory‑palace/](./skills/memory-palace/)**</nobr> | 🏛️ Spatial knowledge organization. Rooms as cognitive spaces. |
 | <nobr>**[skills/sister‑script/](./skills/sister-script/)**</nobr> | 📝 Documents that grow into scripts. BUILD command. Automation. |
 | **[skills/adventure/](./skills/adventure/)** | 🗺️ Structured exploration. Goals, discoveries, choices. |
-| **[examples/](./examples/)** | 🎮 Four adventures: seed (1), legendary (2), rich template (3), **[Don's epic run (4)](./examples/adventure-4/sessions/don-session-1.md)**. |
+| **[examples/](./examples/)** | 🎮 Three adventures: template (1), legendary playthrough (2), ready to play (3). |
 
-> **TL;DR:** Read [skills/constructionism/](./skills/constructionism/) for philosophy, [skills/room/](./skills/room/) for the fun stuff, then **play** [adventure‑3/](./examples/adventure-3/) — or read **[Don's session log](./examples/adventure-4/sessions/don-session-1.md)** to see Palm's incarnation, 33-turn Fluxx marathon, and Speed of Light simulation in action!
+> **TL;DR:** Read [skills/constructionism/](./skills/constructionism/) for philosophy, [skills/room/](./skills/room/) for the fun stuff, then **play** [adventure‑3/](./examples/adventure-3/) — or explore [adventure‑4/](./examples/adventure-4/) for the latest innovations (incarnation, Speed of Light), or read [adventure‑2/](./examples/adventure-2/) for a legendary playthrough!
 
 ---
 
