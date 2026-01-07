@@ -416,7 +416,7 @@ A single LLM call simulated:
 The phrase "Eval Incarnate" captures the dual meaning:
 
 1. **Evaluation made executable** — Skills are not just descriptions, they run
-2. **Bad connotations turned good** — Like "evil incarnate" but productive
+2. **Bad connotations turned good** — Like "evil incarnate" but for good
 
 It's tongue-in-cheek. It's a little edgy. It's memorable.
 
@@ -424,11 +424,448 @@ And it's TRUE: MOOLLM skills are **eval incarnate** — they are evaluations (as
 
 ---
 
+## Incarnate Skills vs Anthropic Skills
+
+Anthropic's Skills model is an excellent foundation. We respectfully build upon it.
+
+### What We Share
+
+| Principle | Anthropic | MOOLLM |
+|-----------|-----------|--------|
+| **Documentation-first** | ✓ | ✓ README.md + SKILL.md |
+| **Tool definitions** | ✓ | ✓ YAML frontmatter |
+| **Composability** | ✓ | ✓ Dovetails section |
+| **Human gates** | ✓ | ✓ PLAN-THEN-EXECUTE |
+| **Skill libraries** | ✓ | ✓ skills/ directory |
+
+**The foundation is sound.** We build on it.
+
+### What We Add
+
+| Innovation | Description | Proof |
+|------------|-------------|-------|
+| **Instantiation** | Skills as prototypes creating instances | `adventure/` → `adventure-4/` with 150+ files |
+| **Three-Tier Persistence** | Platform (ephemeral) → Narrative (append) → State (edit) | 6000+ line session logs, persistent room state |
+| **K-lines** | Names as semantic activation vectors (Minsky) | "Palm" activates entire soul, history, relationships |
+| **Empathic Templates** | Smart generation, not string substitution | Biscuit's description generated from traits |
+| **Speed of Light** | Many turns in one call, minimal tokenization | 33-turn Fluxx game, 21-turn cat prowl |
+| **CARD.yml** | Machine-readable interface with advertisements | Every skill exposes methods, tools, state schema |
+| **Ethical Framing** | Room-based inheritance of performance context | Stage inherits `framing: performance` |
+
+### The Key Differences
+
+| Aspect | Anthropic Skills | Incarnate Skills |
+|--------|------------------|------------------|
+| **Nature** | Static documentation | Living programs |
+| **State** | Stateless | Three-tier persistence |
+| **Instantiation** | N/A | Clone from prototype |
+| **Inheritance** | N/A | Delegation chain (Self) |
+| **Activation** | Explicit invocation | K-line semantic trigger |
+| **Templates** | String substitution | Empathic generation |
+| **Multi-agent** | External orchestration | Speed of Light internal |
+
+### Why README.md Matters
+
+Anthropic recommends against README.md in skills. We respectfully disagree:
+
+- **GitHub renders README.md** as the landing page
+- **Humans browse skills** before invoking them
+- **Play-Learn-Lift** starts with exploration
+- **Two audiences**: humans (README) and LLMs (SKILL.md + CARD.yml)
+
+**Keep both.** README for discovery, SKILL.md for protocol, CARD.yml for interface.
+
+---
+
+## CARD.yml: The Skill Interface
+
+John Warnock described PostScript as a "linguistic motherboard" with slots for capability cards. In MOOLLM, `CARD.yml` is literal — every skill has a machine-readable interface card.
+
+### The Three Required Files
+
+```
+skills/my-skill/
+├── README.md    # Human landing page (GitHub renders this)
+├── SKILL.md     # Full protocol with YAML frontmatter
+└── CARD.yml     # Machine-readable interface definition
+```
+
+### What CARD.yml Contains
+
+```yaml
+name: my-skill
+tier: gameplay        # skill | protocol | gameplay | utility
+
+tools:
+  required: [read_file, grep]
+  optional: [write, search_replace]
+
+methods:
+  - name: DO-SOMETHING
+    description: What this method does
+    parameters:
+      - name: target
+        type: string
+        required: true
+    returns: result description
+
+state:
+  instance_creates:
+    - "STATE.yml"
+    - "LOG.md"
+
+advertisements:
+  # What this skill offers to other skills/characters
+  DO-SOMETHING:
+    visibility: public
+    trigger: "when target is available"
+```
+
+### Advertisements: The Sims Action Queue
+
+Inspired by The Sims, objects (and skills) **advertise** what they can do:
+
+| Object | Advertisements |
+|--------|---------------|
+| **Bed** | SLEEP, NAP, WOOHOO |
+| **Fridge** | GET-SNACK, GET-DRINK, SERVE-MEAL |
+| **Pie Table** | SIT, SUMMON-PANEL, MUSICAL-CHAIRS |
+| **Gong** | RING, RING-TWICE, RING-THRICE |
+
+Characters see advertisements and choose actions. The LLM does the same with skills.
+
+### Cards as Activation Records
+
+Playing a card creates a stack frame:
+
+```yaml
+# design-room/architect-task-001.activation
+card: architect.card
+method: GENERATE-PROPOSAL
+state:
+  iteration: 3
+  current_draft: proposal-v3.yml
+  status: awaiting_vote
+advertisements:
+  APPROVE: {}    # Committee can vote
+  CRITIQUE: {}   # Experts provide feedback
+  REVISE: {}     # Request iteration
+```
+
+Like Self, cards have **multiple methods**. The LLM supplies implicit parameters from context (Postel).
+
+---
+
+## The Empathic Suite: Dovetailing Skills
+
+The Empathic Suite is a family of skills that embrace the LLM's native strengths: understanding intent, navigating idea space, generating coherent output.
+
+### The Philosophy
+
+> *"Stop fighting the LLM's nature. Stop pretending it's a parser. Let it **understand** and **generate** — that's what it's GREAT at."*
+
+Traditional systems fight the LLM:
+- Strict parsers reject imperfect input
+- Multiple API calls lose precision
+- Tokenization destroys nuance
+- Context window treated as limitation
+
+**MOOLLM embraces the LLM:**
+- Generous interpretation understands intent
+- Speed of light keeps computation internal
+- Empathic expressions leverage semantic understanding
+- Context window is a **stage** where all actors perform
+
+### The Suite
+
+| Skill | Role | Connection |
+|-------|------|------------|
+| **empathic-expressions** | Intent → Code | The big tent for all languages |
+| **empathic-templates** | Smart instantiation | Uses expressions for vars/conditions |
+| **postel** | Generous interpretation | Foundation for all empathic skills |
+| **yaml-jazz** | Comments as data | Semantic structure |
+| **speed-of-light** | Internal simulation | Minimizes tokenization |
+
+### How They Dovetail
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    EMPATHIC SUITE                            │
+├─────────────────────────────────────────────────────────────┤
+│                                                              │
+│   ┌───────────────────────┐    ┌───────────────────────┐    │
+│   │ EMPATHIC-EXPRESSIONS  │───▶│ EMPATHIC-TEMPLATES    │    │
+│   │ (interpret intent)    │    │ (smart instantiation)  │    │
+│   └───────────────────────┘    └───────────────────────┘    │
+│            │                            │                    │
+│            ▼                            ▼                    │
+│   ┌───────────────────────┐    ┌───────────────────────┐    │
+│   │ POSTEL (generous)     │    │ YAML-JAZZ (style)     │    │
+│   └───────────────────────┘    └───────────────────────┘    │
+│                                                              │
+│   All follow SPEED-OF-LIGHT philosophy:                     │
+│   • Work in vectors, delay tokenization                     │
+│   • Preserve precision as long as possible                  │
+│   • Minimize boundary crossings                             │
+│                                                              │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### Empathic Expressions: The Big Tent
+
+One skill that handles ALL empathic language interpretation:
+
+| Empathic... | Input | Output |
+|-------------|-------|--------|
+| **SQL** | "get users who signed up last week" | `SELECT * FROM users WHERE created_at > NOW() - INTERVAL 7 DAY` |
+| **Python** | "sort by date newest first" | `sorted(items, key=lambda x: x.date, reverse=True)` |
+| **JavaScript** | "when button clicked show modal" | Event handlers with proper binding |
+| **Bash** | "find big old files and compress" | `find . -size +100M -mtime +30 -exec gzip {} \;` |
+| **YAML** | "grumpy but secretly kind" | Proper trait structure with YAML Jazz |
+| **Natural** | "make it faster" | Identifies bottleneck, optimizes |
+
+**The LLM as Code Processor:**
+
+| Role | Function |
+|------|----------|
+| **Pseudocode Interpreter** | Executes high-level intent |
+| **Empathic Pretty Printer** | Formats with understanding |
+| **Generous Linter** | Catches errors, suggests fixes kindly |
+| **Intent Compiler** | Translates intent → working code |
+| **Depseudofier** | Converts vague to precise |
+
+### Empathic Templates: Smart Instantiation
+
+**Traditional:** `{{name}}` → literal substitution
+**Empathic:** `{{describe_character}}` → intelligent generation
+
+```yaml
+# Template
+description: |
+  {{describe_appearance_based_on_species_and_personality}}
+
+# Context
+species: "Golden Retriever mix"
+personality: ["enthusiastic", "loyal", "goofy"]
+
+# Generated (not substituted!)
+description: |
+  Biscuit is a fluffy, perpetually happy Golden Retriever mix with
+  eyes that sparkle with boundless enthusiasm. His tail is in a
+  constant state of wagging, a furry metronome of joy.
+```
+
+**Comment Intelligence:** The LLM distinguishes meta-comments (instructions for generation) from concrete comments (for the output):
+
+| Type | Indicators | Action |
+|------|------------|--------|
+| **Meta** | `# TEMPLATE:`, `# INSTRUCTION:` | **Stripped** |
+| **Concrete** | `# This explains...`, explanatory | **Preserved** |
+
+### Postel's Law: The Foundation
+
+> *"Be conservative in what you send, be liberal in what you accept."*
+
+Extended for LLMs:
+
+| Accepts | Generates |
+|---------|-----------|
+| Fuzzy syntax | Correct syntax |
+| Vernacular | Best practices |
+| Misspellings | Documented code |
+| Wrong language | Idiomatic patterns |
+| Pseudocode | Edge case handling |
+
+**Critical:** Never makes unwarranted assumptions. When truly ambiguous, **asks for clarification**.
+
+### Code-Switching Support
+
+The LLM tracks transitions between languages, preserving context:
+
+```markdown
+First query the data:
+```sql
+SELECT * FROM users WHERE active = true
+```
+
+Then process in Python:
+```python
+for user in results:
+    send_welcome_email(user)
+```
+```
+
+**Context carries across switches.** Variables established in one block available in the next.
+
+---
+
+## Ethical Representation: The Tribute Protocol
+
+MOOLLM enables simulation of real people — celebrities, creators, historical figures. This requires explicit ethical framing.
+
+### The Problem
+
+| Claim | Status |
+|-------|--------|
+| "They visited" | ❌ False claim |
+| "We imagined them visiting" | ✓ Honest tribute |
+| "This is what they said" | ❌ Puts words in mouths |
+| "This is what we imagine they might say" | ✓ Loving fan fiction |
+
+### The Three-Beat Protocol
+
+**1. INVOCATION (Before They "Arrive")**
+> *"Let's invoke them. In the spirit of tribute. Imagine they're here..."*
+
+Makes clear we're **summoning** them as loving imagination, not claiming they appeared.
+
+**2. PERFORMANCE (The Scene Itself)**
+> 🎭 **TRIBUTE PERFORMANCE:** *The following is a loving simulation — what we imagine it might be like if these legends visited our Grotto. All dialogue is imagined with affection.*
+
+**3. ACKNOWLEDGMENT (After They "Depart")**
+> *"That was a tribute. A simulation. We honored them by imagining them here. That's love."*
+
+### Room-Based Ethics Inheritance
+
+The `representation-ethics` skill defines framing modes that rooms inherit:
+
+```yaml
+# pub/stage/ROOM.yml
+framing:
+  modes:
+    - performance     # Acting is understood
+    - fictional       # Not documentary
+    - tribute         # Honoring, not claiming
+    - third_place     # Social gathering space
+    
+  ethical_grounding:
+    skill: representation-ethics
+    inheritance: |
+      All performances on this stage inherit the 
+      understanding that they are fictional, 
+      performative, and tributary.
+```
+
+**Child content inherits this framing.** DRY ethics.
+
+### The Representation Spectrum
+
+From `skills/representation-ethics/`:
+
+| Type | Example | Status |
+|------|---------|--------|
+| **Deceptive Impersonation** | Claiming to BE them | ❌ Wrong |
+| **Tradition Activation** | Using their ideas/influence | ✓ OK |
+| **Performance Impersonation** | With explicit framing | ✓ OK |
+
+### Proof: The Looney Labs Visit
+
+Andy & Kristin Looney (actual Fluxx creators) "visited" the pub:
+
+1. **Invocation**: "Let's imagine the creators of Fluxx walked in..."
+2. **Performance**: 33 turns of Stoner Fluxx with fact-checked details
+3. **Acknowledgment**: "That was a tribute to brilliant game designers"
+
+The simulation included **verified facts** (Wikipedia links) woven into fiction:
+- Fluxx first published: 1997
+- Looney Labs founded: 1996
+- Both worked at NASA Goddard
+- Andy: software programmer (Hubble!)
+- Kristin solved Rubik's Cube on "That's Incredible" at age 16
+
+**Accuracy fix during session:** Andy wears a lab coat, not a beard! Updated mid-narrative.
+
+### The Guest Book Pattern
+
+`pub/guest-book.yml` — lightweight soul persistence for visitors:
+
+```yaml
+guest_book:
+  nature: tribute_archive
+  
+  framing: |
+    ALL entries here are loving simulations.
+    Some people are real. Some are fictional.
+    ALL visits are imagined with affection.
+    They're here because we WISH they were here.
+    That's the magic. That's the tribute.
+    
+  entries:
+    - name: "Andy Looney"
+      also_known_as: ["The guy in the lab coat"]
+      nature: tribute_simulation
+      verified_facts:
+        wikipedia: "https://en.wikipedia.org/wiki/Andy_Looney"
+```
+
+---
+
+## Speed of Light: The Anti-Pattern Critique
+
+### The Carrier Pigeon Problem
+
+> *"Writing on toilet paper with crayon from a prison cell,*  
+> *sending messages by carrier pigeon,*  
+> *when you could be navigating idea-space at speed of light."*
+
+Traditional multi-agent systems:
+```
+Agent A → [tokenize] → API → [detokenize] → 
+Agent B → [tokenize] → API → [detokenize] → 
+Agent C → ...
+
+Each boundary: +noise, +latency, +cost, -precision
+```
+
+**Speed of Light:**
+```
+Human → [tokenize once] → 
+  LLM simulates A, B, C at light speed → 
+    [detokenize once] → Human
+
+One boundary in, one boundary out.
+Maximum precision preserved.
+```
+
+### Proof: The Numbers
+
+| Demo | Turns | Agents | What It Proves |
+|------|-------|--------|----------------|
+| **Stoner Fluxx** | 33 | 8+ characters | Complex game state, rule changes, humor |
+| **Cat Prowl** | 21 | 10 cats | Parallel paths, territorial marking, coordinated return |
+| **Palm Incarnation** | ~8 | 6+ personas | Tribunal debate, autonomous character creation |
+| **Biscuit Run** | 15 | 2 (Don + Biscuit) | Room exploration, marking, grue avoidance |
+
+### Statistics from Cat Prowl
+
+| Metric | Value |
+|--------|-------|
+| **Total Turns** | 21 |
+| **Agents Simulated** | 10 cats + 1 sleeping dog |
+| **Rooms Traversed** | 13 |
+| **Total Cat Actions** | 187 |
+| **Garden Deposits** | 10 (one per cat) |
+| **Files Modified** | 14 |
+| **Lines Added** | 458 |
+
+**Average Concurrent Actions per Turn:** 7.3
+**Maximum Concurrent Actions:** 10 (Turns 5-8)
+
+### The Emacs Principle
+
+Like Emacs screen updates: **defer and coalesce**.
+
+Don't update the screen (tokenize) on every keystroke. Wait until the user pauses, then update once. Same with file edits: batch them, write once.
+
+**Speed of Light applies this to LLM calls:** Do many turns internally, emit state once.
+
+---
+
 ## Related Documents
 
 - [MEMGPT-ANALYSIS.md](./MEMGPT-ANALYSIS.md) — OS-inspired context management
 - [MOOLLM-MANIFESTO.md](./MOOLLM-MANIFESTO.md) — Core philosophy
-- [constitution-design.md](./constitution-design.md) — Ethical foundations
+- [constitution-design-summary.md](./constitution-design-summary.md) — Ethical foundations
 - [skills/skill/SKILL.md](../skills/skill/SKILL.md) — The meta-skill
 - [skills/incarnation/SKILL.md](../skills/incarnation/SKILL.md) — Character creation protocol
 
