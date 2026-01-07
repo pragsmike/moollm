@@ -1018,7 +1018,7 @@ Extended for LLMs:
 
 The LLM tracks transitions between languages, preserving context:
 
-```markdown
+````markdown
 First query the data:
 ```sql
 SELECT * FROM users WHERE active = true
@@ -1029,7 +1029,7 @@ Then process in Python:
 for user in results:
     send_welcome_email(user)
 ```
-```
+````
 
 **Context carries across switches.** Variables established in one block available in the next.
 
