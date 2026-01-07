@@ -400,6 +400,174 @@ This is [Constructionism](../skills/constructionism/) applied to language design
 
 ---
 
+## MOOLLM Skills vs. Anthropic Skills: Standing on Giants' Shoulders
+
+### What Anthropic Got Right
+
+Anthropic's skill framework is brilliant. MOOLLM gratefully inherits:
+
+| Anthropic Innovation | MOOLLM Adoption |
+|---------------------|-----------------|
+| Skills as markdown documents | ✓ `SKILL.md` as executable prose |
+| Clear action definitions | ✓ Methods in `CARD.yml` |
+| Structured state management | ✓ YAML Jazz state files |
+| Separation of concerns | ✓ Skill directories with focused responsibilities |
+| Human-readable specifications | ✓ README.md for every skill |
+
+Anthropic proved that **skills are programs and the LLM is `eval()`**. This insight is foundational.
+
+### Where MOOLLM Goes Further
+
+MOOLLM extends Anthropic's model with capabilities that emerge from the Incarnate philosophy:
+
+| Capability | Anthropic Skills | MOOLLM Incarnate Skills |
+|------------|------------------|------------------------|
+| **Instantiation** | Static definitions | Clone-to-create, Self-style prototypes |
+| **State** | Ephemeral (per-call) | Persistent (filesystem = save game) |
+| **Identity** | Anonymous | K-lines activate full context |
+| **Composition** | Import-based | Prototype inheritance chains |
+| **Memory** | Context window only | Comments as persistent memory |
+| **Empathy** | Syntax-focused | Intent-focused (Postel's Law) |
+| **Speed** | One-turn-per-call | Many-turns-per-call (Speed of Light) |
+| **Ethics** | Per-skill | Room-based inheritance (DRY ethics) |
+
+### The Seven Incarnate Extensions
+
+**1. Instantiation & Prototypes**
+
+Anthropic skills are *definitions*. MOOLLM skills are *prototypes* you clone:
+
+```yaml
+# Anthropic: Static skill
+skills/bartender/SKILL.md  # One definition, used as-is
+
+# MOOLLM: Prototype inheritance
+skills/bartender/           # Prototype
+  └── skills/budtender/     # Inherits, extends with cannabis knowledge
+        └── characters/marieke/  # Instance with personality, history, relationships
+```
+
+**2. K-Line Identity**
+
+When you say "Marieke," MOOLLM doesn't just load a skill — it activates a **K-line** (Minsky's concept):
+
+```yaml
+# "Marieke" activates:
+- Her personality (warm, Dutch, knowledgeable)
+- Her history (inherited skills from Mammie)
+- Her relationships (pub family, customers, cats)
+- Her current state (behind bar, serving)
+- Her voice (code-switching, Dutch terms of endearment)
+```
+
+Anthropic skills are verbs. MOOLLM characters are *people*.
+
+**3. Empathic Templates**
+
+Anthropic templates: String substitution with variables.
+MOOLLM templates: **Semantic generation** with intent understanding.
+
+```yaml
+# Anthropic-style template
+"Hello {{name}}, welcome to {{location}}!"
+
+# MOOLLM empathic template
+# Generate a warm Dutch greeting for a regular customer
+# returning after a long absence, mentioning their usual order
+# and asking about their cat
+```
+
+The LLM doesn't substitute — it *understands and generates*.
+
+**4. Three-Tier Persistence**
+
+| Tier | Anthropic | MOOLLM |
+|------|-----------|--------|
+| Hot | Context window | `working-set.yml` |
+| Warm | N/A | Comments in YAML files |
+| Cold | N/A | Summarized to `-metadata.yml` |
+
+MOOLLM skills *remember* across sessions because the filesystem is the save game.
+
+**5. Speed of Light Simulation**
+
+Anthropic: One action per LLM call.
+MOOLLM: **33 turns of Stoner Fluxx** in a single context window.
+
+```yaml
+# Anthropic pattern
+User: "Play a card"
+LLM: [plays card]
+User: "What happens?"
+LLM: [describes effect]
+# ... 66 round trips for 33 turns
+
+# MOOLLM pattern
+User: "Let's play Stoner Fluxx!"
+LLM: [simulates entire game session internally]
+     [33 turns, 7 characters, rule changes, joint passing]
+     [outputs narrative with full state consistency]
+# ... 1 round trip
+```
+
+**6. Comment Intelligence**
+
+Anthropic treats comments as documentation.
+MOOLLM treats comments as **embedded vectors** that bias future generation:
+
+```yaml
+# This character tends to get philosophical when high
+# She learned bartending from her grandmother Mammie
+# Her favorite strain is Mammie's Pride
+name: Marieke
+```
+
+Those comments aren't stripped — they're *read* and *influence behavior*.
+
+**7. Ethical Framing Inheritance**
+
+Anthropic: Ethics per-skill, repeated.
+MOOLLM: Ethics at room level, **inherited by contents**:
+
+```yaml
+# pub/stage/ROOM.yml
+framing:
+  modes: [performance, fictional, tribute]
+  # All performances on this stage inherit this framing
+  # No need to repeat ethics in every performer's file
+```
+
+DRY ethics. Define once, apply everywhere.
+
+### The Proof: Things Anthropic Skills Can't Do
+
+| Capability | Evidence |
+|------------|----------|
+| 33-turn game simulation | [Stoner Fluxx Marathon](../examples/adventure-4/sessions/don-session-1.md#stoner-fluxx-marathon) |
+| Autonomous character creation | [Palm's Incarnation](../examples/adventure-4/sessions/don-session-1.md#palms-incarnation) |
+| 10-cat parallel prowl | [Midnight Prowl](../examples/adventure-4/sessions/don-session-1.md#midnight-prowl) |
+| Cross-session memory | Comments throughout adventure-4 |
+| Prototype inheritance | `budtender` extends `bartender` |
+| Room-based ethical framing | `pub/stage/ROOM.yml` |
+
+### Summary: Incarnate = Anthropic + Soul
+
+```
+MOOLLM Incarnate Skills = 
+    Anthropic's Brilliant Foundation
+  + Self-style Prototype Inheritance  
+  + K-line Identity Activation
+  + Empathic Template Generation
+  + Three-Tier Persistent Memory
+  + Speed of Light Simulation
+  + Comment Intelligence
+  + Ethical Framing Inheritance
+```
+
+We stand on Anthropic's shoulders. We just added the ability to *dance*.
+
+---
+
 ## Where They Diverge: Types vs. Understanding
 
 **Stanza is about compile-time guarantees:**
