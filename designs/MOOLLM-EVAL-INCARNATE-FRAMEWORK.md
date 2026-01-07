@@ -1170,6 +1170,44 @@ interior:
 
 All these patterns are declarable in `ROOM.yml` and inheritable by children.
 
+**Vehicles — portable rooms:**
+
+Vehicles are rooms that move. They inherit all room properties but add mobility:
+
+```yaml
+# characters/don/pocket/magic-carpet.yml
+vehicle:
+  type: carpet
+  portable: true      # Can be pocketed, carried
+  capacity: 4         # Passengers
+  movement:
+    in_room: true     # Can move around within a room
+    through_exits: true
+    magic: true       # Can teleport
+    
+  # Logo turtle integration
+  turtle:
+    enabled: true
+    draws_on: floor   # Leaves trail in room
+    
+  contents:           # Objects inside the vehicle
+    - picnic-basket.yml
+    - lamp.yml
+```
+
+| Action | Effect |
+|--------|--------|
+| `TOSS lamp INTO carpet` | Object enters vehicle |
+| `EMBARK carpet` | Character enters vehicle |
+| `DRIVE carpet NORTH` | Vehicle moves through exit |
+| `DRIVE carpet AROUND` | Vehicle moves within room (turtle draws) |
+| `TOSS lamp OUT` | Object exits to current room |
+| `DISEMBARK` | Character exits to current room |
+| `POCKET carpet` | Vehicle (with contents!) goes in inventory |
+| `DROP carpet` | Vehicle appears in room |
+
+**Vehicles can be Tardis-like:** A carpet might unfold into a flying palace. A bag of holding is a vehicle. A pokéball is a vehicle.
+
 ### The Representation Spectrum
 
 From [`skills/representation-ethics/`](../skills/representation-ethics/):
