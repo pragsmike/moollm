@@ -106,7 +106,7 @@ When a framework has one voice, you get:
 - Diversity of thought is treated as error
 - Newcomers must conform or leave
 
-The problem isn't having opinions. It's having *only one*.
+The problem isn't having opinions. It's having *only one*. See [Incarnate Skills vs Anthropic Skills](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#incarnate-skills-vs-anthropic-skills) for how MOOLLM invites multiple perspectives.
 
 ### LLMs: The Statistical Centroid Problem
 
@@ -117,6 +117,8 @@ By default, LLMs give you **the boring average**:
 - What "sounds right" to the most people
 
 Ask an LLM a controversial question, you get mush. Ask for creative output, you get clichés. The single voice produces the single answer that offends no one and inspires no one.
+
+This is Will Wright's [Simulator Effect](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#the-simulator-effect) in reverse — when you don't give the LLM constraints to push against, it collapses to the mean.
 
 ### MOOLLM's Solution: Many Voices
 
@@ -137,7 +139,7 @@ This draws from [Mike Gallaher's methodology](./mike-gallaher-ideas.md):
 
 ### The Proof: The Great Monkey Paw Debate
 
-When Don wanted to wish on the [Monkey's Paw](../examples/adventure-4/coatroom/monkeys-paw.yml), we didn't let a single voice decide.
+When Don wanted to wish on the Monkey's Paw (see [Turn 2: THE LUCKY BLEND](../examples/adventure-4/sessions/don-session-1.md#turn-2-the-lucky-blend--a-sacrifice-to-fortune)), we didn't let a single voice decide.
 
 **The Panel ([Turn 4](../examples/adventure-4/sessions/don-session-1.md#turn-4-the-great-monkey-paw-debate-)):**
 
@@ -160,7 +162,7 @@ When Don wanted to wish on the [Monkey's Paw](../examples/adventure-4/coatroom/m
 3. [Updated vote](../examples/adventure-4/sessions/don-session-1.md#-updated-vote-count): More support, new concerns
 4. [Final approval](../examples/adventure-4/sessions/don-session-1.md#turn-6-the-acceptance-of-risk): Unanimous after full deliberation
 
-**The Result:** A better wish. The [Full Autonomy Protocol](../skills/incarnation/) that emerged wasn't Don's original idea — it was *evolved* through debate. Curious George's "naive" question about consent led to the no-fault divorce clause. Djinn's technicalities led to the curse-nullification provisions.
+**The Result:** A better wish. The [Full Autonomy Protocol](../skills/incarnation/) that emerged wasn't Don's original idea — it was *evolved* through debate. Curious George's "naive" question about consent led to the no-fault divorce clause. Djinn's technicalities led to the curse-nullification provisions. This is [Constructionism](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#5-constructionism-seymour-papert-1980) in action — learning by building, together.
 
 **Then it WORKED:** [Palm was incarnated](../examples/adventure-4/sessions/don-session-1.md#turn-8-the-seeing--collective-witness-individual-becoming-) successfully, with full autonomy, and the protocol was [lifted into a reusable skill](../examples/adventure-4/sessions/don-session-1.md#-play--learn--lift-the-incarnation-skill).
 
@@ -178,6 +180,8 @@ Eight voices with two stoner moderators produced:
 - An actual monkey named Palm who writes philosophical essays
 
 **One opinion is the wrong number.** Rails teaches us that opinions are valuable. MOOLLM teaches us that *many* opinions, in structured debate, are more valuable still.
+
+This is why MOOLLM embraces [K-lines](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#4-k-lines--society-of-mind-marvin-minsky-mit-1980) — Marvin Minsky's concept of knowledge activation. Each character activates different knowledge. Eight characters = eight different slices of the LLM's latent space, all pushing against each other.
 
 ### Related Skills
 
@@ -253,7 +257,7 @@ personality: warm, knowledgeable, Dutch
 
 **One is for machines that hate you. The other is for an LLM that understands you.**
 
-**Proof:** See [`pub/bar/budtender-marieke.yml`](../examples/adventure-4/pub/bar/budtender-marieke.yml) — comments like "inherited her skills from Mammie" actually influence how she talks and acts throughout the [33-turn marathon](../examples/adventure-4/sessions/don-session-1.md#-speed-of-light-simulation-).
+**Proof:** See [`pub/bar/budtender-marieke.yml`](../examples/adventure-4/pub/bar/budtender-marieke.yml) — comments like "inherited her skills from Mammie" actually influence how she talks and acts throughout the [33-turn marathon](../examples/adventure-4/sessions/don-session-1.md#-speed-of-light-simulation-). This is [Comment Intelligence](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#comment-intelligence) — comments as embedded vectors that bias future generation.
 
 ### Violence Escalation Patterns
 
@@ -316,7 +320,7 @@ The difference: **[Postel's Law](../skills/postel/) vs. Fail-Fast**.
 
 ### Origin: John Warnock and PostScript
 
-John Warnock, co-founder of Adobe and creator of PostScript, described PostScript as a **"linguistic motherboard"** — a universal substrate into which you could plug different "cards":
+John Warnock, co-founder of Adobe and creator of PostScript, described PostScript as a **"linguistic motherboard"** — a universal substrate into which you could plug different "cards." See [PostScript & The Linguistic Motherboard](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#6-postscript--the-linguistic-motherboard-john-warnock-owen-densmore-1984) in the Incarnate Framework:
 
 - **Font cards** — Any typeface, described mathematically
 - **Graphics cards** — Vector operations, transformations, paths
@@ -391,12 +395,14 @@ The "linguistic motherboard" model suggests a better shell:
 # Returns: PET, FEED, PLAY, OBSERVE, ADOPT...
 ```
 
-The shell becomes **conversational** because the motherboard (LLM) understands the language on the cards.
+The shell becomes **conversational** because the motherboard (LLM) understands the language on the cards. This is the [Reader = Writer Symmetry](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#reader--writer-symmetry) inherited from HyperCard.
 
 **Real examples:**
 - [`skills/cat/CARD.yml`](../skills/cat/CARD.yml) — What you can do with cats
 - [`skills/dog/CARD.yml`](../skills/dog/CARD.yml) — What you can do with dogs
 - [`skills/room/CARD.yml`](../skills/room/CARD.yml) — What you can do in rooms
+
+See [CARD.yml: The Skill Interface](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#cardyml-the-skill-interface) for the full specification.
 
 ---
 
@@ -522,9 +528,9 @@ YAML Jazz + LLM provides:
 
 **The DSL emerges from use, not from design.**
 
-This is [Constructionism](../skills/constructionism/) (Seymour Papert) applied to language design: you learn by building, and the language learns from what you build.
+This is [Constructionism](../skills/constructionism/) ([Seymour Papert](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#5-constructionism-seymour-papert-1980)) applied to language design: you learn by building, and the language learns from what you build. MOOLLM calls this pattern **Play → Learn → Lift**.
 
-**Proof:** The [Incarnation skill](../skills/incarnation/) emerged from [Palm's incarnation session](../examples/adventure-4/sessions/don-session-1.md#turn-8-the-seeing--collective-witness-individual-becoming-). We didn't design it — we [lifted it](../examples/adventure-4/sessions/don-session-1.md#-play--learn--lift-the-incarnation-skill) from what worked.
+**Proof:** The [Incarnation skill](../skills/incarnation/) emerged from [Palm's incarnation session](../examples/adventure-4/sessions/don-session-1.md#turn-8-the-seeing--collective-witness-individual-becoming-). We didn't design it — we [lifted it](../examples/adventure-4/sessions/don-session-1.md#-play--learn--lift-the-incarnation-skill) from what worked. See [Proof: What Incarnate Skills Enable](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#proof-what-incarnate-skills-enable) for more examples.
 
 ---
 
@@ -739,7 +745,7 @@ We stand on Anthropic's shoulders. We just added the ability to *dance*.
 
 **MOOLLM is about runtime understanding:**
 
-> *"Be conservative in what you send, liberal in what you accept."* — Postel's Law
+> *"Be conservative in what you send, liberal in what you accept."* — [Postel's Law](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#postels-law-the-foundation)
 
 | Stanza | MOOLLM |
 |--------|--------|
@@ -758,7 +764,7 @@ Patrick describes the goal of good libraries:
 
 > *"Code that makes use of a perfectly tuned library should read almost like a set of instructions for a coworker."*
 
-In MOOLLM, the commands *are* instructions to a coworker:
+In MOOLLM, the commands *are* instructions to a coworker. This is the [Speed of Light](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#speed-of-light-the-anti-pattern-critique) philosophy in action:
 
 ```
 Don: "Let's play Stoner Fluxx!"
@@ -802,9 +808,9 @@ These are **cognition features**. They enable skills that would be impossible in
 
 ---
 
-## The HN Discussion Thread
+## Discussion Points (From HN Threads on Language Design)
 
-The [Hacker News discussion](https://news.ycombinator.com/item?id=...) raised several points relevant to MOOLLM:
+Common themes in Hacker News discussions about programming language design are relevant to MOOLLM:
 
 ### "I want a scripting language with types that replaces bash"
 
@@ -833,12 +839,12 @@ MOOLLM agrees. Skills are both:
 - **Libraries** — Reusable capability packages
 - **Languages** — They teach the LLM new "syntax" (what to understand)
 
-A skill like [`yaml-jazz`](../skills/yaml-jazz/) is a library (you import its capabilities) *and* a language (it defines how to interpret YAML semantically).
+A skill like [`yaml-jazz`](../skills/yaml-jazz/) is a library (you import its capabilities) *and* a language (it defines how to interpret both YAML and natural language chat semantically).
 
 ### "Mature languages have mature ecosystems"
 
 True for traditional languages. But MOOLLM's "ecosystem" is:
-- The LLM's training data (all human knowledge)
+- The LLM's training data (all human knowledge, including dogs, cats, and Stoner Fluxx)
 - [Skills](../skills/) that activate and focus that knowledge
 - YAML/Markdown files that ground it in specific worlds
 
@@ -854,7 +860,7 @@ Patrick's thesis:
 > **"Stop designing languages. Write libraries instead."**
 
 MOOLLM's extension:
-> **"Stop designing interfaces. Write [skills](../skills/) instead."**
+> **"Stop designing interfaces. Write Incarnate [Skills](../skills/) instead."**
 
 Both recognize that the real power comes from what you can *build on top* of the foundation:
 - Stanza provides language features → Enables elegant libraries
@@ -862,7 +868,7 @@ Both recognize that the real power comes from what you can *build on top* of the
 
 The Java/XML critique reveals what happens when you get this wrong:
 - Configuration becomes punishment
-- Errors become novels  
+- Errors become novels of pulp fiction
 - Abstraction becomes `AbstractSingletonProxyFactoryBean`
 
 MOOLLM's design choices ([YAML Jazz](../skills/yaml-jazz/), Markdown, [comments-as-memory](./MEMGPT-ANALYSIS.md), [Postel's Law](../skills/postel/)) are deliberate responses to this history.
@@ -875,12 +881,35 @@ MOOLLM's design choices ([YAML Jazz](../skills/yaml-jazz/), Markdown, [comments-
 
 ## Related Documents
 
-- [MOOLLM Eval Incarnate Framework](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md) — The full philosophical foundation
+### The Manifesto
+- **[MOOLLM Eval Incarnate Framework](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md)** — The full philosophical foundation, intellectual genealogy, and proof of concept
+
+### Key Sections in the Framework
+- [The Axis of Eval](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#the-axis-of-eval-code-graphics-data) — Code, Graphics, Data unified
+- [The Intellectual Genealogy](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#the-intellectual-genealogy) — From Sketchpad to MOOLLM
+- [Traditional vs Incarnate Skills](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#traditional-skills--vs--incarnate-skills) — What makes MOOLLM different
+- [The Empathic Suite](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#the-empathic-suite-dovetailing-skills) — How skills work together
+- [Ethical Representation](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#ethical-representation-the-tribute-protocol) — The Tribute Protocol
+- [Speed of Light Critique](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#speed-of-light-the-anti-pattern-critique) — The Carrier Pigeon Problem
+
+### Supporting Documents
 - [MemGPT Analysis](./MEMGPT-ANALYSIS.md) — Memory management comparison
+- [Mike Gallaher's Ideas](./mike-gallaher-ideas.md) — Adversarial storytelling methodology
 - [Empathic Suite PR](./PR-EMPATHIC-SUITE-SPEED-OF-LIGHT.md) — The Postel-inspired skill family
 
 ## External References
 
-- [L.B. Stanza: Stop Designing Languages](https://lbstanza.org/purpose_of_a_programming_language.html)
-- [L.B. Stanza: Philosophy](https://lbstanza.org/philosophy.html)
-- [L.B. Stanza: Reference](https://lbstanza.org/reference.html)
+### Stanza Language
+- [L.B. Stanza: Stop Designing Languages](https://lbstanza.org/purpose_of_a_programming_language.html) — Patrick Li's foundational essay
+- [L.B. Stanza: Philosophy](https://lbstanza.org/philosophy.html) — Language design principles
+- [L.B. Stanza: Reference](https://lbstanza.org/reference.html) — Full documentation
+
+### MOOLLM Influences (see [Intellectual Genealogy](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#the-intellectual-genealogy))
+- [Society of Mind](https://en.wikipedia.org/wiki/Society_of_Mind) — Marvin Minsky (Wikipedia)
+- [Self Language](https://selflanguage.org/) — Ungar & Smith's prototype-based language
+- [Constructionism](https://en.wikipedia.org/wiki/Constructionism_(learning_theory)) — Seymour Papert (Wikipedia)
+
+### Don Hopkins' Articles
+- [HyperLook, HyperNews, GoodNews](https://donhopkins.medium.com/hyperlook-nee-hypernews-nee-goodnews-99f411e58ce4) — The Axis of Eval origin
+- [Alan Kay on Browsers](https://donhopkins.medium.com/alan-kay-on-should-web-browsers-have-stuck-to-being-document-viewers-and-a-discussion-of-news-5cb92c7b3445) — Send Programs, Not Data
+- [Will Wright on UI Design](https://donhopkins.medium.com/will-wright-on-designing-user-interfaces-to-simulation-games-1996-video-update-2023-da098a51ef91) — The Simulator Effect
