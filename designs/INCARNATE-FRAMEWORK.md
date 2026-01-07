@@ -29,7 +29,7 @@ MOOLLM stands on the shoulders of giants. This document traces the lineage.
 
 ### The Axis of Eval: Code, Graphics, Data
 
-Don Hopkins coined this phrase to describe HyperLook's unification of three dimensions around PostScript:
+Don Hopkins coined this phrase to describe NeWS's and HyperLook's unification of three dimensions around PostScript:
 
 | Dimension | HyperLook (PostScript) | MOOLLM (YAML Jazz + Markdown) |
 |-----------|------------------------|-------------------------------|
@@ -46,9 +46,9 @@ PostScript's insight: **text is graphics** — glyphs are vectors, transforms ap
 The same content can be **pivoted** from dimension to dimension:
 
 ```
-        ┌─────────────────────────────────────────┐
-        │              THE SAME TEXT              │
-        └─────────────────────────────────────────┘
+        ┌──────────────────────────────────┐
+        │           THE SAME TEXT       │
+        └──────────────────────────────────┘
                           │
           ┌───────────────┼───────────────┐
           ▼               ▼               ▼
@@ -69,6 +69,42 @@ The same content can be **pivoted** from dimension to dimension:
 | **Eval** | → Code | Expression becomes result |
 
 **The LLM is the pivot.** It rotates content through the Axis of Eval, treating the same text as code, data, or graphics depending on context.
+
+### Input vs Output Formats
+
+Not all text formats are equal. LLMs have different strengths:
+
+| Format | Role | LLM Strength | Why |
+|--------|------|--------------|-----|
+| **YAML** | Representation | **Manipulate, transform** | Comments = semantic richness |
+| **Markdown** | Representation | **Manipulate, transform** | Prose + structure, human-friendly |
+| **HTML** | Output | **Generate, render** | Verbose, hard to edit |
+| **CSS** | Output | **Generate, render** | Styling output |
+| **SVG** | Output | **Generate, render** | Vector graphics output |
+| **JSON** | Output | **Generate** | No comments = less expressive |
+
+**YAML Jazz + Markdown** = input formats for representing, transforming, manipulating.
+**HTML/CSS/SVG/JSON** = output formats for rendering, displaying, machine consumption.
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    THE LLM PIPELINE                          │
+├─────────────────────────────────────────────────────────────┤
+│                                                              │
+│   INPUT (represent, transform)    OUTPUT (render, display)  │
+│   ┌────────────────────────┐      ┌────────────────────────┐│
+│   │ YAML Jazz + Markdown   │ ───▶ │ HTML, CSS, SVG, JSON   ││
+│   │ • Comments as data     │      │ • Machine-readable     ││
+│   │ • Human-friendly       │      │ • Display-ready        ││
+│   │ • Easy to manipulate   │      │ • Hard to edit         ││
+│   └────────────────────────┘      └────────────────────────┘│
+│                                                              │
+└─────────────────────────────────────────────────────────────┘
+```
+
+**JSON's problem:** No comments. Can't do YAML Jazz. Machine-readable but not human-friendly. Fine for output, bad for representation.
+
+**HTML's problem:** Can be reverse-engineered into Markdown, but it's verbose and structural. Great for rendering, bad for manipulating.
 
 In HyperLook, PostScript was the universal medium. In MOOLLM, **YAML Jazz + Markdown** is the universal medium, and the **LLM** is the interpreter.
 
