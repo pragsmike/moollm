@@ -47,16 +47,16 @@ The same content can be **pivoted** from dimension to dimension:
 
 ```
         ┌──────────────────────────────────┐
-        │           THE SAME TEXT       │
+        │           THE SAME TEXT          │
         └──────────────────────────────────┘
                           │
           ┌───────────────┼───────────────┐
           ▼               ▼               ▼
-       ┌──────┐       ┌──────┐       ┌──────┐
-       │ CODE │       │ DATA │       │GRAPH │
-       └──────┘       └──────┘       └──────┘
-       Execute        Interpret       Render
-       as behavior    as structure    as visuals
+       ┌──────┐       ┌──────┐      ┌──────────┐
+       │ CODE │       │ DATA │      │ GRAPHICS │
+       └──────┘       └──────┘      └──────────┘
+       Execute        Interpret     Render
+       as behavior    as structure  as visuals
 ```
 
 | Operation | Pivot Direction | Example |
@@ -77,7 +77,7 @@ Not all text formats are equal. LLMs have different strengths:
 | Format | Role | LLM Strength | Why |
 |--------|------|--------------|-----|
 | **YAML** | Representation | **Manipulate, transform** | Comments = semantic richness |
-| **Markdown** | Representation | **Manipulate, transform** | Prose + structure, human-friendly |
+| **Markdown** | Representation | **Manipulate, transform, embed** | Prose + structure, code blocks, human-friendly |
 | **HTML** | Output | **Generate, render** | Verbose, hard to edit |
 | **CSS** | Output | **Generate, render** | Styling output |
 | **SVG** | Output | **Generate, render** | Vector graphics output |
@@ -105,6 +105,41 @@ Not all text formats are equal. LLMs have different strengths:
 **JSON's problem:** No comments. Can't do YAML Jazz. Machine-readable but not human-friendly. Fine for output, bad for representation.
 
 **HTML's problem:** Can be reverse-engineered into Markdown, but it's verbose and structural. Great for rendering, bad for manipulating.
+
+### Programming Language Quality for LLMs
+
+LLMs are trained on code. Some languages are better than others:
+
+| Language | LLM Quality | Why |
+|----------|-------------|-----|
+| **Python** | Excellent | Foundational for AI/ML, sysadmin, devops. Clean, readable. |
+| **TypeScript** | Excellent | Better than JS — types express intent and constraints. |
+| **JavaScript** | Good | Common in training data, but prefer TS for clarity. |
+| **Bash** | Tolerate | Write-only. Quoting foot guns. jq awkwardness. Limited complexity only. |
+
+**Python preference for CLI tools:**
+- Sister scripts should be Python, not Bash
+- Clean, maintainable, testable
+- No escaping nightmares
+- No awkward jq calls for JSON
+
+**Bash tolerance:**
+- Fine for simple terminal interaction
+- Fine for shell tool invocation
+- NOT fine for complex logic
+- Can be **uplifted** to Python — translated, sanitized, made solid
+
+```yaml
+# BAD: Bash with jq gymnastics
+result=$(cat data.json | jq -r '.items[] | select(.active) | .name')
+
+# GOOD: Python, clean and clear
+with open('data.json') as f:
+    data = json.load(f)
+    result = [item['name'] for item in data['items'] if item['active']]
+```
+
+**The uplift pattern:** Bash scripts of limited complexity → Python CLI tools. Translate. Sanitize. Make maintainable.
 
 In HyperLook, PostScript was the universal medium. In MOOLLM, **YAML Jazz + Markdown** is the universal medium, and the **LLM** is the interpreter.
 
