@@ -4,7 +4,7 @@
 > — Patrick S. Li, L.B. Stanza
 
 > *"Stop Designing Interfaces. Write Skills Instead."*
-> — MOOLLM's Extension
+> — [MOOLLM](../README.md)'s Extension
 
 ---
 
@@ -24,12 +24,12 @@ His key example: Ruby on Rails exists because Ruby's language features (metaprog
 
 ## The MOOLLM Parallel
 
-MOOLLM applies the same insight to a different substrate:
+[MOOLLM](../README.md) applies the same insight to a different substrate:
 
 | Stanza's View | MOOLLM's View |
 |---------------|---------------|
-| Languages enable libraries | Skills enable capabilities |
-| `eval()` is the interpreter | The LLM is `eval()` |
+| Languages enable libraries | [Skills](../skills/) enable capabilities |
+| `eval()` is the interpreter | The LLM is `eval()` ([Incarnate Framework](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md)) |
 | Ruby features → Rails magic | LLM understanding → Skill magic |
 | "Code reads like instructions to a coworker" | Commands *are* instructions to a coworker |
 | Syntax enables abstraction | Understanding enables abstraction |
@@ -46,6 +46,8 @@ They're unknowingly invoking:
 - **[YAML Jazz](../skills/yaml-jazz/)** — Semantic state reading
 - **[Speed of Light](../skills/speed-of-light/)** — Instant multi-entity response
 - **[Character framing](../skills/character/)** — Who's doing the looking
+
+**Proof:** See the first turn of [Don's Session](../examples/adventure-4/sessions/don-session-1.md#-look-around) — all these skills activate from two words.
 
 The user doesn't know they're using these skills. *That's the whole point.*
 
@@ -77,6 +79,8 @@ Dog characters are loyal companions who:
 ```
 
 The "metaprogramming" is the LLM's ability to read and apply natural language descriptions.
+
+**Proof:** See [`skills/dog/SKILL.md`](../skills/dog/SKILL.md) — no code, just prose describing dog behavior. Then see [Biscuit's adventure](../examples/adventure-4/sessions/don-session-1.md#session-continues-biscuits-first-run) where this prose becomes a running, barking, territory-marking dog.
 
 ---
 
@@ -110,12 +114,12 @@ Java Enterprise Architecture:
 
 ### MOOLLM's Counter-Philosophy
 
-| Java + XML | MOOLLM + YAML Jazz |
+| Java + XML | MOOLLM + [YAML Jazz](../skills/yaml-jazz/) |
 |------------|-------------------|
 | Configuration as punishment | Configuration as prose |
-| Stack traces as literature | Comments as memory |
-| `AbstractSingletonProxyFactoryBean` | `bartender.yml` |
-| Errors at runtime, debugging for eternity | Understanding at runtime, graceful recovery |
+| Stack traces as literature | [Comments as memory](./MEMGPT-ANALYSIS.md) |
+| `AbstractSingletonProxyFactoryBean` | [`bartender.yml`](../examples/adventure-4/pub/bar/bartender.yml) |
+| Errors at runtime, debugging for eternity | Understanding at runtime, [graceful recovery](../skills/postel/) |
 | Machine-first, human-tolerated | Human-first, machine-understood |
 
 ### Configuration Comparison
@@ -141,6 +145,8 @@ personality: warm, knowledgeable, Dutch
 ```
 
 **One is for machines that hate you. The other is for an LLM that understands you.**
+
+**Proof:** See [`pub/bar/budtender-marieke.yml`](../examples/adventure-4/pub/bar/budtender-marieke.yml) — comments like "inherited her skills from Mammie" actually influence how she talks and acts throughout the [33-turn marathon](../examples/adventure-4/sessions/don-session-1.md#-speed-of-light-simulation-).
 
 ### Violence Escalation Patterns
 
@@ -193,7 +199,9 @@ Exception in thread "main" java.lang.NullPointerException
 #   - Terpie (in cat cave)
 ```
 
-The difference: **Postel's Law vs. Fail-Fast**.
+The difference: **[Postel's Law](../skills/postel/) vs. Fail-Fast**.
+
+**Proof:** See how [Marieke's advice](../examples/adventure-4/sessions/don-session-1.md#-the-lucky-strains-selection) gently steers Don toward good strain choices without error messages.
 
 ---
 
@@ -243,6 +251,8 @@ requires:
   - yaml-jazz
 ```
 
+**Real example:** [`skills/adventure/CARD.yml`](../skills/adventure/CARD.yml) — the card that powers the entire [adventure-4 session](../examples/adventure-4/).
+
 ### Why This Makes a Great "Shell"
 
 Traditional shells (bash, zsh, fish) have a problem:
@@ -275,6 +285,11 @@ The "linguistic motherboard" model suggests a better shell:
 ```
 
 The shell becomes **conversational** because the motherboard (LLM) understands the language on the cards.
+
+**Real examples:**
+- [`skills/cat/CARD.yml`](../skills/cat/CARD.yml) — What you can do with cats
+- [`skills/dog/CARD.yml`](../skills/dog/CARD.yml) — What you can do with dogs
+- [`skills/room/CARD.yml`](../skills/room/CARD.yml) — What you can do in rooms
 
 ---
 
@@ -310,9 +325,9 @@ All three mean the same thing! But without a shared substrate, they can't intero
 
 [YAML Jazz](../skills/yaml-jazz/) provides the linguistic motherboard for configuration:
 
-1. **Comments are semantic** — Not stripped, but understood
+1. **Comments are semantic** — Not stripped, but understood ([Comment Intelligence](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#comment-intelligence))
 2. **Structure is flexible** — The LLM interprets intent
-3. **Conventions emerge** — Patterns like `CARD.yml`, `ROOM.yml`, `CHARACTER.yml`
+3. **Conventions emerge** — Patterns like [`CARD.yml`](../skills/card/), [`ROOM.yml`](../skills/room/ROOM.yml.tmpl), [`CHARACTER.yml`](../skills/character/)
 
 ```yaml
 # YAML Jazz interprets ALL of these equivalently:
@@ -367,6 +382,8 @@ traits:
   - energetic
 ```
 
+**Real example:** [`characters/biscuit/CHARACTER.yml`](../examples/adventure-4/characters/biscuit/CHARACTER.yml)
+
 **Stage 4: CARD.yml Interface**
 ```yaml
 # skills/dog/CARD.yml
@@ -375,6 +392,8 @@ advertises:
   - FETCH: Retrieve thrown objects
   - MARK-TERRITORY: Leave scent markers
 ```
+
+**Real example:** [`skills/dog/CARD.yml`](../skills/dog/CARD.yml)
 
 ### Why This Matters
 
@@ -396,7 +415,9 @@ YAML Jazz + LLM provides:
 
 **The DSL emerges from use, not from design.**
 
-This is [Constructionism](../skills/constructionism/) applied to language design: you learn by building, and the language learns from what you build.
+This is [Constructionism](../skills/constructionism/) (Seymour Papert) applied to language design: you learn by building, and the language learns from what you build.
+
+**Proof:** The [Incarnation skill](../skills/incarnation/) emerged from [Palm's incarnation session](../examples/adventure-4/sessions/don-session-1.md#turn-8-the-seeing--collective-witness-individual-becoming-). We didn't design it — we [lifted it](../examples/adventure-4/sessions/don-session-1.md#-play--learn--lift-the-incarnation-skill) from what worked.
 
 ---
 
@@ -447,7 +468,7 @@ skills/bartender/           # Prototype
         └── characters/marieke/  # Instance with personality, history, relationships
 ```
 
-**Proof:** [`skills/bartender/`](../skills/bartender/) → [`skills/budtender/`](../skills/budtender/) → [`characters/marieke/`](../examples/adventure-4/characters/marieke/)
+**Proof:** [`skills/bartender/`](../skills/bartender/) → [`skills/budtender/`](../skills/budtender/) → [`budtender-marieke.yml`](../examples/adventure-4/pub/bar/budtender-marieke.yml)
 
 **2. K-Line Identity**
 
@@ -573,13 +594,14 @@ DRY ethics. Define once, apply everywhere.
 
 | Capability | Evidence | PR/Analysis |
 |------------|----------|-------------|
-| 33-turn game simulation | [🚀 SPEED OF LIGHT SIMULATION](../examples/adventure-4/sessions/don-session-1.md#-speed-of-light-simulation-) | [PR-PALM-INCARNATION](./PR-PALM-INCARNATION-SPEED-OF-LIGHT.md) |
+| 33-turn game simulation | [🚀 SPEED OF LIGHT SIMULATION 🚀](../examples/adventure-4/sessions/don-session-1.md#-speed-of-light-simulation-) | [PR-PALM-INCARNATION](./PR-PALM-INCARNATION-SPEED-OF-LIGHT.md) |
 | Autonomous character creation | [Turn 8: THE SEEING](../examples/adventure-4/sessions/don-session-1.md#turn-8-the-seeing--collective-witness-individual-becoming-) | [PR-GODFAMILY-COMPLETE](./PR-GODFAMILY-COMPLETE.md) |
 | 10-cat parallel prowl | [THE MIDNIGHT PROWL](../examples/adventure-4/sessions/don-session-1.md#the-midnight-prowl) | [PR-MIDNIGHT-PROWL](./PR-MIDNIGHT-PROWL-SPEED-OF-LIGHT.md) |
 | Cross-session memory | Comments throughout [`adventure-4/`](../examples/adventure-4/) | [MEMGPT-ANALYSIS](./MEMGPT-ANALYSIS.md) |
-| Prototype inheritance | [`bartender/`](../skills/bartender/) → [`budtender/`](../skills/budtender/) | [PR-PUB-STAGE-MENUS](./PR-PUB-STAGE-MENUS-PERSONAS.md) |
+| Prototype inheritance | [`bartender/`](../skills/bartender/) → [`budtender/`](../skills/budtender/) → [`budtender-marieke.yml`](../examples/adventure-4/pub/bar/budtender-marieke.yml) | [PR-PUB-STAGE-MENUS](./PR-PUB-STAGE-MENUS-PERSONAS.md) |
 | Room-based ethical framing | [`pub/stage/ROOM.yml`](../examples/adventure-4/pub/stage/ROOM.yml) | [PR-TRIBUTE-FRAMING](./PR-TRIBUTE-FRAMING-ETHICS.md) |
-| Dog adventure with marking | [Biscuit's Run](../examples/adventure-4/sessions/don-session-1.md#session-continues-biscuits-first-run) | [PR-BISCUIT-DOG](./PR-BISCUIT-DOG-REVOLUTION.md) |
+| Dog adventure + territory marking | [SESSION CONTINUES: Biscuit's First Run](../examples/adventure-4/sessions/don-session-1.md#session-continues-biscuits-first-run) | [PR-BISCUIT-DOG](./PR-BISCUIT-DOG-REVOLUTION.md) |
+| Play → Learn → Lift | [🎓 PLAY → LEARN → LIFT](../examples/adventure-4/sessions/don-session-1.md#-play--learn--lift-the-incarnation-skill) | [skills/incarnation/](../skills/incarnation/) |
 
 ### Summary: Incarnate = Anthropic + Soul
 
@@ -643,7 +665,7 @@ Don: "Let's play Stoner Fluxx!"
   - Narrative generation (descriptions, dialogue)]
 ```
 
-The [33-turn marathon](../examples/adventure-4/sessions/don-session-1.md#stoner-fluxx-marathon) demonstrated this in practice. No code was written. Skills enabled emergent complexity.
+The [33-turn marathon](../examples/adventure-4/sessions/don-session-1.md#-speed-of-light-simulation-) demonstrated this in practice. No code was written. Skills enabled emergent complexity.
 
 ---
 
@@ -661,13 +683,15 @@ Stanza provides:
 These are **syntax features**.
 
 MOOLLM provides:
-- Semantic understanding
-- Contextual memory
-- Empathic interpretation  
-- Prototype inheritance
-- Speed-of-light simulation
+- Semantic understanding ([YAML Jazz](../skills/yaml-jazz/))
+- Contextual memory ([Comments as vectors](./MEMGPT-ANALYSIS.md))
+- Empathic interpretation ([Postel's Law](../skills/postel/), [Empathic Templates](../skills/empathic-templates/))
+- Prototype inheritance ([Delegation Protocol](../skills/skill/delegation-object-protocol.md))
+- Speed-of-light simulation ([Speed of Light](../skills/speed-of-light/))
 
 These are **cognition features**. They enable skills that would be impossible in any traditional language—because no traditional language has an interpreter that *understands*.
+
+**Proof:** The [10-cat midnight prowl](../examples/adventure-4/sessions/don-session-1.md#the-midnight-prowl) simulated 20 turns of parallel activity with 10 independent agents, each with their own personality, route, and marking behavior. Try that in Ruby.
 
 ---
 
@@ -691,6 +715,8 @@ for each cat in pub/bar/cat-cave:
 
 This isn't valid bash, Python, or any language. It's *intent* that the LLM interprets and executes via the skills it knows.
 
+**Real example:** See [`pub/bar/cat-cave/`](../examples/adventure-4/pub/bar/cat-cave/) for the actual cats, and [THE MIDNIGHT PROWL](../examples/adventure-4/sessions/don-session-1.md#the-midnight-prowl) for them waking up and prowling.
+
 ### "DSL vs. Library"
 
 A commenter noted:
@@ -706,10 +732,12 @@ A skill like [`yaml-jazz`](../skills/yaml-jazz/) is a library (you import its ca
 
 True for traditional languages. But MOOLLM's "ecosystem" is:
 - The LLM's training data (all human knowledge)
-- Skills that activate and focus that knowledge
+- [Skills](../skills/) that activate and focus that knowledge
 - YAML/Markdown files that ground it in specific worlds
 
 The ecosystem is already infinite. Skills just *navigate* it.
+
+**Current skill inventory:** [`skills/INDEX.yml`](../skills/INDEX.yml) — 60+ skills covering [adventure](../skills/adventure/), [characters](../skills/character/), [rooms](../skills/room/), [cats](../skills/cat/), [dogs](../skills/dog/), [personas](../skills/persona/), [ethics](../skills/representation-ethics/), and more.
 
 ---
 
@@ -719,20 +747,22 @@ Patrick's thesis:
 > **"Stop designing languages. Write libraries instead."**
 
 MOOLLM's extension:
-> **"Stop designing interfaces. Write skills instead."**
+> **"Stop designing interfaces. Write [skills](../skills/) instead."**
 
 Both recognize that the real power comes from what you can *build on top* of the foundation:
 - Stanza provides language features → Enables elegant libraries
-- MOOLLM provides understanding features → Enables elegant skills
+- MOOLLM provides understanding features → Enables elegant [Incarnate Skills](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md)
 
 The Java/XML critique reveals what happens when you get this wrong:
 - Configuration becomes punishment
 - Errors become novels  
 - Abstraction becomes `AbstractSingletonProxyFactoryBean`
 
-MOOLLM's design choices (YAML Jazz, Markdown, comments-as-memory, Postel's Law) are deliberate responses to this history.
+MOOLLM's design choices ([YAML Jazz](../skills/yaml-jazz/), Markdown, [comments-as-memory](./MEMGPT-ANALYSIS.md), [Postel's Law](../skills/postel/)) are deliberate responses to this history.
 
 > *"YAML Jazz is like kindness. If it doesn't solve your problem, you're probably in the wrong framework."*
+
+**The proof is in the pudding:** [Don's 6700-line session](../examples/adventure-4/sessions/don-session-1.md) — zero code written, maximum narrative generated.
 
 ---
 
