@@ -364,6 +364,23 @@ The LLM's internal representation is **infinitely richer** than its tokenized ou
 
 ---
 
+## Related Work: MemGPT
+
+**MemGPT** (Packer et al., 2023) takes an OS-inspired approach to context management:
+- Main context (RAM) vs External context (disk)
+- Virtual context management via paging
+- Self-directed memory management
+
+**MOOLLM's Speed of Light is complementary:**
+- MemGPT: Extend context via paging
+- MOOLLM: **Minimize paging** via speed-of-light simulation
+
+> When you can simulate 33 turns in one call, you don't need to page as often.
+
+**Reference:** [arXiv:2310.08560](https://arxiv.org/abs/2310.08560) — "Towards LLMs as Operating Systems"
+
+---
+
 ## Dovetails With
 
 - [Coherence Engine](../coherence-engine/) — Orchestrates the simulation

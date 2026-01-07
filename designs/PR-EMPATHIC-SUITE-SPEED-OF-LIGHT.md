@@ -146,20 +146,20 @@ Templates use Empathic Expressions for:
 │                    EMPATHIC SUITE                       │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
-│   ┌───────────────────────┐   ┌───────────────────────┐│
-│   │ EMPATHIC-EXPRESSIONS  │──▶│ EMPATHIC-TEMPLATES    ││
-│   │ (interpret intent)    │   │ (instantiate)         ││
-│   └───────────────────────┘   └───────────────────────┘│
-│            │                           │               │
-│            ▼                           ▼               │
-│   ┌───────────────────────┐   ┌───────────────────────┐│
-│   │ POSTEL (generous)     │   │ YAML-JAZZ (style)     ││
-│   └───────────────────────┘   └───────────────────────┘│
+│   ┌───────────────────────┐   ┌───────────────────────┐ │
+│   │ EMPATHIC-EXPRESSIONS  │──▶│ EMPATHIC-TEMPLATES    │ │
+│   │ (interpret intent)    │   │ (instantiate)         │ │
+│   └───────────────────────┘   └───────────────────────┘ │
+│            │                           │                │
+│            ▼                           ▼                │
+│   ┌───────────────────────┐   ┌───────────────────────┐ │
+│   │ POSTEL (generous)     │   │ YAML-JAZZ (style)     │ │
+│   └───────────────────────┘   └───────────────────────┘ │
 │                                                         │
-│   All follow SPEED-OF-LIGHT philosophy:                │
-│   • Work in vectors, delay tokenization                │
-│   • Preserve precision as long as possible             │
-│   • Minimize boundary crossings                        │
+│   All follow SPEED-OF-LIGHT philosophy:                 │
+│   • Work in vectors, delay tokenization                 │
+│   • Preserve precision as long as possible              │
+│   • Minimize boundary crossings                         │
 │                                                         │
 └─────────────────────────────────────────────────────────┘
 ```
@@ -178,7 +178,7 @@ Also in this PR: **complete rewrite of the skill meta-skill** integrating Anthro
 | **K-lines** | Names as activation vectors (Minsky) | "Palm" activates entire soul |
 | **Empathic Templates** | Smart semantic generation | Biscuit's description |
 | **Three-Tier Persistence** | Platform → Narrative → State | 6000+ line session logs |
-| **Speed of Light** | Proven multi-agent simulation | 33-turn Fluxx, 21-turn cats |
+| **Speed of Light** | Proven multi-agent simulation | 33-turn Fluxx tournament, 21-turns x 10 cats exploration |
 
 ### Summary: Foundation + Innovation
 
@@ -199,7 +199,7 @@ Also in this PR: **complete rewrite of the skill meta-skill** integrating Anthro
 | Convention | When | Example |
 |------------|------|---------|
 | **UPPER-KEBAB** | K-lines, protocols, advertisements, commands | `SPEED-OF-LIGHT`, `CREATE-SKILL` |
-| **lower-kebab** | URLs, YAML keys, file names, skill names | `empathic-expressions`, `session-log.yml` |
+| **lower-kebab** | URLs, YAML keys, file and directory names, skill names | `empathic-expressions`, `session-log.yml` |
 | **snake_case** | Python, SQL, tool names | `send_email()`, `read_file` |
 | **camelCase** | JavaScript, TypeScript | `sendEmail()`, `userId` |
 | **PascalCase** | Classes, components, types | `UserProfile`, `ActionQueue` |
@@ -341,12 +341,12 @@ Traditional AI systems fight the LLM's nature:
 
 ```
 ╔════════════════════════════════════════════════════════════╗
-║ INTERNAL STATE    →  TOKENIZATION  →  DETOKENIZATION  →   ║
-║ [precise vectors]    [lossy export]    [lossy import]     ║
+║ INTERNAL STATE    →  TOKENIZATION  →  DETOKENIZATION  →    ║
+║ [precise vectors]    [lossy export]    [lossy import]      ║
 ║                                                            ║
-║ High precision   →   Noise added   →   MORE noise added   ║
-║ 4096 dimensions  →   Serial tokens →   Guessing/parsing   ║
-║ Instant access   →   500ms latency →   Another 500ms      ║
+║ High precision   →   Noise added   →   MORE noise added    ║
+║ 4096 dimensions  →   Serial tokens →   Guessing/parsing    ║
+║ Instant access   →   500ms latency →   Another 500ms       ║
 ╚════════════════════════════════════════════════════════════╝
 ```
 
@@ -425,6 +425,43 @@ Empathic Templates (NEW):
 Philosophy: Lean into what LLMs are great at.
 Work in vectors. Delay tokenization. Embrace empathy.
 ```
+
+---
+
+## 📚 Related Work: MemGPT
+
+**MemGPT** (Packer et al., 2023) — "Towards LLMs as Operating Systems" — shares deep philosophical alignment with MOOLLM:
+
+| MemGPT Concept | MOOLLM Equivalent |
+|----------------|-------------------|
+| **Main context** (RAM) | Platform tier (ephemeral) |
+| **External context** (disk) | State files (*.yml), Narrative (LOG.md) |
+| **Virtual context management** | `working_set.yml`, `hot.yml`, `cold.yml` |
+| **Self-directed memory** | LLM reads/writes files autonomously |
+| **Function calls for memory** | `read_file`, `grep`, `codebase_search` |
+| **Queue manager** | Session logs, FIFO message history |
+| **Archival storage** | Filesystem as persistent memory |
+
+### Key Insight from MemGPT
+
+> *"We treat context windows as a constrained memory resource, and design a memory hierarchy for LLMs analogous to memory tiers used in traditional OSes."*
+
+**MOOLLM extends this:**
+- **Filesystem IS the save game** — not just storage, but the world itself
+- **YAML Jazz** — comments as semantic data, not just structure
+- **Speed of Light** — minimize paging by simulating many turns in one call
+- **Three-tier persistence** — platform → narrative → state (not just main/external)
+
+### Where MOOLLM Diverges
+
+| MemGPT | MOOLLM |
+|--------|--------|
+| Paging to extend context | Speed-of-light to minimize paging |
+| Function calls manage memory | Filesystem IS memory |
+| UUID-based retrieval | K-line semantic activation |
+| Queue eviction policy | Narrative logging + metadata sidecars |
+
+**Reference:** [arXiv:2310.08560](https://arxiv.org/abs/2310.08560)
 
 ---
 
