@@ -362,6 +362,170 @@ graph LR
     MP[🏛️ memory-palace] -->|sibling of| AP
 ```
 
+---
+
+## adventure.py — The CLI Uplift Plan
+
+> **Vision:** A Python CLI that validates, lints, and compiles adventures into standalone browser experiences.
+
+### Commands
+
+```bash
+$ adventure.py lint quest/           # Validate schemas, suggest fixes
+$ adventure.py compile quest/ -o dist/  # Generate standalone HTML/JS
+$ adventure.py serve quest/          # Live preview with hot reload
+```
+
+### LINT: The Validator
+
+The linter scans an adventure directory and outputs **events for the LLM to fix**:
+
+```bash
+$ adventure.py lint examples/adventure-3/
+
+[WARN] kitchen/ROOM.yml: Missing 'exits' field (standard: north, south, east, west)
+[WARN] kitchen/fridge.yml: No 'description' field
+[ERROR] maze/room-a/ROOM.yml: 'occupants' references 'guard' but no guard.yml exists
+[SUGGEST] characters/player.yml: Add 'skills' field for richer interaction
+[UPGRADE] pub/bartender.yml: Old format. Add 'dialogue_tree' for conversations.
+```
+
+**Key principle:** The linter does NOT auto-fix. It outputs events for the LLM to read and correct. The LLM has context and judgment.
+
+### Standardized Schemas (Extensible)
+
+Proven useful fields become standard. Custom fields always allowed.
+
+```yaml
+# ROOM.yml — Standard Fields
+name: Kitchen                    # REQUIRED
+description: "A warm, cluttered kitchen..."  # REQUIRED
+exits:                           # STANDARD
+  north: hallway
+  east: pantry
+occupants: []                    # STANDARD
+objects: [fridge, stove, table]  # STANDARD
+ambient: "Smell of fresh bread"  # OPTIONAL
+light_level: bright              # OPTIONAL
+# ... custom fields welcome ...
+```
+
+```yaml
+# CHARACTER.yml — Standard Fields  
+name: Bartender                  # REQUIRED
+description: "A gruff dwarf..."  # REQUIRED
+location: pub                    # STANDARD
+inventory: []                    # STANDARD
+dialogue_tree: {}                # STANDARD (for NPCs)
+skills: []                       # STANDARD
+mood: neutral                    # OPTIONAL
+# ... custom fields welcome ...
+```
+
+### COMPILE: Generate Standalone Web Experience
+
+```bash
+$ adventure.py compile quest/ -o dist/
+```
+
+**Outputs:**
+
+```
+dist/
+├── index.html           # Self-contained adventure
+├── world.json           # Compiled microworld data
+├── engine.js            # Adventure simulation engine
+├── assets/
+│   └── images/          # Generated/provided images
+└── manifest.json        # Metadata
+```
+
+**The web experience includes:**
+
+1. **Navigation** — Click rooms, use arrow keys, or type commands
+2. **Pie Menus** — Right-click objects for contextual actions
+3. **Chat Interface** — Text input for complex commands
+4. **Inventory Panel** — Drag-and-drop items
+5. **Character Panel** — Stats, skills, equipment
+6. **Map View** — Auto-generated from room connections
+
+### Smart Objects: Skills for Compilation
+
+Objects can have their own **compilation skills** — YAML instructions that generate deterministic JSON + JavaScript mini-simulations:
+
+```yaml
+# owl.yml — Smart Object with Simulation Skill
+name: "Index Owl"
+type: smart_object
+compile_skill: owl-indexer
+
+# The owl skill knows how to:
+# 1. Compile YAML → JSON state
+# 2. Generate JS for owl behavior (search, fly, perch)
+# 3. Create SVG/animation assets
+```
+
+**Microworld agents:**
+
+```yaml
+# farm.yml — Microworld with Agents
+name: "Hopkins Farm"
+type: microworld
+agents:
+  - type: chicken
+    count: 6
+    behavior: wander, peck, lay_eggs
+  - type: cow
+    count: 2  
+    behavior: graze, moo, produce_milk
+    
+compile_skill: farm-simulator
+# Generates: chickens.js, cows.js with autonomous behaviors
+```
+
+### The Compilation Pipeline
+
+```
+1. VALIDATE  — Run linter, ensure schemas valid
+2. RESOLVE   — Resolve all references (rooms, characters, objects)
+3. COMPILE   — Each object uses its compile_skill to generate JSON+JS
+4. BUNDLE    — Combine into single index.html with inline assets
+5. OPTIMIZE  — Minify, tree-shake unused code
+```
+
+### Image Generation Integration
+
+```yaml
+# kitchen/ROOM.yml
+name: Kitchen
+description: "A warm, cluttered kitchen with copper pots hanging..."
+image:
+  prompt: "Cozy medieval kitchen, copper pots, warm firelight, pixel art style"
+  style: pixel_art_32
+  generate: true  # adventure.py will call image generator
+```
+
+```bash
+$ adventure.py generate-images quest/  # Generate all missing images
+$ adventure.py compile quest/ --images  # Compile with image generation
+```
+
+### Cursor as Authoring System
+
+With this pipeline:
+
+1. **Author in Cursor** — Write YAML rooms, characters, objects
+2. **LLM assists** — Generates descriptions, dialogue trees, puzzles
+3. **Lint & Fix** — `adventure.py lint` → LLM reads events → fixes files
+4. **Preview** — `adventure.py serve` for live testing
+5. **Generate Images** — AI creates room/object artwork
+6. **Compile** — One-click standalone HTML game
+7. **Share** — Upload anywhere, runs in any browser
+
+**Cursor becomes a point-and-click adventure authoring system.**
+
+---
+
 ## Dovetails With
 
 ### Sister Skills
@@ -375,3 +539,13 @@ graph LR
 
 ### Kernel
 - [kernel/context-assembly-protocol.md](../../kernel/context-assembly-protocol.md) — Working set loading
+
+### lloooomm Heritage
+
+The crown jewels from lloooomm inform this design:
+
+- **Owl Simulation** — Smart objects with autonomous behavior
+- **Farm Simulation** — Microworlds with agent populations  
+- **Character Instantiation** — YAML characters → JS agents
+- **Pie Menus** — Contextual point-and-click interaction
+- **Hybrid LLM/Deterministic** — LLM for creativity, code for precision
