@@ -48,6 +48,7 @@
 - [The Empathic Suite](#the-empathic-suite-dovetailing-skills)
   - [Empathic Expressions](#empathic-expressions-the-big-tent)
   - [Empathic Templates](#empathic-templates-smart-instantiation)
+  - [Comment Intelligence](#comment-intelligence)
   - [Postel's Law](#postels-law-the-foundation)
   - [Code-Switching](#code-switching-support)
 
@@ -1067,7 +1068,9 @@ description: |
   constant state of wagging, a furry metronome of joy.
 ```
 
-**Comment Intelligence:** The LLM distinguishes meta-comments (instructions for generation) from concrete comments (for the output):
+### Comment Intelligence
+
+The LLM distinguishes meta-comments (instructions for generation) from concrete comments (for the output):
 
 | Type | Indicators | Action |
 |------|------------|--------|
