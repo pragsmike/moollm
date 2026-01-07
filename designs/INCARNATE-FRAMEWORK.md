@@ -1184,8 +1184,8 @@ Don't update the screen (tokenize) on every keystroke. Wait until the user pause
 - [MEMGPT-ANALYSIS.md](./MEMGPT-ANALYSIS.md) — OS-inspired context management
 - [MOOLLM-MANIFESTO.md](./MOOLLM-MANIFESTO.md) — Core philosophy
 - [constitution-design-summary.md](./constitution-design-summary.md) — Ethical foundations
-- [skills/skill/SKILL.md](../skills/skill/SKILL.md) — The meta-skill
-- [skills/incarnation/SKILL.md](../skills/incarnation/SKILL.md) — Character creation protocol
+- [skills/skill/](../skills/skill/) — The meta-skill
+- [skills/incarnation/](../skills/incarnation/) — Character creation protocol
 
 ---
 
@@ -1207,7 +1207,7 @@ Don't update the screen (tokenize) on every keystroke. Wait until the user pause
 | **Seymour Papert** | Logo, Constructionism | Learning by building |
 | **Marvin Minsky** | K-lines, Society of Mind | Names as activation vectors |
 | **Gary Gygax & Dave Arneson** | D&D (1974) | DM as proto-LLM, adventure format |
-| **Don Hopkins** | Pie menus, SimCity/NeWS, MOOLLM | All of the above, synthesized |
+| **Don Hopkins** | Pie menus, NeWS, HyprerLook, SimCity, The Sims, MOOLLM | All of the above, synthesized |
 
 ---
 
@@ -1221,7 +1221,7 @@ MOOLLM is a step toward that destiny:
 - **For all humanity:** Skills anyone can use and create
 - **Pervasively networked:** Filesystem as shared state
 
-**Incarnate skills** make this possible. They are not documentation. They are not data structures. They are **programs for the mind** — human and artificial alike.
+**Incarnate skills** make this possible. They are not just documentation. They are not just data structures. They are **programs for the mind** — human and artificial alike.
 
 ---
 
