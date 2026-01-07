@@ -29,7 +29,7 @@ MOOLLM stands on the shoulders of giants. This document traces the lineage.
 
 ### The Axis of Eval: Code, Graphics, Data
 
-Don Hopkins coined this phrase to describe NeWS's and HyperLook's unification of three dimensions around PostScript:
+Don Hopkins coined this phrase to describe [NeWS's and HyperLook's](https://donhopkins.medium.com/alan-kay-on-should-web-browsers-have-stuck-to-being-document-viewers-and-a-discussion-of-news-52e059ce0a68) unification of three dimensions around PostScript:
 
 | Dimension | HyperLook (PostScript) | MOOLLM (YAML Jazz + Markdown) |
 |-----------|------------------------|-------------------------------|
@@ -77,7 +77,7 @@ Not all text formats are equal. LLMs have different strengths:
 | Format | Role | LLM Strength | Why |
 |--------|------|--------------|-----|
 | **YAML** | Representation | **Manipulate, transform** | Comments = semantic richness |
-| **Markdown** | Representation | **Manipulate, transform, embed** | Prose + structure, code blocks, human-friendly |
+| **Markdown** | Representation | **Manipulate, transform, embed** | Prose + structure, code blocks, tables, links, human-friendly |
 | **HTML** | Output | **Generate, render** | Verbose, hard to edit |
 | **CSS** | Output | **Generate, render** | Styling output |
 | **SVG** | Output | **Generate, render** | Vector graphics output |
@@ -87,19 +87,19 @@ Not all text formats are equal. LLMs have different strengths:
 **HTML/CSS/SVG/JSON** = output formats for rendering, displaying, machine consumption.
 
 ```
-┌─────────────────────────────────────────────────────────────┐
+┌──────────────────────────────────────────────────────────────┐
 │                    THE LLM PIPELINE                          │
-├─────────────────────────────────────────────────────────────┤
+├──────────────────────────────────────────────────────────────┤
 │                                                              │
-│   INPUT (represent, transform)    OUTPUT (render, display)  │
-│   ┌────────────────────────┐      ┌────────────────────────┐│
-│   │ YAML Jazz + Markdown   │ ───▶ │ HTML, CSS, SVG, JSON   ││
-│   │ • Comments as data     │      │ • Machine-readable     ││
-│   │ • Human-friendly       │      │ • Display-ready        ││
-│   │ • Easy to manipulate   │      │ • Hard to edit         ││
-│   └────────────────────────┘      └────────────────────────┘│
+│   INPUT (represent, transform)    OUTPUT (render, display)   │
+│   ┌────────────────────────┐      ┌────────────────────────┐ │
+│   │ YAML Jazz + Markdown   │ ───▶ │ HTML, CSS, SVG, JSON   │ │
+│   │ • Comments as data     │      │ • Machine-readable     │ │
+│   │ • Human-friendly       │      │ • Display-ready        │ │
+│   │ • Easy to manipulate   │      │ • Hard to edit         │ │
+│   └────────────────────────┘      └────────────────────────┘ │
 │                                                              │
-└─────────────────────────────────────────────────────────────┘
+└──────────────────────────────────────────────────────────────┘
 ```
 
 **JSON's problem:** No comments. Can't do YAML Jazz. Machine-readable but not human-friendly. Fine for output, bad for representation.
@@ -205,7 +205,7 @@ Network-extensible window system. PostScript as the universal language. "Send pr
 
 **MOOLLM inherits:** LLM as universal interpreter. Skills as programs. YAML Jazz as the universal language.
 
-### 6. HyperLook (Arthur van Hoff, Turing Institute, 1989-1992)
+### 6. [HyperLook](https://donhopkins.medium.com/simcity-cellular-automata-and-happy-tool-for-hyperlook-d678b40347e9) (Arthur van Hoff, Turing Institute, 1989-1992)
 
 HyperCard reimagined for NeWS. PostScript for code, graphics, AND data. Network delegation.
 
@@ -219,7 +219,7 @@ HyperCard reimagined for NeWS. PostScript for code, graphics, AND data. Network 
 
 **MOOLLM inherits:** LLM as linguistic motherboard. Skills as cards. `CARD.yml` is literal!
 
-### 8. SimCity, The Sims, and The Simulator Effect (Will Wright)
+### 8. SimCity, The Sims, and [The Simulator Effect](https://donhopkins.medium.com/will-wright-on-designing-user-interfaces-to-simulation-games-1996-video-update-2023-da098a51ef91) (Will Wright)
 
 > *"He designs games to run on two computers at once: the electronic one on the player's desk, running his shallow tame simulation, and the biological one in the player's head, running their deep wild imagination."*
 
@@ -464,6 +464,28 @@ MOOLLM is a step toward that destiny:
 - **Pervasively networked:** Filesystem as shared state
 
 **Incarnate skills** make this possible. They are not documentation. They are not data structures. They are **programs for the mind** — human and artificial alike.
+
+---
+
+## References & Further Reading
+
+### Don Hopkins' Articles (Medium)
+
+| Article | Topic |
+|---------|-------|
+| [SimCity, Cellular Automata, and Happy Tool for HyperLook](https://donhopkins.medium.com/simcity-cellular-automata-and-happy-tool-for-hyperlook-d678b40347e9) | HyperLook, Axis of Eval, NeWS |
+| [Alan Kay on "Should web browsers have stuck to being document viewers?"](https://donhopkins.medium.com/alan-kay-on-should-web-browsers-have-stuck-to-being-document-viewers-and-a-discussion-of-news-52e059ce0a68) | NeWS, HyperLook, linguistic motherboard |
+| [The Shape of PSIBER Space](https://donhopkins.medium.com/the-shape-of-psiber-space-postscript-interactive-bug-eradication-routines-october-1989-1e4cc5bf1f08) | Visual PostScript debugging |
+| [Open Sourcing SimCity](https://donhopkins.medium.com/open-sourcing-simcity-by-chaim-gingold-44261ae4f754) | SimCity history, Chaim Gingold |
+| [Will Wright on Designing User Interfaces to Simulation Games](https://donhopkins.medium.com/will-wright-on-designing-user-interfaces-to-simulation-games-1996-video-update-2023-da098a51ef91) | Simulator Effect, game design |
+| [Micropolis: Constructionist Educational Open Source SimCity](https://donhopkins.medium.com/micropolis-constructionist-educational-open-source-simcity-79dce12e9e98) | Constructionism, OLPC |
+| [Pie Menu Timeline](https://donhopkins.medium.com/pie-menu-timeline-9fd0ed2a36df) | Pie menus history |
+
+### Academic & Historical References
+
+- Packer et al. (2023). *MemGPT: Towards LLMs as Operating Systems*. [arXiv:2310.08560](https://arxiv.org/abs/2310.08560)
+- Ungar & Smith (1987). *Self: The Power of Simplicity*. OOPSLA.
+- Rosenthal, D. *History of Window Systems*. [blog.dshr.org](https://blog.dshr.org/2023/01/history-of-window-systems.html)
 
 ---
 
