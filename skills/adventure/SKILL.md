@@ -347,9 +347,90 @@ Adventures work for code exploration:
 
 ## Live Examples
 
-- [examples/adventure-3/](../../examples/adventure-3/) — Full adventure instance
-- [examples/adventure-3/ADVENTURE.yml](../../examples/adventure-3/ADVENTURE.yml) — State file
-- [examples/adventure-3/pub/](../../examples/adventure-3/pub/) — Room with NPCs
+**Best example: [examples/adventure-4/](../../examples/adventure-4/)** — The gold standard.
+
+### The Pub (Crown Jewel)
+
+[examples/adventure-4/pub/](../../examples/adventure-4/pub/) — A complete social space:
+
+```
+pub/
+├── ROOM.yml              # Themeable tavern (6 themes!)
+├── bartender.yml         # NPC with 6 identity variants
+├── pie-table.yml         # Octagonal debate table
+├── gong.yml              # Gong of Gezelligheid
+├── bar/
+│   ├── bartender.yml     # The omniscient bartender
+│   ├── budtender-marieke.yml
+│   └── cat-cave/         # TARDIS-like cat sanctuary
+│       ├── ROOM.yml
+│       └── 10 cats (Terpie, Stroopwafel, kittens...)
+├── arcade/               # Pacman, Pong, Pinball, Fruit Machine
+├── games/                # Chess, Darts, Cards
+├── stage/
+│   └── palm-nook/        # Multi-room character space
+│       ├── study/        # Infinite typewriters, infinity desk
+│       ├── gym/          # Infinite climb
+│       ├── play/
+│       └── rest/         # Hammock, silence cushion
+└── menus/                # Drinks, snacks, buds, games
+```
+
+### Key Patterns from adventure-4
+
+**Themeable NPCs** (bartender.yml):
+```yaml
+identity:
+  classic_adventure:
+    name: Grim
+    appearance: "Weathered human, salt-and-pepper beard..."
+  space_cantina:
+    name: Z-4RT
+    appearance: "Multi-armed service droid..."
+  cyberpunk_bar:
+    name: Nyx
+    appearance: "Chrome-implanted bartender..."
+```
+
+**Themeable Rooms** (pub/ROOM.yml):
+```yaml
+theme:
+  current: classic_adventure
+  themes:
+    classic_adventure:
+      name: "The Rusty Lantern"
+      bartender: "Grim, a weathered human"
+      menu: ["Ale (1 gold)", "Mystery meat pie (3 gold)"]
+    space_cantina:
+      name: "The Rusty Hyperdrive"
+      bartender: "Z-4RT, a droid with too many arms"
+      menu: ["Blue milk (1 credit)", "Bantha burger"]
+```
+
+**Rich Activities**:
+```yaml
+activities:
+  PERFORM: { venue: stage, effects: [tips, drinks_thrown] }
+  DEBATE: { venue: pie_table, rules: roberts_rules }
+  RING-GONG: { protocols: [once: attention, twice: emergency, thrice: mercy] }
+  CELEBRATE: { effects: [free_round, +morale, everyone_toasts] }
+```
+
+**Framing Protocol** (for tribute performances):
+```yaml
+framing:
+  mode: [performance, celebration, tribute]
+  tribute_protocol:
+    invocation: "Before they arrive, acknowledge we're summoning them"
+    performance: "Depicting them as we imagine their best selves"
+    acknowledgment: "After they depart, note this was a tribute"
+```
+
+### Other Examples
+
+- [examples/adventure-3/](../../examples/adventure-3/) — Earlier version, still useful
+- [examples/adventure-1/](../../examples/adventure-1/) — Minimal starting point
+- [examples/adventure-2/](../../examples/adventure-2/) — Extended exploration
 
 ## The Intertwingularity
 
