@@ -320,6 +320,168 @@ MOOLLM combines both:
 
 The LLM reads schemas empathically. It understands *why* the context matters, not just *that* it matters. This is what Drescher couldn't achieve with 1991 computing -- but LLMs can.
 
+### Why LLMs Excel Where Lisp/Prolog/Python Struggle
+
+Drescher's original implementation (and Henry Minsky's Python port) face fundamental limitations that LLMs transcend:
+
+**1. The Symbol Grounding Problem**
+
+```python
+# Python: Items are opaque tokens
+item_37 = Item("postgres-running")  # What does this MEAN?
+item_38 = Item("database-healthy")  # Is this the same thing?
+
+# The system can correlate item_37 with success,
+# but it has NO IDEA what "postgres" or "running" mean.
+```
+
+```yaml
+# YAML Jazz + LLM: Semantics are grounded
+postgres-running:
+  # The database engine that stores our task queue
+  # Must be healthy before pyvision can claim tasks
+  # Check with: docker exec edgebox-postgres pg_isready
+```
+
+The LLM *understands* that postgres is a database, that "running" means the process is alive, that this matters for downstream services. It can **reason about** the items, not just correlate them.
+
+**2. Natural Language Context**
+
+```prolog
+% Prolog: Formal but opaque
+schema(start_pyvision, [postgres_running], [pyvision_running]).
+% Why? What's the relationship? Silent.
+```
+
+```yaml
+# YAML Jazz: Self-documenting causality
+schema:
+  action: start-pyvision
+  context:
+    - postgres-running
+    # pyvision needs postgres to claim tasks from the queue
+    # without it, the worker has nothing to process
+  result:
+    - pyvision-running
+```
+
+The LLM reads the comments and *understands the causal mechanism*. It can explain failures, suggest alternatives, generalize to similar situations.
+
+**3. Empathic Pattern Recognition**
+
+Drescher's mechanism discovers patterns through statistical correlation:
+
+```python
+# Python: Counting correlations
+extended_context[item_id].success_when_on += 1
+# After 50 trials: item_37 correlates with success
+# But WHY? The system cannot say.
+```
+
+The LLM recognizes patterns **semantically**:
+
+```
+LLM: "I notice start-pyvision fails when postgres isn't running.
+     This makes sense -- pyvision queries the task table on startup.
+     The dependency is architectural, not coincidental."
+```
+
+The LLM doesn't just find correlations -- it **understands mechanisms**.
+
+**4. Creative Spin-offs**
+
+When Drescher's system spins off a new schema, it's mechanical:
+
+```python
+# Python: Mechanical spinoff
+if correlation > threshold:
+    new_schema = Schema(
+        action=parent.action,
+        context=parent.context + [correlated_item],
+        result=parent.result
+    )
+```
+
+When an LLM spins off knowledge, it's creative:
+
+```
+LLM: "Based on the postgres dependency, I should also check:
+     - Is there enough disk space for the database?
+     - Are the connection limits configured properly?
+     - Should we add a health check before starting?"
+```
+
+The LLM **generalizes** from specific observations to related concerns.
+
+**5. The Explanation Gap**
+
+```lisp
+;; Lisp: Can derive, cannot explain
+(derive-plan goal: pyvision-running)
+;; Returns: ((start-postgres) (start-pyvision))
+;; But try asking it WHY this plan works...
+```
+
+```yaml
+# MOOLLM: Plans with explanations
+plan:
+  - action: start-postgres
+    rationale: "pyvision needs the task queue"
+  - action: start-pyvision
+    rationale: "now it can claim tasks"
+    
+# LLM can also explain failures:
+# "The plan failed because disk was full,
+#  so postgres couldn't write its WAL logs."
+```
+
+**6. Handling Novelty**
+
+Symbolic systems choke on novel situations:
+
+```python
+# Python: Item not in vocabulary
+item = world.get_item("kubernetes-pod-restarting")
+# KeyError! The system has never seen this item.
+```
+
+LLMs handle novelty gracefully:
+
+```
+Human: "The kubernetes pod keeps restarting"
+
+LLM: "I haven't seen this exact item before, but I understand:
+     - 'kubernetes pod' is a containerized service
+     - 'restarting' suggests crash loops
+     - This is similar to the 'pyvision crashing' pattern
+     - Let me check the container logs..."
+```
+
+**The Fundamental Difference:**
+
+| Aspect | Deterministic (Lisp/Prolog/Python) | LLM + YAML Jazz |
+|--------|-----------------------------------|-----------------|
+| Items | Opaque tokens | Grounded meanings |
+| Patterns | Statistical correlation | Semantic understanding |
+| Spin-offs | Mechanical refinement | Creative generalization |
+| Explanations | None | Natural language |
+| Novelty | Vocabulary-limited | Open-ended |
+| Context | Formal predicates | Natural language + comments |
+| Debugging | Trace execution | Ask "why did this fail?" |
+
+**Drescher's Dream, Realized:**
+
+Drescher was trying to build a system that learns causal models of the world. His mechanism was brilliant but limited by the symbolic substrate. The schema mechanism discovers *that* patterns exist, but cannot understand *why*.
+
+LLMs complete the picture. They bring:
+- **Semantic grounding**: Items mean something
+- **Causal reasoning**: Understanding *why* patterns hold
+- **Natural explanation**: Communicating discoveries
+- **Creative generalization**: Going beyond observed patterns
+- **Graceful degradation**: Handling novel situations
+
+MOOLLM unifies Drescher's rigorous structure with LLM's semantic understanding. The YAML provides the skeleton; the LLM provides the soul.
+
 ---
 
 ## The Insight
