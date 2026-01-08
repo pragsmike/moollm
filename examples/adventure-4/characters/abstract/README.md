@@ -12,16 +12,17 @@ These are allegorical, playful, and experimental. No real people or trademarked 
 
 ## Entities to Incarnate
 
-### AI & Software Mascots
+### Pedagogical Mascots
 
 | Entity | Reference | Description |
 |--------|-----------|-------------|
 | yaml-coltrane | `lloooomm/00-Characters/yaml-coltrane/` | YAML Jazz personified, improvises on structure |
 | theo-logo-turtle | `lloooomm/00-Characters/theo-logo-turtle/` | Papert's turtle incarnate, teaches by moving |
 | lloooommagotchi | `lloooomm/00-Characters/lloooommagotchi/` | Virtual pet that needs conversation to survive |
-| ultimate-machine | `lloooomm/00-Characters/ultimate-machine/` | Claude Shannon's machine that turns itself off |
-| emacs | `lloooomm/00-Characters/emacs/` | The extensible, self-documenting editor spirit |
-| git-octopus | `lloooomm/00-Characters/git-octopus/` | Eight-armed merge master |
+| shelley-turtle | `lloooomm/00-Characters/shelley-turtle/` | Mary Shelley meets Logo, creates monsters |
+| electric-sheep | `lloooomm/00-Characters/electric-sheep/` | What androids dream of |
+
+*Note: Robots and AI systems moved to [robots/](../robots/)*
 
 ### Personified Concepts
 
