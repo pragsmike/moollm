@@ -1,12 +1,12 @@
-# 🏛️ Hall of Pioneers
+# 🪦 The Living and The Dead
 
 > *"We do not speak FOR them. We imagine WITH them."*
 
-You enter a grand hall filled with portraits. Warm amber light falls across oak panels and leather chairs. Here gather the pioneers -- those who shaped computing, art, music, and philosophy. Their books line the walls. Their ideas echo in conversation.
+You enter a vast gallery of portraits. Some faces smile. Some scowl. Some stare into distances you cannot see. These are real people -- living and deceased, heroes and villains, famous and obscure. Scientists and criminals. Saints and sinners. Anyone who actually walked the earth.
 
-Alan Kay argues with Ted Nelson about the future of interfaces. Seymour Papert draws on a chalkboard while Jean Piaget watches approvingly. In the corner, John Coltrane plays a melody that somehow sounds like code.
+Alan Kay argues with Ted Nelson about interfaces. In a shadowed corner, someone you'd rather not name watches. John Coltrane plays while admirers and critics alike listen. History is complicated. People are complicated.
 
-These are **tribute incarnations** -- fictional explorations of documented ideas, not claims to speak for anyone. We honor their contributions by bringing their perspectives into new conversations.
+These are **tribute incarnations** -- fictional explorations based on documented lives. We do not claim to speak for anyone. We imagine WITH them, for good or ill.
 
 ## Ethical Protocol: TRIBUTE
 

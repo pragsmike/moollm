@@ -1,6 +1,6 @@
 room:
-  name: "Hall of Pioneers"
-  purpose: "Tribute incarnations of real people who shaped computing, art, and thought"
+  name: "The Living and The Dead"
+  purpose: "Real people -- living or deceased, heroes or villains, famous or obscure"
   
   ethical_framing:
     protocol: TRIBUTE
