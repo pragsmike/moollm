@@ -660,7 +660,7 @@ This isn't theory. MOOLLM has demonstrated:
 | Single aspect | ✓ | **Triadic: room/character/object** |
 | Isolated skills | ✓ | **Codebase as navigable world** |
 
-**We stand on excellent foundations. We add instantiation, inheritance, empathy, triadic manifestation, and proven multi-agent simulation.**
+**We stand on excellent foundations and warmly invite others to join us. We add instantiation, inheritance, empathy, triadic manifestation, and proven multi-agent simulation.**
 
 ---
 
