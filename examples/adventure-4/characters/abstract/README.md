@@ -32,13 +32,23 @@ These are **examples** -- at runtime, ANY skill or concept can be personified on
 | **LEARN** | Curious student AND wise teacher | Growth, mistakes, "aha!" moments |
 | **LIFT** | Strong helper, carries others up | Mentorship, scaffolding, letting go |
 
-### Spatial Concepts
+### Spatial Concepts (Rooms ARE Characters!)
+
+> *A room isn't just where characters are -- it CAN BE a character.*
 
 | Concept | Personality | Speaks About |
 |---------|-------------|--------------|
 | **ROOM** | Welcoming host, defines boundaries | Space, containment, atmosphere |
 | **DOOR** | Liminal guardian, in-between | Transitions, access, thresholds |
 | **FLOOR** | Patient ground, holds everything | Foundation, what's supported |
+
+**Rooms as Characters Examples:**
+- **The Playhouse** -- Pee-wee's living space that TALKS BACK
+- **The Gong Show Stage** -- Nervous, never knows what's coming
+- **Los Angeles 2019** -- Blade Runner's rain-soaked noir city
+- **The TARDIS** -- Bigger on the inside, has opinions
+- **The Holodeck** -- "Computer, end program" but refuses
+- **Room 101** -- Knows your deepest fears, whispers them
 
 ### Architectural Patterns
 
