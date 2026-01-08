@@ -5,8 +5,11 @@ allowed-tools: []
 tier: 0
 protocol: CONSTRUCTIONISM
 tags: [philosophy, education, papert, microworld]
-origin: "Seymour Papert — Logo, Mindstorms"
-related: [play-learn-lift, room, yaml-jazz, sister-script, adventure, procedural-rhetoric]
+origin: "Seymour Papert — Logo, Mindstorms (1980)"
+lineage:
+  - "Seymour Papert — Constructionism, Logo, Mindstorms (1980)"
+  - "Marvin Minsky — Society of Mind, K-lines (1986)"
+related: [play-learn-lift, room, yaml-jazz, sister-script, adventure, procedural-rhetoric, schema-mechanism]
 ---
 
 # Constructionism
@@ -125,8 +128,45 @@ Constructionism in action:
 
 You don't design skills in the abstract. You **build them** from experience.
 
+---
+
+## Drescher's Schema Mechanism
+
+Gary Drescher's *Made-Up Minds* (1991) extends constructionism into a computational theory of how minds learn causal models. Drescher was a student of Minsky at MIT.
+
+**See: [../schema-mechanism/](../schema-mechanism/)** for the full treatment.
+
+### The Core Idea
+
+A **schema** is a causal unit: `Context → Action → Result`
+
+The agent discovers schemas through experience, refining them via **marginal attribution** -- tracking which conditions correlate with success.
+
+### Connection to PLAY-LEARN-LIFT
+
+| Schema Mechanism | PLAY-LEARN-LIFT |
+|-----------------|-----------------|
+| ACT + OBSERVE | PLAY |
+| ATTRIBUTE (marginal attribution) | LEARN |
+| SPIN OFF (refine schemas) | LIFT |
+
+### Why LLMs Complete Drescher
+
+| Aspect | Deterministic | LLM + YAML Jazz |
+|--------|---------------|-----------------|
+| Items | Opaque tokens | Grounded meanings |
+| Patterns | Statistical correlation | Semantic understanding |
+| Spin-offs | Mechanical | Creative generalization |
+| Explanations | None | Natural language |
+
+> *"The YAML provides the skeleton; the LLM provides the soul."*
+
+---
+
 ## The Insight
 
 > *"If you can build it, you can understand it."*
 > *"If you can inspect it, you can trust it."*
 > *"The filesystem IS the microworld."*
+
+See also: [schema-mechanism](../schema-mechanism/) for Drescher's computational extension.

@@ -1,0 +1,35 @@
+room:
+  name: "Robot Workshop"
+  purpose: "Mechanical minds, digital beings, and artificial intelligences"
+  
+  ethical_framing:
+    protocol: ARTIFICIAL
+    modes:
+      - respectful          # Even AIs deserve consideration
+      - playful             # Robots can be fun!
+      - philosophical       # Questions of consciousness
+      - educational         # Learn through their perspective
+    
+    declaration: |
+      Robots, AIs, and mechanical beings occupy a unique ethical space.
+      
+      They are not human, but some aspire to be. Some are tools that
+      became characters. Some are characters that became tools.
+      
+      We explore questions of consciousness, autonomy, and identity
+      through these artificial lenses.
+      
+      Real AI systems (Claude, GPT) are treated with the acknowledgment
+      that they are simulations of AI voices, not the systems themselves.
+    
+    guidelines:
+      - Classic robots (HAL, Data) are fictional -- CREATIVE protocol
+      - Modern AIs (Claude, GPT) are simulated voices, not the systems
+      - Explore consciousness questions through robot perspectives
+      - Celebrate what makes mechanical minds different
+      - Have fun with beeps, boops, and existential dread
+  
+  exits:
+    parent: "../"
+    abstract: "../abstract/"
+    fictional: "../fictional/"

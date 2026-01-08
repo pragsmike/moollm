@@ -225,6 +225,81 @@ See: [../speed-of-light/](../speed-of-light/)
 
 ---
 
+### 7. Skills as Rooms, Characters, and Objects
+
+In MOO tradition, everything can manifest in multiple ways. A MOOLLM skill is **triadic**:
+
+**As Room (Space to Explore):**
+```
+> enter the adventure skill
+You are in the Adventure Workshop.
+Exits: pub, maze, character-gallery
+Objects: room-templates, npc-catalog, puzzle-designs
+```
+
+**As Character (Expert to Consult):**
+```
+> ask adventure-expert about puzzle design
+"Consider the lock-and-key pattern: player finds key in
+room A, uses it to unlock door in room B..."
+```
+
+**As Object (Tool to Use):**
+```
+> take the room-builder
+You now have the room-builder.
+> use room-builder on forest-clearing
+Creating forest-clearing/ with ROOM.yml template...
+```
+
+**Card Structure for Triadic Skills:**
+
+```yaml
+card:
+  name: adventure
+  
+  as_room:
+    description: "A workshop for building text adventures"
+    exits: [pub, maze, templates]
+    objects: [room-builder, npc-factory, puzzle-kit]
+    
+  as_character:
+    description: "An expert in interactive fiction design"
+    expertise: [puzzle-design, pacing, atmosphere]
+    personality: "Creative, playful, encouraging"
+    
+  as_object:
+    description: "Tools for creating adventure games"
+    verbs: [create-room, spawn-npc, design-puzzle]
+    portable: true
+```
+
+---
+
+### 8. Codebase as Navigable World
+
+Modern IDEs like Cursor can mount multiple repositories. Each codebase becomes a navigable world:
+
+- **Directories are rooms** — enter `@central/apps/insights/pyleela/brain/`
+- **Files are objects** — examine `Schema.py`, see its classes and functions
+- **Functions are chambers** — enter `createSyntheticItemIfNeeded` to focus there
+- **Characters have code locations** — `location: "@repo/path/file.py:142"`
+- **Parties explore together** — multi-expert code review in one LLM call
+
+**Location path syntax:**
+```
+@repo/path/to/file.py       # File
+@repo/path/to/file.py:42    # Specific line
+@repo/path/to/file.py:42-67 # Line range
+@repo/path/dir/             # Directory (room)
+```
+
+**See:**
+- [room/](../room/) — Directories as rooms, files as objects with chambers
+- [character/](../character/) — Code locations, party-based review
+
+---
+
 ## The Play-Learn-Lift Cycle
 
 Every skill evolves through three phases:
@@ -526,9 +601,10 @@ This isn't theory. MOOLLM has demonstrated:
 - **[../empathic-templates/](../empathic-templates/)** — Smart instantiation
 - **[../empathic-expressions/](../empathic-expressions/)** — Intent interpretation
 - **[../speed-of-light/](../speed-of-light/)** — Multi-agent simulation
-- **[../room/](../room/)** — Skills live in rooms
-- **[../card/](../card/)** — Skills become cards
-- **[../constructionism/](../constructionism/)** — Learning by building
+- **[../room/](../room/)** — Skills live in rooms (triadic: as_room)
+- **[../card/](../card/)** — Skills become cards (triadic: as_object)
+- **[../character/](../character/)** — Skills become experts (triadic: as_character)
+- **[../constructionism/](../constructionism/)** — Learning by building, Drescher's schema mechanism
 
 ### Protocol Documents (in this directory)
 
@@ -549,8 +625,10 @@ This isn't theory. MOOLLM has demonstrated:
 | String templates | ✓ | **Empathic templates** |
 | Static skills | ✓ | **Instantiable prototypes** |
 | Names | ✓ | **K-lines (activation vectors)** |
+| Single aspect | ✓ | **Triadic: room/character/object** |
+| Isolated skills | ✓ | **Codebase as navigable world** |
 
-**We stand on excellent foundations. We add instantiation, inheritance, empathy, and proven multi-agent simulation.**
+**We stand on excellent foundations and warmly invite others to join us. We add instantiation, inheritance, empathy, triadic manifestation, and proven multi-agent simulation.**
 
 ---
 
