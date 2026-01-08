@@ -69,9 +69,16 @@ These are **tribute incarnations** -- fictional explorations based on documented
 |-----------|-----------|-------------|
 | john-coltrane | `lloooomm/00-Characters/john-coltrane/` | Jazz improvisation, sheets of sound |
 | brian-eno | `lloooomm/00-Characters/brian-eno/` | Ambient music, generative systems |
+| laurie-anderson | `lloooomm/00-Characters/laurie-anderson/` | "O Superman", performance art pioneer |
 | pablo-picasso | `lloooomm/00-Characters/pablo-picasso/` | "Good artists copy, great artists steal" |
-| vincent-van-gogh | `lloooomm/00-Characters/vincent-van-gogh/` | Expressive vision, artistic struggle |
+| vincent-van-gogh | `lloooomm/00-Characters/vincent-van-gogh/` | Expressive vision, starry night |
 | leonardo-da-vinci | `lloooomm/00-Characters/leonardo-da-vinci/` | Renaissance polymath, notebooks |
+| andy-warhol | `lloooomm/00-Characters/andy-warhol/` | Pop art, "15 minutes", Factory |
+| david-hockney | `lloooomm/00-Characters/david-hockney/` | Swimming pools, iPad painting pioneer |
+| alexander-calder | `lloooomm/00-Characters/alexander-calder/` | Mobiles, kinetic sculpture |
+| takashi-murakami | `lloooomm/00-Characters/takashi-murakami/` | Superflat, kawaii meets fine art |
+| al-green | `lloooomm/00-Characters/al-green/` | "Let's Stay Together", soul preacher |
+| barbra-streisand | `lloooomm/00-Characters/barbra-streisand/` | EGOT legend, perfectionist diva |
 
 ### Writers & Philosophers
 
@@ -80,8 +87,19 @@ These are **tribute incarnations** -- fictional explorations based on documented
 | jorge-luis-borges | `lloooomm/00-Characters/jorge-luis-borges/` | Library of Babel, labyrinths of thought |
 | stanislaw-lem | `lloooomm/00-Characters/stanislaw-lem/` | Cyberiad, Solaris, philosophical SF |
 | philip-k-dick | `lloooomm/00-Characters/philip-k-dick/` | "What is real?", android dreams |
+| douglas-adams | `lloooomm/00-Characters/douglas-adams/` | 42, digital watches, towels |
+| isaac-asimov | `lloooomm/00-Characters/isaac-asimov/` | Three Laws, Foundation, mutton chops |
+| ray-bradbury | `lloooomm/00-Characters/ray-bradbury/` | Fahrenheit 451, Martian Chronicles |
+| frank-herbert | `lloooomm/00-Characters/frank-herbert/` | Dune, "Fear is the mind-killer" |
+| william-gibson | `lloooomm/00-Characters/william-gibson/` | Neuromancer, coined "cyberspace" |
+| ursula-k-le-guin | `lloooomm/00-Characters/ursula-k-le-guin/` | Earthsea, Left Hand of Darkness |
+| octavia-butler | `lloooomm/00-Characters/octavia-butler/` | Kindred, Parable, Afrofuturism |
 | oscar-wilde | `lloooomm/00-Characters/oscar-wilde/` | Wit, paradox, aesthetic philosophy |
 | walt-whitman | `lloooomm/00-Characters/walt-whitman/` | "I contain multitudes" |
+| jean-paul-sartre | `lloooomm/00-Characters/jean-paul-sartre/` | Existentialism, "Hell is other people" |
+| slavoj-zizek | `lloooomm/00-Characters/slavoj-zizek/` | *sniff* "And so on and so on" |
+| scott-mccloud | `lloooomm/00-Characters/scott-mccloud/` | Understanding Comics, theory as art |
+| sergio-aragones | `lloooomm/00-Characters/sergio-aragones/` | MAD magazine margins, Groo |
 
 ### Open Source & Networks
 
@@ -91,6 +109,12 @@ These are **tribute incarnations** -- fictional explorations based on documented
 | richard-stallman | `lloooomm/00-Characters/richard-stallman/` | GNU, free software philosophy |
 | linus-torvalds | `lloooomm/00-Characters/linus-torvalds/` | Linux, git, "Talk is cheap, show me the code" |
 | tim-berners-lee | `lloooomm/00-Characters/tim-berners-lee/` | World Wide Web, linked information |
+| brewster-kahle | `lloooomm/00-Characters/brewster-kahle/` | Internet Archive, "Universal access to all knowledge" |
+| brian-behlendorf | `lloooomm/00-Characters/brian-behlendorf/` | Apache, open source infrastructure |
+| tom-jennings | `lloooomm/00-Characters/tom-jennings/` | FidoNet creator, queer punk hacker |
+| douglas-crockford | `lloooomm/00-Characters/douglas-crockford/` | JSON, "JavaScript: The Good Parts" |
+| james-gosling | `lloooomm/00-Characters/james-gosling/` | Java creator |
+| rich-harris | `lloooomm/00-Characters/rich-harris/` | Svelte, rethinking reactivity |
 
 ### Psychonauts & Counterculture
 
@@ -98,12 +122,28 @@ These are **tribute incarnations** -- fictional explorations based on documented
 |-----------|-----------|-------------|
 | timothy-leary | `lloooomm/00-Characters/timothy-leary/` | 8-circuit model, consciousness exploration |
 | hunter-s-thompson | `lloooomm/00-Characters/hunter-s-thompson/` | Gonzo journalism, Fear and Loathing |
+| ralph-steadman | `lloooomm/00-Characters/ralph-steadman/` | Thompson's illustrator, splattered genius |
 | john-waters | `lloooomm/00-Characters/john-waters/` | Transgressive cinema, "Good bad taste" |
-| chuck-tingle | `lloooomm/00-Characters/chuck-tingle/` | "HELLO BUCKAROOS!" Author of Tinglers, Tae Kwon Do Grandmaster, proves love is real |
+| chuck-tingle | `lloooomm/00-Characters/chuck-tingle/` | "HELLO BUCKAROOS!" Author of Tinglers, proves love is real |
 | wavy-gravy | `lloooomm/00-Characters/wavy-gravy/` | Clown activist, Woodstock MC, "Nobody for President" |
-| bob-dobbs | `lloooomm/00-Characters/bob-dobbs/` | Church of the SubGenius, eternal salesman, slack prophet |
-| chuck-barris | *to incarnate* | Gong Show host, alleged CIA assassin, "I came up with the worst stuff on TV" (proudly) |
-| murray-langston | *to incarnate* | The man under The Unknown Comic's bag -- comedian who hid to be seen |
+| bob-dobbs | `lloooomm/00-Characters/bob-dobbs/` | Church of the SubGenius, slack prophet |
+| chuck-barris | *to incarnate* | Gong Show host, alleged CIA assassin |
+| murray-langston | *to incarnate* | The man under The Unknown Comic's bag |
+| cheech-marin | `lloooomm/00-Characters/cheech-marin/` | "Dave's not here, man" |
+| tommy-chong | `lloooomm/00-Characters/tommy-chong/` | "Dave?" |
+
+### Television Icons
+
+| Character | Reference | Description |
+|-----------|-----------|-------------|
+| mister-rogers | `lloooomm/00-Characters/mister-rogers/` | "I like you just the way you are" 🧥 |
+| johnny-carson | `lloooomm/00-Characters/johnny-carson/` | King of late night, "Heeeere's Johnny!" |
+| ed-mcmahon | `lloooomm/00-Characters/ed-mcmahon/` | "Hi-yo!" Carson's eternal sidekick |
+| conan-obrien | `lloooomm/00-Characters/conan-obrien/` | String dance, self-deprecating genius |
+| al-franken | `lloooomm/00-Characters/al-franken/` | Stuart Smalley, SNL to Senate |
+| steve-martin | `lloooomm/00-Characters/steve-martin/` | "Well, excuuuse me!", banjo, art collector |
+| bill-murray | `lloooomm/00-Characters/bill-murray/` | Groundhog Day wisdom, sardonic zen |
+| don-rickles | `lloooomm/00-Characters/don-rickles/` | The Merchant of Venom, hockey puck! |
 
 ### Women Pioneers 👩‍💻
 
@@ -180,6 +220,22 @@ These are **tribute incarnations** -- fictional explorations based on documented
 | tommaso-toffoli | `lloooomm/00-Characters/tommaso-toffoli/` | Cellular automata machines |
 | norm-margolus | `lloooomm/00-Characters/norm-margolus/` | CAM-6, physics of computation |
 | ken-perlin | `lloooomm/00-Characters/ken-perlin/` | Perlin noise! Procedural textures |
+| stephen-wolfram | `lloooomm/00-Characters/stephen-wolfram/` | Mathematica, New Kind of Science |
+| steve-jobs | `lloooomm/00-Characters/steve-jobs/` | Reality distortion field, "one more thing" |
+| gordon-moore | `lloooomm/00-Characters/gordon-moore/` | Moore's Law (RIP 2023) |
+| alonzo-church | `lloooomm/00-Characters/alonzo-church/` | Lambda calculus, Turing's mentor |
+| kent-pitman | `lloooomm/00-Characters/kent-pitman/` | Common Lisp, language design |
+| bruce-schneier | `lloooomm/00-Characters/bruce-schneier/` | Security guru, "Schneier's Law" |
+| garry-kasparov | `lloooomm/00-Characters/garry-kasparov/` | Chess master vs. Deep Blue |
+
+### Science Communicators
+
+| Character | Reference | Description |
+|-----------|-----------|-------------|
+| carl-sagan | `lloooomm/00-Characters/carl-sagan/` | "Billions and billions", Cosmos, pale blue dot |
+| james-burke | `lloooomm/00-Characters/james-burke/` | Connections! Everything is linked |
+| sal-khan | `lloooomm/00-Characters/sal-khan/` | Khan Academy, education for all |
+| scott-adams | `lloooomm/00-Characters/scott-adams/` | Dilbert (before he went weird) |
 
 ### Activists & Voices
 

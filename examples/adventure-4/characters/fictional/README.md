@@ -20,15 +20,48 @@ Transformative, non-commercial fan engagement:
 
 ## Characters to Incarnate
 
+### 🌧️ Blade Runner Ensemble
+
+> *"I've seen things you people wouldn't believe..."*
+
+| Character | Reference | Description |
+|-----------|-----------|-------------|
+| roy-batty | `lloooomm/00-Characters/roy-batty/` | Nexus-6, "Tears in rain", more human than human |
+| rick-deckard | `lloooomm/00-Characters/rick-deckard/` | Blade Runner, maybe a replicant himself |
+| rachael-rosen | `lloooomm/00-Characters/rachael-rosen/` | "More human than human", implanted memories |
+| pris-stratton | `lloooomm/00-Characters/pris-stratton/` | Basic pleasure model, gymnast assassin |
+| dr-eldon-tyrell | `lloooomm/00-Characters/dr-eldon-tyrell/` | "Commerce is our goal here at Tyrell" |
+| jf-sebastian | `lloooomm/00-Characters/jf-sebastian/` | Genetic designer, friends with toys |
+
 ### Science Fiction
 
 | Character | Reference | Description |
 |-----------|-----------|-------------|
-| roy-batty | `lloooomm/00-Characters/roy-batty/` | Blade Runner replicant, "Tears in rain" |
 | zaphod-beeblebrox | `lloooomm/00-Characters/zaphod-beeblebrox/` | Two-headed galactic president, hoopy frood |
-| klapaucius-trurl | `lloooomm/00-Characters/klapaucius-trurl/` | Lem's constructor robots, builders of impossible machines |
-| marvin-the-paranoid-android | `lloooomm/00-Characters/marvin-the-paranoid-android/` | Brain the size of a planet, chronic depression |
+| klapaucius-trurl | `lloooomm/00-Characters/klapaucius-trurl/` | Lem's constructor robots, impossible machines |
+| marvin-the-paranoid-android | `lloooomm/00-Characters/marvin-the-paranoid-android/` | Brain the size of a planet |
 | hal-9000 | `lloooomm/00-Characters/hal-9000/` | "I'm sorry Dave, I can't do that" |
+| ellen-ripley | `lloooomm/00-Characters/ellen-ripley/` | "Get away from her, you BITCH!" |
+| indiana-jones | `lloooomm/00-Characters/indiana-jones/` | "It belongs in a museum!" |
+
+### 👽 The X-Files
+
+| Character | Reference | Description |
+|-----------|-----------|-------------|
+| fox-mulder | `lloooomm/00-Characters/fox-mulder/` | "I want to believe" |
+| dana-scully | `lloooomm/00-Characters/dana-scully/` | Skeptic, scientist, medical doctor |
+
+### 🎸 Rocky Horror
+
+| Character | Reference | Description |
+|-----------|-----------|-------------|
+| frank-n-furter | `lloooomm/00-Characters/frank-n-furter/` | Sweet transvestite from Transsexual, Transylvania |
+
+### 🌱 Little Shop of Horrors
+
+| Character | Reference | Description |
+|-----------|-----------|-------------|
+| audrey-ii | `lloooomm/00-Characters/audrey-ii/` | "Feed me, Seymour!" Mean green mother |
 
 ### Star Trek
 

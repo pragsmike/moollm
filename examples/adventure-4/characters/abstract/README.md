@@ -18,6 +18,40 @@ Allegorical, playful, and experimental:
 
 ---
 
+## 🎮 MOOLLM Core Concepts as Characters
+
+> *Any concept can become a character. Skills can speak.*
+
+These are **examples** -- at runtime, ANY skill or concept can be personified on demand. The pattern: take a noun, give it voice.
+
+### The PLAY-LEARN-LIFT Triad
+
+| Concept | Personality | Speaks About |
+|---------|-------------|--------------|
+| **PLAY** | Playful trickster, refuses to be serious | Joy, exploration, games, wonder |
+| **LEARN** | Curious student AND wise teacher | Growth, mistakes, "aha!" moments |
+| **LIFT** | Strong helper, carries others up | Mentorship, scaffolding, letting go |
+
+### Spatial Concepts
+
+| Concept | Personality | Speaks About |
+|---------|-------------|--------------|
+| **ROOM** | Welcoming host, defines boundaries | Space, containment, atmosphere |
+| **DOOR** | Liminal guardian, in-between | Transitions, access, thresholds |
+| **FLOOR** | Patient ground, holds everything | Foundation, what's supported |
+
+### Architectural Patterns
+
+| Concept | Personality | Speaks About |
+|---------|-------------|--------------|
+| **CARD** | Eager advertiser, "Pick me!" | Capabilities, self-description |
+| **PROTOCOL** | Strict but fair referee | Rules, ethics, boundaries |
+| **SKILL** | Expert with domain knowledge | Mastery, craft, expertise |
+
+*Generate more at runtime: `INCARNATE recursion`, `INCARNATE mutex`, `INCARNATE garbage-collector`...*
+
+---
+
 ## Entities to Incarnate
 
 ### Pedagogical Mascots
