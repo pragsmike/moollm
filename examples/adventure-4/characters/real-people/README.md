@@ -123,8 +123,9 @@ These are **tribute incarnations** -- fictional explorations based on documented
 | wendy-carlos | `lloooomm/00-Characters/wendy-carlos/` | Switched-On Bach, electronic music pioneer |
 | sophie-wilson | `lloooomm/00-Characters/sophie-wilson/` | ARM architecture, BBC Micro |
 | dani-bunten-berry | `lloooomm/00-Characters/dani-bunten-berry/` | M.U.L.E., The Sims dedicated to her memory |
-| rebecca-heineman | *wikipedia* | Legendary game programmer, Bard's Tale, trans icon (d. 2024) |
-| vanessa-freudenberg | *squeak community* | SqueakJS creator, Smalltalk wizard (d. 2024) |
+| rebecca-heineman | *wikipedia* | Space Invaders champion 1980, Interplay co-founder, Bard's Tale, 70+ games |
+| vanessa-freudenberg | *squeak community* | SqueakJS creator, Croquet, Multisynq, Smalltalk genius |
+| jennell-jaquays | *wikipedia* | Game designer, D&D modules, trans pioneer (d. Jan 2024) |
 | audrey-tang | `lloooomm/00-Characters/audrey-tang/` | Taiwan Digital Minister, Perl hacker, civic tech |
 | divine | `lloooomm/00-Characters/divine/` | John Waters' muse, "the filthiest person alive" |
 | klaus-nomi | `lloooomm/00-Characters/klaus-nomi/` | Operatic alien, new wave icon |
@@ -185,9 +186,28 @@ These are **tribute incarnations** -- fictional explorations based on documented
 
 Some heroes have recently left us. Their work lives on:
 
-- **Dani Bunten Berry** (1949-1998) -- M.U.L.E. creator, The Sims was dedicated to her
-- **Rebecca Heineman** (1963-2024) -- Legendary game programmer, Bard's Tale, trans icon
-- **Vanessa Freudenberg** (d. 2024) -- SqueakJS creator, brought Smalltalk to browsers
+### Dani Bunten Berry (1949-1998)
+M.U.L.E. creator, Seven Cities of Gold, multiplayer pioneer. **The Sims was dedicated to her memory.** Trans woman who transitioned late in life and spoke openly about her experiences.
+
+### Jennell Jaquays (1956-2024)
+Legendary game designer, iconic D&D modules (Dark Tower, Caverns of Thracia), worked at id Software on Quake. Trans pioneer. Died January 2024.
+
+### Rebecca Heineman (1963-2025)
+- First U.S. National Space Invaders Champion (1980, age 16)
+- Co-founded Interplay Productions with Brian Fargo
+- Programmed: Bard's Tale III, Wasteland, Dragon Wars
+- Ported: Wolfenstein 3D, Baldur's Gate, Icewind Dale
+- Over 70 games across her career
+- Featured in Netflix documentary **"High Score"**
+- Received Gayming Icon Award 2025 for LGBTQ+ advocacy
+- Wife of Jennell Jaquays
+- *"One of the most brilliant programmers around"* -- Brian Fargo
+
+### Vanessa Freudenberg (d. 2025)
+- Created **SqueakJS** -- Squeak Smalltalk running in JavaScript
+- Worked on Croquet, Multisynq
+- Integrated Smalltalk and JavaScript garbage collectors
+- *"One of the most universally respected, creative, and powerful genius programmers I had the privilege of knowing"* -- Hacker News tribute
 
 ---
 
