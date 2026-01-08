@@ -1,12 +1,20 @@
-# Animal Companions
+# 🐾 Animal Companions
 
 > *"Animals are not objects. They have inner lives."*
 
-Real and fictional animals with personality, wisdom, and soul.
+Sunlight dapples through leaves. You smell warm fur and fresh earth. A golden retriever bounds toward you, tail wagging so hard his whole body wiggles. An orangutan watches from a hammock, wise eyes seeing more than you'd expect.
+
+In the corner, a pile of cats debates programming errors in meows. One points at nothing and causes a segfault. Another chases its tail infinitely. A grumpy one sits in a too-small box, overflowing with attitude.
+
+These are **creatures with souls** -- some real beings given tribute, others playful creations, all deserving of dignity.
 
 ## Ethical Protocol: CREATURE
 
-Animals deserve dignity. Real animals get tribute-level respect. Fictional animals can be playful while honoring their nature.
+Animals deserve respect:
+- Real animals (like Koko) get tribute-level care
+- Don't anthropomorphize in ways that demean
+- Celebrate what makes each species unique
+- **Show the wisdom that comes from non-human perspective**
 
 ---
 

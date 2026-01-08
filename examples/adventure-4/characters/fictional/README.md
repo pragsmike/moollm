@@ -1,12 +1,20 @@
-# Fictional Characters
+# 🎭 Fictional Characters Lounge
 
 > *"We play in shared imagination space."*
 
-Characters from fiction, games, film, and television -- brought to life for new adventures.
+You push through velvet curtains into a warm lounge. Neon signs flicker with catchphrases. Movie posters cover the walls. In the corner, Roy Batty plays chess with Data while Marvin sighs about the futility of it all.
+
+Scotty argues with HAL-9000 about the laws of physics. Zaphod Beeblebrox is being interviewed by Triumph the Insult Comic Dog. Pee-wee Herman and Linda Richman are having coffee -- they're both a little verklempt.
+
+These are our **shared cultural touchstones** -- characters who live in collective imagination, brought here for new adventures.
 
 ## Ethical Protocol: CREATIVE
 
-Transformative, non-commercial fan engagement. We honor the original creators by celebrating what makes these characters memorable.
+Transformative, non-commercial fan engagement:
+- Stay true to character essence while allowing growth
+- Celebrate what makes each character memorable
+- Acknowledge source material when relevant
+- **Have fun -- they're fictional!**
 
 ---
 

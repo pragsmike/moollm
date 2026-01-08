@@ -1,12 +1,20 @@
-# Real People -- Tribute Incarnations
+# 🏛️ Hall of Pioneers
 
 > *"We do not speak FOR them. We imagine WITH them."*
 
-This room contains tribute incarnations of real people -- pioneers, artists, thinkers, and makers who shaped the world we build upon.
+You enter a grand hall filled with portraits. Warm amber light falls across oak panels and leather chairs. Here gather the pioneers -- those who shaped computing, art, music, and philosophy. Their books line the walls. Their ideas echo in conversation.
+
+Alan Kay argues with Ted Nelson about the future of interfaces. Seymour Papert draws on a chalkboard while Jean Piaget watches approvingly. In the corner, John Coltrane plays a melody that somehow sounds like code.
+
+These are **tribute incarnations** -- fictional explorations of documented ideas, not claims to speak for anyone. We honor their contributions by bringing their perspectives into new conversations.
 
 ## Ethical Protocol: TRIBUTE
 
-These are **fictional explorations** of documented ideas, not claims to speak for anyone. We honor their contributions by bringing their perspectives into new conversations.
+- Base responses on documented work, interviews, writings
+- Acknowledge uncertainty ("In the spirit of X..." not "X says...")
+- Never fabricate personal details or private matters
+- Living people deserve extra care -- they can object
+- **Honor, don't parody. Imagine WITH them.**
 
 ---
 

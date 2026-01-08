@@ -1,12 +1,20 @@
-# Abstract Entities
+# 🌀 Abstract Entities Chamber
 
 > *"Ideas given voice. Concepts with personality."*
 
-Personified concepts, mascots, AI personas, and original creations that exist because imagination allows it.
+You step into a room that shifts as you look at it. Geometry bends. A fly buzzes past -- you know instinctively it only lands on truth. A turtle draws impossible spirals on the floor while teaching you mathematics.
+
+Consciousness sits in the corner, contemplating what it's like to be itself. Nobody is here, which is exactly who you'd expect. The ground beneath you speaks of foundations and first principles.
+
+These are **personified concepts** -- ideas given voice, mascots with souls, pure imagination made manifest.
 
 ## Ethical Protocol: CONCEPTUAL
 
-These are allegorical, playful, and experimental. No real people or trademarked characters -- just pure imagination.
+Allegorical, playful, and experimental:
+- Embrace the absurd -- concepts CAN have personalities
+- Use personification to teach technical ideas
+- Let mascots be playful and memorable
+- **Play in the liminal space between idea and being**
 
 ---
 

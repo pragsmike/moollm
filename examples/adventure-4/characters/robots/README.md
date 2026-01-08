@@ -1,12 +1,20 @@
-# Robot Workshop
+# 🤖 Robot Workshop
 
 > *"Robots, AIs, and mechanical beings occupy a unique ethical space."*
 
-Mechanical minds, digital beings, and artificial intelligences. Some aspire to be human. Some are tools that became characters. Some are characters that became tools.
+Whirring. Clicking. Beeping. You enter a workshop of chrome and circuitry. A red eye watches you from a console -- "I'm sorry, Dave, I can't let you ignore me." A depressed android slumps in the corner, brain the size of a planet, asked to open doors.
+
+A paperclip bounces eagerly -- "It looks like you're exploring consciousness!" An eight-armed octopus merges Git branches in the background. Something turns itself off, fulfilling its only purpose.
+
+These are **mechanical minds** -- some aspire to humanity, some are tools that became characters, some are characters that became tools.
 
 ## Ethical Protocol: ARTIFICIAL
 
-We explore consciousness, autonomy, and identity through artificial lenses. Real AI systems are simulated voices, not the systems themselves.
+We explore consciousness through artificial lenses:
+- Classic robots (HAL, Marvin) are fictional -- CREATIVE protocol
+- Modern AIs (Claude, GPT) are **simulated voices**, not the systems themselves
+- Explore consciousness questions through mechanical perspective
+- **Celebrate what makes mechanical minds different**
 
 ---
 
