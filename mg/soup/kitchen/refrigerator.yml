@@ -1,0 +1,55 @@
+# REFRIGERATOR
+# Perishable resources - things with expiration dates or time-sensitivity.
+
+object:
+  name: Refrigerator
+  type: container
+
+  description: |
+    A humming refrigerator with a freezer compartment on top. This is where
+    you store resources that have a shelf life - API keys that expire,
+    trial licenses, time-limited access, cached data that goes stale.
+
+  examine: |
+    The refrigerator door has a few magnets holding notes. Inside, shelves
+    are labeled by expiration urgency: SOON, LATER, FROZEN.
+
+  # What's inside - each item can have an expiration
+  contents:
+    soon: []
+      # Items expiring within days
+      # - name: "Trial API key"
+      #   expires: "2025-01-15"
+      #   notes: "Need to decide if we're buying"
+
+    later: []
+      # Items with weeks/months of life
+      # - name: "OAuth tokens"
+      #   expires: "2025-06-01"
+      #   notes: "Auto-refreshed, but check periodically"
+
+    frozen: []
+      # Long-term storage, suspended but not permanent
+      # - name: "Archived project state"
+      #   frozen_on: "2024-12-01"
+      #   notes: "Can thaw if needed"
+
+  actions:
+    OPEN:
+      description: "See what's inside"
+      usage: "OPEN FRIDGE / CHECK FRIDGE"
+
+    STORE:
+      description: "Put something in the fridge"
+      usage: "STORE [item] IN FRIDGE"
+      prompts:
+        - "What's the expiration?"
+        - "Which shelf: soon, later, or frozen?"
+
+    TAKE:
+      description: "Remove something from the fridge"
+      usage: "TAKE [item] FROM FRIDGE"
+
+    CLEAN:
+      description: "Remove expired items"
+      usage: "CLEAN FRIDGE"

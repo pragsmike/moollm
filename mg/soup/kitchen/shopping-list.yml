@@ -1,0 +1,59 @@
+# SHOPPING LIST
+# Things to acquire - resources we need but don't have yet.
+
+object:
+  name: Shopping List
+  type: document
+
+  description: |
+    A notepad stuck to the fridge with a magnet. When you notice something
+    missing, add it here. When you acquire something, cross it off and
+    stock it in the fridge or pantry.
+
+  examine: |
+    The list has items in different handwriting - some urgent, some
+    nice-to-have. A pencil dangles from a string.
+
+  # What we need
+  items:
+    urgent: []
+      # - item: "CI/CD pipeline"
+      #   reason: "Can't deploy without it"
+      #   added: "2025-01-07"
+
+    needed: []
+      # - item: "Logging library"
+      #   reason: "Current one is deprecated"
+      #   added: "2025-01-05"
+
+    nice_to_have: []
+      # - item: "Performance monitoring"
+      #   reason: "Would help debug slowness"
+      #   added: "2025-01-01"
+
+    acquired: []
+      # - item: "Testing framework"
+      #   acquired_on: "2025-01-06"
+      #   stocked_in: "pantry"
+
+  actions:
+    READ:
+      description: "See what's on the list"
+      usage: "READ LIST / CHECK LIST"
+
+    ADD:
+      description: "Add something we need"
+      usage: "ADD [item] TO LIST"
+      prompts:
+        - "How urgent: urgent, needed, or nice-to-have?"
+        - "Why do we need it?"
+
+    CROSS_OFF:
+      description: "Mark something as acquired"
+      usage: "CROSS OFF [item]"
+      prompts:
+        - "Stock it in fridge or pantry?"
+
+    PRIORITIZE:
+      description: "Move item to urgent"
+      usage: "PRIORITIZE [item]"

@@ -1,0 +1,61 @@
+# LIBRARY
+# Reference materials. Find a book, or put one back.
+
+room:
+  name: Library
+  type: room
+
+  description: |
+    Tall shelves lined with books, comfortable reading chairs, good lighting.
+    This is where reference materials live - documentation, guides, examples,
+    anything you might need to consult.
+
+    The living room is east. The workshop is west.
+
+  purpose: |
+    Reference storage and retrieval. The library metaphor:
+    - Shelves: organized by topic, browsable
+    - Books: individual reference documents
+    - Card catalog: index for finding things
+    - Reading chair: examine a reference in detail
+    - Return slot: put a book back when done
+
+  activities:
+    BROWSE:
+      description: "See what's on the shelves"
+      usage: "BROWSE / BROWSE [topic]"
+
+    FIND:
+      description: "Search for a specific reference"
+      usage: "FIND [query] / SEARCH [query]"
+
+    TAKE:
+      description: "Take a book to consult (e.g., in the workshop)"
+      usage: "TAKE [book]"
+
+    RETURN:
+      description: "Put a book back on the shelf"
+      usage: "RETURN [book]"
+
+    SHELVE:
+      description: "Add a new book to the library"
+      usage: "SHELVE [book] UNDER [topic]"
+
+  world_position:
+    x: 1
+    y: 1
+
+  exits:
+    east:
+      destination: ../living-room/
+      description: "Back to the living room."
+
+    west:
+      destination: ../workshop/
+      description: "Into the workshop - tools, materials, active work."
+
+  objects: []
+    # shelves.yml      - organized reference storage
+    # card-catalog.yml - index for finding books
+    # reading-chair.yml - examine references in detail
+    # return-slot.yml  - where to put things back

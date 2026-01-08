@@ -1,0 +1,58 @@
+# WORKSHOP
+# Active work area. Tools, materials, projects in progress.
+
+room:
+  name: Workshop
+  type: room
+
+  description: |
+    A well-lit workspace with sturdy benches, tool racks, and materials storage.
+    This is where actual work happens - where you bring books from the library
+    to consult, use tools to build things, and see projects through.
+
+    The library is east.
+
+  purpose: |
+    Active work on projects. The workshop metaphor:
+    - Workbench: current project, active focus
+    - Tool rack: available tools and capabilities
+    - Materials: raw inputs for building
+    - Reference stand: books brought from library
+    - Finished shelf: completed work
+
+  activities:
+    WORK:
+      description: "Focus on the current project"
+      usage: "WORK ON [project]"
+
+    USE:
+      description: "Apply a tool"
+      usage: "USE [tool] ON [material]"
+
+    CONSULT:
+      description: "Check a reference book brought from library"
+      usage: "CONSULT [book]"
+
+    BUILD:
+      description: "Create something from materials"
+      usage: "BUILD [thing] FROM [materials]"
+
+    FINISH:
+      description: "Mark work as complete, move to finished shelf"
+      usage: "FINISH [project]"
+
+  world_position:
+    x: 0
+    y: 1
+
+  exits:
+    east:
+      destination: ../library/
+      description: "Back to the library for references."
+
+  objects: []
+    # workbench.yml     - active project focus
+    # tool-rack.yml     - available tools
+    # materials-bin.yml - raw inputs
+    # reference-stand.yml - books brought from library
+    # finished-shelf.yml  - completed work

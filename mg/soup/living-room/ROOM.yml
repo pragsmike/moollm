@@ -1,0 +1,40 @@
+# LIVING ROOM
+# The central hub of Soup House. All rooms connect through here.
+
+room:
+  name: Living Room
+  type: room
+
+  description: |
+    A comfortable central room with worn furniture and good light. This is
+    the heart of Soup House - all other rooms branch from here.
+
+    To the east, the entryway and front door.
+    To the north, the kitchen where resources are managed.
+    To the west, the library where references live.
+
+  purpose: |
+    Central hub and navigation point. Come here to decide where to go next,
+    or to think about how projects relate to each other.
+
+  world_position:
+    x: 2
+    y: 1
+
+  exits:
+    east:
+      destination: ../entryway/
+      description: "Back to the entryway and front door."
+
+    north:
+      destination: ../kitchen/
+      description: "Into the kitchen - resource management, inventory, supplies."
+
+    west:
+      destination: ../library/
+      description: "Into the library - reference materials, books, documentation."
+
+  objects: []
+    # couch.yml       - sit and think
+    # coffee-table.yml - spread out notes
+    # house-map.yml   - overview of all rooms

@@ -1,0 +1,48 @@
+# KITCHEN
+# Resource management. Check what's available, order what's needed.
+
+room:
+  name: Kitchen
+  type: room
+
+  description: |
+    A practical kitchen with a refrigerator, pantry, and counter space.
+    This is where you check what resources are available and order more
+    when supplies run low.
+
+    The living room is south.
+
+  purpose: |
+    Resource management for projects. The kitchen metaphor:
+    - Refrigerator: perishable resources, things with expiration
+    - Pantry: stable supplies, dependencies, libraries
+    - Counter: active ingredients, things currently in use
+    - Ordering: acquiring new resources when inventory is low
+
+  activities:
+    INVENTORY:
+      description: "Check what's in the refrigerator and pantry"
+      usage: "INVENTORY / CHECK FRIDGE / CHECK PANTRY"
+
+    ORDER:
+      description: "Request new supplies"
+      usage: "ORDER [item]"
+
+    STOCK:
+      description: "Add something to storage"
+      usage: "STOCK [item] IN [fridge|pantry]"
+
+  world_position:
+    x: 2
+    y: 2
+
+  exits:
+    south:
+      destination: ../living-room/
+      description: "Back to the living room."
+
+  objects:
+    - refrigerator.yml   # perishable/time-sensitive resources
+    - pantry.yml         # stable supplies and dependencies
+    - counter.yml        # items currently in use
+    - shopping-list.yml  # things to acquire

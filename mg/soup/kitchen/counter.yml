@@ -1,0 +1,42 @@
+# COUNTER
+# Active ingredients - things currently in use for the project at hand.
+
+object:
+  name: Counter
+  type: surface
+
+  description: |
+    A clean counter with good lighting and plenty of workspace. This is
+    where you put things you're actively using - taken from the fridge
+    or pantry and ready to work with.
+
+  examine: |
+    The counter is clear except for a few items laid out for use. A cutting
+    board sits ready. Unlike storage, everything here is meant to be touched.
+
+  # What's currently out
+  contents: []
+    # - name: "API documentation"
+    #   from: pantry
+    #   notes: "Referencing for current task"
+    #
+    # - name: "Test credentials"
+    #   from: fridge
+    #   notes: "Using for integration testing"
+
+  actions:
+    LOOK:
+      description: "See what's on the counter"
+      usage: "LOOK AT COUNTER / EXAMINE COUNTER"
+
+    PUT:
+      description: "Place something on the counter for use"
+      usage: "PUT [item] ON COUNTER"
+
+    CLEAR:
+      description: "Put everything back where it came from"
+      usage: "CLEAR COUNTER"
+
+    USE:
+      description: "Work with something on the counter"
+      usage: "USE [item]"

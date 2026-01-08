@@ -1,0 +1,59 @@
+# PANTRY
+# Stable supplies - dependencies, libraries, tools that don't expire.
+
+object:
+  name: Pantry
+  type: container
+
+  description: |
+    A tall cabinet with deep shelves, organized by category. This is where
+    you store stable resources - installed libraries, documented APIs,
+    established tools, things you can rely on being there.
+
+  examine: |
+    The pantry is organized with labeled sections. A small step-stool sits
+    nearby for reaching the high shelves. Everything has its place.
+
+  # What's inside - organized by category
+  contents:
+    frameworks: []
+      # - name: "React"
+      #   version: "18.x"
+      #   notes: "Primary UI framework"
+
+    libraries: []
+      # - name: "lodash"
+      #   notes: "Utility functions"
+
+    tools: []
+      # - name: "ESLint"
+      #   notes: "Code linting"
+
+    apis: []
+      # - name: "OpenAI API"
+      #   notes: "GPT access, documented in library"
+
+    credentials: []
+      # - name: "Production DB access"
+      #   location: "vault://prod/db"
+      #   notes: "Reference only - actual secrets in vault"
+
+  actions:
+    OPEN:
+      description: "See what's stocked"
+      usage: "OPEN PANTRY / CHECK PANTRY"
+
+    STOCK:
+      description: "Add something to the pantry"
+      usage: "STOCK [item] IN PANTRY"
+      prompts:
+        - "What category?"
+        - "Any version or notes?"
+
+    TAKE:
+      description: "Get something from the pantry"
+      usage: "TAKE [item] FROM PANTRY"
+
+    ORGANIZE:
+      description: "Review and tidy categories"
+      usage: "ORGANIZE PANTRY"

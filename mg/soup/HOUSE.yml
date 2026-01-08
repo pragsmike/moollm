@@ -1,0 +1,92 @@
+# SOUP HOUSE
+# A house whose rooms are projects. Entering a room = working on that project.
+# The metaphor: directories as rooms, files as objects, navigation as context-switching.
+
+house:
+  name: Soup
+  type: house
+
+  description: |
+    A cozy house where each room represents a project workspace. The architecture
+    itself is a navigation system: enter a room to signal intent to work there.
+
+    The front door opens into the entryway. From there, the living room serves
+    as the central hub connecting to all other spaces.
+
+  purpose: |
+    Project organization through spatial metaphor. Each room contains:
+    - Objects that describe what's accessible there
+    - References to external resources
+    - Tools and materials appropriate to that space's purpose
+
+  # Entry point - the front door leads here
+  entrance: entryway/
+
+  # Floor plan for human reference
+  #
+  #                    +----------+
+  #                    | kitchen  |
+  #                    +----N-----+
+  #                         |
+  #  +----------+     +-----+------+
+  #  | workshop |--W--| library    |--E--| living    |--E--| entryway |---> front door
+  #  +----------+     +------------+     | room      |     +----------+
+  #                                      +-----------+
+  #
+
+  floor_plan:
+    entryway:
+      position: {x: 3, y: 1}
+      connects: [living-room]
+
+    living-room:
+      position: {x: 2, y: 1}
+      connects: [entryway, kitchen, library]
+
+    kitchen:
+      position: {x: 2, y: 2}
+      connects: [living-room]
+
+    library:
+      position: {x: 1, y: 1}
+      connects: [living-room, workshop]
+
+    workshop:
+      position: {x: 0, y: 1}
+      connects: [library]
+
+  # Teleport system - jump directly to any room
+  teleport:
+    description: |
+      TELEPORT [room] - Jump directly to any room in the house.
+      GUIDE - List all rooms with their purposes.
+      WHERE - Show current location and available exits.
+
+    destinations:
+      entryway:
+        command: "TELEPORT entryway"
+        description: "The front door. Where you arrive and depart."
+
+      living-room:
+        command: "TELEPORT living-room"
+        description: "Central hub connecting all rooms."
+
+      kitchen:
+        command: "TELEPORT kitchen"
+        description: "Resource management. Check inventory, order supplies."
+
+      library:
+        command: "TELEPORT library"
+        description: "Reference materials. Find or store books."
+
+      workshop:
+        command: "TELEPORT workshop"
+        description: "Active work area. Tools, materials, projects in progress."
+
+  # What rooms exist
+  rooms:
+    - entryway/
+    - living-room/
+    - kitchen/
+    - library/
+    - workshop/
