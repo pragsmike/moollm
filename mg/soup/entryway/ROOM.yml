@@ -19,16 +19,10 @@ room:
     x: 3
     y: 1
 
-  # Context: documents loaded when you ENTER this room
+  # Files to include in working_set when in this room
   # The entryway is transitional - minimal context
-  context:
-    local:
-      - ROOM.yml
-
-    references: []
-
-    space:
-      name: "soup-entryway"
+  working_set:
+    - ROOM.yml
 
   exits:
     out:

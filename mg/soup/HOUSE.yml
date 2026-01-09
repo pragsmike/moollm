@@ -19,11 +19,6 @@ house:
     - References to external resources
     - Tools and materials appropriate to that space's purpose
 
-  # Context model: REPLACE (not stack)
-  # When you enter a room, its context replaces the previous room's context.
-  # Only one room's documents are loaded at a time.
-  context_model: replace
-
   # Entry point - the front door leads here
   entrance: entryway/
 
