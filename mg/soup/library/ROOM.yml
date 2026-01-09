@@ -45,6 +45,29 @@ room:
     x: 1
     y: 1
 
+  # Context: documents loaded when you ENTER this room
+  # Replaces previous room's context (not stacked)
+  context:
+    # Files in this room directory
+    local:
+      - ROOM.yml
+      # - shelves.yml
+      # - card-catalog.yml
+
+    # References to files elsewhere (the "books" on the shelves)
+    references: []
+      # - path: /path/to/documentation.md
+      #   reason: "API reference"
+      #   priority: 0.8
+      #
+      # - path: /path/to/guide.md
+      #   reason: "How-to guide"
+      #   priority: 0.7
+
+    # Optional: map to LLM UI space/project
+    space:
+      name: "soup-library"
+
   exits:
     east:
       destination: ../living-room/

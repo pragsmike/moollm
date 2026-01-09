@@ -19,6 +19,17 @@ room:
     x: 3
     y: 1
 
+  # Context: documents loaded when you ENTER this room
+  # The entryway is transitional - minimal context
+  context:
+    local:
+      - ROOM.yml
+
+    references: []
+
+    space:
+      name: "soup-entryway"
+
   exits:
     out:
       destination: ../../  # Back to mg/

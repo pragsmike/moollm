@@ -45,6 +45,34 @@ room:
     x: 0
     y: 1
 
+  # Context: documents loaded when you ENTER this room
+  # Replaces previous room's context (not stacked)
+  context:
+    # Files in this room directory
+    local:
+      - ROOM.yml
+      # - workbench.yml
+      # - tool-rack.yml
+      # - materials-bin.yml
+
+    # References: books brought from library, project files
+    references: []
+      # - path: ../library/some-book.yml
+      #   reason: "Reference for current work"
+      #   priority: 0.9
+      #
+      # - path: /path/to/project/src/main.ts
+      #   reason: "Code being worked on"
+      #   priority: 1.0
+
+    # The reference-stand holds books brought from library
+    reference_stand: []
+      # Books temporarily here from library - will return when done
+
+    # Optional: map to LLM UI space/project
+    space:
+      name: "soup-workshop"
+
   exits:
     east:
       destination: ../library/

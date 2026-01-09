@@ -21,6 +21,21 @@ room:
     x: 2
     y: 1
 
+  # Context: documents loaded when you ENTER this room
+  # The living room is a hub - minimal context, mainly for navigation
+  context:
+    local:
+      - ROOM.yml
+
+    # Could include house-level overview documents
+    references: []
+      # - path: ../HOUSE.yml
+      #   reason: "House overview for navigation"
+      #   priority: 0.5
+
+    space:
+      name: "soup-living-room"
+
   exits:
     east:
       destination: ../entryway/

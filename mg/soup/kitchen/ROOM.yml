@@ -36,6 +36,28 @@ room:
     x: 2
     y: 2
 
+  # Context: documents loaded when you ENTER this room
+  # Replaces previous room's context (not stacked)
+  context:
+    # Files in this room directory
+    local:
+      - ROOM.yml
+      - refrigerator.yml
+      - pantry.yml
+      - counter.yml
+      - shopping-list.yml
+
+    # References to files elsewhere (loaded into context)
+    references: []
+      # - path: ../../skills/economy/SKILL.md
+      #   reason: "Resource management patterns"
+      #   priority: 0.7
+
+    # Optional: map to LLM UI space/project
+    space:
+      name: "soup-kitchen"
+      # provider: claude-projects | cursor-context | custom
+
   exits:
     south:
       destination: ../living-room/
