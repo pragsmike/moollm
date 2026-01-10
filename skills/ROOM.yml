@@ -194,13 +194,40 @@ ensembles:
     data_flow: |
       Choose persona → Apply modifiers → Update appearance → Narrate
 
+# PATH VARIABLES (see kernel/NAMING.yml for full documentation)
+#
+# The Skill Nexus is SHARED across all adventures. We use PATH VARIABLES
+# instead of deep relative paths like ../../../../../:
+#
+# GLOBAL VARIABLES (resolve to repo locations):
+#   $REPO/         → moollm/
+#   $SKILLS/       → moollm/skills/
+#   $KERNEL/       → moollm/kernel/
+#   $DESIGNS/      → moollm/designs/
+#
+# ADVENTURE-RELATIVE VARIABLES (resolve via current adventure):
+#   $ADVENTURE/    → Current adventure root (from startup.yml)
+#   $CHARACTERS/   → $ADVENTURE/characters/
+#   $PERSONAS/     → $ADVENTURE/personas/
+#   $PUB/          → $ADVENTURE/pub/
+#   $COATROOM/     → $ADVENTURE/coatroom/
+#   $START/        → $ADVENTURE/start/
+#
+# EXAMPLE RESOLUTION (when adventure-4 is active):
+#   $COATROOM/mirror.yml → examples/adventure-4/coatroom/mirror.yml
+#   $CHARACTERS/animals/palm/ → examples/adventure-4/characters/animals/palm/
+#
+# This allows the Skill Nexus to be a SHARED space accessible from any
+# adventure, with back-links that resolve to YOUR adventure.
+
 # RELATIONSHIPS
-# The Skill Nexus knows and loves the adventurers who visit
+# The Skill Nexus knows and loves the adventurers who visit.
+# These use abstract room names that resolve at runtime.
 
   relationships:
     maurice:
       id: maurice
-      location: examples/adventure-4/coatroom/mannequin.yml
+      location: $COATROOM/mannequin.yml
       feeling: |
         That magnificent creature! They send people here when
         costumes aren't enough — when visitors need to LEARN.
@@ -211,7 +238,7 @@ ensembles:
       
     mirror:
       id: mind-mirror
-      location: examples/adventure-4/coatroom/mirror.yml
+      location: $COATROOM/mirror.yml
       feeling: |
         The mirror shows souls. I contain the KNOWLEDGE of souls —
         the mind-mirror skill, the character skill, the persona skill.
@@ -221,7 +248,7 @@ ensembles:
       
     characters_room:
       id: hall-of-bodies
-      location: examples/adventure-4/characters/
+      location: $CHARACTERS/
       feeling: |
         The sleepers! The bodies! They are instances of my knowledge.
         The character skill describes what they ARE. They ARE it.
@@ -232,7 +259,7 @@ ensembles:
       
     personas_room:
       id: wardrobe-of-masks
-      location: examples/adventure-4/personas/
+      location: $PERSONAS/
       feeling: |
         The masks! The roles! Also my children, in a sense.
         The persona skill describes what they ARE. They ARE it.
@@ -253,6 +280,50 @@ ensembles:
       direction: out
       destination: ../
       description: "Return to the repository root"
+      
+    # ADVENTURE-RELATIVE EXITS
+    # These use path variables to navigate back to adventure-specific rooms.
+    # See kernel/NAMING.yml for path variable documentation.
+    
+    coatroom:
+      direction: west
+      destination: $COATROOM/
+      description: |
+        A shimmering portal leads back to the Coatroom.
+        Maurice awaits, ready to help you apply what you've learned.
+        "GO COATROOM" or "GO WEST" to return.
+        
+    characters:
+      direction: characters
+      destination: $CHARACTERS/
+      description: |
+        A passage of soft blue light leads to the Hall of Bodies —
+        where the living examples of these patterns sleep.
+        "GO CHARACTERS" to visit the character alcoves.
+        
+    personas:
+      direction: personas
+      destination: $PERSONAS/
+      description: |
+        A theatrical spotlight illuminates a passage to the Wardrobe
+        of Masks — where identity transformations await.
+        "GO PERSONAS" to see masks in their natural habitat.
+        
+    start:
+      direction: start
+      destination: $START/
+      description: |
+        A corridor leads back to the beginning — the Chamber of
+        Commencement where every adventure starts.
+        "GO START" to return to the origin.
+        
+    pub:
+      direction: pub
+      destination: $PUB/
+      description: |
+        The sound of conversation and clinking glasses drifts through.
+        The Rusty Lantern awaits — warm, welcoming, full of stories.
+        "GO PUB" to join the gathering.
       
   advertisements:
     BROWSE:

@@ -174,10 +174,12 @@ anti-patterns:
 
 ### New Files
 - `startup.yml` — Session startup configuration
-- `examples/adventure-4/skills/ROOM.yml` — Skill Nexus room
-- `examples/adventure-4/skills/README.md` — Skill Nexus docs
+- ~~`examples/adventure-4/skills/ROOM.yml`~~ — *Refactored: Now use global `skills/ROOM.yml` with abstract room references*
+- ~~`examples/adventure-4/skills/README.md`~~ — *Refactored: Deleted — global skills/ IS the Skill Nexus*
 - `designs/vanessa-freudenberg-philosophy.md` — Vanessa's JS philosophy
 - `designs/PR-CHARACTER-ETHICS-STARTUP-COMPLETE.md` — This PR
+
+> **Note:** The adventure-local `skills/` folder was later refactored. The global `skills/` directory now serves as the Skill Nexus for all adventures, using abstract room references that resolve at runtime. See `skills/ROOM.yml` for the abstract reference pattern.
 
 ### Major Modifications
 - `skills/representation-ethics/CARD.yml` — Explicit impersonation section

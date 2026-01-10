@@ -207,6 +207,100 @@ methods:
     output: chat + state-change
     effect: "Load state from save file"
     invoked-by: [player]
+    
+  # DEBUG METHODS — Toggle technical output
+  
+  DEBUG-ON:
+    description: "Enable debug mode — show collapsible technical logs"
+    aliases: [DEBUG, VERBOSE, SHOW-MECHANICS]
+    parameters: {}
+    effects:
+      - "Set parameters.debug.enabled: true in ADVENTURE.yml"
+      - "Future output includes <details> sections with YAML islands"
+      - "All file operations, state changes, and links are shown"
+    output: chat (confirmation)
+    sequence:
+      1: "Update ADVENTURE.yml: debug.enabled = true"
+      2: "Confirm: 'Debug mode ON. Technical details will be shown in collapsible sections.'"
+    invoked-by: [player]
+    
+  DEBUG-OFF:
+    description: "Disable debug mode — clean narrative only"
+    aliases: [QUIET, MINIMAL, HIDE-MECHANICS]
+    parameters: {}
+    effects:
+      - "Set parameters.debug.enabled: false in ADVENTURE.yml"
+      - "Future output is pure narrative without technical sections"
+    output: chat (confirmation)
+    sequence:
+      1: "Update ADVENTURE.yml: debug.enabled = false"
+      2: "Confirm: 'Debug mode OFF. Clean narrative restored.'"
+    invoked-by: [player]
+    
+  DEBUG-FORMAT:
+    description: "Customize debug output format with natural language"
+    parameters:
+      instructions:
+        type: string
+        description: "Natural language description of desired format"
+        example: "Show only file operations, skip YAML islands, use 🔧 emoji"
+    effects:
+      - "Update parameters.debug.format in ADVENTURE.yml"
+      - "Future debug output follows the new instructions"
+    output: chat (confirmation)
+    invoked-by: [player]
+
+# DEBUG MODE
+# Collapsible technical logs with YAML data islands and markdown links
+
+debug_mode:
+  description: |
+    When debug.enabled: true, the LLM generates rich technical logs
+    that show exactly how MOOLLM works under the hood.
+    
+    Debug output uses HTML <details> tags for collapsible sections:
+    
+    ```html
+    <details>
+    <summary>📂 <strong>Editing CHARACTER.yml to update player location from start/ to coatroom/</strong></summary>
+    
+    ```yaml
+    # State change in CHARACTER.yml (canonical)
+    player:
+      location: start/  →  coatroom/  # Character owns their location
+    ```
+    
+    The CHARACTER.yml file is canonical for player state. ADVENTURE.yml
+    mirrors location for convenience but CHARACTER.yml is the source of truth.
+    
+    **Files affected:**
+    - [CHARACTER.yml](./CHARACTER.yml) — location updated
+    - [ADVENTURE.yml](../../ADVENTURE.yml) — mirror updated
+    
+    </details>
+    ```
+    
+  parameters:
+    enabled: "Master switch for debug mode"
+    show_file_operations: "Log file creates, edits, deletes, moves"
+    show_state_changes: "Show before/after state with arrows"
+    show_yaml_islands: "Embed abbreviated YAML with comments"
+    show_links: "Include markdown links to all referenced files"
+    show_technical_narrative: "Explain WHY and HOW, not just WHAT"
+    format: "Natural language instructions for formatting style"
+    collapsed_by_default: "Whether details sections start open or closed"
+    section_emoji: "Visual prefix for debug section summaries"
+    
+  example_summary_styles:
+    good:
+      - "📂 Editing CHARACTER.yml to update player location from start/ to coatroom/"
+      - "📂 Creating ENEMIES.yml with 9 tiers of satirical grievances"
+      - "📂 Moving donna-toadstool/ to fictional/ — both performer and persona are fictional"
+      - "📂 State ownership: CHARACTER.yml is canonical, ADVENTURE.yml mirrors"
+    bad:
+      - "📂 File edit"           # Too vague
+      - "📂 State change"        # What state? What change?
+      - "📂 Technical details"   # Doesn't describe the content
 
 # STATE
 # What an adventure instance tracks
@@ -283,6 +377,18 @@ advertisements:
     condition: "Investigating unfamiliar codebase"
     hint: "The auth bug is a quest!"
     satisfies: [investigation, debugging, exploration]
+    
+  DEBUG-ON:
+    score: 75
+    condition: "Want to see technical details, 'show me the code', 'what files changed?'"
+    aliases: [DEBUG, VERBOSE, SHOW-MECHANICS]
+    satisfies: [transparency, learning, documentation]
+    
+  DEBUG-OFF:
+    score: 75
+    condition: "Want clean narrative, 'too much detail', 'just the story'"
+    aliases: [QUIET, MINIMAL, HIDE-MECHANICS]
+    satisfies: [immersion, simplicity, reading]
 
 # TEMPLATES
 

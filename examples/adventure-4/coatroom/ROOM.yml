@@ -73,15 +73,19 @@ room:
       aliases: [deeper, backstage, wardrobe]
       
     east:
-      destination: ../skills/
+      destination: $SKILLS/  # Path variable — resolves to moollm/skills/
       description: |
         A door of pure light opens to the Skill Nexus — the library of
-        capabilities. Here, the theoretical foundations are documented:
+        ALL capabilities. This room transcends the adventure — it connects
+        to the global skill library shared by all of MOOLLM.
+        
+        Here, the theoretical foundations are documented:
         how to BE a character, how to WEAR a persona, how to LOOK in
         the mirror and understand what you see.
         
         Go EAST to learn what you could become.
       metaphysical: true
+      global: true  # This exit leaves the adventure into shared space
   
   world_position:
     x: 1

@@ -26,14 +26,42 @@ parameters:
     # normal: Atmosphere and action. Default.
     # verbose: Every detail. For savoring moments.
     show_mechanics: false    # Hide the gears. Show the magic.
-    debug_mode: false        # No peeking behind the curtain
+    
+  # DEBUG MODE — Show the machinery behind the magic
+  # When enabled, logs include collapsible sections with:
+  # - YAML data islands showing state before/after
+  # - Markdown links to all files referenced
+  # - Technical narrative explaining what happened and why
+  
+  debug:
+    enabled: false           # Master switch. Turn on to see everything.
+    
+    # What to show when debug is enabled:
+    show_file_operations: true    # "Created foo.yml", "Edited bar.yml"
+    show_state_changes: true      # "location: start/ → coatroom/"
+    show_yaml_islands: true       # Embedded YAML showing the data
+    show_links: true              # [relative/path](./to/file.yml)
+    show_technical_narrative: true # "Under the hood: The LLM updated..."
+    
+    # Formatting options (natural language, interpret creatively):
+    format: |
+      Use <details> tags for collapsible sections.
+      Summary should be descriptive: "Editing CHARACTER.yml to update 
+      player location from start/ to coatroom/" not just "State change".
+      Include relative markdown links to ALL files mentioned.
+      YAML islands should be abbreviated with comments explaining key fields.
+      Technical narrative should explain WHY, not just WHAT.
+      
+    # Collapsible section style:
+    collapsed_by_default: true    # Details start closed
+    section_emoji: "📂"           # Visual indicator for debug sections
     
   output:
     write_to_chat: true         # Talk to me
     write_to_transcript: true   # Remember everything
     transcript_path: ./TRANSCRIPT.md  # Pure narration
     log_path: ./LOG.md          # Summary table
-    include_yaml_islands: true   # Show me the data. I want to see it change.
+    session_path: null          # Optional: character-specific session log
     include_links: true          # Make everything clickable
     link_format: markdown        # [like this](./path)
     
