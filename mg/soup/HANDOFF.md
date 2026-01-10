@@ -114,6 +114,38 @@ focus:
 
 These work together. The room's `working_set:` feeds into this system.
 
+### Path Variables (`kernel/NAMING.yml`)
+
+MOOLLM has symbolic path prefixes to eliminate deep relative paths:
+
+```yaml
+$REPO       → moollm/
+$SKILLS     → moollm/skills/
+$KERNEL     → moollm/kernel/
+$ADVENTURE  → Current adventure (dynamic)
+$CHARACTERS → $ADVENTURE/characters/
+$PUB        → $ADVENTURE/pub/
+```
+
+Use these in `working_set:` instead of counting `../`:
+
+```yaml
+# Instead of:
+working_set:
+  - ../../skills/economy/SKILL.md
+  - ../../../kernel/constitution-core.md
+
+# Use:
+working_set:
+  - $SKILLS/economy/SKILL.md
+  - $KERNEL/constitution-core.md
+```
+
+Benefits:
+- No more counting `../` levels
+- Paths survive file moves
+- Intent is clear and self-documenting
+
 ### Files to Study
 
 Before extending MOOLLM, read these:
@@ -121,6 +153,7 @@ Before extending MOOLLM, read these:
 - `skills/room/ROOM.yml.tmpl` — template showing standard fields
 - `kernel/context-assembly-protocol.md` — how files get loaded
 - `kernel/memory-management-protocol.md` — hot/cold/working_set flow
+- `kernel/NAMING.yml` — path variables and naming conventions
 
 ---
 
