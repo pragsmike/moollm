@@ -43,7 +43,7 @@ room:
     - pantry.yml
     - counter.yml
     - shopping-list.yml
-    # - ../../skills/economy/SKILL.md  # Resource management patterns
+    # - $SKILLS/economy/SKILL.md  # Resource management patterns
 
   exits:
     south:

@@ -52,7 +52,8 @@ room:
     # - tool-rack.yml
     # - materials-bin.yml
     # Add project files and references as needed:
-    # - /path/to/project/src/main.ts
+    # - $SKILLS/adventure/SKILL.md      # Skill being worked on
+    # - /external/project/src/main.ts   # External project source
 
   exits:
     east:

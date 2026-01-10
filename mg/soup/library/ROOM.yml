@@ -51,8 +51,9 @@ room:
     # - shelves.yml
     # - card-catalog.yml
     # Add references (books) as needed:
-    # - /path/to/documentation.md
-    # - /path/to/guide.md
+    # - $SKILLS/room/SKILL.md           # MOOLLM skill docs
+    # - $KERNEL/constitution-core.md    # Core principles
+    # - /external/project/docs/api.md   # External project docs
 
   exits:
     east:
