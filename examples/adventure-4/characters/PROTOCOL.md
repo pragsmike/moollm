@@ -1,119 +1,76 @@
-# Character Incarnation Protocol
+# Character Directory — Adventure 4
 
-> *"READMEs are catalogs. Subdirectories are incarnations. Each instance is UNIQUE."*
+> *"READMEs are catalogs. Subdirectories are incarnations."*
+
+**For the generic character skill, see:** [skills/character/](../../../skills/character/)
 
 ---
 
-## The Two-Level Pattern
+## This Directory's Structure
 
 ```
 characters/
-├── PROTOCOL.md          # This file -- shared by all subdirs
-├── real-people/
-│   ├── README.md        # CATALOG: Lists possible characters to incarnate
-│   ├── ROOM.yml         # Ethical framing for this category
-│   ├── CARD.yml         # Advertisements for this room
-│   └── alan-kay/        # INCARNATION: Actually instantiated character
-│       └── CHARACTER.yml
+├── PROTOCOL.md           # This file
+├── abstract/             # Templates and prototypes
+│   └── player/           # Base player character template
+├── fictional/            # Original fictional characters
+│   ├── bumblewick-fantastipants/
+│   └── donna-toadstool/  # The Mushroom Queen
+├── real-people/          # Real people (with consent/ethical framing)
+│   └── don-hopkins/
+├── animals/              # Cats, dogs, creatures
+│   ├── biscuit/
+│   └── palm/
+└── robots/               # AI, robots, synthetic entities
 ```
 
-### Level 1: README Catalogs (Lazy)
+---
 
-READMEs list **possible characters** organized by sub-category:
+## Adventure-Specific Conventions
 
-```markdown
-### Computing & AI
+### Two-Level Pattern (Catalogs + Incarnations)
 
-| Character | Reference | Description |
-|-----------|-----------|-------------|
-| alan-kay | `lloooomm/00-Characters/alan-kay/` | Smalltalk creator |
-| ada-lovelace | `lloooomm/00-Characters/ada-lovelace/` | First programmer |
-```
+- **README.md** in each subdirectory lists POSSIBLE characters (lazy/uninstantiated)
+- **Subdirectories** are ACTUAL characters (instantiated)
 
-These are **pointers, not instances**. The character doesn't exist here yet.
+### Just-In-Time Incarnation
 
-### Level 2: Subdirectory Incarnations (Instantiated)
-
-When you need a character, **create a subdirectory**:
+Characters are created when needed:
 
 ```
 > INCARNATE alan-kay
 
-Created: characters/real-people/alan-kay/
-  - CHARACTER.yml (generated from references)
+Created: characters/real-people/alan-kay/CHARACTER.yml
 ```
 
-Now the character EXISTS. It's **owned** and **unique** to this adventure.
+### Uniqueness
+
+Each incarnation is **unique to this adventure**. Same reference source, different instance.
 
 ---
 
-## Just-In-Time Incarnation
+## Core Principles (from generic skill)
 
-**Don't pre-create characters.** Wait until needed:
+**See [skills/character/SKILL.md](../../../skills/character/SKILL.md) for:**
 
-```
-> SUMMON marshall-mcluhan
+- **Home vs Location** — File path vs world position
+- **Character State Ownership** — CHARACTER.yml is CANONICAL
+- **Inventory (Bidirectional)** — References, not file moves
+- **Relationships** — Key-value feelings map
+- **Sims Traits & Mind Mirror** — Personality systems
 
-Marshall McLuhan is not yet incarnated.
-Reference found: lloooomm/00-Characters/marshall-mcluhan/
-
-Would you like to INCARNATE? (y/n)
-```
-
----
-
-## Reference Sources
-
-Characters can reference multiple sources:
-
-```yaml
-character:
-  name: "Marshall McLuhan"
-  
-  references:
-    - type: lloooomm
-      path: "lloooomm/00-Characters/marshall-mcluhan/"
-    - type: wikipedia
-      url: "https://en.wikipedia.org/wiki/Marshall_McLuhan"
-    - type: work
-      title: "Understanding Media"
-```
-
----
-
-## Commands
-
-| Command | Effect |
-|---------|--------|
-| `INCARNATE name` | Create character from reference |
-| `INCARNATE name FROM url` | Create from specific source |
-| `GENERATE name AS "desc"` | Create original character |
-| `TRANSFORM name INTO category` | Move between categories |
-| `RETIRE name` | Archive (don't delete) |
-
----
-
-## Uniqueness Principle
-
-Each incarnation is **UNIQUE** to this adventure. Same reference, different context.
+The generic skill defines the patterns. This directory applies them.
 
 ---
 
 ## Sub-Category Promotion
 
-When a README sub-category grows, promote to subdirectory:
-
-```
-fictional/
-├── blade-runner/       # Was a section, now a room
-│   ├── ROOM.yml
-│   └── roy-batty/
-```
+When a README section grows, promote to subdirectory with ROOM.yml.
 
 ---
 
 ## Ethical Inheritance
 
-Subdirectories inherit ethics from parents. Can add, not remove.
+Subdirectories inherit ethics from parents. Can add constraints, not remove.
 
 > *"The README is the seed catalog. The subdirectory is the garden."*

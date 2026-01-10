@@ -33,6 +33,43 @@ player:
 
 **Why:** Stability, safety, git-friendly diffs.
 
+## Character State Ownership (CANONICAL vs MIRROR)
+
+**Characters own their own state.** The CHARACTER.yml file is CANONICAL for:
+
+| State | Stored In | Notes |
+|-------|-----------|-------|
+| `location` | CHARACTER.yml | Where the character is in the world |
+| `inventory` | CHARACTER.yml | What the character carries |
+| `gold` | CHARACTER.yml | Character's resources |
+| `sims_traits` | CHARACTER.yml | Personality (Sims-style) |
+| `mind_mirror` | CHARACTER.yml | Personality (Leary-style) |
+| `relationships` | CHARACTER.yml | Who they know and feel about |
+| `memories` | CHARACTER.yml | What they remember |
+
+**ADVENTURE.yml (or other world state files) may MIRROR some state for convenience**, but CHARACTER.yml is always the source of truth.
+
+```yaml
+# CHARACTER.yml (CANONICAL — edit this first)
+player:
+  location: coatroom/  # CANONICAL — character owns their location
+  inventory: [lamp]    # CANONICAL — character owns their inventory
+
+# ADVENTURE.yml (MIRROR — optional convenience copy)
+player:
+  location: coatroom/  # Mirror of CHARACTER.yml
+```
+
+**When updating state:**
+1. Edit CHARACTER.yml first (canonical)
+2. Optionally update ADVENTURE.yml mirror for convenience
+3. If conflict, CHARACTER.yml wins
+
+**Why this matters:**
+- Characters can be used across multiple adventures
+- Character state persists independent of adventure state
+- Clear ownership prevents conflicts
+
 ## Directory Structure
 
 ### Players (Need Junk Storage)

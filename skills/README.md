@@ -204,6 +204,54 @@ Or just tell the LLM: "Create a new skill called 'my-skill' using the skill skil
 
 ---
 
+## 🚪 The Skill Nexus as Shared Space
+
+This `skills/` directory is a **shared room** accessible from any adventure. Unlike adventure-specific rooms, it lives at the repo root and connects to ALL adventures.
+
+### Path Variables
+
+Instead of counting `../../../` levels, use **path variables** that resolve at runtime. See [kernel/NAMING.yml](../kernel/NAMING.yml) for the full specification.
+
+| Variable | Resolves To | Use Case |
+|----------|-------------|----------|
+| `$REPO/` | `moollm/` | Repository root |
+| `$SKILLS/` | `moollm/skills/` | This directory |
+| `$KERNEL/` | `moollm/kernel/` | Core protocols |
+| `$ADVENTURE/` | Current adventure | From startup.yml |
+| `$CHARACTERS/` | `$ADVENTURE/characters/` | Character alcoves |
+| `$PERSONAS/` | `$ADVENTURE/personas/` | Mask wardrobe |
+| `$PUB/` | `$ADVENTURE/pub/` | The gathering place |
+| `$COATROOM/` | `$ADVENTURE/coatroom/` | Transformation room |
+| `$START/` | `$ADVENTURE/start/` | Origin point |
+
+### Example Usage
+
+```yaml
+# In skills/ROOM.yml — back-links to adventure
+exits:
+  coatroom:
+    destination: $COATROOM/
+    
+relationships:
+  maurice:
+    location: $COATROOM/mannequin.yml
+    
+# In adventure YAML — forward-links to skills
+exits:
+  east:
+    destination: $SKILLS/
+```
+
+### Concrete Resolution (when adventure-4 is active)
+
+| Path Variable | Resolves To |
+|---------------|-------------|
+| `$COATROOM/mirror.yml` | `examples/adventure-4/coatroom/mirror.yml` |
+| `$CHARACTERS/animals/palm/` | `examples/adventure-4/characters/animals/palm/` |
+| `$SKILLS/character/` | `skills/character/` |
+
+---
+
 ## Navigation
 
 | Direction | Destination |

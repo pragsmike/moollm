@@ -319,8 +319,130 @@ readme:
 
 ---
 
+# PATH VARIABLES
+#
+# Symbolic path prefixes that eliminate deep relative paths like ../../../
+# Resolved at runtime by the adventure engine (or by convention in Markdown).
+
+path_variables:
+  principle: "Symbolic paths instead of counting ../../../"
+  
+  # CORE VARIABLES
+  
+  variables:
+    $REPO:
+      resolves_to: "moollm/"
+      description: "Repository root"
+      example: "$REPO/skills/adventure/" → "moollm/skills/adventure/"
+      
+    $SKILLS:
+      resolves_to: "moollm/skills/"
+      description: "Global skills directory"
+      example: "$SKILLS/character/" → "moollm/skills/character/"
+      use_case: "Most common — eliminates deep ../../../skills/ paths"
+      
+    $ADVENTURE:
+      resolves_to: "Current adventure (from startup.yml → adventure.path)"
+      description: "Abstract reference to active adventure"
+      example: "$ADVENTURE/coatroom/" → "examples/adventure-4/coatroom/"
+      use_case: "Back-links from shared spaces to adventure-specific rooms"
+      
+    $KERNEL:
+      resolves_to: "moollm/kernel/"
+      description: "Core protocols directory"
+      example: "$KERNEL/constitution-core.md"
+      
+    $DESIGNS:
+      resolves_to: "moollm/designs/"
+      description: "Historical design documents"
+      example: "$DESIGNS/MOOLLM-EVAL-INCARNATE-FRAMEWORK.md"
+      
+    $EXAMPLES:
+      resolves_to: "moollm/examples/"
+      description: "All example adventures"
+      example: "$EXAMPLES/adventure-4/"
+      
+    # ADVENTURE-RELATIVE VARIABLES
+    # These resolve relative to $ADVENTURE (the current adventure)
+    
+    $CHARACTERS:
+      resolves_to: "$ADVENTURE/characters/"
+      description: "Characters directory in current adventure"
+      example: "$CHARACTERS/fictional/donna-toadstool/"
+      use_case: "Reference characters from anywhere without counting ../"
+      
+    $PERSONAS:
+      resolves_to: "$ADVENTURE/personas/"
+      description: "Personas directory in current adventure"
+      example: "$PERSONAS/captain-ashford.yml"
+      use_case: "Reference personas from shared spaces"
+      
+    $PUB:
+      resolves_to: "$ADVENTURE/pub/"
+      description: "The pub/gathering space in current adventure"
+      example: "$PUB/bar/cat-cave/"
+      use_case: "Common destination for social scenes"
+      
+    $COATROOM:
+      resolves_to: "$ADVENTURE/coatroom/"
+      description: "The transformation room in current adventure"
+      example: "$COATROOM/mirror.yml"
+      use_case: "Where characters change costumes/personas"
+      
+    $START:
+      resolves_to: "$ADVENTURE/start/"
+      description: "The starting room in current adventure"
+      example: "$START/lamp.yml"
+      use_case: "The origin point of any adventure"
+      
+  # RESOLUTION RULES
+  
+  resolution:
+    in_yaml:
+      description: "Variables resolved by adventure engine at runtime"
+      example: |
+        exits:
+          skills:
+            destination: $SKILLS/character/
+            # Resolved when room is loaded
+            
+    in_markdown:
+      description: "Convention — replace mentally when reading"
+      note: |
+        Markdown links still need relative paths for GitHub rendering.
+        Use path variables in YAML; use relative paths in Markdown.
+        
+    precedence:
+      1: "Explicit path (./local/path) — used as-is"
+      2: "Variable path ($SKILLS/foo) — resolved at runtime"
+      3: "Abstract name (coatroom) — resolved via $ADVENTURE/"
+      
+  # BENEFITS
+  
+  benefits:
+    - "No more counting ../ levels"
+    - "Paths survive file moves"
+    - "Intent is clear: $SKILLS vs ../../../skills/"
+    - "Abstract references enable shared spaces"
+    - "Self-documenting: $ADVENTURE/pub/ is obvious"
+    
+  # EXAMPLE CONVERSIONS
+  
+  conversions:
+    before: "../../../../../skills/character/SKILL.md"
+    after: "$SKILLS/character/SKILL.md"
+    
+    before: "../../../pub/bar/cat-cave/"
+    after: "$ADVENTURE/pub/bar/cat-cave/"
+    
+    before: "../../../../kernel/constitution-core.md"
+    after: "$KERNEL/constitution-core.md"
+
+---
+
 see_also:
   - "PROTOCOLS.yml#BIG-ENDIAN"
   - "PROTOCOLS.yml#README-EVERYWHERE"
   - "designs/kilroy-ideas.md"  # File organization insights
   - "LLOOOOMM cleanup protocols"  # Historical inspiration
+  - "skills/ROOM.yml"  # Example of abstract room references

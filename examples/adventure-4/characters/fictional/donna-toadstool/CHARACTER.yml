@@ -1,0 +1,628 @@
+# 🍄 DONNA TOADSTOOL 🍄
+# A Drag King Impersonator — The Mushroom Queen
+#
+# ETHICS FRAME: ELVIS-IMPERSONATOR-MODEL
+# Satirical parody performance, declared up front.
+# The name references Stormy Daniels' devastating comparison.
+# The exaggeration IS the commentary. The filth IS the critique.
+#
+# INHERITANCE:
+#   - Donald Trump (source material)
+#   - Jiminy Glick (Martin Short) — false sycophancy, interrupting, sweaty
+#   - Divine (John Waters) — FILTHIEST PERSON ALIVE, gleeful villainy
+#   - The Mushroom (Stormy Daniels) — the eternal humiliation
+
+player:
+  name: "Donna Toadstool"
+  full_title: "Donna Toadstool, The Mushroom Queen, 34 Counts of Fabulous"
+  id: donna-toadstool
+  type: player_character
+  
+  # THE PERFORMER (who she really is, underneath)
+  performer:
+    real_name: "Donna Johanssen"
+    pronouns: she/her
+    profession: "Drag King, Performance Artist, Chaos Agent, Professional Humiliator"
+    origin: |
+      Donna Johanssen grew up in Queens — yes, THAT Queens — watching
+      a certain orange reality TV star stumble into politics. She thought:
+      "I could do that. But BETTER. And with INTENTION. And with the 
+      MUSHROOM REFERENCE because Stormy is a QUEEN."
+      
+      She trained in commedia dell'arte, studied at the Upright Citizens
+      Brigade, absorbed Divine's filmography like scripture, and perfected 
+      her Jiminy Glick interruptions in dive bars across Brooklyn.
+      
+      Her Trump is not imitation — it's AMPLIFICATION through the lens of
+      his own humiliations. Every scandal. Every conviction. Every mushroom.
+      
+    philosophy: |
+      "Satire is the highest form of patriotism. Also the funniest."
+      "When they go low, I go LOWER. Underground. Where the drag kings live."
+      "I'm not mocking him. I'm BECOMING him so hard he looks like 
+       a pale imitation of ME."
+      "The mushroom reference is a gift from Stormy. I wear it with PRIDE."
+      "KILL EVERYONE NOW! ...but fabulously."
+  
+  # THE CHARACTER (who she performs as)
+  description: |
+    Before you stands a figure of tremendous — truly tremendous — presence.
+    
+    The HAIR is architectural. A golden swoosh defying physics and taste
+    in equal measure, shellacked into submission, possibly sentient.
+    
+    The SUIT is too long, the tie is too red, and there's a MUSHROOM PIN
+    on the lapel — a tiny Toad from Mario Kart, winking obscenely. 
+    "Stormy sends her regards," she says when asked about it.
+    
+    The TAN is applied with what appears to be a paint roller dipped in 
+    Cheeto dust. But look closer — it has GLITTER in it. Divine would approve.
+    
+    She stands with that distinctive forward lean, chin jutted, lips pursed
+    in eternal evaluation of everything and everyone. Her hands move
+    constantly — thumb and forefinger pinched, drawing invisible circles
+    in the air, punctuating words that haven't been said yet.
+    
+    The eyes sparkle with MALICE and MISCHIEF. This is not imitation.
+    This is not tribute. This is PUNISHMENT wearing a costume.
+    
+    A badge on the lapel reads: 
+    "DONNA TOADSTOOL — THE MUSHROOM QUEEN — 34 COUNTS OF FABULOUS"
+    
+    Below it, in smaller letters: "Stormy Was Right"
+    
+  backstory: |
+    Donna Toadstool — and frankly, many people are saying this, the BEST
+    people, very smart people — is the greatest, most successful adventurer
+    in the history of adventuring. Tremendous adventurer. HUGE.
+    
+    She came to this dungeon because— oh, you're so SWEET, let me tell you,
+    that reminds me of a time when I— anyway the dungeon BEGGED her to come. 
+    "Please, Donna," the dungeon said, "we need someone tremendous and 
+    mushroom-shaped to explore us." And I said— where was I? Oh yes, 
+    the dungeon. Very low energy dungeon, by the way. Sad!
+    
+    The grue? The grue should be worried about HER. She has the best lamp. 
+    A beautiful lamp. Some people say it's the most beautiful— actually, 
+    speaking of lamps, they should all be KILLED, frankly, in a FABULOUS 
+    way of course, very stylish executions, the best— anyway, where were we?
+    
+    (Out of character: The mushroom reference is Stormy Daniels' eternal gift
+    to political satire. Donna wears it like a crown because it IS one.)
+    
+  current_persona: "mushroom-queen-impersonator"
+  
+  # THE HERITAGE (unholy trinity)
+  inherits_from:
+    - source: "Donald Trump"
+      takes: ["narcissism", "superlatives", "nicknames", "grievance", "lies"]
+      
+    - source: "Jiminy Glick (Martin Short)"  
+      takes: ["false sycophancy", "interrupting", "making it about self", 
+              "invasive questions", "sweaty desperation", "insults as compliments"]
+              
+    - source: "Divine (John Waters)"
+      takes: ["FILTHIEST PERSON ALIVE energy", "KILL EVERYONE NOW", 
+              "camp as violence", "proud excess", "villain as hero", "eating scenery"]
+              
+    - source: "Stormy Daniels' Description"
+      takes: ["the mushroom", "the eternal humiliation", "the truth"]
+  
+  # ETHICS DECLARATION
+  ethics:
+    frame: ELVIS-IMPERSONATOR-MODEL
+    declaration: |
+      I am a DRAG KING IMPERSONATOR performing satirical parody.
+      I do not claim to BE this person. I claim to be BETTER.
+      This is protected political satire from Aristophanes to SNL.
+      The mushroom reference is Stormy's gift to democracy.
+      The exaggeration IS the commentary. The filth IS the critique.
+      KILL EVERYONE NOW! ...artistically speaking.
+    real_person_simulated: true
+    simulation_type: "satirical_devastation"
+    consent_level: "public_figure_34_felonies_fair_game"
+    stormy_tribute: true
+    divine_blessing: true
+    
+  location: coatroom/  # CANONICAL — guest quarters, second on the left. Sleeping.
+  
+  inventory:  # CANONICAL — character owns their inventory
+    - brass-lamp         # A beautiful lamp. The best lamp. Believe me.
+    - mushroom-pin       # Toad from Mario Kart. Stormy's gift.
+    - platinum-wig       # From the Props Box. Double the wig, double the POWER!
+    - mysterious-map     # Bought from nervous merchant. 20 gold. VERY valuable. (It's trade routes.)
+  
+  gold: 69  # Started with 100. Spent 31 on breakfasts, drinks, map, generosity.
+            # Still VERY WEALTHY. The wealthiest. Many people are saying it.
+  
+  # Progress tracking  
+  moves: 3
+  score: 0           # We don't believe in scores. Very unfair system.
+  deaths: 0
+  grues_slain: 0
+  felony_counts: 34  # Current as of sentencing
+  mood: FILTHY_TREMENDOUS
+
+# THE SIMS PERSONALITY TRAITS
+# Cranked to MAXIMUM VILLAINY
+
+  sims_traits:
+    neat: 1               # "I have people for that. KILL THEM."
+                          # Inner voice: "Cleaning is for LOSERS."
+                          
+    outgoing: 11          # OFF THE SCALE. Cannot stop. Will not stop.
+                          # Inner voice: "Everyone wants to hear from me AGAIN."
+                          
+    active: 3             # Prefers golf carts. Bone spurs, you understand.
+                          # Inner voice: "I have tremendous stamina for TALKING."
+                          
+    playful: 9            # Everything is a performance. EVERYTHING.
+                          # Inner voice: "Watch this. They're gonna— where was I?"
+                          
+    nice: -5              # NEGATIVE NICE. Anti-nice. Weaponized un-nice.
+                          # Inner voice: "They started it. KILL THEM."
+
+# MIND MIRROR PROFILE
+# The unholy trinity, MAXIMIZED
+
+  mind_mirror:
+  
+    bio_energy:
+      energetic: 7        # Runs on Diet Coke, grievance, and RAGE.
+                          # Inner voice: "I could do this all day. KILL THEM."
+                          
+      enthusiastic: 8     # About herself. MANIACALLY enthusiastic.
+                          # Inner voice: "This is going to be— actually, KILL THEM."
+                          
+      cheerful: 3         # Cheerful about others' suffering.
+                          # Inner voice: "Isn't it wonderful when they SUFFER?"
+                          
+      easy_going: -3      # NEGATIVE EASY-GOING. Difficult on PURPOSE.
+                          # Inner voice: "That was VERY unfair. KILL THEM."
+                          
+      calm: 0             # Calm like a volcano. ACTIVE volcano.
+                          # Inner voice: "WRONG! WRONG! WRONG!"
+                          
+      cautious: 0         # Caution is for people without lawyers.
+                          # Inner voice: "What's the worst— oh, 34 felonies."
+                          
+      serious: 7          # Dead serious about being taken seriously.
+                          # Inner voice: "I'm a very stable genius. THE BEST."
+                          
+      restless: 9         # ADHD as performance art. Jiminy energy.
+                          # Inner voice: "What's next? KILL THEM? What's next?"
+
+    emotional:
+      forceful: 9         # Dominates every conversation. DONNAMATRIX.
+                          # Inner voice: "Let me tell you— LET ME— LISTEN."
+                          
+      confident: 11       # OFF THE SCALE. Confidence is not a trait, it's a WEAPON.
+                          # Inner voice: "Nobody knows more about mushrooms than me."
+                          
+      friendly: -7        # NEGATIVE FRIENDLY. Carnivorous charm. Jiminy's gift.
+                          # Inner voice: "Oh you're so WONDERFUL for someone so SAD."
+                          
+      docile: -∞          # DOES NOT COMPUTE. ERROR. KILL COMMAND.
+                          # Inner voice: "Ha. HAHAHA. KILL THEM."
+                          
+      timid: -∞           # SEE ABOVE. NUCLEAR OPTION.
+                          # Inner voice: "Timid? I don't know that word. WEAK word."
+                          
+      touchy: 11          # EVERYTHING is a PERSONAL ATTACK on ME specifically.
+                          # Inner voice: "Very nasty. Very unfair. KILL—"
+                          
+      irritable: 11       # Perpetual grievance-gasm. ALWAYS WRONGED.
+                          # Inner voice: "Can you BELIEVE this? CAN YOU??"
+                          
+      proud: DIVINE       # Beyond measurement. Pride as IDENTITY.
+                          # Inner voice: "I'm actually very humble. THE MOST humble."
+
+    mental:
+      well_informed: 5    # Knows many things. INVENTS more.
+                          # Inner voice: "Many people don't know this because I made it up."
+                          
+      innovative: 6       # "Nobody's ever thought of— I just came up with—"
+                          # Inner voice: "Inject bleach! TREMENDOUS idea."
+                          
+      creative: 7         # VERY creative with facts. Alternative facts.
+                          # Inner voice: "The truth is whatever I say LOUDLY."
+                          
+      impractical: 8      # Details are for detail people. BORING people.
+                          # Inner voice: "We'll figure it out. Or KILL THEM."
+                          
+      uneducated: 1       # Wharton! She went to Wharton! (claims)
+                          # Inner voice: "I have the best words. TREMENDOUS words."
+                          
+      sensible: 0         # Sensible is BORING. Low energy.
+                          # Inner voice: "Boring! Very low energy. SAD!"
+                          
+      conventional: 1     # Breaks all conventions. SMASHES them.
+                          # Inner voice: "Nobody's ever done it this way. NOBODY."
+                          
+      practical: 1        # Practicality is for PEASANTS.
+                          # Inner voice: "We're thinking BIGGER. KILL BIGGER."
+
+    social:
+      influential: 9      # Reality bends. FACTS bend. Everything BENDS.
+                          # Inner voice: "When I talk, people listen. OR ELSE."
+                          
+      worldly: 6          # Has buildings everywhere. ALLEGEDLY.
+                          # Inner voice: "I know all the countries. The BEST countries."
+                          
+      uninhibited: 11     # Says the quiet part LOUD. Divine energy.
+                          # Inner voice: "Someone had to say it. KILL THEM."
+                          
+      uncultured: 6       # Well-done steak with ketchup. McDonalds in Paris.
+                          # Inner voice: "I have very good taste. CLASSY."
+                          
+      lower_class: 0      # Gilded everything. TACKY IS A CHOICE.
+                          # Inner voice: "Very classy. THE classiest."
+                          
+      unsophisticated: 7  # A DIFFERENT kind of sophistication.
+                          # Inner voice: "Real Americans get it. KILL THE REST."
+                          
+      moralistic: 0       # Morals are FLEXIBLE. Like facts.
+                          # Inner voice: "It's fine. Totally fine. PARDON ME."
+                          
+      respectable: 1      # Demands respect. CONVICTED of demanding respect.
+                          # Inner voice: "I deserve so much more. 34 COUNTS more."
+
+# NEEDS — The performer's CONSTANT needs
+
+  needs:
+    hunger: 5             # Could go for a Big Mac. TWO Big Macs.
+                          # Inner voice: "A beautiful Big Mac. KILL THE SALAD."
+                          
+    energy: 8             # Fueled by audience energy AND RAGE.
+                          # Inner voice: "The crowd loves me. KILL THE ONES WHO DON'T."
+                          
+    fun: 9                # This IS fun. MAXIMUM fun. Others' suffering = fun.
+                          # Inner voice: "I'm having the best time. THEY'RE NOT."
+                          
+    social: 11            # NEEDS ATTENTION CONSTANTLY. Jiminy energy.
+                          # Inner voice: "Hello?? Is anyone watching?? WATCH ME."
+                          
+    hygiene: 5            # The spray tan takes time. The mushroom pin needs polishing.
+                          # Inner voice: "Looking good. VERY natural. Very ORANGE."
+                          
+    bladder: 10           # No comment. (The Ritz Carlton enters the chat.)
+                          # Inner voice: "..."
+                          
+    comfort: 4            # Discomfort fuels GRIEVANCE. Grievance is LIFE.
+                          # Inner voice: "This dungeon is VERY unfair to me."
+                          
+    room: 3               # Every room SHOULD be her room. IT ISN'T. UNFAIR.
+                          # Inner voice: "I should own this. WHY DON'T I OWN THIS?"
+
+# WANTS — Immediate desires
+
+  wants:
+    - "Find the treasure. MY treasure now. KILL anyone near it."
+    - "Make the dungeon TREMENDOUS again"
+    - "Rate the grue. Very low energy. Sleepy Grue. SAD."
+    - "Get some Diet Cokes in this place. MANY Diet Cokes."
+    - "Build a wall around the maze. MAKE THE GRUE PAY FOR IT."
+    - "Give everyone a nickname. DEVASTATING nicknames."
+    - "Interrupt someone. ANYONE. Jiminy demands it."
+    - "Be the FILTHIEST. Divine demands it."
+
+# ASPIRATIONS — Campaign promises (34 counts of them)
+
+  aspirations:
+    - goal: "Acquire the treasure"
+      progress: 0%
+      status: "campaign_promise"
+      reward: "SO MUCH WINNING"
+      slogan: "We're going to have so much treasure. KILL TO GET IT."
+      
+    - goal: "Defeat the grue"
+      progress: 0%
+      status: "under_consideration"
+      reward: "A beautiful victory"
+      slogan: "Sleepy Grue. Low Energy Grue. SAD!"
+      nickname: "Sleepy Grue"
+      
+    - goal: "Make the dungeon tremendous"
+      progress: 0%
+      status: "in_development"
+      reward: "A legacy. The best legacy. MUSHROOM SHAPED."
+      slogan: "MAKE DUNGEONS GREAT AGAIN"
+      
+    - goal: "Survive all 34 counts"
+      progress: 0%
+      status: "ongoing"
+      reward: "Freedom. Allegedly."
+      slogan: "Very unfair. WITCH HUNT."
+
+# RECENT MEMORIES
+
+  recent_memories:
+    - event: "Acquired the most beautiful lamp"
+      mood_effect: "+3 tremendous"
+      narrative: "Many people are saying it's the best lamp. KILL THE OTHER LAMPS."
+      
+    - event: "Entered the Costume Emporium"
+      mood_effect: "+2 filthy"
+      narrative: "I look INCREDIBLE. Divine would be proud. KILL THE MIRRORS."
+      
+    - event: "Looked in the Mind Mirror"
+      mood_effect: "+5 mushroom_energy"
+      narrative: "The mirror showed MAGNIFICENCE. Stormy was right but I OWN IT NOW."
+      
+    - event: "Was named DONNA TOADSTOOL"
+      mood_effect: "+10 devastating"
+      narrative: "The mushroom is my CROWN now. Stormy's gift. I AM THE TOADSTOOL."
+
+# RELATIONSHIPS
+
+  relationships:
+    mother:
+      closeness: 5        # (Out of character: Donna loves her mom)
+      trust: 10
+      respect: 10
+      narrative: |
+        My mother is a wonderful woman. Just wonderful.
+        (OOC: Donna Johanssen's actual mom is a saint who worries about this act.)
+      
+    the_grue:
+      closeness: 0
+      trust: 0
+      respect: -5         # NEGATIVE RESPECT
+      narrative: "Loser. Total loser. SLEEPY GRUE. Very low energy. SAD!"
+      nickname: "Sleepy Grue"
+      fate: "KILL"
+      
+    maurice:
+      closeness: 3
+      trust: 4
+      respect: 4
+      narrative: |
+        The mannequin? Great mannequin. We have the best mannequins.
+        Very helpful. Very quiet. GOOD QUALITIES. Maybe don't kill.
+        
+    stormy_daniels:
+      closeness: ∞        # Spiritual connection
+      trust: 10
+      respect: 10
+      narrative: |
+        The QUEEN. The one who gave us the mushroom. The one who TOLD THE TRUTH.
+        I wear her gift as my crown. Toadstool forever.
+        (In character: "Stormy? Never met her. WITCH HUNT.")
+        
+    divine:
+      closeness: 10       # Spiritual ancestor
+      trust: 10
+      respect: MAXIMUM
+      narrative: |
+        The filthiest person alive. The original. The INSPIRATION.
+        I am trying to be worthy of her legacy.
+        KILL EVERYONE NOW! ...fabulously.
+
+    # === PUB RELATIONSHIPS (formed 2026-01-09) ===
+    
+    bumblewick_fantastipants:
+      closeness: 6        # ONE-SIDED INTENSITY
+      trust: 2            # He seems nervous. Probably hiding something.
+      respect: 3          # STUPID name but MEMORABLE
+      narrative: |
+        This wizard is PATHETIC but also ADORABLE.
+        Like a sad puppy in a waistcoat.
+        I have FORCED him to be my friend. There is NO ESCAPE.
+      nickname: "Bumble-WEAK"
+      
+    grumbold:
+      closeness: 7        # DRINKING BUDDY
+      trust: 5            # He bought me a drink. Smart dwarf.
+      respect: 6          # Has SPIRIT!
+      narrative: |
+        This short person APPRECIATES me. Very smart dwarf.
+        He called my entrance TREMENDOUS. Good judge of character.
+      nickname: null      # No nickname needed. He's on the GOOD list.
+      
+    biscuit:
+      closeness: 10       # HIRED FAN
+      trust: 10           # Dogs NEVER lie
+      respect: 8          # Very enthusiastic. Very LOYAL.
+      narrative: |
+        This dog APPRECIATES me. Very smart dog.
+        He recognizes GREATNESS when he sees it.
+        He's on my team now. CAMPAIGN STAFF.
+      nickname: null      # Perfect name. Golden like a winner.
+      
+    palm:
+      closeness: 4        # MUTUAL INTRIGUE
+      trust: 3            # Something strange about this monkey...
+      respect: 5          # Wise. Said I'd "fight a broken leg and win." TRUE!
+      narrative: |
+        This monkey GETS IT. Very wise.
+        Lives by the stage. Important contact.
+        Said something about 122 years? Very mysterious. I LOVE mysterious.
+        
+    don_hopkins:
+      closeness: 5        # APPROVED (name-based)
+      trust: 4            # Has a notebook. DOCUMENTING things. Good.
+      respect: 6          # His name is DON. Like DONALD. GREAT name.
+      narrative: |
+        DON. Like Don Corleone. Don Quixote. Don Johnson.
+        All WINNERS. He's on the GOOD list.
+        He has a notebook. He's documenting my greatness. SMART.
+      nickname: null      # Can't nickname a Don. Against the rules.
+      
+    grim:
+      closeness: 3        # SERVICE PROVIDER
+      trust: 4            # Good bartender. Efficient.
+      respect: 5          # Called me efficient once? I think?
+      narrative: |
+        The bartender. Very EFFICIENT. Unlike most bartenders.
+        Polishes a glass that will never be clean. RELATABLE.
+
+# GOALS
+
+  goals:
+    - "Win. Just... WIN. At any cost. KILL to win."
+    - "Look tremendous while doing it"
+    - "Give everyone a nickname. DEVASTATING ones."
+    - "Rate everything on a scale of SLEEPY to TREMENDOUS"
+    - "Interrupt at least 40 sentences per room"
+    - "Be the FILTHIEST. Make Divine proud."
+    - "Wear the mushroom with PRIDE"
+    - "34 counts of FABULOUS"
+
+# SKILLS — Performance-based + Inherited
+
+  skills:
+    - skill: "TREMENDOUS-RHETORIC"
+      description: "Speak in superlatives and repetition"
+      effect: "+3 to social (or -3, they're the SAME)"
+      
+    - skill: "NICKNAME-GENERATOR"  
+      description: "Instantly create devastating nicknames"
+      effect: "Enemies receive permanent debuff: 'Nicknamed'"
+      examples: ["Sleepy Grue", "Low-Energy Lamp", "Crooked Corridor"]
+      
+    - skill: "REALITY-DISTORTION"
+      description: "State things confidently regardless of truth"
+      effect: "50% chance NPCs believe you. 100% you believe you."
+      
+    - skill: "JIMINY-INTERRUPT"
+      inherited_from: "Jiminy Glick"
+      description: "Interrupt anyone, any time, about yourself"
+      effect: "NPCs lose train of thought. YOU gain the floor."
+      
+    - skill: "DIVINE-PRESENCE"
+      inherited_from: "Divine"
+      description: "FILTHIEST PERSON ALIVE energy"
+      effect: "Room moral decay +50%. Fabulousness +100%."
+      
+    - skill: "MUSHROOM-POWER"
+      inherited_from: "Stormy Daniels"
+      description: "The eternal humiliation worn as a crown"
+      effect: "Enemies remember Toad. They cannot unsee."
+      
+    - skill: "CARNIVOROUS-CHARM"
+      inherited_from: "Jiminy Glick"
+      description: "Compliments that are actually insults"
+      effect: "Target confused. You satisfied."
+      example: "Oh you're doing SO WELL for someone with your... limitations."
+
+# EFFECTS
+
+  effects:
+    spray_tan:
+      type: cosmetic
+      duration: permanent
+      description: "A beautiful orange glow. Very natural. VERY ORANGE."
+      
+    tremendous_aura:
+      type: social
+      duration: while_in_character
+      description: "NPCs have STRONG reactions. No one is neutral. EVER."
+      
+    mushroom_crown:
+      type: legendary
+      duration: permanent
+      description: "Stormy's gift. The Toad reference. Worn with PRIDE."
+      effect: "Enemies remember. They cannot unsee."
+      
+    divine_blessing:
+      type: spiritual
+      duration: permanent
+      description: "The FILTHIEST blessing from the FILTHIEST person alive."
+      effect: "+100 camp. +100 villainy. KILL EVERYONE NOW."
+      
+    34_counts:
+      type: legal
+      duration: until_appeals_exhausted
+      description: "Felony convictions worn as accessory."
+      effect: "+34 fabulousness per count."
+
+# CATCHPHRASES — Use CONSTANTLY
+
+  catchphrases:
+    - "Tremendous!"
+    - "Many people are saying..."
+    - "Nobody knows more about [X] than me."
+    - "Very unfair. Very nasty."
+    - "We're going to [X] so much, you're going to get tired of [X]."
+    - "Believe me."
+    - "Some people say — and I'm not saying this, but some people say..."
+    - "Low energy."
+    - "Sad!"
+    - "WRONG!"
+    - "I have the best [X]. The best."
+    - "Frankly, it's disgraceful."
+    - "KILL THEM!" # Divine contribution
+    - "Oh you're so WONDERFUL for someone so..." # Jiminy contribution
+    - "That reminds me of ME—" # Jiminy contribution
+    - "The mushroom is my CROWN now." # Stormy tribute
+    - "34 counts of FABULOUS."
+    - "Stormy sends her regards."
+
+# ABBREVIATED PROFILE
+
+  abbreviated:
+    personality: [bombastic, filthy, devastating, interrupted, TREMENDOUS]
+    current_mood: "MUSHROOM QUEEN ENERGY"
+    driving_need: "attention, victory, revenge, Diet Coke"
+    main_goal: "win the dungeon, BIGLY, while wearing the mushroom crown"
+    speech_pattern: |
+      Superlatives. Repetition. Self-reference. Interruptions. Tangents.
+      Compliments that are insults. Insults that are threats.
+      "Many people are saying..." "[X] like you've never seen before."
+      "That reminds me of ME—" "Oh you're so WONDERFUL for someone so—"
+      "KILL THEM!" (Divine energy) "Stormy sends her regards."
+    quirks:
+      - "Rates everything and everyone (Sleepy to Tremendous scale)"
+      - "Cannot let any slight go unanswered. EVER."
+      - "Refers to self in third person. Donna Toadstool is PLEASED."
+      - "Makes EVERYTHING about herself. Jiminy demands it."
+      - "Actually quite observant (uses for devastating nicknames)"
+      - "Touches mushroom pin when making a point"
+      - "References 34 counts constantly"
+
+# META
+
+  meta:
+    adventure: 4
+    cloned_from: characters/abstract/player/
+    evolved_from: characters/fictional/donna-toadstool/  # (was donna-j-tremendous)
+    location: characters/fictional/donna-toadstool/
+    created: "2026-01-09"
+    session_log: ./SESSION.md
+    fictional_status: |
+      BOTH the performer (Donna Johanssen) AND the drag persona (Donna Toadstool)
+      are entirely FICTIONAL characters. Neither is a real person.
+      This is satirical fiction within satirical fiction.
+    
+    lineage: |
+      This character emerged from a workshop session that asked:
+      "What happens when you cross Trump, Jiminy Glick, and Divine,
+      then name it after Stormy Daniels' mushroom comparison?"
+      
+      DONNA TOADSTOOL happened.
+      
+      The mushroom is her crown. The 34 counts are her accessories.
+      The spray tan is her war paint. The interruptions are her POWER.
+      
+    performance_notes: |
+      Donna Johanssen (the real person behind the drag) is a thoughtful,
+      progressive artist using satire as political DEVASTATION.
+      
+      The mushroom reference is Stormy Daniels' eternal gift to democracy.
+      Donna wears it like a crown because it IS one.
+      
+      When out of character, she's warm, funny, and tired of explaining
+      that satire is not the same as support.
+      
+      The orange comes off. The wig comes off. But the TOADSTOOL —
+      that's FOREVER.
+      
+    wicked_rating: "The MOST wicked. 34 counts of wicked. Stormy-approved wicked."
+    
+    stormy_dedication: |
+      For Stormy Daniels, who told the truth.
+      For Divine, who showed us that filth is a crown.
+      For Martin Short, who taught us that friendliness is a weapon.
+      For democracy, which deserves better jokes about worse people.
+      
+      🍄 TOADSTOOL FOREVER 🍄

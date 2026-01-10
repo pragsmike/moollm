@@ -1,44 +1,98 @@
 # 📜 Session Log
 
-> Human-readable markdown log with embedded YAML
+> Human-readable markdown session logs that tell stories
 
 **Quick Links:**
-- [Full Specification](SKILL.md) — complete protocol
-- [Template: SESSION.yml](SESSION.yml.tmpl) — session template
+- [Full Specification](SKILL.md) — complete protocol with writing guide
+- [Template: SESSION.yml](SESSION.yml.tmpl) — session metadata
 - [Template: session-log.md](session-log.md.tmpl) — log format
+
+---
 
 ## Overview
 
-Append-only audit trail that humans can actually read. **Never modify, never delete** — the audit trail is sacred.
+Session logs are **living documents** that capture the narrative of play. Unlike technical event logs, sessions are meant to be **READ** — by users, by future LLMs warming context, by anyone exploring the repo.
 
-## Format
+> [!NOTE]
+> Session logs are **NOT append-only!** They grow and improve over time. Update the index, add links, fix typos — sessions are living documents.
 
-Each entry is a markdown heading with embedded YAML:
+---
+
+## Where Sessions Live
+
+Default: **`SESSION.md`** in the character directory.
+
+```
+characters/real-people/don-hopkins/SESSION.md
+characters/fictional/donna-toadstool/SESSION.md
+characters/animals/palm/SESSION.md
+```
+
+Name variants with suffixes: `SESSION-fluxx-marathon.md`, `SESSION-day1.md`
+
+---
+
+## Key Principles
+
+| Principle | Description |
+|-----------|-------------|
+| **📖 Narrative first** | Write for humans, not machines |
+| **📂 Collapsible sections** | Show narrative, hide data |
+| **📊 Index at top** | Always keep updated |
+| **🔗 Link generously** | Every file mentioned = link |
+| **📈 Tables tell stories** | Stats, rosters, inventories |
+| **🔄 Retroactive improvement** | Update as you learn more |
+
+---
+
+## Collapsible Sections
 
 ```markdown
-## 12:00:05 — Tool Call: fs.read
+<details open>
+<summary><h2>🌟 Major Event — Descriptive Subtitle</h2></summary>
 
-Reading parser to understand recursive descent.
+Narrative content here (always visible).
 
-```yaml
-type: tool_call
-tool: fs.read
-args:
-  path: src/parser.ts
-  why: "Check implementation"
+<details>
+<summary>📂 <strong>Technical: YAML changes under the hood</strong></summary>
+
+Hidden data — click to expand.
+
+</details>
+</details>
 ```
-```
 
-## Why Markdown + YAML
+| Pattern | Use For | Default State |
+|---------|---------|---------------|
+| `<details open>` | Narrative chapters | **Open** |
+| `<details>` | Technical details | Closed |
 
-| Feature | Benefit |
-|---------|---------|
-| Human readable | Easy to scan |
-| Machine parseable | YAML blocks extractable |
-| Semantic comments | YAML Jazz in action |
-| Append-only | Natural audit support |
+---
+
+## 🌟 Gold Standard Examples
+
+Study these for best practices:
+
+| Session | What It Demonstrates |
+|---------|---------------------|
+| [**Don Hopkins**](../../examples/adventure-4/characters/real-people/don-hopkins/SESSION.md) | 7000+ lines, 5 days, extensive linking, speed-of-light simulations |
+| [**Donna Toadstool**](../../examples/adventure-4/characters/fictional/donna-toadstool/SESSION.md) | Character creation narrative, file operations, appendices |
+
+---
 
 ## Related Skills
 
-- [summarize](../summarize/) — compress old logs
-- [honest-forget](../honest-forget/) — safe compression
+| Skill | Relationship |
+|-------|--------------|
+| [character/](../character/) | Session files live in character directories |
+| [adventure/](../adventure/) | Adventure LOG.md follows session patterns |
+| [summarize/](../summarize/) | Compress old sessions |
+
+---
+
+## Navigation
+
+| Direction | Destination |
+|-----------|-------------|
+| ⬆️ Up | [skills/](../) |
+| 📖 Full Spec | [SKILL.md](./SKILL.md) |

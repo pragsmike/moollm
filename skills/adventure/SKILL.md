@@ -219,6 +219,49 @@ I stepped into `src/auth/` — a maze of middleware.
 | `DEDUCE` | Form/update hypothesis |
 | `MAP` | Show visited rooms |
 | `INVENTORY` | List held items |
+| `DEBUG` / `DEBUG-ON` | Enable debug mode |
+| `DEBUG-OFF` | Disable debug mode |
+
+## Debug Mode
+
+Toggle technical output with `DEBUG-ON` and `DEBUG-OFF`.
+
+**When debug is ON**, logs include collapsible sections showing:
+- File operations (creates, edits, deletes, moves)
+- State changes with before/after values
+- YAML data islands with abbreviated data
+- Markdown links to all referenced files
+- Technical narrative explaining HOW and WHY
+
+**Example debug output:**
+
+```html
+<details>
+<summary>📂 <strong>Editing CHARACTER.yml to update player location from start/ to coatroom/</strong></summary>
+
+```yaml
+# State change (CHARACTER.yml is canonical)
+player:
+  location: start/  →  coatroom/  # Character owns their location
+```
+
+The character file owns location state. ADVENTURE.yml mirrors it for convenience.
+
+**Files affected:**
+- [CHARACTER.yml](./CHARACTER.yml) — canonical location updated
+- [ADVENTURE.yml](../../ADVENTURE.yml) — mirror updated
+
+</details>
+```
+
+**When debug is OFF**, output is clean narrative without technical sections.
+
+**Customize with natural language:**
+```
+> DEBUG-FORMAT Show only file operations, skip YAML, use 🔧 emoji
+```
+
+The `format` field in ADVENTURE.yml accepts natural language instructions for how to format debug output.
 
 ## Integration with Cards
 
