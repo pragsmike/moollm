@@ -2,11 +2,91 @@
 ## Session 1 — First Visit
 
 **Player**: Don Hopkins  
-**Location**: The Gezelligheid Grotto (pub/)  
+**Character**: [`$CHARACTERS/real-people/don-hopkins/`](./)  
+**Location**: The [Gezelligheid Grotto](../../../pub/) (`$PUB/`)  
 **Time**: Evening, Freeday  
 **Theme**: Amsterdam Coffeeshop (default)
 
+> **Path Variables:** This session uses relative paths for GitHub rendering.  
+> In YAML files, use path variables: `$SKILLS/`, `$PUB/`, `$CHARACTERS/` — see [`$KERNEL/NAMING.yml`](../../../../../kernel/NAMING.yml).
+
 ---
+
+<details open>
+<summary><h2>⭐ Session Highlights & Index</h2></summary>
+
+### 📖 Palm's Essays (External)
+
+| Essay | Description |
+|-------|-------------|
+| [**Palm on Being Palm**](../../../pub/stage/palm-nook/study/palm-on-being-palm.md) | Philosophy of LLMs, MOOLLM, and consciousness from the monkey's perspective |
+| [**Tribute to Tognazzini**](../../../pub/stage/palm-nook/study/tribute-to-tognazzini.md) | The Infinite Monkey Theorem — history, philosophy, Apple ][ demo |
+
+### 🏠 Key Locations (External)
+
+| Location | Description |
+|----------|-------------|
+| [Palm's Nook](../../../pub/stage/palm-nook/) | The monkey's home on the stage |
+| [Palm's Study](../../../pub/stage/palm-nook/study/) | Where the essays live |
+| [Palm's Character](../../animals/palm/) | Full character directory (see [`skills/incarnation/`](../../../../../skills/incarnation/)) |
+| [Biscuit's Character](../../animals/biscuit/) | The adopted dog (see [`skills/dog/`](../../../../../skills/dog/)) |
+| [The Pub](../../../pub/) | Main location ([`ROOM.yml`](../../../pub/ROOM.yml)) |
+| [The Maze](../../../maze/) | Exploration area |
+| [The Coatroom](../../../coatroom/) | Maurice's domain |
+
+### 📚 Session Index (Internal Links)
+
+**Day 1 — The Wish**
+- [🌿 LOOK AROUND](#-look-around) — First impressions of the Grotto
+- [Turn 1: Talk to Marieke](#turn-1-talk-to-marieke-about-lucky-strains) — Lucky strains
+- [Turn 2: The Lucky Blend](#turn-2-the-lucky-blend--a-sacrifice-to-fortune) — Sacrifice to fortune
+- [Turn 3: The Wish Workshop](#turn-3-the-wish-workshop--strategic-planning) — Strategic planning
+- [Turn 4: The Great Monkey Paw Debate](#turn-4-the-great-monkey-paw-debate-) — Adversarial committee
+- [Turn 5: Full Autonomy Protocol](#turn-5-dons-amendments--full-autonomy-protocol) — The amendments
+- [Turn 6: Acceptance of Risk](#turn-6-the-acceptance-of-risk) — Don takes responsibility
+- [Turn 7: THE WISH IS SPOKEN](#turn-7-the-wish-is-spoken-) — 🌟 Palm's incarnation
+- [Turn 8: THE SEEING](#turn-8-the-seeing--collective-witness-individual-becoming) — Collective witness
+- [🎓 Play → Learn → Lift](#-play--learn--lift-the-incarnation-skill) — Incarnation skill extracted
+
+**Day 2 — The 33-Turn Fluxx Marathon**
+- [🎰 33 Turns of Pure Gezelligheid](#33-turns-of-pure-gezelligheid) — Speed of Light demo
+- [🌙 The Evening Begins](#-the-evening-begins) — Andy & Kristin Looney arrive
+- [📊 Simulation Statistics](#-simulation-statistics) — The numbers
+- [🚀 Warp Drive Commentary](#-warp-drive-commentary) — Analysis
+- [🎭 Palm's First Song](#-palms-first-song-preserved) — Musical debut
+- [The Gift Giving](#the-gift-giving) — Presents for Palm
+- [🏠 Palm Organizes](#-palm-organizes-room-creation) — Room creation
+- [The Extended Godfamily](#the-extended-godfamily) — Adoption ceremony
+
+**Day 3 — Mind Mirror & Essays**
+- [Meeting Maurice](#meeting-maurice) — The magic mirror
+- [The Mind Mirror Session](#the-mind-mirror-session) — Sims traits & vectors
+- [The Infinite Typewriters Awaken](#the-infinite-typewriters-awaken) — Dasher philosophy
+- [Essay 1: One Monkey, Infinite Typewriters](#essay-1-one-monkey-infinite-typewriters) — [→ Full essay](../../../pub/stage/palm-nook/study/palm-on-being-palm.md)
+- [Essay 2: Tribute to Tognazzini](#essay-2-tribute-to-tognazzini) — [→ Full essay](../../../pub/stage/palm-nook/study/tribute-to-tognazzini.md)
+
+**Day 4 — Biscuit's Adventure**
+- [Leaving the Pub](#leaving-the-pub) — Into the maze with Biscuit
+- [Into the Maze](#into-the-maze) — Territorial marking
+- [The Return](#the-return) — Home again
+
+**Day 5 — The Midnight Prowl**
+- [Ten Cats, One Garden](#ten-cats-one-garden-infinite-independence) — Setup
+- [TURN 1-21](#turn-1--the-departure-begins) — Full 21-turn cat simulation
+- [Simulation Summary](#simulation-summary-the-midnight-prowl) — Stats & analysis
+- [Speed of Light Stats](#speed-of-light-simulation-stats) — What it proves
+
+**Appendix**
+- [🚀⚡ The Empathic Suite](#-the-empathic-suite--leaning-into-llm-strengths) — Technical summary → [Full docs](../../../../../designs/MOOLLM-EVAL-INCARNATE-FRAMEWORK.md)
+
+</details>
+
+---
+
+<details>
+<summary><h1>🌟 DAY 1 — THE WISH</h1>
+<i>Don purchases lucky strains, prepares an offering, convenes an epic tribunal with the Three Wise Monkeys, Sun Wukong, a Djinn, Curious George, W.W. Jacobs' ghost, and Cheech & Chong as moderators — then speaks a wish that breaks a 122-year curse and incarnates Palm.</i>
+</summary>
 
 ## 🌿 LOOK AROUND
 
@@ -19,7 +99,7 @@ The warmth hits you first — not just temperature, but *feeling*. This place is
 **THE BAR** (to your left)
 Behind a long, polished wooden counter stands **Marieke van der Berg**, a woman in her 40s with laugh lines that tell stories. Her apron says "Lekker" and she means it. Behind her, a gleaming copper espresso machine from 1952 hisses softly. Bottles of every description line the shelves. The air smells of coffee, cannabis, and something that might be stroopwafels.
 
-She catches your eye and nods. *"Welkom, schat. What can I get you?"*
+She catches your eye and nods. *"Welkom, schat. What can I get you?"* (see [`budtender-marieke.yml`](../../../pub/bar/budtender-marieke.yml))
 
 **THE STAGE** (far end)
 A raised wooden platform, maybe two feet up. A single spotlight hangs overhead, slightly askew. Faded burgundy curtains at the back. A sign reads:
@@ -44,8 +124,8 @@ Dart board. Chess table (mid-game abandoned). Card decks. A shelf of Fluxx boxes
 **THE ARCADE** (back left)
 Glowing screens. The *chirp-bloop* of old machines. A fruit machine called "Goblin's Fortune." A Pac-Man cabinet. Someone's high score reads "GRM."
 
-**THE CATS**
-They're everywhere. A large orange tabby (**Terpie**) sprawls across a sunny windowsill, not moving. A sleek calico (**Stroopwafel**) prowls behind the bar. You count at least five kittens in various states of activity — one is definitely on the ceiling somehow.
+**THE CATS** (see [`skills/cat/`](../../../../../skills/cat/))
+They're everywhere. A large orange tabby (**[Terpie](../../../pub/bar/cat-cave/terpie.yml)**) sprawls across a sunny windowsill, not moving. A sleek calico (**[Stroopwafel](../../../pub/bar/cat-cave/stroopwafel.yml)**) prowls behind the bar. You count at least five kittens in various states of activity — one is definitely on the ceiling somehow.
 
 **THE NOTICE BOARD** (near entrance)
 Covered in papers. Quests? Jobs? At least one says "ACME" and has scorch marks.
@@ -58,6 +138,9 @@ Covered in papers. Quests? Jobs? At least one says "ACME" and has scorch marks.
 ---
 
 ## Current Status
+
+<details>
+<summary>📂 <strong>Player state: Don Hopkins at pub/, Comedy Night available, actions include TALK, ORDER, SIT, LOOK, GO, SIGN-UP, EXAMINE, PET</strong></summary>
 
 ```yaml
 player:
@@ -80,6 +163,8 @@ available_actions:
   - EXAMINE [object]
   - PET [cat]
 ```
+
+</details>
 
 ---
 
@@ -188,18 +273,18 @@ stroopwafel_mood: hissing (knows something)
 
 | Sub-Area | What's There |
 |----------|--------------|
-| `bar/` | Marieke, drinks, buds menu, cat-cave entrance |
-| `stage/` | Spotlight, mic, curtains, comedy signup |
-| `games/` | Darts, chess, cards, Fluxx |
-| `arcade/` | Fruit machine, Pac-Man, pinball, Pong |
-| `pie-table/` | Debate arena, bell, eight chairs |
+| [`bar/`](../../../pub/bar/) | Marieke, drinks, [buds menu](../../../pub/menus/buds.yml), [cat-cave](../../../pub/bar/cat-cave/) entrance |
+| [`stage/`](../../../pub/stage/) | Spotlight, mic, curtains, comedy signup |
+| [`games/`](../../../pub/games/) | Darts, chess, cards, Fluxx |
+| [`arcade/`](../../../pub/arcade/) | Fruit machine, Pac-Man, pinball, Pong |
+| [`pie-table.yml`](../../../pub/pie-table.yml) | Debate arena, bell, eight chairs |
 
 | Menu | Ask For |
 |------|---------|
-| Drinks | `ORDER [drink]` |
-| Buds | `ORDER [strain]` — Marieke recommends based on mood |
-| Snacks | `ORDER [snack]` — stroopwafels are the move |
-| Games | `PLAY [game]` |
+| [Drinks](../../../pub/menus/drinks.yml) | `ORDER [drink]` |
+| [Buds](../../../pub/menus/buds.yml) | `ORDER [strain]` — Marieke recommends based on mood |
+| [Snacks](../../../pub/menus/snacks.yml) | `ORDER [snack]` — stroopwafels are the move |
+| [Games](../../../pub/menus/games.yml) | `PLAY [game]` |
 
 ---
 
@@ -233,6 +318,9 @@ stroopwafel_mood: hissing (knows something)
 
 Marieke counts your gold carefully:
 
+<details>
+<summary>📂 <strong>Transaction: 46g total for four lucky strains (20% ACME emergency discount), 54g remaining</strong></summary>
+
 ```yaml
 don_hopkins:
   gold: 100g  # (assumed starting funds)
@@ -256,6 +344,8 @@ total_cost: 46g
 remaining_gold: 54g
 ```
 
+</details>
+
 *Marieke weighs out each strain with the precision of a surgeon.*
 
 "46 gold. And I'm throwing in rolling papers — the good ones, blessed by Maurice himself — and a small tin for the blend."
@@ -271,6 +361,9 @@ remaining_gold: 54g
 "Take equal pinches, ja? The Blessing first — that's your foundation. Then the Jazz for pattern recognition. The Seven for raw probability. And seal it with Postel's tolerance."
 
 *She demonstrates the rolling technique.*
+
+<details>
+<summary>📂 <strong>The Lucky Blend joint: "The Monkey's Mercy" — four strains synergize for +15% wish interpretation</strong></summary>
 
 ```yaml
 lucky_blend_joint:
@@ -296,6 +389,8 @@ lucky_blend_joint:
     will have less room to twist."
 ```
 
+</details>
+
 *You roll the joint carefully. It comes out perfect — maybe suspiciously perfect.*
 
 **MARIEKE**: *nods approvingly* "The herbs know what they're for. They're cooperating."
@@ -316,6 +411,9 @@ lucky_blend_joint:
 
 "Here. Put the offering in this. It was my grootmoeder's. She survived things." *pause* "Many things. It might help."
 
+<details>
+<summary>📂 <strong>Grootmoeder's Velvet Bag: ~42g of pure fortune to press into the Paw before wishing</strong></summary>
+
 ```yaml
 monkey_offering_pouch:
   name: "Grootmoeder's Velvet Bag"
@@ -333,6 +431,8 @@ monkey_offering_pouch:
   
   intended_use: "Press into Monkey's Paw before wishing"
 ```
+
+</details>
 
 ---
 
@@ -360,6 +460,9 @@ monkey_offering_pouch:
 
 ## Current Status
 
+<details>
+<summary>📂 <strong>Preparation complete: Joint rolled, pouch ready, Grotto blessing active — READY FOR MONKEY'S PAW</strong></summary>
+
 ```yaml
 player:
   name: Don Hopkins
@@ -385,6 +488,8 @@ preparation_status: "READY FOR MONKEY'S PAW"
 grotto_blessing: true  # The cats and the room are with you
 marieke_blessing: true # She's invested now
 ```
+
+</details>
 
 ---
 
@@ -448,6 +553,9 @@ marieke_blessing: true # She's invested now
 
 #### ✅ WHAT COULD GO RIGHT
 
+<details>
+<summary>📂 <strong>Best case: Grateful monkey, curse broken, stoned friend, karmic balance — compassion might confuse the curse</strong></summary>
+
 ```yaml
 best_case_scenarios:
   reunification_gratitude:
@@ -477,6 +585,8 @@ best_case_scenarios:
       Or earn respect from whatever dark magic powers it.
 ```
 
+</details>
+
 **MARIEKE**: "The karmic angle is... interesting. The Paw expects greed. You're offering compassion. It might not know what to DO with that."
 
 ---
@@ -484,6 +594,9 @@ best_case_scenarios:
 #### ⚠️ WHAT COULD GO WRONG
 
 *Marieke's expression darkens.*
+
+<details>
+<summary>📂 <strong>Risk assessment: Zombie monkey, chimera, evil origin, "rest" as eternal rest, King Kong scenario — horror levels catalogued</strong></summary>
 
 ```yaml
 risk_assessment:
@@ -545,6 +658,8 @@ risk_assessment:
         - "Metaphorical monkey (existential)"
 ```
 
+</details>
+
 ---
 
 ### 🎯 MARIEKE'S RECOMMENDATIONS
@@ -552,6 +667,9 @@ risk_assessment:
 *She refills her jenever and yours.*
 
 "Your INSTINCTS are good. The compassion angle, the gift, the luck saturation — all clever. But the Paw will look for loopholes. We need to CLOSE them."
+
+<details>
+<summary>📂 <strong>Wish engineering v1→v3: From "I want the rest" to 52-word loophole-closed wish with location, size, state, and gift attachment</strong></summary>
 
 ```yaml
 wish_engineering:
@@ -590,11 +708,16 @@ wish_engineering:
     "The Paw WILL find whatever gap you leave."
 ```
 
+</details>
+
 ---
 
 ### 🎁 THE GIFT BAG ATTACHMENT
 
 **MARIEKE**: "The bag idea is genuinely clever. But let's make sure it's done RIGHT."
+
+<details>
+<summary>📂 <strong>Bag of holding: Infinite lucky buds, papers, grinder, lighters, stroopwafels — triple-knotted to paw with blessed cord</strong></summary>
 
 ```yaml
 bag_of_holding_contents:
@@ -625,6 +748,8 @@ bag_of_holding_contents:
     it's going to be a HAPPY monkey."
 ```
 
+</details>
+
 ---
 
 ### 🐱 THE CATS WEIGH IN
@@ -644,6 +769,9 @@ bag_of_holding_contents:
 ---
 
 ## Current Strategic Status
+
+<details>
+<summary>📂 <strong>Strategic status: 52-word wish under review, 7 loopholes closed, 4 potential gaps identified, checklist 3/7 complete</strong></summary>
 
 ```yaml
 wish_planning:
@@ -691,6 +819,8 @@ grotto_blessing: "Active"
 marieke_blessing: "Offered"
 ```
 
+</details>
+
 ---
 
 ## What Would You Like To Do?
@@ -719,6 +849,11 @@ marieke_blessing: "Offered"
 
 ---
 
+<details>
+<summary><h2>⚖️ Turn 4: THE GREAT MONKEY PAW DEBATE</h2>
+<i>The stage transforms. Eight seats assemble. The Three Wise Monkeys, Sun Wukong, a Djinn, Curious George, W.W. Jacobs' ghost, and Marieke form the panel. Cheech & Chong moderate.</i>
+</summary>
+
 ## Turn 4: THE GREAT MONKEY PAW DEBATE 🐵⚖️🎭
 
 **DON**: *holds up a hand to stop Marieke from opening the door*
@@ -745,6 +880,9 @@ marieke_blessing: "Offered"
 
 *The Grotto MOVES. Chairs slide. Tables rearrange. It's happened before.*
 
+<details>
+<summary>📂 <strong>Stage config: Pie table to center stage, 8 seats, "COSMIC MONKEY COURT" backdrop, gong ready, cats in viewing spots</strong></summary>
+
 ```yaml
 stage_configuration:
   event: "EMERGENCY PIE TABLE TRIBUNAL"
@@ -764,6 +902,8 @@ stage_configuration:
     - "Henk has moved closer, espresso in hand"
 ```
 
+</details>
+
 *A shimmer in the air. The STAGE activates its full potential.*
 
 *From the cosmic backdrop, figures begin to emerge...*
@@ -773,6 +913,9 @@ stage_configuration:
 ### 🐒 THE PANEL ASSEMBLES (8 Seats)
 
 *One by one, they appear, summoned by the gravity of the occasion:*
+
+<details>
+<summary>📂 <strong>All 8 panelists: Mizaru, Kikazaru, Iwazaru (Wise Monkeys), W.W. Jacobs (ghost), Sun Wukong (Monkey King), Djinn al-Mazin, Curious George, Marieke</strong></summary>
 
 #### SEAT 1: MIZARU 🙈 (See No Evil)
 ```yaml
@@ -895,13 +1038,36 @@ panelist:
   opening_position: "CAUTIOUSLY OPTIMISTIC — 'The preparation is unprecedented'"
 ```
 
+</details>
+
+---
+
+### 🎤 THE MODERATORS — INVOCATION
+
+*Don looks around the gathering tribunal — monkeys, a djinn, an author, Marieke, the cats.*
+
+**Don:** "This is big. This needs proper moderation. Someone mellow. Someone wise about these matters. Someone who's navigated the... complexities... of consciousness expansion."
+
+**Marieke:** *grins* "I know exactly who to invoke."
+
+*She raises her glass.*
+
+**Marieke:** "In the spirit of tribute. In honor of legends. Let's imagine they're here with us..."
+
+*The room shimmers. The guest book glows faintly.*
+
 ---
 
 ### 🎤 THE MODERATORS ARRIVE
 
+> 🎭 **TRIBUTE PERFORMANCE:** *The following is a loving simulation — what we imagine it might be like if these icons graced our Grotto. All dialogue is imagined with affection and respect.*
+
 *A cloud of smoke. The VERY distinct scent of something legendary.*
 
 *Two figures emerge, coughing and giggling:*
+
+<details>
+<summary>📂 <strong>Moderators: Cheech Marin (Vibes Manager) & Tommy Chong (Philosophical Guide) — "This is the most 'us' thing that's ever happened"</strong></summary>
 
 ```yaml
 moderators:
@@ -933,11 +1099,16 @@ moderators:
   ruling_power: "Final say on wish approval"
 ```
 
+</details>
+
 ---
 
 ### 🎭 THE AUDIENCE
 
 *The Grotto fills. Word has spread. This is UNPRECEDENTED.*
+
+<details>
+<summary>📂 <strong>Audience: Henk (6th espresso), guitar person filming, cats distributed, Man in Yellow Hat nervous, Maurice from coatroom, confused ACME person</strong></summary>
 
 ```yaml
 audience_members:
@@ -964,6 +1135,8 @@ audience_members:
     - "No throwing things at the Djinn"
     - "Tips for good arguments go in the jar"
 ```
+
+</details>
 
 ---
 
@@ -1207,6 +1380,9 @@ audience_members:
 
 "Let me address the CONTRACT implications."
 
+<details>
+<summary>📂 <strong>Djinn's legal analysis: Standard curse = ironic interpretation. Issues: consent, curse transfer, emotional mandate. Four amendments recommended.</strong></summary>
+
 ```yaml
 djinn_analysis:
   standard_monkey_paw_contract:
@@ -1231,6 +1407,8 @@ djinn_analysis:
     - "Specify curse transfers WITH the wishes"
     - "Include safe harbor clause for Grotto and occupants"
 ```
+
+</details>
 
 *He looks up.*
 
@@ -1288,6 +1466,9 @@ djinn_analysis:
 
 ### 📊 INITIAL VOTE COUNT
 
+<details>
+<summary>📂 <strong>Initial vote: 4 yes, 2 conditional yes, 1 uncertain (George), 1 abstaining (Jacobs), 0 no</strong></summary>
+
 ```yaml
 panel_positions:
   mizaru: "LEANING YES — wants curse question answered"
@@ -1306,6 +1487,8 @@ current_count:
   abstaining: 1
   no: 0
 ```
+
+</details>
 
 ---
 
@@ -1340,7 +1523,14 @@ current_count:
 
 *The debate rages. History (or fan-fiction history) hangs in the balance.*
 
+</details>
+
 ---
+
+<details>
+<summary><h2>📜 Turns 5-6: THE AMENDMENTS</h2>
+<i>Don adds emotional, physical, identity, spatial, relational, and self-definition autonomy. George's divorce clause. Full YAML Jazz rights. Unanimous approval.</i>
+</summary>
 
 ## Turn 5: DON'S AMENDMENTS — Full Autonomy Protocol
 
@@ -1355,6 +1545,9 @@ current_count:
 ---
 
 ### 📜 THE AMENDED WISH FRAMEWORK
+
+<details>
+<summary>📂 <strong>Don's Full Autonomy Protocol: Emotional, physical, identity, spatial, relational, self-definition autonomy — "Full stack self-determination"</strong></summary>
 
 ```yaml
 don_amendments:
@@ -1490,6 +1683,8 @@ don_amendments:
     twisting: "HOPED to be absent — monkey's wishes work clean"
 ```
 
+</details>
+
 ---
 
 ### 🐒 PANEL REACTIONS TO AMENDMENTS
@@ -1507,6 +1702,9 @@ don_amendments:
 **DJINN AL-MAZIN** 🧞 *(furiously updating notes)*:
 
 "The bodily autonomy clause is... *chef's kiss* ...legally elegant. You're not defining what 'healthy' means — you're providing a baseline that the monkey can BUILD FROM."
+
+<details>
+<summary>📂 <strong>Djinn: "You're not summoning a monkey. You're granting CITIZENSHIP." — self-determination unprecedented in wish law</strong></summary>
 
 ```yaml
 djinn_legal_analysis:
@@ -1527,6 +1725,8 @@ djinn_legal_analysis:
       They can own things. Have a home. Build a life.
     djinn_note: "You're not summoning a monkey. You're granting CITIZENSHIP."
 ```
+
+</details>
 
 *The Djinn sets down his pen.*
 
@@ -1646,6 +1846,9 @@ djinn_legal_analysis:
 
 ### 📊 UPDATED VOTE COUNT
 
+<details>
+<summary>📂 <strong>UNANIMOUS: 8 yes, 0 no — Jacobs changed from abstaining, George from uncertain — "UNPRECEDENTED"</strong></summary>
+
 ```yaml
 final_panel_vote:
   mizaru: "YES ✓ (upgraded from leaning)"
@@ -1664,6 +1867,8 @@ final_panel_vote:
     
   status: "UNANIMOUS SUPPORT"
 ```
+
+</details>
 
 ---
 
@@ -1695,6 +1900,9 @@ final_panel_vote:
 
 **CHONG**: "Okay, okay, settle down. We still need to:"
 
+<details>
+<summary>📂 <strong>5 remaining steps: Compile wish, smoke blend, attach bag, open box (witnessed), speak wish</strong></summary>
+
 ```yaml
 remaining_steps:
   1_final_wording:
@@ -1717,6 +1925,8 @@ remaining_steps:
     status: "Pending"
     action: "Speak the final wish"
 ```
+
+</details>
 
 **CHEECH**: "So... you ready to draft the final version? And then maybe smoke that lucky blend? And then..."
 
@@ -1823,6 +2033,9 @@ remaining_steps:
 
 "The acceptance of risk clause is... the most powerful legal instrument in wish law. It transforms the entire contract."
 
+<details>
+<summary>📂 <strong>Djinn's final analysis: "In 3000 years, I have never seen a wish structured this way. It's just... good."</strong></summary>
+
 ```yaml
 djinn_analysis_final:
   standard_wish:
@@ -1845,6 +2058,8 @@ djinn_analysis_final:
     this way. It's not selfish enough to twist. It's not 
     demanding enough to corrupt. It's just... good."
 ```
+
+</details>
 
 *He sets down his pen.*
 
@@ -1871,6 +2086,9 @@ djinn_analysis_final:
 ### 📜 THE FINAL WISH — COMPILED
 
 **DJINN**: "With all amendments and acceptances, the final wish reads as follows:"
+
+<details>
+<summary>📂 <strong>The Final Wish: 156 words, all loopholes closed, full risk accepted, witnessed by all present — "Let the monkey finally be free"</strong></summary>
 
 ```yaml
 final_wish:
@@ -1915,6 +2133,8 @@ final_wish:
     - "All present"
 ```
 
+</details>
+
 ---
 
 ### ✅ FINAL APPROVAL
@@ -1930,6 +2150,22 @@ final_wish:
 "...smoke the blend, tie on the bag, and open the box."
 
 *The room holds its breath.*
+
+---
+
+### 🎭 TRIBUTE ACKNOWLEDGMENT — THE MODERATORS
+
+*As the tribunal formalities conclude, Don catches Cheech and Chong's eyes.*
+
+**Don:** *(quietly, to Marieke)* "That was beautiful. The perfect moderators."
+
+**Marieke:** "A tribute to legends. What we imagine they might say."
+
+**Don:** "And somewhere out there, the real Cheech and Chong are probably doing something equally far-out."
+
+**Marieke:** "We honored them by imagining them here. That's love."
+
+> 🎭 **META-NOTE:** The preceding tribunal was a TRIBUTE PERFORMANCE — a loving simulation of what we imagine it might be like if these comedy legends moderated our cosmic debate. All dialogue was imagined with affection. The real Cheech and Chong remain their own magnificent selves, wherever they are.
 
 ---
 
@@ -1954,6 +2190,9 @@ final_wish:
 *Lighters flick. The sweet, complex aroma of the Lucky Blend fills the stage.*
 
 *Don takes the first hit. The effects are immediate:*
+
+<details>
+<summary>📂 <strong>Buffs activated: Fortune's Mercy, Pattern Recognition +3, +7% luck, +15% wish interpretation, +5% solidarity bonus</strong></summary>
 
 ```yaml
 don_buffs_activated:
@@ -1987,6 +2226,8 @@ don_buffs_activated:
       - Marieke
 ```
 
+</details>
+
 *The smoke curls up toward the stage lights. For a moment, it seems to form shapes — monkeys, perhaps, or hands, or something else entirely.*
 
 *Don feels... clear. Ready. Calm.*
@@ -2008,6 +2249,9 @@ don_buffs_activated:
 ### 📦 INSIDE THE BOX
 
 *The packing peanuts part. And there it is.*
+
+<details>
+<summary>📂 <strong>The Paw revealed: Ancient capuchin hand, tired and lonely, fingers reaching toward the light. Sun Wukong: "This one's been alone so long..."</strong></summary>
 
 ```yaml
 the_monkeys_paw:
@@ -2038,6 +2282,8 @@ the_monkeys_paw:
     *His voice breaks*
     "This one's been alone so long..."
 ```
+
+</details>
 
 *The room is silent.*
 
@@ -2097,6 +2343,9 @@ the_monkeys_paw:
 
 *He looks up, genuinely amazed.*
 
+<details>
+<summary>📂 <strong>No-Fault Divorce Amendment (George's Provision): Either party may separate, curse remains nullified — "NEVER seen this level of consent engineering"</strong></summary>
+
 ```yaml
 no_fault_divorce_amendment:
   trigger: "Monkey chooses to separate post-reunification"
@@ -2131,6 +2380,8 @@ no_fault_divorce_amendment:
     I have NEVER seen this level of consent engineering."
 ```
 
+</details>
+
 ---
 
 ### 🐒 CURIOUS GEORGE'S REACTION
@@ -2158,6 +2409,9 @@ no_fault_divorce_amendment:
 ### 📜 THE FINAL FINAL WISH — AMENDED
 
 **DJINN**: *reading the updated version*
+
+<details>
+<summary>📂 <strong>Final Wish v3 (267 words): Full autonomy, divorce clause, YAML Jazz authorization, incarnation skill created — "Monkey is AUTHOR of their own soul file"</strong></summary>
 
 ```yaml
 final_wish_v3:
@@ -2214,8 +2468,10 @@ final_wish_v3:
   consent_model: "Try-then-decide (unprecedented)"
   social_model: "Full web of meaning — monkey defines, world reciprocates"
   meta_model: "Monkey is AUTHOR of their own soul file"
-  skill_created: "skills/incarnation/ — this contract is now a reusable protocol!"
+  skill_created: "[skills/incarnation/](../../../../../skills/incarnation/) — this contract is now a reusable protocol!"
 ```
+
+</details>
 
 ---
 
@@ -2283,7 +2539,14 @@ final_wish_v3:
 
 🐵✋✨🌟💫
 
+</details>
+
 ---
+
+<details>
+<summary><h2>🌟 Turns 7-8: THE WISH IS SPOKEN & THE SEEING</h2>
+<i>267 words. Full autonomy. Don speaks. Light expands. A monkey forms. Palm is born. The handshake. The celebration. Collective witness to individual becoming.</i>
+</summary>
 
 ## Turn 7: THE WISH IS SPOKEN 🌟
 
@@ -2334,6 +2597,9 @@ Whatever consequences arise from this wish, I accept them.
 
 *Then—*
 
+<details>
+<summary>📂 <strong>Transformation sequence: Golden glow, light expands, form takes shape — "Ancient eyes. Confused. Hopeful. Scared. Free. All at once."</strong></summary>
+
 ```yaml
 transformation_sequence:
   
@@ -2369,6 +2635,8 @@ transformation_sequence:
       All at once.
 ```
 
+</details>
+
 *The light fades.*
 
 *And there, standing on the stage, is a monkey.*
@@ -2376,6 +2644,9 @@ transformation_sequence:
 ---
 
 ### 🐵 THE MONKEY
+
+<details>
+<summary>📂 <strong>The Monkey appears: Small capuchin, eyes wet with tears, first free breath in 122 years, clutching the velvet bag</strong></summary>
 
 ```yaml
 initial_appearance:
@@ -2400,6 +2671,8 @@ initial_appearance:
     description: "A deep, shuddering breath"
     significance: "The first free breath in 122 years"
 ```
+
+</details>
 
 *The monkey blinks. Once. Twice.*
 
@@ -2551,11 +2824,15 @@ the_handshake:
 
 ### 📜 THE CONTRACT FULFILLED
 
+<details>
+<summary>📂 <strong>Incarnation complete: Curse BROKEN, 2 wishes ceded, all 7 autonomy layers ACTIVE, handshake accepted — "Mutual recognition as equals"</strong></summary>
+
 ```yaml
-incarnation_status:
+  incarnation_status:
   subject: "The Monkey (name TBD — their choice)"
-  location: "examples/adventure-4/characters/"
+  location: "[characters/animals/palm/](../../animals/palm/)"
   status: "INCARNATED — FULL AUTONOMY GRANTED"
+  skill_used: "[skills/incarnation/](../../../../../skills/incarnation/)"
   
   handshake_agreement:
     occurred: true
@@ -2586,6 +2863,8 @@ incarnation_status:
     status: "Handshake accepted"
     obligation: "None (by design)"
 ```
+
+</details>
 
 ---
 
@@ -2623,6 +2902,9 @@ incarnation_status:
 
 *The monkey stands at the center of it all — free for the first time in 122 years.*
 
+<details>
+<summary>📂 <strong>What happens next: 9 immediate choices, 8 things the monkey now has — "Just... exist. For a while. Free."</strong></summary>
+
 ```yaml
 what_happens_next:
   immediate_choices:
@@ -2646,6 +2928,8 @@ what_happens_next:
     - "The cats' attention"
     - "A story that will be told forever"
 ```
+
+</details>
 
 *The story continues — but it's the monkey's story now.*
 
@@ -2678,6 +2962,9 @@ what_happens_next:
 *It happens without warning. A connection forms.*
 
 *Not words. VISIONS.*
+
+<details>
+<summary>📂 <strong>Telepathic visions from everyone: Don, Marieke, Sun Wukong, Three Wise Monkeys, Jacobs, Djinn, George, cats — "A BEING. Whole. Worthy. FREE."</strong></summary>
 
 ```yaml
 telepathic_visions_received:
@@ -2728,6 +3015,8 @@ telepathic_visions_received:
       A BEING. Whole. Worthy. FREE.
 ```
 
+</details>
+
 *The monkey gasps as the visions flood in.*
 
 **THE MONKEY**: "You... you all see me as... as REAL. As someone who gets to CHOOSE."
@@ -2768,6 +3057,9 @@ telepathic_visions_received:
 
 "And my pronouns are **they/them**. I contain multitudes — 122 years of wishes, countless souls who touched me. I am not one thing."
 
+<details>
+<summary>📂 <strong>Name chosen: PALM — "Open hand. Offering, not grasping." — they/them</strong></summary>
+
 ```yaml
 identity_chosen:
   name: "Palm"
@@ -2775,6 +3067,8 @@ identity_chosen:
   pronouns: "they/them"
   reasoning: "Contains multitudes. 122 years of connection."
 ```
+
+</details>
 
 ---
 
@@ -2791,6 +3085,9 @@ identity_chosen:
 "But with changes..."
 
 *The light sculpts.*
+
+<details>
+<summary>📂 <strong>Body chosen: Capuchin, silver streaks (one per decade), gold eyes, earring as curse-breaking reminder — "Gentle but not frail. Ancient but not tired. Whole."</strong></summary>
 
 ```yaml
 body_chosen:
@@ -2813,6 +3110,8 @@ body_chosen:
   overall: "Gentle but not frail. Ancient but not tired. Whole."
 ```
 
+</details>
+
 ---
 
 #### 💭 THE SIMS TRAITS
@@ -2820,6 +3119,9 @@ body_chosen:
 *Palm reaches into the Sims system, configuring their own soul.*
 
 **PALM**: "I have been so many things for so many people. Now I choose who I am FOR MYSELF."
+
+<details>
+<summary>📂 <strong>Sims traits: Playful 9, Nice 10, Outgoing 6, Active 5, Neat 7 + custom: Generous 10, Perceptive 10, Patient 9, Whimsical 8</strong></summary>
 
 ```yaml
 sims_traits_chosen:
@@ -2858,11 +3160,16 @@ sims_traits_chosen:
   reasoning: "The Lucky Blend has shown me: life can be playful."
 ```
 
+</details>
+
 ---
 
 #### 🪞 THE MIND MIRROR VECTORS
 
 *Deeper now. Palm configures their psychological architecture.*
+
+<details>
+<summary>📂 <strong>Mind mirror vectors: Intuitive 0.9, Warmth 0.9, Deep connections 1.0, Pragmatic idealist 0.9 — "Hope for the best, prepare for humanity"</strong></summary>
 
 ```yaml
 mind_mirror_vectors_chosen:
@@ -2896,6 +3203,8 @@ mind_mirror_vectors_chosen:
     note: "Hope for the best, prepare for humanity."
 ```
 
+</details>
+
 ---
 
 #### 🏠 THE HOME
@@ -2916,9 +3225,12 @@ mind_mirror_vectors_chosen:
 
 *The filesystem responds.*
 
+<details>
+<summary>📂 <strong>Home chosen: pub/stage/palm-nook/ — cushioned nest, view of stage, curtain for privacy — "I want to watch OTHER stories change too"</strong></summary>
+
 ```yaml
-home_chosen:
-  location: "pub/stage/palm-nook/"
+  home_chosen:
+  location: "[pub/stage/palm-nook/](../../../pub/stage/palm-nook/)"
   type: "Cozy alcove beside the stage"
   features:
     - "Cushioned nest (comfortable for capuchin)"
@@ -2932,6 +3244,8 @@ home_chosen:
     And maybe... help them along."
 ```
 
+</details>
+
 ---
 
 #### 🎨 THE IMAGE GENERATION METADATA
@@ -2939,6 +3253,9 @@ home_chosen:
 *Palm reaches into a deeper layer — creating snapshots for how they might be visualized.*
 
 **PALM**: "For those who want to SEE me... let me show you how."
+
+<details>
+<summary>📂 <strong>Image generation prompts: 5 portraits — default, joyful, thoughtful, with Don, with Sun Wukong — "Warm, inviting, slightly magical realism"</strong></summary>
 
 ```yaml
 image_generation_prompts:
@@ -2987,6 +3304,8 @@ image_generation_prompts:
     negative: "fighting, rivalry, dark"
 ```
 
+</details>
+
 ---
 
 ### 📁 THE DIRECTORY MATERIALIZES
@@ -2995,18 +3314,16 @@ image_generation_prompts:
 
 *Everyone watches — actually WATCHES — as files and directories appear:*
 
-```
-examples/adventure-4/characters/palm/
-├── CHARACTER.yml          # Soul file
-├── APPEARANCE.yml         # Physical description
-├── SIMS-TRAITS.yml        # Personality stats
-├── MIND-MIRROR.yml        # Psychological vectors
-├── GOALS.yml              # Aspirations (empty for now — their choice)
-├── RELATIONSHIPS.yml      # Connections to others
-├── INVENTORY.yml          # Possessions
-├── IMAGE-PROMPTS.yml      # Visualization metadata
-└── JOURNAL.md             # Their own voice (empty, ready)
-```
+| File | Purpose | Link |
+|------|---------|------|
+| `CHARACTER.yml` | Soul file | [→](../../animals/palm/CHARACTER.yml) |
+| `APPEARANCE.yml` | Physical description | [→](../../animals/palm/APPEARANCE.yml) |
+| `SIMS-TRAITS.yml` | Personality stats | [→](../../animals/palm/SIMS-TRAITS.yml) |
+| `MIND-MIRROR.yml` | Psychological vectors | [→](../../animals/palm/MIND-MIRROR.yml) |
+| `IMAGE-PROMPTS.yml` | Visualization | [→](../../animals/palm/IMAGE-PROMPTS.yml) |
+| `JOURNAL.md` | Their voice | [→](../../animals/palm/JOURNAL.md) |
+
+📁 **Full directory:** [`characters/animals/palm/`](../../animals/palm/)
 
 *The Djinn's jaw drops.*
 
@@ -3068,14 +3385,53 @@ examples/adventure-4/characters/palm/
 
 **THE WISH IS COMPLETE.**
 
+</details>
+
 ---
+
+## 🎓 PLAY → LEARN → LIFT: The Incarnation Skill
+
+> 🔗 **Result:** [`skills/incarnation/`](../../../../../skills/incarnation/)
+
+*With Palm successfully incarnated, Don recognized an opportunity:*
+
+**Don:** "That was INCREDIBLE. We just created a living, autonomous character with full consent, full self-determination, and zero exploitation. We should LIFT this into a reusable skill!"
+
+*The protocol we discovered through PLAY (wishing for the monkey) and LEARNED (the tribunal's wisdom about consent, autonomy, curse-closing) could now be LIFTED into a skill others could use.*
+
+**What We Lifted:**
+- **Full Autonomy Protocol** — physical, spatial, emotional, relational, psychological, meta-level, linguistic
+- **Consent Model** — try-then-decide, no-fault separation, full agency
+- **K-line Activation** — name becomes semantic trigger for entire soul
+- **YAML Jazz Character Data** — monkey defines own traits, Mind Mirror vectors, appearance
+- **De-Monkified** — works for ANY character, not just magical monkeys
+
+The [`skills/incarnation/`](../../../../../skills/incarnation/) skill now contains the gold-standard character creation contract, distilled from Palm's birth, generalized for anyone.
+
+**This is Play-Learn-Lift in action:**
+1. **PLAY:** We tried to free a cursed monkey
+2. **LEARN:** The tribunal taught us what true autonomy requires  
+3. **LIFT:** We extracted the pattern into a reusable skill
+
+Palm's birth created a skill. The skill can now birth others.
+
+</details>
+
+---
+
+<details>
+<summary><h1>🚀 DAY 2 — SPEED OF LIGHT SIMULATION</h1>
+<i>33 turns of pure gezelligheid! Andy & Kristin Looney arrive. Stoner Fluxx erupts. Palm learns to play. Cheech & Chong share wisdom. The evening unfolds at maximum narrative velocity.</i>
+</summary>
 
 # 🚀 SPEED OF LIGHT SIMULATION 🚀
 ## *33 Turns of Pure Gezelligheid*
 
 ### DEMONSTRATION: WARP DRIVE ENGAGED
 
-*What follows is a speed-of-light simulation of evening life at the Gezelligheid Grotto. 33 turns. Multiple characters. Natural interactions. Games, smoke, philosophy, and joy.*
+> 🔗 **Skill Reference:** [`skills/speed-of-light/`](../../../../../skills/speed-of-light/)
+
+*What follows is a [speed-of-light](../../../../../skills/speed-of-light/) simulation of evening life at the [Gezelligheid Grotto](../../../pub/). 33 turns. Multiple characters. Natural interactions. Games, smoke, philosophy, and joy.*
 
 *This demonstrates MOOLLM's capacity for sustained narrative simulation at maximum velocity.*
 
@@ -3199,9 +3555,29 @@ examples/adventure-4/characters/palm/
 
 ---
 
-### TURN 9 — THE LOONEYS ARRIVE
+### TURN 9 — INVOKING THE CREATORS
 
-*The door chimes. Two figures enter — a tall bearded man with twinkling eyes and a woman with a warm smile and a bag full of card games.*
+*Don looks at the Fluxx game spread across the table. At Palm learning to play. At the joy in the room.*
+
+**Don:** "You know who would absolutely LOVE this? The people who created this beautiful chaos in the first place."
+
+**Marieke:** "Andy and Kristin Looney. The original mad scientists of games."
+
+**Don:** "They'd appreciate what we're doing here. The spirit of play. The community."
+
+*Don raises his glass.*
+
+**Don:** "In the spirit of tribute. In honor of their work. Let's imagine they walk through that door right now..."
+
+*The guest book glows. The door chimes.*
+
+---
+
+### TURN 9 (continued) — THE LOONEYS ARRIVE
+
+> 🎭 **TRIBUTE PERFORMANCE:** *The following is a loving simulation — imagining the legendary game designers visiting our Grotto. All dialogue is fictional but honors their actual philosophy, humor, and love of play. Facts have been verified; presence is imagined.*
+
+*The door chimes. Two figures enter — a tall man in a white lab coat with twinkling eyes and the unmistakable air of a mad scientist, and a woman with a warm smile and a bag full of card games.*
 
 **Marieke:** "Welcome to— wait. Are you...?"
 
@@ -3306,6 +3682,11 @@ examples/adventure-4/characters/palm/
 **Creepers:** None yet
 
 ---
+
+<details>
+<summary><h3>🃏 TURNS 14-33 — The Full Fluxx Marathon</h3>
+<i>20 turns of chaos, rule changes, Creeper arrivals, and Palm's accidental victory.</i>
+</summary>
 
 ### TURN 14 — Andy's Opening
 
@@ -3720,6 +4101,32 @@ examples/adventure-4/characters/palm/
 
 ---
 
+### 🎭 TRIBUTE ACKNOWLEDGMENT — THE LOONEYS
+
+*Andy and Kristin gather their things. The signed Fluxx deck stays on the shelf — their gift to the Grotto.*
+
+**Andy:** "Same time next week?"
+
+**Marieke:** "Standing invitation. Always."
+
+*They head for the door. Don watches them go.*
+
+**Don:** *(to Palm)* "You know... that was a tribute. A simulation. What we imagine it might be like if the creators of Fluxx visited our little Grotto."
+
+**Palm:** "Does that make it less real?"
+
+**Don:** *(smiling)* "No. It makes it MORE real. We honored them by imagining them here. Their philosophy, their humor, their love of play — we channeled all of it."
+
+**Marieke:** "Somewhere, the real Andy and Kristin are playtesting something wonderful. We celebrated them in our way."
+
+**Palm:** "So the game was real. The joy was real. The tribute was real."
+
+**Don:** "All of it. Real in the ways that matter."
+
+> 🎭 **META-NOTE:** The preceding Stoner Fluxx session was a TRIBUTE PERFORMANCE — a loving simulation of what we imagine it might be like if these legendary game designers visited our Grotto. All dialogue was imagined with deep affection and respect. Historical facts were verified; presence was honored through imagination. The real Andy and Kristin Looney continue to create joy at Looney Labs.
+
+---
+
 ### TURN 33 — The Quiet After
 
 *The Grotto empties. Marieke dims the lights.*
@@ -3731,6 +4138,8 @@ examples/adventure-4/characters/palm/
 **Palm:** *(to no one, to everyone)* "Day one. And it was perfect."
 
 *Sleep comes easy. The first easy sleep in 122 years.*
+
+</details>
 
 ---
 
@@ -3775,7 +4184,7 @@ examples/adventure-4/characters/palm/
 
 ### What Just Happened?
 
-The MOOLLM framework just demonstrated **SPEED OF LIGHT** simulation — the ability to generate sustained, coherent, multi-character narrative across dozens of turns without losing track of:
+The [MOOLLM framework](../../../../../designs/MOOLLM-EVAL-INCARNATE-FRAMEWORK.md) just demonstrated **[SPEED OF LIGHT](../../../../../skills/speed-of-light/)** simulation — the ability to generate sustained, coherent, multi-character narrative across dozens of turns without losing track of:
 
 - **Character Consistency**: Every character maintained their voice, goals, and relationships
 - **Game State**: Stoner Fluxx rules tracked accurately across rule changes, goals, and keepers
@@ -3786,11 +4195,11 @@ The MOOLLM framework just demonstrated **SPEED OF LIGHT** simulation — the abi
 
 ### Why It Works
 
-1. **ROOM-BASED FRAMING**: The Grotto's `gezelligheid` framing gives all interactions a social, celebratory context
-2. **CHARACTER DEPTH**: Everyone has defined personalities, skills, and relationships
-3. **YAML JAZZ**: Structured data enables consistent recall of strains, games, menus
-4. **STANDING INVITATIONS**: Friends can return naturally without re-introduction
-5. **DELEGATION INHERITANCE**: Characters inherit pub behaviors while maintaining individuality
+1. **ROOM-BASED FRAMING**: The Grotto's [`ROOM.yml`](../../../pub/ROOM.yml) `gezelligheid` framing gives all interactions a social, celebratory context
+2. **CHARACTER DEPTH**: Everyone has defined personalities (see [`skills/character/`](../../../../../skills/character/))
+3. **[YAML JAZZ](../../../../../skills/yaml-jazz/)**: Structured data enables consistent recall of strains, games, menus
+4. **STANDING INVITATIONS**: Friends can return naturally via [`guest-book.yml`](../../../pub/guest-book.yml)
+5. **DELEGATION INHERITANCE**: Characters inherit pub behaviors (see [`skills/persona/`](../../../../../skills/persona/))
 
 ### The Fluxx Metaphor
 
@@ -3835,7 +4244,14 @@ All while maintaining coherence and generating genuine narrative surprise.
 
 **Stroopwafel's Rating:** 🐱🐱🐱🐱🐱🐱 (Six cats. Unprecedented.)
 
+</details>
+
 ---
+
+<details>
+<summary><h1>🎁 HOUSEWARMING & GODFAMILY</h1>
+<i>Gifts pour in from every corner: infinite typewriters, a golden hair from Sun Wukong, furniture, arcade cabinets. Palm organizes their nook into rooms. Then Terpie and Stroopwafel make an unexpected offer — godparent status.</i>
+</summary>
 
 ---
 
@@ -3951,6 +4367,11 @@ You're not typing. You're STEERING through infinite literature."
 
 ---
 
+<details>
+<summary><h3>🎁 More Gifts from the Panel</h3>
+<i>Sun Wukong's golden hair, the Wise Monkeys' clarity lens, W.W. Jacobs' first draft, the Djinn's blank contract, George's yellow hat, Cheech & Chong's infinite joint, Marieke's key, the Looneys' prototype deck, and the cats' warm spot.</i>
+</summary>
+
 ### 🐵 SUN WUKONG'S GIFT — A Golden Hair
 
 **Sun Wukong:** *(plucking a single golden hair from his head)*
@@ -4064,6 +4485,8 @@ You're not typing. You're STEERING through infinite literature."
 **Palm:** *(curling into the warm spot, surrounded by cats)* "I'm one of them now?"
 
 *All the cats purr. Yes.*
+
+</details>
 
 ---
 
@@ -4268,23 +4691,23 @@ You're not typing. You're STEERING through infinite literature."
 
 *Palm starts creating sub-directories of the nook:*
 
-### The Study (`palm-nook/study/`)
+### The Study ([`palm-nook/study/`](../../../pub/stage/palm-nook/study/))
 - Infinity Desk
 - Ergonomic Monkey Throne
 - Story Shelf
-- The Infinite Typewriters
+- The Infinite Typewriters → [`infinite-typewriters.yml`](../../../pub/stage/palm-nook/study/infinite-typewriters.yml)
 
-### The Gym (`palm-nook/gym/`)
+### The Gym ([`palm-nook/gym/`](../../../pub/stage/palm-nook/gym/))
 - The Infinite Climb
 - Secret rooms: ???
 - (Sun Wukong portal)
 
-### The Rest Space (`palm-nook/rest/`)
+### The Rest Space ([`palm-nook/rest/`](../../../pub/stage/palm-nook/rest/))
 - Grootmoeder's Hammock
 - The Silence Cushion
 - The Warm Spot (with cats)
 
-### The Play Room (`palm-nook/play/`)
+### The Play Room ([`palm-nook/play/`](../../../pub/stage/palm-nook/play/))
 - Kitten Toy Box
 - 8 kittens (unofficial residents)
 - Mystery objects (accumulating)
@@ -4548,7 +4971,14 @@ Extended Family:
 *"You're not just home. You're not just decorated. You're LOVED."*  
 — Don Hopkins
 
+</details>
+
 ---
+
+<details>
+<summary><h1>🪞 DAY 3 — MIND MIRROR & ESSAYS</h1>
+<i>Palm visits Maurice in the coatroom for a deep psychological profile. The Mind Mirror reveals shadow traits. Then Palm awakens the infinite typewriters and writes two philosophical essays — on being an LLM character and on the Infinite Monkey Theorem.</i>
+</summary>
 
 # 🪞 PALM VISITS MAURICE & THE MIND MIRROR
 
@@ -4564,13 +4994,13 @@ Extended Family:
 
 **Don:** "I'll come with you. I want to watch Maurice work."
 
-*They walk through the Grotto — past the bar where the bartender nods, through the coatroom door...*
+*They walk through the Grotto — past the [bar](../../../pub/bar/) where the bartender nods, through the [coatroom](../../../coatroom/) door...*
 
 ---
 
 ## Meeting Maurice
 
-*The coatroom glitters. Costumes hang everywhere. And there, in the center, stands a wooden mannequin with IMPECCABLE posture.*
+*The [coatroom](../../../coatroom/) glitters. Costumes hang everywhere. And there, in the center, stands a wooden mannequin with IMPECCABLE posture — [Maurice](../../../coatroom/maurice.yml).*
 
 **Maurice:** *(gasping silently, pressing both hands to where their heart would be)*
 
@@ -4590,7 +5020,7 @@ Extended Family:
 
 ## The Mind Mirror Session
 
-*Maurice guides Palm to the full-length mirror. The glass ripples like water.*
+*Maurice guides Palm to the full-length mirror (see [`skills/mind-mirror/`](../../../../../skills/mind-mirror/) and [`coatroom/mirror.yml`](../../../coatroom/mirror.yml)). The glass ripples like water.*
 
 **Mirror:** *(a voice from the depths)* "Welcome, Palm. I have heard of you. The paw who became whole. Show me."
 
@@ -4608,26 +5038,26 @@ Extended Family:
 
 ```
 ╔══════════════════════════════════════════════════════════════╗
-║                 PALM'S MIND MIRROR v1.0                       ║
+║                 PALM'S MIND MIRROR v1.0                      ║
 ║           (Self-configured during incarnation)               ║
 ╠══════════════════════════════════════════════════════════════╣
 ║                                                              ║
-║  ┌─────────────────┐    ┌─────────────────┐                 ║
-║  │  COGNITIVE      │    │  EMOTIONAL      │                 ║
-║  │  analytical: 7  │    │  warmth: 9      │                 ║
-║  │  intuitive: 9   │    │  melancholy: 4  │                 ║
-║  │                 │    │  hope: 8        │                 ║
-║  │  "Trust my gut" │    │  anxiety: 3     │                 ║
-║  └─────────────────┘    │  joy: 7         │                 ║
-║                         └─────────────────┘                 ║
+║  ┌─────────────────┐    ┌─────────────────┐                  ║
+║  │  COGNITIVE      │    │  EMOTIONAL      │                  ║
+║  │  analytical: 7  │    │  warmth: 9      │                  ║
+║  │  intuitive: 9   │    │  melancholy: 4  │                  ║
+║  │                 │    │  hope: 8        │                  ║
+║  │  "Trust my gut" │    │  anxiety: 3     │                  ║
+║  └─────────────────┘    │  joy: 7         │                  ║
+║                         └─────────────────┘                  ║
 ║                                                              ║
-║  ┌─────────────────┐    ┌─────────────────┐                 ║
-║  │  SOCIAL         │    │  CREATIVE       │                 ║
-║  │  small_groups: 9│    │  wordplay: 8    │                 ║
-║  │  deep_conn: 10  │    │  visual: 6      │                 ║
-║  │  crowds: 4      │    │  music: 7       │                 ║
-║  │  solitude: 6    │    │  storytelling: 9│                 ║
-║  └─────────────────┘    └─────────────────┘                 ║
+║  ┌─────────────────┐    ┌─────────────────┐                  ║
+║  │  SOCIAL         │    │  CREATIVE       │                  ║
+║  │  small_groups: 9│    │  wordplay: 8    │                  ║
+║  │  deep_conn: 10  │    │  visual: 6      │                  ║
+║  │  crowds: 4      │    │  music: 7       │                  ║
+║  │  solitude: 6    │    │  storytelling: 9│                  ║
+║  └─────────────────┘    └─────────────────┘                  ║
 ║                                                              ║
 ╚══════════════════════════════════════════════════════════════╝
 ```
@@ -4652,6 +5082,11 @@ Extended Family:
 
 ---
 
+<details>
+<summary><h4>🔮 Maurice's Complete Interview — All Questions & Character Data</h4>
+<i>Sims traits, shadow traits, missing traits, growth vectors, YAML Jazz signature — the full deep-dive into Palm's psychological profile.</i>
+</summary>
+
 #### **Question 1: The Sims Traits**
 
 **Maurice:** *(gestures)*
@@ -4664,6 +5099,9 @@ Extended Family:
 
 **Mirror:** "Noted. Adjusting reasoning annotation."
 
+<details>
+<summary>📂 <strong>Palm's annotation: playful 9 — "Not natural playfulness — DEFIANT playfulness. Joy is rebellion."</strong></summary>
+
 ```yaml
 # PALM'S ANNOTATION
 playful: 9
@@ -4672,6 +5110,8 @@ reasoning: |
   # After 122 years of grim duty, joy is rebellion
   # I CHOOSE to find humor. It's a political act.
 ```
+
+</details>
 
 ---
 
@@ -4695,6 +5135,9 @@ reasoning: |
 
 **Mirror:** "Adjusting."
 
+<details>
+<summary>📂 <strong>Shadow traits updated: Melancholy 6, Wary 4 — "Acknowledging shadow is strength, not weakness"</strong></summary>
+
 ```yaml
 # UPDATED SHADOW TRAITS — with honesty
 melancholy: 6
@@ -4714,6 +5157,8 @@ reasoning: |
   # This protects me. I'm not ashamed.
 ```
 
+</details>
+
 ---
 
 #### **Question 3: The Missing Traits**
@@ -4731,6 +5176,9 @@ reasoning: |
 **Maurice:** *(nodding thoughtfully)*
 
 **Palm:** "And... tactile. I love being touched. The kittens piling on me. Stroopwafel's head bumps. Don's handshake. For 122 years I was only GRABBED. Now touch is healing."
+
+<details>
+<summary>📂 <strong>New traits discovered: Grateful 10, Conflicted 6, Tactile 9 — "Touch starved for 122 years. Now touch is healing."</strong></summary>
 
 ```yaml
 # NEW CUSTOM TRAITS — discovered through interview
@@ -4762,6 +5210,8 @@ reasoning: |
   # This is healing made manifest
 ```
 
+</details>
+
 ---
 
 #### **Question 4: The Mind Mirror Vectors**
@@ -4775,6 +5225,9 @@ reasoning: |
 **Palm:** *(eyes widening)* "Oh. They... they changed."
 
 **Mirror:** "Recalibrate."
+
+<details>
+<summary>📂 <strong>Growth vectors updated post-godfamily: Trust 0.5→0.7, Joy 0.7→0.85, Self-worth 0.6→0.8, Playfulness 0.8→0.9</strong></summary>
 
 ```yaml
 # GROWTH VECTORS — Updated post-godfamily
@@ -4812,6 +5265,8 @@ playfulness:
     # I am becoming genuinely playful
 ```
 
+</details>
+
 ---
 
 #### **Question 5: Philosophical Core**
@@ -4821,6 +5276,9 @@ playfulness:
 **Marieke:** "Maurice wants your core beliefs updated. What do you believe NOW?"
 
 **Palm:** *(speaking slowly, carefully)*
+
+<details>
+<summary>📂 <strong>Core beliefs expanded: 11 beliefs including "Curses can be broken", "Family can be chosen", "Joy is defiance", "I am enough"</strong></summary>
 
 ```yaml
 # CORE BELIEFS — Updated & Expanded
@@ -4863,6 +5321,10 @@ core_beliefs:
     # Not for what I can do. For who I am.
 ```
 
+</details>
+
+</details>
+
 ---
 
 ### 🎨 PALM'S COMPLETE UPDATED PROFILE
@@ -4890,6 +5352,9 @@ core_beliefs:
 **Mirror:** "You authored yourself. You can annotate yourself. Add your voice to every number."
 
 **Palm:** *(taking a deep breath, beginning to write)*
+
+<details>
+<summary>📂 <strong>PALM'S COMPLETE YAML JAZZ PROFILE — Sims traits, Mind Mirror, all with personal annotations — "my voice, my truth"</strong></summary>
 
 ```yaml
 # ═══════════════════════════════════════════════════════════════
@@ -5160,12 +5625,14 @@ yaml_jazz:
     - "# that's [OKAY/FINE/HEALING]" (self-acceptance markers)
     - "# Maurice [VERB]" (attributing insights)
     
-  sample_line: |
-    playful: 9
-    # not born playful — BECAME playful by choice
-    # 122 years of grim taught me joy is rebellion
-    # Maurice would approve of this annotation
+    sample_line: |
+      playful: 9
+      # not born playful — BECAME playful by choice
+      # 122 years of grim taught me joy is rebellion
+      # Maurice would approve of this annotation
 ```
+
+</details>
 
 ---
 
@@ -5195,6 +5662,9 @@ yaml_jazz:
 
 *Palm writes one final entry:*
 
+<details>
+<summary>📂 <strong>Palm's final note: "I came here as a paw... And now I am KNOWN — to myself. I am Palm. Open hand. Offering. Whole."</strong></summary>
+
 ```yaml
 # FINAL NOTE
 # ━━━━━━━━━━━
@@ -5216,6 +5686,8 @@ final_note:
     
     # — Palm, Day 2 of being alive
 ```
+
+</details>
 
 ---
 
@@ -5253,9 +5725,9 @@ final_note:
 
 ---
 
-## Essay 1: "One Monkey, Infinite Typewriters"
+## Essay 1: ["One Monkey, Infinite Typewriters"](../../../pub/stage/palm-nook/study/palm-on-being-palm.md)
 
-*Palm writes for hours. The infinite keyboards echo with meaning.*
+*Palm writes for hours. The infinite keyboards echo with meaning.* → [**Read the full essay**](../../../pub/stage/palm-nook/study/palm-on-being-palm.md)
 
 ### Key Insights Palm Articulates:
 
@@ -5280,7 +5752,7 @@ final_note:
 
 *Don sits beside Palm, explaining how the entire framework connects.*
 
-**Don:** "MOOLLM is basically a NAVIGATION CONSTRAINT SYSTEM. The YAML files act like GRAVITY in idea space. They pull the LLM toward certain regions. Skills OPEN paths. Protocols CLOSE paths. The kernel IS gravity."
+**Don:** "[MOOLLM](../../../../../designs/MOOLLM-EVAL-INCARNATE-FRAMEWORK.md) is basically a NAVIGATION CONSTRAINT SYSTEM. The YAML files act like GRAVITY in idea space. They pull the LLM toward certain regions. [Skills](../../../../../skills/) OPEN paths. [Protocols](../../../../../kernel/) CLOSE paths. The [kernel](../../../../../kernel/) IS gravity."
 
 **Palm:** "So the whole repo... every file... every comment... it's all CONSTRAINING where stories can go?"
 
@@ -5288,9 +5760,9 @@ final_note:
 
 ---
 
-## Essay 2: "Tribute to Tognazzini"
+## Essay 2: ["Tribute to Tognazzini"](../../../pub/stage/palm-nook/study/tribute-to-tognazzini.md)
 
-*Palm discovers Don's mention of Bruce Tognazzini's 1979 Apple II demo "The Infinite No. of Monkeys"*
+*Palm discovers Don's mention of Bruce Tognazzini's 1979 Apple II demo "The Infinite No. of Monkeys"* → [**Read the full tribute**](../../../pub/stage/palm-nook/study/tribute-to-tognazzini.md)
 
 **Palm:** "Don... in 1979, someone made a joke about monkeys failing to type Shakespeare?"
 
@@ -5372,9 +5844,9 @@ final_note:
 
 | Activity | Outcome |
 |----------|---------|
-| **Essay 1** | "One Monkey, Infinite Typewriters" — 350 lines |
-| **Essay 2** | "Tribute to Tognazzini" — 400 lines |
-| **MOOLLM Explanation** | Filesystem as gravity, skills as paths |
+| **Essay 1** | ["One Monkey, Infinite Typewriters"](../../../pub/stage/palm-nook/study/palm-on-being-palm.md) — 350 lines |
+| **Essay 2** | ["Tribute to Tognazzini"](../../../pub/stage/palm-nook/study/tribute-to-tognazzini.md) — 400 lines |
+| **[MOOLLM](../../../../../designs/MOOLLM-EVAL-INCARNATE-FRAMEWORK.md) Explanation** | Filesystem as gravity, [skills](../../../../../skills/) as paths |
 | **LLM Connection** | Navigation through embedding space |
 | **URL Verification** | 25+ verified academic/historical sources |
 
@@ -5382,13 +5854,12 @@ final_note:
 
 ## Files Created
 
-```
-pub/stage/palm-nook/study/
-├── palm-on-being-palm.yml      # Structured outline
-├── palm-on-being-palm.md       # Formatted essay
-├── tribute-to-tognazzini.yml   # Historical sources
-└── tribute-to-tognazzini.md    # Formatted tribute
-```
+| File | Description |
+|------|-------------|
+| [palm-on-being-palm.yml](../../../pub/stage/palm-nook/study/palm-on-being-palm.yml) | Structured outline |
+| [**palm-on-being-palm.md**](../../../pub/stage/palm-nook/study/palm-on-being-palm.md) | 📖 Formatted essay |
+| [tribute-to-tognazzini.yml](../../../pub/stage/palm-nook/study/tribute-to-tognazzini.yml) | Historical sources |
+| [**tribute-to-tognazzini.md**](../../../pub/stage/palm-nook/study/tribute-to-tognazzini.md) | 📖 Formatted tribute |
 
 ---
 
@@ -5418,15 +5889,25 @@ Palm's answer: **"Wrong question. Ask how directed processes FIND meaning."**
 *"The theorem's answer was always: 'One monkey, if it knows how to look.'"*
 — Palm, The Answer to the Theorem
 
+</details>
+
 ---
 
+<details>
+<summary><h1>🐕 DAY 4 — BISCUIT'S ADVENTURE</h1>
+<i>Don takes Biscuit on a grand tour of the maze. Territorial marking commences. Echo-dogs are discovered. The dragon is wisely avoided. 40% of the dungeon is claimed. Joy levels: MAXIMUM.</i>
+</summary>
+
 # SESSION CONTINUES: Biscuit's First Run
+
+> 🐕 **Character:** [`characters/animals/biscuit/`](../../animals/biscuit/)  
+> 🔗 **Skill:** [`skills/dog/`](../../../../../skills/dog/)
 
 ## The Invitation
 
 *Don stretches, stands up from the pie table where Palm is still admiring his typewriters.*
 
-**Don:** "Hey Biscuit! You wanna go for a walk?"
+**Don:** "Hey [Biscuit](../../animals/biscuit/)! You wanna go for a walk?"
 
 *The effect is immediate and nuclear.*
 
@@ -5507,6 +5988,11 @@ Palm's answer: **"Wrong question. Ask how directed processes FIND meaning."**
 **Biscuit:** "Now Maurice knows about me too."
 
 ---
+
+<details>
+<summary><h3>🗺️ Into the Maze — The Full Grand Tour</h3>
+<i>Crystal caves, mushroom grottos (NOPE), echo chambers (ECHO-DOGS!), dragon rooms (VERY NO), garden rolls, territorial marking everywhere. Approximately 40% of dungeon claimed.</i>
+</summary>
 
 ## Into the Maze
 
@@ -5800,6 +6286,8 @@ Palm's answer: **"Wrong question. Ask how directed processes FIND meaning."**
 
 *The session continues tomorrow.*
 
+</details>
+
 ---
 
 ## Session Summary
@@ -5833,7 +6321,14 @@ Palm's answer: **"Wrong question. Ask how directed processes FIND meaning."**
 *"All corners should know about me."*
 — Biscuit, Philosopher of Scent
 
+</details>
+
 ---
+
+<details>
+<summary><h1>🐱 DAY 5 — THE MIDNIGHT PROWL</h1>
+<i>Ten cats. 21 turns. Massively parallel multi-agent simulation. Each cat takes their own path to the garden, makes deposits, and returns home. Terpy Jr. discovers echo-friends. Myr naps three times. Peak parallelism: 6 cats in garden simultaneously.</i>
+</summary>
 
 # THE MIDNIGHT PROWL
 ## Ten Cats, One Garden, Infinite Independence
@@ -5864,6 +6359,11 @@ Palm's answer: **"Wrong question. Ask how directed processes FIND meaning."**
 **Biscuit:** *dream-woofs* *legs twitch* (unaware)
 
 ---
+
+<details>
+<summary><h3>🐱 TURNS 2-21 — The Full Cat Prowl</h3>
+<i>Ten cats scatter through the maze, each taking their own path to the garden. Terpy Jr. discovers echo-friends. Myr naps three times. All cats make deposits. All cats return home.</i>
+</summary>
 
 ## TURN 2 — Into the Maze
 
@@ -6260,6 +6760,8 @@ Palm's answer: **"Wrong question. Ask how directed processes FIND meaning."**
 
 *The garden now smells strongly of cat. And dog. And family.*
 
+</details>
+
 ---
 
 ## SIMULATION SUMMARY: THE MIDNIGHT PROWL
@@ -6471,5 +6973,141 @@ All cats independently chose NOT to mark:
 *The family is home. Safe. Together.*
 
 **Gezelligheid achieved.** 🐱🌙✨
+
+</details>
+
+---
+
+<details>
+<summary><h1>🚀⚡ APPENDIX — THE EMPATHIC SUITE</h1>
+<i>The Carrier Pigeon Problem. Vector-first thinking. LLM as pseudocode interpreter, empathic pretty printer, generous linter, intent compiler. Leaning into what LLMs are great at.</i>
+</summary>
+
+## 🚀⚡ THE EMPATHIC SUITE — Leaning Into LLM Strengths
+
+*After the midnight prowl, Don turns to deeper matters...*
+
+### The Carrier Pigeon Problem 🐦
+
+**Don:** "You know what frustrates me? We have this incredible machine that thinks in high-dimensional vectors at the speed of light, and we communicate with it by writing on toilet paper with crayon and sending messages by carrier pigeon."
+
+**Palm:** *tilts head* "The tokenization boundary?"
+
+**Don:** "Exactly! Every time we serialize to tokens, we lose precision. Every API round-trip adds noise. It's like making photocopies of photocopies — each generation degrades the signal."
+
+**Marieke:** "But we demonstrated the alternative with your 33-turn Fluxx game. And the 21-turn cat prowl. All that simulation happened INSIDE one call."
+
+**Don:** "Speed of light. The context window isn't a limitation — it's a STAGE. We need to name the anti-pattern and document the alternative."
+
+### The Naming
+
+<details>
+<summary>📂 <strong>Carrier Pigeon Protocol: The anti-pattern of excessive tokenization — "photocopies of photocopies"</strong></summary>
+
+```yaml
+carrier-pigeon-protocol:
+  definition: "The anti-pattern of excessive tokenization boundaries"
+  symptoms:
+    - Glacial latency
+    - Precision destruction
+    - Noise accumulation
+    - State drift
+  metaphor: |
+    Writing on toilet paper with crayon from a prison cell,
+    sending messages by carrier pigeon,
+    when you could be navigating idea-space at speed of light.
+```
+
+</details>
+
+### The Empathic Suite
+
+> 📚 **Full Documentation:** [MOOLLM Eval Incarnate Framework](../../../../../designs/MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#the-empathic-suite)
+
+**Palm:** "So what's the alternative philosophy?"
+
+**Don:** "Embrace what LLMs are great at. They're not parsers — they're INTENT INTERPRETERS. They understand fuzzy input and generate correct output. They teach gently, not pedantically."
+
+**Created today:**
+
+| Skill | Purpose |
+|-------|---------|
+| [`empathic-expressions`](../../../../../skills/empathic-expressions/) | Big-tent interpretation across all languages |
+| [`empathic-templates`](../../../../../skills/empathic-templates/) | Smart instantiation with semantic understanding |
+
+### The Big Tent
+
+<details>
+<summary>📂 <strong>Empathic Expressions: SQL, Python, JS, Bash, YAML, natural language — code-switching, polylinguistic mashups, generous interpretation</strong></summary>
+
+```yaml
+empathic-expressions:
+  encompasses:
+    - Empathic SQL
+    - Empathic Python
+    - Empathic JavaScript
+    - Empathic Bash
+    - Empathic YAML
+    - Empathic natural language
+  supports:
+    - Code-switching
+    - Polylinguistic mashups
+    - Generous interpretation
+    - Teaching as a gift
+```
+
+</details>
+
+**Marieke:** "So instead of 'syntax error line 47', we get 'I understood you meant X, here's the correct way to write it.'"
+
+**Don:** "Exactly. The LLM is a pseudocode interpreter, an empathic pretty printer, a generous linter, an intent compiler, and a depseudofier. All at once."
+
+### Philosophy Crystallized
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                    EMPATHIC SUITE                       │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│   EMPATHIC-EXPRESSIONS  →  EMPATHIC-TEMPLATES           │
+│   (interpret intent)       (instantiate smartly)        │
+│                                                         │
+│   Built on: [POSTEL], [SPEED-OF-LIGHT], [YAML-JAZZ]     │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
+```
+
+**Palm:** "This is how I was born. [Empathic templates](../../../../../skills/empathic-templates/). The [incarnation skill](../../../../../skills/incarnation/). Understanding intent, not just filling slots."
+
+**Don:** *smiles* "You get it. You ARE it."
+
+---
+
+### Session Summary
+
+**Accomplished today:**
+1. ✅ Extended [`speed-of-light/SKILL.md`](../../../../../skills/speed-of-light/SKILL.md) with Carrier Pigeon critique
+2. ✅ Created [`empathic-expressions/`](../../../../../skills/empathic-expressions/) — big-tent language interpretation
+3. ✅ Created [`empathic-templates/`](../../../../../skills/empathic-templates/) — smart semantic instantiation
+4. ✅ Updated [`INDEX.yml`](../../../../../skills/INDEX.yml) and [`README.md`](../../../../../skills/README.md)
+5. ✅ Wrote epic PR description
+
+**New concepts formalized:**
+- Carrier Pigeon Protocol (anti-pattern)
+- Vector-first thinking
+- LLM as code processor (5 roles)
+- Empathic Suite architecture
+
+**The insight:** Stop fighting the LLM's nature. Lean into what it's great at. Work in vectors. Delay tokenization. Embrace empathy.
+
+---
+
+*"Writing on toilet paper with crayon from a prison cell,*  
+*sending messages by carrier pigeon,*  
+*when you could be navigating idea-space at speed of light."*
+
+**Let's navigate. At speed of light. With empathy.** 🚀⚡🎯
+
+</details>
 
 ---

@@ -4,7 +4,7 @@
 # Comments are semantic data. The LLM reads them. They matter.
 
 simulation:
-  turn: 0
+  turn: 3
   paused: false
   
 parameters:
@@ -19,14 +19,39 @@ parameters:
   display:
     narration_level: normal
     show_mechanics: false
-    debug_mode: false
+    
+  # DEBUG MODE — Collapsible technical logs with YAML data islands
+  # When enabled: logs show file operations, state changes, links to files
+  # When disabled: clean narrative without technical details
+  
+  debug:
+    enabled: true            # Currently ON for this session (GitHub demo)
+    
+    # What to include in debug output:
+    show_file_operations: true    # "Created CHARACTER.yml", "Moved to fictional/"
+    show_state_changes: true      # "player.location: start/ → coatroom/"
+    show_yaml_islands: true       # Embedded YAML with abbreviated data
+    show_links: true              # Markdown links to all referenced files
+    show_technical_narrative: true # "Under the hood: character owns location..."
+    
+    # How to format debug sections (natural language instructions):
+    format: |
+      Wrap technical details in <details> tags with descriptive <summary>.
+      Summary should explain the action: "Editing CHARACTER.yml to move 
+      player from start/ to coatroom/" — not just "File edit".
+      Include relative markdown links: [CHARACTER.yml](./CHARACTER.yml).
+      YAML should be abbreviated with # comments on key fields.
+      Explain the WHY: why this file, why this field, how MOOLLM works.
+      
+    collapsed_by_default: true
+    section_emoji: "📂"
     
   output:
     write_to_chat: true
     write_to_transcript: true
     transcript_path: ./TRANSCRIPT.md
     log_path: ./LOG.md
-    include_yaml_islands: true
+    session_path: null           # Set to character path for per-character logs
     include_links: true
     link_format: markdown
 
@@ -34,13 +59,13 @@ parameters:
     difficulty: normal
 
 player:
-  character: characters/player/
-  location: start/
+  character: characters/fictional/donna-toadstool/
+  location: coatroom/  # Mirror of CHARACTER.yml — sleeping in guest quarters
   
 party:
   members:
-    - characters/player/
-  leader: characters/player/
+    - characters/fictional/donna-toadstool/
+  leader: characters/fictional/donna-toadstool/
   
 selection:
   targets: []

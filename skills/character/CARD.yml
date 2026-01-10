@@ -153,6 +153,29 @@ location-protocol:
     home: characters/bumblewick/
     location: pub/  # Currently at the pub
 
+# STATE OWNERSHIP — CHARACTER.yml is CANONICAL
+
+state-ownership:
+  principle: "Characters own their own state. CHARACTER.yml is the source of truth."
+  
+  canonical_fields:
+    - location      # Where the character is
+    - inventory     # What they carry
+    - gold          # Resources
+    - sims_traits   # Personality (stable)
+    - mind_mirror   # Thought planes
+    - relationships # Who they know
+    - memories      # What they remember
+    
+  mirror_pattern: |
+    ADVENTURE.yml may mirror some state (e.g., player.location) for convenience,
+    but CHARACTER.yml is always canonical. If conflict, CHARACTER.yml wins.
+    
+  update_protocol:
+    1: "Edit CHARACTER.yml first (canonical)"
+    2: "Optionally update ADVENTURE.yml mirror"
+    3: "If conflict, CHARACTER.yml wins"
+
 # CHARACTER TYPES
 
 character-types:

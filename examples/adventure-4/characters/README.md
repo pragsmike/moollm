@@ -79,15 +79,40 @@ Think: **Engelbart's NLS** with multiple cursors.
 
 ## File = Identity
 
-In MOOLLM, the filesystem IS the world. Your file name IS your identity.
+In MOOLLM, the filesystem IS the world. Your path IS your identity.
+
+### Directory Characters vs File Characters
+
+**Directory characters** have their own directory:
+```
+characters/real-people/don-hopkins/
+  CHARACTER.yml    # The main character definition
+  biscuit.yml      # A pet — file-only character living here
+  notes.md         # Personal notes, memories
+```
+→ When DESCRIBE-ME runs, shows: `characters/real-people/don-hopkins/`
+
+**File-only characters** are just a `.yml` file:
+```
+characters/real-people/don-hopkins/biscuit.yml   # Biscuit lives in Don's directory
+```
+→ When DESCRIBE-ME runs, shows: `characters/real-people/don-hopkins/biscuit.yml`
+
+### Current Structure
 
 ```
 characters/
-  don-hopkins.yml     # The creator playing his creation
-  player.yml          # Generic hero template
-  captain-ashford.yml # After renaming in coatroom
-  mother.yml          # NPCs live here too
-  skeleton.yml        # Even dead ones
+├── abstract/
+│   └── player/              # Generic hero template (directory)
+├── real-people/
+│   └── don-hopkins/         # The creator (directory)
+│       └── biscuit.yml      # His dog (file-only, lives with Don)
+├── fictional/
+│   └── bumblewick-fantastipants/  # The reluctant hero (directory)
+├── animals/
+│   └── (animal characters)
+└── robots/
+    └── (mechanical minds)
 ```
 
 ---
@@ -249,6 +274,27 @@ adventure-4/
 - Multiple characters can be in the same room
 - Multiple characters can wear the same persona
 - Objects belong to rooms; characters belong to themselves
+
+---
+
+## Character Categories (Ethical Rooms)
+
+Characters are organized into ethical categories, each with its own framing:
+
+| Room | Protocol | Purpose |
+|------|----------|---------|
+| [real-people/](./real-people/) | TRIBUTE | Real people -- living or dead, heroes or villains |
+| [fictional/](./fictional/) | CREATIVE | Characters from fiction, games, TV |
+| [abstract/](./abstract/) | CONCEPTUAL | Personified ideas, mascots, pedagogical |
+| [animals/](./animals/) | CREATURE | Real and fictional animals with soul |
+| [robots/](./robots/) | ARTIFICIAL | Mechanical minds, AIs, digital beings |
+
+Each room declares its **ethical framing** -- how we relate to these characters:
+- **TRIBUTE** — Honor, don't parody; imagine WITH them
+- **CREATIVE** — Transformative fan engagement
+- **CONCEPTUAL** — Ideas given voice, playful personification
+- **CREATURE** — Animals deserve dignity
+- **ARTIFICIAL** — Explore consciousness through mechanical lenses
 
 ---
 

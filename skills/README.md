@@ -9,6 +9,26 @@ Userland protocols over files.
 
 ---
 
+## Seven Architectural Improvements
+
+MOOLLM extends [Anthropic's skill model](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/prompt-library) with seven innovations:
+
+| # | Extension | What It Adds | Proof |
+|---|-----------|--------------|-------|
+| 1 | **Instantiation** | Skills clone into directories with their own state. Not just prompts -- living programs. | [incarnation/](./incarnation/) |
+| 2 | **K-Line Identity** | Character names activate full context -- history, personality, relationships. Minsky's Society of Mind. | [Palm's incarnation](../examples/adventure-4/sessions/don-session-1.md#turn-8-the-seeing--collective-witness-individual-becoming) |
+| 3 | **Empathic Templates** | Semantic understanding, not string substitution. Templates that know what you mean. | [empathic-templates/](./empathic-templates/) |
+| 4 | **Three-Tier Memory** | Hot/cold/archive with metadata sidecars. Sip before gulp. | [honest-forget/](./honest-forget/) |
+| 5 | **Speed of Light** | Minimize round trips. 33 turns in one call. The context window is a stage, not a limit. | [speed-of-light/](./speed-of-light/) |
+| 6 | **Comment Intelligence** | Meta-comments (for generation) vs concrete comments (for output). Strip or preserve as appropriate. | [empathic-templates/SKILL.md](./empathic-templates/SKILL.md) |
+| 7 | **Ethical Framing** | Room-based inheritance for representation ethics. DRY ethics -- define once, inherit everywhere. | [representation-ethics/](./representation-ethics/) |
+
+**The key insight:** Skills aren't documentation. They're programs. The LLM is `eval()`.
+
+> 📚 Full explanation: [MOOLLM Eval Incarnate Framework](../designs/MOOLLM-EVAL-INCARNATE-FRAMEWORK.md)
+
+---
+
 ## Skill Index (54 skills)
 
 ### 🧠 Philosophy & Core Concepts
@@ -23,6 +43,8 @@ Userland protocols over files.
 | [robust-first/](./robust-first/) | Survive first, be correct later (Dave Ackley) |
 | [coherence-engine/](./coherence-engine/) | LLM as consistency maintainer & orchestrator |
 | [speed-of-light/](./speed-of-light/) | Many turns in one call — instant telepathy |
+| [empathic-expressions/](./empathic-expressions/) | Intent-based code interpretation across all languages |
+| [empathic-templates/](./empathic-templates/) | Smart templates with semantic understanding |
 
 ### 🎮 Methodology (How to Work)
 
@@ -182,6 +204,54 @@ Or just tell the LLM: "Create a new skill called 'my-skill' using the skill skil
 
 ---
 
+## 🚪 The Skill Nexus as Shared Space
+
+This `skills/` directory is a **shared room** accessible from any adventure. Unlike adventure-specific rooms, it lives at the repo root and connects to ALL adventures.
+
+### Path Variables
+
+Instead of counting `../../../` levels, use **path variables** that resolve at runtime. See [kernel/NAMING.yml](../kernel/NAMING.yml) for the full specification.
+
+| Variable | Resolves To | Use Case |
+|----------|-------------|----------|
+| `$REPO/` | `moollm/` | Repository root |
+| `$SKILLS/` | `moollm/skills/` | This directory |
+| `$KERNEL/` | `moollm/kernel/` | Core protocols |
+| `$ADVENTURE/` | Current adventure | From startup.yml |
+| `$CHARACTERS/` | `$ADVENTURE/characters/` | Character alcoves |
+| `$PERSONAS/` | `$ADVENTURE/personas/` | Mask wardrobe |
+| `$PUB/` | `$ADVENTURE/pub/` | The gathering place |
+| `$COATROOM/` | `$ADVENTURE/coatroom/` | Transformation room |
+| `$START/` | `$ADVENTURE/start/` | Origin point |
+
+### Example Usage
+
+```yaml
+# In skills/ROOM.yml — back-links to adventure
+exits:
+  coatroom:
+    destination: $COATROOM/
+    
+relationships:
+  maurice:
+    location: $COATROOM/mannequin.yml
+    
+# In adventure YAML — forward-links to skills
+exits:
+  east:
+    destination: $SKILLS/
+```
+
+### Concrete Resolution (when adventure-4 is active)
+
+| Path Variable | Resolves To |
+|---------------|-------------|
+| `$COATROOM/mirror.yml` | `examples/adventure-4/coatroom/mirror.yml` |
+| `$CHARACTERS/animals/palm/` | `examples/adventure-4/characters/animals/palm/` |
+| `$SKILLS/character/` | `skills/character/` |
+
+---
+
 ## Navigation
 
 | Direction | Destination |
@@ -269,8 +339,7 @@ Every skill connects to others. Navigate freely.
 
 ---
 
-<details>
-<summary><strong>📚 See Also</strong></summary>
+## 📚 See Also
 
 ### Protocols & Symbols
 - [PROTOCOLS.yml](../PROTOCOLS.yml) — Full symbol index (K-lines)
@@ -282,5 +351,3 @@ Every skill connects to others. Navigate freely.
 
 ### Schemas (Shapes)
 - [schemas/](../schemas/) — Data format definitions
-
-</details>

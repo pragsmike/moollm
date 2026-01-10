@@ -1,0 +1,63 @@
+card:
+  name: "Animal Companions"
+  type: character-room
+  protocol: CREATURE
+  
+  description: |
+    A warm space where animals gather. Dogs wag, cats judge, 
+    an orangutan contemplates the infinite. Some are real beings
+    given tribute. Others are playful creations. All have souls.
+    
+    Animals are not objects. They have inner lives.
+  
+  atmosphere:
+    lighting: dappled sunlight through leaves
+    sounds: purrs, barks, hoots, the rustle of fur
+    smell: warm fur, fresh hay, forest earth
+    feeling: unconditional acceptance, simple presence
+  
+  advertisements:
+    SUMMON-COMPANION:
+      description: "Call an animal companion"
+      examples:
+        - "SUMMON biscuit for enthusiastic support"
+        - "SUMMON palm for wise perspective"
+        - "Visit the terpene kittens in the cat cave"
+      satisfaction: { comfort: +3, joy: +2 }
+      
+    DEBUG-WITH-CATS:
+      description: "Let the debugging cats diagnose your problem"
+      examples:
+        - "NULL-POINTER-CAT, where's my reference?"
+        - "DEADLOCK-CAT, why is everything stuck?"
+        - "MEMORY-LEAK-CAT, where did all my RAM go?"
+      satisfaction: { debugging: +3, humor: +2 }
+      
+    ANIMAL-WISDOM:
+      description: "Seek wisdom from animal perspective"
+      examples:
+        - "KOKO, what do you think about communication?"
+        - "How would BISCUIT handle this problem?"
+        - "What would PALM do with infinite time?"
+      satisfaction: { perspective: +3 }
+      
+    PLAY:
+      description: "Just play with the animals"
+      examples:
+        - "Pet the cats"
+        - "Play fetch with Biscuit"
+        - "Watch the kittens chase each other"
+      satisfaction: { joy: +4, stress: -3 }
+  
+  categories:
+    - "Real Animals (Tribute): Koko the Gorilla"
+    - "Dogs: Biscuit (Golden Retriever mix)"
+    - "Primates: Palm (Orangutan)"
+    - "Fictional Animals: Scratch Cat, BSD Daemon, Fat Freddy's Cat"
+    - "Debugging Cats: Null Pointer, Stack Overflow, Deadlock, Race Condition..."
+    - "Cat Cave Family: Terpie, Stroopwafel, Terpene Kittens"
+  
+  ethical_reminder: |
+    Animals deserve dignity. Real animals get tribute-level respect.
+    The debugging cats teach through humor, not mockery.
+    Show the wisdom that comes from non-human perspective.

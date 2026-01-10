@@ -33,6 +33,43 @@ player:
 
 **Why:** Stability, safety, git-friendly diffs.
 
+## Character State Ownership (CANONICAL vs MIRROR)
+
+**Characters own their own state.** The CHARACTER.yml file is CANONICAL for:
+
+| State | Stored In | Notes |
+|-------|-----------|-------|
+| `location` | CHARACTER.yml | Where the character is in the world |
+| `inventory` | CHARACTER.yml | What the character carries |
+| `gold` | CHARACTER.yml | Character's resources |
+| `sims_traits` | CHARACTER.yml | Personality (Sims-style) |
+| `mind_mirror` | CHARACTER.yml | Personality (Leary-style) |
+| `relationships` | CHARACTER.yml | Who they know and feel about |
+| `memories` | CHARACTER.yml | What they remember |
+
+**ADVENTURE.yml (or other world state files) may MIRROR some state for convenience**, but CHARACTER.yml is always the source of truth.
+
+```yaml
+# CHARACTER.yml (CANONICAL — edit this first)
+player:
+  location: coatroom/  # CANONICAL — character owns their location
+  inventory: [lamp]    # CANONICAL — character owns their inventory
+
+# ADVENTURE.yml (MIRROR — optional convenience copy)
+player:
+  location: coatroom/  # Mirror of CHARACTER.yml
+```
+
+**When updating state:**
+1. Edit CHARACTER.yml first (canonical)
+2. Optionally update ADVENTURE.yml mirror for convenience
+3. If conflict, CHARACTER.yml wins
+
+**Why this matters:**
+- Characters can be used across multiple adventures
+- Character state persists independent of adventure state
+- Clear ownership prevents conflicts
+
 ## Directory Structure
 
 ### Players (Need Junk Storage)
@@ -206,6 +243,62 @@ player:
   home: github:donhopkins/characters/don.yml
   location: pub/
 ```
+
+## Code Locations
+
+Characters can be "at" a specific line in a file:
+
+```yaml
+character:
+  name: schema-expert
+  home: characters/experts/schema-expert/
+  location: "@central/apps/insights/pyleela/brain/Schema.py:142"
+  # Currently examining line 142 of Schema.py
+```
+
+**Location path syntax for code:**
+- `@repo/path/to/file.py` — at a file
+- `@repo/path/to/file.py:42` — at specific line
+- `@repo/path/to/file.py:42-67` — examining line range
+- `@repo/path/dir/` — in a directory (room)
+
+```
+> where is schema-expert?
+schema-expert is at @central/apps/insights/pyleela/brain/Schema.py:142
+examining the createSyntheticItemIfNeeded method
+```
+
+See [room/](../room/) for directories as rooms and files as objects.
+
+## Party-Based Code Review
+
+Form parties of expert characters to explore code together:
+
+```
+> summon drescher-expert, devops-expert, security-auditor
+Party formed: [drescher-expert, devops-expert, security-auditor]
+
+> party: review @central/tools/edgebox/scripts/ingest.py
+drescher-expert: "The claim_task function is a schema pattern..."
+devops-expert: "The PostgreSQL SKIP LOCKED is elegant..."
+security-auditor: "I see proper parameter binding, good..."
+
+> party: focus on lines 280-350
+[Multi-perspective analysis of the code section]
+```
+
+**Party Navigation:**
+```
+> go to @central/apps/insights/pyleela/brain/
+> enter Schema.py
+> look at lines 140-180
+> search for "synthetic"
+> follow import ExtendedContext
+> back
+> party: gather here
+```
+
+Each party member brings their expertise. The LLM simulates all perspectives in a single call (see [speed-of-light/](../speed-of-light/)).
 
 ## Inner Voice (YAML Jazz)
 

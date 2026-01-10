@@ -592,7 +592,7 @@ Everything is files. No hidden memory. If it's not in a file, it doesn't exist.
 .agent/
   sessions/current/
     session-log.md      # Append-only audit
-    working_set.yml     # What's in context
+    working-set.yml     # What's in context
     hot.yml             # Keep loaded
     cold.yml            # Can evict
 ```
@@ -1047,25 +1047,29 @@ The end state: an LLM that navigates its own memory, follows explicit protocols,
 
 | Adventure | Status | What You'll Find |
 |-----------|--------|------------------|
-| <nobr>**[adventure‑1/](./examples/adventure-1/)**</nobr> | ✅ Template Created | 🏗️ **The bootstrap.** World created through chat. 10 maze rooms, kitchen, coatroom, treasury. The README documents the chat that built it — watch a world emerge from prompts. |
-| <nobr>**[adventure‑2/](./examples/adventure-2/)**</nobr> | ✅ Fully Played | 🏆 **The legend.** Bumblewick became Captain Ashford. Slew a grue with blue cheese. Made 8 promises, kept them all. PhD-level postmodern deconstruction paper. 100+ photos. Letters to Mother. The README IS the complete transcript. |
-| <nobr>**[adventure‑3/](./examples/adventure-3/)**</nobr> | 🎮 **READY TO PLAY** | ⭐ **Your turn.** Fresh hero, restocked fridge, respawned grue. World enriched by previous adventurers. New mechanics: pub, curses, parties, dynamic world generation. **Start here!** |
+| <nobr>**[adventure‑1/](./examples/adventure-1/)**</nobr> | 🌱 Seed | 🏗️ **The seed.** Minimal starting world. 10 maze rooms, kitchen, coatroom, treasury. Clone this for a clean start. |
+| <nobr>**[adventure‑2/](./examples/adventure-2/)**</nobr> | ✅ Completed | 🏆 **The legend.** Captain Ashford slew a grue with blue cheese. 8 promises kept. PhD paper. 100+ photos. |
+| <nobr>**[adventure‑3/](./examples/adventure-3/)**</nobr> | 🎮 **PLAY ME** | ⭐ **Rich template.** Pub, NPCs, crafting, advanced mechanics. Fresh hero, restocked world. **Start here!** |
+| <nobr>**[adventure‑4/](./examples/adventure-4/)**</nobr> | 🔥 Active | 🐵 **Don's run.** Incarnation protocol, Palm the monkey, 33-turn Fluxx marathon. **[Epic session log!](./examples/adventure-4/sessions/don-session-1.md)** |
 
 **The Lineage:**
 
 ```mermaid
 graph TD
-    A1["<b>adventure‑1</b><br/>Template"] --> A2["<b>adventure‑2</b><br/>Fully Played"]
-    A2 --> A3["<b>adventure‑3</b><br/>🎮 READY"]
+    A1["<b>adventure‑1</b><br/>🌱 Seed"] --> A2["<b>adventure‑2</b><br/>Captain Ashford"]
+    A2 --> A3["<b>adventure‑3</b><br/>🎮 Rich Template"]
+    A3 --> A4["<b>adventure‑4</b><br/>🔥 Don's Run"]
     
-    A1 -.- N1["Created world<br/>Defined mechanics"]
-    A2 -.- N2["Captain Ashford<br/>Grue slain with cheese"]
-    A3 -.- N3["Fresh hero<br/>New systems"]
+    A1 -.- N1["Minimal world<br/>Clone for fresh start"]
+    A2 -.- N2["Grue slain<br/>PhD paper written"]
+    A3 -.- N3["Pub, NPCs<br/>Advanced mechanics"]
+    A4 -.- N4["Palm incarnated<br/>Speed of Light"]
     
     style A3 fill:#2d5,stroke:#1a3,color:#fff
+    style A4 fill:#f72,stroke:#c50,color:#fff
 ```
 
-> **Play it:** Open [adventure‑3/](./examples/adventure-3/), read the README, then `GET LAMP` and begin your story!
+> **Play it:** Open [adventure‑3/](./examples/adventure-3/) to start fresh, or read [Don's epic session log](./examples/adventure-4/sessions/don-session-1.md) to see Speed of Light simulation in action!
 
 ### ⭐ The Good Stuff
 
@@ -1097,6 +1101,7 @@ graph TD
 |--------|------------------|
 | **[kernel/](./kernel/)** | ⚙️ Core protocols: Constitution, Memory, Context, Tool Calling, Self-Healing. The "OS" layer. |
 | **[PROTOCOLS.yml](./PROTOCOLS.yml)** | 📜 Master registry of all K-line symbols. The vocabulary of MOOLLM. |
+| <nobr>**[designs/MOOLLM-EVAL-INCARNATE-FRAMEWORK.md](./designs/MOOLLM-EVAL-INCARNATE-FRAMEWORK.md)**</nobr> | 📖 **The manifesto.** Intellectual genealogy, Axis of Eval, Incarnate Skills, proofs from simulation. |
 | **[designs/kilroy-ideas.md](./designs/kilroy-ideas.md)** | 🔗 How MOOLLM synergizes with Chuck Shotton's Kilroy data flow platform. |
 
 ### 🎪 More Skills
@@ -1106,9 +1111,9 @@ graph TD
 | <nobr>**[skills/memory‑palace/](./skills/memory-palace/)**</nobr> | 🏛️ Spatial knowledge organization. Rooms as cognitive spaces. |
 | <nobr>**[skills/sister‑script/](./skills/sister-script/)**</nobr> | 📝 Documents that grow into scripts. BUILD command. Automation. |
 | **[skills/adventure/](./skills/adventure/)** | 🗺️ Structured exploration. Goals, discoveries, choices. |
-| **[examples/](./examples/)** | 🎮 Three adventures: template (1), legendary playthrough (2), ready to play (3). |
+| **[examples/](./examples/)** | 🎮 Four adventures: seed (1), legendary playthrough (2), rich template (3), [Don's active run (4)](./examples/adventure-4/sessions/don-session-1.md). |
 
-> **TL;DR:** Read [skills/constructionism/](./skills/constructionism/) for philosophy, [skills/room/](./skills/room/) for the fun stuff, then **play** [adventure‑3/](./examples/adventure-3/) — or read [adventure‑2/](./examples/adventure-2/) to see a complete legendary playthrough!
+> **TL;DR:** Read the [Incarnate Framework manifesto](./designs/MOOLLM-EVAL-INCARNATE-FRAMEWORK.md) for the vision, [skills/room/](./skills/room/) for mechanics, then **play** [adventure‑3/](./examples/adventure-3/) — or read [Don's epic session log](./examples/adventure-4/sessions/don-session-1.md) to see it all in action!
 
 ---
 

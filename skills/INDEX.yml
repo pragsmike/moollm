@@ -12,6 +12,16 @@ skills:
     entry: "SKILL.md"
     tags: ["meta", "help", "foundational", "navigation"]
     use_when: "Confused, lost, asking 'what can I do?', wanting to understand MOOLLM"
+    
+  - name: "bootstrap"
+    path: "skills/bootstrap"
+    description: "Wake up, orient, and warm the context with foundational knowledge"
+    tier: 1
+    entry: "SKILL.md"
+    protocol: "BOOTSTRAP"
+    tags: ["meta", "orientation", "warmup", "foundational", "connections"]
+    use_when: "Session start, feeling lost, asking 'what am I?', warming up context"
+    related: ["moollm", "constructionism", "play-learn-lift", "speed-of-light"]
   
   - name: "skill"
     path: "skills/skill"
@@ -44,6 +54,26 @@ skills:
     entry: "SKILL.md"
     tags: ["meta", "robustness", "philosophy"]
     use_when: "Designing interfaces, handling varied input"
+    
+  - name: "empathic-expressions"
+    path: "skills/empathic-expressions"
+    description: "Intent-based code interpretation across all languages — SQL, Python, JS, YAML, Bash"
+    tier: 1
+    entry: "SKILL.md"
+    protocol: "EMPATHIC-EXPRESSIONS"
+    tags: ["meta", "code", "interpretation", "generation", "empathy"]
+    use_when: "Interpreting fuzzy code, generating from intent, code-switching"
+    related: ["empathic-templates", "postel", "speed-of-light", "yaml-jazz"]
+    
+  - name: "empathic-templates"
+    path: "skills/empathic-templates"
+    description: "Smart templates with semantic understanding — not just string substitution"
+    tier: 1
+    entry: "SKILL.md"
+    protocol: "EMPATHIC-TEMPLATES"
+    tags: ["meta", "templates", "instantiation", "generation", "empathy"]
+    use_when: "Creating instances from templates with intelligent content generation"
+    related: ["empathic-expressions", "skill", "yaml-jazz", "character", "room"]
     
   - name: "robust-first"
     path: "skills/robust-first"

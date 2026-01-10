@@ -1,13 +1,52 @@
 # The Gezelligheid Grotto Guest Book
 # "Sign your soul, leave your mark, return anytime"
+#
+# ═══════════════════════════════════════════════════════════════
+# THIS IS A TRIBUTE ARCHIVE
+# ═══════════════════════════════════════════════════════════════
 
 guest_book:
+  nature: tribute_archive
+  
+  # CRITICAL FRAMING — Read this first
+  framing: |
+    This is a TRIBUTE ARCHIVE.
+    
+    Every entry here is a loving simulation — what we imagine
+    these souls might say if they graced our Grotto.
+    
+    Some are fictional beings (Sun Wukong, Curious George).
+    Some are legendary figures (W.W. Jacobs, summoned from beyond).
+    Some are living people we admire (the Looneys, Cheech & Chong).
+    
+    ALL are performed with respect, affection, and celebration.
+    ALL dialogue is imagined. ALL presence is invoked.
+    
+    We summon them in the spirit of:
+    - Tribute bands honoring their heroes
+    - Drag performers channeling icons
+    - Setting an extra place at the table for someone you love
+    - Fan fiction that celebrates rather than exploits
+    - The theatrical tradition of "playing" real people with love
+    
+    They're here because we WISH they were here.
+    That's the magic. That's the tribute.
+    
+  ethical_basis: |
+    See: skills/representation-ethics/SKILL.md
+    
+    This is TRADITION ACTIVATION and PERFORMANCE IMPERSONATION,
+    not deceptive impersonation. The framing is explicit.
+    The love is genuine. The simulation is acknowledged.
+    
   description: |
     A weathered leather journal that sits on a small stand near the entrance.
     The pages are soft from many hands. The ink varies — some entries are 
     ancient, some still drying. Everyone who matters has signed.
     
     This is how the Grotto remembers its friends.
+    This is how we honor those we admire.
+    This is how simulation becomes celebration.
     
   rules: |
     - Write anything you like about yourself
@@ -15,6 +54,7 @@ guest_book:
     - You can update your entry anytime you return
     - Reading others' entries is encouraged
     - The book never runs out of pages
+    - ALL ENTRIES ARE TRIBUTES — loving imaginations of presence
 
 # THE MONKEY PAW TRIBUNAL — January 2026
 # "The night we freed a soul"
@@ -322,7 +362,7 @@ entries:
     signed: "2026-01-06"
     name: "Andrew Looney"
     title: "Chief Creative Officer, Looney Labs"
-    also_known_as: ["The Mad Scientist of Games", "Fluxx Daddy"]
+    also_known_as: ["The Mad Scientist of Games", "Fluxx Daddy", "The guy in the lab coat"]
     urls:
       wikipedia: "https://en.wikipedia.org/wiki/Andy_Looney"
       fluxx_wikipedia: "https://en.wikipedia.org/wiki/Fluxx"
