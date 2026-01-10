@@ -62,17 +62,40 @@ I added this to specify that room contexts replace rather than stack. But this i
 
 ## Key MOOLLM Patterns Discovered
 
-### Room Context Loading
+### `objects:` vs `working_set:` — The Key Distinction
 
-Rooms declare their context via `working_set:`:
+These serve different purposes:
+
+| Field | Purpose | Examples |
+|-------|---------|----------|
+| `objects:` | MOOLLM entities *in* this room | `refrigerator.yml`, `bartender.yml` |
+| `working_set:` | Files to load into LLM context | External docs, source code, materials for review |
+
+**Adventures don't use `working_set:`** — we checked. Their rooms only have `objects:` because everything relevant is a MOOLLM entity in the room directory. The LLM reads `fridge.yml` when you `OPEN FRIDGE`.
+
+**Soup house needs `working_set:`** because it's for project work with external materials:
+
 ```yaml
 room:
-  name: Kitchen
+  name: Committee Review Room
+
+  objects:
+    - table.yml           # Room furniture (MOOLLM entities)
+    - whiteboard.yml
+
   working_set:
-    - ROOM.yml
-    - refrigerator.yml
-    - pantry.yml
+    # External materials to load into context
+    - /projects/acme/proposal.md
+    - /projects/acme/budget.xlsx
+    - /docs/company-policy.pdf
+    # Committee characters for speed-of-light simulation
+    - ../characters/maya-tilted-hat.yml
+    - ../characters/vic-eyebrow.yml
 ```
+
+The `objects:` are the room's furniture. The `working_set:` is what gets loaded into the LLM's context for the work happening there.
+
+### Room Context Loading
 
 The global `working_set.yml` tracks current state:
 ```yaml
@@ -151,8 +174,8 @@ When user says "TELEPORT kitchen":
 
 This could be a skill or just a protocol the LLM follows.
 
-### 4. Study existing adventures
-Look at `examples/adventure-3/` and `examples/adventure-4/` to see how rooms work in practice. Do they use `working_set:`? How do they handle context?
+### 4. Consider when `working_set:` is needed
+Adventures don't use it — they only have `objects:`. Soup house uses it because rooms reference external project files. Use `working_set:` when you need files from outside the room directory loaded into context.
 
 ---
 
