@@ -1,0 +1,32 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# PHASE 1: ROSTER
+# ═══════════════════════════════════════════════════════════════════════════════
+
+roster:
+  committee_name: "Strategy Review"
+  size: 6
+  
+  members:
+    - name: "Maya 'Tilted Hat' Chen"
+      file: ../../characters/maya-tilted-hat.yml
+      role: devil's_advocate
+      
+    - name: "Frankie 'Kerouac' Rodriguez"
+      file: ../../characters/frankie-kerouac.yml
+      role: opportunity_scout
+      
+    - name: "Joe 'Gusher' Castellano"
+      file: ../../characters/joe-gusher.yml
+      role: historian
+      
+    - name: "Victor 'Vic Eyebrow' Okonkwo"
+      file: ../../characters/vic-eyebrow.yml
+      role: evidence_checker
+      
+    - name: "Tammy 'Silent' Park"
+      file: ../../characters/tammy-silent.yml
+      role: systems_analyst
+      
+    - name: "Samir 'Sam' Patel"
+      file: ../../characters/samir-patel.yml
+      role: operational_reality_check

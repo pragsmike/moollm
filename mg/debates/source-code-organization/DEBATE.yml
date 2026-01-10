@@ -1,0 +1,46 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# DEBATE: Source Code Organization Strategy
+# 
+# This file tracks the global state of the debate adventure.
+# ═══════════════════════════════════════════════════════════════════════════════
+
+debate:
+  name: "Source Code Organization Strategy"
+  topic: "How should we organize the source code to allow people to keep their worlds, adventures, etc. separate from the core skills and whatnot?"
+  
+  # ─────────────────────────────────────────────────────────────────────────────
+  # CURRENT PHASE
+  # ─────────────────────────────────────────────────────────────────────────────
+  # 0-chartering   : defining purpose (00-charter.yml)
+  # 1-convening    : selecting committee (01-convening.md)
+  # 2-deliberation : structured debate (02-deliberation.md)
+  # 3-voting       : resolution (03-voting.md, 03-resolution.yml)
+  
+  current_phase: 2-deliberation
+  
+  # ─────────────────────────────────────────────────────────────────────────────
+  # PARTICIPANTS
+  # ─────────────────────────────────────────────────────────────────────────────
+  participants:
+    - ../../characters/maya-tilted-hat.yml
+    - ../../characters/frankie-kerouac.yml
+    - ../../characters/joe-gusher.yml
+    - ../../characters/vic-eyebrow.yml
+    - ../../characters/tammy-silent.yml
+    - ../../characters/samir-patel.yml
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # STATE
+  # ─────────────────────────────────────────────────────────────────────────────
+  state:
+    convened_at: "2024-12-19"
+    protocol: roberts-rules
+    motions: []
+    
+  # ─────────────────────────────────────────────────────────────────────────────
+  # I/O STATUS
+  # ─────────────────────────────────────────────────────────────────────────────
+  io:
+    charter_status: complete       # 00-charter.yml exists
+    roster_status: complete        # 01-roster.yml exists
+    resolution_status: pending     # 03-resolution.yml missing

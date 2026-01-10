@@ -1,0 +1,22 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# PHASE 0: CHARTER
+# ═══════════════════════════════════════════════════════════════════════════════
+
+charter:
+  goal: "Define the strategy for source code organization to enable user creativity while preserving core stability."
+  
+  context: |
+    The current codebase mixes core skills and user content. We need a structure 
+    that allows users to keep their worlds/adventures separate from core skills, 
+    facilitating updates and sharing.
+    
+  success_criteria:
+    - Clear boundary definition between "Core" and "User"
+    - Mechanism for user content to exist independently
+    - Plan for handling dependencies between user content and core
+    
+  exit_conditions:
+    - A consensus decision on the directory structure
+    - A set of recommended changes to the repo layout
+    
+  deliverable_format: "Resolution Artifact (YAML)"

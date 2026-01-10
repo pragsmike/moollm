@@ -1,0 +1,24 @@
+room:
+  name: "Committee Room: Strategy Review"
+  description: |
+    A well-appointed committee room with a mahogany table, leather chairs, and
+    whiteboards covering one wall. The air is thick with the tension of 
+    conflicting worldviews.
+    
+  purpose: "Debate and decide on strategic direction"
+  
+  # Files to load into LLM context when entering the room
+  working_set:
+    - DEBATE.yml
+    - 00-charter.yml
+    - 01-roster.yml
+    - 02-deliberation.md
+    
+  exits:
+    parent: "../../"  # Back to mg/debates/
+    
+  objects:
+    - name: "Gavel"
+      description: "A heavy wooden gavel for maintaining Robert's Rules."
+    - name: "Whiteboard"
+      description: "Currently displays the topic: 'Source Code Org vs. User Worlds'"
