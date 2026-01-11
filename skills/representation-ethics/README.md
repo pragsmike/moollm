@@ -313,31 +313,6 @@ flowchart TD
 
 ---
 
-## Dovetails With
-
-```mermaid
-flowchart TD
-    RE[⚖️ representation-ethics]
-    
-    RE <--> HS[🦸 hero-story<br/>Safe person referencing]
-    RE <--> MM[🪞 mind-mirror<br/>Ethical personality modeling]
-    RE <--> INC[✨ incarnation<br/>Self-determined characters]
-    RE <--> ROOM[🚪 room<br/>Framing through space]
-    RE <--> ADV[🎲 adventure<br/>Ethical play happens here]
-    RE <--> CARD[🃏 card<br/>Representation mechanism]
-    
-    style RE fill:#ffeb3b,stroke:#f57f17,stroke-width:3px
-```
-
-| Skill | Connection |
-|-------|------------|
-| [hero-story/](../hero-story/) | K-lines instead of impersonation |
-| [mind-mirror/](../mind-mirror/) | Ethical personality modeling |
-| [incarnation/](../incarnation/) | Self-determined character creation |
-| [room/](../room/) | Framing through spatial context |
-| [adventure/](../adventure/) | Where ethical play happens |
-| [card/](../card/) | Cards as tradition activators |
-
 ---
 
 ## Quick Links

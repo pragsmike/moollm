@@ -2,6 +2,16 @@
 
 > *"Dogs are the opposite of cats. They have YOUR agenda."*
 
+## MOOLLM K-Lines
+
+| K-Line | Why Related |
+|--------|-------------|
+| [cat/](../cat/) | The comparison class |
+| [character/](../character/) | Dogs are characters |
+| [buff/](../buff/) | Dog effects as buffs |
+| [party/](../party/) | Dogs as companions |
+| [examples/adventure-4/pub/](../../examples/adventure-4/pub/) | Dog adopted by cat cave |
+
 **Full Spec:** [SKILL.md](SKILL.md)
 
 ## Overview
@@ -72,13 +82,6 @@ dog_perspective: "CATS! MY BEST FRIENDS! I LOVE THEM! WE ARE FAMILY!"
 ## Live Examples
 
 See the [Gezelligheid Grotto](../../examples/adventure-4/pub/README.md) for a dog adopted by the cat cave.
-
-## Related Skills
-
-- [cat/](../cat/) — The comparison class
-- [character/](../character/) — Dogs are characters
-- [buff/](../buff/) — Dog effects as buffs
-- [party/](../party/) — Dogs as companions
 
 ## Tools Required
 

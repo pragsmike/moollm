@@ -45,8 +45,3 @@ PLAY-LEARN-LIFT inverts it:
 - ✅ **Share while learning**, teaching accelerates mastery
 - ✅ **Mistakes are features**, not bugs
 
-## Related Skills
-
-- [constructionism](../constructionism/) — learning by building
-- [debugging](../debugging/) — debugging IS play
-- [adventure](../adventure/) — adventure IS play

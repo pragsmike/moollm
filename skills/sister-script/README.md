@@ -60,10 +60,3 @@ def main():
 
 - Document → Script: Proven procedures become automated
 - Script → Document: Automation insights improve docs
-
-## Related Skills
-
-- [sniffable-python](../sniffable-python/) — **the structure** sister scripts follow
-- [play-learn-lift](../play-learn-lift/) — sister-script IS LIFT
-- [adventure](../adventure/) — CLI sister scripts for world building
-- [yaml-jazz](../yaml-jazz/) — comments as semantic data

@@ -116,14 +116,6 @@ Efficient discovery without reading everything.
 
 ---
 
-## Related Skills
-
-- [prototype/](../prototype/) — Self-like inheritance
-- [play-learn-lift/](../play-learn-lift/) — how skills evolve
-- [empathic-templates/](../empathic-templates/) — smart instantiation
-- [speed-of-light/](../speed-of-light/) — multi-agent simulation
-- [card/](../card/) — skills as playable cards
-
 ---
 
 *"Start with jazz, end with standards. But never stop playing."*

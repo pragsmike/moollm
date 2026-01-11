@@ -1,6 +1,15 @@
 # 🌿 Budtender Skill
 
-Cannabis-specialized bartending — strains, terpenes, edibles, responsible service.
+> Cannabis-specialized bartending — strains, terpenes, edibles, responsible service.
+
+## MOOLLM K-Lines
+
+| K-Line | Why Related |
+|--------|-------------|
+| [bartender/](../bartender/) | Parent skill (inherits from) |
+| [character/](../character/) | Budtenders are characters |
+| [persona/](../persona/) | Personality layer |
+| [examples/adventure-4/pub/](../../examples/adventure-4/pub/) | Marieke in action |
 
 ## Inheritance
 
@@ -68,8 +77,3 @@ character:
   persona: marieke
 ```
 
-## Related Skills
-
-- [bartender](../bartender/) — Parent skill
-- [character](../character/) — Budtenders are characters
-- [persona](../persona/) — Personality layer

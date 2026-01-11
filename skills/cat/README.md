@@ -2,6 +2,16 @@
 
 > *"Cats are the original NPCs. They have their own agenda."*
 
+## MOOLLM K-Lines
+
+| K-Line | Why Related |
+|--------|-------------|
+| [character/](../character/) | Cats are characters |
+| [buff/](../buff/) | Cat effects as buffs |
+| [mind-mirror/](../mind-mirror/) | Personality determines charms |
+| [room/](../room/) | Cats belong to locations |
+| [examples/adventure-4/pub/](../../examples/adventure-4/pub/) | Gezelligheid Grotto with 10 cats |
+
 **Full Spec:** [SKILL.md](SKILL.md)
 
 ## Overview
@@ -56,13 +66,6 @@ SNIFF, LICK, and BOOP go both ways — you can do them to cats, cats can do them
 ## Live Examples
 
 See the [Gezelligheid Grotto](../../examples/adventure-4/pub/README.md) for 10 cats using this skill.
-
-## Related Skills
-
-- [character/](../character/) — Cats are characters
-- [buff/](../buff/) — Cat effects as buffs
-- [mind-mirror/](../mind-mirror/) — Personality determines charms
-- [room/](../room/) — Cats belong to locations
 
 ## Tools Required
 

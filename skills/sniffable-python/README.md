@@ -307,16 +307,6 @@ See the pattern in the wild:
 - [CARD.yml](./CARD.yml) — Machine-readable interface
 - [TEMPLATE.py.tmpl](./TEMPLATE.py.tmpl) — Starter template
 
-## Related Skills
-
-| Skill | The Connection |
-|-------|----------------|
-| [play-learn-lift/](../play-learn-lift/) | LIFT produces sniffable scripts |
-| [sister-script/](../sister-script/) | Sister scripts ARE sniffable Python |
-| [skill/](../skill/) | Skills generate sniffable tools |
-| [yaml-jazz/](../yaml-jazz/) | Comments carry meaning |
-| [adventure/](../adventure/) | The linter loop in action |
-
 ---
 
 *"The LLM doesn't need fewer tokens of unfamiliar syntax. It needs familiar syntax, structured for fast comprehension."*
