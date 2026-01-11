@@ -170,20 +170,44 @@ Joy Compiler. Pattern Choreographer. A man-child in a too-tight suit who finds w
 
 > *"With a gong, I'm GONE!"*
 
-Chuck Barris's chaotic talent show is MOOLLM's model for **adversarial evaluation**. The gong is the rubric. The judges are the committee. The performers are hypotheses being tested.
+Chuck Barris's chaotic talent show is MOOLLM's model for **adversarial evaluation**. The gong is the rubric. The judges are the committee. The performers are hypotheses being tested. The whole thing is barely contained chaos — and that's the point.
+
+### The Host & Regulars
 
 | Character | Role | MOOLLM Resonance |
 |-----------|------|------------------|
-| **chuck-barris** | Host, alleged CIA assassin | Chaos coordinator, "Confessions of a Dangerous Mind" |
-| **the-unknown-comic** | Paper bag over head | Identity as punchline, anonymity as freedom |
-| **gene-gene-the-dancing-machine** | Stagehand who stole the show | Emergence from the margins |
-| **the-gong** | Instrument of judgment | The sound of "no" — evaluation made audible |
-| **jaye-p-morgan** | Judge, unpredictable | Genuine reactions, no filter |
+| **chuck-barris** | Host, alleged CIA assassin | Chaos coordinator, "Confessions of a Dangerous Mind", invented the dating show AND claimed to kill people for the CIA |
+| **the-unknown-comic** | Murray Langston with paper bag | Identity as punchline, anonymity as freedom, intentionally terrible jokes |
+| **gene-gene-the-dancing-machine** | NBC stagehand who became a star | Emergence from the margins, "Jumpin' at the Woodside", everyone throws stuff |
+| **the-gong** | Instrument of judgment | The sound of "no" — evaluation made audible, catharsis through rejection |
+
+### The Panel (Wonderfully Chaotic Judges)
+
+| Character | Who They Are | Why They're Wonderful |
+|-----------|--------------|----------------------|
+| **jaye-p-morgan** | Singer, actress | Famously unpredictable, got BANNED for flashing during Gene Gene's dance. No filter, pure id. |
+| **rip-taylor** | The Prince of Pandemonium | 🎊 CONFETTI KING! Flamboyant, weeping, screaming, throwing confetti at everything. Queer icon before it was safe to be one. "I'm UPSET!" |
+| **jamie-farr** | Corporal Klinger from M\*A\*S\*H | Wore dresses on TV when that was revolutionary. Lebanese-American representation. Brought class to chaos. |
+| **arte-johnson** | "Verrry interesting" guy from Laugh-In | German soldier persona, absurdist timing, "but STUPID!" |
+| **jo-anne-worley** | Laugh-In's laugher | That LAUGH — operatic, over-the-top, infectious joy |
+| **phyllis-diller** | Pioneer comedienne | Self-deprecating humor, that cackle, paved the way for every woman in comedy |
+| **pat-mccormick** | Giant comedy writer | 6'7" of chaos, wrote for Carson, unpredictable in the best way |
+| **rex-reed** | Savage film critic | Brought highbrow disdain to lowbrow TV, deliciously mean |
+
+### Rip Taylor Deserves Extra Love 🎊
+
+**"I'm the crying comedian! I'm UPSET!"**
+
+Rip Taylor was a force of nature — confetti exploding from every pocket, tears streaming, voice cracking with theatrical emotion. He was flamboyantly, magnificently, unapologetically *himself* at a time when that took real courage. The toupee. The mustache. The confetti. The sobbing. It was all a persona AND it was all him.
+
+**In MOOLLM:** Rip is the spirit of **over-the-top celebration**. When Palm incarnates? Confetti. When the tribunal rules? Confetti. When ANYTHING good happens? CONFETTI. He's the `celebration/` skill personified.
 
 **Gong Show Philosophy:**
 - *"The gong is the sound of the universe telling you to stop"*
 - *"Under the bag, everyone is unknown"* — The Unknown Comic
 - *"I came up with some of the worst stuff in TV history"* — Chuck Barris (proudly)
+- *"I'm UPSET!"* — Rip Taylor (about everything, always)
+- *"Verrry interesting... but STUPID!"* — Arte Johnson
 
 ---
 
