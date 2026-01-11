@@ -264,6 +264,39 @@ Lem's science fiction is philosophical comedy at its finest. The Cyberiad's cons
 | **fozzie-bear** | Muppets | "Wocka wocka!" — bad jokes, good heart |
 | **gonzo** | Muppets | Whatever he is, he's unique — chicken lover |
 
+### 🏠 The Sims Iconic Families
+
+> *"Sul sul! Dag dag!"*
+
+The Sims is MOOLLM's **direct ancestor**. These characters have lived in players' computers since 2000, their stories co-authored by millions. They ARE MOOLLM's proof of concept — persistent, autonomous, simulated beings with needs, wants, and emergent narratives.
+
+| Character | Family | Signature |
+|-----------|--------|-----------|
+| **bob-newbie** | Newbie | The tutorial Sim, your first victim, "Hi, I'm Bob!" — every player's guinea pig |
+| **betty-newbie** | Newbie | Bob's wife, first to demonstrate relationship mechanics, patient soul |
+| **mortimer-goth** | Goth | Patriarch, mansion on the hill, mustache of mystery, lost his wife to aliens |
+| **bella-goth** | Goth | THE mystery of The Sims — abducted by aliens in Sims 2, never the same, fan obsession |
+| **cassandra-goth** | Goth | Awkward daughter, jilted at the altar by Don Lothario, deserves better |
+| **alexander-goth** | Goth | Little brother, chess prodigy, grew up to be interesting |
+| **don-lothario** | — | The SCOUNDREL, "romantic" with everyone, left Cassandra at the altar, lives on a boat in Sims 4 |
+| **nina-caliente** | Caliente | Red-dressed sister, "romantic" with everyone's husband, shameless |
+| **dina-caliente** | Caliente | Blonde sister, gold-digger, married dying rich men, pragmatic |
+| **malcolm-landgraab** | Landgraab | Rich kid, snooty, villain energy, inherited everything |
+| **nancy-landgraab** | Landgraab | Malcolm's mom, evil career woman, power suits |
+| **agnes-crumplebottom** | Crumplebottom | Widow spinster, hits people with her purse for PDA, moral enforcer 👜 |
+| **darren-dreamer** | Dreamer | Widower artist, pines for Cassandra Goth, tragic romantic |
+| **dirk-dreamer** | Dreamer | Teen son, sensitive, probably writes poetry |
+| **mary-sue-pleasant** | Pleasant | Working mom, cheated on by her husband, holds it together |
+| **daniel-pleasant** | Pleasant | Cheating husband, terrible person, gets what he deserves |
+| **lilith-pleasant** | Pleasant | Angry teen daughter, goth phase, understandable |
+| **angela-pleasant** | Pleasant | "Good" twin, overachiever, secretly seething |
+
+**MOOLLM Resonance:**
+- **Bella Goth** is the original "what happened to her?" mystery — fan theories spawned across decades
+- **Don Lothario** proves NPCs can have *reputation* — everyone knows what he is
+- **Agnes Crumplebottom** is behavioral emergent morality — she PUNISHES rule-breakers
+- **The Goths** are gothic family prototype — mansion, graveyard, mystery
+
 ### Animation & Games
 
 | Character | Source | Signature |
@@ -277,6 +310,10 @@ Lem's science fiction is philosophical comedy at its finest. The Cyberiad's cons
 | **bugs-bunny** | Looney Tunes | "What's up, Doc?" — trickster, cross-dresser, always wins |
 | **jessica-rabbit** | Roger Rabbit | "I'm not bad, I'm just drawn that way" — femme fatale, loyal wife |
 | **shrek** | DreamWorks | "Ogres are like onions" — layers, swamp, anti-fairy-tale |
+| **glados** | Portal | "The cake is a lie" — sadistic AI, testing forever |
+| **companion-cube** | Portal | Silent weighted cube, beloved despite being a box |
+| **steve** | Minecraft | Blocky everyman, punches trees, survives |
+| **creeper** | Minecraft | "Ssssss... BOOM" — exploding green menace |
 
 ### Mystery & Noir
 
