@@ -133,8 +133,10 @@ flowchart LR
     DND["🎲 D&D 1974"] --> CC["🏔️ Colossal Cave 1976"]
     CC --> MUD["🌐 MUD 1978"]
     MUD --> MOO["🐄 LambdaMOO 1990"]
-    MOO --> SIMS["🏠 The Sims 2000"]
-    SIMS --> MOOLLM["🌙 MOOLLM 2024"]
+    MOO --> MOOLLM["🌙 MOOLLM 2024"]
+    
+    SIMCITY["🏙️ SimCity 1989"] --> SIMS["🏠 The Sims 2000"]
+    SIMS --> MOOLLM
     
     SELF["🦎 Self 1987"] --> MOOLLM
     LOGO["🐢 Logo 1967"] --> MOOLLM
