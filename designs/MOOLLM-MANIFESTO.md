@@ -32,18 +32,18 @@ Directories are **[rooms](../skills/room/)** you enter and exit. Files are **obj
 
 ```mermaid
 flowchart LR
-    subgraph WORLD["🌍 THE FILESYSTEM IS THE WORLD"]
+    subgraph WORLD["🌍 FILESYSTEM = WORLD"]
         DIR[📁 Directories] --> ROOMS[🚪 Rooms]
         FILES[📄 Files] --> OBJECTS[🔮 Objects]
         YAML[📋 YAML] --> STATE[💾 State]
     end
     
-    subgraph LLM["🧠 THE LLM IS EVAL()"]
-        SKILLS[📚 Skills] --> PROGRAMS[⚡ Programs it runs]
-        NAMES[🏷️ Names] --> KLINES[🔗 Activation vectors]
+    subgraph LLM["🧠 LLM = EVAL"]
+        SKILLS[📚 Skills] --> PROGRAMS[⚡ Programs]
+        NAMES[🏷️ Names] --> KLINES[🔗 K-lines]
     end
     
-    WORLD --> INSPECTABLE[👁️ EVERYTHING IS INSPECTABLE]
+    WORLD --> INSPECTABLE[👁️ INSPECTABLE]
     LLM --> INSPECTABLE
     
     style INSPECTABLE fill:#4caf50,stroke:#2e7d32,stroke-width:3px
