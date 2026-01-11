@@ -11,16 +11,39 @@
 
 The document is the source of truth. Scripts are its children. This is the **LIFT stage** of [play-learn-lift](../play-learn-lift/).
 
+**Sister scripts follow [sniffable-python](../sniffable-python/) conventions** — structured so both humans and LLMs can understand them from the first 50 lines.
+
 ## The Pattern
 
 ```
-📄 Document → 💻 Commands → 📋 Procedure → 🤖 Sister Script
+📄 Document → 💻 Commands → 📋 Procedure → 🤖 Sister Script (Sniffable Python)
 ```
 
 1. Start with natural language (PLAY)
 2. Add manual commands (PLAY/LEARN)
 3. Document working procedures (LEARN)
-4. Generate automation (LIFT)
+4. Generate automation (LIFT) → **sniffable-python format**
+
+## Sniffable Structure
+
+Sister scripts should be structured so the LLM can sniff the header:
+
+```python
+#!/usr/bin/env python3
+"""tool-name: One-line description.
+
+Docstring becomes --help AND is visible to LLM.
+"""
+
+import argparse
+
+def main():
+    """CLI structure — sniff this to understand the tool."""
+    parser = argparse.ArgumentParser(description=__doc__.split('\n')[0])
+    # ... CLI tree here ...
+```
+
+**One sniff and you smell success.**
 
 ## Bidirectional Evolution
 
@@ -29,6 +52,7 @@ The document is the source of truth. Scripts are its children. This is the **LIF
 
 ## Related Skills
 
+- [sniffable-python](../sniffable-python/) — **the structure** sister scripts follow
 - [play-learn-lift](../play-learn-lift/) — sister-script IS LIFT
-- [adventure](../adventure/) — CLI sister scripts
-- [planning](../planning/) — procedures to automate
+- [adventure](../adventure/) — CLI sister scripts for world building
+- [yaml-jazz](../yaml-jazz/) — comments as semantic data
