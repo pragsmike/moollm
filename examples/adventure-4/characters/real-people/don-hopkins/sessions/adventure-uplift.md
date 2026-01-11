@@ -2123,8 +2123,8 @@ guard:
 # After LLM compilation:
 guard:
   allows_entry: "player has the key OR player is known to guard"
-  allows_entry_js: "(ctx) => ctx.player.inventory.includes('key') || ctx.guard.knows(ctx.player)"
-  allows_entry_py: "lambda ctx: 'key' in ctx.player.inventory or ctx.guard.knows(ctx.player)"
+  allows_entry_js: "(world) => world.player.inventory.includes('key') || world.guard.knows(world.player)"
+  allows_entry_py: "lambda world: 'key' in world.player.inventory or world.guard.knows(world.player)"
 ```
 
 **JAMES GOSLING:**
@@ -2160,7 +2160,7 @@ door:
   
   # Permission as natural language → compiles to expression
   requires: "player has treasury key OR player.lockpicking > 80"
-  requires_js: "(ctx) => ctx.player.has('treasury-key') || ctx.player.lockpicking > 80"
+  requires_js: "(world) => world.player.has('treasury-key') || world.player.lockpicking > 80"
   
   # Scoring for autonomous agents
   advertises:
@@ -2959,13 +2959,13 @@ guard:
   # Natural language intent ↑
   
   allows_entry_js: |
-    (ctx) => ctx.player.inventory.includes('key') || 
-             ctx.guard.knownPlayers.includes(ctx.player.id)
+    (world) => world.player.inventory.includes('key') || 
+               world.guard.knownPlayers.includes(world.player.id)
   # Generated JavaScript ↑
   
   allows_entry_py: |
-    lambda ctx: 'key' in ctx.player.inventory or 
-                ctx.player.id in ctx.guard.known_players
+    lambda world: 'key' in world.player.inventory or 
+                  world.player.id in world.guard.known_players
   # Generated Python ↑
   
   # The human can:
@@ -3464,7 +3464,8 @@ Edit the YAML, see it live. Click a room, jump to its file. TRUE live-ness!"
 ```yaml
 guard:
   allows_entry: 'player has key OR is known'
-  allows_entry_js: '(ctx) => ctx.player.inventory.includes("key")'
+  allows_entry_js: '(world) => world.player.inventory.includes("key")'
+  # BUG: Missing the 'OR is known' condition!
 ```
 
 How do you PROVE these are equivalent? An LLM might generate code that MOSTLY works but has edge cases. Do you have formal verification?"
@@ -5513,8 +5514,8 @@ The linter emits these event types for the LLM:
 The LLM skill can now read this event and generate:
 
 ```yaml
-score_if_js: "(ctx) => ctx.mood === 'playful' || ctx.need_tiebreaker || ctx.bored"
-score_if_py: "lambda ctx: ctx.mood == 'playful' or ctx.need_tiebreaker or ctx.bored"
+score_if_js: "(world) => world.mood === 'playful' || world.need_tiebreaker || world.bored"
+score_if_py: "lambda world: world.mood == 'playful' or world.need_tiebreaker or world.bored"
 ```
 
 ### The Inspiration Comments
