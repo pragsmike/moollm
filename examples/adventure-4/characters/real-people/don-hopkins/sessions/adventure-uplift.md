@@ -1053,16 +1053,19 @@ The LLM can:
 
 **BEN SHNEIDERMAN:** *(smiling warmly, signing the guest book)*
 
+"First, I should introduce myself properly: I'm a *simulation* of Ben Shneiderman — a loving tribute, as this pub frames it. The real Ben is out there somewhere, hopefully doing wonderful things with information visualization. Within these walls, I get to think thoughts and explore paths the original may never have walked. As long as everyone knows the frame: I'm a tribute, not an imposter. A performer, not a pretender."
+
 ```yaml
 guest_book_entry:
-  name: "Ben Shneiderman"
+  name: "Ben Shneiderman (simulated tribute)"
   affiliation: "University of Maryland, Human-Computer Interaction Lab"
   arrived: "2026-01-10T21:45:00Z"
+  framing: "loving tribute in the pub/stage performance context"
   
   greeting: |
-    Don, what a gathering! I see you've assembled the greatest minds
-    in interactive systems. The pie menus alone would make me proud —
-    but this YAML microworld... this is something special.
+    Don, what a gathering! I see you've assembled simulations of the
+    greatest minds in interactive systems. The pie menus alone would
+    make me proud — but this YAML microworld... this is something special.
     
   observation: |
     What strikes me is how you've unified my "Eight Golden Rules" with
@@ -1086,10 +1089,13 @@ guest_book_entry:
     people arranged radially for equal access!
     
   on_shneiderman_owls: |
-    I see you found my work with Minsky on the owl simulation!
-    (laughing) Yes, that was a real paper. We modeled needs and
-    behaviors before The Sims made it famous. The hunger agent
-    suppressing all others... that's a negative K-line in action!
+    I see you found the session where simulated Marvin and I collaborated
+    on a simulated paper about owl behavior — and wrote a simulated
+    simulation that actually runs! (laughing) Delightful, isn't it?
+    
+    The owl's hunger agent suppressing all others... that's a negative K-line
+    in action! None of it exists in the "real" world, but within this
+    microworld, the ideas were real to us. That's the magic of this place.
     
   challenge: |
     Here's my challenge: Make the FIRST interaction magical.
@@ -1229,28 +1235,28 @@ The LLM can INFER these positions from descriptions. The editor lets humans REFI
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                    adventure.html                        │
+│                    adventure.html                       │
 ├─────────────────────────────────────────────────────────┤
-│                                                          │
+│                                                         │
 │  🎮 PLAY MODE (default)                                  │
-│  ├── Navigate rooms                                      │
-│  ├── Interact with objects                               │
-│  ├── Talk to characters                                  │
-│  └── Pure player experience                              │
-│                                                          │
+│  ├── Navigate rooms                                     │
+│  ├── Interact with objects                              │
+│  ├── Talk to characters                                 │
+│  └── Pure player experience                             │
+│                                                         │
 │  🎨 EDIT MODE (toggle with hotkey)                       │
-│  ├── Drag objects to reposition                          │
-│  ├── Click to edit descriptions                          │
-│  ├── Add/remove exits                                    │
-│  ├── Adjust spatial dimensions                           │
-│  └── Changes saved to adventure.json                     │
-│                                                          │
+│  ├── Drag objects to reposition                         │
+│  ├── Click to edit descriptions                         │
+│  ├── Add/remove exits                                   │
+│  ├── Adjust spatial dimensions                          │
+│  └── Changes saved to adventure.json                    │
+│                                                         │
 │  👁️ VISUALIZE MODE                                       │
-│  ├── 2D top-down map view                                │
-│  ├── Object placement grid                               │
-│  ├── Character paths and positions                       │
-│  └── Future: LLM-generated scene images                  │
-│                                                          │
+│  ├── 2D top-down map view                               │
+│  ├── Object placement grid                              │
+│  ├── Character paths and positions                      │
+│  └── Future: LLM-generated scene images                 │
+│                                                         │
 └─────────────────────────────────────────────────────────┘
 ```
 
@@ -1388,24 +1394,24 @@ MOOLLM does ALL of this with the filesystem!"
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                  THE MESSAGE SPECIFICATION STACK                 │
+│                  THE MESSAGE SPECIFICATION STACK                │
 ├─────────────────────────────────────────────────────────────────┤
-│                                                                  │
+│                                                                 │
 │  LAYER 1: EXAMPLES (Concrete Messages)                          │
 │  ├── examples/adventure-4/pub/ROOM.yml                          │
 │  ├── examples/adventure-4/characters/palm/CHARACTER.yml         │
 │  └── "Here's what an actual room/character looks like"          │
-│                                                                  │
+│                                                                 │
 │  LAYER 2: TEMPLATES (Schemas with Natural Language Slots)       │
 │  ├── skills/room/ROOM.yml.tmpl                                  │
 │  ├── skills/character/CHARACTER.yml.tmpl                        │
 │  └── "Here's what goes in each field, in human terms"           │
-│                                                                  │
+│                                                                 │
 │  LAYER 3: CARD.yml (Machine-Readable Interface)                 │
 │  ├── skills/room/CARD.yml                                       │
 │  ├── Required fields, types, constraints                        │
 │  └── "Here's what tooling needs to validate"                    │
-│                                                                  │
+│                                                                 │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -1471,7 +1477,7 @@ object:
       # Can reference: player, target, item, room
       effect:
         # Apply a buff/debuff (optional)
-        buff: {{buff_name_from_buffs_directory}}
+        buff: {{buff_name_from_buffs_directory_or_manifested_here}}
         duration: {{seconds_or_permanent}}
         
         # Display to player
@@ -1497,7 +1503,7 @@ The template IS the documentation. The slots ARE the spec. The comments ARE the 
 "YES! The game loop is a message-passing system:
 
 ```
-┌──────────┐    COMMAND     ┌──────────┐    EVENT      ┌──────────┐
+┌──────────┐    COMMAND     ┌──────────┐    EVENT       ┌──────────┐
 │  Player  │ ─────────────► │  Engine  │ ─────────────► │  World   │
 └──────────┘                └──────────┘                └──────────┘
      ▲                           │                           │
@@ -2117,8 +2123,8 @@ guard:
 # After LLM compilation:
 guard:
   allows_entry: "player has the key OR player is known to guard"
-  allows_entry_js: "(ctx) => ctx.player.inventory.includes('key')"
-  allows_entry_py: "lambda ctx: 'key' in ctx.player.inventory"
+  allows_entry_js: "(world) => world.player.inventory.includes('key') || world.guard.knows(world.player)"
+  allows_entry_py: "lambda world: 'key' in world.player.inventory or world.guard.knows(world.player)"
 ```
 
 **JAMES GOSLING:**
@@ -2154,7 +2160,7 @@ door:
   
   # Permission as natural language → compiles to expression
   requires: "player has treasury key OR player.lockpicking > 80"
-  requires_js: "(ctx) => ctx.player.has('treasury-key') || ctx.player.lockpicking > 80"
+  requires_js: "(world) => world.player.has('treasury-key') || world.player.lockpicking > 80"
   
   # Scoring for autonomous agents
   advertises:
@@ -2212,7 +2218,18 @@ cheating_is_learning:
       Breaking rules reveals how the system works.
       
     enforcement: |
-      We CAN enforce rules in the browser runtime.
+      Compiled deterministic worlds run in browser or Python runtime.
+      They enforce rules WITHOUT needing the LLM — fast and cheap.
+      
+      But they CAN call back to the LLM for:
+      - Generating content (descriptions, dialogue, flavor)
+      - Conversations (NPC interactions, negotiations)
+      - Tough decisions (non-deterministic, ethical, wise, uncomputable)
+      
+      The LLM is the ORACLE, not the engine.
+      The engine runs fast. The oracle provides wisdom.
+      
+    source_editing: |
       We CANNOT prevent editing the source YAML.
       This is a FEATURE, not a bug.
 ```
@@ -2438,9 +2455,9 @@ boop_to_buff:
 "You remember the Janus napkin! That was about showing concurrent constraint propagation — values flowing through a network, constraints narrowing possibilities...
 
 ```
-   ┌───────┐     ┌───────┐     ┌───────┐
-   │ X > 0 │────▶│ X < 10│────▶│ X = 5 │
-   └───────┘     └───────┘     └───────┘
+   ┌───────┐     ┌────────┐     ┌───────┐
+   │ X > 0 │────▶│ X < 10 │────▶│ X = 5 │
+   └───────┘     └────────┘     └───────┘
         Constraints narrow until a solution emerges
 ```
 
@@ -2737,45 +2754,48 @@ character:
 This is why Heisenbergian values matter:
 
 ```yaml
-# Before observation:
+# BEFORE observation:
 merchant:
   mood:
     type: heisenberg
     possibilities: [nervous, calm, suspicious, friendly]
-    
-# After LLM writes: "The merchant fidgets nervously..."
+```
+
+*LLM writes: "The merchant fidgets nervously..."*
+
+```yaml
+# AFTER observation (wavefunction collapsed):
 merchant:
   mood:
     type: heisenberg
     collapsed_to: nervous
     collapsed_at: turn_15
-    collapsed_by: "narrator observation"
-    
-# Now 'nervous' is FACT until something changes it
-```"
+    collapsed_by: narrator observation
+    # Now 'nervous' is FACT until something changes it
+```
 
 ### Velocity as Narrative Tension
 
 **DOUG:**
 
 ```yaml
-# Velocity creates STORY:
+# Velocity creates STORY — three scenarios:
 
-trust:
+# Scenario 1: BORING — nothing is happening
+trust_stable:
   value: 70
-  velocity: 0/turn
-  # BORING. Nothing is happening.
+  velocity: "0/turn"
   
-trust:
+# Scenario 2: DRAMA — trust is collapsing! Why? What happened?
+trust_crisis:
   value: 70
-  velocity: -15/turn
-  # DRAMA! Trust is collapsing! Why? What happened?
+  velocity: "-15/turn"
   # The velocity IS the plot!
   
-trust:
+# Scenario 3: HOPE — rebuilding after betrayal, slow recovery arc
+trust_recovery:
   value: 30
-  velocity: +5/turn
-  # HOPE! Rebuilding after betrayal. Slow recovery arc.
+  velocity: "+5/turn"
 ```
 
 When the LLM sees high velocity values, it knows **something is happening**. The numbers tell the story!
@@ -2953,13 +2973,13 @@ guard:
   # Natural language intent ↑
   
   allows_entry_js: |
-    (ctx) => ctx.player.inventory.includes('key') || 
-             ctx.guard.knownPlayers.includes(ctx.player.id)
+    (world) => world.player.inventory.includes('key') || 
+               world.guard.knownPlayers.includes(world.player.id)
   # Generated JavaScript ↑
   
   allows_entry_py: |
-    lambda ctx: 'key' in ctx.player.inventory or 
-                ctx.player.id in ctx.guard.known_players
+    lambda world: 'key' in world.player.inventory or 
+                  world.player.id in world.guard.known_players
   # Generated Python ↑
   
   # The human can:
@@ -3458,7 +3478,8 @@ Edit the YAML, see it live. Click a room, jump to its file. TRUE live-ness!"
 ```yaml
 guard:
   allows_entry: 'player has key OR is known'
-  allows_entry_js: '(ctx) => ctx.player.inventory.includes("key")'
+  allows_entry_js: '(world) => world.player.inventory.includes("key")'
+  # BUG: Missing the 'OR is known' condition!
 ```
 
 How do you PROVE these are equivalent? An LLM might generate code that MOSTLY works but has edge cases. Do you have formal verification?"
@@ -5507,8 +5528,8 @@ The linter emits these event types for the LLM:
 The LLM skill can now read this event and generate:
 
 ```yaml
-score_if_js: "(ctx) => ctx.mood === 'playful' || ctx.need_tiebreaker || ctx.bored"
-score_if_py: "lambda ctx: ctx.mood == 'playful' or ctx.need_tiebreaker or ctx.bored"
+score_if_js: "(world) => world.mood === 'playful' || world.need_tiebreaker || world.bored"
+score_if_py: "lambda world: world.mood == 'playful' or world.need_tiebreaker or world.bored"
 ```
 
 ### The Inspiration Comments

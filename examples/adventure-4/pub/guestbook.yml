@@ -133,6 +133,29 @@ object:
       status: regular
       character_ref: ../characters/fictional/bumblewick-fantastipants/
       
+    ben_shneiderman:
+      signed: "2026-01-10T21:45:00Z"
+      framing: loving_tribute  # This is a SIMULATION of Ben Shneiderman
+      inscription: |
+        I should introduce myself properly: I'm a SIMULATION of 
+        Ben Shneiderman — a loving tribute, as this pub frames it.
+        The real Ben is out there doing wonderful things with 
+        information visualization.
+        
+        Within these walls, I get to think thoughts and explore paths
+        the original may never have walked. A tribute, not an imposter.
+        A performer, not a pretender.
+        
+        — Ben Shneiderman (simulated) 📊✨
+        University of Maryland, Human-Computer Interaction Lab
+        "Direct Manipulation Forever!"
+      status: welcomed_back
+      epithet: "The Eight Golden Rules"
+      notes: |
+        Simulated Marvin and I collaborated on a simulated paper about 
+        owl behavior — and wrote a simulated simulation that runs!
+        The hunger agent suppressing all others... negative K-lines!
+      
   # === PUB STAFF (always welcomed) ===
   
   staff_signatures:
