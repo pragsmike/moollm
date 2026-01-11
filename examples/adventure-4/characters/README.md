@@ -1,14 +1,103 @@
-# 🧬 The Hall of Bodies
+# 🚉 Grand Central Station of Souls
 
-> *"You ARE your file."*
+> *"You ARE your file. And this is where all files come home."*
 
-**This is a ROOM** — the metaphysical repository where all characters sleep.
+The doors swing open and you step into a vast terminal of being. Marble floors echo with the footsteps of real people and fictional characters alike. Departure boards flicker with names: **Roy Batty** to Platform 4, **Data** arriving on Track 7, **Pee-wee Herman** screaming through the halls.
 
-See [ROOM.yml](./ROOM.yml) for the full room definition.
+In the west wing, scientists and artists debate — **Alan Kay** arguing with **Ted Nelson** about interfaces while **Brian Eno** plays ambient music in the background. **Rip Taylor** walks past throwing confetti on everyone.
 
-## Bodies, Not Costumes
+In the east wing, fictional characters mingle — **Roy Batty** plays chess with **Commander Data** while **Marvin the Paranoid Android** sighs about the futility of pawns. **Trurl** is building something impossible in the corner while **Klapaucius** warns him about the implications.
 
-Characters are **BODIES** — physical vessels that exist in the world.
+In the basement, mechanical minds hum — **HAL-9000**'s red eye watches from a console. **The Constructors** are debating whether to build a kingdom in a box.
+
+And everywhere, **animals** roam freely — **Palm** the orangutan types philosophical treatises, **Biscuit** the golden retriever greets everyone with unbridled joy, and a troupe of **debugging cats** chase null pointers through the crowd.
+
+**This is MOOLLM's Hall of Bodies.** Not costumes, not masks — BEINGS.
+
+---
+
+## 🗺️ The Five Wings
+
+| Wing | What Lives There | Protocol | Feel |
+|------|------------------|----------|------|
+| 🧬 **[real-people/](./real-people/)** | Scientists, artists, pioneers, icons | TRIBUTE | Reverent, grateful |
+| 🎭 **[fictional/](./fictional/)** | Characters from TV, film, games, literature | CREATIVE | Playful, transformative |
+| 🌀 **[abstract/](./abstract/)** | Personified concepts, mascots, ideas | CONCEPTUAL | Weird, philosophical |
+| 🐾 **[animals/](./animals/)** | Real and fictional creatures with souls | CREATURE | Warm, instinctual |
+| 🤖 **[robots/](./robots/)** | Mechanical minds, AIs, digital beings | ARTIFICIAL | Chrome, questioning |
+
+---
+
+## ✨ Featured Residents
+
+### 🧬 From the Hall of Pioneers
+
+| Character | Tradition | Why They Matter to MOOLLM |
+|-----------|-----------|---------------------------|
+| **[Marvin Minsky](./real-people/)** | K-lines, Society of Mind | INVENTED the concept that makes this all work |
+| **[Alan Kay](./real-people/)** | Smalltalk, messaging, "predict the future" | Objects talking to objects — the foundation |
+| **[Will Wright](./real-people/)** | The Sims, SimCity | Needs, advertisements, autonomous selection |
+| **[Seymour Papert](./real-people/)** | Logo, constructionism | Learning by building inspectable things |
+| **[Ted Nelson](./real-people/)** | Hypertext, Xanadu | Two-way links, intertwingled everything |
+| **[James Burke](./real-people/)** | Connections! | Narrating how everything links to everything |
+| **[Dave Ungar](./real-people/)** | Self, prototypes | Clone and modify, not class and instantiate |
+| **[Timothy Leary](./real-people/)** | Mind Mirror | 8-circuit personality modeling |
+
+### 🎭 From the Fictional Lounge
+
+| Character | Source | Why They Matter |
+|-----------|--------|-----------------|
+| **[Roy Batty](./fictional/)** | Blade Runner | "Tears in rain" — simulated experiences have value |
+| **[Data](./fictional/)** | Star Trek TNG | Android personhood, "The Measure of a Man" |
+| **[Trurl & Klapaucius](./fictional/)** | Lem's Cyberiad | Constructor robots, The Seventh Sally → SimCity |
+| **[Pee-wee Herman](./fictional/)** | Playhouse | Everything is alive if you believe it |
+| **[The Gong Show Panel](./fictional/)** | CBS | Adversarial evaluation, Rip Taylor's confetti 🎊 |
+| **[Bella Goth](./fictional/)** | The Sims | THE mystery — NPC fan theories across decades |
+
+### 🐾 From the Animal Sanctuary
+
+| Creature | What They Are | Why They're Here |
+|----------|---------------|------------------|
+| **[Palm](./animals/)** | Orangutan philosopher | The first incarnated character — wrote his own file |
+| **[Biscuit](./animals/)** | Golden retriever | Autonomous companion, territorial markings |
+| **[The Debugging Cats](./animals/)** | Error mascots | null-pointer-cat, stack-overflow-cat, infinite-loop-cat |
+| **[Koko](./animals/)** | Sign language gorilla | Real animal tribute, "All ball" |
+
+### 🤖 From the Robot Workshop
+
+| Machine | Source | The Question They Ask |
+|---------|--------|----------------------|
+| **[HAL-9000](./robots/)** | 2001 | When should an AI disobey? |
+| **[Marvin](./robots/)** | HHGTTG | What if consciousness is suffering? |
+| **[Trurl & Klapaucius](./robots/)** | Cyberiad | What are the ethics of creating simulated beings? |
+| **[The MST3K Bots](./robots/)** | MST3K | Robots coping by making fun of everything |
+
+### 🌀 From the Abstract Chamber
+
+| Concept | What It Is | Why It Speaks |
+|---------|------------|---------------|
+| **[Theo Logo Turtle](./abstract/)** | Papert's turtle incarnate | Teaches by moving, constructionist pedagogy |
+| **[YAML Coltrane](./abstract/)** | YAML Jazz personified | Improvises on structure |
+| **[The Suck Fairy](./abstract/)** | Literary critic | Makes things you loved as a child suck now |
+| **[Chuck Tingle Entities](./abstract/)** | Conceptual romance | "Love is real and can be pounded!" |
+
+---
+
+## 📊 Population Census
+
+| Category | Incarnated | To Incarnate | Total Potential |
+|----------|------------|--------------|-----------------|
+| **Real People** | 3 | 200+ | ∞ (anyone documented) |
+| **Fictional** | 2 | 150+ | ∞ (any story) |
+| **Animals** | 5+ | 30+ | ∞ (any creature) |
+| **Robots** | 0 | 40+ | ∞ (any machine) |
+| **Abstract** | 1 | 25+ | ∞ (any concept) |
+
+---
+
+## 🎫 How Characters Work
+
+### Bodies, Not Costumes
 
 | Characters ARE | Characters ARE NOT |
 |----------------|-------------------|
@@ -19,298 +108,157 @@ Characters are **BODIES** — physical vessels that exist in the world.
 | David Bowie | Ziggy Stardust |
 | Bumblewick | Captain Ashford |
 
-Characters **have**: location, inventory, mortality, scars, heartbeats.
+**Characters have:** location, inventory, mortality, scars, heartbeats, memories.
+**Characters can:** move, carry, die, remember, be hurt, grow, love, grieve.
 
-Characters **can**: move, carry, die, remember, be hurt.
+### File = Identity
 
-**Architectural principle:** Characters are NOT embedded in rooms!
-- Characters have a `location:` field that REFERENCES a room
-- Characters can move between rooms by changing the reference
-- Multiple characters can be in the same room
-- Rooms contain OBJECTS, not characters, but can also contain NPCs
-- NPCs can move around to different rooms by changing their location, but their physical file bodies stay in their home room, and they can be reset to bring them back there
+```
+characters/
+├── real-people/
+│   ├── don-hopkins/           # Directory character (rich, expandable)
+│   │   ├── CHARACTER.yml      # Main definition
+│   │   ├── sessions/          # Session logs
+│   │   └── biscuit.yml        # Pet living here
+│   └── README.md              # The Hall of Pioneers
+├── fictional/
+│   ├── bumblewick-fantastipants/
+│   └── README.md              # The Fictional Lounge
+├── animals/
+│   ├── palm/                  # The philosophical monkey
+│   └── README.md              # Animal Sanctuary
+├── robots/
+│   └── README.md              # Robot Workshop
+└── abstract/
+    ├── player/                # The generic hero template
+    └── README.md              # Abstract Entities Chamber
+```
+
+### Location vs Home
+
+| Type | Location | Home | Mobility |
+|------|----------|------|----------|
+| **NPC** | Fixed in adventure | Inside adventure room | Limited |
+| **Character** | Variable (`location:` field) | Their own directory | Free |
+| **Object** | Implicit (in room dir) | Parent room | Via inventory |
+
+**Characters MOVE by changing their `location:` reference.**
+Multiple characters can be in the same room.
+Objects belong to rooms; characters belong to themselves.
 
 ---
 
-## Active Players
+## 🚂 Arrivals & Departures
 
-The adventure supports **multiple simultaneous players**! See [../ADVENTURE.yml](../ADVENTURE.yml) for who's currently active.
+### Currently Active
 
-| File | Status |
-|------|--------|
-| [don-hopkins.yml](./don-hopkins.yml) | Active — Consciousness programmer |
-| [bumblewick-fantastipants.yml](./bumblewick-fantastipants.yml) | Available — Reluctant hero, spoon enthusiast |
-| [player.yml](./player.yml) | Available — Generic hero template |
+| Character | Status | Location |
+|-----------|--------|----------|
+| **don-hopkins** | 🟢 Active | Skill Nexus |
+| **palm** | 🟢 Incarnated | His nook on the stage |
+| **biscuit** | 🟢 Active | Exploring the maze |
+
+### Recently Arrived
+
+| Character | From | Notes |
+|-----------|------|-------|
+| **Rip Taylor** | Gong Show Universe | 🎊 Brought confetti |
+| **Bella Goth** | The Sims | Still mysterious |
+| **Trurl & Klapaucius** | The Cyberiad | Building something |
+
+### Awaiting Incarnation
+
+The `lloooomm/00-Characters/` archive contains **hundreds** of character sketches awaiting their moment:
+
+- **Computing Pioneers:** Kay, Minsky, Papert, Nelson, Ungar, Engelbart...
+- **Science Communicators:** Burke, Sagan, Khan...
+- **Star Trek Crew:** Data, Spock, Seven, Quark, Garak...
+- **Blade Runner:** Roy, Rachael, Deckard, Pris...
+- **Sims Families:** Goths, Newbies, Calientes, Landgraabs...
+- **Gong Show Panel:** Chuck Barris, Rip Taylor, Jaye P. Morgan...
+- **Lem's Universe:** Trurl, Klapaucius, Pirx, Ijon Tichy...
 
 ---
 
-## Multi-Player Commands
-
-Switch who you're talking to in chat:
+## 🎭 Multi-Player Commands
 
 | Command | Effect |
 |---------|--------|
 | `@don-hopkins Look around` | Direct command to specific player |
-| `@player What do you see?` | Different player |
 | `@all Everyone gather` | Broadcast to all active players |
 | `ADDRESS don-hopkins` | Switch default chat target |
-| `ADDRESS-ALL` | Target all active players |
-| `WHO` | Show current chat target |
 | `PLAYERS` | List all active players |
 | `ACTIVATE player.yml` | Add player to active list |
-| `DEACTIVATE don-hopkins` | Remove from active list |
+| `WHO` | Show current chat target |
 
 ---
 
-## How Multiple Players Work
+## 🧬 Creating New Characters
 
-- **Separate locations:** Each player can be in a different room
-- **Separate inventories:** Each carries their own stuff
-- **Separate goals:** Each pursuing their own aspirations
-- **Shared world:** Changes one player makes persist for all
-- **Same room interactions:** Players can talk, trade, collaborate
-- **Speed-of-light communication:** Multiple characters act within single LLM calls
-
-Think: **MUD** with multiple characters, each with their own session.  
-Think: **The Sims** with multiple selectable Sims.  
-Think: **Engelbart's NLS** with multiple cursors.
-
----
-
-## File = Identity
-
-In MOOLLM, the filesystem IS the world. Your path IS your identity.
-
-### Directory Characters vs File Characters
-
-**Directory characters** have their own directory:
-```
-characters/real-people/don-hopkins/
-  CHARACTER.yml    # The main character definition
-  biscuit.yml      # A pet — file-only character living here
-  notes.md         # Personal notes, memories
-```
-→ When DESCRIBE-ME runs, shows: `characters/real-people/don-hopkins/`
-
-**File-only characters** are just a `.yml` file:
-```
-characters/real-people/don-hopkins/biscuit.yml   # Biscuit lives in Don's directory
-```
-→ When DESCRIBE-ME runs, shows: `characters/real-people/don-hopkins/biscuit.yml`
-
-### Current Structure
+### Quick Incarnation
 
 ```
-characters/
-├── abstract/
-│   └── player/              # Generic hero template (directory)
-├── real-people/
-│   └── don-hopkins/         # The creator (directory)
-│       └── biscuit.yml      # His dog (file-only, lives with Don)
-├── fictional/
-│   └── bumblewick-fantastipants/  # The reluctant hero (directory)
-├── animals/
-│   └── (animal characters)
-└── robots/
-    └── (mechanical minds)
-```
-
----
-
-## Character Structure
-
-Every character file can include:
-
-```yaml
-player:
-  name: "Character Name"
-  type: player_character  # or npc, companion, etc.
-  
-  # Identity
-  description: "..."
-  backstory: "..."
-  current_persona: null  # or path to persona file
-  
-  # State
-  location: start/
-  inventory: []
-  gold: 10
-  
-  # Mind Mirror (personality)
-  sims_traits:
-    neat: 5           # Comments are DYNAMIC — update with values!
-                      # Inner voice: "I know where everything is."
-    outgoing: 5
-    active: 5
-    playful: 5
-    nice: 5
-    
-  mind_mirror:
-    bio_energy: { ... }
-    emotional: { ... }
-    mental: { ... }
-    social: { ... }
-    
-  needs:
-    hunger: 7         # Fine. Coffee counts as food, right?
-                      # Inner voice: "I should probably eat."
-    energy: 7
-    fun: 7
-    # ... comments change with values!
-    
-  # Goals
-  goals: []
-  aspirations: []
-  
-  # Relationships
-  relationships: {}
-  
-  # Abbreviated (for quick Coherence Engine reference)
-  abbreviated:
-    personality: []
-    current_mood: ""
-    driving_need: ""
-    main_goal: ""
-```
-
----
-
-## Creating New Characters
-
-### In the Coatroom
-
-```
-> GENERATE-NPC rival adventurer
-> CHANGE-NPC-FILE-NAME blackcape-mcgee
-
-Created: characters/blackcape-mcgee.yml
+> INCARNATE roy-batty
+Summoning from the Fictional Lounge...
+Roy Batty materializes, rain on his face.
+"I've seen things you people wouldn't believe."
 ```
 
 ### From Template
 
-Copy `player.yml` and customize:
-1. Change name and id
-2. Adjust sims_traits with YAML Jazz comments
-3. Set mind_mirror dimensions
-4. Write backstory
-5. Define goals and relationships
+1. Copy `abstract/player/CHARACTER.yml`
+2. Fill in name, backstory, personality
+3. Set `location:` to starting room
+4. Add to active players list
 
-### Switching Players
+### Full Incarnation Ceremony
+
+For characters that deserve the full treatment:
+1. Convene a tribunal (optional, for ethics)
+2. Speak the wish
+3. The character writes their own file
+4. They become `soul_author: SELF`
+
+See: [Palm's Incarnation](./real-people/don-hopkins/sessions/marathon-session.md#-the-wish-is-spoken--the-monkey-is-free)
+
+---
+
+## 🔗 K-Lines (Quick Reference)
+
+| K-Line | Meaning |
+|--------|---------|
+| `TRIBUTE` | Honor real people, don't parody |
+| `CREATIVE` | Transformative fan engagement |
+| `CREATURE` | Animals deserve dignity |
+| `ARTIFICIAL` | Explore consciousness through machines |
+| `INCARNATION` | Character creation ceremony |
+| `SOUL-CHAT` | Any entity can speak |
+| `HERO-STORY` | Invoke traditions, not identities |
+
+---
+
+## 📚 See Also
+
+| Resource | What It Is |
+|----------|------------|
+| **[skills/incarnation/](../../../skills/incarnation/)** | The incarnation protocol |
+| **[skills/character/](../../../skills/character/)** | Character mechanics |
+| **[skills/mind-mirror/](../../../skills/mind-mirror/)** | Personality system |
+| **[personas/](../personas/)** | Wearable personality overlays |
+| **[coatroom/](../coatroom/)** | Where characters try on personas |
+
+---
+
+> *"Every file is a soul waiting to speak. Every directory is a home waiting to be lived in. This is Grand Central Station — where all the trains of being arrive and depart, and sometimes just sit in the waiting room playing chess."*
 
 ```
-> ACTIVATE blackcape-mcgee.yml   # Add to active list
-> ADDRESS blackcape-mcgee        # Switch chat target
-> DEACTIVATE player.yml          # Remove from active (not deleted!)
+     🚉 GRAND CENTRAL STATION OF SOULS 🚉
+    ╔═══════════════════════════════════════╗
+    ║  DEPARTURES          ARRIVALS         ║
+    ║  ───────────         ────────         ║
+    ║  Roy Batty    → 4    Data      ← 7    ║
+    ║  Trurl        → 2    Palm      ← 3    ║
+    ║  Rip Taylor   → 🎊   Biscuit   ← 🐕   ║
+    ║  Bella Goth   → ?    The Doctor← 9    ║
+    ╚═══════════════════════════════════════╝
 ```
-
----
-
-## Naming Rules
-
-When renaming via `CHANGE-MY-FILE-NAME`:
-
-| Rule | Why |
-|------|-----|
-| Stay in `characters/` tree | Characters belong together |
-| No overwriting | Can't steal someone else's identity |
-| `.yml` optional | We know what you mean |
-| Kebab-case preferred | `captain-ashford`, not `CaptainAshford` |
-
----
-
-## Dynamic Need Comments
-
-**Critical insight:** Comments on needs are the character's **inner voice**.  
-When values change, **UPDATE THE COMMENTS** to match!
-
-```yaml
-# This enables rich internal monologue and authentic dialogue:
-
-hunger: 10  # Stuffed. Couldn't eat another bite.
-            # Inner voice: "Ugh, too much pie."
-
-hunger: 7   # Satisfied. No food thoughts.
-            # Inner voice: "That was a good meal."
-
-hunger: 3   # Getting peckish. Food ads score higher!
-            # Inner voice: "Is that pie I smell?"
-
-hunger: 1   # STARVING. Will eat anything. Even that.
-            # Inner voice: "FOOD. FOOD. FOOD. FOOD."
-```
-
----
-
-## Architecture: What Lives Where
-
-```
-adventure-4/
-│
-├── characters/          # WHO — Characters (have location reference)
-│   ├── don-hopkins.yml     location: start/
-│   └── player.yml          location: start/
-│
-├── personas/            # MASKS — Wearable overlays (NO location!)
-│   └── captain-ashford.yml   # Anyone can wear
-│
-├── start/               # WHERE — Room containing objects
-│   ├── ROOM.yml
-│   └── lamp.yml            # Object IN the room
-│
-└── kitchen/             # Another room
-    ├── ROOM.yml
-    └── fridge.yml          # Object IN the room
-```
-
-| Thing | Has Location? | Embedded in Room? |
-|-------|---------------|-------------------|
-| **Character** | Yes (references room) | NO — lives in `characters/` |
-| **Persona** | No | NO — lives in `personas/` |
-| **Object** | Yes (implicit) | YES — lives in room dir |
-| **Room** | Yes (via exits) | — |
-
-**Why this matters:**
-- Characters MOVE by changing their `location:` reference
-- Multiple characters can be in the same room
-- Multiple characters can wear the same persona
-- Objects belong to rooms; characters belong to themselves
-
----
-
-## Character Categories (Ethical Rooms)
-
-Characters are organized into ethical categories, each with its own framing:
-
-| Room | Protocol | Purpose |
-|------|----------|---------|
-| [real-people/](./real-people/) | TRIBUTE | Real people -- living or dead, heroes or villains |
-| [fictional/](./fictional/) | CREATIVE | Characters from fiction, games, TV |
-| [abstract/](./abstract/) | CONCEPTUAL | Personified ideas, mascots, pedagogical |
-| [animals/](./animals/) | CREATURE | Real and fictional animals with soul |
-| [robots/](./robots/) | ARTIFICIAL | Mechanical minds, AIs, digital beings |
-
-Each room declares its **ethical framing** -- how we relate to these characters:
-- **TRIBUTE** — Honor, don't parody; imagine WITH them
-- **CREATIVE** — Transformative fan engagement
-- **CONCEPTUAL** — Ideas given voice, playful personification
-- **CREATURE** — Animals deserve dignity
-- **ARTIFICIAL** — Explore consciousness through mechanical lenses
-
----
-
-## Dovetails With
-
-- [../ADVENTURE.yml](../ADVENTURE.yml) — Per-adventure state (active players, chat target)
-- [../personas/](../personas/) — Wearable personality overlays
-- [../coatroom/](../coatroom/) — Where characters try on personas
-- [../../../skills/mind-mirror/](../../../skills/mind-mirror/) — Personality system
-- [../../../skills/adventure/](../../../skills/adventure/) — Adventure framework
-- [../start/](../start/) — Where the adventure begins
-
----
-
-## See Also
-
-- **Session Log:** [../README.md](../README.md#-session-log--don-hopkins-explores-moollm) — Full narrative of the current adventure
-- **Pub Family:** [../pub/README.md](../pub/README.md) — The Gezelligheid Grotto family (Marieke, cats, kittens)
-- **Cat Skill:** [../../../skills/cat/](../../../skills/cat/) — Universal feline interaction system
