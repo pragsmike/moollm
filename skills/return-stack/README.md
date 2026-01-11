@@ -8,8 +8,11 @@
 |--------|-------------|
 | [room/](../room/) | Rooms are stack frames |
 | [adventure/](../adventure/) | Navigation through rooms |
+| [character/](../character/) | Characters carry return stacks |
+| [memory-palace/](../memory-palace/) | Navigate knowledge |
 | [action-queue/](../action-queue/) | Past ↔ Future |
 | [card/](../card/) | Cards as continuations |
+| [session-log/](../session-log/) | Log navigation history |
 
 **Quick Links:**
 - [Full Specification](SKILL.md) — complete protocol

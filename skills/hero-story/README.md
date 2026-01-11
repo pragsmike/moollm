@@ -4,14 +4,16 @@
 
 ## MOOLLM K-Lines
 
-| K-Line | Meaning |
-|--------|---------|
-| [representation-ethics](../representation-ethics/) | Simulate with dignity |
-| [incarnation](../incarnation/) | Characters with self-determination |
-| [k-lines](../k-lines/) | Names activate traditions (Minsky) |
-| [many-voiced](../adversarial-committee/) | Panel discussions, not puppets |
-| [rooms-navigation](../room/) | Familiars inhabit spaces |
-| [skills-as-prototypes](../skill/) | Hero cards as instances |
+| K-Line | Why Related |
+|--------|-------------|
+| [representation-ethics/](../representation-ethics/) | Simulate with dignity |
+| [incarnation/](../incarnation/) | Characters with self-determination |
+| [k-lines/](../k-lines/) | Names activate traditions (Minsky) |
+| [card/](../card/) | Hero cards as familiars |
+| [visualizer/](../visualizer/) | Heroes as art styles |
+| [adversarial-committee/](../adversarial-committee/) | Panel discussions, not puppets |
+| [room/](../room/) | Familiars inhabit spaces |
+| [skill/](../skill/) | Hero cards as instances |
 
 ---
 

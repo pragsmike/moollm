@@ -7,9 +7,12 @@
 | K-Line | Why Related |
 |--------|-------------|
 | [card/](../card/) | What gets multi-instantiated |
+| [character/](../character/) | Characters in multiple places |
 | [room/](../room/) | Where activations live |
+| [prototype/](../prototype/) | Clone and override pattern |
 | [coherence-engine/](../coherence-engine/) | Orchestrates all instances |
 | [speed-of-light/](../speed-of-light/) | Parallel in one call |
+| [data-flow/](../data-flow/) | Parallel pipelines |
 
 **Quick Links:**
 - [Full Specification](SKILL.md) — complete actor model docs

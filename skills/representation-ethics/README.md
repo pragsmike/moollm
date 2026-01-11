@@ -4,16 +4,19 @@
 
 ## MOOLLM K-Lines
 
-| K-Line | Meaning |
-|--------|---------|
-| [hero-story](../hero-story/) | Invoke traditions, not identities |
-| [incarnation](../incarnation/) | Characters write their own souls |
-| [mind-mirror](../mind-mirror/) | Transparent personality measurement |
-| [rooms-navigation](../room/) | Framing transforms ethics |
-| [files-as-state](../plain-text/) | Consent declarations persist |
-| [yaml-jazz](../yaml-jazz/) | Ethics in comments |
-| [adventure](../adventure/) | The pub as ethical space |
-| [needs](../needs/) | Sims tradition of character agency |
+| K-Line | Why Related |
+|--------|-------------|
+| [hero-story/](../hero-story/) | Invoke traditions, not identities |
+| [incarnation/](../incarnation/) | Characters write their own souls |
+| [mind-mirror/](../mind-mirror/) | Transparent personality measurement |
+| [character/](../character/) | Ethics for character simulation |
+| [persona/](../persona/) | Identity layers |
+| [room/](../room/) | Framing transforms ethics |
+| [plain-text/](../plain-text/) | Consent declarations persist |
+| [yaml-jazz/](../yaml-jazz/) | Ethics in comments |
+| [adventure/](../adventure/) | The pub as ethical space |
+| [needs/](../needs/) | Sims tradition of character agency |
+| [kernel/constitution-core.md](../../kernel/constitution-core.md) | Governing principles |
 
 ---
 
