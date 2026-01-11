@@ -512,7 +512,7 @@
 > Code should be SNIFFABLE. LLMs should understand at a glance. A new skill is born. 🐍
 
 **`dd33426`** Expand sniffable-python to show deep connections
-> Steve Jobs wanted lickable buttons. We want sniffable code. The parallel draws. 🍎
+> Steve Jobs wanted lickable pixels. We want sniffable code. The parallel draws. 🍎
 
 **`96adf5c`** Rewrite sniffable-python README in James Burke 'Connections' style
 > And THAT brings us to the present. Burke's voice enters the documentation. 🎬
