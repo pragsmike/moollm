@@ -1,11 +1,28 @@
 # CHANGES: The Complete History of MOOLLM
 
 > *A James Burke-style journey through every commit, tweet by tweet.*
-> *Append-only. No summaries. Just history flowing forward.*
+> *Append-only. No conclusions. Just history flowing forward.*
+
+## How to Append
 
 **Format:** Each commit gets `**\`hash\`** title` followed by `> James Burke tweet`
 
-**To append:** Add new commits at the bottom. Use the established style. No conclusions.
+**Before editing:**
+1. Run `git log --oneline -20` to see recent commits
+2. Find where this file left off (last documented hash)
+3. Add entries for commits SINCE then
+
+**The (this) pattern:**
+- Use `(this)` as placeholder for the current commit you're about to make
+- After commit, the NEXT session retrocons it when they append
+- **DO NOT** loop making commits just to fill in commit hashes!
+- One undocumented commit at the end is FINE. Stop there.
+
+**Era headers:** OK to add `## Era N: Title` sections to group commits thematically
+
+**NO:** conclusions, summaries at end, "more entries go here", or chasing your own tail
+
+**The file just ENDS after the last entry. Ready for next append.**
 
 ---
 
