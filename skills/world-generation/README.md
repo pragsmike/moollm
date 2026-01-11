@@ -8,8 +8,12 @@
 |--------|-------------|
 | [room/](../room/) | Generated rooms follow room patterns |
 | [character/](../character/) | Generated NPCs follow character patterns |
+| [incarnation/](../incarnation/) | NPCs can become full characters |
+| [container/](../container/) | Containers organize generated regions |
 | [adventure/](../adventure/) | World generation serves the adventure |
+| [party/](../party/) | Questions about companions create them |
 | [constructionism/](../constructionism/) | Exploration creates understanding |
+| [empathic-templates/](../empathic-templates/) | Smart generation of content |
 
 **Quick Links:**
 - [Full Specification](SKILL.md) — complete protocol

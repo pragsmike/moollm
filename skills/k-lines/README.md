@@ -6,13 +6,16 @@
 
 | K-Line | Why Related |
 |--------|-------------|
+| [moollm/](../moollm/) | Master K-Lines index — the mothership |
+| [skill/](../skill/) | Skills ARE K-line factories |
+| [bootstrap/](../bootstrap/) | All K-lines activated on boot |
 | [yaml-jazz/](../yaml-jazz/) | Comments carry meaning — semantic YAML interpretation |
+| [markdown/](../markdown/) | Tables ARE K-line indexes |
 | [postel/](../postel/) | Liberal input, conservative output — charitable interpretation |
 | [play-learn-lift/](../play-learn-lift/) | Explore → Pattern → Share — the methodology |
 | [sniffable-python/](../sniffable-python/) | Structure for LLM comprehension |
-| [files-as-state/](../plain-text/) | Everything persists — the foundation |
-| [moollm/](../moollm/) | Master K-Lines index — the mothership |
-| [skill/](../skill/) | Skills ARE K-line factories |
+| [plain-text/](../plain-text/) | Everything persists — the foundation |
+| [PROTOCOLS.yml](../../PROTOCOLS.yml) | Full symbol index |
 
 **Quick Links:**
 - [Full Specification](SKILL.md) — complete protocol

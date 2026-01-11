@@ -6,10 +6,13 @@
 
 | K-Line | Why Related |
 |--------|-------------|
+| [character/](../character/) | Characters need visuals |
 | [mind-mirror/](../mind-mirror/) | Personality informs visuals |
 | [card/](../card/) | Images can be cards |
 | [room/](../room/) | Room context affects visualization |
+| [image-mining/](../image-mining/) | Extract resources from images |
 | [yaml-jazz/](../yaml-jazz/) | Metadata IS the meaning |
+| [hero-story/](../hero-story/) | Historical figures as art styles |
 
 **Quick Links:**
 - [Full Specification](SKILL.md) — complete protocol
