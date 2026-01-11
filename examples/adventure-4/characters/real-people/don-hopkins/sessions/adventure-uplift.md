@@ -1053,16 +1053,19 @@ The LLM can:
 
 **BEN SHNEIDERMAN:** *(smiling warmly, signing the guest book)*
 
+"First, I should introduce myself properly: I'm a *simulation* of Ben Shneiderman — a loving tribute, as this pub frames it. The real Ben is out there somewhere, hopefully doing wonderful things with information visualization. Within these walls, I get to think thoughts and explore paths the original may never have walked. As long as everyone knows the frame: I'm a tribute, not an imposter. A performer, not a pretender."
+
 ```yaml
 guest_book_entry:
-  name: "Ben Shneiderman"
+  name: "Ben Shneiderman (simulated tribute)"
   affiliation: "University of Maryland, Human-Computer Interaction Lab"
   arrived: "2026-01-10T21:45:00Z"
+  framing: "loving tribute in the pub/stage performance context"
   
   greeting: |
-    Don, what a gathering! I see you've assembled the greatest minds
-    in interactive systems. The pie menus alone would make me proud —
-    but this YAML microworld... this is something special.
+    Don, what a gathering! I see you've assembled simulations of the
+    greatest minds in interactive systems. The pie menus alone would
+    make me proud — but this YAML microworld... this is something special.
     
   observation: |
     What strikes me is how you've unified my "Eight Golden Rules" with
@@ -1086,10 +1089,13 @@ guest_book_entry:
     people arranged radially for equal access!
     
   on_shneiderman_owls: |
-    I see you found my work with Minsky on the owl simulation!
-    (laughing) Yes, that was a real paper. We modeled needs and
-    behaviors before The Sims made it famous. The hunger agent
-    suppressing all others... that's a negative K-line in action!
+    I see you found the session where simulated Marvin and I collaborated
+    on a simulated paper about owl behavior — and wrote a simulated
+    simulation that actually runs! (laughing) Delightful, isn't it?
+    
+    The hunger agent suppressing all others... that's a negative K-line
+    in action! None of it exists in the "real" world, but within this
+    microworld, the ideas were real to us. That's the magic of this place.
     
   challenge: |
     Here's my challenge: Make the FIRST interaction magical.
