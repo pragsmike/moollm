@@ -17,13 +17,13 @@
 hot:
   
   # Last updated
-  updated: "2026-01-09T00:00:00Z"  # ISO 8601
+  updated: "2026-01-10T15:18:23-05:00"  # ISO 8601
   
   # Who updated this? (LLM, orchestrator, human)
-  updated_by: "bootstrap skill"
+  updated_by: "Antigravity BOOTSTRAP"
   
   # Why was it updated?
-  reason: "Session bootstrap — warming context with foundational files"
+  reason: "Session bootstrap requested by user — warming context"
 
   # PRIORITY TIERS
   # Files are loaded in tier order until budget exhausted

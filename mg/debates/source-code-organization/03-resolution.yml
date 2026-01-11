@@ -1,0 +1,49 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# PHASE 3: RESOLUTION
+# ═══════════════════════════════════════════════════════════════════════════════
+
+resolution:
+  date: "2026-01-10"
+  topic: "Source Code Organization Strategy"
+  outcome: "PASSED (Unanimous)"
+  
+  decision: "Adopt the Federalist Directory Model"
+  
+  summary: |
+    The committee resolves to restructure the codebase into two distinct domains: 
+    'kernel' (immutable system) and 'worlds' (mutable user space). 
+    
+    Extension will be handled via 'Shadowing', where local world skills override 
+    kernel skills, subject to safety constraints defined by a 'Locked List' of 
+    critical protocols.
+
+  details:
+    structure:
+      kernel: "System domain. Contains standard library, drivers, and immutable protocols."
+      worlds: "User domain. Contains independent adventures, rooms, and narratives."
+      
+    mechanics:
+      shadowing: "Skills defined in `worlds/{world}/skills/` take precedence over `kernel/skills/`."
+      locked_list: "Critical protocols (e.g., Auth, Billing) marked `final` cannot be shadowed."
+
+  implementation_plan:
+    - action: "Establish Directory Structure"
+      description: "Rename/Migrate core assets to `kernel/` and ensure `worlds/` exists."
+      
+    - action: "Update Loader Logic"
+      description: "Modify the Bootstrap/Loader to check `worlds/{current}/skills/{name}` before `kernel/skills/{name}`."
+      
+    - action: "Enforce Safety"
+      description: "Implement the 'Locked List' check in the loader to reject unauthorized shadows."
+      
+  votes:
+    maya_chen: "YES (Conditional on Locked List enforcement)"
+    frankie_rodriguez: "YES (Enthusiastic)"
+    joe_castellano: "YES (With naming change to 'kernel')"
+    samir_patel: "YES (Ops approval)"
+    tammy_park: "YES"
+    victor_okonkwo: "YES"
+
+  signatures:
+    chair: "Antigravity Agent"
+    ratified_by: "User"

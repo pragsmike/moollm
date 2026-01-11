@@ -99,4 +99,130 @@ Okay, but what happens at 2 a.m. when someone's world breaks in production and w
 *   **Evidence Gap (Vic):** Do we actually know what users are doing right now?
 
 **Status:** DELIBERATING
-**Next:** Deep dive into "The Lazy Path" — what directory structure makes extension easier than modification?
+**Next:** Round 3: Closing Statements & Consensus
+
+---
+
+## Round 2: The Lazy Path
+
+**Chair:** "Tammy, you proposed a 'Lazy Path' where doing the right thing (extension) is easier than the wrong thing (forking/breaking core). Can you make that concrete? What does the directory structure actually look like on disk?"
+
+### Tammy 'Silent' Park — Systems Thinker
+
+"It looks like 'Scope Precedence.' We stop thinking of 'Core' vs 'User' as a binary and start thinking of them as layers. The 'Laziest' thing a user can do is create a new directory.
+
+"Propsoed Structure:
+```
+moollm/
+  k-lines/          # (Formerly 'skills' or 'core') - READ ONLY reference
+    standard/
+      memory.yml
+      bootstrap.yml
+  
+  worlds/           # User space - READ/WRITE
+    my-adventure/
+      ROOM.yml
+      
+      # The Lazy Extension Pattern:
+      # If I want to change how memory works, I don't edit core. 
+      # I just drop a file here.
+      k-lines/      
+        memory.yml  # <--- Shadows core/memory.yml for THIS world only
+```
+
+"Why is this lazy? Because `cp` is easier than `git fork`. If they want to change behavior, they just copy the skill to their folder and edit it. The system automatically prioritizes the local version. They don't break the global system, only their own room."
+
+### Samir 'Sam' Patel — Operational Realist
+
+"I see the appeal, but you've just moved the 'hidden dependency' problem. Now, when I'm debugging `my-adventure`, I have to check: is the bug in `core/memory` or `local/memory`? If they shadow `core/memory`, they miss security updates to the real memory skill. It's the same outdated-fork problem, just localized.
+
+"However... it *does* solve the 'blast radius' problem. If their local memory skill is broken, it only crashes their world, not the whole server. I can live with that *if* the system logs clearly: `WARNING: 'my-adventure' is running a shadowed version of 'memory'`."
+
+### Maya 'Tilted Hat' Chen — Paranoid Realist
+
+"Wait. If local shadows global... what stops a malicious world from shadowing the `login` or `auth` protocol? A user enters 'The Nice Park,' thinks they're using the standard secure login, but actually they're talking to `worlds/nice-park/k-lines/login.yml` which steals their credentials. The 'Lazy Path' sounds like a 'Lazy Hack' for attackers. Who controls the precedence list?"
+
+### Frankie 'Kerouac' Rodriguez — Idealist
+
+"Maya, you're ruining the jam session! But... okay, valid point. But look at the flip side: this structure means I can build a world where the laws of physics (the protocols) are effectively different, without asking permission. I can make a 'No-Memory World' just by creating an empty `memory.yml`. That's powerful. 
+
+"Maybe the fix for Maya's fear is visual? If I'm in a room with shadowed protocols, the UI should look different. 'You are entering a Non-Standard Reality.' Like a HTTPS warning, but cooler."
+
+### Joe 'Gusher' Castellano — Continuity Guardian
+
+"Standard library code (Core) must be distinct from User code. That's good. But I'm worried about the name `k-lines`. We call them `skills` now. Changing the name to `k-lines` in the directory structure confuses old contributors. Let's stick to `skills/` for the concept, but maybe `core/skills` vs `local/skills`?
+
+"Also, we need a way to 'eject.' If my local skill becomes really good, how do I promote it to core? The structure should show the path: `local/` -> `staging/` -> `core/`."
+
+---
+
+## Round 2 Analysis
+
+**Emerging Consensus:**
+*   **Shadowing Pattern:** Everyone seems to accept the "local shadows global" pattern *if* it is scoped strict to the world (solving Samir's blast radius concern).
+*   **Security Risk:** Maya is right; shadowing critical auth/system protocols is dangerous. We need a "Protected Mode" or "Final" keyword for some core skills.
+*   **Terminology:** Joe prefers sticking to recognized names (`skills` over `k-lines`) for continuity.
+
+**Draft Proposal for Resolution:**
+1.  **Root Split:** `moollm/core` (System) vs `moollm/worlds` (User).
+2.  **Precedence:** `worlds/.../skills` overrides `core/skills`.
+3.  **Safety:** A whitelist of "locked" protocols (like `security`, `payments`) that cannot be shadowed.
+
+**Status:** VOTING
+**Next:** Phase 3: Resolution Artifact Generation
+
+---
+
+## Round 3: Closing Statements & Consensus
+
+**Chair:** "We have a draft proposal: Segregate `core` and `worlds`. Allow `worlds` to shadow skills for 'Lazy Extension.' Enforce a 'Locked List' for safety. Let's do a final whip-around to refine the naming and confirm consensus."
+
+### Frankie 'Kerouac' Rodriguez — Idealist
+
+"I'm on board. This structure feels like a city. We have the public infrastructure (Core) that works for everyone, but inside my house (World), I can paint the walls whatever color I want. If I want to replace gravity with neon lights in my living room, I can. That's the creative autonomy I wanted. I accept the 'Locked List' as building codes—you can't remove the fire exits."
+
+### Maya 'Tilted Hat' Chen — Paranoid Realist
+
+"I'm cautiously optimistic. Calling it 'Shadowing' makes the risk explicit. As long as the `security`, `auth`, and `billing` protocols are on that Locked List—and the `bootstrap` probe verifies they haven't been touched—I can sign off. But I want the directory names to be honest. Don't call it `core` if it's actually a `kernel` that controls everything."
+
+### Joe 'Gusher' Castellano — Continuity Guardian
+
+"I agree with Maya on the naming. `Core` implies a center, but `Kernel` implies the operating system—the part you don't touch unless you're a driver. Let's use `kernel/` for the immutable stuff and `worlds/` for the user stuff. And let's keep `skills/` as the standard folder name. 
+
+"So:
+- `kernel/skills/` (Global)
+- `worlds/my-world/skills/` (Local Shadow)
+"
+
+### Samir 'Sam' Patel — Operational Realist
+
+"From an Ops perspective, this is a win. I can put `kernel/` on a read-only mount for production containers, and mount `worlds/` as a separate volume. If a world gets corrupted, I wipe the volume, the kernel stays safe. The separation of concerns is clean. I'm a 'Yes'."
+
+### Tammy 'Silent' Park — Systems Thinker
+
+"The metaphor holds. 'Kernel is the Constitution; Worlds are the States.' States have local laws (local skills) but cannot override the Constitution (Locked Protocols). This structure balances the feedback loops: users can experiment locally, and if a local skill proves stable and useful, we have a clear path to 'federalize' it into the Kernel. It encourages evolution."
+
+### Victor 'Vic Eyebrow' Okonkwo — Evidence Prosecutor
+
+"I'll suspend my disbelief until I see the implementation plan in the Resolution. But logically, this structure addresses the failure modes we identified. It provides the isolation I asked for. I consent to move to voting."
+
+---
+
+## Final Consensus
+
+The committee has reached alignment on the **"Federalist Directory Model"**:
+
+1.  **Directory Split:**
+    *   `kernel/` (System): Contains standard library, drivers, and immutable protocols.
+    *   `worlds/` (User): Contains independent adventures, rooms, and narratives.
+
+2.  **Extension Mechanism (Shadowing):**
+    *   Worlds can define a local `skills/` directory.
+    *   Local skills *override* Kernel skills of the same name within that world scope.
+
+3.  **Safety Protocol (The Locked List):**
+    *   Critical protocols (Auth, Billing, Kernel Integrity) are marked `final`.
+    *   The System prohibits shadowing these protocols; attempts to do so raise a boot error.
+
+**Status:** DELIBERATION COMPLETE
+**Next:** Moving to **Phase 3: Resolution**. The Chair will now draft `03-resolution.yml` for ratification.
