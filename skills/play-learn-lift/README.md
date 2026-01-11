@@ -2,6 +2,25 @@
 
 > Start Playing. Keep Learning. Lift Others.
 
+## MOOLLM K-Lines
+
+| Category | K-Lines |
+|----------|---------|
+| **Methodology** | [sister-scripts](../sister-script/) (LIFT output) · [sniffable-code](../sniffable-python/) |
+| **Philosophy** | [constructionism](../constructionism/) · [many-voiced](../adversarial-committee/) |
+| **Architecture** | [skills-as-prototypes](../skill/) · [files-as-state](../plain-text/) |
+| **Traditions** | [adventure-lineage](../adventure/) (play IS adventure) |
+
+**Play-Learn-Lift K-Lines:**
+
+| K-Line | Meaning |
+|--------|---------|
+| `play` | Jump in! No prerequisites, curiosity drives |
+| `learn` | Patterns emerge. "I noticed..." |
+| `lift` | Help others play. Teaching solidifies mastery |
+| `invert-learning` | Do first, study emerges. Share while learning |
+| `mistakes-are-features` | Errors are data, not failure |
+
 **Quick Links:**
 - [Full Specification](SKILL.md) — complete methodology
 - [Template: CYCLE.yml](CYCLE.yml.tmpl) — cycle tracking

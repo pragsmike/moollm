@@ -2,24 +2,22 @@
 
 > *"Invoke their tradition, not their identity. K-lines, not cosplay."*
 
----
+## MOOLLM K-Lines
 
-## MOOLLM Keywords
+| Category | K-Lines |
+|----------|---------|
+| **Ethics** | [representation-ethics](../representation-ethics/) · [incarnation](../incarnation/) |
+| **Philosophy** | [k-lines](../protocol/) (Minsky) · [many-voiced](../adversarial-committee/) |
+| **Architecture** | [rooms-navigation](../room/) · [skills-as-prototypes](../skill/) |
 
-| Category | This Skill's Keywords |
-|----------|----------------------|
-| **Ethics** | `k-lines-not-impersonation` `tradition-activation` `familiars` |
-| **Philosophy** | `k-lines` (Minsky) `many-voiced` (perspectives, not puppets) |
-| **Architecture** | `rooms-navigation` (familiars inhabit spaces) `skills-as-prototypes` (cards as instances) |
+**Hero-Story K-Lines:**
 
-**Ethics Keywords:**
-
-| Keyword | Meaning |
-|---------|---------|
-| `k-lines-not-impersonation` | Names activate conceptual clusters, not personas |
+| K-Line | Meaning |
+|--------|---------|
+| `k-lines-not-impersonation` | Names activate conceptual clusters via [protocol](../protocol/), not personas |
 | `tradition-activation` | "The Einstein tradition..." not "I am Einstein" |
 | `familiars` | Fictional mascots that embody real traditions |
-| `panel-discussion` | Ethical way to simulate debates (thought experiments) |
+| `panel-discussion` | Ethical [many-voiced](../adversarial-committee/) debates |
 | `tribute-not-puppeting` | Honor, don't control |
 
 ---

@@ -2,25 +2,23 @@
 
 > *"The ship has sailed. Everyone can simulate everyone. The question isn't whether — it's how."*
 
----
+## MOOLLM K-Lines
 
-## MOOLLM Keywords
+| Category | K-Lines |
+|----------|---------|
+| **Ethics** | [hero-story](../hero-story/) · [incarnation](../incarnation/) · [mind-mirror](../mind-mirror/) |
+| **Architecture** | [rooms-navigation](../room/) (framing) · [files-as-state](../plain-text/) · [yaml-jazz](../yaml-jazz/) |
+| **Traditions** | [sims-tradition](../needs/) · [adventure-lineage](../adventure/) |
 
-| Category | This Skill's Keywords |
-|----------|----------------------|
-| **Ethics** | `representation-ethics` `consent-hierarchy` `k-lines-not-impersonation` `tribute-protocol` |
-| **Architecture** | `rooms-navigation` (framing) `files-as-state` (consent in files) `yaml-jazz` (ethical comments) |
-| **Traditions** | `sims-tradition` (torturing sims) `adventure-lineage` (pub as ethical space) |
+**Ethics K-Lines:**
 
-**Ethics Keywords:**
-
-| Keyword | Meaning |
-|---------|---------|
+| K-Line | Meaning |
+|--------|---------|
 | `consent-hierarchy` | Five levels: self-sovereign, published, public figures, private, deceased |
-| `k-lines-not-impersonation` | Invoke traditions, not identities |
+| `k-lines-not-impersonation` | Invoke traditions via [hero-story](../hero-story/), not identities |
 | `tribute-protocol` | Invocation → Performance → Acknowledgment |
 | `elvis-impersonator-model` | Declared performance is ethical |
-| `framing-transforms-ethics` | Room context changes what's acceptable |
+| `framing-transforms-ethics` | [Room](../room/) context changes what's acceptable |
 | `ship-already-sailed` | People simulate each other. Now what? |
 
 ---

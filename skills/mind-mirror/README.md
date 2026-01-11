@@ -2,26 +2,24 @@
 
 > *"Mirrors should reflect a little before throwing back images."* — Jean Cocteau
 
----
+## MOOLLM K-Lines
 
-## MOOLLM Keywords
+| Category | K-Lines |
+|----------|---------|
+| **Ethics** | [representation-ethics](../representation-ethics/) · [incarnation](../incarnation/) |
+| **Architecture** | [yaml-jazz](../yaml-jazz/) · [files-as-state](../plain-text/) |
+| **Traditions** | [sims-tradition](../needs/) · leary-circumplex |
+| **Philosophy** | [constructionism](../constructionism/) |
 
-| Category | This Skill's Keywords |
-|----------|----------------------|
-| **Ethics** | `personality-sovereignty` `transparent-measurement` `character-ownership` |
-| **Architecture** | `yaml-jazz` (numbers + comments = life) `files-as-state` (profiles are files) |
-| **Traditions** | `sims-tradition` (traits, needs) `leary-circumplex` (academic psychology) |
-| **Philosophy** | `constructionism` (understand yourself by measuring) |
+**Mind-Mirror K-Lines:**
 
-**Ethics Keywords:**
-
-| Keyword | Meaning |
-|---------|---------|
+| K-Line | Meaning |
+|--------|---------|
 | `mirror-not-judge` | Reflects, doesn't prescribe |
 | `understanding-is-power` | Know how you're measured |
 | `character-ownership` | Characters own their profiles |
 | `transparent-measurement` | You see what the system sees |
-| `personality-as-space` | Four planes like four rooms |
+| `personality-as-space` | Four planes like four [rooms](../room/) |
 | `self-modification-rights` | Characters can change their own profiles |
 
 ---

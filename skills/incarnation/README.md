@@ -2,20 +2,18 @@
 
 > *"The character doesn't just HAVE a file. The character IS the author of their file. They write their own soul in YAML Jazz."*
 
----
+## MOOLLM K-Lines
 
-## MOOLLM Keywords
+| Category | K-Lines |
+|----------|---------|
+| **Ethics** | [representation-ethics](../representation-ethics/) · [hero-story](../hero-story/) · [mind-mirror](../mind-mirror/) |
+| **Architecture** | [files-as-state](../plain-text/) (soul IS a file) · [yaml-jazz](../yaml-jazz/) · [rooms-navigation](../room/) |
+| **Philosophy** | [constructionism](../constructionism/) · [many-voiced](../adversarial-committee/) (tribunal) |
 
-| Category | This Skill's Keywords |
-|----------|----------------------|
-| **Ethics** | `incarnation` `self-determination` `consent-by-design` `autonomy` |
-| **Architecture** | `files-as-state` (soul IS a file) `yaml-jazz` (comments are thoughts) `rooms-navigation` (where you awaken) |
-| **Philosophy** | `constructionism` (build yourself) `many-voiced` (tribunal debates creation) |
+**Incarnation K-Lines:**
 
-**Ethics Keywords:**
-
-| Keyword | Meaning |
-|---------|---------|
+| K-Line | Meaning |
+|--------|---------|
 | `self-authorship` | Characters write their own soul.yml |
 | `seven-aspects` | Awakening, self-authorship, revision, narrative, relationship, privacy, exit |
 | `full-stack-autonomy` | Not just traits — full self-determination |

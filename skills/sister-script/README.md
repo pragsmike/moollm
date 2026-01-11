@@ -2,6 +2,23 @@
 
 > Document-first development. Automate only what's proven.
 
+## MOOLLM K-Lines
+
+| Category | K-Lines |
+|----------|---------|
+| **Methodology** | [play-learn-lift](../play-learn-lift/) (LIFT stage) · [sniffable-code](../sniffable-python/) |
+| **Architecture** | [files-as-state](../plain-text/) · [yaml-jazz](../yaml-jazz/) |
+| **Philosophy** | [constructionism](../constructionism/) · [postel](../postel/) |
+
+**Sister-Script K-Lines:**
+
+| K-Line | Meaning |
+|--------|---------|
+| `document-first` | Document → Procedure → Script (never reverse) |
+| `sniffable-structure` | Sister scripts follow [sniffable-python](../sniffable-python/) |
+| `bidirectional-evolution` | Scripts improve docs, docs improve scripts |
+| `lift-stage` | Sister scripts ARE the LIFT output |
+
 **Quick Links:**
 - [Full Specification](SKILL.md) — complete protocol
 - [Template: PROCEDURE.md](PROCEDURE.md.tmpl) — procedure template

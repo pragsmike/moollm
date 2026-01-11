@@ -1,25 +1,23 @@
-# Sniffable Python
+# 🐍 Sniffable Python
 
 > *"You're looking at the first 50 lines of a Python script. But what you're really looking at is the answer to a question nobody thought to ask — until now."*
 
----
+## MOOLLM K-Lines
 
-## MOOLLM Keywords
+| Category | K-Lines |
+|----------|---------|
+| **Methodology** | [sister-scripts](../sister-script/) · [play-learn-lift](../play-learn-lift/) (LIFT output) |
+| **Architecture** | [yaml-jazz](../yaml-jazz/) (comments as data) · [files-as-state](../plain-text/) |
+| **Philosophy** | [postel](../postel/) · [constructionism](../constructionism/) |
 
-| Category | This Skill's Keywords |
-|----------|----------------------|
-| **Methodology** | `sniffable-code` `sister-scripts` `play-learn-lift` (LIFT output) |
-| **Architecture** | `yaml-jazz` (comments as data) `files-as-state` (scripts are files) |
-| **Philosophy** | `comprehension-over-compression` `lickable-pixels` `postel` |
+**Sniffable K-Lines:**
 
-**Sniffable Keywords:**
-
-| Keyword | Meaning |
-|---------|---------|
+| K-Line | Meaning |
+|--------|---------|
 | `first-50-lines` | API visible in the header |
 | `dual-audience` | Same code serves humans and LLMs |
 | `argparse-at-top` | CLI structure before implementation |
-| `comments-as-jazz` | YAML Jazz applied to Python |
+| `comments-as-jazz` | [YAML Jazz](../yaml-jazz/) applied to Python |
 | `feedback-loop` | Linter → output → LLM fixes → iterate |
 | `comprehension-fidelity` | Understanding matters more than token count |
 
@@ -285,15 +283,15 @@ flowchart TD
     style ADV fill:#b2dfdb
 ```
 
-Steve Jobs made buttons you wanted to lick.
+Steve Jobs made buttons you wanted to lick ("lickable pixels").
 
-We make code you can sniff.
+We make code you can sniff ("sniffable python").
 
 Perl made syntax a badge of honor. We make structure a source of truth.
 
 Novel syntax compresses the wrong thing. Sniffable code structures the right thing.
 
-And THAT's how a comment about pixels in 2000 connects to a linter output in 2026 connects to a pub in a text adventure that has a cat cave that's bigger on the inside.
+And THAT's how Steve Job's comment about pixels in 2000 connects to a linter output in 2026 connects to a pub in a text adventure that has a cat cave that's bigger on the inside.
 
 *Everything is connected.*
 
