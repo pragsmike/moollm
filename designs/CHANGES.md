@@ -737,5 +737,8 @@
 **`8ed1413`** Fix Seven Innovations to match MOOLLM-EVAL-INCARNATE-FRAMEWORK.md
 > Comment Intelligence → CARD.yml. Match the authoritative source. Consistency across all docs. 🔧
 
-**`(this)`** CHANGES.md: Clarify PUSH protocol, retrocon previous commits
+**`ee226d4`** CHANGES.md: Clarify PUSH protocol, retrocon previous commits
 > The PUSH protocol is now crystal clear. One commit. Done.
+
+**`(this)`** Rewrite MOOLLM-MANIFESTO.md: 1684→238 lines, bold and punchy
+> Throw down the gauntlet. Seven Innovations. Mermaid diagrams. #anchor proofs. The terms ARE the API. 🔥
