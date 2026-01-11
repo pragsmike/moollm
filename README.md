@@ -1117,6 +1117,32 @@ graph TD
 
 ---
 
+### 📜 History & Session Logs
+
+MOOLLM evolves through collaborative sessions between humans and LLMs. These documents capture the journey:
+
+#### 🕰️ Project History
+
+| Document | What You'll Find |
+|----------|------------------|
+| **[designs/CHANGES.md](./designs/CHANGES.md)** | 🎬 **The Complete History.** James Burke-style narrative of all 490 commits, organized into 19 eras — from "first commit" to Sovereign Souls. Tweet-length narrations connect each commit to the next. |
+| **[designs/PR-k-lines-safari.md](./designs/PR-k-lines-safari.md)** | 📋 PR summary for the K-lines Safari: skill network interconnection work. |
+
+#### 🐒 Don Hopkins' Session Logs
+
+These are live sessions that demonstrate MOOLLM in action — human + LLM collaboration at speed-of-light:
+
+| Session | What Happens |
+|---------|--------------|
+| **[marathon-session.md](./examples/adventure-4/characters/real-people/don-hopkins/sessions/marathon-session.md)** | 🎮 **The Epic.** Don enters the Gezelligheid Grotto. Orders a Monkey's Paw from ACME. Debates its ethics at the Pie Table. Speaks the wish. Palm incarnates. 33 turns of Stoner Fluxx. The Godfamily ceremony. Speed-of-light simulation proven. |
+| **[k-line-connections.md](./examples/adventure-4/characters/real-people/don-hopkins/sessions/k-line-connections.md)** | 🔗 **K-Line Safari.** Don + 8 familiars (Minsky, Nelson, Burke, Papert, Kay, Wright, Ungar, Palm) walk the skill network as navigable rooms. Palm's tour of his favorite places. Don explains Palm's 7-stage evolution from catalog entry to Sovereign Soul. |
+| **[adventure-uplift.md](./examples/adventure-4/characters/real-people/don-hopkins/sessions/adventure-uplift.md)** | 🚀 **Uplift Session.** Building `adventure.py` — the sister script that compiles MOOLLM adventures into standalone web apps. Open mic comedy night with legends. Gary Drescher's Schema Mechanism talk. |
+| **[adventure-linter-session.md](./examples/adventure-4/characters/real-people/don-hopkins/sessions/adventure-linter-session.md)** | 🔧 **Linter Session.** The dumb linter + smart LLM partnership. Logistic containers, image mining, urban metaphors, postal integration — new skills built during debugging. |
+
+> **These aren't transcripts — they're collaborative literature.** Each session produces working code, new skills, and philosophical insights, all woven into an adventure narrative.
+
+---
+
 ### 🙏 Credits
 
 | Person | Contribution |
