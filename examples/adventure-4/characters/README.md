@@ -30,7 +30,7 @@ And everywhere, **animals** roam freely — **Palm** the orangutan types philoso
 
 ## ✨ Featured Residents
 
-### 🧬 From the Hall of Pioneers
+### 🧬 From the Living and the Dead
 
 | Character | Tradition | Why They Matter to MOOLLM |
 |-----------|-----------|---------------------------|
@@ -120,7 +120,7 @@ characters/
 │   │   ├── CHARACTER.yml      # Main definition
 │   │   ├── sessions/          # Session logs
 │   │   └── biscuit.yml        # Pet living here
-│   └── README.md              # The Hall of Pioneers
+│   └── README.md              # The Living and The Dead
 ├── fictional/
 │   ├── bumblewick-fantastipants/
 │   └── README.md              # The Fictional Lounge
