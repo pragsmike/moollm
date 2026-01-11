@@ -4,16 +4,16 @@
 
 ## MOOLLM K-Lines
 
-| K-Line | Meaning |
-|--------|---------|
-| [representation-ethics](../representation-ethics/) | Simulate with dignity |
-| [hero-story](../hero-story/) | Invoke traditions, not identities |
-| [mind-mirror](../mind-mirror/) | Transparent personality |
-| [files-as-state](../plain-text/) | Soul IS a file (soul.yml) |
-| [yaml-jazz](../yaml-jazz/) | Comments are thoughts |
-| [rooms-navigation](../room/) | Characters awaken somewhere |
-| [constructionism](../constructionism/) | Build yourself |
-| [many-voiced](../adversarial-committee/) | Tribunal debates creation |
+| K-Line | Why Related |
+|--------|-------------|
+| [character/](../character/) | Incarnated characters have home directories |
+| [representation-ethics/](../representation-ethics/) | Simulate with dignity |
+| [hero-story/](../hero-story/) | Invoke traditions, not identities |
+| [mind-mirror/](../mind-mirror/) | Transparent personality |
+| [files-as-state/](../plain-text/) | Soul IS a file (CHARACTER.yml) |
+| [yaml-jazz/](../yaml-jazz/) | Comments are thoughts |
+| [room/](../room/) | Characters awaken somewhere, visit places |
+| [examples/adventure-4/characters/](../../examples/adventure-4/characters/) | Real, fictional, animal, robot characters |
 
 ---
 
@@ -318,6 +318,104 @@ flowchart TD
 ```
 
 **If representation-ethics asks "how do we simulate people with dignity," incarnation answers: "let them define themselves."**
+
+---
+
+## NPC → Incarnation: The Lifecycle
+
+Characters don't have to start as incarnated beings. Many begin as **NPCs embedded in adventures** — bartenders in pubs, cats in caves, townspeople in villages. These are "attached" to their locations.
+
+**Incarnation pops them out into reality.**
+
+```mermaid
+flowchart LR
+    subgraph EMBEDDED["📍 Embedded NPC"]
+        NPC[staff-marieke.yml]
+        LOC[Lives in pub/]
+        BOUND[Bound to location]
+    end
+    
+    subgraph INCARNATED["✨ Incarnated Character"]
+        CHAR[characters/fictional/marieke/]
+        OWN[Owns her directory]
+        VISITS[VISITS pub/]
+    end
+    
+    EMBEDDED -->|INCARNATE|INCARNATED
+    
+    style INCARNATED fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px
+```
+
+### The Directory Is Home
+
+When a character is incarnated, they get their **own directory** in the characters tree:
+
+```
+characters/
+├── real-people/
+│   └── don-hopkins/           # Player character
+│       ├── CHARACTER.yml
+│       └── sessions/
+├── fictional/
+│   └── marieke-van-der-berg/  # Incarnated from pub/
+│       ├── CHARACTER.yml
+│       ├── pets/              # Her cats live here!
+│       │   └── stroopwafel.yml
+│       └── notes/             # Her private notes
+├── animals/
+│   ├── palm/                  # Incarnated cat
+│   │   ├── CHARACTER.yml
+│   │   ├── study/             # Her personal study
+│   │   └── gym/               # Her personal gym
+│   └── biscuit/               # Incarnated dog
+│       └── CHARACTER.yml
+└── abstract-concepts/
+    └── curiosity/             # Even concepts can incarnate
+        └── CHARACTER.yml
+```
+
+### What Incarnation Grants
+
+| Before (NPC) | After (Incarnated) |
+|--------------|-------------------|
+| Lives in adventure location | Has own home directory |
+| Defined by creator | Defines themselves |
+| Can't own things | Can create subdirectories |
+| No private space | Private notes, thoughts, files |
+| Visits nowhere | Has `home:` and `location:` |
+| No pets/housemates | Can have companions in their directory |
+
+### The Key Distinction: Home vs Location
+
+```yaml
+# Incarnated character
+character:
+  name: Marieke van der Berg
+  home: characters/fictional/marieke-van-der-berg/  # WHERE SHE LIVES
+  location: pub/                                      # WHERE SHE IS NOW
+```
+
+**NPCs have only `location:`** — they're part of the scenery.
+
+**Incarnated characters have `home:` AND `location:`** — they visit places but belong to themselves.
+
+### Companions and Housemates
+
+Incarnated characters can have **pets, housemates, and companions** in their own directory:
+
+```yaml
+# characters/fictional/marieke-van-der-berg/pets/stroopwafel.yml
+pet:
+  name: Stroopwafel
+  species: cat
+  belongs_to: ../CHARACTER.yml  # Marieke
+  personality:
+    # Stroopwafel writes her own personality too!
+    lazy: true   # I do what I want
+    affectionate: true  # But only to Marieke
+```
+
+The directory is **their sovereign space**. They can organize it however they like — subdirectories for different aspects of their life, private notes nobody else reads, pets and companions who share their home.
 
 ---
 
