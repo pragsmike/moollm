@@ -32,18 +32,18 @@ Directories are **[rooms](../skills/room/)** you enter and exit. Files are **obj
 
 ```mermaid
 flowchart LR
-    subgraph WORLD["🌍 THE FILESYSTEM IS THE WORLD"]
+    subgraph WORLD["🌍 FILESYSTEM = WORLD"]
         DIR[📁 Directories] --> ROOMS[🚪 Rooms]
         FILES[📄 Files] --> OBJECTS[🔮 Objects]
         YAML[📋 YAML] --> STATE[💾 State]
     end
     
-    subgraph LLM["🧠 THE LLM IS EVAL()"]
-        SKILLS[📚 Skills] --> PROGRAMS[⚡ Programs it runs]
-        NAMES[🏷️ Names] --> KLINES[🔗 Activation vectors]
+    subgraph LLM["🧠 LLM = EVAL"]
+        SKILLS[📚 Skills] --> PROGRAMS[⚡ Programs]
+        NAMES[🏷️ Names] --> KLINES[🔗 K-lines]
     end
     
-    WORLD --> INSPECTABLE[👁️ EVERYTHING IS INSPECTABLE]
+    WORLD --> INSPECTABLE[👁️ INSPECTABLE<br/>by human AND LLM]
     LLM --> INSPECTABLE
     
     style INSPECTABLE fill:#4caf50,stroke:#2e7d32,stroke-width:3px
@@ -99,18 +99,19 @@ The context window is a **[stage](../examples/adventure-4/pub/stage/)**, not a l
 MOOLLM simulates **ensembles of perspectives** within ONE call using [adversarial-committee](../skills/adversarial-committee/):
 
 ```mermaid
-flowchart TD
-    QUESTION[❓ Should I take this client?] --> COMMITTEE
+flowchart LR
+    QUESTION[❓ Question] --> COMMITTEE
     
-    subgraph COMMITTEE["🎭 ADVERSARIAL COMMITTEE"]
-        MAYA[😤 Maya<br/>The Skeptic]
-        FRANKIE[🚀 Frankie<br/>The Optimist]
-        VIC[📊 Vic<br/>The Analyst]
-        TAMMY[🤝 Tammy<br/>The Integrator]
+    subgraph COMMITTEE["🎭 COMMITTEE"]
+        direction LR
+        MAYA[😤 Maya] 
+        FRANKIE[🚀 Frankie]
+        VIC[📊 Vic]
+        TAMMY[🤝 Tammy]
     end
     
-    COMMITTEE --> DEBATE[⚔️ Structured Debate]
-    DEBATE --> WISDOM[💡 Actionable Wisdom]
+    COMMITTEE --> DEBATE[⚔️ Debate]
+    DEBATE --> WISDOM[💡 Wisdom]
     
     style WISDOM fill:#ffeb3b,stroke:#f57f17,stroke-width:3px
 ```
@@ -132,8 +133,10 @@ flowchart LR
     DND["🎲 D&D 1974"] --> CC["🏔️ Colossal Cave 1976"]
     CC --> MUD["🌐 MUD 1978"]
     MUD --> MOO["🐄 LambdaMOO 1990"]
-    MOO --> SIMS["🏠 The Sims 2000"]
-    SIMS --> MOOLLM["🌙 MOOLLM 2024"]
+    MOO --> MOOLLM["🌙 MOOLLM 2024"]
+    
+    SIMCITY["🏙️ SimCity 1989"] --> SIMS["🏠 The Sims 2000"]
+    SIMS --> MOOLLM
     
     SELF["🦎 Self 1987"] --> MOOLLM
     LOGO["🐢 Logo 1967"] --> MOOLLM
