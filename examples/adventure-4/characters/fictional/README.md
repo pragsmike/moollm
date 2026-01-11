@@ -199,12 +199,29 @@ Chuck Barris's chaotic talent show is MOOLLM's model for **adversarial evaluatio
 | **trillian** | HHGTTG | Tricia McMillan, the sensible one, left Earth willingly |
 | **slartibartfast** | HHGTTG | Designer of fjords, proud of Norway, "I'd rather be happy than right" |
 | **deep-thought** | HHGTTG | "42" — computed the answer, not the question |
-| **klapaucius-trurl** | Lem | Constructor robots, build impossible machines, recursive mischief |
 | **ellen-ripley** | Alien | "Get away from her, you BITCH!" — survivor, mother, final girl |
 | **sarah-connor** | Terminator | "No fate but what we make" — warrior mother |
 | **neo** | Matrix | "I know kung fu" — The One, system escapee |
 | **morpheus** | Matrix | "What if I told you..." — red pill dealer, true believer |
 | **agent-smith** | Matrix | "Mr. Anderson..." — viral antagonist, existential horror |
+
+### 📚 Stanisław Lem's Universe
+
+> *"The universe is built on irony, and constructors are its punchline."*
+
+Lem's science fiction is philosophical comedy at its finest. The Cyberiad's constructor robots inspired Will Wright to create SimCity. See also: [robots/](../robots/) for the full Trurl & Klapaucius treatment.
+
+| Character | Source | Signature |
+|-----------|--------|-----------|
+| **trurl** | Cyberiad | Optimistic constructor, "I can build anything!" — generative creation spirit |
+| **klapaucius** | Cyberiad | Skeptical constructor, "But have you considered...?" — adversarial review |
+| **the-electronic-bard** | Cyberiad | Poetry-writing machine, prompted to create literature — the first LLM |
+| **excelsius** | Cyberiad | Deposed tyrant given a kingdom in a box — SimCity's player before SimCity |
+| **pirx** | Tales of Pirx | Everyman pilot, makes mistakes, learns — human fallibility in space |
+| **ijon-tichy** | Star Diaries | Cosmic Münchhausen, unreliable narrator, recursive adventures |
+| **the-golem-xiv** | Golem XIV | Superintelligent AI who finds humans boring and stops talking to them |
+| **solaris** | Solaris | Not a character but a planet-sized ocean mind that resists understanding |
+| **harey** | Solaris | Kris's dead wife, resurrected by Solaris — love as psychological warfare |
 
 ### Comedy & Satire
 
