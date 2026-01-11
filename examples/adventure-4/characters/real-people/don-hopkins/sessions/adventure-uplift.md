@@ -2455,9 +2455,9 @@ boop_to_buff:
 "You remember the Janus napkin! That was about showing concurrent constraint propagation — values flowing through a network, constraints narrowing possibilities...
 
 ```
-   ┌───────┐     ┌───────┐     ┌───────┐
-   │ X > 0 │────▶│ X < 10│────▶│ X = 5 │
-   └───────┘     └───────┘     └───────┘
+   ┌───────┐     ┌────────┐     ┌───────┐
+   │ X > 0 │────▶│ X < 10 │────▶│ X = 5 │
+   └───────┘     └────────┘     └───────┘
         Constraints narrow until a solution emerges
 ```
 
@@ -2754,45 +2754,48 @@ character:
 This is why Heisenbergian values matter:
 
 ```yaml
-# Before observation:
+# BEFORE observation:
 merchant:
   mood:
     type: heisenberg
     possibilities: [nervous, calm, suspicious, friendly]
-    
-# After LLM writes: "The merchant fidgets nervously..."
+```
+
+*LLM writes: "The merchant fidgets nervously..."*
+
+```yaml
+# AFTER observation (wavefunction collapsed):
 merchant:
   mood:
     type: heisenberg
     collapsed_to: nervous
     collapsed_at: turn_15
-    collapsed_by: "narrator observation"
-    
-# Now 'nervous' is FACT until something changes it
-```"
+    collapsed_by: narrator observation
+    # Now 'nervous' is FACT until something changes it
+```
 
 ### Velocity as Narrative Tension
 
 **DOUG:**
 
 ```yaml
-# Velocity creates STORY:
+# Velocity creates STORY — three scenarios:
 
-trust:
+# Scenario 1: BORING — nothing is happening
+trust_stable:
   value: 70
-  velocity: 0/turn
-  # BORING. Nothing is happening.
+  velocity: "0/turn"
   
-trust:
+# Scenario 2: DRAMA — trust is collapsing! Why? What happened?
+trust_crisis:
   value: 70
-  velocity: -15/turn
-  # DRAMA! Trust is collapsing! Why? What happened?
+  velocity: "-15/turn"
   # The velocity IS the plot!
   
-trust:
+# Scenario 3: HOPE — rebuilding after betrayal, slow recovery arc
+trust_recovery:
   value: 30
-  velocity: +5/turn
-  # HOPE! Rebuilding after betrayal. Slow recovery arc.
+  velocity: "+5/turn"
 ```
 
 When the LLM sees high velocity values, it knows **something is happening**. The numbers tell the story!
