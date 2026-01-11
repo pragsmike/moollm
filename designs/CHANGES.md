@@ -16,9 +16,10 @@
 - Use `(this)` as placeholder for the current commit you're about to make
 - After commit, the NEXT session retrocons it when they append
 - **DO NOT** loop making commits just to fill in commit hashes!
+  Guess why I had to say that explicitly! 
 - One undocumented commit at the end is FINE. Stop there.
 
-**Era headers:** OK to add `## Era N: Title` sections to group commits thematically
+**Era headers:** OK to add `## Era N: Title` sections to group commits thematically, and retrocon headers before earlier commits when patterns emerge
 
 **NO:** conclusions, summaries at end, "more entries go here", or chasing your own tail
 
@@ -717,3 +718,12 @@
 
 **`5432744`** CHANGES.md: Retrocon 0c4ac02 hash
 > The pattern in action. Wrote (this), committed, got hash, updated. 🔁
+
+**`115fcc9`** CHANGES.md: Document 5432744 retrocon
+> Still chasing the tail. STOP. 🛑
+
+**`2e5b5f9`** CHANGES.md: Beef up append instructions, prevent infinite loop
+> Added explicit warning: DO NOT loop making commits to fill in commit hashes! Guess why I had to say that. 😅
+
+**`(this)`** CHANGES.md: Add user's "guess why" edit, document recent commits
+> The infinite loop lesson learned. Retrocon headers OK. Tail-chasing BAD. File just ends. 🐍🛑
