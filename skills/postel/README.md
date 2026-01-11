@@ -7,6 +7,9 @@
 | K-Line | Why Related |
 |--------|-------------|
 | [yaml-jazz/](../yaml-jazz/) | Flexible interpretation of structure |
+| [robust-first/](../robust-first/) | Sister principle — stay alive |
+| [empathic-expressions/](../empathic-expressions/) | Intent-based interpretation |
+| [empathic-templates/](../empathic-templates/) | Liberal input parsing |
 | [honest-forget/](../honest-forget/) | Graceful handling of gaps |
 | [coherence-engine/](../coherence-engine/) | Resolves ambiguity via Postel |
 | [sniffable-python/](../sniffable-python/) | Structure for charitable parsing |

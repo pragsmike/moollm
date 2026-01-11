@@ -4,14 +4,17 @@
 
 ## MOOLLM K-Lines
 
-| K-Line | Meaning |
-|--------|---------|
-| [play-learn-lift](../play-learn-lift/) | Sister scripts ARE the LIFT stage output |
-| [sniffable-python](../sniffable-python/) | Sister scripts follow this structure |
-| [files-as-state](../plain-text/) | Scripts persist as files |
-| [yaml-jazz](../yaml-jazz/) | Comments carry meaning |
-| [constructionism](../constructionism/) | Document → Procedure → Automation |
-| [postel](../postel/) | Liberal input, conservative output |
+| K-Line | Why Related |
+|--------|-------------|
+| [moollm/](../moollm/) | Core MOOLLM methodology |
+| [play-learn-lift/](../play-learn-lift/) | Sister scripts ARE the LIFT stage output |
+| [skill/](../skill/) | Sister scripts become skills |
+| [sniffable-python/](../sniffable-python/) | Sister scripts follow this structure |
+| [plain-text/](../plain-text/) | Scripts persist as files |
+| [yaml-jazz/](../yaml-jazz/) | Comments carry meaning |
+| [constructionism/](../constructionism/) | Document → Procedure → Automation |
+| [postel/](../postel/) | Liberal input, conservative output |
+| [debugging/](../debugging/) | Document how you debugged |
 
 **Quick Links:**
 - [Full Specification](SKILL.md) — complete protocol

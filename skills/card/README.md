@@ -6,9 +6,14 @@
 
 | K-Line | Why Related |
 |--------|-------------|
+| [skill/](../skill/) | Cards ARE skills |
+| [prototype/](../prototype/) | Cards clone from prototypes |
 | [room/](../room/) | Cards activate in rooms |
+| [character/](../character/) | Characters can be cards |
+| [party/](../party/) | Cards as companions |
 | [soul-chat/](../soul-chat/) | Cards can speak |
 | [adventure/](../adventure/) | Cards as quest companions |
+| [multi-presence/](../multi-presence/) | Same card, many rooms |
 | [advertisement/](../advertisement/) | Cards advertise abilities |
 | [return-stack/](../return-stack/) | Activation records as continuations |
 | [visualizer/](../visualizer/) | Pure state prompt clusters |

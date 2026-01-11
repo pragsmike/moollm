@@ -6,9 +6,12 @@
 
 | K-Line | Why Related |
 |--------|-------------|
+| [moollm/](../moollm/) | Core MOOLLM principle |
 | [empathic-expressions/](../empathic-expressions/) | The expression engine |
+| [postel/](../postel/) | Liberal interpretation |
 | [yaml-jazz/](../yaml-jazz/) | Expressive data with comments |
 | [skill/](../skill/) | Templates as prototypes |
+| [incarnation/](../incarnation/) | Character creation uses empathic templates |
 | [character/](../character/) | Character generation uses empathic templates |
 | [coherence-engine/](../coherence-engine/) | LLM creates coherent content |
 

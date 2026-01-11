@@ -6,11 +6,15 @@
 
 | K-Line | Why Related |
 |--------|-------------|
+| [skill/](../skill/) | Role skills |
 | [character/](../character/) | Bartenders are characters |
 | [persona/](../persona/) | Personality layer |
+| [incarnation/](../incarnation/) | Bartenders can incarnate |
+| [soul-chat/](../soul-chat/) | Listen and converse |
 | [economy/](../economy/) | Tab management |
 | [budtender/](../budtender/) | Child skill (cannabis extension) |
 | [examples/adventure-4/pub/](../../examples/adventure-4/pub/) | The pub in action |
+| [examples/adventure-4/pub/staff-marieke.yml](../../examples/adventure-4/pub/staff-marieke.yml) | Marieke the bartender |
 
 ## What This Is
 

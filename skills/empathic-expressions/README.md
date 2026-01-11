@@ -6,10 +6,13 @@
 
 | K-Line | Why Related |
 |--------|-------------|
+| [moollm/](../moollm/) | Core MOOLLM principle |
 | [empathic-templates/](../empathic-templates/) | Uses expressions in templates |
 | [postel/](../postel/) | The law underlying generous interpretation |
+| [sniffable-python/](../sniffable-python/) | Empathic interpretation of code |
 | [speed-of-light/](../speed-of-light/) | Work in vectors, delay tokenization |
 | [yaml-jazz/](../yaml-jazz/) | Comments carry meaning here too |
+| [coherence-engine/](../coherence-engine/) | LLM understands intent |
 
 The big-tent skill for interpreting user intent across ALL programming languages.
 

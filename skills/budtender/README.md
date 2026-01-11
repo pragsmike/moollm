@@ -7,9 +7,13 @@
 | K-Line | Why Related |
 |--------|-------------|
 | [bartender/](../bartender/) | Parent skill (inherits from) |
+| [prototype/](../prototype/) | Inheritance via delegation |
 | [character/](../character/) | Budtenders are characters |
 | [persona/](../persona/) | Personality layer |
+| [incarnation/](../incarnation/) | Budtenders can incarnate |
+| [soul-chat/](../soul-chat/) | Educate, listen |
 | [examples/adventure-4/pub/](../../examples/adventure-4/pub/) | Marieke in action |
+| [examples/adventure-4/pub/staff-marieke.yml](../../examples/adventure-4/pub/staff-marieke.yml) | Marieke budtender |
 
 ## Inheritance
 

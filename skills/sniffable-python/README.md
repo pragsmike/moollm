@@ -4,14 +4,16 @@
 
 ## MOOLLM K-Lines
 
-| K-Line | Meaning |
-|--------|---------|
-| [sister-scripts](../sister-script/) | Sniffable Python IS the sister-script format |
-| [play-learn-lift](../play-learn-lift/) | LIFT produces sniffable automation |
-| [yaml-jazz](../yaml-jazz/) | Comments carry meaning (applied to Python) |
-| [files-as-state](../plain-text/) | Scripts are first-class objects |
-| [postel](../postel/) | Liberal input, conservative output |
-| [adventure](../adventure/) | Linter feedback loop in action |
+| K-Line | Why Related |
+|--------|-------------|
+| [moollm/](../moollm/) | Core MOOLLM principle |
+| [sister-script/](../sister-script/) | Sniffable Python IS the sister-script format |
+| [play-learn-lift/](../play-learn-lift/) | LIFT produces sniffable automation |
+| [yaml-jazz/](../yaml-jazz/) | Comments carry meaning (applied to Python) |
+| [plain-text/](../plain-text/) | Scripts are first-class objects |
+| [postel/](../postel/) | Liberal input, conservative output |
+| [adventure/](../adventure/) | Linter feedback loop in action |
+| [debugging/](../debugging/) | Sniffable code aids debugging |
 
 ---
 

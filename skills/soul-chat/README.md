@@ -6,10 +6,14 @@
 
 | K-Line | Why Related |
 |--------|-------------|
+| [moollm/](../moollm/) | Many-voiced IS MOOLLM |
+| [character/](../character/) | Characters speak |
+| [persona/](../persona/) | Personas give voice |
 | [room/](../room/) | Rooms can speak |
 | [card/](../card/) | Card instances speak |
 | [mind-mirror/](../mind-mirror/) | Personality influences voice |
 | [yaml-jazz/](../yaml-jazz/) | Embedded data in dialogue |
+| [adversarial-committee/](../adversarial-committee/) | Committee debates |
 | [speed-of-light/](../speed-of-light/) | Multi-character in one call |
 | [examples/adventure-4/pub/](../../examples/adventure-4/pub/) | Pub conversations live |
 

@@ -7,7 +7,12 @@
 | K-Line | Why Related |
 |--------|-------------|
 | [character/](../character/) | Personas attach to characters |
+| [incarnation/](../incarnation/) | Personas can incarnate |
 | [mind-mirror/](../mind-mirror/) | Personality traits |
+| [soul-chat/](../soul-chat/) | Personas speak |
+| [adversarial-committee/](../adversarial-committee/) | Committee members |
+| [bartender/](../bartender/) | Bartender role |
+| [budtender/](../budtender/) | Budtender role |
 | [buff/](../buff/) | Personas can grant buffs |
 | [examples/adventure-4/personas/](../../examples/adventure-4/personas/) | Live persona examples |
 

@@ -6,8 +6,10 @@
 
 | K-Line | Why Related |
 |--------|-------------|
+| [moollm/](../moollm/) | Core MOOLLM philosophy |
 | [self-repair/](../self-repair/) | Repair mechanisms |
 | [postel/](../postel/) | Liberal interpretation |
+| [coherence-engine/](../coherence-engine/) | Maintains consistency |
 | [honest-forget/](../honest-forget/) | Graceful compression |
 | [kernel/self-healing-protocol.md](../../kernel/self-healing-protocol.md) | Core healing protocol |
 

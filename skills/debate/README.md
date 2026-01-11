@@ -6,12 +6,16 @@
 
 | K-Line | Why Related |
 |--------|-------------|
+| [moollm/](../moollm/) | Many-voiced IS MOOLLM |
 | [adversarial-committee/](../adversarial-committee/) | Opposing propensities |
 | [roberts-rules/](../roberts-rules/) | Parliamentary procedure |
 | [rubric/](../rubric/) | Scoring criteria |
 | [evaluator/](../evaluator/) | Independent assessment |
+| [soul-chat/](../soul-chat/) | Multi-agent dialogue |
+| [persona/](../persona/) | Debaters have personas |
 | [card/](../card/) | Data flow ensembles |
 | [speed-of-light/](../speed-of-light/) | Many agents, one call |
+| [designs/mike-gallaher-ideas.md](../../designs/mike-gallaher-ideas.md) | Origin methodology |
 
 **Full Spec:** [SKILL.md](SKILL.md)
 

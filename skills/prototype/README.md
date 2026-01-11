@@ -7,8 +7,11 @@
 | K-Line | Why Related |
 |--------|-------------|
 | [skill/](../skill/) | Contains Delegation Object Protocol |
+| [room/](../room/) | Rooms as prototype instances |
+| [container/](../container/) | Containers inherit like prototypes |
 | [character/](../character/) | Characters as prototype instances |
 | [card/](../card/) | Cards as cloneable capabilities |
+| [simulation/](../simulation/) | Abstract → concrete inheritance |
 | [constructionism/](../constructionism/) | Learning by cloning and modifying |
 | [skill/delegation-object-protocol.md](../skill/delegation-object-protocol.md) | Self-like inheritance |
 

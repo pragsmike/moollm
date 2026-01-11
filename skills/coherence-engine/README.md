@@ -6,11 +6,14 @@
 
 | K-Line | Why Related |
 |--------|-------------|
+| [moollm/](../moollm/) | Core MOOLLM engine |
+| [simulation/](../simulation/) | Simulation state management |
 | [speed-of-light/](../speed-of-light/) | Epoch-based simulation |
 | [multi-presence/](../multi-presence/) | Parallel activations |
+| [robust-first/](../robust-first/) | Stay alive, heal |
 | [self-repair/](../self-repair/) | Fix inconsistencies |
 | [postel/](../postel/) | Resolve ambiguity charitably |
-| [files-as-state/](../plain-text/) | Distributed state in files |
+| [plain-text/](../plain-text/) | Distributed state in files |
 
 **Quick Links:**
 - [Full Specification](SKILL.md) — complete protocol

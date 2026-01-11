@@ -4,15 +4,19 @@
 
 ## MOOLLM K-Lines
 
-| K-Line | Meaning |
-|--------|---------|
-| [representation-ethics](../representation-ethics/) | Transparent measurement |
-| [incarnation](../incarnation/) | Characters own their profiles |
-| [yaml-jazz](../yaml-jazz/) | Numbers + comments = life |
-| [files-as-state](../plain-text/) | Profiles persist |
-| [needs](../needs/) | Sims tradition (traits, needs) |
-| [rooms-navigation](../room/) | Personality as navigable space |
-| [constructionism](../constructionism/) | Understand yourself by measuring |
+| K-Line | Why Related |
+|--------|-------------|
+| [character/](../character/) | Characters have personalities |
+| [persona/](../persona/) | Personality layers |
+| [cat/](../cat/) | Cat personality traits |
+| [dog/](../dog/) | Dog personality traits |
+| [representation-ethics/](../representation-ethics/) | Transparent measurement |
+| [incarnation/](../incarnation/) | Characters own their profiles |
+| [yaml-jazz/](../yaml-jazz/) | Numbers + comments = life |
+| [plain-text/](../plain-text/) | Profiles persist |
+| [needs/](../needs/) | Sims tradition (traits, needs) |
+| [room/](../room/) | Personality as navigable space |
+| [constructionism/](../constructionism/) | Understand yourself by measuring |
 
 ---
 

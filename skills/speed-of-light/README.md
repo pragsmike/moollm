@@ -6,10 +6,14 @@
 
 | K-Line | Why Related |
 |--------|-------------|
+| [moollm/](../moollm/) | Core MOOLLM principle |
+| [bootstrap/](../bootstrap/) | Speed-of-light activated on boot |
+| [simulation/](../simulation/) | Many turns in simulation |
 | [multi-presence/](../multi-presence/) | Parallel activations in one call |
 | [coherence-engine/](../coherence-engine/) | Orchestrates epochs |
 | [soul-chat/](../soul-chat/) | Multi-character dialogue |
 | [adversarial-committee/](../adversarial-committee/) | Many voices, one call |
+| [debate/](../debate/) | Structured deliberation in one call |
 | [examples/adventure-4/pub/](../../examples/adventure-4/pub/) | 33-turn Fluxx game in one epoch |
 
 **Quick Links:**
