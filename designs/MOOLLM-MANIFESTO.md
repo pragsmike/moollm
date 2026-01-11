@@ -99,18 +99,19 @@ The context window is a **[stage](../examples/adventure-4/pub/stage/)**, not a l
 MOOLLM simulates **ensembles of perspectives** within ONE call using [adversarial-committee](../skills/adversarial-committee/):
 
 ```mermaid
-flowchart TD
-    QUESTION[❓ Should I take this client?] --> COMMITTEE
+flowchart LR
+    QUESTION[❓ Question] --> COMMITTEE
     
-    subgraph COMMITTEE["🎭 ADVERSARIAL COMMITTEE"]
-        MAYA[😤 Maya<br/>The Skeptic]
-        FRANKIE[🚀 Frankie<br/>The Optimist]
-        VIC[📊 Vic<br/>The Analyst]
-        TAMMY[🤝 Tammy<br/>The Integrator]
+    subgraph COMMITTEE["🎭 COMMITTEE"]
+        direction LR
+        MAYA[😤 Maya] 
+        FRANKIE[🚀 Frankie]
+        VIC[📊 Vic]
+        TAMMY[🤝 Tammy]
     end
     
-    COMMITTEE --> DEBATE[⚔️ Structured Debate]
-    DEBATE --> WISDOM[💡 Actionable Wisdom]
+    COMMITTEE --> DEBATE[⚔️ Debate]
+    DEBATE --> WISDOM[💡 Wisdom]
     
     style WISDOM fill:#ffeb3b,stroke:#f57f17,stroke-width:3px
 ```
