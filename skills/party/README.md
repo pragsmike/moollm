@@ -2,6 +2,15 @@
 
 > You're never alone. Unless you want to be.
 
+## MOOLLM K-Lines
+
+| K-Line | Why Related |
+|--------|-------------|
+| [character/](../character/) | Companions are characters |
+| [needs/](../needs/) | Companions have needs |
+| [simulation/](../simulation/) | Party state lives in SIMULATION.yml |
+| [room/](../room/) | Rooms can be party members too |
+
 **Quick Links:**
 - [Full Specification](SKILL.md) — complete party system
 
@@ -40,8 +49,3 @@ Asking about family or companions **creates them**!
 
 > "Do I have a sister?" → Now you do.
 
-## Related Skills
-
-- [character](../character/) — Companions are characters
-- [needs](../needs/) — Companions have needs
-- [simulation](../simulation/) — Party state lives in SIMULATION.yml

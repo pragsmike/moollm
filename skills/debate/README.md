@@ -2,6 +2,17 @@
 
 > *"Stories that survive cross-examination from multiple angles are more robust."*
 
+## MOOLLM K-Lines
+
+| K-Line | Why Related |
+|--------|-------------|
+| [adversarial-committee/](../adversarial-committee/) | Opposing propensities |
+| [roberts-rules/](../roberts-rules/) | Parliamentary procedure |
+| [rubric/](../rubric/) | Scoring criteria |
+| [evaluator/](../evaluator/) | Independent assessment |
+| [card/](../card/) | Data flow ensembles |
+| [speed-of-light/](../speed-of-light/) | Many agents, one call |
+
 **Full Spec:** [SKILL.md](SKILL.md)
 
 ## Overview
@@ -63,15 +74,6 @@ The gong isn't cruel — it's merciful. Sometimes the kindest thing is to end wh
 | [DEBATE.yml.tmpl](DEBATE.yml.tmpl) | Debate session state |
 | [SIDE.yml.tmpl](SIDE.yml.tmpl) | Position/side definition |
 | [TRANSCRIPT.md.tmpl](TRANSCRIPT.md.tmpl) | Debate record |
-
-## Related Skills
-
-- [adversarial-committee/](../adversarial-committee/) — Opposing propensities
-- [roberts-rules/](../roberts-rules/) — Parliamentary procedure
-- [rubric/](../rubric/) — Scoring criteria
-- [evaluator/](../evaluator/) — Independent assessment
-- [card/](../card/) — Data flow ensembles
-- [speed-of-light/](../speed-of-light/) — Many agents, one call
 
 ---
 

@@ -2,10 +2,17 @@
 
 > Structured task decomposition and tracking
 
+## MOOLLM K-Lines
+
+| K-Line | Why Related |
+|--------|-------------|
+| [plan-then-execute/](../plan-then-execute/) | Rigid execution mode |
+| [action-queue/](../action-queue/) | Task scheduling |
+| [debugging/](../debugging/) | Investigation planning |
+| [play-learn-lift/](../play-learn-lift/) | Plans evolve via LEARN |
+
 **Quick Links:**
 - [Full Specification](SKILL.md) — complete protocol
-- [Template: PLAN.yml](PLAN.yml.tmpl) — plan template
-- [Template: PROGRESS.md](PROGRESS.md.tmpl) — progress log
 
 ## Overview
 
@@ -29,9 +36,3 @@ plan:
       name: "Implement login"
       status: in_progress
 ```
-
-## Related Skills
-
-- [plan-then-execute](../plan-then-execute/) — rigid execution mode
-- [action-queue](../action-queue/) — task scheduling
-- [debugging](../debugging/) — investigation planning

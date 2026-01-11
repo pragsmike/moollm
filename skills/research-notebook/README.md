@@ -2,10 +2,17 @@
 
 > Structured research with sources, findings, and decisions
 
+## MOOLLM K-Lines
+
+| K-Line | Why Related |
+|--------|-------------|
+| [play-learn-lift/](../play-learn-lift/) | Research-notebook IS LEARN |
+| [debugging/](../debugging/) | Investigation structure |
+| [scratchpad/](../scratchpad/) | Unstructured notes |
+| [session-log/](../session-log/) | Research produces logs |
+
 **Quick Links:**
 - [Full Specification](SKILL.md) — complete protocol
-- [Template: NOTEBOOK.yml](NOTEBOOK.yml.tmpl) — notebook template
-- [Template: SOURCES.yml](SOURCES.yml.tmpl) — sources template
 
 ## Overview
 
@@ -33,9 +40,3 @@ research:
     - url: "paper-on-context.pdf"
       relevance: "Direct answer to Q1"
 ```
-
-## Related Skills
-
-- [play-learn-lift](../play-learn-lift/) — research-notebook IS LEARN
-- [debugging](../debugging/) — investigation structure
-- [scratchpad](../scratchpad/) — unstructured notes
