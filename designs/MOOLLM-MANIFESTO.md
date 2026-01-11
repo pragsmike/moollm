@@ -43,7 +43,7 @@ flowchart LR
         NAMES[🏷️ Names] --> KLINES[🔗 K-lines]
     end
     
-    WORLD --> INSPECTABLE[👁️ INSPECTABLE]
+    WORLD --> INSPECTABLE[👁️ INSPECTABLE<br/>by human AND LLM]
     LLM --> INSPECTABLE
     
     style INSPECTABLE fill:#4caf50,stroke:#2e7d32,stroke-width:3px
