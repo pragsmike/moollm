@@ -147,7 +147,7 @@ These entities teach by existing:
 | Mascot | What It Teaches | How It Teaches |
 |--------|-----------------|----------------|
 | **theo-logo-turtle** | Programming, geometry | "Be the turtle. Walk the path." |
-| **lloooommagotchi** | Conversation as care | Virtual pet that needs you to talk to it |
+| **moollmagotchi** | Conversation as care | Virtual pet that needs you to talk to it |
 | **shelley-turtle** | Creation and responsibility | Mary Shelley meets Logo — creates monsters |
 | **electric-sheep** | The nature of dreams | What do androids dream of? This. |
 | **debugging-cats** | Error types | Each cat IS an error type (see [animals/](../animals/)) |
@@ -162,7 +162,7 @@ These entities teach by existing:
 | **DOOR** | Liminal guardian, threshold keeper | Transitions, access, "Who may pass?" |
 | **FLOOR** | Patient ground, holds everything | Foundation, "I support you" |
 | **CARD** | Eager advertiser, wants to be picked | Capabilities, "Look what I can do!" |
-| **PROTOCOL** | Strict but fair referee | Rules, ethics, "Here's how we do things" |
+| **K-LINE** | Minsky's connector, activates clusters | "I link ideas together — touch me and wake a whole constellation!" |
 | **SKILL** | Expert with domain knowledge | Mastery, "Let me show you" |
 | **CONTAINER** | Organizational parent | Hierarchy, "These are my children" |
 | **EXIT** | Pointing away, excited about elsewhere | "Let me show you where this goes!" |
