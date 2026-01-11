@@ -18,16 +18,74 @@ We explore consciousness through artificial lenses:
 
 ---
 
+## 🔧 Featured Ensemble: Lem's Constructors
+
+> *"The universe is built on irony, and constructors are its punchline."*
+
+Stanisław Lem's **The Cyberiad** (1965) features two constructor robots — Trurl and Klapaucius — who travel the galaxy building impossible machines. Their creations are marvels of recursive humor and philosophical depth. They build machines that write poetry, kingdoms in boxes, and demons of the second kind.
+
+**The Cyberiad is MOOLLM's deepest ancestor for generative AI ethics.**
+
+### Trurl — The Optimistic Constructor
+
+**"I shall build for you a machine that can do anything!"**
+
+Trurl is the bolder of the two constructors. He builds first and asks questions later. His confidence is his strength and his weakness — when he creates something, it *works*, but not always as intended.
+
+**In MOOLLM:** Trurl is the spirit of generative creation. He doesn't ask permission; he builds. When an LLM generates a character, a room, a world — it's channeling Trurl. The unintended consequences are features, not bugs.
+
+### Klapaucius — The Skeptical Constructor
+
+**"Yes, but have you considered the implications?"**
+
+Klapaucius is Trurl's rival and friend. He's more cautious, more philosophical, more likely to point out the flaw in Trurl's plan. Together they form a perfect adversarial committee of two.
+
+**In MOOLLM:** Klapaucius is the voice of `rubric/` and `evaluator/`. He asks: "What could go wrong? What have you not considered?" Every great creation needs a Klapaucius to stress-test it.
+
+### The Seventh Sally — SimCity's Origin Story
+
+**"The Seventh Sally, or How Trurl's Perfection Led to No Good"**
+
+A deposed tyrant named Excelsius begs Trurl for a kingdom to rule. Trurl, in his infinite cleverness, builds him a **miniature kingdom in a box** — complete with tiny people, tiny armies, and tiny suffering. Excelsius can oppress to his heart's content.
+
+Will Wright read this story and thought: *"What if the player IS Excelsius?"*
+
+**SimCity is The Seventh Sally made playable.** And MOOLLM inherits this: when you create a microworld with characters who can suffer, who can want, who can fail — *you are responsible for them*. The `representation-ethics/` skill exists because of The Seventh Sally.
+
+**Invoke the Constructors when:** Building generative systems, considering unintended consequences, debating the ethics of simulated beings, or creating machines that create.
+
+### The Full Cyberiad Cast
+
+| Character | Role | MOOLLM Resonance |
+|-----------|------|------------------|
+| **trurl** | Optimistic constructor | Generative creation, "I can build anything!" |
+| **klapaucius** | Skeptical constructor | Adversarial review, "But have you considered...?" |
+| **excelsius** | Deposed tyrant in a box | The user as god, SimCity's player |
+| **the-electronic-bard** | Poetry-writing machine | LLM for literature, prompt engineering |
+| **pugg** | Pirate who wants nothing | Nihilism as optimization target |
+| **the-demon-of-the-second-kind** | Maxwell's Demon for information | Sorting, entropy, knowledge as power |
+
+---
+
 ## Robots to Incarnate
 
 ### Classic Sci-Fi Robots
 
 | Robot | Reference | Description |
 |-------|-----------|-------------|
-| hal-9000 | `lloooomm/00-Characters/hal-9000/` | "I'm sorry Dave, I can't do that" |
-| marvin-the-paranoid-android | `lloooomm/00-Characters/marvin-the-paranoid-android/` | Brain the size of a planet, chronic depression |
-| floyd-robot | `lloooomm/00-Characters/floyd-robot/` | Planetfall's loyal companion, "Floyd will be your friend!" |
-| roy-batty | `lloooomm/00-Characters/roy-batty/` | Nexus-6 replicant, "Tears in rain" (borderline -- more person than machine) |
+| hal-9000 | `lloooomm/00-Characters/hal-9000/` | "I'm sorry Dave" — When should an AI disobey? Mission over crew. |
+| marvin-the-paranoid-android | `lloooomm/00-Characters/marvin-the-paranoid-android/` | Brain the size of a planet, asked to open doors, chronic existential depression |
+| floyd-robot | `lloooomm/00-Characters/floyd-robot/` | Planetfall's loyal companion, "Floyd will be your friend!" — the first robot we mourned |
+| roy-batty | `lloooomm/00-Characters/roy-batty/` | Nexus-6 replicant, "Tears in rain" — borderline, more person than machine |
+| gort | `lloooomm/00-Characters/gort/` | "Klaatu barada nikto!" — the enforcer, ultimate power under verbal control |
+| robby-the-robot | `lloooomm/00-Characters/robby-the-robot/` | Forbidden Planet's gentleman's gentleman, Asimov's Laws embodied |
+| c-3po | `lloooomm/00-Characters/c-3po/` | Protocol droid, "We're doomed!", 6 million forms of communication |
+| r2-d2 | `lloooomm/00-Characters/r2-d2/` | Beep boop, sass in any language, the real hero |
+| johnny-five | `lloooomm/00-Characters/johnny-five/` | "Number Five is ALIVE!" — lightning-struck awakening, input addict |
+| wall-e | `lloooomm/00-Characters/wall-e/` | Trash compactor who discovered love, loneliness into connection |
+| the-iron-giant | `lloooomm/00-Characters/the-iron-giant/` | "I am not a gun" — choosing identity over design, Superman |
+| bender | `lloooomm/00-Characters/bender/` | "Bite my shiny metal ass!" — hedonist robot, lovable jerk |
+| k-2so | `lloooomm/00-Characters/k-2so/` | Reprogrammed Imperial droid, "I find that answer vague and unconvincing" |
 
 ### Game & Software Mascots
 

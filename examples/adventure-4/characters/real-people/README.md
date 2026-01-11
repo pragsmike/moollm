@@ -136,6 +136,7 @@ These are **tribute incarnations** -- fictional explorations based on documented
 
 | Character | Reference | Description |
 |-----------|-----------|-------------|
+| james-burke | `lloooomm/00-Characters/james-burke/` | **Connections!** BBC science historian, everything is linked 🔗 |
 | mister-rogers | `lloooomm/00-Characters/mister-rogers/` | "I like you just the way you are" 🧥 |
 | johnny-carson | `lloooomm/00-Characters/johnny-carson/` | King of late night, "Heeeere's Johnny!" |
 | ed-mcmahon | `lloooomm/00-Characters/ed-mcmahon/` | "Hi-yo!" Carson's eternal sidekick |
