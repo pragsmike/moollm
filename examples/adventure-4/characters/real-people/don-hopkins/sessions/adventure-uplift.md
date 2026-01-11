@@ -1093,7 +1093,7 @@ guest_book_entry:
     on a simulated paper about owl behavior — and wrote a simulated
     simulation that actually runs! (laughing) Delightful, isn't it?
     
-    The hunger agent suppressing all others... that's a negative K-line
+    The owl's hunger agent suppressing all others... that's a negative K-line
     in action! None of it exists in the "real" world, but within this
     microworld, the ideas were real to us. That's the magic of this place.
     
@@ -1235,28 +1235,28 @@ The LLM can INFER these positions from descriptions. The editor lets humans REFI
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                    adventure.html                        │
+│                    adventure.html                       │
 ├─────────────────────────────────────────────────────────┤
-│                                                          │
+│                                                         │
 │  🎮 PLAY MODE (default)                                  │
-│  ├── Navigate rooms                                      │
-│  ├── Interact with objects                               │
-│  ├── Talk to characters                                  │
-│  └── Pure player experience                              │
-│                                                          │
+│  ├── Navigate rooms                                     │
+│  ├── Interact with objects                              │
+│  ├── Talk to characters                                 │
+│  └── Pure player experience                             │
+│                                                         │
 │  🎨 EDIT MODE (toggle with hotkey)                       │
-│  ├── Drag objects to reposition                          │
-│  ├── Click to edit descriptions                          │
-│  ├── Add/remove exits                                    │
-│  ├── Adjust spatial dimensions                           │
-│  └── Changes saved to adventure.json                     │
-│                                                          │
+│  ├── Drag objects to reposition                         │
+│  ├── Click to edit descriptions                         │
+│  ├── Add/remove exits                                   │
+│  ├── Adjust spatial dimensions                          │
+│  └── Changes saved to adventure.json                    │
+│                                                         │
 │  👁️ VISUALIZE MODE                                       │
-│  ├── 2D top-down map view                                │
-│  ├── Object placement grid                               │
-│  ├── Character paths and positions                       │
-│  └── Future: LLM-generated scene images                  │
-│                                                          │
+│  ├── 2D top-down map view                               │
+│  ├── Object placement grid                              │
+│  ├── Character paths and positions                      │
+│  └── Future: LLM-generated scene images                 │
+│                                                         │
 └─────────────────────────────────────────────────────────┘
 ```
 
@@ -1394,24 +1394,24 @@ MOOLLM does ALL of this with the filesystem!"
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                  THE MESSAGE SPECIFICATION STACK                 │
+│                  THE MESSAGE SPECIFICATION STACK                │
 ├─────────────────────────────────────────────────────────────────┤
-│                                                                  │
+│                                                                 │
 │  LAYER 1: EXAMPLES (Concrete Messages)                          │
 │  ├── examples/adventure-4/pub/ROOM.yml                          │
 │  ├── examples/adventure-4/characters/palm/CHARACTER.yml         │
 │  └── "Here's what an actual room/character looks like"          │
-│                                                                  │
+│                                                                 │
 │  LAYER 2: TEMPLATES (Schemas with Natural Language Slots)       │
 │  ├── skills/room/ROOM.yml.tmpl                                  │
 │  ├── skills/character/CHARACTER.yml.tmpl                        │
 │  └── "Here's what goes in each field, in human terms"           │
-│                                                                  │
+│                                                                 │
 │  LAYER 3: CARD.yml (Machine-Readable Interface)                 │
 │  ├── skills/room/CARD.yml                                       │
 │  ├── Required fields, types, constraints                        │
 │  └── "Here's what tooling needs to validate"                    │
-│                                                                  │
+│                                                                 │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -1477,7 +1477,7 @@ object:
       # Can reference: player, target, item, room
       effect:
         # Apply a buff/debuff (optional)
-        buff: {{buff_name_from_buffs_directory}}
+        buff: {{buff_name_from_buffs_directory_or_manifested_here}}
         duration: {{seconds_or_permanent}}
         
         # Display to player
@@ -1503,7 +1503,7 @@ The template IS the documentation. The slots ARE the spec. The comments ARE the 
 "YES! The game loop is a message-passing system:
 
 ```
-┌──────────┐    COMMAND     ┌──────────┐    EVENT      ┌──────────┐
+┌──────────┐    COMMAND     ┌──────────┐    EVENT       ┌──────────┐
 │  Player  │ ─────────────► │  Engine  │ ─────────────► │  World   │
 └──────────┘                └──────────┘                └──────────┘
      ▲                           │                           │
@@ -2123,8 +2123,8 @@ guard:
 # After LLM compilation:
 guard:
   allows_entry: "player has the key OR player is known to guard"
-  allows_entry_js: "(ctx) => ctx.player.inventory.includes('key')"
-  allows_entry_py: "lambda ctx: 'key' in ctx.player.inventory"
+  allows_entry_js: "(ctx) => ctx.player.inventory.includes('key') || ctx.guard.knows(ctx.player)"
+  allows_entry_py: "lambda ctx: 'key' in ctx.player.inventory or ctx.guard.knows(ctx.player)"
 ```
 
 **JAMES GOSLING:**
