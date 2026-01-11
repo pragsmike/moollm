@@ -6,6 +6,9 @@
 
 | K-Line | Why Related |
 |--------|-------------|
+| [robust-first/](../robust-first/) | Stay alive, heal |
+| [bootstrap/](../bootstrap/) | Repair on startup |
+| [honest-forget/](../honest-forget/) | Graceful degradation |
 | [session-log/](../session-log/) | Log repairs |
 | [coherence-engine/](../coherence-engine/) | Orchestrates repair |
 | [debugging/](../debugging/) | Investigate when repair fails |

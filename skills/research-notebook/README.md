@@ -7,9 +7,12 @@
 | K-Line | Why Related |
 |--------|-------------|
 | [play-learn-lift/](../play-learn-lift/) | Research-notebook IS LEARN |
+| [summarize/](../summarize/) | Summarize findings |
+| [memory-palace/](../memory-palace/) | Organize knowledge |
 | [debugging/](../debugging/) | Investigation structure |
 | [scratchpad/](../scratchpad/) | Unstructured notes |
 | [session-log/](../session-log/) | Research produces logs |
+| [sister-script/](../sister-script/) | LIFT research to automation |
 
 **Quick Links:**
 - [Full Specification](SKILL.md) — complete protocol

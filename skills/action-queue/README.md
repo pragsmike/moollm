@@ -6,11 +6,14 @@
 
 | K-Line | Why Related |
 |--------|-------------|
+| [simulation/](../simulation/) | Action queue in simulation state |
+| [character/](../character/) | Characters have queues |
 | [return-stack/](../return-stack/) | Past complements future |
 | [advertisement/](../advertisement/) | Objects suggest actions |
 | [room/](../room/) | Where actions happen |
 | [speed-of-light/](../speed-of-light/) | Multiple actions per turn |
 | [needs/](../needs/) | Needs drive action selection |
+| [designs/sims-personality-motives.md](../../designs/sims-personality-motives.md) | Original Sims design |
 
 **Full Spec:** [SKILL.md](SKILL.md)
 

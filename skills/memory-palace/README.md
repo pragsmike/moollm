@@ -7,9 +7,11 @@
 | K-Line | Why Related |
 |--------|-------------|
 | [room/](../room/) | The underlying spatial concept |
+| [character/](../character/) | Characters navigate palaces |
 | [adventure/](../adventure/) | Room + narrative quest framing |
+| [research-notebook/](../research-notebook/) | Knowledge to organize |
 | [summarize/](../summarize/) | Compress palace knowledge |
-| [files-as-state/](../plain-text/) | Filesystem IS the palace |
+| [plain-text/](../plain-text/) | Filesystem IS the palace |
 | [honest-forget/](../honest-forget/) | Archive before forgetting |
 
 **Quick Links:**

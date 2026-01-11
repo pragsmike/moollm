@@ -6,10 +6,12 @@
 
 | K-Line | Why Related |
 |--------|-------------|
+| [play-learn-lift/](../play-learn-lift/) | Scratchpad IS PLAY |
 | [research-notebook/](../research-notebook/) | Structured research |
 | [planning/](../planning/) | Structured planning |
-| [play-learn-lift/](../play-learn-lift/) | Scratchpad IS PLAY |
-| [files-as-state/](../plain-text/) | Scratch persists too |
+| [debugging/](../debugging/) | Scratchpad for debug notes |
+| [session-log/](../session-log/) | Session logs formalize scratch |
+| [plain-text/](../plain-text/) | Scratch persists too |
 
 **Quick Links:**
 - [Full Specification](SKILL.md) — complete protocol

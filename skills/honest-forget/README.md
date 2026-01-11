@@ -6,11 +6,13 @@
 
 | K-Line | Why Related |
 |--------|-------------|
+| [robust-first/](../robust-first/) | Graceful degradation |
 | [summarize/](../summarize/) | Compression mechanism |
 | [self-repair/](../self-repair/) | Triggers forgetting when needed |
 | [session-log/](../session-log/) | Log what was forgotten |
 | [memory-palace/](../memory-palace/) | Archive in palace before forgetting |
 | [postel/](../postel/) | Graceful handling of gaps |
+| [kernel/memory-management-protocol.md](../../kernel/memory-management-protocol.md) | Hot/cold architecture |
 
 **Quick Links:**
 - [Full Specification](SKILL.md) — complete protocol and schemas

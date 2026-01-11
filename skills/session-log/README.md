@@ -6,9 +6,12 @@
 
 | K-Line | Why Related |
 |--------|-------------|
+| [play-learn-lift/](../play-learn-lift/) | Sessions record PLAY |
+| [plain-text/](../plain-text/) | Sessions persist as text |
 | [character/](../character/) | Session files live in character directories |
 | [adventure/](../adventure/) | Adventure LOG.md follows session patterns |
 | [summarize/](../summarize/) | Compress old sessions |
+| [honest-forget/](../honest-forget/) | Graceful memory decay |
 | [markdown/](../markdown/) | Sessions ARE markdown |
 | [examples/adventure-4/characters/real-people/don-hopkins/sessions/](../../examples/adventure-4/characters/real-people/don-hopkins/sessions/) | Gold standard examples |
 

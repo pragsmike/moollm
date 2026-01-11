@@ -7,8 +7,12 @@
 | K-Line | Why Related |
 |--------|-------------|
 | [adventure/](../adventure/) | Debugging IS adventure + hypothesis tracking |
+| [sniffable-python/](../sniffable-python/) | Readable code aids debugging |
+| [scratchpad/](../scratchpad/) | Debug scratch notes |
 | [research-notebook/](../research-notebook/) | Investigation notes |
+| [sister-script/](../sister-script/) | Document the fix |
 | [session-log/](../session-log/) | Track all debug steps |
+| [self-repair/](../self-repair/) | Automated fixes |
 | [play-learn-lift/](../play-learn-lift/) | Debugging IS learning |
 | [constructionism/](../constructionism/) | Try → Inspect → Hypothesize → Modify |
 

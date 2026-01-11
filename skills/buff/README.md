@@ -6,10 +6,14 @@
 
 | K-Line | Why Related |
 |--------|-------------|
+| [simulation/](../simulation/) | Buffs live in simulation state |
 | [time/](../time/) | Duration measured in simulation turns |
 | [needs/](../needs/) | Buffs affect need decay |
 | [character/](../character/) | Buffs stored in character state |
+| [cat/](../cat/) | Cats can grant charm buffs |
+| [dog/](../dog/) | Dogs grant loyalty buffs |
 | [persona/](../persona/) | Personas grant buffs |
+| [yaml-jazz/](../yaml-jazz/) | Semantic buffs (LLM interprets) |
 | [examples/adventure-4/](../../examples/adventure-4/) | Grue-repellent in action |
 
 **Full Spec:** [SKILL.md](SKILL.md)

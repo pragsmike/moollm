@@ -6,10 +6,13 @@
 
 | K-Line | Why Related |
 |--------|-------------|
+| [simulation/](../simulation/) | Time state lives here |
+| [adventure/](../adventure/) | Adventures track time |
 | [buff/](../buff/) | Buff durations in turns |
 | [needs/](../needs/) | Needs decay over turns |
-| [simulation/](../simulation/) | Time state lives here |
+| [action-queue/](../action-queue/) | Actions consume time |
 | [speed-of-light/](../speed-of-light/) | Instant vs simulated time |
+| [session-log/](../session-log/) | Sessions track real time |
 
 **Quick Links:**
 - [Full Specification](SKILL.md) — complete protocol

@@ -9,7 +9,10 @@
 | [honest-forget/](../honest-forget/) | Graceful compression |
 | [session-log/](../session-log/) | Logs to summarize |
 | [memory-palace/](../memory-palace/) | Organized knowledge |
+| [play-learn-lift/](../play-learn-lift/) | LEARN includes summarizing |
+| [research-notebook/](../research-notebook/) | Research to summarize |
 | [hot.yml](../../hot.yml) | What's too hot to summarize |
+| [kernel/memory-management-protocol.md](../../kernel/memory-management-protocol.md) | Hot/cold architecture |
 
 **Quick Links:**
 - [Full Specification](SKILL.md) — complete protocol
