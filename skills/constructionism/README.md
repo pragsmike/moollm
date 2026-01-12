@@ -7,6 +7,9 @@
 | K-Line | Why Related |
 |--------|-------------|
 | [play-learn-lift/](../play-learn-lift/) | The methodology (constructionism in action) |
+| [society-of-mind/](../society-of-mind/) | Minsky + Papert -- MIT AI Lab collaboration |
+| [leela-ai/](../leela-ai/) | Constructionism applied to manufacturing |
+| [manufacturing-intelligence/](../manufacturing-intelligence/) | Reading 3: "Build to understand" |
 | [room/](../room/) | The microworld to explore |
 | [yaml-jazz/](../yaml-jazz/) | Inspectable state |
 | [adventure/](../adventure/) | Learning through narrative |

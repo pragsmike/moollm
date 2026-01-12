@@ -7,6 +7,8 @@
 | K-Line | Why Related |
 |--------|-------------|
 | [moollm/](../moollm/) | Core MOOLLM engine |
+| [leela-ai/](../leela-ai/) | Coherence engine for industrial AI |
+| [society-of-mind/](../society-of-mind/) | Orchestrates the society of agents |
 | [simulation/](../simulation/) | Simulation state management |
 | [speed-of-light/](../speed-of-light/) | Epoch-based simulation |
 | [multi-presence/](../multi-presence/) | Parallel activations |

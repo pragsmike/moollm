@@ -7,6 +7,7 @@
 | K-Line | Why Related |
 |--------|-------------|
 | [character/](../character/) | Companions are characters |
+| [society-of-mind/](../society-of-mind/) | Party as society of agents |
 | [cat/](../cat/) | Cats as party members |
 | [dog/](../dog/) | Dogs as loyal companions |
 | [needs/](../needs/) | Companions have needs |

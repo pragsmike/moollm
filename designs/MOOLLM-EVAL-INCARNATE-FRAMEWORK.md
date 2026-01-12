@@ -295,6 +295,8 @@ When you instantiate a character, **their name becomes their K-line**. "Palm" ac
 
 **MOOLLM inherits:** Names as semantic activators. `UPPER-KEBAB` protocol symbols. Character names as soul triggers.
 
+> 📚 **Full skill:** [`skills/society-of-mind/`](../skills/society-of-mind/) — agents, agencies, emergence, B-brains
+
 ### 5. Constructionism (Seymour Papert, 1980)
 
 Learning by building inspectable things. Logo. Turtle graphics. "Low floor, high ceiling, wide walls."

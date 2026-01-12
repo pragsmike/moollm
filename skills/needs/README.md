@@ -7,6 +7,7 @@
 | K-Line | Why Related |
 |--------|-------------|
 | [simulation/](../simulation/) | Needs are part of simulation state |
+| [society-of-mind/](../society-of-mind/) | Needs ARE competing agents (Minsky) |
 | [time/](../time/) | Needs decay over simulation turns |
 | [buff/](../buff/) | Some buffs affect need decay |
 | [character/](../character/) | Needs stored in character state |

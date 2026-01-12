@@ -7,6 +7,8 @@
 | K-Line | Why Related |
 |--------|-------------|
 | [hero-story/](../hero-story/) | Invoke traditions, not identities |
+| [manufacturing-intelligence/](../manufacturing-intelligence/) | Reading 5: Manufacturing Consent (Chomsky) |
+| [society-of-mind/](../society-of-mind/) | Censors and suppressors (Minsky) |
 | [incarnation/](../incarnation/) | Characters write their own souls |
 | [mind-mirror/](../mind-mirror/) | Transparent personality measurement |
 | [character/](../character/) | Ethics for character simulation |

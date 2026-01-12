@@ -829,5 +829,14 @@
 
 > *"They should call them Astrillogical Signs!"* -- Don Hopkins, 2017. Zero code, maximum perceived effect.
 
-**`(this)`** Add sims-astrology.md: The Astrillogical Effect
+**`e9f462a`** Add sims-astrology.md: The Astrillogical Effect
 > 1997: The Sims zodiac had zero behavioral code -- testers reported it was "too strong." 2026: LLM zodiac experiment rediscovers same phenomenon. K-lines explain both. One voice is the wrong number -- adversarial committees beat mode-collapse. Leary's MIND MIRROR meets gwern's critique. Deep links to Palm, Bartender, adventure-uplift. 🔮♐🎭
+
+---
+
+### Era 25: The Full Team
+
+> *Manufacturing Intelligence requires manufacturing intelligences.*
+
+**`(this)`** Add full Leela AI team to skills
+> Henry Minsky (CTO), Cyrus Shaoul (Chief Evangelist), Milan Singh Minsky (VP Product), Sheung Li (VP Applications), Steve Kommrusch (Senior AI Research). Plus Don Hopkins. Society of Mind runs in the company too. 👥🏭🧠

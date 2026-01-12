@@ -8,6 +8,7 @@
 |--------|-------------|
 | [card/](../card/) | Cards advertise abilities |
 | [object/](../object/) | Objects advertise actions |
+| [society-of-mind/](../society-of-mind/) | Agents score actions (autonomy algorithm) |
 | [room/](../room/) | Where objects live and advertise |
 | [action-queue/](../action-queue/) | Queuing selected actions |
 | [coherence-engine/](../coherence-engine/) | Evaluates and orchestrates |

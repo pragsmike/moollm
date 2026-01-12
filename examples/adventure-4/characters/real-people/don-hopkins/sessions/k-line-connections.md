@@ -15,7 +15,7 @@ Eight luminaries have been summoned as **[Hero-Story](../../../../../skills/hero
 
 | Familiar | Their K-Line | Why They're Here |
 |----------|--------------|------------------|
-| 🧠 **Marvin Minsky** | [k-lines](../../../../../skills/k-lines/), society-of-mind | He INVENTED K-lines. This is his maze. |
+| 🧠 **Marvin Minsky** | [k-lines](../../../../../skills/k-lines/), [society-of-mind](../../../../../skills/society-of-mind/) | He INVENTED K-lines. This is his maze. |
 | 🔗 **Ted Nelson** | hypertext, backlinks, intertwingularity | Two-way links are his gospel |
 | 🎬 **James Burke** | connections, narration | He'll narrate our traversals |
 | 🐢 **Seymour Papert** | [constructionism](../../../../../skills/constructionism/), microworlds | Learning by building |

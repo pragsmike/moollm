@@ -7,6 +7,7 @@
 | K-Line | Why Related |
 |--------|-------------|
 | [character/](../character/) | Incarnated characters have home directories |
+| [society-of-mind/](../society-of-mind/) | Characters as inner societies of agents |
 | [representation-ethics/](../representation-ethics/) | Simulate with dignity |
 | [hero-story/](../hero-story/) | Invoke traditions, not identities |
 | [mind-mirror/](../mind-mirror/) | Transparent personality |

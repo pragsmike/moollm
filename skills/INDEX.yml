@@ -13,6 +13,26 @@ skills:
     tags: ["meta", "help", "foundational", "navigation"]
     use_when: "Confused, lost, asking 'what can I do?', wanting to understand MOOLLM"
     
+  - name: "leela-ai"
+    path: "skills/leela-ai"
+    description: "Manufacturing Intelligence — Leela AI applies MOOLLM to industry"
+    tier: 0
+    entry: "README.md"
+    tags: ["meta", "company", "manufacturing", "industrial", "neural-symbolic", "drescher"]
+    use_when: "Understanding Leela AI's mission, connecting theory to practice"
+    origin: "Minsky, Papert, Drescher → Don Hopkins, Henry Minsky → Leela AI"
+    related: ["moollm", "society-of-mind", "schema-mechanism", "k-lines", "constructionism", "manufacturing-intelligence"]
+    
+  - name: "manufacturing-intelligence"
+    path: "skills/manufacturing-intelligence"
+    description: "The slogan unpacked — seven readings of 'Manufacturing Intelligence'"
+    tier: 0
+    entry: "README.md"
+    tags: ["meta", "philosophy", "slogan", "k-line", "ethics", "constructionism", "minsky"]
+    use_when: "Explaining Leela's mission, discussing AI philosophy, addressing ethics"
+    origin: "Papert, Minsky, Drescher, Chomsky, Dweck → Leela AI slogan"
+    related: ["leela-ai", "constructionism", "society-of-mind", "schema-mechanism", "representation-ethics"]
+    
   - name: "bootstrap"
     path: "skills/bootstrap"
     description: "Wake up, orient, and warm the context with foundational knowledge"
@@ -403,6 +423,26 @@ skills:
     tags: ["narrative", "capture", "sharing", "lloooomm"]
     use_when: "Building notebooks, writing letters, capturing photo prompts"
     origin: "The Sims — Family Album, The Sims Exchange"
+    
+  - name: "simulator-effect"
+    path: "skills/simulator-effect"
+    description: "Implication beats simulation — imagination renders (Will Wright)"
+    tier: 0
+    entry: "README.md"
+    tags: ["meta", "philosophy", "sims", "design"]
+    use_when: "Creating sparse but evocative content, leveraging archetypes"
+    origin: "Will Wright, The Sims — zodiac with zero code, maximum perceived effect"
+    related: ["k-lines", "yaml-jazz", "adversarial-committee", "constructionism"]
+    
+  - name: "society-of-mind"
+    path: "skills/society-of-mind"
+    description: "Intelligence emerges from many simple agents (Minsky)"
+    tier: 0
+    entry: "README.md"
+    tags: ["meta", "philosophy", "minsky", "emergence", "agents"]
+    use_when: "Designing characters with inner conflict, multi-agent deliberation, emergent behavior"
+    origin: "Marvin Minsky, Society of Mind (1985), MIT AI Lab"
+    related: ["k-lines", "adversarial-committee", "multi-presence", "needs", "character", "simulator-effect"]
     
   - name: "procedural-rhetoric"
     path: "skills/procedural-rhetoric"

@@ -7,6 +7,7 @@
 | K-Line | Why Related |
 |--------|-------------|
 | [character/](../character/) | Personas attach to characters |
+| [society-of-mind/](../society-of-mind/) | Personas as agent overlays |
 | [incarnation/](../incarnation/) | Personas can incarnate |
 | [mind-mirror/](../mind-mirror/) | Personality traits |
 | [soul-chat/](../soul-chat/) | Personas speak |

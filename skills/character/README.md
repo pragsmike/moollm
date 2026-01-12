@@ -8,6 +8,7 @@
 |--------|-------------|
 | [cat/](../cat/) | Feline character patterns |
 | [dog/](../dog/) | Canine character patterns |
+| [society-of-mind/](../society-of-mind/) | Characters ARE inner societies |
 | [persona/](../persona/) | Identity layers on top of character |
 | [room/](../room/) | Where characters live |
 | [buff/](../buff/) | Temporary effects on characters |

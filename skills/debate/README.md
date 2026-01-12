@@ -7,6 +7,7 @@
 | K-Line | Why Related |
 |--------|-------------|
 | [moollm/](../moollm/) | Many-voiced IS MOOLLM |
+| [society-of-mind/](../society-of-mind/) | Agents arguing toward wisdom |
 | [adversarial-committee/](../adversarial-committee/) | Opposing propensities |
 | [roberts-rules/](../roberts-rules/) | Parliamentary procedure |
 | [rubric/](../rubric/) | Scoring criteria |

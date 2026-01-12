@@ -7,6 +7,7 @@
 | K-Line | Why Related |
 |--------|-------------|
 | [adventure/](../adventure/) | Concrete type for narrative exploration |
+| [society-of-mind/](../society-of-mind/) | Simulation as society of agents |
 | [time/](../time/) | Turn mechanics |
 | [party/](../party/) | Party and selection state |
 | [character/](../character/) | Player entities |

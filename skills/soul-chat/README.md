@@ -7,6 +7,7 @@
 | K-Line | Why Related |
 |--------|-------------|
 | [moollm/](../moollm/) | Many-voiced IS MOOLLM |
+| [society-of-mind/](../society-of-mind/) | Objects as agents that speak |
 | [character/](../character/) | Characters speak |
 | [persona/](../persona/) | Personas give voice |
 | [room/](../room/) | Rooms can speak |
