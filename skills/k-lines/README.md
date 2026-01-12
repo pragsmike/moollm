@@ -7,6 +7,9 @@
 | K-Line | Why Related |
 |--------|-------------|
 | [moollm/](../moollm/) | Master K-Lines index — the mothership |
+| [leela-ai/](../leela-ai/) | K-lines power Leela's industrial inference |
+| [manufacturing-intelligence/](../manufacturing-intelligence/) | The phrase IS a K-line -- seven readings |
+| [society-of-mind/](../society-of-mind/) | K-lines ARE Minsky's memory mechanism |
 | [skill/](../skill/) | Skills ARE K-line factories |
 | [bootstrap/](../bootstrap/) | All K-lines activated on boot |
 | [yaml-jazz/](../yaml-jazz/) | Comments carry meaning — semantic YAML interpretation |

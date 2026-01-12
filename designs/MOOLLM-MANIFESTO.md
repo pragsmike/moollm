@@ -120,7 +120,7 @@ Each character inherits from real traditions ([hero-story](../skills/hero-story/
 
 Stories that survive cross-examination are more robust than the statistical center.
 
-> 📚 See: [adversarial-committee/](../skills/adversarial-committee/), [debate/](../skills/debate/)
+> 📚 See: [society-of-mind/](../skills/society-of-mind/), [adversarial-committee/](../skills/adversarial-committee/), [debate/](../skills/debate/)
 
 ---
 
@@ -147,8 +147,8 @@ flowchart LR
 
 | Pioneer | Gift to MOOLLM |
 |---------|----------------|
-| **Marvin Minsky** | [K-lines](../skills/k-lines/) — names as activation vectors |
-| **Seymour Papert** | [Constructionism](../skills/constructionism/) — learn by building |
+| **Marvin Minsky** | [Society of Mind](../skills/society-of-mind/) — agents, agencies, [K-lines](../skills/k-lines/) |
+| **Seymour Papert** | [Constructionism](../skills/constructionism/) — learn by building (Minsky's collaborator) |
 | **Will Wright** | [Needs](../skills/needs/), [advertisements](../skills/advertisement/) — The Sims DNA |
 | **Dave Ungar** | [Prototypes](../skills/prototype/) — clone, don't instantiate |
 | **Pavel Curtis** | [Rooms](../skills/room/) — directories as spaces |

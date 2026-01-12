@@ -7,6 +7,7 @@
 | K-Line | Why Related |
 |--------|-------------|
 | [card/](../card/) | What gets multi-instantiated |
+| [society-of-mind/](../society-of-mind/) | Multiple agents active simultaneously |
 | [character/](../character/) | Characters in multiple places |
 | [room/](../room/) | Where activations live |
 | [prototype/](../prototype/) | Clone and override pattern |

@@ -7,6 +7,7 @@
 | K-Line | Why Related |
 |--------|-------------|
 | [moollm/](../moollm/) | Many-voiced IS MOOLLM |
+| [society-of-mind/](../society-of-mind/) | Committee IS a society deliberating |
 | [debate/](../debate/) | Structured deliberation |
 | [roberts-rules/](../roberts-rules/) | Parliamentary procedure |
 | [rubric/](../rubric/) | Scoring criteria |

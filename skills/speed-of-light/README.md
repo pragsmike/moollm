@@ -7,6 +7,7 @@
 | K-Line | Why Related |
 |--------|-------------|
 | [moollm/](../moollm/) | Core MOOLLM principle |
+| [society-of-mind/](../society-of-mind/) | Many agents in one call (Minsky) |
 | [bootstrap/](../bootstrap/) | Speed-of-light activated on boot |
 | [simulation/](../simulation/) | Many turns in simulation |
 | [multi-presence/](../multi-presence/) | Parallel activations in one call |

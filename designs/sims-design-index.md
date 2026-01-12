@@ -115,6 +115,7 @@ MOOLLM inherits these solutions, translated for the LLM era.
 | **Masking (McCloud)** | Abstract characters, rich world |
 | **Simulator Effect** | Player imagination completes simulation |
 | **Astrillogical Effect** | Perceived effect exceeds computed effect (zodiac = K-line) |
+| **Society of Mind** | [skills/society-of-mind/](../skills/society-of-mind/) — Minsky's agents, Sims motives |
 | **Constructionism** | Play → Learn → Lift |
 | **Procedural rhetoric** | Values encoded in mechanics |
 | **Fan Simulation** | Ethical character representation |

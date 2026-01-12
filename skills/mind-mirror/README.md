@@ -7,6 +7,7 @@
 | K-Line | Why Related |
 |--------|-------------|
 | [character/](../character/) | Characters have personalities |
+| [society-of-mind/](../society-of-mind/) | B-brain self-observation (Minsky) |
 | [persona/](../persona/) | Personality layers |
 | [cat/](../cat/) | Cat personality traits |
 | [dog/](../dog/) | Dog personality traits |

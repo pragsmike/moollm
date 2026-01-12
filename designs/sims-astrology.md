@@ -322,6 +322,8 @@ When simulating real people, the [representation-ethics skill](../skills/represe
 
 ### Theory & Framework
 - [K-lines skill](../skills/k-lines/) -- Names as semantic activation vectors
+- [Society of Mind skill](../skills/society-of-mind/) -- K-lines origin, agents, agencies, emergence
+- [Simulator Effect skill](../skills/simulator-effect/) -- Implication beats simulation
 - [MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#the-simulator-effect](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#the-simulator-effect) -- Implication principle
 - [MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#4-k-lines--society-of-mind-marvin-minsky-mit-1980](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#4-k-lines--society-of-mind-marvin-minsky-mit-1980) -- K-lines theory
 - [sims-personality-motives.md](./sims-personality-motives.md) -- Full Sims personality system

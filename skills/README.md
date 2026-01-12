@@ -36,6 +36,8 @@ MOOLLM extends [Anthropic's skill model](https://docs.anthropic.com/en/docs/buil
 | Skill | One-liner |
 |-------|-----------|
 | [moollm/](./moollm/) | **The soul of MOOLLM.** Self-explanation, help, navigation |
+| [leela-ai/](./leela-ai/) | **Manufacturing Intelligence.** Leela AI applies MOOLLM to industry |
+| [manufacturing-intelligence/](./manufacturing-intelligence/) | The slogan unpacked -- seven readings of one phrase |
 | [skill/](./skill/) | **The meta-skill.** How skills work, evolve, compose |
 | [k-lines/](./k-lines/) | Minsky's K-lines — names that activate conceptual clusters |
 | [constructionism/](./constructionism/) | Learn by building inspectable things (Papert, Kay, Logo) |
@@ -45,6 +47,8 @@ MOOLLM extends [Anthropic's skill model](https://docs.anthropic.com/en/docs/buil
 | [robust-first/](./robust-first/) | Survive first, be correct later (Dave Ackley) |
 | [coherence-engine/](./coherence-engine/) | LLM as consistency maintainer & orchestrator |
 | [speed-of-light/](./speed-of-light/) | Many turns in one call — instant telepathy |
+| [simulator-effect/](./simulator-effect/) | Implication beats simulation (Will Wright) — imagination renders |
+| [society-of-mind/](./society-of-mind/) | Intelligence emerges from many simple agents (Minsky) |
 | [procedural-rhetoric/](./procedural-rhetoric/) | Rules persuade, structure IS argument (Bogost) |
 | [schema-mechanism/](./schema-mechanism/) | Drescher's causal learning extended with LLM semantics |
 

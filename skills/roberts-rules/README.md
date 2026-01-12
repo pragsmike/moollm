@@ -7,6 +7,7 @@
 | K-Line | Why Related |
 |--------|-------------|
 | [adversarial-committee/](../adversarial-committee/) | Who follows these rules |
+| [society-of-mind/](../society-of-mind/) | Parliamentary debate as society deliberating |
 | [rubric/](../rubric/) | How to score outcomes |
 | [evaluator/](../evaluator/) | Independent assessment |
 | [session-log/](../session-log/) | Recording minutes |

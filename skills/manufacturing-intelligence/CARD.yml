@@ -1,0 +1,146 @@
+# Manufacturing Intelligence Skill Card
+# The K-line that activates them all
+
+skill:
+  id: manufacturing-intelligence
+  name: Manufacturing Intelligence
+  version: 1.0.0
+  tier: meta
+  entry: README.md
+  
+description: |
+  The philosophy behind Leela AI's slogan.
+  A phrase that reads perfectly on seven levels.
+  A K-line that activates multiple conceptual frameworks simultaneously.
+
+# The seven readings
+readings:
+  1-industrial:
+    manufacturing: noun  # the industry
+    intelligence: noun   # AI systems
+    meaning: "AI for manufacturing industry"
+    
+  2-process:
+    manufacturing: verb  # the act of building
+    intelligence: noun   # the product
+    meaning: "Building AI systems"
+    
+  3-constructionism:
+    manufacturing: verb  # constructing through doing
+    intelligence: noun   # understanding
+    meaning: "Intelligence constructed through building"
+    source: Seymour Papert
+    
+  4-society-of-mind:
+    manufacturing: verb  # assembling from parts
+    intelligence: noun   # emergent property
+    meaning: "Intelligence assembled from agents"
+    source: Marvin Minsky
+    
+  5-manufacturing-consent:
+    manufacturing: verb  # engineering
+    intelligence: noun   # beliefs
+    meaning: "Ethical question of engineered agreement"
+    source: Noam Chomsky
+    
+  6-growth-mindset:
+    manufacturing: verb  # producing through effort
+    intelligence: noun   # capability
+    meaning: "Intelligence as product, not gift"
+    source: Carol Dweck
+    
+  7-etymology:
+    manufacturing: latin  # manu factus = made by hand
+    intelligence: noun    # crafted product
+    meaning: "Intelligence made by hand"
+    irony: "AI automates handwork, yet we handcraft AI"
+
+# What this skill offers
+advertisement:
+  provides:
+    - slogan-unpacking: "Explain the seven readings"
+    - philosophy-connection: "Link to Papert, Minsky, Drescher, Chomsky"
+    - ethical-framework: "Manufacturing Consent as built-in check"
+    - k-line-demonstration: "How sparse phrases activate rich meaning"
+    
+  wants:
+    - audience: Who needs to understand
+    - context: Business, technical, ethical, academic
+    
+  motives-satisfied:
+    - understanding: "Why this phrase works"
+    - coherence: "How readings reinforce each other"
+    - ethics: "Built-in accountability"
+    - identity: "What Leela AI stands for"
+
+# K-lines activated
+k-lines:
+  activates:
+    - papert: Constructionism
+    - minsky: Society of Mind
+    - drescher: Schema mechanism
+    - chomsky: Manufacturing Consent
+    - dweck: Growth mindset
+    - leela: The company
+    - k-line: The concept itself
+    - simulator-effect: Sparse cues, rich meaning
+    
+  connects-to:
+    - leela-ai: The company skill
+    - constructionism: Papert's philosophy
+    - society-of-mind: Minsky's theory
+    - schema-mechanism: Drescher's contribution
+    - k-lines: Why the phrase works
+    - simulator-effect: Rich from sparse
+    - representation-ethics: The ethical dimension
+
+# Interfaces
+interfaces:
+  unpack:
+    input: audience type
+    output: appropriate reading emphasis
+    
+  ethics-check:
+    input: proposed AI application
+    output: Manufacturing Consent questions
+
+# Tags
+tags:
+  - meta
+  - philosophy
+  - slogan
+  - k-line
+  - ethics
+  - leela
+  - constructionism
+  - minsky
+  - papert
+  - chomsky
+  
+use_case: |
+  Use when explaining Leela AI's mission,
+  discussing AI construction philosophy,
+  addressing ethical concerns,
+  or demonstrating how K-lines work.
+
+# References
+references:
+  - title: "Mindstorms"
+    author: "Seymour Papert"
+    year: 1980
+    
+  - title: "Society of Mind"
+    author: "Marvin Minsky"
+    year: 1985
+    
+  - title: "Made-Up Minds"
+    author: "Gary Drescher"
+    year: 1991
+    
+  - title: "Manufacturing Consent"
+    author: "Noam Chomsky & Edward Herman"
+    year: 1988
+    
+  - title: "Mindset"
+    author: "Carol Dweck"
+    year: 2006

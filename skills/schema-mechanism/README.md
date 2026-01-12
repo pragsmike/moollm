@@ -7,6 +7,9 @@
 | K-Line | Why Related |
 |--------|-------------|
 | [constructionism/](../constructionism/) | Papert's educational philosophy |
+| [society-of-mind/](../society-of-mind/) | Drescher extended Minsky's agents |
+| [leela-ai/](../leela-ai/) | Leela applies Drescher to manufacturing |
+| [manufacturing-intelligence/](../manufacturing-intelligence/) | Drescher in the lineage |
 | [play-learn-lift/](../play-learn-lift/) | Schema learning as methodology |
 | [planning/](../planning/) | Dijkstra through schema graph |
 | [yaml-jazz/](../yaml-jazz/) | YAML provides skeleton, LLM provides soul |

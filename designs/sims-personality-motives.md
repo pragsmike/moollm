@@ -500,6 +500,7 @@ The character grows through play.
 
 ## See Also
 
+- [skills/society-of-mind/](../skills/society-of-mind/) — Minsky's theory: Sims motives ARE competing agents
 - [sims-astrology.md](./sims-astrology.md) — The Astrillogical Effect: zodiac as K-line
 - [MOOLLM-EVAL-INCARNATE-FRAMEWORK.md](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#4-k-lines--society-of-mind-marvin-minsky-mit-1980) — K-lines and identity
 - [skills/needs/](../skills/needs/) — Need modeling
