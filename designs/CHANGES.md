@@ -844,5 +844,8 @@
 **`7d25b37`** Add SKILL.md front matter, remove FPS claims
 > Six SKILL.md files now have proper YAML front matter (leela-ai, manufacturing-intelligence, society-of-mind, simulator-effect, incarnation, logistic-container). Removed specific FPS claims from Leela examples -- no promises we can't keep. 📋✅
 
-**`(this)`** Add moollm tag to all skills, document PDA three-layer architecture
+**`737ee69`** Add moollm tag to all skills, document PDA three-layer architecture
 > Every SKILL.md now tagged with moollm -- 37 files branded. Leela's PDA documented as third LLM layer atop symbolic SQL: generate, perform, interpret, explain, visualize, remember. Neural at the surface, symbolic in the protocol. 🏷️🏭
+
+**`(this)`** Add tags to 45 remaining SKILL.md files
+> All 83 SKILL.md files now have proper YAML front matter with moollm tag. The skill catalog is complete and greppable. 📋✅
