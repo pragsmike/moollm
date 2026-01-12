@@ -2,6 +2,22 @@
 
 > *"If you can build it, you can understand it. If you can inspect it, you can trust it."*
 
+## MOOLLM K-Lines
+
+| K-Line | Why Related |
+|--------|-------------|
+| [play-learn-lift/](../play-learn-lift/) | The methodology (constructionism in action) |
+| [society-of-mind/](../society-of-mind/) | Minsky + Papert -- MIT AI Lab collaboration |
+| [leela-ai/](../leela-ai/) | Constructionism applied to manufacturing |
+| [manufacturing-intelligence/](../manufacturing-intelligence/) | Reading 3: "Build to understand" |
+| [room/](../room/) | The microworld to explore |
+| [yaml-jazz/](../yaml-jazz/) | Inspectable state |
+| [adventure/](../adventure/) | Learning through narrative |
+| [skill/](../skill/) | Procedures → Skills (Papert's path) |
+| [schema-mechanism/](../schema-mechanism/) | Drescher's causal learning |
+| [debugging/](../debugging/) | Debug cycle = learning cycle |
+| [kernel/constitution-core.md](../../kernel/constitution-core.md) | Files-as-state IS constructionist |
+
 **Full Spec:** [SKILL.md](SKILL.md)
 
 ## Overview
@@ -37,12 +53,6 @@ Try → Inspect → Hypothesize → Modify → Understand
 
 The system rewards curiosity with knowledge.
 
-## Related Skills
-
-- [play-learn-lift/](../play-learn-lift/) — The methodology
-- [room/](../room/) — The microworld to explore
-- [yaml-jazz/](../yaml-jazz/) — Inspectable state
-- [adventure/](../adventure/) — Learning through narrative
 
 ## Tools Required
 

@@ -2,6 +2,21 @@
 
 > The LLM doesn't just generate text — it maintains consistency across a distributed world
 
+## MOOLLM K-Lines
+
+| K-Line | Why Related |
+|--------|-------------|
+| [moollm/](../moollm/) | Core MOOLLM engine |
+| [leela-ai/](../leela-ai/) | Coherence engine for industrial AI |
+| [society-of-mind/](../society-of-mind/) | Orchestrates the society of agents |
+| [simulation/](../simulation/) | Simulation state management |
+| [speed-of-light/](../speed-of-light/) | Epoch-based simulation |
+| [multi-presence/](../multi-presence/) | Parallel activations |
+| [robust-first/](../robust-first/) | Stay alive, heal |
+| [self-repair/](../self-repair/) | Fix inconsistencies |
+| [postel/](../postel/) | Resolve ambiguity charitably |
+| [plain-text/](../plain-text/) | Distributed state in files |
+
 **Quick Links:**
 - [Full Specification](SKILL.md) — complete protocol
 
@@ -34,8 +49,3 @@ Not just a chatbot. Not just a code generator. A **coherence engine** that:
 - Consistency checking (rules and schemas)
 - Orchestration (multi-agent conversations)
 
-## Related Skills
-
-- [speed-of-light](../speed-of-light/) — epoch-based simulation
-- [multi-presence](../multi-presence/) — parallel activations
-- [self-repair](../self-repair/) — fix inconsistencies

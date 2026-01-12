@@ -2,10 +2,28 @@
 
 > "No single story is true — but the ensemble approximates actionable wisdom."
 
+## MOOLLM K-Lines
+
+| K-Line | Why Related |
+|--------|-------------|
+| [moollm/](../moollm/) | Many-voiced IS MOOLLM |
+| [society-of-mind/](../society-of-mind/) | Committee IS a society deliberating |
+| [debate/](../debate/) | Structured deliberation |
+| [roberts-rules/](../roberts-rules/) | Parliamentary procedure |
+| [rubric/](../rubric/) | Scoring criteria |
+| [evaluator/](../evaluator/) | Independent assessment |
+| [soul-chat/](../soul-chat/) | Multi-agent conversation |
+| [persona/](../persona/) | Committee members have personas |
+| [speed-of-light/](../speed-of-light/) | All debate in one call |
+| [designs/mike-gallaher-ideas.md](../../designs/mike-gallaher-ideas.md) | Mike Gallaher's methodology |
+
 **Quick Links:**
 - [Full Specification](SKILL.md) — complete protocol
+<<<<<<< HEAD
 - [Selection Guide](SELECTION.md) — smart committee selection
 - [Background](../../designs/mike-gallaher-ideas.md) — Mike Gallaher's methodology
+=======
+>>>>>>> upstream/main
 
 ## Overview
 
@@ -51,6 +69,7 @@ Adversarial debate performs **structured perturbation of the narrative space** �
 
 See: [designs/mike-gallaher-ideas.md](../../designs/mike-gallaher-ideas.md)
 
+<<<<<<< HEAD
 ## Quick Example
 
 ```yaml
@@ -72,3 +91,5 @@ FORM-SMART name="Strategy Review" pool="characters/" strategy="core" size=5
 - [evaluator](../evaluator/) — Independent assessment
 - [soul-chat](../soul-chat/) — Multi-agent conversation
 - [speed-of-light](../speed-of-light/) — Instant simulation
+=======
+>>>>>>> upstream/main

@@ -6,7 +6,8 @@ tier: 1
 allowed-tools:
   - read_file
   - write_file
-related: [postel, self-repair, coherence-engine]
+related: [moollm, self-repair, postel, coherence-engine, honest-forget]
+tags: [moollm, survival, resilience, graceful, degradation]
 ---
 
 # Robust-First

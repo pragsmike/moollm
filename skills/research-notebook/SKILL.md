@@ -6,7 +6,8 @@ tier: 1
 allowed-tools:
   - read_file
   - write_file
-related: [play-learn-lift, debugging, session-log, memory-palace, adversarial-committee, rubric]
+related: [play-learn-lift, summarize, memory-palace, debugging, scratchpad, session-log, sister-script]
+tags: [moollm, research, investigation, sources, findings]
 ---
 
 # Research Notebook

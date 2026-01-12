@@ -7,7 +7,8 @@ allowed-tools:
   - read_file
   - write_file
   - list_dir
-related: [adversarial-committee, roberts-rules, rubric, evaluator, card, speed-of-light, soul-chat]
+related: [moollm, society-of-mind, adversarial-committee, roberts-rules, rubric, evaluator, soul-chat, persona, card, speed-of-light]
+tags: [moollm, deliberation, multi-agent, decision, persuasion]
 templates:
   - file: DEBATE.yml.tmpl
     purpose: Debate session state

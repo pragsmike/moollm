@@ -6,7 +6,8 @@ tier: 1
 allowed-tools:
   - read_file
   - write_file
-related: [empathic-templates, postel, speed-of-light, yaml-jazz]
+related: [moollm, empathic-templates, postel, sniffable-python, speed-of-light, yaml-jazz, coherence-engine]
+tags: [moollm, intent, interpretation, code-generation, languages]
 ---
 
 # Empathic Expressions

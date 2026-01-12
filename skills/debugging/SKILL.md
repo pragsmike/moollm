@@ -10,7 +10,8 @@ allowed-tools:
   - search_replace
   - run_terminal_cmd
   - grep
-related: [adventure, session-log, research-notebook, play-learn-lift]
+related: [adventure, sniffable-python, scratchpad, research-notebook, sister-script, session-log, self-repair, play-learn-lift, constructionism]
+tags: [moollm, development, investigation, hypothesis, testing]
 inputs:
   symptom:
     type: string

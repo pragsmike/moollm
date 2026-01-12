@@ -2,6 +2,21 @@
 
 > *"Objects all the way down. No classes. Just clones and delegation."*
 
+## MOOLLM K-Lines
+
+| K-Line | Why Related |
+|--------|-------------|
+| [skill/](../skill/) | Contains Delegation Object Protocol |
+| [room/](../room/) | Rooms as prototype instances |
+| [container/](../container/) | Containers inherit like prototypes |
+| [character/](../character/) | Characters as prototype instances |
+| [card/](../card/) | Cards as cloneable capabilities |
+| [simulation/](../simulation/) | Abstract → concrete inheritance |
+| [constructionism/](../constructionism/) | Learning by cloning and modifying |
+| [return-stack/](../return-stack/) | Self's dynamic deoptimization |
+| [debugging/](../debugging/) | Stack traces on demand |
+| [skill/delegation-object-protocol.md](../skill/delegation-object-protocol.md) | Self-like inheritance |
+
 The philosophy behind Self, JavaScript prototypes, and MOOLLM inheritance.
 
 ## The Core Insight
@@ -26,7 +41,7 @@ MOOLLM uses prototype-based inheritance everywhere:
 
 ## The Self Language
 
-Created by **David Ungar** and **Randall Smith** at Xerox PARC (1987), later Stanford and Sun.
+Created by **David Ungar** and **Randall Smith** at Stanford (1987), continued at Sun Microsystems.
 
 Key ideas:
 - **Everything is an object** (including methods)
@@ -37,14 +52,6 @@ Key ideas:
 
 > *"Self is a network, not a node."* — David Ungar
 
-## Related Skills
-
-| Skill | Connection |
-|-------|------------|
-| [skill/](../skill/) | Contains the Delegation Object Protocol |
-| [character/](../character/) | Characters as prototype instances |
-| [card/](../card/) | Cards as cloneable capabilities |
-| [constructionism/](../constructionism/) | Learning by cloning and modifying |
 
 ## Navigation
 

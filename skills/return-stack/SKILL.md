@@ -6,7 +6,8 @@ tier: 1
 allowed-tools:
   - read_file
   - write_file
-related: [room, action-queue, adventure]
+related: [room, adventure, character, memory-palace, action-queue, card, session-log, prototype, debugging]
+tags: [moollm, navigation, history, breadcrumbs, continuations, deoptimization, introspection]
 ---
 
 # Return Stack
@@ -213,6 +214,50 @@ navigation:
 
 ---
 
+## Dynamic Deoptimization
+
+The Self programming language (source of our prototype inheritance) pioneered **dynamic deoptimization**: aggressively inlining code for performance, then reconstructing the "logical" call stack on demand when debugging.
+
+The LLM does this naturally for narrative:
+
+| Self | MOOLLM |
+|------|--------|
+| Inlined bytecode | Flattened conversation |
+| Deoptimized frames | Reconstructed causality |
+| Breakpoint trigger | "How did we get here?" |
+| Stack trace | Causal chain from evidence |
+
+**The stack isn't explicitly maintained, but it's recoverable.**
+
+### How It Works
+
+When you ask for history, the LLM examines:
+
+```yaml
+evidence_sources:
+  - session_log: "Append-only narrative trail"
+  - room_state: "Accumulated changes"
+  - character_location: "Current position"
+  - file_timestamps: "Order of modifications"
+  - chat_context: "Recent decisions"
+```
+
+And synthesizes a virtual stack trace:
+
+```
+Deduced navigation:
+1. lobby (start)
+2. workshop (examining blueprints)
+3. storage (found locked chest)
+4. workshop (returned for key) ← BACK
+5. storage (unlocked chest)
+6. archive (following map) ← current
+```
+
+**This is introspection without instrumentation** — the same insight that made Self's debugger magical.
+
+---
+
 ## Dovetails With
 
 - [Action Queue](../action-queue/) — **The complement**: stack = past, queue = future
@@ -220,6 +265,8 @@ navigation:
 - [Coherence Engine](../coherence-engine/) — Tracks navigation state
 - [Adventure](../adventure/) — Narrative exploration
 - [Session Log](../session-log/) — Records the journey
+- [Prototype](../prototype/) — Self language heritage
+- [Debugging](../debugging/) — Stack traces on demand
 
 ---
 

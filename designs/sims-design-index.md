@@ -1,6 +1,7 @@
 # The Sims → MOOLLM Design Index
 
 > *How The Sims architecture influences MOOLLM*
+
 > *Chris Trottier, Will Wright, Jim Mackraz, Jamie Doornbos, Eric Bowman, Patrick J Barrett III, Don Hopkins → MOOLLM*
 
 ## The Inheritance
@@ -24,6 +25,7 @@ MOOLLM inherits these solutions, translated for the LLM era.
 | [sims-maxis-requirements.md](./sims-maxis-requirements.md) | Seven Points of Sim | Core design principles |
 | [sims-happy-friends-home.md](./sims-happy-friends-home.md) | Project X proposal | Three Pillars, plug-ins |
 | [sims-find-best-action.md](./sims-find-best-action.md) | Autonomy algorithm | Action queue, advertisements |
+| [sims-astrology.md](./sims-astrology.md) | Astrillogical Signs discovery | K-lines, Simulator Effect, implication over simulation |
 
 ### System-Specific Documents
 
@@ -112,6 +114,8 @@ MOOLLM inherits these solutions, translated for the LLM era.
 | **Same-sex relationships** | No identity constraints |
 | **Masking (McCloud)** | Abstract characters, rich world |
 | **Simulator Effect** | Player imagination completes simulation |
+| **Astrillogical Effect** | Perceived effect exceeds computed effect (zodiac = K-line) |
+| **Society of Mind** | [skills/society-of-mind/](../skills/society-of-mind/) — Minsky's agents, Sims motives |
 | **Constructionism** | Play → Learn → Lift |
 | **Procedural rhetoric** | Values encoded in mechanics |
 | **Fan Simulation** | Ethical character representation |
@@ -272,7 +276,7 @@ MOOLLM adds what Sims couldn't have:
 
 - [MOOLLM-EVAL-INCARNATE-FRAMEWORK.md](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#simcity-the-sims-and-the-simulator-effect) — Full Sims analysis
 - [The Simulator Effect](./MOOLLM-EVAL-INCARNATE-FRAMEWORK.md#the-simulator-effect) — Will Wright's insight
-- [don-session-1.md](../examples/adventure-4/sessions/don-session-1.md) — Sims principles in action
+- [marathon-session.md](../examples/adventure-4/characters/real-people/don-hopkins/sessions/marathon-session.md) — Sims principles in action
 
 ---
 

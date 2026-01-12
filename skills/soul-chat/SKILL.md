@@ -6,7 +6,8 @@ tier: 1
 allowed-tools:
   - read_file
   - write_file
-related: [character, room, yaml-jazz, adventure, adversarial-committee, speed-of-light]
+related: [moollm, society-of-mind, character, persona, room, card, mind-mirror, yaml-jazz, adversarial-committee, speed-of-light]
+tags: [moollm, dialogue, voice, alive, multi-agent]
 ---
 
 # Soul Chat

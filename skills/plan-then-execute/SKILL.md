@@ -6,7 +6,8 @@ tier: 1
 allowed-tools:
   - read_file
   - write_file
-related: [planning, sister-script, session-log]
+related: [planning, action-queue, representation-ethics]
+tags: [moollm, execution, security, approval, frozen]
 ---
 
 # Plan Then Execute

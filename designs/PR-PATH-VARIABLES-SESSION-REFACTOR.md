@@ -104,10 +104,10 @@ Session logs are **living documents**, not append-only logs:
 
 ```
 # BEFORE
-examples/adventure-4/sessions/don-session-1.md
+examples/adventure-4/characters/real-people/don-hopkins/sessions/marathon-session.md
 
 # AFTER  
-examples/adventure-4/characters/real-people/don-hopkins/SESSION.md
+examples/adventure-4/characters/real-people/don-hopkins/sessions/marathon-session.md
 examples/adventure-4/characters/fictional/donna-toadstool/SESSION.md
 ```
 
@@ -139,14 +139,14 @@ Deleted `examples/adventure-4/skills/` — the global `skills/` directory IS the
 
 ### New Files
 - `designs/PR-PATH-VARIABLES-SESSION-REFACTOR.md` — This PR
-- `examples/adventure-4/characters/real-people/don-hopkins/SESSION.md` — Moved from sessions/
+- `examples/adventure-4/characters/real-people/don-hopkins/sessions/marathon-session.md` — Marathon session log
 - `examples/adventure-4/characters/fictional/donna-toadstool/` — New character + session
 - `examples/adventure-4/pub/guestbook.yml` — Guestbook from Donna's session
 
 ### Deleted Files
 - `examples/adventure-4/skills/README.md` — Redundant portal
 - `examples/adventure-4/skills/ROOM.yml` — Redundant portal
-- `examples/adventure-4/sessions/don-session-1.md` — Moved to character dir
+- `examples/adventure-4/characters/real-people/don-hopkins/sessions/marathon-session.md` — Moved to character dir
 
 ### Modified Files
 - `kernel/NAMING.yml` — Added path_variables section (11 variables)
@@ -180,5 +180,5 @@ ls ../../animals/palm/                  # ✓ Works
 - [`kernel/NAMING.yml`](../kernel/NAMING.yml) — Path variables specification
 - [`skills/session-log/SKILL.md`](../skills/session-log/SKILL.md) — Session writing guide
 - [`skills/ROOM.yml`](../skills/ROOM.yml) — Example of path variables in use
-- [Don Hopkins SESSION.md](../examples/adventure-4/characters/real-people/don-hopkins/SESSION.md) — Gold standard example
+- [Don Hopkins Marathon Session](../examples/adventure-4/characters/real-people/don-hopkins/sessions/marathon-session.md) — Gold standard example
 - [Donna Toadstool SESSION.md](../examples/adventure-4/characters/fictional/donna-toadstool/SESSION.md) — Character creation example

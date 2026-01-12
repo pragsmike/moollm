@@ -4,14 +4,14 @@ description: Drescher's computational theory of causal learning
 allowed-tools: []
 tier: 0
 protocol: SCHEMA-MECHANISM
-tags: [theory, learning, causality, drescher, minsky, neuro-symbolic]
+tags: [moollm, theory, learning, causality, drescher, minsky, neuro-symbolic]
 origin: "Gary Drescher — Made-Up Minds (1991)"
 lineage:
   - "Gary Drescher — Schema Mechanism, Made-Up Minds (1991)"
   - "Marvin Minsky — Society of Mind, K-lines (1986)"
   - "Jean Piaget — Genetic Epistemology, schemas as cognitive structures"
   - "Henry Minsky — pyleela.brain Python implementation"
-related: [constructionism, play-learn-lift, planning, debugging, skill]
+related: [constructionism, society-of-mind, leela-ai, manufacturing-intelligence, play-learn-lift, planning, yaml-jazz]
 ---
 
 # Schema Mechanism

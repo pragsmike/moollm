@@ -4,7 +4,8 @@ description: Big-endian file naming as semantic binding
 license: MIT
 tier: 1
 allowed-tools: []
-related: [room, character, yaml-jazz]
+related: [room, character, yaml-jazz, k-lines]
+tags: [moollm, naming, filesystem, semantic, convention]
 ---
 
 # Naming Skill

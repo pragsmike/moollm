@@ -6,7 +6,8 @@ tier: 1
 allowed-tools:
   - read_file
   - write_file
-related: [adventure, character, debugging, self-repair, summarize, scratchpad]
+related: [play-learn-lift, plain-text, character, adventure, summarize, honest-forget, markdown]
+tags: [moollm, logging, narrative, persistence, history]
 ---
 
 # Session Log
@@ -326,9 +327,9 @@ state_change:
 
 These sessions demonstrate best practices:
 
-### Don Hopkins' Session
+### Don Hopkins' Marathon Session
 
-[**examples/adventure-4/characters/real-people/don-hopkins/SESSION.md**](../../examples/adventure-4/characters/real-people/don-hopkins/SESSION.md)
+[**examples/adventure-4/characters/real-people/don-hopkins/sessions/marathon-session.md**](../../examples/adventure-4/characters/real-people/don-hopkins/sessions/marathon-session.md)
 
 7000+ lines spanning 5 days of adventure. Demonstrates:
 - Extensive use of collapsible sections

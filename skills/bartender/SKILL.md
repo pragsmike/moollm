@@ -8,8 +8,8 @@ allowed-tools:
   - write_file
   - list_dir
 protocol: BARTENDER
-tags: [role, service, social, hospitality]
-related: [character, persona, room, economy, needs]
+related: [skill, character, persona, incarnation, soul-chat, economy, budtender]
+tags: [moollm, role, service, social, hospitality]
 ---
 
 # Bartender Skill

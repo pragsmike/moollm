@@ -6,7 +6,8 @@ tier: 1
 allowed-tools:
   - read_file
   - write_file
-related: [honest-forget, session-log, memory-palace]
+related: [honest-forget, session-log, memory-palace, play-learn-lift, research-notebook]
+tags: [moollm, compression, knowledge, context, backlinks]
 ---
 
 # Summarize

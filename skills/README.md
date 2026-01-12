@@ -15,13 +15,13 @@ MOOLLM extends [Anthropic's skill model](https://docs.anthropic.com/en/docs/buil
 
 | # | Extension | What It Adds | Proof |
 |---|-----------|--------------|-------|
-| 1 | **Instantiation** | Skills clone into directories with their own state. Not just prompts -- living programs. | [incarnation/](./incarnation/) |
-| 2 | **K-Line Identity** | Character names activate full context -- history, personality, relationships. Minsky's Society of Mind. | [Palm's incarnation](../examples/adventure-4/sessions/don-session-1.md#turn-8-the-seeing--collective-witness-individual-becoming) |
-| 3 | **Empathic Templates** | Semantic understanding, not string substitution. Templates that know what you mean. | [empathic-templates/](./empathic-templates/) |
-| 4 | **Three-Tier Memory** | Hot/cold/archive with metadata sidecars. Sip before gulp. | [honest-forget/](./honest-forget/) |
-| 5 | **Speed of Light** | Minimize round trips. 33 turns in one call. The context window is a stage, not a limit. | [speed-of-light/](./speed-of-light/) |
-| 6 | **Comment Intelligence** | Meta-comments (for generation) vs concrete comments (for output). Strip or preserve as appropriate. | [empathic-templates/SKILL.md](./empathic-templates/SKILL.md) |
-| 7 | **Ethical Framing** | Room-based inheritance for representation ethics. DRY ethics -- define once, inherit everywhere. | [representation-ethics/](./representation-ethics/) |
+| 1 | **Instantiation** | Skills as prototypes creating instances. Not just prompts — living programs. | [`adventure/`](./adventure/) → [`adventure-4/`](../examples/adventure-4/) with 150+ files |
+| 2 | **Three-Tier Persistence** | Platform (ephemeral) → Narrative (append) → State (edit). | [6000+ line session logs](../examples/adventure-4/characters/real-people/don-hopkins/sessions/marathon-session.md), persistent room state |
+| 3 | **K-lines** | Names as semantic activation vectors (Minsky). | "[Palm](../examples/adventure-4/characters/animals/palm/)" activates entire soul, history, relationships |
+| 4 | **Empathic Templates** | Smart generation, not string substitution. | [Biscuit's](../examples/adventure-4/characters/animals/biscuit/) description generated from traits |
+| 5 | **Speed of Light** | Many turns in one call, minimal tokenization. | [33-turn Fluxx](../examples/adventure-4/characters/real-people/don-hopkins/sessions/marathon-session.md), [21-turn cat prowl](../examples/adventure-4/characters/real-people/don-hopkins/sessions/marathon-session.md) |
+| 6 | **CARD.yml** | Machine-readable interface with advertisements. | Every skill exposes methods, tools, state schema — see [card/](./card/) |
+| 7 | **Ethical Framing** | Room-based inheritance of performance context. | [`pub/stage/`](../examples/adventure-4/pub/stage/) inherits `framing: performance` |
 
 **The key insight:** Skills aren't documentation. They're programs. The LLM is `eval()`.
 
@@ -29,27 +29,46 @@ MOOLLM extends [Anthropic's skill model](https://docs.anthropic.com/en/docs/buil
 
 ---
 
-## Skill Index (54 skills)
+## Skill Index (~80 skills)
 
 ### 🧠 Philosophy & Core Concepts
 
 | Skill | One-liner |
 |-------|-----------|
-| [constructionism/](./constructionism/) | Learn by building inspectable things (Papert, Kay, Logo) |
+| [moollm/](./moollm/) | **The soul of MOOLLM.** Self-explanation, help, navigation |
+| [leela-ai/](./leela-ai/) | **Manufacturing Intelligence.** Leela AI applies MOOLLM to industry |
+| [manufacturing-intelligence/](./manufacturing-intelligence/) | The slogan unpacked -- seven readings of one phrase |
 | [skill/](./skill/) | **The meta-skill.** How skills work, evolve, compose |
-| [protocol/](./protocol/) | UPPER-CASE-HYPHENATED symbols as greppable K-lines |
+| [k-lines/](./k-lines/) | Minsky's K-lines — names that activate conceptual clusters |
+| [constructionism/](./constructionism/) | Learn by building inspectable things (Papert, Kay, Logo) |
+| [prototype/](./prototype/) | Self-language philosophy — clone, don't instantiate |
 | [yaml-jazz/](./yaml-jazz/) | Semantic YAML where comments are data |
 | [postel/](./postel/) | The Robustness Principle — be liberal in acceptance |
 | [robust-first/](./robust-first/) | Survive first, be correct later (Dave Ackley) |
 | [coherence-engine/](./coherence-engine/) | LLM as consistency maintainer & orchestrator |
 | [speed-of-light/](./speed-of-light/) | Many turns in one call — instant telepathy |
-| [empathic-expressions/](./empathic-expressions/) | Intent-based code interpretation across all languages |
+| [simulator-effect/](./simulator-effect/) | Implication beats simulation (Will Wright) — imagination renders |
+| [society-of-mind/](./society-of-mind/) | Intelligence emerges from many simple agents (Minsky) |
+| [procedural-rhetoric/](./procedural-rhetoric/) | Rules persuade, structure IS argument (Bogost) |
+| [schema-mechanism/](./schema-mechanism/) | Drescher's causal learning extended with LLM semantics |
+
+### 📝 Formats & Structure
+
+| Skill | One-liner |
+|-------|-----------|
+| [plain-text/](./plain-text/) | Text files are forever — no lock-in, no corruption |
+| [markdown/](./markdown/) | Readable raw AND rendered |
+| [format-design/](./format-design/) | How to design formats that succeed |
+| [sniffable-python/](./sniffable-python/) | Structure Python so LLMs understand in 50 lines |
+| [naming/](./naming/) | Big-endian file naming as semantic binding |
+| [empathic-expressions/](./empathic-expressions/) | Intent-based code interpretation |
 | [empathic-templates/](./empathic-templates/) | Smart templates with semantic understanding |
 
 ### 🎮 Methodology (How to Work)
 
 | Skill | One-liner |
 |-------|-----------|
+| [bootstrap/](./bootstrap/) | Wake up, orient, warm the context |
 | [play-learn-lift/](./play-learn-lift/) | Explore → Learn → Share wisdom |
 | [planning/](./planning/) | Flexible task decomposition |
 | [plan-then-execute/](./plan-then-execute/) | Frozen plans with human approval gates |
@@ -64,23 +83,43 @@ MOOLLM extends [Anthropic's skill model](https://docs.anthropic.com/en/docs/buil
 |-------|-----------|
 | [room/](./room/) | Directories as activation contexts |
 | [card/](./card/) | Capabilities as portable, playable cards |
+| [container/](./container/) | Intermediate scopes — inheritance without navigation |
+| [logistic-container/](./logistic-container/) | Factorio-style logistics boxes |
 | [adventure/](./adventure/) | Narrative room exploration |
 | [memory-palace/](./memory-palace/) | Spatial knowledge organization |
 | [data-flow/](./data-flow/) | Rooms as pipeline nodes (THROW/INBOX) |
 | [return-stack/](./return-stack/) | Navigation history as continuation |
 | [multi-presence/](./multi-presence/) | Same card active in multiple rooms |
+| [exit/](./exit/) | Connections between rooms |
+| [object/](./object/) | Things in the world |
+| [context/](./context/) | Activation environment |
 
 ### 👤 Characters & Identity
 
 | Skill | One-liner |
 |-------|-----------|
 | [character/](./character/) | Core patterns — home, location, relationships |
+| [incarnation/](./incarnation/) | Gold-standard creation — characters write their own souls |
 | [persona/](./persona/) | Identity layers (WHO vs WHAT) |
 | [soul-chat/](./soul-chat/) | Everything speaks — multi-voice dialogues |
 | [mind-mirror/](./mind-mirror/) | Personality via four Thought Planes (Leary) |
 | [hero-story/](./hero-story/) | Safe K-line references to real people |
 | [representation-ethics/](./representation-ethics/) | Ethics of simulating people |
 | [visualizer/](./visualizer/) | Semantic image generation with metadata |
+
+### 🐾 Animal Characters
+
+| Skill | One-liner |
+|-------|-----------|
+| [cat/](./cat/) | Feline behavior — trust earned, charms, the forbidden belly |
+| [dog/](./dog/) | Canine behavior — loyalty, pack dynamics, unconditional love |
+
+### 🍺 Role Skills (Professions)
+
+| Skill | One-liner |
+|-------|-----------|
+| [bartender/](./bartender/) | Pour drinks, manage tabs, know everyone's secrets |
+| [budtender/](./budtender/) | Cannabis-specialized — strains, terpenes, responsible service |
 
 ### 🎲 Game Mechanics (Sims-style)
 
@@ -94,8 +133,6 @@ MOOLLM extends [Anthropic's skill model](https://docs.anthropic.com/en/docs/buil
 | [action-queue/](./action-queue/) | Sims-style task queue |
 | [advertisement/](./advertisement/) | Objects announce what they can do |
 | [world-generation/](./world-generation/) | Questions create places |
-| [cat/](./cat/) | Cat behavior patterns |
-| [dog/](./dog/) | Dog behavior — loyalty, pack dynamics, unconditional love |
 
 ### 💰 Economy & Scoring
 
@@ -111,6 +148,7 @@ MOOLLM extends [Anthropic's skill model](https://docs.anthropic.com/en/docs/buil
 | Skill | One-liner |
 |-------|-----------|
 | [adversarial-committee/](./adversarial-committee/) | Committee of opposing personas force genuine debate |
+| [debate/](./debate/) | Structured multi-perspective deliberation |
 | [roberts-rules/](./roberts-rules/) | Parliamentary procedure prevents short-circuiting |
 | [rubric/](./rubric/) | Measurable criteria for scoring decisions |
 | [evaluator/](./evaluator/) | Independent assessment without debate context |
@@ -128,13 +166,27 @@ MOOLLM extends [Anthropic's skill model](https://docs.anthropic.com/en/docs/buil
 | [session-log/](./session-log/) | Human-readable audit trail |
 | [scratchpad/](./scratchpad/) | Working memory |
 
+### 📮 Communication
+
+| Skill | One-liner |
+|-------|-----------|
+| [postal/](./postal/) | Intra-world mail system — letters, packages, inboxes, THROW |
+
 ### 🔧 System & Recovery
 
 | Skill | One-liner |
 |-------|-----------|
 | [self-repair/](./self-repair/) | Checklist-based healing |
 | [storytelling-tools/](./storytelling-tools/) | Narrative capture — notebooks, letters, photos |
-| [procedural-rhetoric/](./procedural-rhetoric/) | Design with intentional ideology (Bogost) |
+| [runtime/](./runtime/) | Execution environment |
+| [image-mining/](./image-mining/) | Extract resources from images |
+
+### 🎯 Goals & Subjective
+
+| Skill | One-liner |
+|-------|-----------|
+| [goal/](./goal/) | Objectives and quests |
+| [subjective/](./subjective/) | First-person experience |
 
 ---
 

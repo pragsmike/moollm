@@ -7,7 +7,8 @@ allowed-tools:
   - read_file
   - write_file
   - search_replace
-related: [character, room, scoring, reward]
+related: [character, scoring, room, advertisement]
+tags: [moollm, currency, trade, gold, commerce]
 inputs:
   item:
     type: string

@@ -19,12 +19,8 @@ statuses:
   - ready
   - paused
   - completed
-related:
-  - card
-  - room
-  - data-flow
-  - coherence-engine
-  - speed-of-light
+related: [card, society-of-mind, character, room, prototype, coherence-engine, speed-of-light, data-flow]
+tags: [moollm, actor, parallel, instances, distributed]
 ---
 
 # Multi-Presence
@@ -124,7 +120,7 @@ Each activation has its own:
 # room-A/activations/analyst-001.yml
 card: analyst-card
 instance_id: analyst-001
-tags: [@hypothesis-A, @active]
+tags: [moollm, @hypothesis-A, @active]
 state:
   current_document: "doc-007.pdf"
   findings:

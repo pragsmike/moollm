@@ -4,7 +4,8 @@ description: "Objects clone from prototypes, not instances from classes"
 license: MIT
 tier: 0
 allowed-tools: []
-related: [skill, character, card, constructionism]
+related: [skill, room, container, character, card, simulation, constructionism, return-stack, debugging]
+tags: [moollm, inheritance, self, javascript, clone, deoptimization]
 protocol: PROTOTYPE
 credits:
   - "David Ungar — Self language creator"

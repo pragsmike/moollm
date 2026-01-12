@@ -6,7 +6,8 @@ tier: 1
 allowed-tools:
   - read_file
   - write_file
-related: [session-log, planning, research-notebook]
+related: [play-learn-lift, research-notebook, planning, debugging, session-log, plain-text]
+tags: [moollm, working-memory, notes, thinking, drafts]
 ---
 
 # Scratchpad

@@ -6,7 +6,8 @@ tier: 1
 allowed-tools:
   - read_file
   - write_file
-related: [adventure, visualizer, session-log, card]
+related: [card, visualizer, session-log, hero-story]
+tags: [moollm, narrative, sharing, capture, moments]
 ---
 
 # Storytelling Tools

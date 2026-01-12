@@ -6,7 +6,8 @@ tier: 1
 allowed-tools:
   - read_file
   - write_file
-related: [robust-first, postel, session-log, coherence-engine]
+related: [robust-first, bootstrap, honest-forget, session-log, coherence-engine, debugging, postel]
+tags: [moollm, healing, recovery, resilience, consistency]
 ---
 
 # Self Repair

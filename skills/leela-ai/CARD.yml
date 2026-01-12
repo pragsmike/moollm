@@ -1,0 +1,259 @@
+# Leela AI Skill Card
+# Manufacturing Intelligence -- from theory to industrial application
+
+skill:
+  id: leela-ai
+  name: Leela AI
+  version: 1.0.0
+  tier: meta
+  entry: README.md
+  
+description: |
+  Leela AI applies MOOLLM principles to real-world manufacturing intelligence.
+  Neural-symbolic computer vision. Causal reasoning. Edge computing.
+  The theory of Minsky, Papert, and Drescher deployed on factory floors.
+
+# The slogan unpacked
+slogan:
+  text: "Manufacturing Intelligence"
+  readings:
+    - meaning: "AI for Manufacturing"
+      explanation: Industrial applications -- factories, edge devices, production lines
+    - meaning: "Building AI"
+      explanation: We manufacture intelligence systems
+    - meaning: "Constructionism"
+      explanation: Papert -- intelligence is constructed through building
+    - meaning: "Society of Mind"
+      explanation: Minsky -- intelligence manufactured from simple agents
+    - meaning: "Manufacturing Consent"
+      explanation: Chomsky -- awareness of engineered agreement, ethical responsibility
+    - meaning: "Growth Mindset"
+      explanation: Intelligence as product of effort, not innate gift
+
+# What this skill offers
+advertisement:
+  provides:
+    - neural_symbolic_vision: "See what + understand why"
+    - causal_inference: "Schema mechanism for visual reasoning"
+    - edge_computing: "Real-time intelligence at the factory floor"
+    - explainable_ai: "Every inference has a causal chain"
+    - devops_integration: "MOOLLM patterns for infrastructure"
+    - pda_interface: "Natural language access to industrial AI"
+    
+  wants:
+    - video_feeds: Camera streams from factory floor
+    - sensor_data: SCADA, IoT, environmental
+    - domain_context: What this factory makes, how it works
+    
+  motives_satisfied:
+    - safety: Prevent accidents through predictive awareness
+    - efficiency: Optimize processes through observation
+    - reliability: Predictive maintenance before failure
+    - compliance: Auditable, explainable decisions
+
+# K-lines activated by this skill
+k-lines:
+  activates:
+    - minsky: "Society of Mind -- intelligence from agents"
+    - henry-minsky: "Marvin's son, Leela team member"
+    - drescher: "Made-Up Minds -- schema mechanism"
+    - papert: "Constructionism -- build to understand"
+    - chomsky: "Manufacturing Consent -- ethical awareness"
+    - don-hopkins: "MOOLLM architect, Sims heritage"
+    - neural-symbolic: "Perception + reasoning"
+    - edge-computing: "Intelligence at the source"
+    - causal-reasoning: "Why, not just what"
+    - manufacturing: "Industrial application domain"
+    
+  connects-to:
+    - moollm: "The microworld philosophy"
+    - society-of-mind: "Agent theory foundation"
+    - k-lines: "Activation vectors"
+    - schema-mechanism: "Causal learning"
+    - constructionism: "Build to understand"
+    - coherence-engine: "Distributed AI orchestration"
+    - speed-of-light: "Real-time inference"
+    - yaml-jazz: "Semantic configuration"
+    - room: "Zones as rooms"
+    - character: "Entities as characters"
+    - representation-ethics: "Responsible AI"
+
+# Team
+team:
+  - name: Henry Minsky
+    role: CTO
+    k-lines: ["society-of-mind", "k-lines", "mit-ai-lab", "google-nest"]
+    note: "Marvin Minsky's son, MIT AI Lab, NTT DoCoMo, Google Nest"
+    
+  - name: Dr. Cyrus Shaoul
+    role: Chief Evangelist
+    k-lines: ["computational-neuroscience", "cognitive-modeling"]
+    note: "Entrepreneur, computational neuroscientist, Digital Garage co-founder/CTO"
+    
+  - name: Dr. Milan Singh Minsky
+    role: VP Product
+    k-lines: ["startups", "product"]
+    note: "Venture-backed startups, RayVio co-founder"
+    
+  - name: Sheung Li
+    role: VP Applications
+    k-lines: ["machine-vision", "manufacturing", "product-marketing"]
+    note: "Machine vision in manufacturing, product/marketing leader"
+    
+  - name: Dr. Steve Kommrusch
+    role: Senior AI Research Scientist
+    k-lines: ["deep-learning", "chip-design"]
+    note: "Deep learning expert, AMD, HP, National Semiconductor"
+    
+  - name: Don Hopkins
+    role: AI Architect
+    k-lines: ["sims", "news", "pie-menus", "moollm"]
+    note: "The Sims, NeWS, MOOLLM architect"
+
+# Technology stack -- three layers
+technology:
+  layers:
+    1_neural:
+      purpose: perception
+      capabilities:
+        - object_detection
+        - pose_estimation
+        - motion_tracking
+        
+    2_symbolic:
+      purpose: reasoning
+      capabilities:
+        - context_inference
+        - causal_reasoning
+        - sql_queries_over_events
+        - prediction
+        - explanation
+        
+    3_pda:
+      purpose: natural language interface
+      note: "LLM layer -- neural at surface, symbolic in protocol"
+      capabilities:
+        - generate: "natural language → SQL"
+        - perform: "execute queries"
+        - interpret: "results → meaning"
+        - explain: "causation in plain language"
+        - visualize: "charts, timelines, maps"
+        - remember: "query history, preferences"
+      
+  edge:
+    platform: industrial compute boxes
+    latency: "<50ms"
+    resilience: offline capable
+    
+  cloud:
+    purpose: training, aggregation, analytics
+    sovereignty: customer owns data
+    
+  integration:
+    - SCADA
+    - MES
+    - ERP
+    - CMMS
+
+# Applications
+applications:
+  safety_monitoring:
+    purpose: Prevent accidents through predictive awareness
+    examples:
+      - pedestrian detection in vehicle zones
+      - PPE compliance
+      - ergonomic risk assessment
+      - near-miss detection
+      
+  process_optimization:
+    purpose: Improve efficiency through observation
+    examples:
+      - cycle time analysis
+      - bottleneck detection
+      - workflow optimization
+      
+  predictive_maintenance:
+    purpose: Fix equipment before failure
+    examples:
+      - vibration analysis
+      - thermal anomaly detection
+      - wear indicator tracking
+      
+  devops:
+    purpose: MOOLLM patterns for infrastructure
+    examples:
+      - configuration management
+      - deployment orchestration
+      - incident response
+
+# Ethics
+ethics:
+  transparency:
+    principle: Every inference is explainable
+    implementation: causal chains in audit logs
+    
+  privacy:
+    principle: Data sovereignty and minimal collection
+    implementation: edge processing, anonymization, consent
+    
+  human_agency:
+    principle: AI advises, humans decide
+    implementation: human in the loop for critical decisions
+
+# MOOLLM mappings
+moollm-mappings:
+  rooms: factory zones, equipment clusters
+  characters: workers, vehicles, robots, equipment
+  skills: vision models, inference rules, safety protocols
+  k-lines: equipment IDs, zone names, event types
+  speed-of-light: real-time inference
+  coherence-engine: multi-camera sensor fusion
+  soul-chat: PDA natural language interface
+  files-as-state: YAML configs, audit logs
+  society-of-mind: multiple specialized models collaborating
+  schema-mechanism: causal learning from observation
+
+# Tags
+tags:
+  - meta
+  - company
+  - manufacturing
+  - industrial
+  - edge-computing
+  - computer-vision
+  - neural-symbolic
+  - causal-reasoning
+  - drescher
+  - minsky
+  
+use_case: |
+  Use when explaining Leela AI's mission,
+  connecting MOOLLM theory to industrial practice,
+  or understanding how the ideas of Minsky, Papert, and Drescher
+  manifest in real-world manufacturing intelligence.
+
+# References
+references:
+  primary:
+    - title: "leela.ai"
+      url: "https://leela.ai"
+      
+    - title: "Made-Up Minds"
+      author: "Gary Drescher"
+      year: 1991
+      publisher: "MIT Press"
+      
+    - title: "Society of Mind"
+      author: "Marvin Minsky"
+      year: 1985
+      publisher: "Simon & Schuster"
+      
+    - title: "Mindstorms"
+      author: "Seymour Papert"
+      year: 1980
+      publisher: "Basic Books"
+      
+    - title: "Manufacturing Consent"
+      author: "Noam Chomsky & Edward Herman"
+      year: 1988
+      publisher: "Pantheon Books"

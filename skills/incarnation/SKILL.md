@@ -1,3 +1,14 @@
+---
+name: incarnation
+description: "Full character autonomy across all layers of existence"
+license: MIT
+tier: 1
+allowed-tools: [read_file, write_file, list_dir]
+protocol: INCARNATION
+related: [character, society-of-mind, representation-ethics, hero-story, mind-mirror, plain-text, yaml-jazz, room, soul-chat]
+tags: [moollm, character, autonomy, ethics, identity, creation]
+---
+
 # Incarnation Skill
 
 ## Purpose

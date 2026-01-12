@@ -6,7 +6,8 @@ tier: 1
 allowed-tools:
   - read_file
   - write_file
-related: [hero-story, mind-mirror, soul-chat, persona]
+related: [hero-story, manufacturing-intelligence, society-of-mind, incarnation, mind-mirror, character, persona, room, plain-text, yaml-jazz, adventure, needs]
+tags: [moollm, ethics, consent, dignity, simulation]
 ---
 
 # Representation Ethics

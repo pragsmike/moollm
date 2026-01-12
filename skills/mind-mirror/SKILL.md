@@ -19,15 +19,8 @@ sims_credits:
   system: "The Sims personality traits"
 templates:
   - EXTENSIONS.yml
-related:
-  - representation-ethics
-  - hero-story
-  - card
-  - soul-chat
-  - adventure
-  - character
-  - needs
-  - buff
+related: [character, society-of-mind, persona, representation-ethics, incarnation, yaml-jazz, plain-text, needs, cat, dog, room, constructionism, manufacturing-intelligence]
+tags: [moollm, personality, traits, psychology, timothy-leary, sims, circumplex, escape]
 ---
 
 # Mind Mirror
@@ -70,17 +63,43 @@ Thirty-five years later, Leary collaborated with programmers Peter Van den Beemt
 
 ## The Prison Escape: Ultimate Validation
 
-In 1970, Leary was given psychological tests upon prison intake — including the **Leary Interpersonal Behavior Inventory**, a test he himself had designed.
+In 1970, Nixon called Timothy Leary "the most dangerous man in America." Leary was sentenced to 10-20 years for marijuana possession — a draconian sentence designed to silence him.
 
-Understanding exactly what it measured, Leary answered strategically:
-- Appeared mild-mannered, conforming
-- Showed interest in forestry and gardening
-- Displayed no leadership tendencies
-- Expressed respect for authority
+Upon arrival at the California Men's Colony, Leary was administered psychological tests to determine his security classification. Among them: the **Leary Interpersonal Behavior Inventory** — a test he himself had designed twenty years earlier.
 
-**Result:** Classified minimum security. Assigned outdoor work detail. Escaped by climbing a tree near the perimeter fence and shimmying along a telephone cable over the razor wire.
+This was the ultimate field test of his own theory. If personality assessment truly revealed the inner self, Leary would be classified as what he was: a charismatic rebel, a leader, a flight risk.
 
-**The lesson:** Understanding how you're measured gives you power. Consciousness of systems enables transcendence.
+But Leary understood the instrument. He knew which quadrant of the Interpersonal Circumplex mapped to "cooperative worker" vs. "dangerous agitator."
+
+He answered strategically:
+- **Dominance axis:** Low scores ("I prefer to follow")
+- **Hostility axis:** Low scores ("I respect authority")  
+- **Interests:** Forestry, gardening, nature work
+- **Affect:** Calm, conventional, agreeable
+
+The prison psychologists, applying the Leary Interpersonal Behavior Inventory to Leary himself, concluded:
+
+> *"Normal, well-adjusted, non-aggressive, conforming individual."*
+
+**Result:** Minimum security. Outdoor work detail. Access to the grounds with minimal supervision.
+
+On September 12, 1970, Leary climbed a tree, shimmied across a telephone cable over the razor wire, and dropped to freedom. The Weather Underground had a car waiting. By October, he was in Algeria as a guest of the Black Panther Party's international chapter. By 1971, Switzerland.
+
+He evaded capture for over two years.
+
+---
+
+### What This Teaches Us
+
+The escape wasn't luck — it was applied psychology. Leary demonstrated that:
+
+1. **Legibility cuts both ways.** Systems that measure you also reveal themselves.
+2. **Understanding the instrument grants power over it.** Leary knew which answers produced which classification.
+3. **Transparency enables agency.** If you know how you're being evaluated, you can present yourself strategically.
+
+This is why Mind Mirror in MOOLLM emphasizes **transparency**: characters know their own personality profiles, understand what the traits mean, and can modify them as they grow.
+
+**Consciousness of the system enables transcendence of the system.**
 
 ---
 

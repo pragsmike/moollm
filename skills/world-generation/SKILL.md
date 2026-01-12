@@ -6,7 +6,8 @@ tier: 1
 allowed-tools:
   - read_file
   - write_file
-related: [room, character, simulation, adventure]
+related: [room, character, incarnation, container, adventure, party, constructionism, empathic-templates]
+tags: [moollm, procedural, creation, dynamic, exploration]
 ---
 
 # World Generation Skill

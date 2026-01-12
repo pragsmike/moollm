@@ -6,7 +6,8 @@ tier: 1
 allowed-tools:
   - read_file
   - write_file
-related: [plan-then-execute, action-queue, session-log, roberts-rules, adversarial-committee]
+related: [play-learn-lift, scratchpad, plan-then-execute, action-queue, sister-script, debugging, session-log]
+tags: [moollm, decomposition, tracking, tasks, strategy]
 ---
 
 # Planning

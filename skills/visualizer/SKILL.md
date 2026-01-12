@@ -6,7 +6,8 @@ tier: 1
 allowed-tools:
   - read_file
   - write_file
-related: [character, mind-mirror, storytelling-tools, card]
+related: [character, mind-mirror, card, room, image-mining, yaml-jazz, hero-story]
+tags: [moollm, images, generation, art, semantic]
 ---
 
 # Visualizer
@@ -403,6 +404,7 @@ roadmap:
 - [Adventure](../adventure/) — Visualizing microworld state
 - [YAML-JAZZ](../yaml-jazz/) — Prompts composed from semantic data
 - [Sister Script](../sister-script/) — Future image generation scripts
+- [Image Mining](../image-mining/) — MINE images for resources (camera = pickaxe!)
 
 ---
 

@@ -2,6 +2,20 @@
 
 > *"All effects are buffs. Some are just shitty."*
 
+## MOOLLM K-Lines
+
+| K-Line | Why Related |
+|--------|-------------|
+| [simulation/](../simulation/) | Buffs live in simulation state |
+| [time/](../time/) | Duration measured in simulation turns |
+| [needs/](../needs/) | Buffs affect need decay |
+| [character/](../character/) | Buffs stored in character state |
+| [cat/](../cat/) | Cats can grant charm buffs |
+| [dog/](../dog/) | Dogs grant loyalty buffs |
+| [persona/](../persona/) | Personas grant buffs |
+| [yaml-jazz/](../yaml-jazz/) | Semantic buffs (LLM interprets) |
+| [examples/adventure-4/](../../examples/adventure-4/) | Grue-repellent in action |
+
 **Full Spec:** [SKILL.md](SKILL.md)
 
 ## Overview
@@ -39,12 +53,27 @@ buff:
 | Items | Lamp → grue immunity |
 | Personas | Theme-specific buffs |
 
-## Related Skills
+## Buff Library
 
-- [time/](../time/) — Duration measured in simulation turns
-- [needs/](../needs/) — Buffs affect need decay
-- [character/](../character/) — Buffs stored in character state
-- [persona/](../persona/) — Personas grant buffs
+Pre-made buffs ready to use! See `buffs/INDEX.yml`:
+
+```yaml
+# Reference from any character
+character:
+  buffs:
+    - ref: skills/buff/buffs/INDEX.yml#fire-resistance
+    - ref: skills/buff/buffs/INDEX.yml#haste
+    - ref: skills/buff/buffs/INDEX.yml#grue-repellent
+```
+
+**Categories in library:**
+- Elemental resistances (fire, cold, lightning)
+- Movement (haste, water-walking, slow-fall)
+- Perception (darkvision, true-sight, detect-magic)
+- Stealth (invisibility, silence)
+- Combat (berserker-rage, stoneskin)
+- Adventure-4 specific (grue-repellent!)
+
 
 ## Tools Required
 
@@ -54,3 +83,7 @@ buff:
 ---
 
 *See [SKILL.md](SKILL.md) for complete specification.*
+*See [buffs/INDEX.yml](buffs/INDEX.yml) for the buff library.*
+## Buff Library
+
+See `buffs/INDEX.yml` for 20+ pre-made buffs (fire-resistance, haste, grue-repellent, etc.)

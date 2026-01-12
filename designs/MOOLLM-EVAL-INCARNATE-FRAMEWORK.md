@@ -114,18 +114,14 @@ PostScript's insight: **text is graphics** — glyphs are vectors, transforms ap
 
 The same content can be **pivoted** from dimension to dimension:
 
-```
-        ┌──────────────────────────────────┐
-        │           THE SAME TEXT          │
-        └──────────────────────────────────┘
-                          │
-          ┌───────────────┼───────────────┐
-          ▼               ▼               ▼
-       ┌──────┐       ┌──────┐      ┌──────────┐
-       │ CODE │       │ DATA │      │ GRAPHICS │
-       └──────┘       └──────┘      └──────────┘
-       Execute        Interpret     Render
-       as behavior    as structure  as visuals
+```mermaid
+flowchart TD
+    TEXT["📝 THE SAME TEXT"]
+    TEXT --> CODE["⚙️ CODE<br/>Execute as behavior"]
+    TEXT --> DATA["📊 DATA<br/>Interpret as structure"]
+    TEXT --> GRAPHICS["🎨 GRAPHICS<br/>Render as visuals"]
+    
+    style TEXT fill:#ffeb3b,stroke:#f57f17,stroke-width:3px
 ```
 
 | Operation | Pivot Direction | Example |
@@ -155,20 +151,20 @@ Not all text formats are equal. LLMs have different strengths:
 **YAML Jazz + Markdown** = input formats for representing, transforming, manipulating.
 **HTML/CSS/SVG/JSON** = output formats for rendering, displaying, machine consumption.
 
-```
-┌──────────────────────────────────────────────────────────────┐
-│                    THE LLM PIPELINE                          │
-├──────────────────────────────────────────────────────────────┤
-│                                                              │
-│   INPUT (represent, transform)    OUTPUT (render, display)   │
-│   ┌────────────────────────┐      ┌────────────────────────┐ │
-│   │ YAML Jazz + Markdown   │ ───▶ │ HTML, CSS, SVG, JSON   │ │
-│   │ • Comments as data     │      │ • Machine-readable     │ │
-│   │ • Human-friendly       │      │ • Display-ready        │ │
-│   │ • Easy to manipulate   │      │ • Hard to edit         │ │
-│   └────────────────────────┘      └────────────────────────┘ │
-│                                                              │
-└──────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart LR
+    subgraph INPUT["📥 INPUT"]
+        YAML["YAML Jazz + Markdown<br/>• Comments as data<br/>• Human-friendly<br/>• Easy to manipulate"]
+    end
+    
+    subgraph OUTPUT["📤 OUTPUT"]
+        HTML["HTML, CSS, SVG, JSON<br/>• Machine-readable<br/>• Display-ready<br/>• Hard to edit"]
+    end
+    
+    YAML --> |"LLM transforms"| HTML
+    
+    style INPUT fill:#c8e6c9,stroke:#2e7d32
+    style OUTPUT fill:#bbdefb,stroke:#1976d2
 ```
 
 **JSON's problem:** No comments. Can't do YAML Jazz. Machine-readable but not human-friendly. Fine for output, bad for representation.
@@ -299,6 +295,8 @@ When you instantiate a character, **their name becomes their K-line**. "Palm" ac
 
 **MOOLLM inherits:** Names as semantic activators. `UPPER-KEBAB` protocol symbols. Character names as soul triggers.
 
+> 📚 **Full skill:** [`skills/society-of-mind/`](../skills/society-of-mind/) — agents, agencies, emergence, B-brains
+
 ### 5. Constructionism (Seymour Papert, 1980)
 
 Learning by building inspectable things. Logo. Turtle graphics. "Low floor, high ceiling, wide walls."
@@ -340,10 +338,17 @@ Prototypes instead of classes. Delegation instead of inheritance. "Objects all t
 
 **The Delegation Chain:**
 
-```
-Object → Trait → Parent → Parent's Parent → ...
-    ↓
-MOOLLM: Room → Parent Directory → Skill → Prototype → ...
+```mermaid
+flowchart LR
+    subgraph SELF["Self Language"]
+        O[Object] --> T[Trait] --> P[Parent] --> PP["..."]
+    end
+    
+    subgraph MOOLLM["MOOLLM"]
+        R[Room] --> PD[Parent Dir] --> S[Skill] --> PR["Prototype..."]
+    end
+    
+    SELF -.-> |"same pattern"| MOOLLM
 ```
 
 **MOOLLM inherits:** 
@@ -382,14 +387,17 @@ Text-based virtual worlds where users build rooms, objects, and behaviors. The o
 
 **The MOO Object Model:**
 
-```
-                  $thing
-                     │
-        ┌────────────┼────────────┐
-        │            │            │
-     $room        $exit      $container
-        │                         │
-    my-room                  my-chest
+```mermaid
+flowchart TD
+    THING["$thing"]
+    THING --> ROOM["$room"]
+    THING --> EXIT["$exit"]
+    THING --> CONTAINER["$container"]
+    
+    ROOM --> MYROOM["my-room"]
+    CONTAINER --> MYCHEST["my-chest"]
+    
+    style THING fill:#ffeb3b,stroke:#f57f17
 ```
 
 **MOOLLM's directory structure is MOO's object tree.**
@@ -476,12 +484,15 @@ The Sims scan advertisements and chooses based on needs + personalities + relati
 
 SimAntics was The Sims' visual behavior programming language. Non-programmers could define complex behaviors by connecting nodes in flowcharts. Intent → behavior.
 
-```
-SimAntics:    [IF hungry] → [GO fridge] → [GET food] → [EAT]
-                     ↓
-Empathic:     "if the sim is hungry, have them get food from the fridge"
-                     ↓
-MOOLLM:       The LLM interprets natural language intent as behavior
+```mermaid
+flowchart TD
+    SIM["🎮 SimAntics<br/>IF hungry → GO fridge → GET food → EAT"]
+    EMP["💬 Empathic<br/>if the sim is hungry, have them get food"]
+    MOO["🧠 MOOLLM<br/>LLM interprets intent as behavior"]
+    
+    SIM --> |"evolution"| EMP --> |"evolution"| MOO
+    
+    style MOO fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px
 ```
 
 SimAntics democratized behavior authoring. Empathic expressions take this further — no visual editor needed, just describe what you want.
@@ -715,7 +726,7 @@ A single LLM call simulated:
 - Asynchronous parallel simulation (see [`skills/cat/`](../skills/cat/))
 - Territorial marking in [`maze/`](../examples/adventure-4/maze/) rooms
 - Room state updates (`ROOM.yml` files with `animal_markings:`)
-- Narrative generation in [session log](../examples/adventure-4/sessions/don-session-1.md#ten-cats-one-garden-infinite-independence)
+- Narrative generation in [session log](../examples/adventure-4/characters/real-people/don-hopkins/sessions/marathon-session.md#ten-cats-one-garden-infinite-independence)
 
 **This is incarnate state — each cat, each room, persisted.**
 
@@ -788,10 +799,10 @@ Anthropic's Skills model is an excellent foundation. We respectfully build upon 
 | Innovation | Description | Proof |
 |------------|-------------|-------|
 | **Instantiation** | Skills as prototypes creating instances | [`adventure/`](../skills/adventure/) → [`adventure-4/`](../examples/adventure-4/) with 150+ files |
-| **Three-Tier Persistence** | Platform (ephemeral) → Narrative (append) → State (edit) | [6000+ line session logs](../examples/adventure-4/sessions/don-session-1.md), persistent room state |
+| **Three-Tier Persistence** | Platform (ephemeral) → Narrative (append) → State (edit) | [6000+ line session logs](../examples/adventure-4/characters/real-people/don-hopkins/sessions/marathon-session.md), persistent room state |
 | **K-lines** | Names as semantic activation vectors (Minsky) | "[Palm](../examples/adventure-4/characters/palm/)" activates entire soul, history, relationships |
 | **Empathic Templates** | Smart generation, not string substitution | [Biscuit's](../examples/adventure-4/characters/biscuit/) description generated from traits |
-| **Speed of Light** | Many turns in one call, minimal tokenization | [33-turn Fluxx](../examples/adventure-4/sessions/don-session-1.md#33-turns-of-pure-gezelligheid), [21-turn cat prowl](../examples/adventure-4/sessions/don-session-1.md#ten-cats-one-garden-infinite-independence) |
+| **Speed of Light** | Many turns in one call, minimal tokenization | [33-turn Fluxx](../examples/adventure-4/characters/real-people/don-hopkins/sessions/marathon-session.md#33-turns-of-pure-gezelligheid), [21-turn cat prowl](../examples/adventure-4/characters/real-people/don-hopkins/sessions/marathon-session.md#ten-cats-one-garden-infinite-independence) |
 | **CARD.yml** | Machine-readable interface with advertisements | Every skill exposes methods, tools, state schema |
 | **Ethical Framing** | Room-based inheritance of performance context | [`pub/stage/`](../examples/adventure-4/pub/stage/) inherits `framing: performance` |
 
@@ -1014,27 +1025,25 @@ Traditional systems fight the LLM:
 
 ### How They Dovetail
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    EMPATHIC SUITE                           │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│   ┌───────────────────────┐    ┌───────────────────────┐    │
-│   │ EMPATHIC-EXPRESSIONS  │───▶│ EMPATHIC-TEMPLATES    │    │
-│   │ (interpret intent)    │    │ (smart instantiation) │    │
-│   └───────────────────────┘    └───────────────────────┘    │
-│            │                            │                   │
-│            ▼                            ▼                   │
-│   ┌───────────────────────┐    ┌───────────────────────┐    │
-│   │ POSTEL (generous)     │    │ YAML-JAZZ (style)     │    │
-│   └───────────────────────┘    └───────────────────────┘    │
-│                                                             │
-│   All follow SPEED-OF-LIGHT philosophy:                     │
-│   • Work in vectors, delay tokenization                     │
-│   • Preserve precision as long as possible                  │
-│   • Minimize boundary crossings                             │
-│                                                             │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    subgraph SUITE["🎭 EMPATHIC SUITE"]
+        EE["EMPATHIC-EXPRESSIONS<br/>interpret intent"]
+        ET["EMPATHIC-TEMPLATES<br/>smart instantiation"]
+        PO["POSTEL<br/>generous interpretation"]
+        YJ["YAML-JAZZ<br/>comments as data"]
+        
+        EE --> ET
+        EE --> PO
+        ET --> YJ
+    end
+    
+    SOL["⚡ SPEED-OF-LIGHT<br/>• Work in vectors<br/>• Preserve precision<br/>• Minimize boundaries"]
+    
+    SUITE --> SOL
+    
+    style SUITE fill:#fff3e0,stroke:#ff9800
+    style SOL fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
 ```
 
 ### Empathic Expressions: The Big Tent
@@ -1425,10 +1434,10 @@ Maximum precision preserved.
 
 | Demo | Turns | Agents | What It Proves |
 |------|-------|--------|----------------|
-| **Stoner Fluxx** ([session](../examples/adventure-4/sessions/don-session-1.md#33-turns-of-pure-gezelligheid)) | 33 | 8+ characters | Complex game state, rule changes, humor |
-| **Cat Prowl** ([session](../examples/adventure-4/sessions/don-session-1.md#ten-cats-one-garden-infinite-independence)) | 21 | [10 cats](../examples/adventure-4/pub/bar/cat-cave/) | Parallel paths, territorial marking, coordinated return |
-| **Palm Incarnation** ([session](../examples/adventure-4/sessions/don-session-1.md#palm-writes-his-own-story)) | ~8 | 6+ personas | Tribunal debate, autonomous character creation |
-| **Biscuit Run** ([session](../examples/adventure-4/sessions/don-session-1.md#biscuits-run-through-the-maze)) | 15 | 2 ([Don](../examples/adventure-4/characters/don-hopkins/) + [Biscuit](../examples/adventure-4/characters/biscuit/)) | Room exploration, marking, grue avoidance |
+| **Stoner Fluxx** ([session](../examples/adventure-4/characters/real-people/don-hopkins/sessions/marathon-session.md#33-turns-of-pure-gezelligheid)) | 33 | 8+ characters | Complex game state, rule changes, humor |
+| **Cat Prowl** ([session](../examples/adventure-4/characters/real-people/don-hopkins/sessions/marathon-session.md#ten-cats-one-garden-infinite-independence)) | 21 | [10 cats](../examples/adventure-4/pub/bar/cat-cave/) | Parallel paths, territorial marking, coordinated return |
+| **Palm Incarnation** ([session](../examples/adventure-4/characters/real-people/don-hopkins/sessions/marathon-session.md#palm-writes-his-own-story)) | ~8 | 6+ personas | Tribunal debate, autonomous character creation |
+| **Biscuit Run** ([session](../examples/adventure-4/characters/real-people/don-hopkins/sessions/marathon-session.md#biscuits-run-through-the-maze)) | 15 | 2 ([Don](../examples/adventure-4/characters/don-hopkins/) + [Biscuit](../examples/adventure-4/characters/biscuit/)) | Room exploration, marking, grue avoidance |
 
 ### Statistics from Cat Prowl
 
@@ -1479,7 +1488,7 @@ Don't update the screen (tokenize) on every keystroke. Wait until the user pause
 - [`skills/representation-ethics/`](../skills/representation-ethics/) — Ethical framing
 
 **Proof Files:**
-- [`don-session-1.md`](../examples/adventure-4/sessions/don-session-1.md) — Epic 6000+ line session log
+- [`marathon-session.md`](../examples/adventure-4/characters/real-people/don-hopkins/sessions/marathon-session.md) — Epic 6000+ line session log
 - [`characters/palm/`](../examples/adventure-4/characters/palm/) — Autonomously incarnated monkey
 - [`pub/guest-book.yml`](../examples/adventure-4/pub/guest-book.yml) — Guest book with tribute protocol
 
@@ -1562,8 +1571,8 @@ MOOLLM is a step toward that destiny:
 |---------|-------|
 | [HyperLook (nee HyperNeWS (nee GoodNeWS))](https://donhopkins.medium.com/hyperlook-nee-hypernews-nee-goodnews-99f411e58ce4) | HyperLook, Axis of Eval, NeWS |
 | [Alan Kay on "Should web browsers have stuck to being document viewers?"](https://donhopkins.medium.com/alan-kay-on-should-web-browsers-have-stuck-to-being-document-viewers-and-a-discussion-of-news-5cb92c7b3445) | NeWS, HyperLook, linguistic motherboard |
-| [The Shape of PSIBER Space](https://donhopkins.medium.com/the-shape-of-psiber-space-postscript-interactive-bug-eradication-routines-october-1989-1e4cc5bf1f08) | Visual PostScript debugging |
-| [Open Sourcing SimCity](https://donhopkins.medium.com/open-sourcing-simcity-by-chaim-gingold-44261ae4f754) | SimCity history, Chaim Gingold |
+| [The Shape of PSIBER Space](https://donhopkins.medium.com/the-shape-of-psiber-space-october-1989-19e2dfa4d91e) | Visual PostScript debugging |
+| [Open Sourcing SimCity](https://donhopkins.medium.com/open-sourcing-simcity-58470a27063e) | SimCity history, Chaim Gingold |
 | [Will Wright on Designing User Interfaces to Simulation Games](https://donhopkins.medium.com/will-wright-on-designing-user-interfaces-to-simulation-games-1996-video-update-2023-da098a51ef91) | Simulator Effect, game design |
 | [Micropolis: Constructionist Educational Open Source SimCity](https://donhopkins.medium.com/micropolis-constructionist-educational-open-source-simcity-79dce12e9e98) | Constructionism, OLPC |
 | [Pie Menu Timeline](https://donhopkins.medium.com/pie-menu-timeline-9fd0ed2a36df) | Pie menus history |
@@ -1572,7 +1581,7 @@ MOOLLM is a step toward that destiny:
 
 - Packer et al. (2023). *MemGPT: Towards LLMs as Operating Systems*. [arXiv:2310.08560](https://arxiv.org/abs/2310.08560)
 - Ungar & Smith (1987). *Self: The Power of Simplicity*. OOPSLA.
-- Rosenthal, D. *History of Window Systems*. [blog.dshr.org](https://blog.dshr.org/2023/01/history-of-window-systems.html)
+- Rosenthal, D. *X Window System At 40*. [blog.dshr.org](https://blog.dshr.org/2024/07/x-window-system-at-40.html)
 
 ---
 
