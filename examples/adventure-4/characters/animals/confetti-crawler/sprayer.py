@@ -182,10 +182,12 @@ def find_block_scalar_lines(lines: List[str], comment_prefix: str) -> Set[int]:
     return blocked
 
 
-def collect_comment_sites(lines: List[str], blocked: Set[int], comment_prefix: str) -> List[int]:
+def collect_comment_sites(lines: List[str], blocked: Set[int], comment_prefix: str, all_sites: bool) -> List[int]:
     """Depth-first (top-to-bottom) collection of line indices that can host emojis."""
     if comment_prefix == "":
         return list(range(len(lines)))
+    if all_sites:
+        return [i for i in range(len(lines)) if i not in blocked]
     return [i for i, ln in enumerate(lines) if i not in blocked and line_is_commenty(ln, comment_prefix)]
 
 
@@ -229,8 +231,9 @@ def apply_pass(
     blocked: Set[int],
     verbose: bool,
     comment_prefix: str,
+    all_sites: bool,
 ) -> List[str]:
-    sites = collect_comment_sites(lines, blocked, comment_prefix)
+    sites = collect_comment_sites(lines, blocked, comment_prefix, all_sites)
     if not sites:
         return lines
 
@@ -239,7 +242,7 @@ def apply_pass(
         if drift_radius > 0 and random.random() < drift_prob:
             start = max(0, idx - drift_radius)
             end = min(len(lines), idx + drift_radius + 1)
-            candidates = [i for i in range(start, end) if line_is_commenty(lines[i], comment_prefix)]
+            candidates = [i for i in range(start, end) if line_is_commenty(lines[i], comment_prefix) or all_sites]
             if candidates:
                 target = random.choice(candidates)
         vlog(verbose, f"[spray] mode={mode} idx={idx} -> target={target}")
@@ -268,6 +271,7 @@ def run(
     erode: bool,
     verbose: bool,
     comment_prefix: str,
+    all_sites: bool,
 ) -> str:
     lines = input_text.splitlines(keepends=True)
     if not lines:
@@ -275,10 +279,10 @@ def run(
         return input_text
     blocked = find_block_scalar_lines(lines, comment_prefix)
     if erode:
-        lines = erode_runs(lines, iterations, drift_radius, blocked, verbose, allow=set(palette), comment_prefix=comment_prefix)
+        lines = erode_runs(lines, iterations, drift_radius, blocked, verbose, allow=set(palette), comment_prefix=comment_prefix, all_sites=all_sites)
     else:
         for _ in range(iterations):
-            lines = apply_pass(lines, palette, max_per_pass, mode, drift_radius, drift_prob, blocked, verbose, comment_prefix)
+            lines = apply_pass(lines, palette, max_per_pass, mode, drift_radius, drift_prob, blocked, verbose, comment_prefix, all_sites)
     return "".join(lines)
 
 
@@ -301,6 +305,12 @@ def parse_args(argv: Iterable[str]) -> argparse.Namespace:
     p.add_argument("-v", "--verbose", action="store_true", help="Verbose logging of actions.")
     p.add_argument("--erode", action="store_true", help="Move existing emojis downward; do not create new ones.")
     p.add_argument("--comment-prefix", default="#", help="Comment prefix to target (use '' for raw text).")
+    p.add_argument(
+        "--all-sites",
+        action="store_true",
+        default=True,
+        help="Allow spraying/erosion on all non-blocked lines (not just comment/blank).",
+    )
     p.add_argument(
         "--mode",
         choices=["mfm", "serial"],
@@ -330,10 +340,10 @@ def strip_line(line: str, min_depth: int, comment_prefix: str) -> str:
     return f"{prefix_part}{sep}{marker} {new_body}{nl}"
 
 
-def strip_text(text: str, mode: str, iterations: int, min_depth: int, verbose: bool, comment_prefix: str) -> str:
+def strip_text(text: str, mode: str, iterations: int, min_depth: int, verbose: bool, comment_prefix: str, all_sites: bool) -> str:
     lines = text.splitlines(keepends=True)
     blocked = find_block_scalar_lines(lines, comment_prefix)
-    sites = collect_comment_sites(lines, blocked, comment_prefix)
+    sites = collect_comment_sites(lines, blocked, comment_prefix, all_sites)
     if not sites:
         vlog(verbose, "[strip] no comment sites; nothing to strip")
 
@@ -374,8 +384,9 @@ def erode_runs(
     verbose: bool,
     allow: set[str] | None,
     comment_prefix: str,
+    all_sites: bool,
 ) -> List[str]:
-    comment_sites = collect_comment_sites(lines, blocked, comment_prefix)
+    comment_sites = collect_comment_sites(lines, blocked, comment_prefix, all_sites)
     if not comment_sites:
         vlog(verbose, "[erode] no comment sites; nothing to move")
         return lines
@@ -458,6 +469,7 @@ def main(argv: Iterable[str] | None = None) -> int:
             min_depth=args.strip_min_depth,
             verbose=args.verbose,
             comment_prefix=args.comment_prefix,
+            all_sites=args.all_sites,
         )
     elif args.erode:
         output_text = run(
@@ -471,6 +483,7 @@ def main(argv: Iterable[str] | None = None) -> int:
             erode=True,
             verbose=args.verbose,
             comment_prefix=args.comment_prefix,
+            all_sites=args.all_sites,
         )
     else:
         output_text = run(
@@ -484,6 +497,7 @@ def main(argv: Iterable[str] | None = None) -> int:
             erode=False,
             verbose=args.verbose,
             comment_prefix=args.comment_prefix,
+            all_sites=args.all_sites,
         )
 
     if args.output == "-":
