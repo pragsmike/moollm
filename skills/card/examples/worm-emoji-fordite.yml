@@ -1,6 +1,6 @@
-# This is what happens when you apply this card to itself.
+# This is what happens when you apply this card to itself. ✨🪩🌈
 card:
-  name: worm-emoji-fordite
+  name: worm-emoji-fordite  # 🎨🪩
   type: [worm, cursor, example]
   tier: 1
   invoke_when: ["decorate comments with emojis", "run repeatedly for layers"]
@@ -18,7 +18,7 @@ card:
   description: |
     Emoji Fordite Worm: crawls a target file, finds comment lines, and appends
     emojis (avoids exact same emoji twice in a row). Running repeatedly creates
-    layered emoji bands like fordite.
+    layered emoji bands like fordite. 🎆🌀💜
 
 state:
   head: "{{target|.}}"
@@ -55,6 +55,13 @@ state:
     - "🍉"  # watermelon
     - "🥑"  # avocado
     - "🧊"  # ice
+    - "🌙"  # moon
+    - "☄️"  # comet
+    - "🥇"  # medal
+    - "📀"  # disc
+    - "💠"  # diamond shape
+    - "🔮"  # crystal ball
+    - "🧿"  # nazar
   max_per_pass: 2
   avoid_consecutive: true
   emit_dir: ".moollm/worm-out"
@@ -106,3 +113,11 @@ flavor:
     "Layered emoji fordite: every pass adds a new colorful stratum to your comments.
     Run it repeatedly over this file (meta!) to build prismatic bands that reflect
     how each line feels in context."
+
+# emoji_layer (meta self-pass, kept as comments to avoid schema impact)
+# card header: 🎨🪩🌈
+# invoke/ads: 💫🪐⚡
+# palette: 🍭🧿💎🌙☄️
+# buffer/payload: 🌊🌀
+# run/eat/append: 🪄✨
+# flavor: 🦋🌸🎆
