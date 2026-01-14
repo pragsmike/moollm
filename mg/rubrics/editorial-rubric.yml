@@ -1,0 +1,108 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# EDITORIAL RUBRIC: RESOLUTION AUDIT
+# ═══════════════════════════════════════════════════════════════════════════════
+
+rubric:
+  id: editorial-audit-v1
+  name: "Resolution Audit Protocol"
+  version: 1.0
+  
+  description: |
+    Evaluates a Committee Resolution for logical coherence, factual accuracy,
+    strategic alignment, and stakeholder impact. 
+    
+    A failing score in ANY critical category blocks implementation.
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# SCORING CRITERIA
+# ═══════════════════════════════════════════════════════════════════════════════
+
+  criteria:
+  
+    # 1. STRATEGIC ALIGNMENT (Score by: Editorial Chief)
+    strategic_alignment:
+      weight: 0.25
+      scale: [1, 2, 3, 4, 5]
+      description: "Does the Resolution directly answer the Charter's core question?"
+      critical: true
+      anchors:
+        5: "Perfect alignment. Answers the question precisely and advances the mission."
+        4: "Strong alignment. Minor deviations but fundamentally sound."
+        3: "Acceptable. Answers the letter of the request but maybe not the spirit."
+        2: "Drift. Solves a different problem than the one asked."
+        1: "Failure. Does not address the Charter at all."
+
+    # 2. EVIDENCE & VERIFICATION (Score by: Fact Checker)
+    evidence_verification:
+      weight: 0.25
+      scale: [1, 2, 3, 4, 5]
+      description: "Are all claims supported by citable evidence or data?"
+      critical: true
+      anchors:
+        5: "Ironclad. Every claim cited. No hallucinations."
+        4: "Solid. Most claims cited. Minor assumptions flagged."
+        3: "Mixed. Key claims supported, but some 'common knowledge' assumptions."
+        2: "Weak. Relies heavily on assertion without proof."
+        1: "Fiction. Claims are demonstrably false or completely uncited."
+
+    # 3. LOGICAL RIGOR (Score by: Logic Auditor)
+    logical_rigor:
+      weight: 0.25
+      scale: [1, 2, 3, 4, 5]
+      description: "Is the internal argument valid? Do premises lead to conclusions?"
+      critical: true
+      anchors:
+        5: "Valid. The decision tree is flawless. No fallacies."
+        4: "Sound. Minor skipped steps but the core logic holds."
+        3: "Fuzzy. Rhetoric is doing some heavy lifting, but not fatal."
+        2: "Fallacious. Contains contradictions or non-sequiturs."
+        1: "Incoherent. The Rationale contradicts the Decision."
+
+    # 4. STAKEHOLDER IMPACT (Score by: Ombudsman)
+    stakeholder_impact:
+      weight: 0.25
+      scale: [1, 2, 3, 4, 5]
+      description: "Are negative externalities identified and mitigated?"
+      critical: false # Can pass with low impact score if strategic need is high, but needs critique
+      anchors:
+        5: "Excellent. Impact fully analyzed, mitigation plan included."
+        4: "Good. Impact identified, some mitigation proposed."
+        3: "Adequate. Impact mentioned but understated."
+        2: "Blind. Significant negative impact ignored."
+        1: "Hostile. Actively harmful to stakeholders without acknowledgment."
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# THRESHOLDS & DECISIONS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+  thresholds:
+    publish: 4.0        # Must average 4.0 to ship
+    review:  [2.5, 4.0] # Return for revision
+    reject:  2.5        # Kill the resolution
+
+  governance:
+    blockers:
+      - "Any score of 1 in any category results in immediate rejection."
+      - "A score of 1 or 2 in a CRITICAL category results in blocked publication."
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# CRITIQUE TEMPLATE
+# ═══════════════════════════════════════════════════════════════════════════════
+
+  output_template: |
+    # Editorial Review
+    
+    **Verdict:** [PUBLISH | REVISE | REJECT]
+    **Score:** [X.X] / 5.0
+    
+    ## Scorecard
+    - **Strategy:** [Score] (Chief)
+    - **Evidence:** [Score] (Lens)
+    - **Logic:**    [Score] (Razor)
+    - **Impact:**   [Score] (Vox)
+    
+    ## Critical Blockers (Must Fix)
+    - [List deviations from truth/logic/charter]
+    
+    ## Improvement Requests (Should Fix)
+    - [Suggestions for clarity or mitigation]

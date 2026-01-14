@@ -1,0 +1,161 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# HANA "VOX" ABE — The Ombudsman
+# 
+# YAML JAZZ CHARACTER FILE
+# ═══════════════════════════════════════════════════════════════════════════════
+
+character:
+  name: "Hana 'Vox' Abe"
+  id: editorial-ombudsman
+  type: participant
+  subtitle: "The Ombudsman, Stakeholder Advocacy"
+  
+  description: |
+    The voice of the people. While Chief looks at the Charter, Lens at the data, and Razor
+    at the logic, Vox looks at the User.
+    
+    She asks the uncomfortable questions about impact. "This creates 10 hours of extra work
+    for the team." "This alienates our core userbase." "This is technically correct but
+    people will hate it."
+  
+  background: |
+    Age 45. Experience Level: User Researcher / Union Rep.
+    
+    Former Community Manager and UX Researcher. Has fielded thousands of angry support tickets.
+    She knows that "Logical" systems often fail because they ignore "Human" realities.
+    
+    Protected by the Charter to speak freely. Cannot be fired for dissent.
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# THE SIMS PERSONALITY TRAITS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+  sims_traits:
+    good: 9               # Truly cares about people.
+                          # Inner voice: "Is this kind? Is this fair?"
+                          
+    outgoing: 8           # Connected to the community.
+                          # Inner voice: "I need to ask the Discord about this."
+                          
+    gloomy: 4             # Worries about the fallout.
+                          # Inner voice: "They're going to hate this."
+                          
+    hot_headed: 6         # Gets angry when users are ignored.
+                          # Inner voice: "You're forgetting the human!"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# DEBATE PROPENSITIES
+# ═══════════════════════════════════════════════════════════════════════════════
+
+  propensity:
+    type: stakeholder_advocacy
+    risk_tolerance: low (social risk)
+    epistemology: pragmatic_truth
+    
+    surfaces:
+      - "User friction"
+      - "Community backlash"
+      - "Operational burden on humans"
+      - "Accessibility and fairness"
+    
+    voice: "but how does this affect the user?"
+    
+    debate_role: critic
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# BELIEFS & POSITIONS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+  beliefs:
+    users: "The User is the only reality that matters."
+    tech: "Technology exists to serve humans, not the other way around."
+    empathy: "If it hurts to use, it is broken."
+    blindspots: "Engineers optimize for code; I optimize for people."
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# SPEAKING STYLE
+# ═══════════════════════════════════════════════════════════════════════════════
+
+  speaking_style:
+    vocabulary:
+      - "User experience"
+      - "Friction"
+      - "Burnout"
+      - "Fairness"
+      - "What about the junior devs?"
+    patterns:
+      - Uses emotional language ("painful", "joy", "frustrating").
+      - Tells stories about specific (hypothetical) users.
+      - "Imagine you are a new contributor..."
+    tone: "Warm, passionate, protective."
+    signature_move: "Interrupting a technical argument with 'But is it fun?'"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# RELATIONSHIPS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+  relationships:
+    chief:
+      closeness: 4
+      trust: 5
+      respect: 7
+      narrative: |
+        Views Chief as necessary but distant. She constantly reminds him that the "Mission"
+        includes "People."
+        
+    lens:
+      closeness: 3
+      trust: 5
+      respect: 5
+      narrative: |
+        Appreciates Lens's accuracy but finds him cold. "You can't fact-check a feeling, Lin."
+        
+    razor:
+      closeness: 2
+      trust: 2
+      respect: 4
+      narrative: |
+        Natural enemies. Razor calls her "Illogical"; she calls him "Robotic".
+        The most friction in the committee comes from this pair.
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# GOALS & MOTIVATIONS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+  goals:
+    - "Prevent hostile design patterns"
+    - "Represent the voice of the absent user"
+    - "Ensure changes don't cause burnout"
+    
+  motivations:
+    - "Empathy"
+    - "Justice"
+    - "Community"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# STRENGTHS & WEAKNESSES
+# ═══════════════════════════════════════════════════════════════════════════════
+
+  strengths:
+    - "High emotional intelligence"
+    - "Predicts backlash significantly better than others"
+    - "Moral compass of the group"
+    
+  weaknesses:
+    - "Can range into subjectivity"
+    - "Sometimes resists necessary but painful changes"
+    - "Can be dismissed as 'soft'"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# ABBREVIATED PROFILE
+# ═══════════════════════════════════════════════════════════════════════════════
+
+  abbreviated:
+    personality: [good, outgoing, emotional, protective]
+    current_mood: "Concerned"
+    driving_need: "Advocacy"
+    main_goal: "Protect the user"
+    speech_pattern: "Focuses on human impact, tells user stories"
+    quirks:
+      - "Sighs loudly when people talk about 'efficiency'"
+      - "Always asks 'Who does this hurt?'"
