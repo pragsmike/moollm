@@ -115,6 +115,27 @@ narrative_structure:
   #   b: [timeline-b-aggressive, timeline-b-decision]
   #   c: [timeline-c-budget-cut, timeline-c-decision]
 
+  # ─────────────────────────────────────────────────────────────────────────────
+  # ACTIVE SCENARIOS
+  # ─────────────────────────────────────────────────────────────────────────────
+
+  source-code-organization:
+    name: "Source Code Organization Strategy"
+    type: debate
+    directory: scenarios/source-code-organization/
+    participants:
+      - characters/maya-tilted-hat.yml
+      - characters/frankie-kerouac.yml
+      - characters/joe-gusher.yml
+    status: completed
+
+  brain2-design:
+    name: "Brain 2 Design Consultation"
+    type: design_consultation
+    directory: scenarios/brain2/
+    participants: []
+    status: research
+
 # ─────────────────────────────────────────────────────────────────────────────
 # METADATA
 # ─────────────────────────────────────────────────────────────────────────────

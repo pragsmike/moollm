@@ -1,0 +1,38 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# SCENARIO: Source Code Organization Strategy
+# 
+# Converted from DEBATE.yml during Refactoring (2026-01-14)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+scenario:
+  name: "Source Code Organization Strategy"
+  type: debate
+  
+  # ─────────────────────────────────────────────────────────────────────────────
+  # ACTIVE PARTICIPANTS
+  # ─────────────────────────────────────────────────────────────────────────────
+  active_participants:
+    - ../../characters/maya-tilted-hat.yml
+    - ../../characters/frankie-kerouac.yml
+    - ../../characters/joe-gusher.yml
+    - ../../characters/vic-eyebrow.yml
+    - ../../characters/tammy-silent.yml
+    - ../../characters/samir-patel.yml
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # SCENARIO STATE
+  # ─────────────────────────────────────────────────────────────────────────────
+  state:
+    topic: "How should we organize the source code to allow people to keep their worlds, adventures, etc. separate from the core skills and whatnot?"
+    phase: 2-deliberation
+    protocol: roberts-rules
+    convened_at: "2024-12-19"
+    motions: []
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # I/O STATUS (Legacy fields preserved)
+  # ─────────────────────────────────────────────────────────────────────────────
+  io:
+    charter_status: complete       # 00-charter.yml exists
+    roster_status: complete        # 01-roster.yml exists
+    resolution_status: pending     # 03-resolution.yml missing (Note: Actually exists now)

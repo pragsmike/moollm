@@ -1,0 +1,17 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# SCENARIO: Brain 2 Design Consultation
+# 
+# Created during Refactoring (2026-01-14) to house design notes.
+# ═══════════════════════════════════════════════════════════════════════════════
+
+scenario:
+  name: "Brain 2 Design Consultation"
+  type: design_consultation
+  
+  description: "Notes and reviews regarding the Nate B. Jones 'Second Brain' implementation."
+  
+  active_participants: []
+  
+  state:
+    topic: "Integrating Nate B. Jones' Second Brain workflow into MOOLLM"
+    phase: research
